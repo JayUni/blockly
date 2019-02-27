@@ -313,6 +313,8 @@ Code.renderContent = function() {
     Code.attemptCodeGeneration(Blockly.Dart, 'dart');
   } else if (content.id == 'content_lua') {
     Code.attemptCodeGeneration(Blockly.Lua, 'lua');
+  } else if (content.id == 'content_skoolbot') {
+    Code.attemptCodeGeneration(Blockly.Skoolbot, 'skoolbot');
   }
 };
 
