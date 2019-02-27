@@ -12,7 +12,7 @@ GOLDEN_DIR="tests/generators/golden/"
 
 FAILURE_COUNT=0
 check_result() {
-  local suffix=$1 # One of: js, py, dart, lua, php
+  local suffix=$1 # One of: js, py, dart, lua, skoolbot, hp
   local tmp_filename="${TMP_DIR}generated.$suffix"
 
   if [ -f $tmp_filename ]; then
@@ -38,7 +38,7 @@ check_result() {
 mkdir $TMP_DIR
 
 node tests/generators/run_generators_in_browser.js
-generator_suffixes=( "js" "py" "dart" "lua" "php" )
+generator_suffixes=( "js" "py" "dart" "lua" "skoolbot" "php" )
 for i in "${generator_suffixes[@]}"
 do
    check_result "$i"
