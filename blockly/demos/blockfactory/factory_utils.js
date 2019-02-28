@@ -72,7 +72,7 @@ FactoryUtils.cleanBlockType = function(blockType) {
 /**
  * Get the generator code for a given block.
  * @param {!Blockly.Block} block Rendered block in preview workspace.
- * @param {string} generatorLanguage 'JavaScript', 'Python', 'PHP', 'Lua',
+ * @param {string} generatorLanguage 'JavaScript', 'Python', 'PHP', 'Lua', 'Skoolbot'
  *     or 'Dart'.
  * @return {string} Generator code for multiple blocks.
  */

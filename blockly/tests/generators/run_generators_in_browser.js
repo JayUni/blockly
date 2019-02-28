@@ -101,6 +101,11 @@ function runGeneratorsInBrowser() {
           toLua();
         });
       })
+       .then(function() {
+         return runLangGeneratorInBrowser(this, prefix + '.skoolbot', function() {
+	   toSkoolbot();
+	 });
+      })
       .then(function() {
         return runLangGeneratorInBrowser(this, prefix + '.php', function() {
           toPhp();
