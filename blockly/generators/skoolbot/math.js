@@ -51,8 +51,8 @@ Blockly.Skoolbot['math_arithmetic'] = function(block) {
   var order = tuple[1];
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'A', order) || '0';
   var argument1 = Blockly.Skoolbot.valueToCode(block, 'B', order) || '0';
-  var code = argument0 + operator + argument1;
-  return [code, order];
+  var code = '\"'+ operator + '\", \"argument\":' + '['+ argument0 + ',' + argument1 + ']}';
+  return ['{ \"operator\":' + code, order];
 };
 
 Blockly.Skoolbot['math_single'] = function(block) {
@@ -64,12 +64,12 @@ Blockly.Skoolbot['math_single'] = function(block) {
     // Negation is a special case given its different operator precedence.
     arg = Blockly.Skoolbot.valueToCode(block, 'NUM',
         Blockly.Skoolbot.ORDER_UNARY) || '0';
-    return ['-' + arg, Blockly.Skoolbot.ORDER_UNARY];
+    return ['{ \"operator\": \"neg\" ' + ',\"argument\":' + arg + '}', Blockly.Skoolbot.ORDER_UNARY];
   }
   if (operator == 'POW10') {
     arg = Blockly.Skoolbot.valueToCode(block, 'NUM',
         Blockly.Skoolbot.ORDER_EXPONENTIATION) || '0';
-    return ['{ \"operator\": pow10 ' + arg + '}', Blockly.Skoolbot.ORDER_EXPONENTIATION];
+    return ['{ \"operator\": \"pow10\" ' + ',\"argument\":' + arg + '}', Blockly.Skoolbot.ORDER_EXPONENTIATION];
   }
   if (operator == 'ROUND') {
     arg = Blockly.Skoolbot.valueToCode(block, 'NUM',
@@ -80,47 +80,47 @@ Blockly.Skoolbot['math_single'] = function(block) {
   }
   switch (operator) {
     case 'ABS':
-      code = '{ \"operator\": \"math.abs\"' + arg + '}';
+      code = '{ \"operator\": \"math.abs\"' + ',\"argument\":' + arg + '}';
       break;
     case 'ROOT':
-      code = '{ \"operator\": \"math.sqrt\"' + arg + '}';
+      code = '{ \"operator\": \"math.sqrt\"' + ',\"argument\":' + arg + '}';
       break;
     case 'LN':
-      code = '{ \"operator\": \"math.log\"' + arg + '}';
+      code = '{ \"operator\": \"math.log\"' + ',\"argument\":' + arg + '}';
       break;
     case 'LOG10':
-      code = '{ \"operator\": \"math.log\"' + arg + ', { \"number\": 10 }';
+      code = '{ \"operator\": \"math.log\"' + ',\"argument\":[' + arg + ', { \"number\": 10 }]}';
       break;
     case 'EXP':
-      code = '{ \"operator\": \"math.exp\"' + arg + '}';
+      code = '{ \"operator\": \"math.exp\"' + ',\"argument\":' + arg + '}';
       break;
     case 'ROUND':
       // This rounds up.  Blockly does not specify rounding direction.
-      code = '{ \"operator\": \"math.floor\"' + arg + ' + { \"number\": .5 }}';
+      code = '{ \"operator\": \"math.floor\"' + ',\"argument\":[' + arg + ' + { \"number\": .5 }]}';
       break;
     case 'ROUNDUP':
-      code = '{ \"operator\": \"math.ceil\"' + arg + '}';
+      code = '{ \"operator\": \"math.ceil\"' + ',\"argument\":' + arg + '}';
       break;
     case 'ROUNDDOWN':
-      code = '{ \"operator\": \"math.floor\"' + arg + '}';
+      code = '{ \"operator\": \"math.floor\"' + ',\"argument\":' + arg + '}';
       break;
     case 'SIN':
-      code = '{ \"operator\": \"math.sin\" { \"operator\": \"math.rad\"' + arg + '}}';
+      code = '{ \"operator\": \"math.sin\" , \"argument\": { \"operator\": \"math.rad\"' + ',\"argument\":' + arg + '}}';
       break;
     case 'COS':
-      code = '{ \"operator\": \"math.cos\" { \"operator\": \"math.rad\"' + arg + '}}';
+      code = '{ \"operator\": \"math.cos\" , "argument": { \"operator\": \"math.rad\"' + ',\"argument\":' + arg + '}}';
       break;
     case 'TAN':
-      code = '{ \"operator\": \"math.tan\" { \"operator\": \"math.rad\"' + arg + '}}';
+      code = '{ \"operator\": \"math.tan\" , "argument": { \"operator\": \"math.rad\"' + ',\"argument\":' + arg + '}}';
       break;
     case 'ASIN':
-      code = '{ \"operator\": \"math.deg\" { \"operator\": \"math.asin\"' + arg + '}}';
+      code = '{ \"operator\": \"math.deg\" , "argument": { \"operator\": \"math.asin\"' + ',\"argument\":' + arg + '}}';
       break;
     case 'ACOS':
-      code = '{ \"operator\": \"math.deg\" { \"operator\": \"math.acos\"' + arg + '}}';
+      code = '{ \"operator\": \"math.deg\" , "argument": { \"operator\": \"math.acos\"' + ',\"argument\":' + arg + '}}';
       break;
     case 'ATAN':
-      code = '{ \"operator\": \"math.deg\" { \"operator\": \"math.atan\"' + arg + '}}';
+      code = '{ \"operator\": \"math.deg\" , "argument": { \"operator\": \"math.atan\"' + ',\"argument\":' + arg + '}}';
       break;
     default:
       throw Error('Unknown math operator: ' + operator);
@@ -132,11 +132,10 @@ Blockly.Skoolbot['math_constant'] = function(block) {
   // Constants: PI, E, the Golden Ratio, sqrt(2), 1/sqrt(2), INFINITY.
   var CONSTANTS = {
     PI: ['{ \"operator\": \"math.pi\"}', Blockly.Skoolbot.ORDER_HIGH],
-    E: ['{ \"operator\": \"math.exp\" { \"number\": 1}}', Blockly.Skoolbot.ORDER_HIGH],
-    // TODO
-    GOLDEN_RATIO: ['{ \"number\": 1} + { \"operator\": \"math.sqrt\"{ "number": 5}} / { "number": 2}', Blockly.Skoolbot.ORDER_MULTIPLICATIVE],
-    SQRT2: ['{ \"operator\": \"math.sqrt\" { \"number\": 1}}', Blockly.Skoolbot.ORDER_HIGH],
-    SQRT1_2: ['{ \"operator\": \"math.sqrt\" { \"number\": .5}', Blockly.Skoolbot.ORDER_HIGH],
+    E: ['{ \"operator\": \"math.exp\", \"argument\": { \"number\": 1}}', Blockly.Skoolbot.ORDER_HIGH],
+    GOLDEN_RATIO: ['{ \"operator\": \"+\", \"argument\": [{ \"number\": 1} , { \"operator\": \"/\", \"argument\":[{ \"operator\": \"math.sqrt\", \"argument\":{ \"number\": 5}} , { \"number\": 2}]}]}', Blockly.Skoolbot.ORDER_MULTIPLICATIVE],
+    SQRT2: ['{ \"operator\": \"math.sqrt\", \"argument\": { \"number\": 2}}', Blockly.Skoolbot.ORDER_HIGH],
+    SQRT1_2: ['{ \"operator\": \"math.sqrt\", \"argument\": { \"number\": 0.5}}', Blockly.Skoolbot.ORDER_HIGH],
     INFINITY: ['{ \"operator\": \"math.huge\"}', Blockly.Skoolbot.ORDER_HIGH]
   };
   return CONSTANTS[block.getFieldValue('CONSTANT')];
