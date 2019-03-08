@@ -96,7 +96,7 @@ Blockly.Skoolbot['math_single'] = function(block) {
       break;
     case 'ROUND':
       // This rounds up.  Blockly does not specify rounding direction.
-      code = '{ \"operator\": \"math.floor\"' + ',\"argument\":[' + arg + ' + { \"number\": .5 }]}';
+      code = '{ \"operator\": \"math.floor\"' + ',\"argument\": { \"operator\": \"+\", \"argument\":['+ arg + ', { \"number\": 0.5 }]}}';
       break;
     case 'ROUNDUP':
       code = '{ \"operator\": \"math.ceil\"' + ',\"argument\":' + arg + '}';
