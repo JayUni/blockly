@@ -125,7 +125,7 @@ Blockly.Skoolbot['math_single'] = function(block) {
     default:
       throw Error('Unknown math operator: ' + operator);
   }
-  return [code, Blockly.Skoolbot.ORDER_HIGH];
+  return ['{operator: ' + code + '}', Blockly.Skoolbot.ORDER_HIGH];
 };
 
 Blockly.Skoolbot['math_constant'] = function(block) {
