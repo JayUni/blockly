@@ -69,7 +69,7 @@ Blockly.Skoolbot['math_single'] = function(block) {
   if (operator == 'POW10') {
     arg = Blockly.Skoolbot.valueToCode(block, 'NUM',
         Blockly.Skoolbot.ORDER_EXPONENTIATION) || '0';
-    return ['10 ^ ' + arg, Blockly.Skoolbot.ORDER_EXPONENTIATION];
+    return ['{operator: pow10 ' + arg + '}', Blockly.Skoolbot.ORDER_EXPONENTIATION];
   }
   if (operator == 'ROUND') {
     arg = Blockly.Skoolbot.valueToCode(block, 'NUM',
