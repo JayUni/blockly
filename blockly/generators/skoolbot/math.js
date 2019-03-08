@@ -34,7 +34,7 @@ Blockly.Skoolbot['math_number'] = function(block) {
   var code = parseFloat(block.getFieldValue('NUM'));
   var order = code < 0 ? Blockly.Skoolbot.ORDER_UNARY :
               Blockly.Skoolbot.ORDER_ATOMIC;
-  return [code, order];
+  return ["{ number: " + code + " }", order];
 };
 
 Blockly.Skoolbot['math_arithmetic'] = function(block) {

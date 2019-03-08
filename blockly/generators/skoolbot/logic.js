@@ -31,7 +31,7 @@ goog.require('Blockly.Skoolbot');
 
 Blockly.Skoolbot['controls_if'] = function(block) {
   // If/elseif/else condition.
-  var n = 0;
+ /* var n = 0;
   var code = '', branchCode, conditionCode;
   do {
     conditionCode = Blockly.Skoolbot.valueToCode(block, 'IF' + n,
@@ -47,7 +47,31 @@ Blockly.Skoolbot['controls_if'] = function(block) {
     branchCode = Blockly.Skoolbot.statementToCode(block, 'ELSE');
     code += 'else\n' + branchCode;
   }
-  return code + 'end\n';
+  return code + 'end\n';*/
+
+  var n = 0;
+  var code = '', branchCode, conditionCode;
+  do {
+    conditionCode = Blockly.Skoolbot.valueToCode(block, 'IF' + n,
+    Blockly.Skoolbot.ORDER_NONE) || 'false';
+    branchCode = Blockly.Skoolbot.statementToCode(block, 'DO' + n);
+    code += (n > 0 ? 'else { ' : '') +
+        '{\n' + 
+	  'if\n ' + 
+	  'cond: ' + conditionCode + '\n' + 
+	  'then\n' + branchCode;
+    
+    ++n;
+   } while (block.getInput('IF' + n));
+	
+   if (block.getInput('ELSE')) {
+     branchCode = Blockly.Skoolbot.statementToCode(block, 'ELSE');
+     code += 'else\n' + branchCode;
+   }
+
+
+  return code + 'end\n}\n'; 
+
 };
 
 Blockly.Skoolbot['controls_ifelse'] = Blockly.Skoolbot['controls_if'];

@@ -139,7 +139,7 @@ Blockly.Skoolbot.finish = function(code) {
  * @return {string} Legal line of code.
  */
 Blockly.Skoolbot.scrubNakedValue = function(line) {
-  return 'local _ = ' + line + '\n';
+  return line + '\n';
 };
 
 /**
