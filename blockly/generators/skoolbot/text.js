@@ -32,7 +32,7 @@ goog.require('Blockly.Skoolbot');
 Blockly.Skoolbot['text'] = function(block) {
   // Text value.
   var code = Blockly.Skoolbot.quote_(block.getFieldValue('TEXT'));
-  return [code, Blockly.Skoolbot.ORDER_ATOMIC];
+  return ['{ \"text\": \"' + code + '\" }', Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
 Blockly.Skoolbot['text_join'] = function(block) {
@@ -68,21 +68,22 @@ Blockly.Skoolbot['text_append'] = function(block) {
       block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
   var value = Blockly.Skoolbot.valueToCode(block, 'TEXT',
       Blockly.Skoolbot.ORDER_CONCATENATION) || '\'\'';
-  return varName + ' = ' + varName + ' .. ' + value + '\n';
+  // return varName + ' = ' + varName + ' .. ' + value + '\n';
+  return '{ \n\t\"functionName\": \"text_append\", \n\t\"valName\": \"'+ varName + '\", \n\t\"value\": ' + value + '\n}';
 };
 
 Blockly.Skoolbot['text_length'] = function(block) {
   // String or array length.
   var text = Blockly.Skoolbot.valueToCode(block, 'VALUE',
       Blockly.Skoolbot.ORDER_UNARY) || '\'\'';
-  return ['#' + text, Blockly.Skoolbot.ORDER_UNARY];
+  return ['{ \n\t\"functionName\": \"text_length\", \n\t\"argument\": ' + text + '\n}', Blockly.Skoolbot.ORDER_UNARY];
 };
 
 Blockly.Skoolbot['text_isEmpty'] = function(block) {
   // Is the string null or array empty?
   var text = Blockly.Skoolbot.valueToCode(block, 'VALUE',
       Blockly.Skoolbot.ORDER_UNARY) || '\'\'';
-  return ['#' + text + ' == 0', Blockly.Skoolbot.ORDER_RELATIONAL];
+  return ['{ \n\t\"functionName\": \"text_isEmpty\", \n\t\"argument\": ' + text + '\n}', Blockly.Skoolbot.ORDER_RELATIONAL];
 };
 
 Blockly.Skoolbot['text_indexOf'] = function(block) {
@@ -92,31 +93,34 @@ Blockly.Skoolbot['text_indexOf'] = function(block) {
   var text = Blockly.Skoolbot.valueToCode(block, 'VALUE',
       Blockly.Skoolbot.ORDER_NONE) || '\'\'';
   if (block.getFieldValue('END') == 'FIRST') {
-    var functionName = Blockly.Skoolbot.provideFunction_(
-        'firstIndexOf',
-        ['function ' + Blockly.Skoolbot.FUNCTION_NAME_PLACEHOLDER_ +
-             '(str, substr) ',
-         '  local i = string.find(str, substr, 1, true)',
-         '  if i == nil then',
-         '    return 0',
-         '  else',
-         '    return i',
-         '  end',
-         'end']);
+    // var functionName = Blockly.Skoolbot.provideFunction_(
+    //     'firstIndexOf',
+    //     ['function ' + Blockly.Skoolbot.FUNCTION_NAME_PLACEHOLDER_ +
+    //          '(str, substr) ',
+    //      '  local i = string.find(str, substr, 1, true)',
+    //      '  if i == nil then',
+    //      '    return 0',
+    //      '  else',
+    //      '    return i',
+    //      '  end',
+    //      'end']);
+    var functionName = 'firstIndexOf';
   } else {
-    var functionName = Blockly.Skoolbot.provideFunction_(
-        'lastIndexOf',
-        ['function ' + Blockly.Skoolbot.FUNCTION_NAME_PLACEHOLDER_ +
-             '(str, substr)',
-         '  local i = string.find(string.reverse(str), ' +
-             'string.reverse(substr), 1, true)',
-         '  if i then',
-         '    return #str + 2 - i - #substr',
-         '  end',
-         '  return 0',
-         'end']);
+    // var functionName = Blockly.Skoolbot.provideFunction_(
+    //     'lastIndexOf',
+    //     ['function ' + Blockly.Skoolbot.FUNCTION_NAME_PLACEHOLDER_ +
+    //          '(str, substr)',
+    //      '  local i = string.find(string.reverse(str), ' +
+    //          'string.reverse(substr), 1, true)',
+    //      '  if i then',
+    //      '    return #str + 2 - i - #substr',
+    //      '  end',
+    //      '  return 0',
+    //      'end']);
+    var functionName = 'lastIndexOf';
   }
-  var code = functionName + '(' + text + ', ' + substring + ')';
+  // var code = functionName + '(' + text + ', ' + substring + ')';
+  var code = '{ \n\t\"functionName\": \"' + functionName + '\", \n\t\"valName\": \"' + text +'\",\n\t\"substring\": ' + substring + '\n}';
   return [code, Blockly.Skoolbot.ORDER_HIGH];
 };
 
@@ -131,39 +135,47 @@ Blockly.Skoolbot['text_charAt'] = function(block) {
       Blockly.Skoolbot.ORDER_NONE) || '\'\'';
   var code;
   if (where == 'RANDOM') {
-    var functionName = Blockly.Skoolbot.provideFunction_(
-        'text_random_letter',
-        ['function ' + Blockly.Skoolbot.FUNCTION_NAME_PLACEHOLDER_ + '(str)',
-         '  local index = math.random(string.len(str))',
-         '  return string.sub(str, index, index)',
-         'end']);
-    code = functionName + '(' + text + ')';
-  } else {
+    // var functionName = Blockly.Skoolbot.provideFunction_(
+    //     'text_random_letter',
+    //     ['function ' + Blockly.Skoolbot.FUNCTION_NAME_PLACEHOLDER_ + '(str)',
+    //      '  local index = math.random(string.len(str))',
+    //      '  return string.sub(str, index, index)',
+    //      'end']);
+    var functionName = 'text_random_letter';
+    code = '{ \n\t\"functionName\": \"' + functionName + '\", \n\t\"valName\": \"' + text + '\"\n}';
+  }
+  else {
     if (where == 'FIRST') {
-      var start = '1';
+      var index = '1';
+      var order = 'fromStart';
     } else if (where == 'LAST') {
-      var start = '-1';
+      var index = '1';
+      var order = 'fromEnd';
     } else {
       if (where == 'FROM_START') {
-        var start = at;
+        var order = 'fromStart';
+        var index = at;
       } else if (where == 'FROM_END') {
-        var start = '-' + at;
+        var order = 'fromEnd';
+        var index = at;
       } else {
         throw Error('Unhandled option (text_charAt).');
       }
+
     }
-    if (start.match(/^-?\w*$/)) {
-      code = 'string.sub(' + text + ', ' + start + ', ' + start + ')';
-    } else {
-      // use function to avoid reevaluation
-      var functionName = Blockly.Skoolbot.provideFunction_(
-          'text_char_at',
-          ['function ' + Blockly.Skoolbot.FUNCTION_NAME_PLACEHOLDER_ +
-               '(str, index)',
-           '  return string.sub(str, index, index)',
-           'end']);
-      code = functionName + '(' + text + ', ' + start + ')';
-    }
+    code = '{ \n\t\"functionName\": \"text_char_at\", \n\t\"valName\": \"' + text + '\",\n\t\"order\": \"' + order + '\",\n\t\"index\": ' + index +' \n}';
+    // if (start.match(/^-?\w*$/)) {
+    //   code = 'string.sub(' + text + ', ' + start + ', ' + start + ')';
+    // } else {
+    //   // use function to avoid reevaluation
+    //   var functionName = Blockly.Skoolbot.provideFunction_(
+    //       'text_char_at',
+    //       ['function ' + Blockly.Skoolbot.FUNCTION_NAME_PLACEHOLDER_ +
+    //            '(str, index)',
+    //        '  return string.sub(str, index, index)',
+    //        'end']);
+    //   code = functionName + '(' + text + ', ' + start + ')';
+    // }
   }
   return [code, Blockly.Skoolbot.ORDER_HIGH];
 };
@@ -179,11 +191,14 @@ Blockly.Skoolbot['text_getSubstring'] = function(block) {
       Blockly.Skoolbot.ORDER_NONE;
   var at1 = Blockly.Skoolbot.valueToCode(block, 'AT1', at1Order) || '1';
   if (where1 == 'FIRST') {
-    var start = 1;
+    var start_index = 1;
+    var start_index_order = 'fromStart';
   } else if (where1 == 'FROM_START') {
-    var start = at1;
+    var start_index = at1;
+    var start_index_order = 'fromStart';
   } else if (where1 == 'FROM_END') {
-    var start = '-' + at1;
+    var start_index = at1;
+    var start_index_order = 'fromEnd';
   } else {
     throw Error('Unhandled option (text_getSubstring)');
   }
@@ -194,15 +209,18 @@ Blockly.Skoolbot['text_getSubstring'] = function(block) {
       Blockly.Skoolbot.ORDER_NONE;
   var at2 = Blockly.Skoolbot.valueToCode(block, 'AT2', at2Order) || '1';
   if (where2 == 'LAST') {
-    var end = -1;
+    var end_index = 1;
+    var end_index_order = 'fromEnd';
   } else if (where2 == 'FROM_START') {
-    var end = at2;
+    var end_index = at2;
+    var end_index_order = 'fromStart';
   } else if (where2 == 'FROM_END') {
-    var end = '-' + at2;
+    var end_index = at2;
+    var end_index_order = 'fromStart';
   } else {
     throw Error('Unhandled option (text_getSubstring)');
   }
-  var code = 'string.sub(' + text + ', ' + start + ', ' + end + ')';
+  var code = '{ \n\t\"functionName\": \"text_getSubstring\", \n\t\"valName\": \"' + text + '\",\n\t\"start_index_order\": \"' + start_index_order + '\",\n\t\"start_index\": ' + start_index +',\n\t\"end_index_order\": \"' + end_index_order + '\",\n\t\"end_index\": ' + end_index +'\n}';
   return [code, Blockly.Skoolbot.ORDER_HIGH];
 };
 
@@ -212,34 +230,35 @@ Blockly.Skoolbot['text_changeCase'] = function(block) {
   var text = Blockly.Skoolbot.valueToCode(block, 'TEXT',
       Blockly.Skoolbot.ORDER_NONE) || '\'\'';
   if (operator == 'UPPERCASE') {
-    var functionName = 'string.upper';
+    var change_case_type = 'text_uppercase';
   } else if (operator == 'LOWERCASE') {
-    var functionName = 'string.lower';
+    var change_case_type = 'text_lowercase';
   } else if (operator == 'TITLECASE') {
-    var functionName = Blockly.Skoolbot.provideFunction_(
-        'text_titlecase',
-        // There are shorter versions at
-        // http://lua-users.org/wiki/SciteTitleCase
-        // that do not preserve whitespace.
-        ['function ' + Blockly.Skoolbot.FUNCTION_NAME_PLACEHOLDER_ + '(str)',
-         '  local buf = {}',
-         '  local inWord = false',
-         '  for i = 1, #str do',
-         '    local c = string.sub(str, i, i)',
-         '    if inWord then',
-         '      table.insert(buf, string.lower(c))',
-         '      if string.find(c, "%s") then',
-         '        inWord = false',
-         '      end',
-         '    else',
-         '      table.insert(buf, string.upper(c))',
-         '      inWord = true',
-         '    end',
-         '  end',
-         '  return table.concat(buf)',
-         'end']);
+    // var functionName = Blockly.Skoolbot.provideFunction_(
+    //     'text_titlecase',
+    //     // There are shorter versions at
+    //     // http://lua-users.org/wiki/SciteTitleCase
+    //     // that do not preserve whitespace.
+    //     ['function ' + Blockly.Skoolbot.FUNCTION_NAME_PLACEHOLDER_ + '(str)',
+    //      '  local buf = {}',
+    //      '  local inWord = false',
+    //      '  for i = 1, #str do',
+    //      '    local c = string.sub(str, i, i)',
+    //      '    if inWord then',
+    //      '      table.insert(buf, string.lower(c))',
+    //      '      if string.find(c, "%s") then',
+    //      '        inWord = false',
+    //      '      end',
+    //      '    else',
+    //      '      table.insert(buf, string.upper(c))',
+    //      '      inWord = true',
+    //      '    end',
+    //      '  end',
+    //      '  return table.concat(buf)',
+    //      'end']);
+      var change_case_type = 'text_titlecase';
   }
-  var code = functionName + '(' + text + ')';
+  var code = '{ \n\t\"functionName\": \"text_changeCase\", \n\t\"text\": \"'+ text + '\", \n\t\"change_case_type\": \"' + change_case_type + '\"\n}';
   return [code, Blockly.Skoolbot.ORDER_HIGH];
 };
 
@@ -261,7 +280,7 @@ Blockly.Skoolbot['text_print'] = function(block) {
   // Print statement.
   var msg = Blockly.Skoolbot.valueToCode(block, 'TEXT',
       Blockly.Skoolbot.ORDER_NONE) || '\'\'';
-  return 'print(' + msg + ')\n';
+  return '{ \n\t\"functionName\": \"text_print\", \n\t\"content\": ' + msg + '\n}';
 };
 
 Blockly.Skoolbot['text_prompt_ext'] = function(block) {
