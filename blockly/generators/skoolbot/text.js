@@ -69,7 +69,7 @@ Blockly.Skoolbot['text_append'] = function(block) {
   var value = Blockly.Skoolbot.valueToCode(block, 'TEXT',
       Blockly.Skoolbot.ORDER_CONCATENATION) || '\'\'';
   // return varName + ' = ' + varName + ' .. ' + value + '\n';
-  return '{ \n\t\"functionName\": \"text_append\", \n\t\"valName\": \"'+ varName + '\", \n\t\"value\": ' + value + '\n}';
+  return '{ \n\t\"functionName\": \"text_append\", \n\t\"variable\": \"'+ varName + '\", \n\t\"value\": ' + value + '\n}';
 };
 
 Blockly.Skoolbot['text_length'] = function(block) {
@@ -120,7 +120,7 @@ Blockly.Skoolbot['text_indexOf'] = function(block) {
     var functionName = 'lastIndexOf';
   }
   // var code = functionName + '(' + text + ', ' + substring + ')';
-  var code = '{ \n\t\"functionName\": \"' + functionName + '\", \n\t\"valName\": \"' + text +'\",\n\t\"substring\": ' + substring + '\n}';
+  var code = '{ \n\t\"functionName\": \"' + functionName + '\", \n\t\"variable\": \"' + text +'\",\n\t\"substring\": ' + substring + '\n}';
   return [code, Blockly.Skoolbot.ORDER_HIGH];
 };
 
@@ -142,7 +142,7 @@ Blockly.Skoolbot['text_charAt'] = function(block) {
     //      '  return string.sub(str, index, index)',
     //      'end']);
     var functionName = 'text_random_letter';
-    code = '{ \n\t\"functionName\": \"' + functionName + '\", \n\t\"valName\": \"' + text + '\"\n}';
+    code = '{ \n\t\"functionName\": \"' + functionName + '\", \n\t\"variable\": \"' + text + '\"\n}';
   }
   else {
     if (where == 'FIRST') {
@@ -163,7 +163,7 @@ Blockly.Skoolbot['text_charAt'] = function(block) {
       }
 
     }
-    code = '{ \n\t\"functionName\": \"text_char_at\", \n\t\"valName\": \"' + text + '\",\n\t\"order\": \"' + order + '\",\n\t\"index\": ' + index +' \n}';
+    code = '{ \n\t\"functionName\": \"text_char_at\", \n\t\"variable\": \"' + text + '\",\n\t\"order\": \"' + order + '\",\n\t\"index\": ' + index +' \n}';
     // if (start.match(/^-?\w*$/)) {
     //   code = 'string.sub(' + text + ', ' + start + ', ' + start + ')';
     // } else {
@@ -190,15 +190,18 @@ Blockly.Skoolbot['text_getSubstring'] = function(block) {
   var at1Order = (where1 == 'FROM_END') ? Blockly.Skoolbot.ORDER_UNARY :
       Blockly.Skoolbot.ORDER_NONE;
   var at1 = Blockly.Skoolbot.valueToCode(block, 'AT1', at1Order) || '1';
+  var jsonIndex = at1;
+  jsonIndex = JSON.parse(jsonIndex) || '1';
+  var index = jsonIndex.number || '1';
   if (where1 == 'FIRST') {
-    var start_index = 1;
-    var start_index_order = 'fromStart';
+    var start_index = 0;
+    // var start_index_order = 'fromStart';
   } else if (where1 == 'FROM_START') {
-    var start_index = at1;
-    var start_index_order = 'fromStart';
+    var start_index = index - 1;
+    // var start_index_order = 'fromStart';
   } else if (where1 == 'FROM_END') {
-    var start_index = at1;
-    var start_index_order = 'fromEnd';
+    var start_index = - index;
+    // var start_index_order = 'fromEnd';
   } else {
     throw Error('Unhandled option (text_getSubstring)');
   }
@@ -208,19 +211,22 @@ Blockly.Skoolbot['text_getSubstring'] = function(block) {
   var at2Order = (where2 == 'FROM_END') ? Blockly.Skoolbot.ORDER_UNARY :
       Blockly.Skoolbot.ORDER_NONE;
   var at2 = Blockly.Skoolbot.valueToCode(block, 'AT2', at2Order) || '1';
+  var jsonIndex = at2;
+  jsonIndex = JSON.parse(jsonIndex) || '1';
+  var index = jsonIndex.number || '1';
   if (where2 == 'LAST') {
-    var end_index = 1;
-    var end_index_order = 'fromEnd';
+    var end_index = 0;
+    // var end_index_order = 'fromEnd';
   } else if (where2 == 'FROM_START') {
-    var end_index = at2;
-    var end_index_order = 'fromStart';
+    var end_index = index - 1;
+    // var end_index_order = 'fromStart';
   } else if (where2 == 'FROM_END') {
-    var end_index = at2;
-    var end_index_order = 'fromStart';
+    var end_index = - index;
+    // var end_index_order = 'fromStart';
   } else {
     throw Error('Unhandled option (text_getSubstring)');
   }
-  var code = '{ \n\t\"functionName\": \"text_getSubstring\", \n\t\"valName\": \"' + text + '\",\n\t\"start_index_order\": \"' + start_index_order + '\",\n\t\"start_index\": ' + start_index +',\n\t\"end_index_order\": \"' + end_index_order + '\",\n\t\"end_index\": ' + end_index +'\n}';
+  var code = '{ \n\t\"functionName\": \"text_getSubstring\", \n\t\"variable\": \"' + text + '\",\n\t\"start_index\": ' + start_index +',\n\t\"end_index\": ' + end_index +'\n}';
   return [code, Blockly.Skoolbot.ORDER_HIGH];
 };
 
@@ -280,7 +286,7 @@ Blockly.Skoolbot['text_print'] = function(block) {
   // Print statement.
   var msg = Blockly.Skoolbot.valueToCode(block, 'TEXT',
       Blockly.Skoolbot.ORDER_NONE) || '\'\'';
-  return '{ \n\t\"functionName\": \"text_print\", \n\t\"content\": ' + msg + '\n}';
+  return '{ \n\t\"functionName\": \"text_print\", \n\t\"output\": ' + msg + '\n}';
 };
 
 Blockly.Skoolbot['text_prompt_ext'] = function(block) {

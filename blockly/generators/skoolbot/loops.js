@@ -145,7 +145,7 @@ Blockly.Skoolbot['controls_for'] = function(block) {
   // code += 'for ' + variable0 + ' = ' + startVar + ', ' + endVar +
   //     ', ' + incValue;
   // code += ' do\n' + branch + 'end\n';
-    var code = '\n{\n\t\"loop_style\": \"controls_for\"'+',\n\t\"valName\": \"' + variable0 + '\",\n\t\"start\": '+ startVar +',\n\t\"end\": ' + endVar + ',\n\t\"step\": ' + increment +',\n\t\"branch\": ' + branch + '\n}';
+    var code = '\n{\n\t\"loop_style\": \"controls_for\"'+',\n\t\"variable\": \"' + variable0 + '\",\n\t\"start\": '+ startVar +',\n\t\"end\": ' + endVar + ',\n\t\"step\": ' + increment +',\n\t\"branch\": ' + branch + '\n}';
   return code;
 };
 
@@ -159,7 +159,7 @@ Blockly.Skoolbot['controls_forEach'] = function(block) {
   branch = Blockly.Skoolbot.addContinueLabel(branch);
   // var code = 'for _, ' + variable0 + ' in ipairs(' + argument0 + ') do \n' +
   //     branch + 'end\n';
-  var code = '{\n\t\"loop_style\": \"controls_forEach\",\n\t\"valName\": \"'+ variable0 + '\",\n\t\"list\": '+ argument0 + ',\n\t\"branch\": '+ branch + '\n}';
+  var code = '{\n\t\"loop_style\": \"controls_forEach\",\n\t\"variable\": \"'+ variable0 + '\",\n\t\"list\": '+ argument0 + ',\n\t\"branch\": '+ branch + '\n}';
   return code;
 };
 
