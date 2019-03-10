@@ -31,9 +31,11 @@ goog.require('Blockly.Skoolbot');
 
 Blockly.Skoolbot['variables_get'] = function(block) {
   // Variable getter.
+  var argument0 = Blockly.Skoolbot.valueToCode(block, 'VALUE',
+      Blockly.Skoolbot.ORDER_NONE) || 'error';
   var code = Blockly.Skoolbot.variableDB_.getName(block.getFieldValue('VAR'),
       Blockly.Variables.NAME_TYPE);
-  return [code, Blockly.Skoolbot.ORDER_ATOMIC];
+  return ['{ varName: ' + code + ', \nvarValue: ' + argument0 + '}', Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
 Blockly.Skoolbot['variables_set'] = function(block) {
