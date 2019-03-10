@@ -79,8 +79,7 @@ Blockly.Skoolbot['controls_repeat_ext'] = function(block) {
   branch = Blockly.Skoolbot.addContinueLabel(branch);
   var loopVar = Blockly.Skoolbot.variableDB_.getDistinctName(
       'count', Blockly.Variables.NAME_TYPE);
-  // var code = 'for ' + loopVar + ' = 1, ' + repeats + ' do\n' +
-  //     branch + 'end\n';
+  // var code = 'for ' + loopVar + ' = 1, ' + repeats + ' do\n' + branch + 'end\n';
   var code = '{\n\t\"loop_style\": \"controls_repeat_ext\",\n\t\"repeat_times\": '+ repeats + ',\n\t\"branch\": '+ branch + '\n}';
   return code;
 };
