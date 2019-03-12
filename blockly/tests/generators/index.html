@@ -220,10 +220,18 @@ function uncheckAll() {
 }
 
 function setOutput(text) {
-  var output = document.getElementById('importExport');
-  output.value = text;
-  output.focus();
-  output.select();
+  var skoolbotHtml = window.open('Skoolbot.html');
+  var content = "</<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\"> <head>" +
+  "<meta charset=\"utf-8\"><title>Skoolbot</title>" +
+  "<style>textarea {height: 100%;width: 100%;}</style>" +
+  "</head><body><textarea readonly=\"readonly\">" + text + "</textarea></body></html>";
+  skoolbotHtml.document.write(content);           // Append <p> to <div> with id="myDIV"
+
+  //output on new tab instead of little window
+  // var output = document.getElementById('importExport');
+  // output.value = text;
+  // output.focus();
+  // output.select();
 }
 
 function toXml() {
@@ -256,6 +264,12 @@ function toPhp() {
 function toLua() {
   var code = Blockly.Lua.workspaceToCode(demoWorkspace);
   setOutput(code);
+  outputCode = code;
+}
+
+function toSkoolbot() {
+  var code = Blockly.Skoolbot.workspaceToCode(demoWorkspace);
+  setOutput(code);  //comment this to not show the output box
   outputCode = code;
 }
 
@@ -451,6 +465,10 @@ h1 {
       <div style="display: inline-block;">
         <input type="button" value="Lua" onclick="toLua()">
         <br><a target="_blank" href="http://rextester.com/l/lua_online_compiler">interpreter</a>
+      </div>
+      <div style="display: inline-block;">
+        <input type="button" value="Skoolbot" onclick="toSkoolbot()">
+        <br><a target="_blank" href="https://jsonformatter.org/">JSON Format Checker</a>
       </div>
       <div style="display: inline-block;">
         <input type="button" value="Dart" onclick="toDart()">
