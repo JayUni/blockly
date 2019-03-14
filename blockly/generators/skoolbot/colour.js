@@ -43,24 +43,25 @@ Blockly.Skoolbot['colour_random'] = function(block) {
 Blockly.Skoolbot['colour_rgb'] = function(block) {
   // Compose a colour from RGB components expressed as percentages.
 
-  var r = parseInt(Blockly.Skoolbot.valueToCode(block, 'RED',
-      Blockly.Skoolbot.ORDER_NONE).split(":")[1]) || '{ \"number\": \"100\"}';
-  var g = parseInt(Blockly.Skoolbot.valueToCode(block, 'GREEN',
-      Blockly.Skoolbot.ORDER_NONE).split(":")[1]) || '{ \"number\": \"50\"}';
-  var b = parseInt(Blockly.Skoolbot.valueToCode(block, 'BLUE',
-      Blockly.Skoolbot.ORDER_NONE).split(":")[1]) || '{ \"number\": \"0\"}';
+  var r = Blockly.Skoolbot.valueToCode(block, 'RED',
+      Blockly.Skoolbot.ORDER_NONE) || '{ \"number\": \"100\"}';
+  var g = Blockly.Skoolbot.valueToCode(block, 'GREEN',
+      Blockly.Skoolbot.ORDER_NONE) || '{ \"number\": \"50\"}';
+  var b = Blockly.Skoolbot.valueToCode(block, 'BLUE',
+      Blockly.Skoolbot.ORDER_NONE) || '{ \"number\": \"0\"}';
 
-  var code = '{\"functionName\": \"colour_rgb\", \"argument\": [{\"red%\": '+ r + '}, {\"green%\": ' + g + '}, {\"blue%\": ' + b + '}]}';
+  var code = '{\"functionName\": \"colour_rgb\", \"argument\": [{\"red%\": ' + r + '}, {\"green%\": ' + g + '}, {\"blue%\": ' + b + '}]}';
+  console.log(code);
   return [code, Blockly.Skoolbot.ORDER_HIGH];
 };
 
 Blockly.Skoolbot['colour_blend'] = function(block) {
   var colour1 = Blockly.Skoolbot.valueToCode(block, 'COLOUR1',
-      Blockly.Skoolbot.ORDER_NONE).split(":")[1].replace(/\s|}/g, '') || '\"#000000\"';
+      Blockly.Skoolbot.ORDER_NONE);
   var colour2 = Blockly.Skoolbot.valueToCode(block, 'COLOUR2',
-      Blockly.Skoolbot.ORDER_NONE).split(":")[1].replace(/\s|}/g, '') || '\"#000000\"';
-  var ratio = parseFloat(Blockly.Skoolbot.valueToCode(block, 'RATIO',
-      Blockly.Skoolbot.ORDER_NONE).split(":")[1]) || '{ \"number\": \"0.5\"}';
+      Blockly.Skoolbot.ORDER_NONE);
+  var ratio = Blockly.Skoolbot.valueToCode(block, 'RATIO',
+      Blockly.Skoolbot.ORDER_NONE);
 
   var code = '{\"functionName\": \"colour_blend\", \"argument\": [{\"colour1\": '+ colour1 + '}, {\"colour2\": ' + colour2 + '}, {\"ratio\": ' + ratio + '}]}';
 

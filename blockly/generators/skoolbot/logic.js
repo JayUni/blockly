@@ -109,7 +109,7 @@ Blockly.Skoolbot['logic_negate'] = function(block) {
 Blockly.Skoolbot['logic_boolean'] = function(block) {
   // Boolean values true and false.
   var tf = (block.getFieldValue('BOOL') == 'TRUE') ? '\"TRUE\"' : '\"FALSE\"';
-  code = '{\"boolean\": ' + tf + '}'
+  code = '{\"boolean\": ' + tf + '}';
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
