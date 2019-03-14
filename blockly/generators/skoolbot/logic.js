@@ -31,47 +31,26 @@ goog.require('Blockly.Skoolbot');
 
 Blockly.Skoolbot['controls_if'] = function(block) {
   // If/elseif/else condition.
- /* var n = 0;
-  var code = '', branchCode, conditionCode;
+  var n = 0;
+  var code = '{\n\"statement\": \"', branchCode, conditionCode;
   do {
     conditionCode = Blockly.Skoolbot.valueToCode(block, 'IF' + n,
       Blockly.Skoolbot.ORDER_NONE) || 'false';
     branchCode = Blockly.Skoolbot.statementToCode(block, 'DO' + n);
-    code += (n > 0 ? 'else' : '') +
-        'if ' + conditionCode + ' then\n' + branchCode;
 
+    if (n > 0) {
+      code += '{\n\"statement\": \"else if\", ' + '\"condition\": ' + conditionCode + ", " + '\"branchCode\":' + branchCode;
+    } else {
+      code += 'if\", ' + '\"condition\": ' + conditionCode + ", " + '\"branchCode\":' + branchCode;
+    }
     ++n;
   } while (block.getInput('IF' + n));
 
   if (block.getInput('ELSE')) {
     branchCode = Blockly.Skoolbot.statementToCode(block, 'ELSE');
-    code += 'else\n' + branchCode;
+    code += ',\n}\n{\n\"statement\": \"else\", ' + '\"branchCode\":' + branchCode;
   }
-  return code + 'end\n';*/
-
-  var n = 0;
-  var code = '', branchCode, conditionCode;
-  do {
-    conditionCode = Blockly.Skoolbot.valueToCode(block, 'IF' + n,
-    Blockly.Skoolbot.ORDER_NONE) || 'false';
-    branchCode = Blockly.Skoolbot.statementToCode(block, 'DO' + n);
-    code += (n > 0 ? 'else { ' : '') +
-        '{\n' + 
-	  'if\n ' + 
-	  'cond: ' + conditionCode + '\n' + 
-	  'then\n' + branchCode;
-    
-    ++n;
-   } while (block.getInput('IF' + n));
-	
-   if (block.getInput('ELSE')) {
-     branchCode = Blockly.Skoolbot.statementToCode(block, 'ELSE');
-     code += 'else\n' + branchCode;
-   }
-
-
-  return code + 'end\n}\n'; 
-
+  return code + '}\n';
 };
 
 Blockly.Skoolbot['controls_ifelse'] = Blockly.Skoolbot['controls_if'];
@@ -80,18 +59,28 @@ Blockly.Skoolbot['logic_compare'] = function(block) {
   // Comparison operator.
   var OPERATORS = {
     'EQ': '==',
-    'NEQ': '~=',
+    'NEQ': '!=',
     'LT': '<',
     'LTE': '<=',
     'GT': '>',
     'GTE': '>='
   };
+  var OPERATORSFUNC = {
+    'EQ': function(a, b){ return a==b},
+    'NEQ': function(a, b){ return a!=b},
+    'LT': function(a, b){ return a<b},
+    'LTE': function(a, b){ return a<=b},
+    'GT': function(a, b){ return a>b},
+    'GTE': function(a, b){ return a>=b},
+  };
+
   var operator = OPERATORS[block.getFieldValue('OP')];
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'A',
       Blockly.Skoolbot.ORDER_RELATIONAL) || '0';
   var argument1 = Blockly.Skoolbot.valueToCode(block, 'B',
       Blockly.Skoolbot.ORDER_RELATIONAL) || '0';
-  var code = argument0 + ' ' + operator + ' ' + argument1;
+  var code = '{ \n\"operator\": \"' + operator + '\", \n\"result\": ' +
+      OPERATORSFUNC[block.getFieldValue('OP')](argument0, argument1) + '\n}';
   return [code, Blockly.Skoolbot.ORDER_RELATIONAL];
 };
 
@@ -116,7 +105,14 @@ Blockly.Skoolbot['logic_operation'] = function(block) {
       argument1 = defaultArgument;
     }
   }
-  var code = argument0 + ' ' + operator + ' ' + argument1;
+  argument0 = (argument0 == 'true');
+  argument1 = (argument1 == 'true');
+  var code = '{ \n\"operator\": \"' + operator + '\", \n\"result\": ';
+  var result = (argument0)&&(argument1);
+  if (operator == 'or') {
+    result = (argument0)||(argument1);
+  }
+  code +=  result + '\n}';
   return [code, order];
 };
 
@@ -124,29 +120,32 @@ Blockly.Skoolbot['logic_negate'] = function(block) {
   // Negation.
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'BOOL',
       Blockly.Skoolbot.ORDER_UNARY) || 'true';
-  var code = 'not ' + argument0;
+  argument0 = (argument0 != 'true');
+  var code = '{ \n\"operator\": \"negate\", \n\"result\": ' + argument0 + '\n}\n';
   return [code, Blockly.Skoolbot.ORDER_UNARY];
 };
 
 Blockly.Skoolbot['logic_boolean'] = function(block) {
   // Boolean values true and false.
   var code = (block.getFieldValue('BOOL') == 'TRUE') ? 'true' : 'false';
-  return [code, Blockly.Skoolbot.ORDER_ATOMIC];
+  return ['{\n\"boolean\": ' + code + '\n}', Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
 Blockly.Skoolbot['logic_null'] = function(block) {
   // Null data type.
-  return ['nil', Blockly.Skoolbot.ORDER_ATOMIC];
+  //return ['nil', Blockly.Skoolbot.ORDER_ATOMIC];
+  return ['{\n\"null\": null\n}', Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
 Blockly.Skoolbot['logic_ternary'] = function(block) {
   // Ternary operator.
   var value_if = Blockly.Skoolbot.valueToCode(block, 'IF',
-      Blockly.Skoolbot.ORDER_AND) || 'false';
+      Blockly.Skoolbot.ORDER_OR) || 'false';
   var value_then = Blockly.Skoolbot.valueToCode(block, 'THEN',
-      Blockly.Skoolbot.ORDER_AND) || 'nil';
+      Blockly.Skoolbot.ORDER_OR) || 'nil';
   var value_else = Blockly.Skoolbot.valueToCode(block, 'ELSE',
       Blockly.Skoolbot.ORDER_OR) || 'nil';
-  var code = value_if + ' and ' + value_then + ' or ' + value_else;
+  var code = '{\n\"statement\": \"if\", \n\"condition\": ' + value_if + ',\n'
+              + '\"branchTrue\": \"' + value_then + '\",\n\"branchFalse\": \"' + value_else + '\"\n}';
   return [code, Blockly.Skoolbot.ORDER_OR];
 };
