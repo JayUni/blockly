@@ -34,7 +34,7 @@ Blockly.Skoolbot['math_number'] = function(block) {
   var code = parseFloat(block.getFieldValue('NUM'));
   var order = code < 0 ? Blockly.Skoolbot.ORDER_UNARY :
               Blockly.Skoolbot.ORDER_ATOMIC;
-  return ['{ \"number\": ' + code + ' }', order];
+  return ['{ \"number\": \"' + code + '\" }', order];
 };
 
 Blockly.Skoolbot['math_arithmetic'] = function(block) {
@@ -49,9 +49,9 @@ Blockly.Skoolbot['math_arithmetic'] = function(block) {
   var tuple = OPERATORS[block.getFieldValue('OP')];
   var operator = tuple[0];
   var order = tuple[1];
-  var argument0 = Blockly.Skoolbot.valueToCode(block, 'A', order) || '0';
-  var argument1 = Blockly.Skoolbot.valueToCode(block, 'B', order) || '0';
-  var code = '{ \"operator\": \"'+ operator + '\", \"argument\":' + '['+ argument0 + ',' + argument1 + ']}';
+  var argument0 = Blockly.Skoolbot.valueToCode(block, 'A', order) || '{ \"number\": \"0\"}';
+  var argument1 = Blockly.Skoolbot.valueToCode(block, 'B', order) || '{ \"number\": \"0\"}';
+  var code = '{ \"operator\": \"'+ operator + '\", \"argument\": ['+ argument0 + ',' + argument1 + ']}';
   return [code, order];
 };
 
@@ -63,22 +63,22 @@ Blockly.Skoolbot['math_single'] = function(block) {
   if (operator == 'NEG') {
     // Negation is a special case given its different operator precedence.
     arg = Blockly.Skoolbot.valueToCode(block, 'NUM',
-        Blockly.Skoolbot.ORDER_UNARY) || '0';
-    return ['{ \"operator\": \"' + operator + '\",\"argument\":' + arg + '}', Blockly.Skoolbot.ORDER_UNARY];
+        Blockly.Skoolbot.ORDER_UNARY) || '{ \"number\": \"0\"}';
+    return ['{ \"operator\": \"' + operator + '\",\"argument\": [' + arg + ']}', Blockly.Skoolbot.ORDER_UNARY];
   }
   if (operator == 'POW10') {
     arg = Blockly.Skoolbot.valueToCode(block, 'NUM',
-        Blockly.Skoolbot.ORDER_EXPONENTIATION) || '0';
-    return ['{ \"operator\": \"' + operator + '\",\"argument\":' + arg + '}', Blockly.Skoolbot.ORDER_EXPONENTIATION];
+        Blockly.Skoolbot.ORDER_EXPONENTIATION) || '{ \"number\": \"0\"}';
+    return ['{ \"operator\": \"' + operator + '\",\"argument\": [' + arg + ']}', Blockly.Skoolbot.ORDER_EXPONENTIATION];
   }
   if (operator == 'ROUND') {
     arg = Blockly.Skoolbot.valueToCode(block, 'NUM',
-        Blockly.Skoolbot.ORDER_ADDITIVE) || '0';
+        Blockly.Skoolbot.ORDER_ADDITIVE) || '{ \"number\": \"0\"}';
   } else {
     arg = Blockly.Skoolbot.valueToCode(block, 'NUM',
-        Blockly.Skoolbot.ORDER_NONE) || '0';
+        Blockly.Skoolbot.ORDER_NONE) || '{ \"number\": \"0\"}';
   }
-  code = '{ \"operator\": \"' + operator + '\", \"argument\":' + arg + '}';
+  code = '{ \"operator\": \"' + operator + '\", \"argument\":[' + arg + ']}';
   return [code, Blockly.Skoolbot.ORDER_HIGH];
 };
 
@@ -99,28 +99,28 @@ Blockly.Skoolbot['math_number_property'] = function(block) {
   // Check if a number is even, odd, prime, whole, positive, or negative
   // or if it is divisible by certain number. Returns true or false.
   var number_to_check = Blockly.Skoolbot.valueToCode(block, 'NUMBER_TO_CHECK',
-      Blockly.Skoolbot.ORDER_MULTIPLICATIVE) || '0';
+      Blockly.Skoolbot.ORDER_MULTIPLICATIVE) || '{ \"number\": \"0\"}';
   var dropdown_property = block.getFieldValue('PROPERTY');
   var code;
   if (dropdown_property == 'PRIME') {
-    code = '{ \"functionName\": \"math_isPrime\", \"argument\": ' + number_to_check + '}';
+    code = '{ \"functionName\": \"math_isPrime\", \"argument\": [' + number_to_check + ']}';
     return [code, Blockly.Skoolbot.ORDER_HIGH];
   }
   switch (dropdown_property) {
     case 'EVEN':
-      code = '{ \"functionName\": \"math_isEven\", \"argument\": ' + number_to_check + '}';
+      code = '{ \"functionName\": \"math_isEven\", \"argument\": [' + number_to_check + ']}';
       break;
     case 'ODD':
-      code = '{ \"functionName\": \"math_isOdd\", \"argument\": ' + number_to_check + '}';
+      code = '{ \"functionName\": \"math_isOdd\", \"argument\": [' + number_to_check + ']}';
       break;
     case 'WHOLE':
-      code = '{ \"functionName\": \"math_isWhole\", \"argument\": ' + number_to_check + '}';
+      code = '{ \"functionName\": \"math_isWhole\", \"argument\": [' + number_to_check + ']}';
       break;
     case 'POSITIVE':
-      code = '{ \"functionName\": \"math_isPositive\", \"argument\": ' + number_to_check + '}';
+      code = '{ \"functionName\": \"math_isPositive\", \"argument\": [' + number_to_check + ']}';
       break;
     case 'NEGATIVE':
-      code = '{ \"functionName\": \"math_isNegative\", \"argument\": ' + number_to_check + '}';
+      code = '{ \"functionName\": \"math_isNegative\", \"argument\": [' + number_to_check + ']}';
       break;
     case 'DIVISIBLE_BY':
       var divisor = Blockly.Skoolbot.valueToCode(block, 'DIVISOR',
@@ -135,11 +135,11 @@ Blockly.Skoolbot['math_number_property'] = function(block) {
 Blockly.Skoolbot['math_change'] = function(block) {
   // Add to a variable in place.
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'DELTA',
-      Blockly.Skoolbot.ORDER_ADDITIVE) || '0';
+      Blockly.Skoolbot.ORDER_ADDITIVE) || '{ \"number\": \"0\"}';
   var varName = Blockly.Skoolbot.variableDB_.getName(
       block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
   // return varName + ' = ' + varName + ' + ' + argument0 + '\n';
-  return '{ \"functionName\": \"math_change\", \"argument\": [' + varName + ', ' + argument0 + ']}';
+  return '{ \"functionName\": \"math_change\", \"varName\": \"' + varName + '\", \"argument\": [' + argument0 + ']}';
 };
 
 // Rounding functions have a single operand.
@@ -152,15 +152,15 @@ Blockly.Skoolbot['math_on_list'] = function(block) {
   var functionName = block.getFieldValue('OP');
   var list = Blockly.Skoolbot.valueToCode(block, 'LIST',
       Blockly.Skoolbot.ORDER_NONE) || '{}';
-  return ['{ \"functionName\": \"'+ functionName + '\", \"argument\": '  + list + '}', Blockly.Skoolbot.ORDER_HIGH];
+  return ['{ \"functionName\": \"'+ functionName + '\", \"argument\": ['  + list + ']}', Blockly.Skoolbot.ORDER_HIGH];
 };
 
 Blockly.Skoolbot['math_modulo'] = function(block) {
   // Remainder computation.
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'DIVIDEND',
-      Blockly.Skoolbot.ORDER_MULTIPLICATIVE) || '0';
+      Blockly.Skoolbot.ORDER_MULTIPLICATIVE) || '{ \"number\": \"0\"}';
   var argument1 = Blockly.Skoolbot.valueToCode(block, 'DIVISOR',
-      Blockly.Skoolbot.ORDER_MULTIPLICATIVE) || '0';
+      Blockly.Skoolbot.ORDER_MULTIPLICATIVE) || '{ \"number\": \"0\"}';
   var code = '{ \"operator\": \"%\", \"argument\":' + '['+ argument0 + ',' + argument1 + ']}';
   return [code, Blockly.Skoolbot.ORDER_MULTIPLICATIVE];
 };
@@ -168,7 +168,7 @@ Blockly.Skoolbot['math_modulo'] = function(block) {
 Blockly.Skoolbot['math_constrain'] = function(block) {
   // Constrain a number between two limits.
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'VALUE',
-      Blockly.Skoolbot.ORDER_NONE) || '0';
+      Blockly.Skoolbot.ORDER_NONE) || '{ \"number\": \"0\"}';
   var argument1 = Blockly.Skoolbot.valueToCode(block, 'LOW',
       Blockly.Skoolbot.ORDER_NONE) || '-math.huge';
   var argument2 = Blockly.Skoolbot.valueToCode(block, 'HIGH',
@@ -180,9 +180,9 @@ Blockly.Skoolbot['math_constrain'] = function(block) {
 Blockly.Skoolbot['math_random_int'] = function(block) {
   // Random integer between [X] and [Y].
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'FROM',
-      Blockly.Skoolbot.ORDER_NONE) || '0';
+      Blockly.Skoolbot.ORDER_NONE) || '{ \"number\": \"0\"}';
   var argument1 = Blockly.Skoolbot.valueToCode(block, 'TO',
-      Blockly.Skoolbot.ORDER_NONE) || '0';
+      Blockly.Skoolbot.ORDER_NONE) || '{ \"number\": \"0\"}';
   var code = '{ \"functionName\": \"math_random_int\", \"argument\": [' + argument0 + ', ' + argument1 + ']}';
   return [code, Blockly.Skoolbot.ORDER_HIGH];
 };
@@ -195,9 +195,9 @@ Blockly.Skoolbot['math_random_float'] = function(block) {
 Blockly.Skoolbot['math_atan2'] = function(block) {
   // Arctangent of point (X, Y) in degrees from -180 to 180.
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'X',
-      Blockly.Skoolbot.ORDER_NONE) || '0';
+      Blockly.Skoolbot.ORDER_NONE) || '{ \"number\": \"0\"}';
   var argument1 = Blockly.Skoolbot.valueToCode(block, 'Y',
-      Blockly.Skoolbot.ORDER_NONE) || '0';
+      Blockly.Skoolbot.ORDER_NONE) || '{ \"number\": \"0\"}';
   return ['{ \"operator\": \"math_atan2\"' + ',\"argument\":[' + argument0 + ',' + argument1 + ']}',
       Blockly.Skoolbot.ORDER_HIGH];
 };

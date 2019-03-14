@@ -59,10 +59,9 @@ Blockly.Skoolbot['controls_repeat'] = function(block) {
   var repeats = parseInt(block.getFieldValue('TIMES'), 10);
   var branch = Blockly.Skoolbot.statementToCode(block, 'DO') || '\"\"\n';
   branch = Blockly.Skoolbot.addContinueLabel(branch);
-  var loopVar = Blockly.Skoolbot.variableDB_.getDistinctName(
-      'count', Blockly.Variables.NAME_TYPE);
+  var loopVar = Blockly.Skoolbot.variableDB_.getDistinctName('count', Blockly.Variables.NAME_TYPE);
   // var code = 'for ' + loopVar + ' = 1, ' + repeats + ' do\n' + branch + 'end\n';
-  var code = '{\n\t\"loop_style\": \"controls_repeat\",\n\t\"repeat_times\": '+ repeats + ',\n\t\"branch\": '+ branch + '\n}';
+  var code = '{\"loop_style\": \"controls_repeat\", \"repeat_times\": '+ repeats + ', \"branch\": '+ branch + '}';
   return code;
 };
 
@@ -73,14 +72,14 @@ Blockly.Skoolbot['controls_repeat_ext'] = function(block) {
   if (Blockly.isNumber(repeats)) {
     repeats = parseInt(repeats, 10);
   } else {
-    repeats = '{\n\t\t\"operator\": \"math.floor\", \n\t\t\"argument\": '+ repeats + '\n\t}';
+    repeats = '{\"operator\": \"math.floor\", \"argument\": '+ repeats + '}';
   }
   var branch = Blockly.Skoolbot.statementToCode(block, 'DO') || '\"\"\n';
   branch = Blockly.Skoolbot.addContinueLabel(branch);
   var loopVar = Blockly.Skoolbot.variableDB_.getDistinctName(
       'count', Blockly.Variables.NAME_TYPE);
   // var code = 'for ' + loopVar + ' = 1, ' + repeats + ' do\n' + branch + 'end\n';
-  var code = '{\n\t\"loop_style\": \"controls_repeat_ext\",\n\t\"repeat_times\": '+ repeats + ',\n\t\"branch\": '+ branch + '\n}';
+  var code = '{\"loop_style\": \"controls_repeat_ext\", \"repeat_times\": '+ repeats + ', \"branch\": '+ branch + '\n}';
   return code;
 };
 
@@ -99,7 +98,7 @@ Blockly.Skoolbot['controls_whileUntil'] = function(block) {
   else{
     var endType = '\"while\"';
   }
-  var code = '{\n\t\"loop_style\": \"controls_whileUntil\",\n\t\"repeat_condition\": '+ argument0 + ',\n\t\"end_type\": '+ endType + ',\n\t\"branch\": '+ branch + '\n}';
+  var code = '{\"loop_style\": \"controls_whileUntil\",\"repeat_condition\": '+ argument0 + ',\"end_type\": '+ endType + ',\"branch\": '+ branch + '}';
   // return 'while ' + argument0 + ' do\n' + branch + 'end\n';
   return code;
 };
@@ -117,34 +116,7 @@ Blockly.Skoolbot['controls_for'] = function(block) {
   var branch = Blockly.Skoolbot.statementToCode(block, 'DO') || '\"\"\n';
   branch = Blockly.Skoolbot.addLoopTrap(branch, block.id);
   branch = Blockly.Skoolbot.addContinueLabel(branch);
-  // var code = '';
-  // var incValue;
-  // if (Blockly.isNumber(startVar) && Blockly.isNumber(endVar) &&
-  //     Blockly.isNumber(increment)) {
-  //   // All arguments are simple numbers.
-  //   var up = parseFloat(startVar) <= parseFloat(endVar);
-  //   var step = Math.abs(parseFloat(increment));
-  //   incValue = (up ? '' : '-') + step;
-  // } else {
-  //   code = '';
-  //   // Determine loop direction at start, in case one of the bounds
-  //   // changes during loop execution.
-  //   incValue = Blockly.Skoolbot.variableDB_.getDistinctName(
-  //       variable0 + '_inc', Blockly.Variables.NAME_TYPE);
-  //   code += incValue + ' = ';
-  //   if (Blockly.isNumber(increment)) {
-  //     code += Math.abs(increment) + '\n';
-  //   } else {
-  //     code += 'math.abs(' + increment + ')\n';
-  //   }
-  //   code += 'if (' + startVar + ') > (' + endVar + ') then\n';
-  //   code += Blockly.Skoolbot.INDENT + incValue + ' = -' + incValue + '\n';
-  //   code += 'end\n';
-  // }
-  // code += 'for ' + variable0 + ' = ' + startVar + ', ' + endVar +
-  //     ', ' + incValue;
-  // code += ' do\n' + branch + 'end\n';
-    var code = '\n{\n\t\"loop_style\": \"controls_for\"'+',\n\t\"variable\": \"' + variable0 + '\",\n\t\"start\": '+ startVar +',\n\t\"end\": ' + endVar + ',\n\t\"step\": ' + increment +',\n\t\"branch\": ' + branch + '\n}';
+  var code = '\n{ \"loop_style\": \"controls_for\"'+', \"variable\": \"' + variable0 + '\", \"start\": '+ startVar +', \"end\": ' + endVar + ', \"step\": ' + increment +', \"branch\": ' + branch + '}';
   return code;
 };
 
@@ -158,7 +130,7 @@ Blockly.Skoolbot['controls_forEach'] = function(block) {
   branch = Blockly.Skoolbot.addContinueLabel(branch);
   // var code = 'for _, ' + variable0 + ' in ipairs(' + argument0 + ') do \n' +
   //     branch + 'end\n';
-  var code = '{\n\t\"loop_style\": \"controls_forEach\",\n\t\"variable\": \"'+ variable0 + '\",\n\t\"list\": '+ argument0 + ',\n\t\"branch\": '+ branch + '\n}';
+  var code = '{\"loop_style\": \"controls_forEach\",\"varName\": \"'+ variable0 + '\", \"list\": '+ argument0 + ', \"branch\": '+ branch + '\n}';
   return code;
 };
 
