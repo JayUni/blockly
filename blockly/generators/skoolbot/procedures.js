@@ -49,9 +49,7 @@ Blockly.Skoolbot['procedures_defreturn'] = function(block) {
   if (returnValue) {
     returnValue = Blockly.Skoolbot.INDENT + returnValue;
   }
-  // else if (!branch) {
-  //   branch = '{\"null\": \"NULL\"}';
-  // }
+
   var args = [];
   for (var i = 0; i < block.arguments_.length; i++) {
     args[i] = '{ \"argument' + i + '\": \"' + Blockly.Skoolbot.variableDB_.getName(block.arguments_[i],

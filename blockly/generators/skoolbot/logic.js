@@ -32,32 +32,30 @@ goog.require('Blockly.Skoolbot');
 Blockly.Skoolbot['controls_if'] = function(block) {
   // If/elseif/else condition.
   var n = 0;
-  var code = '{\n\"statement\": \"', branchCode, conditionCode;
+  var code = '{\"controls_type\": \"controls_if\", \"structure\": [{\"statement\": \"', branchCode, conditionCode;
   do {
     conditionCode = Blockly.Skoolbot.valueToCode(block, 'IF' + n,
       Blockly.Skoolbot.ORDER_NONE) || '\"False\"';
-    branchCode = Blockly.Skoolbot.statementToCode(block, 'DO' + n);
+    branchCode = Blockly.Skoolbot.statementToCode(block, 'DO' + n) || '\"\"';
 
     if (n > 0) {
-      code += '{\"statement\": \"else if\", ' + '\"condition\": ' + conditionCode + ", " + '\"branchCode\":' + branchCode;
+      code += ', {\"statement\": \"else if\", ' + '\"condition\": ' + conditionCode + ", " + '\"branchCode\":' + branchCode + '}';
     } else {
-      code += 'if\", ' + '\"condition\": ' + conditionCode + ", " + '\"branchCode\":' + branchCode;
+      code += 'if\", ' + '\"condition\": ' + conditionCode + ", " + '\"branchCode\":' + branchCode + '}';
     }
     ++n;
   } while (block.getInput('IF' + n));
 
   if (block.getInput('ELSE')) {
     branchCode = Blockly.Skoolbot.statementToCode(block, 'ELSE') || '\"\"';
-    code += '{\"statement\": \"else\", ' + '\"branchCode\":' + branchCode;
+    code += ', {\"statement\": \"else\", ' + '\"branchCode\":' + branchCode + '}]';
   }
   else
   {
-    code += '\"\"';
+    code += '}]';
   }
-  for(var i = 0; i < n + 1; i++){
-    code += '}';
-  }
-  return code;
+
+  return code += '}';
 };
 
 Blockly.Skoolbot['controls_ifelse'] = Blockly.Skoolbot['controls_if'];
@@ -97,10 +95,6 @@ Blockly.Skoolbot['logic_negate'] = function(block) {
   // Negation.
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'BOOL',
       Blockly.Skoolbot.ORDER_UNARY) || '{ \"boolean\": \"TRUE\"}';
-
-  // Notice that here the argument0 contains "()" which need to be removed.
-  argument0 = argument0.replace("(", "");
-  argument0 = argument0.replace(")", "");
 
   var code = '{ \"operator\": \"logic_negate\", \"argument\": ['+ argument0 + ']}';
   return [code, Blockly.Skoolbot.ORDER_UNARY];
