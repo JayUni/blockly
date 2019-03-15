@@ -1,0 +1,19 @@
+<xml>
+  <block type="controls_if" id="G9OD,mtidL@fJC]jf5X8" x="213" y="63">
+    <value name="IF0">
+      <block type="logic_compare" id="m$vD;vQ(u:~D^_yVm/%s">
+        <field name="OP">EQ</field>
+        <value name="A">
+          <block type="math_number" id="eT~L[7{7^}%w7TKaevDL">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="B">
+          <block type="math_number" id="F.d8q6q2zbAFW4G-lv|m">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>
