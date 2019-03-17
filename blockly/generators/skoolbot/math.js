@@ -132,10 +132,16 @@ Blockly.Skoolbot['math_constant'] = function(block) {
   // Constants: PI, E, the Golden Ratio, sqrt(2), 1/sqrt(2), INFINITY.
   var CONSTANTS = {
     PI: ['{ \"operator\": \"math.pi\"}', Blockly.Skoolbot.ORDER_HIGH],
+
     E: ['{ \"operator\": \"math.exp\", \"argument\": { \"number\": 1}}', Blockly.Skoolbot.ORDER_HIGH],
-    GOLDEN_RATIO: ['{ \"operator\": \"+\", \"argument\": [{ \"number\": 1} , { \"operator\": \"/\", \"argument\":[{ \"operator\": \"math.sqrt\", \"argument\":{ \"number\": 5}} , { \"number\": 2}]}]}', Blockly.Skoolbot.ORDER_MULTIPLICATIVE],
+
+    GOLDEN_RATIO: ['{ \"operator\": \"/\", \"argument\":[{ \"operator\": \"\+\", '+
+    '\"argument\": [{ \"number\": 1} , { \"operator\": \"math.sqrt\", \"argument\":{ \"number\": 5}], { \"number\": 2}]', Blockly.Skoolbot.ORDER_MULTIPLICATIVE],
+
     SQRT2: ['{ \"operator\": \"math.sqrt\", \"argument\": { \"number\": 2}}', Blockly.Skoolbot.ORDER_HIGH],
+
     SQRT1_2: ['{ \"operator\": \"math.sqrt\", \"argument\": { \"number\": 0.5}}', Blockly.Skoolbot.ORDER_HIGH],
+
     INFINITY: ['{ \"operator\": \"math.huge\"}', Blockly.Skoolbot.ORDER_HIGH]
   };
   return CONSTANTS[block.getFieldValue('CONSTANT')];

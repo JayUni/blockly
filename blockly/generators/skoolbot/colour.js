@@ -35,11 +35,19 @@ Blockly.Skoolbot['colour_picker'] = function(block) {
   return ['{\"colour\": ' + code + '}', Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
+function randomHex() {
+  var hex = "#";
+  for (var i = 0; i < 6; ++i) {
+    hex += Math.floor(Math.random()*16).toString(16).toUpperCase();
+  }
+  return hex;
+}
+
 Blockly.Skoolbot['colour_random'] = function(block) {
   // Generate a random colour.
   // var code = 'string.format("#%06x", math.random(0, 2^24 - 1))';
 
-  var code = "\"" + '#'+(Math.random()*0xFFFFFF<<0).toString(16) + "\"";
+  var code = "\"" + randomHex() + "\"";
   return ["{\"colour\": " + code + "}", Blockly.Skoolbot.ORDER_HIGH];
 };
 
