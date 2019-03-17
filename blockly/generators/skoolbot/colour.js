@@ -51,7 +51,6 @@ Blockly.Skoolbot['colour_rgb'] = function(block) {
       Blockly.Skoolbot.ORDER_NONE) || '{ \"number\": \"0\"}';
 
   var code = '{\"functionName\": \"colour_rgb\", \"argument\": [{\"red%\": ' + r + '}, {\"green%\": ' + g + '}, {\"blue%\": ' + b + '}]}';
-  console.log(code);
   return [code, Blockly.Skoolbot.ORDER_HIGH];
 };
 

@@ -127,7 +127,7 @@ Blockly.Skoolbot['text_changeCase'] = function(block) {
 
 Blockly.Skoolbot['text_trim'] = function(block) {
   // Trim spaces.
-  var whichside = OPERATORS[block.getFieldValue('MODE')];
+  var whichside = block.getFieldValue('MODE');
   var text = Blockly.Skoolbot.valueToCode(block, 'TEXT',
       Blockly.Skoolbot.ORDER_NONE) || '\"\'\'\"';
   var code = '{ \"functionName\": \"text_trim\", \"argument\": [{\"varName\": ' + text + '}, {\"which_side\": \"'+ whichside +'\"}]}';

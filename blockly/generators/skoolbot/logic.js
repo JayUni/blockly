@@ -39,23 +39,23 @@ Blockly.Skoolbot['controls_if'] = function(block) {
     branchCode = Blockly.Skoolbot.statementToCode(block, 'DO' + n) || '\"\"';
 
     if (n > 0) {
-      code += ', {\"statement\": \"else if\", ' + '\"condition\": ' + conditionCode + ", " + '\"branchCode\":' + branchCode + '}';
+      code += '}, {\"statement\": \"else if\", ' + '\"condition\": ' + conditionCode + ", " + '\"branchCode\":' + branchCode;
     } else {
-      code += 'if\", ' + '\"condition\": ' + conditionCode + ", " + '\"branchCode\":' + branchCode + '}';
+      code += 'if\", ' + '\"condition\": ' + conditionCode + ", " + '\"branchCode\":' + branchCode;
     }
     ++n;
   } while (block.getInput('IF' + n));
 
   if (block.getInput('ELSE')) {
     branchCode = Blockly.Skoolbot.statementToCode(block, 'ELSE') || '\"\"';
-    code += ', {\"statement\": \"else\", ' + '\"branchCode\":' + branchCode + '}]';
+    code += '}, {\"statement\": \"else\", ' + '\"branchCode\":' + branchCode + '}]';
   }
   else
   {
     code += '}]';
   }
-
-  return code += '}';
+  code += '}';
+  return code;
 };
 
 Blockly.Skoolbot['controls_ifelse'] = Blockly.Skoolbot['controls_if'];
@@ -103,7 +103,7 @@ Blockly.Skoolbot['logic_negate'] = function(block) {
 Blockly.Skoolbot['logic_boolean'] = function(block) {
   // Boolean values true and false.
   var tf = (block.getFieldValue('BOOL') == 'TRUE') ? '\"TRUE\"' : '\"FALSE\"';
-  code = '{\"boolean\": ' + tf + '}';
+  var code = '{\"boolean\": ' + tf + '}';
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
