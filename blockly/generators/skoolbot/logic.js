@@ -32,14 +32,14 @@ goog.require('Blockly.Skoolbot');
 Blockly.Skoolbot['controls_if'] = function(block) {
   // If/elseif/else condition.
   var n = 0;
-  var code = '{\n\"statement\": \"', branchCode, conditionCode;
+  var code = '{\"statement\": \"', branchCode, conditionCode;
   do {
     conditionCode = Blockly.Skoolbot.valueToCode(block, 'IF' + n,
-      Blockly.Skoolbot.ORDER_NONE) || 'false';
+      Blockly.Skoolbot.ORDER_ATOMIC) || 'false';
     branchCode = Blockly.Skoolbot.statementToCode(block, 'DO' + n);
 
     if (n > 0) {
-      code += '{\n\"statement\": \"else if\", ' + '\"condition\": ' + conditionCode + ", " + '\"branchCode\":' + branchCode;
+      code += '{\"statement\": \"else if\", ' + '\"condition\": ' + conditionCode + ", " + '\"branchCode\":' + branchCode;
     } else {
       code += 'if\", ' + '\"condition\": ' + conditionCode + ", " + '\"branchCode\":' + branchCode;
     }
@@ -48,7 +48,7 @@ Blockly.Skoolbot['controls_if'] = function(block) {
 
   if (block.getInput('ELSE')) {
     branchCode = Blockly.Skoolbot.statementToCode(block, 'ELSE');
-    code += ',\n}\n{\n\"statement\": \"else\", ' + '\"branchCode\":' + branchCode;
+    code += ',}\n{\n\"statement\": \"else\", ' + '\"branchCode\":' + branchCode;
   }
   return code + '}\n';
 };

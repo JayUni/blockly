@@ -48,7 +48,7 @@ Blockly.Skoolbot['colour_random'] = function(block) {
   // var code = 'string.format("#%06x", math.random(0, 2^24 - 1))';
 
   var code = "\"" + randomHex() + "\"";
-  return ["{\"colour\": " + code + "}", Blockly.Skoolbot.ORDER_HIGH];
+  return ["{\"colour\": " + code + "}", Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
 Blockly.Skoolbot['colour_rgb'] = function(block) {
@@ -62,24 +62,34 @@ Blockly.Skoolbot['colour_rgb'] = function(block) {
        '  return string.format("#%02x%02x%02x", r, g, b)',
        'end']);
   */
-  var r = parseInt(Blockly.Skoolbot.valueToCode(block, 'RED',
-      Blockly.Skoolbot.ORDER_NONE).split(":")[1]) || 0;
-  var g = parseInt(Blockly.Skoolbot.valueToCode(block, 'GREEN',
-      Blockly.Skoolbot.ORDER_NONE).split(":")[1]) || 0;
-  var b = parseInt(Blockly.Skoolbot.valueToCode(block, 'BLUE',
-      Blockly.Skoolbot.ORDER_NONE).split(":")[1]) || 0;
-  //var code = functionName + '(' + r + ', ' + g + ', ' + b + ')';
-  r = Math.floor(Math.min(100, Math.max(0, r)) * 2.55 + .5).toString(16);
-  g = Math.floor(Math.min(100, Math.max(0, g)) * 2.55 + .5).toString(16);
-  b = Math.floor(Math.min(100, Math.max(0, b)) * 2.55 + .5).toString(16);
 
-  var code  = '{\"colourRGB\": \""#';
-  var rgb = [r, g, b];
-  for (var i in rgb) {
-  	if (rgb[i].length == 1) { code += '0' + rgb[i];}
-  	else { code += rgb[i];}
-  }
-  return [code + "\"}", Blockly.Skoolbot.ORDER_HIGH];
+  //with operations
+  // var r = parseInt(Blockly.Skoolbot.valueToCode(block, 'RED',
+  //     Blockly.Skoolbot.ORDER_ATOMIC).split(":")[1]) || 0;
+  // var g = parseInt(Blockly.Skoolbot.valueToCode(block, 'GREEN',
+  //     Blockly.Skoolbot.ORDER_ATOMIC).split(":")[1]) || 0;
+  // var b = parseInt(Blockly.Skoolbot.valueToCode(block, 'BLUE',
+  //     Blockly.Skoolbot.ORDER_ATOMIC).split(":")[1]) || 0;
+  // //var code = functionName + '(' + r + ', ' + g + ', ' + b + ')';
+  // r = Math.floor(Math.min(100, Math.max(0, r)) * 2.55 + .5).toString(16);
+  // g = Math.floor(Math.min(100, Math.max(0, g)) * 2.55 + .5).toString(16);
+  // b = Math.floor(Math.min(100, Math.max(0, b)) * 2.55 + .5).toString(16);
+  //
+  // var code  = '{\"colourRGB\": \""#';
+  // var rgb = [r, g, b];
+  // for (var i in rgb) {
+  // 	if (rgb[i].length == 1) { code += '0' + rgb[i];}
+  // 	else { code += rgb[i];}
+  // }
+  // return [code + "\"}", Blockly.Skoolbot.ORDER_ATOMIC];
+
+  //with no operations
+  var r = Blockly.Skoolbot.valueToCode(block, 'RED', Blockly.Skoolbot.ORDER_ATOMIC) || 0;
+  var g = Blockly.Skoolbot.valueToCode(block, 'GREEN', Blockly.Skoolbot.ORDER_ATOMIC) || 0;
+  var b = Blockly.Skoolbot.valueToCode(block, 'BLUE', Blockly.Skoolbot.ORDER_ATOMIC) || 0;
+  var code  = '{\"colourRGB\":[' + r + ", " + g + ", " + b + "]}";
+
+  return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
 Blockly.Skoolbot['colour_blend'] = function(block) {
@@ -100,29 +110,41 @@ Blockly.Skoolbot['colour_blend'] = function(block) {
        '  local b = math.floor(b1 * (1 - ratio) + b2 * ratio + .5)',
        '  return string.format("#%02x%02x%02x", r, g, b)',
        'end']);*/
-  var colour1 = Blockly.Skoolbot.valueToCode(block, 'COLOUR1',
-      Blockly.Skoolbot.ORDER_NONE).split(":")[1].replace(/\s|}/g, '') || '\"#000000\"';
-  var colour2 = Blockly.Skoolbot.valueToCode(block, 'COLOUR2',
-      Blockly.Skoolbot.ORDER_NONE).split(":")[1].replace(/\s|}/g, '') || '\"#000000\"';
-  var ratio = parseFloat(Blockly.Skoolbot.valueToCode(block, 'RATIO',
-      Blockly.Skoolbot.ORDER_NONE).split(":")[1]) || 0;
+  //with operations
+  // var colour1 = Blockly.Skoolbot.valueToCode(block, 'COLOUR1',
+  //     Blockly.Skoolbot.ORDER_ATOMIC).split(":")[1].replace(/\s|}/g, '') || '\"#000000\"';
+  // var colour2 = Blockly.Skoolbot.valueToCode(block, 'COLOUR2',
+  //     Blockly.Skoolbot.ORDER_ATOMIC).split(":")[1].replace(/\s|}/g, '') || '\"#000000\"';
+  // var ratio = parseFloat(Blockly.Skoolbot.valueToCode(block, 'RATIO',
+  //     Blockly.Skoolbot.ORDER_ATOMIC).split(":")[1]) || 0;
+  //
+  // var r1 = parseInt(colour1.substring(2, 3), 16);
+  // var r2 = parseInt(colour2.substring(2, 3), 16);
+  // var g1 = parseInt(colour1.substring(4, 5), 16);
+  // var g2 = parseInt(colour2.substring(4, 5), 16);
+  // var b1 = parseInt(colour1.substring(6, 7), 16);
+  // var b2 = parseInt(colour2.substring(6, 7), 16);
+  // var ratio = Math.min(1, Math.max(0, ratio));
+  // var r = Math.floor(r1 * (1 - ratio) + r2 * ratio + 0.5).toString(16);
+  // var g = Math.floor(g1 * (1 - ratio) + g2 * ratio + 0.5).toString(16);
+  // var b = Math.floor(b1 * (1 - ratio) + b2 * ratio + 0.5).toString(16);
+  //
+  // var code  = '{\"colourBlend\": \"#';
+  // var rgb = [r, g, b];
+  // for (var i in rgb) {
+  // 	if (rgb[i].length == 1) { code += '0' + rgb[i];}
+  // 	else { code += rgb[i];}
+  // }
+  // return [code + "\"}", Blockly.Skoolbot.ORDER_ATOMIC];
 
-  var r1 = parseInt(colour1.substring(2, 3), 16);
-  var r2 = parseInt(colour2.substring(2, 3), 16);
-  var g1 = parseInt(colour1.substring(4, 5), 16);
-  var g2 = parseInt(colour2.substring(4, 5), 16);
-  var b1 = parseInt(colour1.substring(6, 7), 16);
-  var b2 = parseInt(colour2.substring(6, 7), 16);
-  var ratio = Math.min(1, Math.max(0, ratio));
-  var r = Math.floor(r1 * (1 - ratio) + r2 * ratio + 0.5).toString(16);
-  var g = Math.floor(g1 * (1 - ratio) + g2 * ratio + 0.5).toString(16);
-  var b = Math.floor(b1 * (1 - ratio) + b2 * ratio + 0.5).toString(16);
+  //without operations
+  var colour1 = Blockly.Skoolbot.valueToCode(block, 'COLOUR1', Blockly.Skoolbot.ORDER_ATOMIC) || '\"#000000\"';
+  var colour2 = Blockly.Skoolbot.valueToCode(block, 'COLOUR2', Blockly.Skoolbot.ORDER_ATOMIC) || '\"#000000\"';
+  var ratio = parseFloat(Blockly.Skoolbot.valueToCode(block, 'RATIO', Blockly.Skoolbot.ORDER_ATOMIC)) || 0;
 
-  var code  = '{\"colourBlend\": \"#';
-  var rgb = [r, g, b];
-  for (var i in rgb) {
-  	if (rgb[i].length == 1) { code += '0' + rgb[i];}
-  	else { code += rgb[i];}
-  }
-  return [code + "\"}", Blockly.Skoolbot.ORDER_HIGH];
+
+  var code  = '{\"colourBlend\": [\"colour1\": '+ colour1 + ', \"colour2\": '+
+              colour2 + ', \"ratio\": ' + ratio + ']';
+
+  return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
