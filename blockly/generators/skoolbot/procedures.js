@@ -33,7 +33,7 @@ Blockly.Skoolbot['procedures_defreturn'] = function(block) {
   // Define a procedure with a return value.
   var funcName = Blockly.Skoolbot.variableDB_.getName(
       block.getFieldValue('NAME'), Blockly.Procedures.NAME_TYPE);
-  var branch = Blockly.Skoolbot.statementToCode(block, 'STACK') || '{\"null\": \"NULL\"}';
+  var branch = Blockly.Skoolbot.statementToCode(block, 'STACK');
   if (Blockly.Skoolbot.STATEMENT_PREFIX) {
     var id = block.id.replace(/\$/g, '$$$$');  // Issue 251.
     branch = Blockly.Skoolbot.prefixLines(
@@ -59,7 +59,7 @@ Blockly.Skoolbot['procedures_defreturn'] = function(block) {
   var description = Blockly.Skoolbot.scrub_(block, code, false);
   description = description.replace(/\n/g, " ");
 
-  code = '{ \"procedures_type\": \"procedures_defreturn\", \"funcName\": \"' + funcName + '\", \"description\": \"' + description + '\", \"argument\": [' + args.join(', ') + '], \"branch\": ' + branch + ', \"return_value\": ' + returnValue + '}';
+  code = '{ \"procedures_type\": \"procedures_defreturn\", \"funcName\": \"' + funcName + '\", \"description\": \"' + description + '\", \"argument\": [' + args.join(', ') + '], \"branch\": [' + branch + '], \"return_value\": ' + returnValue + '}';
 
   // Add % so as not to collide with helper functions in definitions list.
   Blockly.Skoolbot.definitions_['%' + funcName] = code;
@@ -91,7 +91,7 @@ Blockly.Skoolbot['procedures_callnoreturn'] = function(block) {
   var args = [];
   for (var i = 0; i < block.arguments_.length; i++) {
     args[i] = Blockly.Skoolbot.valueToCode(block, 'ARG' + i,
-        Blockly.Skoolbot.ORDER_ATOMIC) || '{\"null\": \"NULL\"}';
+        Blockly.Skoolbot.ORDER_ATOMIC);
   }
   var code = '{ \"procedures_type\": \"procedures_callnoreturn\", \"funcName\": \"' + funcName + '\", \"argument\": [' + args.join(', ') + ']}';
   return code;
@@ -100,9 +100,9 @@ Blockly.Skoolbot['procedures_callnoreturn'] = function(block) {
 Blockly.Skoolbot['procedures_ifreturn'] = function(block) {
   // Conditionally return value from a procedure.
   var condition = Blockly.Skoolbot.valueToCode(block, 'CONDITION',
-      Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"boolean\": \"FALSE\"}';
+      Blockly.Skoolbot.ORDER_ATOMIC);
   var value = Blockly.Skoolbot.valueToCode(block, 'VALUE',
-        Blockly.Skoolbot.ORDER_ATOMIC) || '{\"null\": \"NULL\"}';
+        Blockly.Skoolbot.ORDER_ATOMIC);
   if (block.hasReturnValue_) {
 
   var code = '{ \"procedures_type\": \"procedures_ifreturn\", \"condition\": ' + condition + ', \"has_return_value\": { \"boolean\": \"TRUE\"}, \"return\":  [' + value + ']}';

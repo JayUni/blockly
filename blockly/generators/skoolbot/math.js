@@ -86,16 +86,18 @@ Blockly.Skoolbot['math_constant'] = function(block) {
   // Constants: PI, E, the Golden Ratio, sqrt(2), 1/sqrt(2), INFINITY.
   var CONSTANTS = {
 
-    PI: ['{ \"operator\": \"PI\"}', Blockly.Skoolbot.ORDER_HIGH],
+    PI: ['{ \"operator\": \"PI\"}', Blockly.Skoolbot.ORDER_ATOMIC],
 
-    E: ['{ \"operator\": \"e\" }', Blockly.Skoolbot.ORDER_HIGH],
+    E: ['{ \"operator\": \"e\" }', Blockly.Skoolbot.ORDER_ATOMIC],
 
     GOLDEN_RATIO: ['{ \"operator\": \"/\", \"argument\":[{ \"operator\": \"\+\", '+
-    '\"argument\": [{ \"number\": 1} , { \"operator\": \"math.sqrt\", \"argument\":{ \"number\": 5}], { \"number\": 2}]', Blockly.Skoolbot.ORDER_MULTIPLICATIVE],
+    '\"argument\": [{ \"number\": 1} , { \"operator\": \"math.sqrt\", \"argument\":[{ \"number\": \"5\"}, { \"number\": \"2\"}]}]}]}', Blockly.Skoolbot.ORDER_ATOMIC],
 
-    SQRT2: ['{ \"operator\": \"math.sqrt\", \"argument\": { \"number\": 2}}', Blockly.Skoolbot.ORDER_HIGH],
+    SQRT2: ['{ \"operator\": \"math.sqrt\", \"argument\": { \"number\": 2}}', Blockly.Skoolbot.ORDER_ATOMIC],
 
-    SQRT1_2: ['{ \"operator\": \"math.sqrt\", \"argument\": { \"number\": 0.5}}', Blockly.Skoolbot.ORDER_HIGH],
+    SQRT1_2: ['{ \"operator\": \"math.sqrt\", \"argument\": { \"number\": 0.5}}', Blockly.Skoolbot.ORDER_ATOMIC],
+
+    INFINITY: ['{ \"operator\": \"math.huge\"}', Blockly.Skoolbot.ORDER_ATOMIC],
 
   };
   return CONSTANTS[block.getFieldValue('CONSTANT')];

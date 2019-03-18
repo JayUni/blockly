@@ -57,11 +57,11 @@ Blockly.Skoolbot.addContinueLabel = function(branch) {
 Blockly.Skoolbot['controls_repeat'] = function(block) {
   // Repeat n times (internal number).
   var repeats = parseInt(block.getFieldValue('TIMES'), 10);
-  var branch = Blockly.Skoolbot.statementToCode(block, 'DO') || '\"\"\n';
+  var branch = Blockly.Skoolbot.statementToCode(block, 'DO');
   branch = Blockly.Skoolbot.addContinueLabel(branch);
-  var loopVar = Blockly.Skoolbot.variableDB_.getDistinctName('count', Blockly.Variables.NAME_TYPE);
+  // var loopVar = Blockly.Skoolbot.variableDB_.getDistinctName('count', Blockly.Variables.NAME_TYPE);
   // var code = 'for ' + loopVar + ' = 1, ' + repeats + ' do\n' + branch + 'end\n';
-  var code = '{\"loop_style\": \"controls_repeat\", \"repeat_times\": '+ repeats + ', \"branch\": '+ branch + '}';
+  var code = '{\"loop_style\": \"controls_repeat\", \"repeat_times\": '+ repeats + ', \"branch\": ['+ branch + ']}';
   return code;
 };
 
@@ -74,12 +74,12 @@ Blockly.Skoolbot['controls_repeat_ext'] = function(block) {
   } else {
     repeats = '{\"operator\": \"math.floor\", \"argument\": '+ repeats + '}';
   }
-  var branch = Blockly.Skoolbot.statementToCode(block, 'DO') || '\"\"\n';
+  var branch = Blockly.Skoolbot.statementToCode(block, 'DO');
   branch = Blockly.Skoolbot.addContinueLabel(branch);
-  var loopVar = Blockly.Skoolbot.variableDB_.getDistinctName(
-      'count', Blockly.Variables.NAME_TYPE);
+  // var loopVar = Blockly.Skoolbot.variableDB_.getDistinctName(
+  //     'count', Blockly.Variables.NAME_TYPE);
   // var code = 'for ' + loopVar + ' = 1, ' + repeats + ' do\n' + branch + 'end\n';
-  var code = '{\"loop_style\": \"controls_repeat_ext\", \"repeat_times\": '+ repeats + ', \"branch\": '+ branch + '\n}';
+  var code = '{\"loop_style\": \"controls_repeat_ext\", \"repeat_times\": '+ repeats + ', \"branch\": ['+ branch + ']}';
   return code;
 };
 
@@ -88,7 +88,7 @@ Blockly.Skoolbot['controls_whileUntil'] = function(block) {
   var until = block.getFieldValue('MODE') == 'UNTIL';
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'BOOL',
        Blockly.Skoolbot.ORDER_ATOMIC) || '\"false\"';
-  var branch = Blockly.Skoolbot.statementToCode(block, 'DO') || '\"\"\n';
+  var branch = Blockly.Skoolbot.statementToCode(block, 'DO');
   branch = Blockly.Skoolbot.addLoopTrap(branch, block.id);
   branch = Blockly.Skoolbot.addContinueLabel(branch);
   if (until) {
@@ -97,7 +97,7 @@ Blockly.Skoolbot['controls_whileUntil'] = function(block) {
   else{
     var endType = '\"while\"';
   }
-  var code = '{\"loop_style\": \"controls_whileUntil\",\"repeat_condition\": '+ argument0 + ',\"end_type\": '+ endType + ',\"branch\": '+ branch + '}';
+  var code = '{\"loop_style\": \"controls_whileUntil\",\"repeat_condition\": '+ argument0 + ',\"end_type\": '+ endType + ',\"branch\": ['+ branch + ']}';
   // return 'while ' + argument0 + ' do\n' + branch + 'end\n';
   return code;
 };
@@ -112,10 +112,10 @@ Blockly.Skoolbot['controls_for'] = function(block) {
       Blockly.Skoolbot.ORDER_ATOMIC) || '0';
   var increment = Blockly.Skoolbot.valueToCode(block, 'BY',
       Blockly.Skoolbot.ORDER_ATOMIC) || '1';
-  var branch = Blockly.Skoolbot.statementToCode(block, 'DO') || '\"\"\n';
+  var branch = Blockly.Skoolbot.statementToCode(block, 'DO');
   branch = Blockly.Skoolbot.addLoopTrap(branch, block.id);
   branch = Blockly.Skoolbot.addContinueLabel(branch);
-  var code = '\n{ \"loop_style\": \"controls_for\"'+', \"variable\": \"' + variable0 + '\", \"start\": '+ startVar +', \"end\": ' + endVar + ', \"step\": ' + increment +', \"branch\": ' + branch + '}';
+  var code = '\n{ \"loop_style\": \"controls_for\"'+', \"variable\": \"' + variable0 + '\", \"start\": '+ startVar +', \"end\": ' + endVar + ', \"step\": ' + increment +', \"branch\": [' + branch + ']}';
   return code;
 };
 
@@ -125,11 +125,11 @@ Blockly.Skoolbot['controls_forEach'] = function(block) {
       block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'LIST',
       Blockly.Skoolbot.ORDER_ATOMIC) || '{}';
-  var branch = Blockly.Skoolbot.statementToCode(block, 'DO') || '\"\"\n';
+  var branch = Blockly.Skoolbot.statementToCode(block, 'DO');
   branch = Blockly.Skoolbot.addContinueLabel(branch);
   // var code = 'for _, ' + variable0 + ' in ipairs(' + argument0 + ') do \n' +
   //     branch + 'end\n';
-  var code = '{\"loop_style\": \"controls_forEach\",\"varName\": \"'+ variable0 + '\", \"list\": '+ argument0 + ', \"branch\": '+ branch + '\n}';
+  var code = '{\"loop_style\": \"controls_forEach\",\"varName\": \"'+ variable0 + '\", \"list\": '+ argument0 + ', \"branch\": ['+ branch + ']}';
   return code;
 };
 
@@ -137,10 +137,10 @@ Blockly.Skoolbot['controls_flow_statements'] = function(block) {
   // Flow statements: continue, break.
   switch (block.getFieldValue('FLOW')) {
     case 'BREAK':
-      return '{ \"controls_flow_statements\": \"break\" }\n';
+      return '{ \"controls_flow_statements\": \"break\" }';
     case 'CONTINUE':
       // return Blockly.Skoolbot.CONTINUE_STATEMENT;
-      return '{ \"controls_flow_statements\": \"continue\" }\n';
+      return '{ \"controls_flow_statements\": \"continue\" }';
   }
   throw Error('Unknown flow statement.');
 };

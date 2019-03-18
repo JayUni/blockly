@@ -118,7 +118,7 @@ Blockly.Generator.prototype.workspaceToCode = function(workspace) {
   code = code.replace(/^\s+\n/, '');
   code = code.replace(/\n\s+$/, '\n');
   code = code.replace(/[ \t]+\n/g, '\n');
-  return code;
+  return '\[' + code + '\]';
 };
 
 // The following are some helpful functions which can be used by multiple

@@ -31,7 +31,7 @@ goog.require('Blockly.Skoolbot');
 
 Blockly.Skoolbot['colour_picker'] = function(block) {
   // Colour picker.
-  var code = '{\"colour\": \"' + block.getFieldValue('COLOUR') + '\"';
+  var code = '{\"colour\": \"' + block.getFieldValue('COLOUR') + '\"}';
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
@@ -48,8 +48,8 @@ Blockly.Skoolbot['colour_random'] = function(block) {
   // Generate a random colour.
   // var code = 'string.format("#%06x", math.random(0, 2^24 - 1))';
 
-  var code = "\"" + randomHex() + "\"";
-  return ["{\"colour\": " + code + "}", Blockly.Skoolbot.ORDER_ATOMIC];
+  var code = '\"' + randomHex() + '\"';
+  return ['{\"colour\": ' + code + '}', Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
 Blockly.Skoolbot['colour_rgb'] = function(block) {
@@ -89,7 +89,7 @@ Blockly.Skoolbot['colour_rgb'] = function(block) {
   var r = Blockly.Skoolbot.valueToCode(block, 'RED', Blockly.Skoolbot.ORDER_ATOMIC) || 0;
   var g = Blockly.Skoolbot.valueToCode(block, 'GREEN', Blockly.Skoolbot.ORDER_ATOMIC) || 0;
   var b = Blockly.Skoolbot.valueToCode(block, 'BLUE', Blockly.Skoolbot.ORDER_ATOMIC) || 0;
-  var code  = '{\"colourRGB\":[' + r + ", " + g + ", " + b + "]}";
+  var code  = '{\"colourRGB\": [{ \"red%\": ' + r + '}, { \"green%\": ' + g + '}, { \"blue%\": ' + b + '}]}';
 
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
@@ -141,14 +141,14 @@ Blockly.Skoolbot['colour_blend'] = function(block) {
   // return [code + "\"}", Blockly.Skoolbot.ORDER_ATOMIC];
 
   //without operations
-  var colour1 = Blockly.Skoolbot.valueToCode(block, 'COLOUR1', Blockly.Skoolbot.ORDER_ATOMIC) || '\"#000000\"';
-  var colour2 = Blockly.Skoolbot.valueToCode(block, 'COLOUR2', Blockly.Skoolbot.ORDER_ATOMIC) || '\"#000000\"';
-  var ratio = parseFloat(Blockly.Skoolbot.valueToCode(block, 'RATIO', Blockly.Skoolbot.ORDER_ATOMIC)) || 0;
+  var colour1 = Blockly.Skoolbot.valueToCode(block, 'COLOUR1', Blockly.Skoolbot.ORDER_ATOMIC);
+  var colour2 = Blockly.Skoolbot.valueToCode(block, 'COLOUR2', Blockly.Skoolbot.ORDER_ATOMIC);
+  var ratio = Blockly.Skoolbot.valueToCode(block, 'RATIO', Blockly.Skoolbot.ORDER_ATOMIC);
 
 
 
-  var code  = '{\"colourBlend\": [\"colour1\": '+ colour1 + ', \"colour2\": '+
-              colour2 + ', \"ratio\": ' + ratio + ']';
+  var code  = '{\"colourBlend\": [{ \"colour1\": '+ colour1 + '}, {\"colour2\": '+
+              colour2 + '}, {\"ratio\": ' + ratio + '}]}';
 
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
