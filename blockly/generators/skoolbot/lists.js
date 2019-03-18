@@ -90,10 +90,12 @@ Blockly.Skoolbot['lists_getIndex'] = function(block) {
       Blockly.Skoolbot.ORDER_ADDITIVE) || '{ \"number\": \"1\"}';
   var list = Blockly.Skoolbot.valueToCode(block, 'VALUE', Blockly.Skoolbot.ORDER_HIGH) || '[]';
   if (where == 'RANDOM'){
-     var code = '{ \"functionName\": \"lists_getIndex\", \"argument\": [{ \"list\": ' + list + '}, {\"mode\": \"' + mode + '\"}, { \"where\": \"' + where + '\"}]}';
+     var code = '{ \"functionName\": \"lists_getIndex\", \"argument\": [{ \"list\": ' + list + '}, {\"mode\": \"' +
+         mode + '\"}, { \"where\": \"' + where + '\"}]}';
   }
   else {
-     var code = '{ \"functionName\": \"lists_getIndex\", \"argument\": [{ \"list\": ' + list + '}, {\"mode\": \"' + mode + '\"}, { \"where\": \"' + where + '\"}, { \"index\": ' + at + '}]}';
+     var code = '{ \"functionName\": \"lists_getIndex\", \"argument\": [{ \"list\": ' + list + '}, {\"mode\": \"' +
+         mode + '\"}, { \"where\": \"' + where + '\"}, { \"index\": ' + at + '}]}';
   }
   return code;
 };

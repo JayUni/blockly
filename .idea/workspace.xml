@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="309abf3b-ba8f-41f5-a11f-08a439e8cd78" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockly/generators/skoolbot/colour.js" beforeDir="false" afterPath="$PROJECT_DIR$/blockly/generators/skoolbot/colour.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockly/generators/skoolbot/logic.js" beforeDir="false" afterPath="$PROJECT_DIR$/blockly/generators/skoolbot/logic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blockly/generators/skoolbot/text.js" beforeDir="false" afterPath="$PROJECT_DIR$/blockly/generators/skoolbot/text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blockly/generators/skoolbot/lists.js" beforeDir="false" afterPath="$PROJECT_DIR$/blockly/generators/skoolbot/lists.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,20 +56,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blockly/generators/skoolbot/lists.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="116" column="56" selection-start-line="116" selection-start-column="56" selection-end-line="116" selection-end-column="56" />
+            <state relative-caret-position="391">
+              <caret line="99" column="14" lean-forward="true" selection-start-line="99" selection-start-column="14" selection-end-line="99" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blockly/generators/skoolbot/logic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="107" column="2" lean-forward="true" selection-start-line="107" selection-start-column="2" selection-end-line="107" selection-end-column="2" />
+            <state relative-caret-position="152">
+              <caret line="93" column="52" lean-forward="true" selection-start-line="93" selection-start-column="52" selection-end-line="93" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -120,6 +118,7 @@
       <find>null</find>
       <find>ORDER_UNARY</find>
       <find>code</find>
+      <find>tuple</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -135,12 +134,13 @@
       <list>
         <option value="$PROJECT_DIR$/blockly/generators/skoolbot/variables.js" />
         <option value="$PROJECT_DIR$/blockly/generators/skoolbot/loops.js" />
-        <option value="$PROJECT_DIR$/blockly/generators/skoolbot/lists.js" />
         <option value="$PROJECT_DIR$/blockly/generators/skoolbot/math.js" />
         <option value="$PROJECT_DIR$/blockly/generators/skoolbot/procedures.js" />
         <option value="$PROJECT_DIR$/blockly/generators/skoolbot/colour.js" />
         <option value="$PROJECT_DIR$/blockly/generators/skoolbot/text.js" />
         <option value="$PROJECT_DIR$/blockly/generators/skoolbot/logic.js" />
+        <option value="$PROJECT_DIR$/blockly/generators/skoolbot/lists.js" />
+        <option value="$PROJECT_DIR$/blockly/core/generator.js" />
       </list>
     </option>
   </component>
@@ -164,19 +164,6 @@
               <item name="blockly" type="b2602c69:ProjectViewProjectNode" />
               <item name="blockly" type="462c0819:PsiDirectoryNode" />
               <item name="blockly" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blockly" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blockly" type="462c0819:PsiDirectoryNode" />
-              <item name="blockly" type="462c0819:PsiDirectoryNode" />
-              <item name="generators" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blockly" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blockly" type="462c0819:PsiDirectoryNode" />
-              <item name="blockly" type="462c0819:PsiDirectoryNode" />
-              <item name="generators" type="462c0819:PsiDirectoryNode" />
-              <item name="skoolbot" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -302,12 +289,12 @@
       <workItem from="1552090250118" duration="81000" />
       <workItem from="1552090386689" duration="32783000" />
       <workItem from="1552586345378" duration="197000" />
-      <workItem from="1552586760613" duration="12250000" />
+      <workItem from="1552586760613" duration="13852000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81205000" />
+    <option name="totallyTimeSpent" value="82807000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -456,24 +443,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/generators/skoolbot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2264" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/core/generator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="218" column="21" lean-forward="true" selection-start-line="218" selection-start-column="21" selection-end-line="218" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/generators/skoolbot/logic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="93" column="52" lean-forward="true" selection-start-line="93" selection-start-column="52" selection-end-line="93" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/blockly/generators/skoolbot/procedures.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/generators/skoolbot/lists.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="116" column="56" selection-start-line="116" selection-start-column="56" selection-end-line="116" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/generators/skoolbot/loops.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="122" column="34" selection-start-line="122" selection-start-column="34" selection-end-line="122" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -491,15 +483,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/generators/skoolbot.js">
+    <entry file="file://$PROJECT_DIR$/blockly/generators/skoolbot/loops.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2264" />
+        <state relative-caret-position="127">
+          <caret line="122" column="34" selection-start-line="122" selection-start-column="34" selection-end-line="122" selection-end-column="34" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/generators/skoolbot/logic.js">
+    <entry file="file://$PROJECT_DIR$/blockly/generators/skoolbot/lists.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="107" column="2" lean-forward="true" selection-start-line="107" selection-start-column="2" selection-end-line="107" selection-end-column="2" />
+        <state relative-caret-position="391">
+          <caret line="99" column="14" lean-forward="true" selection-start-line="99" selection-start-column="14" selection-end-line="99" selection-end-column="14" />
         </state>
       </provider>
     </entry>
