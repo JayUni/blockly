@@ -39,7 +39,7 @@ Blockly.Skoolbot['variables_get'] = function(block) {
 Blockly.Skoolbot['variables_set'] = function(block) {
   // Variable setter.
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'VALUE',
-      Blockly.Skoolbot.ORDER_NONE) || '0';
+      Blockly.Skoolbot.ORDER_ATOMIC) || '0';
   var varName = Blockly.Skoolbot.variableDB_.getName(
       block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
   return '{ \"functionName\": \"variables_set\", \"varName\": \"' + varName + '\", \"argument\": ' + argument0 + '}';

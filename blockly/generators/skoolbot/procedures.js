@@ -45,7 +45,7 @@ Blockly.Skoolbot['procedures_defreturn'] = function(block) {
         '\'' + block.id + '\'') + branch;
   }
   var returnValue = Blockly.Skoolbot.valueToCode(block, 'RETURN',
-      Blockly.Skoolbot.ORDER_NONE) || '{\"null\": \"NULL\"}';
+      Blockly.Skoolbot.ORDER_ATOMIC) || '{\"null\": \"NULL\"}';
   if (returnValue) {
     returnValue = Blockly.Skoolbot.INDENT + returnValue;
   }
@@ -78,10 +78,10 @@ Blockly.Skoolbot['procedures_callreturn'] = function(block) {
   var args = [];
   for (var i = 0; i < block.arguments_.length; i++) {
     args[i] = Blockly.Skoolbot.valueToCode(block, 'ARG' + i,
-        Blockly.Skoolbot.ORDER_NONE) || '{\"null\": \"NULL\"}';
+        Blockly.Skoolbot.ORDER_ATOMIC) || '{\"null\": \"NULL\"}';
   }
   var code = '{ \"procedures_type\": \"procedures_callreturn\", \"funcName\": \"' + funcName + '\", \"argument\": [' + args.join(', ') + ']}';
-  return [code, Blockly.Skoolbot.ORDER_HIGH];
+  return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
 Blockly.Skoolbot['procedures_callnoreturn'] = function(block) {
@@ -91,7 +91,7 @@ Blockly.Skoolbot['procedures_callnoreturn'] = function(block) {
   var args = [];
   for (var i = 0; i < block.arguments_.length; i++) {
     args[i] = Blockly.Skoolbot.valueToCode(block, 'ARG' + i,
-        Blockly.Skoolbot.ORDER_NONE) || '{\"null\": \"NULL\"}';
+        Blockly.Skoolbot.ORDER_ATOMIC) || '{\"null\": \"NULL\"}';
   }
   var code = '{ \"procedures_type\": \"procedures_callnoreturn\", \"funcName\": \"' + funcName + '\", \"argument\": [' + args.join(', ') + ']}';
   return code;
@@ -100,9 +100,9 @@ Blockly.Skoolbot['procedures_callnoreturn'] = function(block) {
 Blockly.Skoolbot['procedures_ifreturn'] = function(block) {
   // Conditionally return value from a procedure.
   var condition = Blockly.Skoolbot.valueToCode(block, 'CONDITION',
-      Blockly.Skoolbot.ORDER_NONE) || '{ \"boolean\": \"FALSE\"}';
+      Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"boolean\": \"FALSE\"}';
   var value = Blockly.Skoolbot.valueToCode(block, 'VALUE',
-        Blockly.Skoolbot.ORDER_NONE) || '{\"null\": \"NULL\"}';
+        Blockly.Skoolbot.ORDER_ATOMIC) || '{\"null\": \"NULL\"}';
   if (block.hasReturnValue_) {
 
   var code = '{ \"procedures_type\": \"procedures_ifreturn\", \"condition\": ' + condition + ', \"has_return_value\": { \"boolean\": \"TRUE\"}, \"return\":  [' + value + ']}';

@@ -48,7 +48,7 @@ Blockly.Skoolbot['controls_if'] = function(block) {
 
   if (block.getInput('ELSE')) {
     branchCode = Blockly.Skoolbot.statementToCode(block, 'ELSE') || '\"\"';
-    code += '}, {\"statement\": \"else\", ' + '\"branchCode\":' + branchCode + '}]';
+    code += '}, {\ls"statement\": \"else\", ' + '\"branchCode\":' + branchCode + '}]';
   }
   else
   {
