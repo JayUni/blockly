@@ -68,7 +68,7 @@ Blockly.Skoolbot['controls_repeat'] = function(block) {
 Blockly.Skoolbot['controls_repeat_ext'] = function(block) {
   // Repeat n times (external number).
   var repeats = Blockly.Skoolbot.valueToCode(block, 'TIMES',
-      Blockly.Skoolbot.ORDER_NONE) || '0';
+      Blockly.Skoolbot.ORDER_ATOMIC) || '0';
   if (Blockly.isNumber(repeats)) {
     repeats = parseInt(repeats, 10);
   } else {
@@ -87,8 +87,8 @@ Blockly.Skoolbot['controls_whileUntil'] = function(block) {
   // Do while/until loop.
   var until = block.getFieldValue('MODE') == 'UNTIL';
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'BOOL',
-      until ? Blockly.Skoolbot.ORDER_UNARY :
-      Blockly.Skoolbot.ORDER_NONE) || '\"false\"';
+      until ? Blockly.Skoolbot.ORDER_ATOMIC :
+      Blockly.Skoolbot.ORDER_ATOMIC) || '\"false\"';
   var branch = Blockly.Skoolbot.statementToCode(block, 'DO') || '\"\"\n';
   branch = Blockly.Skoolbot.addLoopTrap(branch, block.id);
   branch = Blockly.Skoolbot.addContinueLabel(branch);
@@ -108,11 +108,11 @@ Blockly.Skoolbot['controls_for'] = function(block) {
   var variable0 = Blockly.Skoolbot.variableDB_.getName(
       block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
   var startVar = Blockly.Skoolbot.valueToCode(block, 'FROM',
-      Blockly.Skoolbot.ORDER_NONE) || '0';
+      Blockly.Skoolbot.ORDER_ATOMIC) || '0';
   var endVar = Blockly.Skoolbot.valueToCode(block, 'TO',
-      Blockly.Skoolbot.ORDER_NONE) || '0';
+      Blockly.Skoolbot.ORDER_ATOMIC) || '0';
   var increment = Blockly.Skoolbot.valueToCode(block, 'BY',
-      Blockly.Skoolbot.ORDER_NONE) || '1';
+      Blockly.Skoolbot.ORDER_ATOMIC) || '1';
   var branch = Blockly.Skoolbot.statementToCode(block, 'DO') || '\"\"\n';
   branch = Blockly.Skoolbot.addLoopTrap(branch, block.id);
   branch = Blockly.Skoolbot.addContinueLabel(branch);
@@ -125,7 +125,7 @@ Blockly.Skoolbot['controls_forEach'] = function(block) {
   var variable0 = Blockly.Skoolbot.variableDB_.getName(
       block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'LIST',
-      Blockly.Skoolbot.ORDER_NONE) || '{}';
+      Blockly.Skoolbot.ORDER_ATOMIC) || '{}';
   var branch = Blockly.Skoolbot.statementToCode(block, 'DO') || '\"\"\n';
   branch = Blockly.Skoolbot.addContinueLabel(branch);
   // var code = 'for _, ' + variable0 + ' in ipairs(' + argument0 + ') do \n' +

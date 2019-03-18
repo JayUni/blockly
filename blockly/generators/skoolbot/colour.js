@@ -37,32 +37,32 @@ Blockly.Skoolbot['colour_picker'] = function(block) {
 
 Blockly.Skoolbot['colour_random'] = function(block) {
   var code = '{\"functionName\": \"colour_random\"}';
-  return [code, Blockly.Skoolbot.ORDER_HIGH];
+  return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
 Blockly.Skoolbot['colour_rgb'] = function(block) {
   // Compose a colour from RGB components expressed as percentages.
 
   var r = Blockly.Skoolbot.valueToCode(block, 'RED',
-      Blockly.Skoolbot.ORDER_NONE) || '{ \"number\": \"100\"}';
+      Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"number\": \"100\"}';
   var g = Blockly.Skoolbot.valueToCode(block, 'GREEN',
-      Blockly.Skoolbot.ORDER_NONE) || '{ \"number\": \"50\"}';
+      Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"number\": \"50\"}';
   var b = Blockly.Skoolbot.valueToCode(block, 'BLUE',
-      Blockly.Skoolbot.ORDER_NONE) || '{ \"number\": \"0\"}';
+      Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"number\": \"0\"}';
 
   var code = '{\"functionName\": \"colour_rgb\", \"argument\": [{\"red%\": ' + r + '}, {\"green%\": ' + g + '}, {\"blue%\": ' + b + '}]}';
-  return [code, Blockly.Skoolbot.ORDER_HIGH];
+  return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
 Blockly.Skoolbot['colour_blend'] = function(block) {
   var colour1 = Blockly.Skoolbot.valueToCode(block, 'COLOUR1',
-      Blockly.Skoolbot.ORDER_NONE);
+      Blockly.Skoolbot.ORDER_ATOMIC);
   var colour2 = Blockly.Skoolbot.valueToCode(block, 'COLOUR2',
-      Blockly.Skoolbot.ORDER_NONE);
+      Blockly.Skoolbot.ORDER_ATOMIC);
   var ratio = Blockly.Skoolbot.valueToCode(block, 'RATIO',
-      Blockly.Skoolbot.ORDER_NONE);
+      Blockly.Skoolbot.ORDER_ATOMIC);
 
   var code = '{\"functionName\": \"colour_blend\", \"argument\": [{\"colour1\": '+ colour1 + '}, {\"colour2\": ' + colour2 + '}, {\"ratio\": ' + ratio + '}]}';
 
-  return [code, Blockly.Skoolbot.ORDER_HIGH];
+  return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
