@@ -87,8 +87,7 @@ Blockly.Skoolbot['controls_whileUntil'] = function(block) {
   // Do while/until loop.
   var until = block.getFieldValue('MODE') == 'UNTIL';
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'BOOL',
-      until ? Blockly.Skoolbot.ORDER_ATOMIC :
-      Blockly.Skoolbot.ORDER_ATOMIC) || '\"false\"';
+       Blockly.Skoolbot.ORDER_ATOMIC) || '\"false\"';
   var branch = Blockly.Skoolbot.statementToCode(block, 'DO') || '\"\"\n';
   branch = Blockly.Skoolbot.addLoopTrap(branch, block.id);
   branch = Blockly.Skoolbot.addContinueLabel(branch);
