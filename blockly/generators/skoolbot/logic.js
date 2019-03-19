@@ -35,20 +35,30 @@ Blockly.Skoolbot['controls_if'] = function(block) {
   var code = '{\"controls_type\": \"controls_if\", \"structure\": [{\"statement\": \"', branchCode, conditionCode;
   do {
     conditionCode = Blockly.Skoolbot.valueToCode(block, 'IF' + n,
+<<<<<<< HEAD
       Blockly.Skoolbot.ORDER_ATOMIC) || "[]";
     branchCode = Blockly.Skoolbot.statementToCode(block, 'DO' + n) || "[]";
+=======
+      Blockly.Skoolbot.ORDER_ATOMIC) || '\"False\"';
+    branchCode = Blockly.Skoolbot.statementToCode(block, 'DO' + n);
+>>>>>>> json2
 
     if (n > 0) {
       code += '}, {\"statement\": \"else if\", ' + '\"condition\": ' + conditionCode + ", " + '\"branchCode\":' + branchCode;
     } else {
-      code += 'if\", ' + '\"condition\": ' + conditionCode + ", " + '\"branchCode\":' + branchCode;
+      code += 'if\", ' + '\"condition\": ' + conditionCode + ", " + '\"branchCode\": [' + branchCode + ']';
     }
     ++n;
   } while (block.getInput('IF' + n));
 
   if (block.getInput('ELSE')) {
+<<<<<<< HEAD
     branchCode = Blockly.Skoolbot.statementToCode(block, 'ELSE') || "[]";
     code += '}, {\"statement\": \"else\", ' + '\"branchCode\":' + branchCode + '}]';
+=======
+    branchCode = Blockly.Skoolbot.statementToCode(block, 'ELSE');
+    code += '}, {\"statement\": \"else\", ' + '\"branchCode\": [' + branchCode + ']}]';
+>>>>>>> json2
   }
   else
   {
@@ -83,8 +93,7 @@ Blockly.Skoolbot['logic_compare'] = function(block) {
 Blockly.Skoolbot['logic_operation'] = function(block) {
   // Operations 'and', 'or'.
   var operator = (block.getFieldValue('OP') == 'AND') ? 'and' : 'or';
-  var order = (operator == 'and') ? Blockly.Skoolbot.ORDER_ATOMIC :
-      Blockly.Skoolbot.ORDER_ATOMIC;
+  var order = Blockly.Skoolbot.ORDER_ATOMIC;
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'A', order) || '{ \"boolean\": \"FALSE\"}';
   var argument1 = Blockly.Skoolbot.valueToCode(block, 'B', order) || '{ \"boolean\": \"FALSE\"}';
   var code = '{ \"operator\": \"'+ operator + '\", \"argument\": ['+ argument0 + ',' + argument1 + ']}';

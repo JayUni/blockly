@@ -97,6 +97,8 @@ Blockly.Skoolbot['math_constant'] = function(block) {
 
     SQRT1_2: ['{ \"operator\": \"math.sqrt\", \"argument\": { \"number\": 0.5}}', Blockly.Skoolbot.ORDER_ATOMIC],
 
+    INFINITY: ['{ \"operator\": \"INFINITY\"}', Blockly.Skoolbot.ORDER_ATOMIC],
+
   };
   return CONSTANTS[block.getFieldValue('CONSTANT')];
 };
