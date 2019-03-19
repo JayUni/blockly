@@ -23,7 +23,7 @@ var JSDOM = jsdom.JSDOM;
 
 global.DOMParser = require('xmldom').DOMParser;
 global.document = new JSDOM('../../core/xml_utils.js:').window.document;
-fs.readFile("./test.xml", "utf8", function(errFile, data) {
+fs.readFile("./test_cases/test_cases_1.xml", "utf8", function(errFile, data) {
   if (!errFile) {
     try {
       //get rid of the non-white space error
