@@ -17,13 +17,19 @@ require('./../../msg/messages.js');
 require('./../../skoolbot_compressed.js');
 require('./../../blocks_compressed.js');
 
+require('jsdom-global')()
+
 const fs = require('fs');
 const jsdom = require("jsdom");
+const xmldom = require('xmldom');
 var JSDOM = jsdom.JSDOM;
+global.DOMParser = xmldom.DOMParser;
 
-global.DOMParser = require('xmldom').DOMParser;
 global.document = new JSDOM('../../core/xml_utils.js:').window.document;
-fs.readFile("./test_cases/test_cases_1.xml", "utf8", function(errFile, data) {
+global.document = new JSDOM('../../core/xml.js:').window.document;
+//fix xml.js 231 and block.js 926-942
+//try to go to set style comment from the begining
+fs.readFile("./test_cases/test_case_1.xml", "utf8", function(errFile, data) {
   if (!errFile) {
     try {
       //get rid of the non-white space error
