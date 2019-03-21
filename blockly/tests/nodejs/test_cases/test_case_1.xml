@@ -1,145 +1,136 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
   <variables>
-    <variable type="" id="V-a?@a(%dkLC6w5JcV1S">colour</variable>
+    <variable type="" >colour</variable>
   </variables>
-  <block type="procedures_defnoreturn" id="|E7wLLW8WE}kHN=2dz^{" x="87" y="62">
+  <block type="procedures_defnoreturn" x="87" y="62">
     <field name="NAME">print_colour</field>
     <comment pinned="false" h="80" w="160">Describe this function...</comment>
     <statement name="STACK">
-      <block type="variables_set" id="D=)CmpQ!{1^aZb-7$IjP">
-        <field name="VAR" id="V-a?@a(%dkLC6w5JcV1S" variabletype="">colour</field>
+      <block type="variables_set">
+        <field name="VAR" variabletype="">colour</field>
         <value name="VALUE">
-          <block type="colour_picker" id="H8h}9r.DDXZ(dfQyssDs">
+          <block type="colour_picker">
             <field name="COLOUR">#ff0000</field>
           </block>
         </value>
         <next>
-          <block type="text_print" id="t?{REXUVEOf+tidpx-Rv">
+          <block type="text_print" >
             <value name="TEXT">
-              <shadow type="text" id="f%R#=vp3LnsN,,(@xj!O">
-                <field name="TEXT">abc</field>
-              </shadow>
-              <block type="variables_get" id="{mBNF.jGnUhX@ub}FpT(">
-                <field name="VAR" id="V-a?@a(%dkLC6w5JcV1S" variabletype="">colour</field>
+
+              <block type="variables_get" >
+                <field name="VAR" >colour</field>
               </block>
             </value>
             <next>
-              <block type="variables_set" id="@}9cMShh[Cq]55Ih88:j">
-                <field name="VAR" id="V-a?@a(%dkLC6w5JcV1S" variabletype="">colour</field>
+              <block type="variables_set" >
+                <field name="VAR" >colour</field>
                 <value name="VALUE">
-                  <block type="colour_random" id="t7JOSkbc%=BS;%|U)ICb"></block>
+                  <block type="colour_random" ></block>
                 </value>
                 <next>
-                  <block type="text_print" id="Luru|n%asqux+yRFp,*a">
+                  <block type="text_print" >
                     <value name="TEXT">
-                      <shadow type="text" id="f%R#=vp3LnsN,,(@xj!O">
-                        <field name="TEXT">abc</field>
-                      </shadow>
-                      <block type="variables_get" id="eV!5]:fo3R2$ZhZR(4u-">
-                        <field name="VAR" id="V-a?@a(%dkLC6w5JcV1S" variabletype="">colour</field>
+
+                      <block type="variables_get" >
+                        <field name="VAR" >colour</field>
                       </block>
                     </value>
                     <next>
-                      <block type="variables_set" id="_r)X|tbh9MUCjI6:^gr}">
-                        <field name="VAR" id="V-a?@a(%dkLC6w5JcV1S" variabletype="">colour</field>
+                      <block type="variables_set" >
+                        <field name="VAR" >colour</field>
                         <value name="VALUE">
-                          <block type="colour_rgb" id="eCXZuqgoMPpiAm4c::bR">
+                          <block type="colour_rgb" >
                             <value name="RED">
-                              <shadow type="math_number" id="bO:4@2eCZ=y]bTx#t;)o">
-                                <field name="NUM">100</field>
-                              </shadow>
-                              <block type="math_random_int" id="2Wslpw.$Wua!E;!IN_-Z">
+
+                              <block type="math_random_int" >
                                 <value name="FROM">
-                                  <shadow type="math_number" id="E]eKHDxOt65^+{dHO(VO">
+
+                                  <block type="math_number" >
                                     <field name="NUM">1</field>
-                                  </shadow>
+                                  </block>
                                 </value>
                                 <value name="TO">
-                                  <shadow type="math_number" id="XDy^/-UCT=XNJV+}O3~=">
+
+                                  <block type="math_number" >
                                     <field name="NUM">100</field>
-                                  </shadow>
+                                  </block>
                                 </value>
                               </block>
                             </value>
                             <value name="GREEN">
-                              <shadow type="math_number" id="5o@1seke~JdQy8[G_gcU">
-                                <field name="NUM">50</field>
-                              </shadow>
-                              <block type="math_random_int" id="fN[0ytF|U+2yXTU.mQFj">
+
+                              <block type="math_random_int" >
                                 <value name="FROM">
-                                  <shadow type="math_number" id="=-A7QHA5Hr)NFlg?0_NB">
+
+                                  <block type="math_number" >
                                     <field name="NUM">1</field>
-                                  </shadow>
+                                  </block>
                                 </value>
                                 <value name="TO">
-                                  <shadow type="math_number" id="jo?N}z5kVmZb|v9$v^58">
+
+                                  <block type="math_number" >
                                     <field name="NUM">100</field>
-                                  </shadow>
+                                  </block>
                                 </value>
                               </block>
                             </value>
                             <value name="BLUE">
-                              <shadow type="math_number" id="h5*:Q3^sb~#Fduq)V(]=">
-                                <field name="NUM">0</field>
-                              </shadow>
-                              <block type="math_random_int" id="Hiyh#FH@j9Y6FbY7JYM}">
+
+                              <block type="math_random_int" >
                                 <value name="FROM">
-                                  <shadow type="math_number" id="AcOVXBRlV*]r41I$8FP4">
+
+                                  <block type="math_number" >
                                     <field name="NUM">1</field>
-                                  </shadow>
+                                  </block>
                                 </value>
                                 <value name="TO">
-                                  <shadow type="math_number" id="eE%,R.Z-vs[``W(FE[YD">
+
+                                  <block type="math_number" >
                                     <field name="NUM">100</field>
-                                  </shadow>
+                                  </block>
                                 </value>
                               </block>
                             </value>
                           </block>
                         </value>
                         <next>
-                          <block type="text_print" id="8@Al.9mVp5rImh4U[Lo`">
+                          <block type="text_print" >
                             <value name="TEXT">
-                              <shadow type="text" id="f%R#=vp3LnsN,,(@xj!O">
-                                <field name="TEXT">abc</field>
-                              </shadow>
-                              <block type="variables_get" id="t2f^LL$298op(3Rg%a_e">
-                                <field name="VAR" id="V-a?@a(%dkLC6w5JcV1S" variabletype="">colour</field>
+
+                              <block type="variables_get" >
+                                <field name="VAR" >colour</field>
                               </block>
                             </value>
                             <next>
-                              <block type="variables_set" id="Q~{zC-32!fU4i/8JOHNf">
-                                <field name="VAR" id="V-a?@a(%dkLC6w5JcV1S" variabletype="">colour</field>
+                              <block type="variables_set" >
+                                <field name="VAR" >colour</field>
                                 <value name="VALUE">
-                                  <block type="colour_blend" id="CnH+m0U8qnw{|7-+di-!">
+                                  <block type="colour_blend" >
                                     <value name="COLOUR1">
-                                      <shadow type="colour_picker" id="UU~rOss9IF{`![,$Y$@m">
+
+                                      <block type="colour_picker" >
                                         <field name="COLOUR">#ff0000</field>
-                                      </shadow>
+                                      </block>
                                     </value>
                                     <value name="COLOUR2">
-                                      <shadow type="colour_picker" id="M.N1l;}9%TS`[e![zOdc">
+
+                                      <block type="colour_picker" >
                                         <field name="COLOUR">#3333ff</field>
-                                      </shadow>
+                                      </block>
                                     </value>
                                     <value name="RATIO">
-                                      <shadow type="math_number" id="9`4[elMd=4Di1#Lh9_5,">
-                                        <field name="NUM">0.5</field>
-                                      </shadow>
-                                      <block type="math_constant" id="Hyb?4lulM9D_B9=KQW=h">
+                                      <block type="math_constant" >
                                         <field name="CONSTANT">GOLDEN_RATIO</field>
                                       </block>
                                     </value>
                                   </block>
                                 </value>
                                 <next>
-                                  <block type="text_print" id="lY6/5rc.:!K=kDNxA%a%">
+                                  <block type="text_print" >
                                     <value name="TEXT">
-                                      <shadow type="text" id="f%R#=vp3LnsN,,(@xj!O">
-                                        <field name="TEXT">abc</field>
-                                      </shadow>
-                                      <block type="variables_get" id="DxumI{B-[4$-:lm=q{hp">
-                                        <field name="VAR" id="V-a?@a(%dkLC6w5JcV1S" variabletype="">colour</field>
+
+                                      <block type="variables_get" >
+                                        <field name="VAR" >colour</field>
                                       </block>
                                     </value>
                                   </block>

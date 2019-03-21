@@ -90,8 +90,8 @@ Blockly.Skoolbot['math_constant'] = function(block) {
 
     E: ['{ \"operator\": \"e\" }', Blockly.Skoolbot.ORDER_ATOMIC],
 
-    GOLDEN_RATIO: ['{ \"operator\": \"/\", \"argument\":[{ \"operator\": \"\+\", '+
-    '\"argument\": [{ \"number\": 1} , { \"operator\": \"math.sqrt\", \"argument\":{ \"number\": 5}], { \"number\": 2}]', Blockly.Skoolbot.ORDER_ATOMIC],
+    GOLDEN_RATIO: ['{ \"operator\": \"GOLDEN_RATIO\", \"argument\":[{ \"operator\": \"\+\", '+
+    '\"argument\": [{ \"number\": 1} , { \"operator\": \"math.sqrt\", \"argument\":{\"number\": 5}], { \"number\": 2}]', Blockly.Skoolbot.ORDER_ATOMIC],
 
     SQRT2: ['{ \"operator\": \"math.sqrt\", \"argument\": { \"number\": 2}}', Blockly.Skoolbot.ORDER_ATOMIC],
 

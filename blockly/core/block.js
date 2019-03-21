@@ -922,24 +922,28 @@ Blockly.Block.prototype.setColour = function(colour) {
  * @throws {Error} if the block style does not exist.
  */
 Blockly.Block.prototype.setStyle = function(blockStyleName) {
-  var theme = Blockly.getTheme();
-  if (!theme) {
-    throw Error('Trying to set block style to ' + blockStyleName +
-      ' before theme was defined via Blockly.setTheme().');
-  }
-  var blockStyle = theme.getBlockStyle(blockStyleName);
-  this.styleName_ = blockStyleName;
+  this.IS_NODE_JS = !!(typeof module !== 'undefined' && module.exports);
+  if (!this.IS_NODE_JS) {
+    var theme = Blockly.getTheme();
+    if (!theme) {
+      throw Error('Trying to set block style to ' + blockStyleName +
+        ' before theme was defined via Blockly.setTheme().');
+    }
+    var blockStyle = theme.getBlockStyle(blockStyleName);
+    this.styleName_ = blockStyleName;
 
-  if (blockStyle) {
-    this.colourSecondary_ = blockStyle['colourSecondary'];
-    this.colourTertiary_ = blockStyle['colourTertiary'];
-    this.hat = blockStyle.hat;
-    // Set colour will trigger an updateColour() on a block_svg
-    this.setColour(blockStyle['colourPrimary']);
+    if (blockStyle) {
+      this.colourSecondary_ = blockStyle['colourSecondary'];
+      this.colourTertiary_ = blockStyle['colourTertiary'];
+      this.hat = blockStyle.hat;
+      // Set colour will trigger an updateColour() on a block_svg
+      this.setColour(blockStyle['colourPrimary']);
+    }
+    else {
+      throw Error('Invalid style name: ' + blockStyleName);
+    }
   }
-  else {
-    throw Error('Invalid style name: ' + blockStyleName);
-  }
+
 };
 
 /**

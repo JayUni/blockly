@@ -52,6 +52,7 @@
   "dependencies": {
     "google-closure-library": "^20190301.0.0",
     "jsdom": "^13.2.0",
+    "jsdom-global": "^3.0.2",
     "string-raw": "^1.0.1",
     "xmldom": "^0.1.27"
   }
