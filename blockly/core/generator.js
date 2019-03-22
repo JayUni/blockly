@@ -107,12 +107,16 @@ Blockly.Generator.prototype.workspaceToCode = function(workspace) {
       if (block.outputConnection) {
         // This block is a naked value.  Ask the language's code generator if
         // it wants to append a semicolon, or something.
-        line = this.scrubNakedValue(line);
+        if (x!=0 && workspace.getTopBlocks(true)){
+          line = '\,' + this.scrubNakedValue(line);
+        } else {
+          line = this.scrubNakedValue(line);
+        }
       }
       code.push(line);
     }
   }
-  code = code.join('\,\n');  // Blank line between each section.
+  code = code.join('\n');  // Blank line between each section.
   code = this.finish(code);
   // // Final scrubbing of whitespace.
   code = code.replace(/^\s+\n/, '');
