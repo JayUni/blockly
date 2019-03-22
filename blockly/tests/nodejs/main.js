@@ -52,7 +52,7 @@ global.document = new JSDOM('../../core/xml.js:').window.document;
 //GOLDEN_RATIO is wrong
 //need to use string raw for text blocks
 
-fs.readFile("./test_cases/test_case_2.xml", "utf8", function(errFile, data) {
+fs.readFile("./test_cases/test_case_1.xml", "utf8", function(errFile, data) {
   if (!errFile) {
     try {
       //get rid of the non-white space error
