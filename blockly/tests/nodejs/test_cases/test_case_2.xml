@@ -1,0 +1,152 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="Cw7/Y[E7W@y!3[%5ydlH">test_string_1</variable>
+    <variable type="" id="udhMZ~5v#o?*Tbe#[OwF">test_string_2</variable>
+  </variables>
+  <block type="variables_set" id="?*cwpE0-N{d:jDs{3|qk" x="87" y="113">
+    <field name="VAR" id="Cw7/Y[E7W@y!3[%5ydlH" variabletype="">test_string_1</field>
+    <value name="VALUE">
+      <block type="text" id="}eL_G*dePjx4U[Q~hT+^">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="B5*d`f7DWF-#DER69e1p">
+        <field name="VAR" id="udhMZ~5v#o?*Tbe#[OwF" variabletype="">test_string_2</field>
+        <value name="VALUE">
+          <block type="text" id="|R`6GwkqO5Ciq|E!24V=">
+            <field name="TEXT">  This is a test string.    </field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id="{x;+Vrp8n`9LgKUDpAfu">
+            <value name="IF0">
+              <block type="text_isEmpty" id="y]V#.)A5vplR~-0;zda{">
+                <value name="VALUE">
+                  <block type="variables_get" id="tlKscGRVP!]yza5IBlKI">
+                    <field name="VAR" id="Cw7/Y[E7W@y!3[%5ydlH" variabletype="">test_string_1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="text_append" id="r%oJM91bL?7?#I_cZ*]`">
+                <field name="VAR" id="Cw7/Y[E7W@y!3[%5ydlH" variabletype="">test_string_1</field>
+                <value name="TEXT">
+                  <block type="text" id="@DRE-~{vlKg34BzOR7R(">
+                    <field name="TEXT">   @ # $ %- % ## . \</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="text_print" id="tW/43!n:C#h8-@o@O;=V">
+                    <value name="TEXT">
+                      <block type="text_count" id="o_c21#/Eq[Qcd8?,!.(]">
+                        <value name="SUB">
+                          <block type="text" id="cc(8aai~+|DzW6-;Y3,D">
+                            <field name="TEXT">#</field>
+                          </block>
+                        </value>
+                        <value name="TEXT">
+                          <block type="text_reverse" id="@bm7~YdVK;)Jd{vQwdos">
+                            <value name="TEXT">
+                              <block type="variables_get" id="/P6;*Cmr[YlvE78W|5Tw">
+                                <field name="VAR" id="Cw7/Y[E7W@y!3[%5ydlH" variabletype="">test_string_1</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="variables_set" id="Tj:3GS3R%:0O$9*)i+eV">
+                <field name="VAR" id="udhMZ~5v#o?*Tbe#[OwF" variabletype="">test_string_2</field>
+                <value name="VALUE">
+                  <block type="text_trim" id="Ay-JkmIG^/eWE#n0v+]}">
+                    <field name="MODE">BOTH</field>
+                    <value name="TEXT">
+                      <block type="variables_get" id="XI.(1pMKU9r6z%M|[^@]">
+                        <field name="VAR" id="udhMZ~5v#o?*Tbe#[OwF" variabletype="">test_string_2</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="text_print" id="Rp9b;Ua/NparWMa=YxI4">
+                    <value name="TEXT">
+                      <block type="text_indexOf" id="UVvK!4YMOBQy${U-PHR9">
+                        <field name="END">FIRST</field>
+                        <value name="VALUE">
+                          <block type="variables_get" id="[CISX5Q6fC0#0N87@,XD">
+                            <field name="VAR" id="udhMZ~5v#o?*Tbe#[OwF" variabletype="">test_string_2</field>
+                          </block>
+                        </value>
+                        <value name="FIND">
+                          <block type="text" id="Va;Z7c(W`xL+@(3,M$Hs">
+                            <field name="TEXT">t</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="text_print" id="}={@09Jb`aMlw;AaT}AG">
+                        <value name="TEXT">
+                          <block type="text_prompt_ext" id="nR?a4|0X=Qge`jXP!**f">
+                            <mutation type="TEXT"></mutation>
+                            <field name="TYPE">TEXT</field>
+                            <value name="TEXT">
+                              <block type="text_changeCase" id="E~/.[s@$~X!|YQ()@?{{">
+                                <field name="CASE">TITLECASE</field>
+                                <value name="TEXT">
+                                  <block type="variables_get" id="Mp`KcCr;hLQ*rpA,ul,M">
+                                    <field name="VAR" id="udhMZ~5v#o?*Tbe#[OwF" variabletype="">test_string_2</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="text_print" id="={B[pL?x1TvvvUIN3,Cz">
+                            <value name="TEXT">
+                              <block type="text_charAt" id="JN46}e;@z1vN)aGh_6o*">
+                                <mutation at="true"></mutation>
+                                <field name="WHERE">FROM_START</field>
+                                <value name="VALUE">
+                                  <block type="variables_get" id="H6#^Ax~ONIsNxN#36G9b">
+                                    <field name="VAR" id="udhMZ~5v#o?*Tbe#[OwF" variabletype="">test_string_2</field>
+                                  </block>
+                                </value>
+                                <value name="AT">
+                                  <block type="math_random_int" id="rlWId{8Q9USNsaa%YOE-">
+                                    <value name="FROM">
+                                      <block type="math_number" id=";jvk)jcnDndd2^MMa]I@">
+                                        <field name="NUM">1</field>
+                                      </block>
+                                    </value>
+                                    <value name="TO">
+                                      <block type="math_number" id="Mi_agqxSy7?;D$TjH!3c">
+                                        <field name="NUM">10</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

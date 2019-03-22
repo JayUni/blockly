@@ -127,7 +127,8 @@ Blockly.Skoolbot.finish = function(code) {
   delete Blockly.Skoolbot.definitions_;
   delete Blockly.Skoolbot.functionNames_;
   Blockly.Skoolbot.variableDB_.reset();
-  return definitions.join('\n\n') + '\n\n\n' + code;
+  // add comma between functions
+  return definitions.join('\,\n\n') + '\n\n\n' + code;
 };
 
 /**
@@ -192,5 +193,9 @@ Blockly.Skoolbot.scrub_ = function(block, code, opt_thisOnly) {
   }
   var nextBlock = block.nextConnection && block.nextConnection.targetBlock();
   var nextCode = opt_thisOnly ? '' : Blockly.Skoolbot.blockToCode(nextBlock);
+  // add
+  if(nextBlock){
+    code += ',';
+  }
   return commentCode + code + nextCode;
 };
