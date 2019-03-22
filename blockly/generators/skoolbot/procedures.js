@@ -100,9 +100,9 @@ Blockly.Skoolbot['procedures_callnoreturn'] = function(block) {
 Blockly.Skoolbot['procedures_ifreturn'] = function(block) {
   // Conditionally return value from a procedure.
   var condition = Blockly.Skoolbot.valueToCode(block, 'CONDITION',
-      Blockly.Skoolbot.ORDER_ATOMIC);
+      Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"boolean\": \"FALSE\"}';
   var value = Blockly.Skoolbot.valueToCode(block, 'VALUE',
-        Blockly.Skoolbot.ORDER_ATOMIC);
+        Blockly.Skoolbot.ORDER_ATOMIC) || '{\"null\": \"NULL\"}';
   if (block.hasReturnValue_) {
 
   var code = '{ \"procedures_type\": \"procedures_ifreturn\", \"condition\": ' + condition + ', \"has_return_value\": { \"boolean\": \"TRUE\"}, \"return\":  [' + value + ']}';
