@@ -35,13 +35,9 @@ Blockly.Skoolbot['controls_if'] = function(block) {
   var code = '{\"controls_type\": \"controls_if\", \"structure\": [{\"statement\": \"', branchCode, conditionCode;
   do {
     conditionCode = Blockly.Skoolbot.valueToCode(block, 'IF' + n,
-<<<<<<< HEAD
-      Blockly.Skoolbot.ORDER_ATOMIC) || "[]";
+        Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"boolean\": \"FALSE\"}';
+
     branchCode = Blockly.Skoolbot.statementToCode(block, 'DO' + n) || "[]";
-=======
-      Blockly.Skoolbot.ORDER_ATOMIC) || '\"False\"';
-    branchCode = Blockly.Skoolbot.statementToCode(block, 'DO' + n);
->>>>>>> json2
 
     if (n > 0) {
       code += '}, {\"statement\": \"else if\", ' + '\"condition\": ' + conditionCode + ", " + '\"branchCode\":' + branchCode;
@@ -52,13 +48,8 @@ Blockly.Skoolbot['controls_if'] = function(block) {
   } while (block.getInput('IF' + n));
 
   if (block.getInput('ELSE')) {
-<<<<<<< HEAD
     branchCode = Blockly.Skoolbot.statementToCode(block, 'ELSE') || "[]";
     code += '}, {\"statement\": \"else\", ' + '\"branchCode\":' + branchCode + '}]';
-=======
-    branchCode = Blockly.Skoolbot.statementToCode(block, 'ELSE');
-    code += '}, {\"statement\": \"else\", ' + '\"branchCode\": [' + branchCode + ']}]';
->>>>>>> json2
   }
   else
   {
