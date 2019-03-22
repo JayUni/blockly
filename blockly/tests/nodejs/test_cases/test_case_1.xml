@@ -1,0 +1,153 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" >colour</variable>
+  </variables>
+  <block type="procedures_defnoreturn" x="87" y="62">
+    <field name="NAME">print_colour</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="variables_set">
+        <field name="VAR" variabletype="">colour</field>
+        <value name="VALUE">
+          <block type="colour_picker">
+            <field name="COLOUR">#ff0000</field>
+          </block>
+        </value>
+        <next>
+          <block type="text_print" >
+            <value name="TEXT">
+
+              <block type="variables_get" >
+                <field name="VAR" >colour</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" >
+                <field name="VAR" >colour</field>
+                <value name="VALUE">
+                  <block type="colour_random" ></block>
+                </value>
+                <next>
+                  <block type="text_print" >
+                    <value name="TEXT">
+
+                      <block type="variables_get" >
+                        <field name="VAR" >colour</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" >
+                        <field name="VAR" >colour</field>
+                        <value name="VALUE">
+                          <block type="colour_rgb" >
+                            <value name="RED">
+
+                              <block type="math_random_int" >
+                                <value name="FROM">
+
+                                  <block type="math_number" >
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                                <value name="TO">
+
+                                  <block type="math_number" >
+                                    <field name="NUM">100</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="GREEN">
+
+                              <block type="math_random_int" >
+                                <value name="FROM">
+
+                                  <block type="math_number" >
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                                <value name="TO">
+
+                                  <block type="math_number" >
+                                    <field name="NUM">100</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="BLUE">
+
+                              <block type="math_random_int" >
+                                <value name="FROM">
+
+                                  <block type="math_number" >
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                                <value name="TO">
+
+                                  <block type="math_number" >
+                                    <field name="NUM">100</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="text_print" >
+                            <value name="TEXT">
+
+                              <block type="variables_get" >
+                                <field name="VAR" >colour</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="variables_set" >
+                                <field name="VAR" >colour</field>
+                                <value name="VALUE">
+                                  <block type="colour_blend" >
+                                    <value name="COLOUR1">
+
+                                      <block type="colour_picker" >
+                                        <field name="COLOUR">#ff0000</field>
+                                      </block>
+                                    </value>
+                                    <value name="COLOUR2">
+
+                                      <block type="colour_picker" >
+                                        <field name="COLOUR">#3333ff</field>
+                                      </block>
+                                    </value>
+                                    <value name="RATIO">
+                                      <block type="math_constant" >
+                                        <field name="CONSTANT">GOLDEN_RATIO</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="text_print" >
+                                    <value name="TEXT">
+
+                                      <block type="variables_get" >
+                                        <field name="VAR" >colour</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

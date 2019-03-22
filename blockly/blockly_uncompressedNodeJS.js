@@ -29,7 +29,7 @@ this.BLOCKLY_BOOT = function(root) {
 
   var dir = '';
   if (root.IS_NODE_JS) {
-    dir = '../../blockly';
+    dir = '../blockly';
   } else {
     dir = this.BLOCKLY_DIR.match(/[^\/]+$/)[0];
   }

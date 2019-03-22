@@ -35,8 +35,7 @@ Blockly.Skoolbot['controls_if'] = function(block) {
   var code = '{\"controls_type\": \"controls_if\", \"structure\": [{\"statement\": \"', branchCode, conditionCode;
   do {
     conditionCode = Blockly.Skoolbot.valueToCode(block, 'IF' + n,
-        Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"boolean\": \"FALSE\"}';
-
+            Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"boolean\": \"FALSE\"}';
     branchCode = Blockly.Skoolbot.statementToCode(block, 'DO' + n) || "[]";
 
     if (n > 0) {
