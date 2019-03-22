@@ -35,8 +35,9 @@ Blockly.Skoolbot['controls_if'] = function(block) {
   var code = '{\"controls_type\": \"controls_if\", \"structure\": [{\"statement\": \"', branchCode, conditionCode;
   do {
     conditionCode = Blockly.Skoolbot.valueToCode(block, 'IF' + n,
-      Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"boolean\": \"FALSE\"}';
-    branchCode = Blockly.Skoolbot.statementToCode(block, 'DO' + n);
+        Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"boolean\": \"FALSE\"}';
+
+    branchCode = Blockly.Skoolbot.statementToCode(block, 'DO' + n) || "[]";
 
     if (n > 0) {
       code += '}, {\"statement\": \"else if\", ' + '\"condition\": ' + conditionCode + ", " + '\"branchCode\":' + branchCode;
@@ -47,8 +48,8 @@ Blockly.Skoolbot['controls_if'] = function(block) {
   } while (block.getInput('IF' + n));
 
   if (block.getInput('ELSE')) {
-    branchCode = Blockly.Skoolbot.statementToCode(block, 'ELSE');
-    code += '}, {\"statement\": \"else\", ' + '\"branchCode\": [' + branchCode + ']}]';
+    branchCode = Blockly.Skoolbot.statementToCode(block, 'ELSE') || "[]";
+    code += '}, {\"statement\": \"else\", ' + '\"branchCode\":' + branchCode + '}]';
   }
   else
   {
@@ -73,9 +74,9 @@ Blockly.Skoolbot['logic_compare'] = function(block) {
 
   var operator = OPERATORS[block.getFieldValue('OP')];
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'A',
-      Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"number\": \"0\"}';
+      Blockly.Skoolbot.ORDER_ATOMIC) || "\"\"";
   var argument1 = Blockly.Skoolbot.valueToCode(block, 'B',
-      Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"number\": \"0\"}';
+      Blockly.Skoolbot.ORDER_ATOMIC) || "\"\"";
   var code = '{ \"operator\": \"'+ operator + '\", \"argument\": ['+ argument0 + ',' + argument1 + ']}';
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
