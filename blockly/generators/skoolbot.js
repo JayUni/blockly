@@ -195,7 +195,7 @@ Blockly.Skoolbot.scrub_ = function(block, code, opt_thisOnly) {
   var nextCode = opt_thisOnly ? '' : Blockly.Skoolbot.blockToCode(nextBlock);
   // add
   if(nextBlock){
-    code += ',';
+    code += '\,';
   }
   return commentCode + code + nextCode;
 };
