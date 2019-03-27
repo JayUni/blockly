@@ -43,16 +43,17 @@ require('jsdom-global')()
 const fs = require('fs');
 const jsdom = require("jsdom");
 const xmldom = require('xmldom');
+
 var JSDOM = jsdom.JSDOM;
 global.DOMParser = xmldom.DOMParser;
 
 global.document = new JSDOM('../../core/xml_utils.js:').window.document;
 global.document = new JSDOM('../../core/xml.js:').window.document;
 
-//GOLDEN_RATIO is wrong
 //need to use string raw for text blocks
 
-fs.readFile("./test_cases/test_case_1.xml", "utf8", function(errFile, data) {
+
+fs.readFile("./" + process.argv[2], "utf8", function(errFile, data) {
   if (!errFile) {
     try {
       //get rid of the non-white space error
@@ -62,6 +63,7 @@ fs.readFile("./test_cases/test_case_1.xml", "utf8", function(errFile, data) {
 
       Blockly.Xml.domToWorkspace(xml, workspace);
       var code = Blockly.Skoolbot.workspaceToCode(workspace);
+
       console.log(code);
     } catch (e) {
       console.log(e);
