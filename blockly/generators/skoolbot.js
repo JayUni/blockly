@@ -159,7 +159,7 @@ Blockly.Skoolbot.scrubNakedValue = function(line) {
 Blockly.Skoolbot.quote_ = function(string) {
   string = string.replace(/\\/g, '\\\\')
                  .replace(/\n/g, '\\\n')
-                 .replace(/'/g, '\\\'');
+                 .replace(/"/g, '\\\"');
   return '\'' + string + '\'';
 };
 
