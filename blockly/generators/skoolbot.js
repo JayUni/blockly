@@ -128,7 +128,7 @@ Blockly.Skoolbot.finish = function(code) {
   delete Blockly.Skoolbot.functionNames_;
   Blockly.Skoolbot.variableDB_.reset();
   // add comma between functions
-  return definitions.join('\,\n\n') + '\n\n\n' + code;
+  return definitions.join('') + code;
 };
 
 /**
@@ -140,7 +140,7 @@ Blockly.Skoolbot.finish = function(code) {
  * @return {string} Legal line of code.
  */
 Blockly.Skoolbot.scrubNakedValue = function(line) {
-  return line + '\n';
+  return line;
 };
 
 /**
@@ -194,8 +194,8 @@ Blockly.Skoolbot.scrub_ = function(block, code, opt_thisOnly) {
   var nextBlock = block.nextConnection && block.nextConnection.targetBlock();
   var nextCode = opt_thisOnly ? '' : Blockly.Skoolbot.blockToCode(nextBlock);
   // add
-  if(nextBlock){
-    code += '\,';
-  }
+  // if(nextBlock){
+  //   code += '\,';
+  // }
   return commentCode + code + nextCode;
 };
