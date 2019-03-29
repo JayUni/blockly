@@ -65,6 +65,7 @@ fs.readFile("./" + process.argv[2], "utf8", function(errFile, data) {
       var code = Blockly.Skoolbot.workspaceToCode(workspace);
 
       console.log(code);
+      //add square bracket, remove new line and spaces and repalce }{ with },{
     } catch (e) {
       console.log(e);
     }
