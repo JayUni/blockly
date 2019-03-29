@@ -32,6 +32,7 @@ goog.require('Blockly.Skoolbot');
 Blockly.Skoolbot['text'] = function(block) {
   // Text value.
   var code = Blockly.Skoolbot.quote_(block.getFieldValue('TEXT'));
+  // if user input }{ will be replace with },{ //look at skoolbot.js line 134
   return ['{ \"text\": \"' + code + '\" }', Blockly.Skoolbot.ORDER_ATOMIC];
 };
 

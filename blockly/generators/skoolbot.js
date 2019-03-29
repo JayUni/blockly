@@ -119,6 +119,7 @@ Blockly.Skoolbot.init = function(workspace) {
  */
 Blockly.Skoolbot.finish = function(code) {
   // Convert the definitions dictionary into a list.
+
   var definitions = [];
   for (var name in Blockly.Skoolbot.definitions_) {
     definitions.push(Blockly.Skoolbot.definitions_[name]);
@@ -128,7 +129,11 @@ Blockly.Skoolbot.finish = function(code) {
   delete Blockly.Skoolbot.functionNames_;
   Blockly.Skoolbot.variableDB_.reset();
   // add comma between functions
-  return definitions.join('\,\n\n') + '\n\n\n' + code;
+  code = definitions.join('\,') + code;
+  code = code.replace(/(\r\n|\n|\r|\s+)/g, "");
+  code = code.replace(/}{/g, "},{");
+  code = "["+code+"]";
+  return code;
 };
 
 /**
