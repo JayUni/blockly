@@ -145,7 +145,7 @@ Blockly.Skoolbot.finish = function(code) {
  * @return {string} Legal line of code.
  */
 Blockly.Skoolbot.scrubNakedValue = function(line) {
-  return line + '\n';
+  return line;
 };
 
 /**
@@ -199,8 +199,8 @@ Blockly.Skoolbot.scrub_ = function(block, code, opt_thisOnly) {
   var nextBlock = block.nextConnection && block.nextConnection.targetBlock();
   var nextCode = opt_thisOnly ? '' : Blockly.Skoolbot.blockToCode(nextBlock);
   // add
-  if(nextBlock){
-    code += '\,';
-  }
+  // if(nextBlock){
+  //   code += '\,';
+  // }
   return commentCode + code + nextCode;
 };
