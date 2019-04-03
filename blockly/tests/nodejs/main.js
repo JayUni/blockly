@@ -1,22 +1,8 @@
-///add block with name to workspace///
-
-//var parentBlock = workspace.newBlock('text_print');
-//var childBlock = workspace.newBlock('text');
-
-// var parentConnection = parentBlock.getInput('TEXT').connection;
-// var childConnection = childBlock.outputConnection;
-// parentConnection.connect(childConnection);
-
-// candidate is Blockly.Connection
-// isConnectionAllowed(candidate) returns boolean
-//Check if the two connections can be dragged to connect to each other
-
 require("./../../blockly_uncompressed.js");
 require('./../../msg/messages.js');
-
 require('./../../skoolbot_compressed.js');
 require('./../../blocks_compressed.js');
-// require("./../../msg/messages.js");
+
 // require("./../../blocks/logic.js");
 // require("./../../blocks/loops.js");
 // require("./../../blocks/math.js");
@@ -44,6 +30,8 @@ const fs = require('fs');
 const jsdom = require("jsdom");
 const xmldom = require('xmldom');
 
+var addTypeField = require('../../Skoolbot/addTypeField.js');
+
 var JSDOM = jsdom.JSDOM;
 global.DOMParser = xmldom.DOMParser;
 
@@ -61,7 +49,17 @@ fs.readFile("./" + process.argv[2], "utf8", function(errFile, data) {
       Blockly.Xml.domToWorkspace(xml, workspace);
       var code = Blockly.Skoolbot.workspaceToCode(workspace);
       var codeJson = JSON.parse(code);
-      console.log(JSON.stringify(codeJson, null, 4));
+
+      if(process.argv.length == 3) {
+        console.log(JSON.stringify(codeJson, null, 4));
+      } else if (process.argv.length == 4) {
+        if (process.argv[3] == "true") {
+          addTypeField.addTypeField(codeJson);
+        }
+      } else {
+        console.log("wrong argument");
+      }
+
     } catch (e) {
       console.log(e);
     }

@@ -16,7 +16,6 @@ module.exports.addTypeField = function addTypeField(jsonList){
                             console.log(jsonList.argument[j]);
                             type_list.push(jsonList.argument[j].valueType);
                         }
-                        console.log(type_list);
                         jsonList.valueType = checkTypeList(type_list);
                         break;
                     default:
@@ -37,5 +36,3 @@ function checkTypeList(typeList){
     }
     return type;
 }
-
-

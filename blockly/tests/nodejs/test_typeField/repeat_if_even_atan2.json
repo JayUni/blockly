@@ -1,0 +1,31 @@
+{ block_name: 'math_number_single',
+  operator: 'ABS',
+  argument:
+   [ { block_name: 'variables_statement_get',
+       functionName: 'variables_get',
+       varName: 'num' } ] }
+{ block_name: 'math_number_constant',
+  value: [ { operator: 'math.sqrt', argument: [Object] } ] }
+{ block_name: 'math_number_single',
+  operator: 'ABS',
+  argument:
+   [ { block_name: 'variables_statement_get',
+       functionName: 'variables_get',
+       varName: 'num' } ] }
+{ block_name: 'math_number_constant',
+  value: [ { operator: 'math.sqrt', argument: [Object] } ] }
+{ block_name: 'math_number_single',
+  operator: 'ABS',
+  argument:
+   [ { block_name: 'variables_statement_get',
+       functionName: 'variables_get',
+       varName: 'num',
+       valueType: 'statement' },
+     valueType: '' ],
+  valueType: 'number' }
+{ block_name: 'math_number_constant',
+  value:
+   [ { operator: 'math.sqrt', argument: [Object], valueType: '' },
+     valueType: '' ],
+  valueType: 'number' }
+
