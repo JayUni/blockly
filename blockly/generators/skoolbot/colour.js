@@ -86,9 +86,9 @@ Blockly.Skoolbot['colour_rgb'] = function(block) {
   // return [code + "\"}", Blockly.Skoolbot.ORDER_ATOMIC];
 
   //with no operations
-  var r = Blockly.Skoolbot.valueToCode(block, 'RED', Blockly.Skoolbot.ORDER_ATOMIC) || "\"\"";
-  var g = Blockly.Skoolbot.valueToCode(block, 'GREEN', Blockly.Skoolbot.ORDER_ATOMIC) || "\"\"";
-  var b = Blockly.Skoolbot.valueToCode(block, 'BLUE', Blockly.Skoolbot.ORDER_ATOMIC) || "\"\"";
+  var r = Blockly.Skoolbot.valueToCode(block, 'RED', Blockly.Skoolbot.ORDER_ATOMIC);
+  var g = Blockly.Skoolbot.valueToCode(block, 'GREEN', Blockly.Skoolbot.ORDER_ATOMIC);
+  var b = Blockly.Skoolbot.valueToCode(block, 'BLUE', Blockly.Skoolbot.ORDER_ATOMIC);
   var code  = '{\"block_name\": \"colour_colour_rgb\", \"argument\":[' + r + ', '+ g + ',' + b + "]}";
 
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
@@ -141,9 +141,9 @@ Blockly.Skoolbot['colour_blend'] = function(block) {
   // return [code + "\"}", Blockly.Skoolbot.ORDER_ATOMIC];
 
   //without operations
-  var colour1 = Blockly.Skoolbot.valueToCode(block, 'COLOUR1', Blockly.Skoolbot.ORDER_ATOMIC) || "\"\"";
-  var colour2 = Blockly.Skoolbot.valueToCode(block, 'COLOUR2', Blockly.Skoolbot.ORDER_ATOMIC) || "\"\"";
-  var ratio = Blockly.Skoolbot.valueToCode(block, 'RATIO', Blockly.Skoolbot.ORDER_ATOMIC) || "\"\"";
+  var colour1 = Blockly.Skoolbot.valueToCode(block, 'COLOUR1', Blockly.Skoolbot.ORDER_ATOMIC);
+  var colour2 = Blockly.Skoolbot.valueToCode(block, 'COLOUR2', Blockly.Skoolbot.ORDER_ATOMIC);
+  var ratio = Blockly.Skoolbot.valueToCode(block, 'RATIO', Blockly.Skoolbot.ORDER_ATOMIC);
 
   var code  = '{ \"block_name\": \"colour_colour_blend\", \"argument\": [{ \"block_name\": \"colour_picker\", \"colour1\": '+ colour1 + '}, { \"block_name\": \"colour_picker\", \"colour2\": '+
               colour2 + '}, ' + ratio + ']}';
