@@ -9,7 +9,7 @@ do
         node main.js $x > compare.json
         result=$(wdiff -3 $y compare.json)
         if [ $? -eq 0 ]
-          then
+           then
              echo -e "$y Test case pass.\n"
            else
              echo "$result"
