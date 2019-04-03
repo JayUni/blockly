@@ -45,20 +45,22 @@ Blockly.Skoolbot['procedures_defreturn'] = function(block) {
         '\'' + block.id + '\'') + branch;
   }
   var returnValue = Blockly.Skoolbot.valueToCode(block, 'RETURN',
-      Blockly.Skoolbot.ORDER_NONE) || '';
+      Blockly.Skoolbot.ORDER_ATOMIC) || '{\"null\": \"NULL\"}';
   if (returnValue) {
-    returnValue = Blockly.Skoolbot.INDENT + 'return ' + returnValue + '\n';
-  } else if (!branch) {
-    branch = '';
+    returnValue = Blockly.Skoolbot.INDENT + returnValue;
   }
+
   var args = [];
   for (var i = 0; i < block.arguments_.length; i++) {
-    args[i] = Blockly.Skoolbot.variableDB_.getName(block.arguments_[i],
-        Blockly.Variables.NAME_TYPE);
+    args[i] = '{ \"argument' + i + '\": \"' + Blockly.Skoolbot.variableDB_.getName(block.arguments_[i],
+        Blockly.Variables.NAME_TYPE) + '\"}';
   }
-  var code = 'function ' + funcName + '(' + args.join(', ') + ')\n' +
-      branch + returnValue + 'end\n';
-  code = Blockly.Skoolbot.scrub_(block, code);
+  var code = "";
+  var description = Blockly.Skoolbot.scrub_(block, code, false);
+  description = description.replace(/\n/g, " ");
+
+  code = '{ \"block_name\": \"procedures_statement_defreturn\", \"funcName\": \"' + funcName + '\", \"description\": \"' + description + '\", \"argument\": [' + args.join(', ') + '], \"branch\": [' + branch + '], \"return_value\": ' + returnValue + '}';
+
   // Add % so as not to collide with helper functions in definitions list.
   Blockly.Skoolbot.definitions_['%' + funcName] = code;
   return null;
@@ -76,10 +78,10 @@ Blockly.Skoolbot['procedures_callreturn'] = function(block) {
   var args = [];
   for (var i = 0; i < block.arguments_.length; i++) {
     args[i] = Blockly.Skoolbot.valueToCode(block, 'ARG' + i,
-        Blockly.Skoolbot.ORDER_NONE) || 'nil';
+        Blockly.Skoolbot.ORDER_ATOMIC) || '{\"null\": \"NULL\"}';
   }
-  var code = funcName + '(' + args.join(', ') + ')';
-  return [code, Blockly.Skoolbot.ORDER_HIGH];
+  var code = '{ \"block_name\": \"procedures_statement_callreturn\", \"funcName\": \"' + funcName + '\", \"argument\": [' + args.join(', ') + ']}';
+  return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
 Blockly.Skoolbot['procedures_callnoreturn'] = function(block) {
@@ -89,24 +91,23 @@ Blockly.Skoolbot['procedures_callnoreturn'] = function(block) {
   var args = [];
   for (var i = 0; i < block.arguments_.length; i++) {
     args[i] = Blockly.Skoolbot.valueToCode(block, 'ARG' + i,
-        Blockly.Skoolbot.ORDER_NONE) || 'nil';
+        Blockly.Skoolbot.ORDER_ATOMIC);
   }
-  var code = funcName + '(' + args.join(', ') + ')\n';
+  var code = '{ \"block_name\": \"procedures_statement_callnoreturn\", \"funcName\": \"' + funcName + '\", \"argument\": [' + args.join(', ') + ']}';
   return code;
 };
 
 Blockly.Skoolbot['procedures_ifreturn'] = function(block) {
   // Conditionally return value from a procedure.
   var condition = Blockly.Skoolbot.valueToCode(block, 'CONDITION',
-      Blockly.Skoolbot.ORDER_NONE) || 'false';
-  var code = 'if ' + condition + ' then\n';
+      Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"boolean\": \"FALSE\"}';
+  var value = Blockly.Skoolbot.valueToCode(block, 'VALUE',
+        Blockly.Skoolbot.ORDER_ATOMIC) || '{\"null\": \"NULL\"}';
   if (block.hasReturnValue_) {
-    var value = Blockly.Skoolbot.valueToCode(block, 'VALUE',
-        Blockly.Skoolbot.ORDER_NONE) || 'nil';
-    code += Blockly.Skoolbot.INDENT + 'return ' + value + '\n';
+
+  var code = '{ \"block_name\": \"procedures_statement_ifreturn\", \"condition\": ' + condition + ', \"has_return_value\": { \"boolean\": \"TRUE\"}, \"return\":  [' + value + ']}';
   } else {
-    code += Blockly.Skoolbot.INDENT + 'return\n';
+  var code = '{ \"block_name\": \"procedures_statement_ifreturn\", \"condition\": ' + condition + ', \"has_return_value\": { \"boolean\": \"FALSE\"}, \"return\":  [' + value + ']}';
   }
-  code += 'end\n';
   return code;
 };

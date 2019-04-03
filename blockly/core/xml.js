@@ -227,7 +227,9 @@ Blockly.Xml.blockToDom = function(block, opt_noId) {
         container = Blockly.Xml.utils.createElement('statement');
       }
       var shadow = input.connection.getShadowDom();
-      if (shadow && (!childBlock || !childBlock.isShadow())) {
+
+      this.IS_NODE_JS = !!(typeof module !== 'undefined' && module.exports);
+      if (shadow && (!childBlock || !childBlock.isShadow()) && !this.IS_NODE_JS) {
         container.appendChild(Blockly.Xml.cloneShadow_(shadow));
       }
       if (childBlock) {

@@ -1,0 +1,140 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="cE[,;%0]rVLZ,#6YTF=/">colour</variable>
+  </variables>
+  <block type="procedures_defnoreturn" id="1#qMrO)~b=~i(*4PssF#" x="87" y="62">
+    <field name="NAME">print_colour</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="UL?:Xvx_NcY4?FNS|#]p">
+        <field name="VAR" id="cE[,;%0]rVLZ,#6YTF=/" variabletype="">colour</field>
+        <value name="VALUE">
+          <block type="colour_picker" id="{]:m^X`$o%*m:q?8%BA0">
+            <field name="COLOUR">#ff0000</field>
+          </block>
+        </value>
+        <next>
+          <block type="text_print" id="v+-d{CO2U!}O{|11]9PT">
+            <value name="TEXT">
+              <block type="variables_get" id="U+6m`UH7ZEo)Vfngny}w">
+                <field name="VAR" id="cE[,;%0]rVLZ,#6YTF=/" variabletype="">colour</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="{iA(`{KGyrsJ*J3z`7|p">
+                <field name="VAR" id="cE[,;%0]rVLZ,#6YTF=/" variabletype="">colour</field>
+                <value name="VALUE">
+                  <block type="text" id="wD2O9Fu)owz#rVM#g/fr">
+                    <field name="TEXT">random</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="text_print" id="vJMvv?x-G97ExRwjx-?w">
+                    <value name="TEXT">
+                      <block type="variables_get" id="xo@L9#oW,Z?~Fjz$3eQU">
+                        <field name="VAR" id="cE[,;%0]rVLZ,#6YTF=/" variabletype="">colour</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="v-/vgV5,92Uc^HMWWPJq">
+                        <field name="VAR" id="cE[,;%0]rVLZ,#6YTF=/" variabletype="">colour</field>
+                        <value name="VALUE">
+                          <block type="colour_rgb" id="wR4t%Fb63DBn72Uw3O},">
+                            <value name="RED">
+                              <block type="math_random_int" id="xHZeG1h3Ws5]@^-~o}y;">
+                                <value name="FROM">
+                                  <block type="math_number" id="{[VsAp|qfbd=~u:s,nMm">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                                <value name="TO">
+                                  <block type="math_number" id="7i4:^|WXe)i;RA?|}rF#">
+                                    <field name="NUM">100</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="GREEN">
+                              <block type="math_random_int" id=".;jB!7A;?0s$?=#e)wf5">
+                                <value name="FROM">
+                                  <block type="math_number" id="ccI*xG/?R26gI|Nr{4ms">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                                <value name="TO">
+                                  <block type="math_number" id="S[T5x/H6=tJO6Ojo2nt2">
+                                    <field name="NUM">100</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="BLUE">
+                              <block type="math_random_int" id="SkF+xv9HM7!0i(g1W=P,">
+                                <value name="FROM">
+                                  <block type="math_number" id="[xyLV5+E!3)cefy0ydjG">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                                <value name="TO">
+                                  <block type="math_number" id="x6~Tz#ID}GJW|?EoV)d@">
+                                    <field name="NUM">100</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="text_print" id="Oc$V)I~n1l+2{fu#!]7y">
+                            <value name="TEXT">
+                              <block type="variables_get" id="|C.,(q_un~:)36E]OHNT">
+                                <field name="VAR" id="cE[,;%0]rVLZ,#6YTF=/" variabletype="">colour</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="variables_set" id="eOkvduX1IF`W%u`+-lMB">
+                                <field name="VAR" id="cE[,;%0]rVLZ,#6YTF=/" variabletype="">colour</field>
+                                <value name="VALUE">
+                                  <block type="colour_blend" id="M9X7UqM)XTWk96-`6[#/">
+                                    <value name="COLOUR1">
+                                      <block type="colour_picker" id="%?Ryj1KyTF-_GP+Qh_yd">
+                                        <field name="COLOUR">#ff0000</field>
+                                      </block>
+                                    </value>
+                                    <value name="COLOUR2">
+                                      <block type="colour_picker" id="X[0!GjXrk)I+%3:$$b8e">
+                                        <field name="COLOUR">#3333ff</field>
+                                      </block>
+                                    </value>
+                                    <value name="RATIO">
+                                      <block type="math_constant" id="h`Zvw9?Z8h}y^M1X;/z[">
+                                        <field name="CONSTANT">GOLDEN_RATIO</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="text_print" id="g_4!A]M8IqHBS_o?fg?[">
+                                    <value name="TEXT">
+                                      <block type="variables_get" id="Qf?MERN5sF;J,sTr:O!~">
+                                        <field name="VAR" id="cE[,;%0]rVLZ,#6YTF=/" variabletype="">colour</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

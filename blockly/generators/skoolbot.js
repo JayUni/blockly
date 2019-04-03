@@ -119,6 +119,7 @@ Blockly.Skoolbot.init = function(workspace) {
  */
 Blockly.Skoolbot.finish = function(code) {
   // Convert the definitions dictionary into a list.
+
   var definitions = [];
   for (var name in Blockly.Skoolbot.definitions_) {
     definitions.push(Blockly.Skoolbot.definitions_[name]);
@@ -127,7 +128,14 @@ Blockly.Skoolbot.finish = function(code) {
   delete Blockly.Skoolbot.definitions_;
   delete Blockly.Skoolbot.functionNames_;
   Blockly.Skoolbot.variableDB_.reset();
-  return definitions.join('\n\n') + '\n\n\n' + code;
+  // add comma between functions
+
+  code = definitions.join('\,') + code;
+  code = code.replace(/(\r\n|\n|\r|\s+)/g, "");
+  code = code.replace(/}{/g, "},{");
+  code = "["+code+"]";
+
+  return code;
 };
 
 /**
@@ -139,7 +147,7 @@ Blockly.Skoolbot.finish = function(code) {
  * @return {string} Legal line of code.
  */
 Blockly.Skoolbot.scrubNakedValue = function(line) {
-  return line + '\n';
+  return line;
 };
 
 /**
@@ -152,7 +160,7 @@ Blockly.Skoolbot.scrubNakedValue = function(line) {
 Blockly.Skoolbot.quote_ = function(string) {
   string = string.replace(/\\/g, '\\\\')
                  .replace(/\n/g, '\\\n')
-                 .replace(/'/g, '\\\'');
+                 .replace(/"/g, '\\\"');
   return '\'' + string + '\'';
 };
 
@@ -192,5 +200,9 @@ Blockly.Skoolbot.scrub_ = function(block, code, opt_thisOnly) {
   }
   var nextBlock = block.nextConnection && block.nextConnection.targetBlock();
   var nextCode = opt_thisOnly ? '' : Blockly.Skoolbot.blockToCode(nextBlock);
+  // add
+  // if(nextBlock){
+  //   code += '\,';
+  // }
   return commentCode + code + nextCode;
 };
