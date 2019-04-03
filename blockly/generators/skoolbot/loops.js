@@ -61,7 +61,7 @@ Blockly.Skoolbot['controls_repeat'] = function(block) {
   branch = Blockly.Skoolbot.addContinueLabel(branch);
   // var loopVar = Blockly.Skoolbot.variableDB_.getDistinctName('count', Blockly.Variables.NAME_TYPE);
   // var code = 'for ' + loopVar + ' = 1, ' + repeats + ' do\n' + branch + 'end\n';
-  var code = '{\"loop_style\": \"controls_repeat\", \"repeat_times\": '+ repeats + ', \"branch\": ['+ branch + ']}';
+  var code = '{ \"block_name\": \"controls_statement_repeat\", \"loop_style\": \"controls_repeat\", \"repeat_times\": '+ repeats + ', \"branch\": ['+ branch + ']}';
   return code;
 };
 
@@ -72,14 +72,14 @@ Blockly.Skoolbot['controls_repeat_ext'] = function(block) {
   if (Blockly.isNumber(repeats)) {
     repeats = parseInt(repeats, 10);
   } else {
-    repeats = '{\"operator\": \"math.floor\", \"argument\": '+ repeats + '}';
+    repeats = '{ \"block_name\": \"controls_statement_repeatExt\", \"operator\": \"math.floor\", \"argument\": '+ repeats + '}';
   }
   var branch = Blockly.Skoolbot.statementToCode(block, 'DO');
   branch = Blockly.Skoolbot.addContinueLabel(branch);
   // var loopVar = Blockly.Skoolbot.variableDB_.getDistinctName(
   //     'count', Blockly.Variables.NAME_TYPE);
   // var code = 'for ' + loopVar + ' = 1, ' + repeats + ' do\n' + branch + 'end\n';
-  var code = '{\"loop_style\": \"controls_repeat_ext\", \"repeat_times\": '+ repeats + ', \"branch\": ['+ branch + ']}';
+  var code = '{ \"block_name\": \"controls_statement_repeat\", \"loop_style\": \"controls_repeat_ext\", \"repeat_times\": '+ repeats + ', \"branch\": ['+ branch + ']}';
   return code;
 };
 
@@ -97,8 +97,8 @@ Blockly.Skoolbot['controls_whileUntil'] = function(block) {
   else{
     var endType = '\"while\"';
   }
-  var code = '{\"loop_style\": \"controls_whileUntil\",\"repeat_condition\": '+ argument0 + ',\"end_type\": '+ endType + ',\"branch\": ['+ branch + ']}';
-  // return 'while ' + argument0 + ' do\n' + branch + 'end\n';
+  var code = '{ \"block_name\": \"controls_statement_whileUntil\", \"loop_style\": \"controls_whileUntil\",\"repeat_condition\": '+ argument0 + ',\"end_type\": '+ endType + ',\"branch\": ['+ branch + ']}';
+
   return code;
 };
 
@@ -115,7 +115,7 @@ Blockly.Skoolbot['controls_for'] = function(block) {
   var branch = Blockly.Skoolbot.statementToCode(block, 'DO');
   branch = Blockly.Skoolbot.addLoopTrap(branch, block.id);
   branch = Blockly.Skoolbot.addContinueLabel(branch);
-  var code = '\n{ \"loop_style\": \"controls_for\"'+', \"variable\": \"' + variable0 + '\", \"start\": '+ startVar +', \"end\": ' + endVar + ', \"step\": ' + increment +', \"branch\": [' + branch + ']}';
+  var code = '{ \"block_name\": \"controls_statement_for\", \"loop_style\": \"controls_for\"'+', \"variable\": \"' + variable0 + '\", \"start\": '+ startVar +', \"end\": ' + endVar + ', \"step\": ' + increment +', \"branch\": [' + branch + ']}';
   return code;
 };
 
@@ -129,7 +129,7 @@ Blockly.Skoolbot['controls_forEach'] = function(block) {
   branch = Blockly.Skoolbot.addContinueLabel(branch);
   // var code = 'for _, ' + variable0 + ' in ipairs(' + argument0 + ') do \n' +
   //     branch + 'end\n';
-  var code = '{\"loop_style\": \"controls_forEach\",\"varName\": \"'+ variable0 + '\", \"list\": '+ argument0 + ', \"branch\": ['+ branch + ']}';
+  var code = '{ \"block_name\": \"controls_statement_forEach\", \"loop_style\": \"controls_forEach\",\"varName\": \"'+ variable0 + '\", \"list\": '+ argument0 + ', \"branch\": ['+ branch + ']}';
   return code;
 };
 
@@ -137,10 +137,10 @@ Blockly.Skoolbot['controls_flow_statements'] = function(block) {
   // Flow statements: continue, break.
   switch (block.getFieldValue('FLOW')) {
     case 'BREAK':
-      return '{ \"controls_flow_statements\": \"break\" }';
+      return '{ \"block_name\": \"controls_statement_flowStatements\", \"statements\": \"break\" }';
     case 'CONTINUE':
       // return Blockly.Skoolbot.CONTINUE_STATEMENT;
-      return '{ \"controls_flow_statements\": \"continue\" }';
+      return '{ \"block_name\": \"controls_statement_flowStatements\", \"statements\": \"continue\" }';
   }
   throw Error('Unknown flow statement.');
 };

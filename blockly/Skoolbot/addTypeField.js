@@ -1,7 +1,7 @@
-
 function addTypeField(jsonlist){
     for (var element in jsonlist) {
         if ((jsonlist[element] instanceof Object)){
+            jsonlist[element].valueType = "";
             addTypeField(jsonlist[element]);
         }
         else{
@@ -19,7 +19,7 @@ function addTypeField(jsonlist){
                         for (var j in jsonlist.argument){
                             type_list.push(jsonlist.argument[j].valueType);
                         }
-                        console.log(type_list);
+                        // console.log(type_list);
 
                         jsonlist.valueType = checkTypeList(type_list);
                         break;
@@ -28,21 +28,9 @@ function addTypeField(jsonlist){
                         break;
                 }
             }
-
-            //TODO
-            // add type field based on the operation type and its direct children's value type.
         }
     }
 }
-
-// function hasChild(jsonlist) {
-//     var hasChild = false;
-//     for (var k in jsonlist){
-//         if (jsonlist[k] instanceof Array){
-//             hasChild = true;
-//         }
-//     }
-// }
 
 
 function checkTypeList(typeList){
@@ -56,10 +44,22 @@ function checkTypeList(typeList){
 }
 
 
+// function hasChild(jsonlist) {
+//     var hasChild = false;
+//     for (var k in jsonlist){
+//         if (jsonlist[k] instanceof Array){
+//             hasChild = true;
+//         }
+//     }
+// }
 
-var str = JSON.parse(`[{"block_name":"controls_statement_repeat","loop_style":"controls_repeat_ext","repeat_times":{"block_name":"controls_statement_repeatExt","operator":"math.floor","argument":{"block_name":"math_number_number","number":"10","valueType":""},"valueType":""},"branch":[{"block_name":"controls_statement_ifStructure","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"logic_boolean_compare","operator":">","argument":[{"block_name":"text_number_count","functionName":"text_count","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i","valueType":""},{"block_name":"text_string_substring","substring":{"block_name":"text_string","text":"'Hi'","valueType":""},"valueType":""}],"valueType":""},{"block_name":"math_number_number","number":"0","valueType":""}],"valueType":""},"branchCode":[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"i","argument":[{"block_name":"text_string_getSubstring","functionName":"text_getSubstring","argument":[{"block_name":"variables_variable_variable","varName":{"block_name":"variables_statement_get","functionName":"variables_get","varName":"text","valueType":""},"valueType":""},{"block_name":"text_string_startWhere","start_where":"FROM_START","valueType":""},{"block_name":"text_number_startAt","start_index":{"block_name":"math_number_number","number":"12","valueType":""},"valueType":""},{"block_name":"text_string_endWhere","end_where":"FROM_END","valueType":""},{"block_name":"text_number_endAt","end_index":{"block_name":"math_number_number","number":"3","valueType":""},"valueType":""}],"valueType":""}],"valueType":""}],"valueType":""},{"block_name":"controls_statement_else","statements":"else","branchCode":{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"math_arithmetic_arithmetic","operator":"+","argument":[{"block_name":"math_number_number","number":"1","valueType":""},{"block_name":"math_number_number","number":"1","valueType":""}],"valueType":""}],"valueType":""},"valueType":""}],"valueType":""}],"valueType":""}]
-`);
 
-console.log('jsonlist: \n', JSON.stringify(str));
+var str = `[{"block_name":"procedures_statement_defreturn","funcName":"print_colour","description":"--Describethisfunction...","argument":[],"branch":[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"colour","argument":[{"block_name":"colour_colour_picker","colour":"#ff0000"}]},{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"colour"}]},{"block_name":"variables_statement_set","functionName":"variables_set","varName":"colour","argument":[{"block_name":"colour_colour_random","colour":"#D5D0CD"}]},{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"colour"}]},{"block_name":"variables_statement_set","functionName":"variables_set","varName":"colour","argument":[{"block_name":"colour_colour_rgb","colourRGB":[{"red":{"block_name":"math_number_randomInt","functionName":"math_randomInt","argument":[{"block_name":"math_number_number","number":"1"},{"block_name":"math_number_number","number":"100"}]}},{"green":{"block_name":"math_number_randomInt","functionName":"math_randomInt","argument":[{"block_name":"math_number_number","number":"1"},{"block_name":"math_number_number","number":"100"}]}},{"blue":{"block_name":"math_number_randomInt","functionName":"math_randomInt","argument":[{"block_name":"math_number_number","number":"1"},{"block_name":"math_number_number","number":"100"}]}}]}]},{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"colour"}]},{"block_name":"variables_statement_set","functionName":"variables_set","varName":"colour","argument":[{"block_name":"colour_colour_blend","colourBlend":[{"block_name":"colour_picker","colour1":{"block_name":"colour_colour_picker","colour":"#ff0000"}},{"block_name":"colour_picker","colour2":{"block_name":"colour_colour_picker","colour":"#3333ff"}},{"block_name":"math_number_constant","value":[{"block_name":"math_mathOperation_arithmetic","operator":"/","argument":[{"block_name":"math_mathOperation_arithmetic","operator":"+","argument":[{"block_name":"math_number_number","number":"1"},{"block_name":"math_operator_sqrt","operator":"math.sqrt","argument":[{"block_name":"math_number_number","number":"5"}]}]},{"block_name":"math_number_number","number":"2"}]}]}]}]},{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"colour"}]}],"return_value":{"null":"NULL"}}]`;
+
+
+str = JSON.parse(str);
+
+// console.log('jsonlist: \n', JSON.stringify(str, null, 4));
+
 addTypeField(str);
-console.log("addTypeField: \n", JSON.stringify(str));
+console.log("addTypeField: \n", JSON.stringify(str, null, 4));
