@@ -19,4 +19,5 @@ do
       node main.js $x > $y
       echo "created $y"
     fi
+
 done

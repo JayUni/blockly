@@ -50,9 +50,6 @@ global.DOMParser = xmldom.DOMParser;
 global.document = new JSDOM('../../core/xml_utils.js:').window.document;
 global.document = new JSDOM('../../core/xml.js:').window.document;
 
-//need to use string raw for text blocks
-
-
 fs.readFile("./" + process.argv[2], "utf8", function(errFile, data) {
   if (!errFile) {
     try {
@@ -63,9 +60,8 @@ fs.readFile("./" + process.argv[2], "utf8", function(errFile, data) {
 
       Blockly.Xml.domToWorkspace(xml, workspace);
       var code = Blockly.Skoolbot.workspaceToCode(workspace);
-
-      console.log(code);
-      //add square bracket, remove new line and spaces and repalce }{ with },{
+      var codeJson = JSON.parse(code);
+      console.log(JSON.stringify(codeJson, null, 4));
     } catch (e) {
       console.log(e);
     }
