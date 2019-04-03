@@ -10,12 +10,13 @@ do
         result=$(wdiff -3 $y compare.json)
         if [ $? -eq 0 ]
           then
-             echo -e "Test case pass.\n"
+             echo -e "$y Test case pass.\n"
            else
              echo "$result"
-             echo -e "Test case failed.\n"
+             echo -e "$y Test case failed.\n"
         fi
     else
       node main.js $x > $y
+      echo "created $y"
     fi
 done

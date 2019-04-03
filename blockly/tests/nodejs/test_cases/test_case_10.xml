@@ -218,7 +218,9 @@
                       <shadow type="text" id="ps;+2m9yNOfJ/38T~w/p">
                         <field name="TEXT">abc</field>
                       </shadow>
-                      <block type="colour_random" id="nNV54/!(((F@$PsujHY^"></block>
+                      <block type="text" id="!gF2oMDCGB{SW_}/M*ij">
+                        <field name="TEXT">random</field>
+                      </block>
                     </value>
                   </block>
                 </statement>

@@ -3,7 +3,7 @@
     <variable type="" id="%+VC_|9kS8aMf%A.1Z6s">a</variable>
     <variable type="" id="8h([|.X]u0=fd]q$hlMH">i</variable>
   </variables>
-  <block type="procedures_defnoreturn" id="n?$K+O2Z-,,~YTRgfLg8" x="-138" y="88">
+  <block type="procedures_defnoreturn" id="n?$K+O2Z-,,~YTRgfLg8" x="62" y="-87">
     <field name="NAME">list_test</field>
     <comment pinned="false" h="80" w="160">Describe this function...</comment>
     <statement name="STACK">
@@ -84,7 +84,9 @@
                           </block>
                         </value>
                         <value name="ADD2">
-                          <block type="math_random_float" id="9*tucKAAj]#{gj?]_9P|"></block>
+                          <block type="text" id="rRK1S`v]J^JO}t)SHycU">
+                            <field name="TEXT">random</field>
+                          </block>
                         </value>
                         <value name="ADD3">
                           <block type="math_constant" id="Xv^qeJ(!_NsqV]}n:zYp">
@@ -94,7 +96,9 @@
                       </block>
                     </value>
                     <value name="ADD2">
-                      <block type="colour_random" id="(s!,wio]c(Pf.fWb:^ya"></block>
+                      <block type="text" id="*Ax{zThT~l=(;}vz4n%)">
+                        <field name="TEXT">random</field>
+                      </block>
                     </value>
                   </block>
                 </value>
