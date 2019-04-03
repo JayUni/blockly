@@ -1,40 +1,37 @@
-require("./../../blockly_uncompressed.js");
+global.Blockly = require("./../../blockly_uncompressed.js");
 require('./../../msg/messages.js');
-require('./../../skoolbot_compressed.js');
-require('./../../blocks_compressed.js');
 
-// require("./../../blocks/logic.js");
-// require("./../../blocks/loops.js");
-// require("./../../blocks/math.js");
-// require("./../../blocks/text.js");
-// require("./../../blocks/lists.js");
-// require("./../../blocks/colour.js");
-// require("./../../blocks/variables.js");
-// require("./../../blocks/variables_dynamic.js");
-// require("./../../blocks/procedures.js");
-//
-// require("./../../generators/skoolbot/math.js");
-// require("./../../generators/skoolbot.js");
-// require("./../../generators/skoolbot/logic.js");
-// require("./../../generators/skoolbot/loops.js");
-// require("./../../generators/skoolbot/text.js");
-// require("./../../generators/skoolbot/lists.js");
-// require("./../../generators/skoolbot/colour.js");
-// require("./../../generators/skoolbot/variables.js");
-// require("./../../generators/skoolbot/variables_dynamic.js");
-// require("./../../generators/skoolbot/procedures.js");
+require("./../../generators/skoolbot.js");
+require("./../../generators/skoolbot/math.js");
+require("./../../generators/skoolbot.js");
+require("./../../generators/skoolbot/logic.js");
+require("./../../generators/skoolbot/loops.js");
+require("./../../generators/skoolbot/text.js");
+require("./../../generators/skoolbot/lists.js");
+require("./../../generators/skoolbot/colour.js");
+require("./../../generators/skoolbot/variables.js");
+require("./../../generators/skoolbot/variables_dynamic.js");
+require("./../../generators/skoolbot/procedures.js");
+
+require("./../../blocks/logic.js");
+require("./../../blocks/loops.js");
+require("./../../blocks/math.js");
+require("./../../blocks/text.js");
+require("./../../blocks/lists.js");
+require("./../../blocks/colour.js");
+require("./../../blocks/variables.js");
+require("./../../blocks/variables_dynamic.js");
+require("./../../blocks/procedures.js");
 
 require('jsdom-global')()
-
 const fs = require('fs');
 const jsdom = require("jsdom");
 const xmldom = require('xmldom');
 
-var addTypeField = require('../../Skoolbot/addTypeField.js');
+var addTypeField = require('./../../Skoolbot/addTypeField.js');
 
 var JSDOM = jsdom.JSDOM;
 global.DOMParser = xmldom.DOMParser;
-
 global.document = new JSDOM('../../core/xml_utils.js:').window.document;
 global.document = new JSDOM('../../core/xml.js:').window.document;
 
