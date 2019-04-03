@@ -134,6 +134,7 @@ Blockly.Skoolbot.finish = function(code) {
   code = code.replace(/(\r\n|\n|\r|\s+)/g, "");
   code = code.replace(/}{/g, "},{");
   code = "["+code+"]";
+
   return code;
 };
 

@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="309abf3b-ba8f-41f5-a11f-08a439e8cd78" name="Default Changelist" comment="Default Changelist">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/Skoolbot/treeWalkJSON.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/Skoolbot/treeWalkJSON.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/Skoolbot/addTypeField.js" afterPath="$PROJECT_DIR$/blockly/Skoolbot/addTypeField.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/generators/skoolbot/colour.js" afterPath="$PROJECT_DIR$/blockly/generators/skoolbot/colour.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/generators/skoolbot/logic.js" afterPath="$PROJECT_DIR$/blockly/generators/skoolbot/logic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/generators/skoolbot/loops.js" afterPath="$PROJECT_DIR$/blockly/generators/skoolbot/loops.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/generators/skoolbot/math.js" afterPath="$PROJECT_DIR$/blockly/generators/skoolbot/math.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/generators/skoolbot/procedures.js" afterPath="$PROJECT_DIR$/blockly/generators/skoolbot/procedures.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/generators/skoolbot/text.js" afterPath="$PROJECT_DIR$/blockly/generators/skoolbot/text.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/generators/skoolbot/variables.js" afterPath="$PROJECT_DIR$/blockly/generators/skoolbot/variables.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/generators/skoolbot.js" afterPath="$PROJECT_DIR$/blockly/generators/skoolbot.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -100,8 +91,8 @@
       <file leaf-file-name="addTypeField.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/addTypeField.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="32" lean-forward="true" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -110,8 +101,8 @@
       <file leaf-file-name="skoolbot.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blockly/generators/skoolbot.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="135" column="22" lean-forward="false" selection-start-line="135" selection-start-column="22" selection-end-line="135" selection-end-column="22" />
+            <state relative-caret-position="527">
+              <caret line="137" column="14" lean-forward="true" selection-start-line="137" selection-start-column="14" selection-end-line="137" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -130,7 +121,7 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-463">
+            <state relative-caret-position="210">
               <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
               <folding />
             </state>
@@ -280,7 +271,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -402,12 +393,12 @@
       <workItem from="1554095298467" duration="1000" />
       <workItem from="1554172523329" duration="1348000" />
       <workItem from="1554200209651" duration="1739000" />
-      <workItem from="1554256468727" duration="705000" />
+      <workItem from="1554256468727" duration="1655000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148998000" />
+    <option name="totallyTimeSpent" value="149948000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -807,22 +798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/addTypeField.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-463">
-          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blockly/demos/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -831,10 +806,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/addTypeField.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="32" lean-forward="true" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/blockly/generators/skoolbot.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="135" column="22" lean-forward="false" selection-start-line="135" selection-start-column="22" selection-end-line="135" selection-end-column="22" />
+        <state relative-caret-position="527">
+          <caret line="137" column="14" lean-forward="true" selection-start-line="137" selection-start-column="14" selection-end-line="137" selection-end-column="14" />
           <folding />
         </state>
       </provider>
