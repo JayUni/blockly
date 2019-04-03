@@ -1,0 +1,18 @@
+{
+  "name": "capstone_blockly",
+  "version": "1.0.0",
+  "description": "The web-based visual programming editor.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "google-closure-compiler": "^20190325.0.0",
+    "google-closure-library": "^20190325.0.0",
+    "jsdom": "^14.0.0",
+    "jsdom-global": "^3.0.2",
+    "xmldom": "^0.1.27"
+  }
+}
