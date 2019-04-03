@@ -8,15 +8,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/google/blockly.git"
+    "url": "git+https://github.com/google/blockly.git"
   },
   "bugs": {
     "url": "https://github.com/google/blockly/issues"
   },
   "homepage": "https://developers.google.com/blockly/",
-  "author": {
-    "name": "Neil Fraser"
-  },
+  "author": "Neil Fraser",
   "scripts": {
     "prepare": "gulp blockly_javascript_en",
     "lint": "eslint .",
