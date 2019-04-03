@@ -59,7 +59,7 @@ Blockly.Skoolbot['procedures_defreturn'] = function(block) {
   var description = Blockly.Skoolbot.scrub_(block, code, false);
   description = description.replace(/\n/g, " ");
 
-  code = '{ \"procedures_type\": \"procedures_defreturn\", \"funcName\": \"' + funcName + '\", \"description\": \"' + description + '\", \"argument\": [' + args.join(', ') + '], \"branch\": [' + branch + '], \"return_value\": ' + returnValue + '}';
+  code = '{ \"block_name\": \"procedures_statement_defreturn\", \"funcName\": \"' + funcName + '\", \"description\": \"' + description + '\", \"argument\": [' + args.join(', ') + '], \"branch\": [' + branch + '], \"return_value\": ' + returnValue + '}';
 
   // Add % so as not to collide with helper functions in definitions list.
   Blockly.Skoolbot.definitions_['%' + funcName] = code;
@@ -80,7 +80,7 @@ Blockly.Skoolbot['procedures_callreturn'] = function(block) {
     args[i] = Blockly.Skoolbot.valueToCode(block, 'ARG' + i,
         Blockly.Skoolbot.ORDER_ATOMIC) || '{\"null\": \"NULL\"}';
   }
-  var code = '{ \"procedures_type\": \"procedures_callreturn\", \"funcName\": \"' + funcName + '\", \"argument\": [' + args.join(', ') + ']}';
+  var code = '{ \"block_name\": \"procedures_statement_callreturn\", \"funcName\": \"' + funcName + '\", \"argument\": [' + args.join(', ') + ']}';
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
@@ -93,7 +93,7 @@ Blockly.Skoolbot['procedures_callnoreturn'] = function(block) {
     args[i] = Blockly.Skoolbot.valueToCode(block, 'ARG' + i,
         Blockly.Skoolbot.ORDER_ATOMIC);
   }
-  var code = '{ \"procedures_type\": \"procedures_callnoreturn\", \"funcName\": \"' + funcName + '\", \"argument\": [' + args.join(', ') + ']}';
+  var code = '{ \"block_name\": \"procedures_statement_callnoreturn\", \"funcName\": \"' + funcName + '\", \"argument\": [' + args.join(', ') + ']}';
   return code;
 };
 
@@ -105,9 +105,9 @@ Blockly.Skoolbot['procedures_ifreturn'] = function(block) {
         Blockly.Skoolbot.ORDER_ATOMIC) || '{\"null\": \"NULL\"}';
   if (block.hasReturnValue_) {
 
-  var code = '{ \"procedures_type\": \"procedures_ifreturn\", \"condition\": ' + condition + ', \"has_return_value\": { \"boolean\": \"TRUE\"}, \"return\":  [' + value + ']}';
+  var code = '{ \"block_name\": \"procedures_statement_ifreturn\", \"condition\": ' + condition + ', \"has_return_value\": { \"boolean\": \"TRUE\"}, \"return\":  [' + value + ']}';
   } else {
-  var code = '{ \"procedures_type\": \"procedures_ifreturn\", \"condition\": ' + condition + ', \"has_return_value\": { \"boolean\": \"FALSE\"}, \"return\":  [' + value + ']}';
+  var code = '{ \"block_name\": \"procedures_statement_ifreturn\", \"condition\": ' + condition + ', \"has_return_value\": { \"boolean\": \"FALSE\"}, \"return\":  [' + value + ']}';
   }
   return code;
 };

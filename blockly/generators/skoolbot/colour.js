@@ -31,7 +31,7 @@ goog.require('Blockly.Skoolbot');
 
 Blockly.Skoolbot['colour_picker'] = function(block) {
   // Colour picker.
-  var code = '{\"colour\": \"' + block.getFieldValue('COLOUR') + '\"}';
+  var code = '{ \"block_name\": \"colour_colour_picker\", \"colour\": \"' + block.getFieldValue('COLOUR') + '\"}';
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
@@ -48,7 +48,7 @@ Blockly.Skoolbot['colour_random'] = function(block) {
   // Generate a random colour.
   // var code = 'string.format("#%06x", math.random(0, 2^24 - 1))';
 
-  var code = "{\"colour\": \"" + randomHex() + "\"}";
+  var code = "{\"block_name\": \"colour_colour_random\", \"colour\": \"" + randomHex() + "\"}";
   return [code , Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
@@ -89,7 +89,7 @@ Blockly.Skoolbot['colour_rgb'] = function(block) {
   var r = Blockly.Skoolbot.valueToCode(block, 'RED', Blockly.Skoolbot.ORDER_ATOMIC) || "\"\"";
   var g = Blockly.Skoolbot.valueToCode(block, 'GREEN', Blockly.Skoolbot.ORDER_ATOMIC) || "\"\"";
   var b = Blockly.Skoolbot.valueToCode(block, 'BLUE', Blockly.Skoolbot.ORDER_ATOMIC) || "\"\"";
-  var code  = '{\"colourRGB\":[{\"red\":' + r + "}, {\"green\": " + g + "}, {\"blue\": " + b + "}]}";
+  var code  = '{\"block_name\": \"colour_colour_rgb\", \"argument\":[' + r + ', '+ g + ',' + b + "]}";
 
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
@@ -145,8 +145,8 @@ Blockly.Skoolbot['colour_blend'] = function(block) {
   var colour2 = Blockly.Skoolbot.valueToCode(block, 'COLOUR2', Blockly.Skoolbot.ORDER_ATOMIC) || "\"\"";
   var ratio = Blockly.Skoolbot.valueToCode(block, 'RATIO', Blockly.Skoolbot.ORDER_ATOMIC) || "\"\"";
 
-  var code  = '{\"colourBlend\": [{\"colour1\": '+ colour1 + '}, {\"colour2\": '+
-              colour2 + '}, {\"ratio\": ' + ratio + '}]}';
+  var code  = '{ \"block_name\": \"colour_colour_blend\", \"argument\": [{ \"block_name\": \"colour_picker\", \"colour1\": '+ colour1 + '}, { \"block_name\": \"colour_picker\", \"colour2\": '+
+              colour2 + '}, ' + ratio + ']}';
 
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };

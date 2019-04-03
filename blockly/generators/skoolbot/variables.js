@@ -33,7 +33,7 @@ Blockly.Skoolbot['variables_get'] = function(block) {
   // Variable getter.
   var code = Blockly.Skoolbot.variableDB_.getName(block.getFieldValue('VAR'),
       Blockly.Variables.NAME_TYPE);
-  return ['{ \"functionName\": \"variables_get\", \"varName\": \"' + code + '\"}', Blockly.Skoolbot.ORDER_ATOMIC];
+  return ['{ \"block_name\": \"variables_statement_get\", \"functionName\": \"variables_get\", \"varName\": \"' + code + '\"}', Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
 Blockly.Skoolbot['variables_set'] = function(block) {
@@ -42,5 +42,5 @@ Blockly.Skoolbot['variables_set'] = function(block) {
       Blockly.Skoolbot.ORDER_ATOMIC) || '0';
   var varName = Blockly.Skoolbot.variableDB_.getName(
       block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
-  return '{ \"functionName\": \"variables_set\", \"varName\": \"' + varName + '\", \"argument\": [' + argument0 + ']}';
+  return '{ \"block_name\": \"variables_statement_set\", \"functionName\": \"variables_set\", \"varName\": \"' + varName + '\", \"argument\": [' + argument0 + ']}';
 };

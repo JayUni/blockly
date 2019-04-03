@@ -33,7 +33,7 @@ Blockly.Skoolbot['text'] = function(block) {
   // Text value.
   var code = Blockly.Skoolbot.quote_(block.getFieldValue('TEXT'));
   // if user input }{ will be replace with },{ //look at skoolbot.js line 134
-  return ['{ \"text\": \"' + code + '\" }', Blockly.Skoolbot.ORDER_ATOMIC];
+  return ['{ \"block_name\": \"text_string\", \"text\": \"' + code + '\" }', Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
 Blockly.Skoolbot['text_join'] = function(block) {
@@ -43,7 +43,7 @@ Blockly.Skoolbot['text_join'] = function(block) {
     elements[i] = Blockly.Skoolbot.valueToCode(block, 'ADD' + i,
         Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"text\": \"\'\'\" }';
   }
-  var code = '{ \"functionName\": \"text_join\", \"text_element_list\": [' + elements.join(', ') + ']}';
+  var code = '{ \"block_name\": \"text_string_join\", \"functionName\": \"text_join\", \"argument\": [' + elements.join(', ') + ']}';
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
@@ -53,21 +53,21 @@ Blockly.Skoolbot['text_append'] = function(block) {
       block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
   var value = Blockly.Skoolbot.valueToCode(block, 'TEXT',
       Blockly.Skoolbot.ORDER_ATOMIC) || '\'\'';
-  return '{ \"functionName\": \"text_append\", \"argument\": [{\"varName\": \"'+ varName + '\"}, {\"text_append\": ' + value + '}]}';
+  return '{ \"block_name\": \"text_string_append\", \"functionName\": \"text_append\", \"argument\": [{\"varName\": \"'+ varName + '\"}, {\"text_append\": ' + value + '}]}';
 };
 
 Blockly.Skoolbot['text_length'] = function(block) {
   // String or array length.
   var text = Blockly.Skoolbot.valueToCode(block, 'VALUE',
       Blockly.Skoolbot.ORDER_ATOMIC) || '\'\'';
-  return ['{ \"functionName\": \"text_length\", \"argument\": [{\"varName\": ' + text + '}]}', Blockly.Skoolbot.ORDER_ATOMIC];
+  return ['{ \"block_name\": \"text_number_length\", \"functionName\": \"text_length\", \"argument\": [{\"varName\": ' + text + '}]}', Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
 Blockly.Skoolbot['text_isEmpty'] = function(block) {
   // Is the string null or array empty?
   var text = Blockly.Skoolbot.valueToCode(block, 'VALUE',
       Blockly.Skoolbot.ORDER_ATOMIC) || '\'\'';
-  return ['{ \"functionName\": \"text_isEmpty\", \"argument\": [{\"varName\": ' + text + '}]}', Blockly.Skoolbot.ORDER_ATOMIC];
+  return ['{ \"block_name\": \"text_boolean_isEmpty\", \"functionName\": \"text_isEmpty\", \"argument\": [{\"varName\": ' + text + '}]}', Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
 Blockly.Skoolbot['text_indexOf'] = function(block) {
@@ -78,7 +78,7 @@ Blockly.Skoolbot['text_indexOf'] = function(block) {
       Blockly.Skoolbot.ORDER_ATOMIC) || '\'\'';
   var end = block.getFieldValue('END');
   var functionName = 'text_indexOf';
-  var code = '{ \"functionName\": \"' + functionName + '\", \"argument\": [' + text +', {\"end\": \"' + end + '\"}, {\"substring\": ' + substring + '}]}';
+  var code = '{ \"block_name\": \"text_number_indexOf\", \"functionName\": \"' + functionName + '\", \"argument\": [' + text +', {\"end\": \"' + end + '\"}, {\"substring\": ' + substring + '}]}';
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
@@ -92,7 +92,7 @@ Blockly.Skoolbot['text_charAt'] = function(block) {
   var text = Blockly.Skoolbot.valueToCode(block, 'VALUE',
       Blockly.Skoolbot.ORDER_ATOMIC) || '\"\'\'\"';
   var code;
-  code = '{ \"functionName\": \"text_charAt\", \"argument\": [{\"varName\": ' + text + '}, {\"where\": \"' + where + '\"}, {\"index\": ' + at +'}]}';
+  code = '{ \"block_name\": \"text_string_chatAt\", \"functionName\": \"text_charAt\", \"argument\": [{\"varName\": ' + text + '}, {\"where\": \"' + where + '\"}, {\"index\": ' + at +'}]}';
 
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
@@ -113,7 +113,7 @@ Blockly.Skoolbot['text_getSubstring'] = function(block) {
       Blockly.Skoolbot.ORDER_NONE;
   var at2 = Blockly.Skoolbot.valueToCode(block, 'AT2', at2Order) || '{ \"number\": \"1\"}';
 
-  var code = '{ \"functionName\": \"text_getSubstring\", \"argument\": [{\"varName\": ' + text + '}, {\"start_where\": \"' + where1 +'\"}, {\"start_index\": ' + at1 +'}, {\"end_where\": \"' + where2 +'\"}, {\"end_index\": ' + at2 +'}]}';
+  var code = '{ \"block_name\": \"text_string_getSubstring\", \"functionName\": \"text_getSubstring\", \"argument\": [{ \"block_name\": \"variables_variable_variable\", \"varName\": ' + text + '}, { \"block_name\": \"text_string_startWhere\", \"start_where\": \"' + where1 +'\"}, { \"block_name\": \"text_number_startAt\", \"start_index\": ' + at1 +'}, { \"block_name\": \"text_string_endWhere\", \"end_where\": \"' + where2 +'\"}, { \"block_name\": \"text_number_endAt\", \"end_index\": ' + at2 +'}]}';
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
@@ -122,7 +122,7 @@ Blockly.Skoolbot['text_changeCase'] = function(block) {
   var operator = block.getFieldValue('CASE');
   var text = Blockly.Skoolbot.valueToCode(block, 'TEXT',
       Blockly.Skoolbot.ORDER_ATOMIC) || '\"\'\'\"';
-  var code = '{ \"functionName\": \"text_changeCase\", \"argument\": [{\"varName\": '+ text + '}, {\"change_case_type\": \"' + operator + '\"}]}';
+  var code = '{ \"block_name\": \"text_string_join\", \"functionName\": \"text_changeCase\", \"argument\": [{ \"block_name\": \"variables_variable_variable\", \"varName\": '+ text + '}, { \"block_name\": \"text_string_changeCaseType\", \"change_case_type\": \"' + operator + '\"}]}';
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
@@ -131,7 +131,7 @@ Blockly.Skoolbot['text_trim'] = function(block) {
   var whichside = block.getFieldValue('MODE');
   var text = Blockly.Skoolbot.valueToCode(block, 'TEXT',
       Blockly.Skoolbot.ORDER_ATOMIC) || '\"\'\'\"';
-  var code = '{ \"functionName\": \"text_trim\", \"argument\": [{\"varName\": ' + text + '}, {\"which_side\": \"'+ whichside +'\"}]}';
+  var code = '{ \"block_name\": \"text_string_trim\", \"functionName\": \"text_trim\", \"argument\": [{ \"block_name\": \"variables_variable_variable\", \"varName\": ' + text + '}, { \"block_name\": \"text_string_whichSide\", \"which_side\": \"'+ whichside +'\"}]}';
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
@@ -139,7 +139,7 @@ Blockly.Skoolbot['text_print'] = function(block) {
   // Print statement.
   var msg = Blockly.Skoolbot.valueToCode(block, 'TEXT',
       Blockly.Skoolbot.ORDER_ATOMIC) || '\"\'\'\"';
-  return '{ \"functionName\": \"text_print\", \"argument\": [' + msg + ']}';
+  return '{ \"block_name\": \"text_statement_print\", \"functionName\": \"text_print\", \"argument\": [' + msg + ']}';
 };
 
 Blockly.Skoolbot['text_prompt_ext'] = function(block) {
@@ -152,12 +152,11 @@ Blockly.Skoolbot['text_prompt_ext'] = function(block) {
     var msg = Blockly.Skoolbot.valueToCode(block, 'TEXT',
         Blockly.Skoolbot.ORDER_ATOMIC) || '\"\'\'\"';
   }
-  var code = '{ \"functionName\": \"text_prompt\", \"argument\": [' + msg + '] }';
+  var code = '{ \"block_name\": \"text_statement_promptExt\", \"functionName\": \"text_prompt\", \"argument\": [' + msg + '] }';
 
   var toNumber = block.getFieldValue('TYPE') == 'NUMBER';
   if (toNumber) {
-    msg = '{ \"functionName\": \"text_toNumber\", \"argument\": [' + msg + '] }'
-    code = '{ \"functionName\": \"text_prompt\", \"argument\": [' + msg + '] }';
+    code = '{ \"block_name\": \"text_statement_promptExt\", \"functionName\": \"text_prompt\", \"argument\": [' + msg + '] }';
   }
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
@@ -169,7 +168,7 @@ Blockly.Skoolbot['text_count'] = function(block) {
       Blockly.Skoolbot.ORDER_ATOMIC) || '\"\'\'\"';
   var sub = Blockly.Skoolbot.valueToCode(block, 'SUB',
       Blockly.Skoolbot.ORDER_ATOMIC) || '\"\'\'\"';
-  var code = '{ \"functionName\": \"text_count\", \"argument\": [' + text + ', {\"substring\": '+ sub +'}]}';
+  var code = '{ \"block_name\": \"text_number_count\", \"functionName\": \"text_count\", \"argument\": [' + text + ', { \"block_name\": \"text_string_substring\", \"substring\": '+ sub +'}]}';
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
@@ -180,13 +179,13 @@ Blockly.Skoolbot['text_replace'] = function(block) {
       Blockly.Skoolbot.ORDER_ATOMIC) || '\"\'\'\"';
   var to = Blockly.Skoolbot.valueToCode(block, 'TO',
       Blockly.Skoolbot.ORDER_ATOMIC) || '\"\'\'\"';
-  var code = '{ \"functionName\": \"text_replace\", \"argument\": [' + text + ', {\"from(current)\": '+ from +'}, {\"to(target)\": '+ to +'}]}';
+  var code = '{\"block_name\": \"text_string_replace\", \"functionName\": \"text_replace\", \"argument\": [' + text + ', { \"block_name\": \"text_string_currentStr\", \" urrentStr\": '+ from +'}, { \"block_name\": \"text_string_targetStr\", \"targetStr\": '+ to +'}]}';
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
 Blockly.Skoolbot['text_reverse'] = function(block) {
   var text = Blockly.Skoolbot.valueToCode(block, 'TEXT',
       Blockly.Skoolbot.ORDER_ATOMIC) || '\"\'\'\"';
-  var code = '{ \"functionName\": \"text_reverse\", \"argument\": [' + text + ']}';
+  var code = '{ \"block_name\": \"text_string_reverse\", \"functionName\": \"text_reverse\", \"argument\": [' + text + ']}';
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
