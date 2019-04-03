@@ -1,20 +1,8 @@
 {
-  "name": "blockly",
-  "version": "1.20190215.0",
-  "description": "Blockly is a library for building visual programming editors.",
-  "main": "blockly_node_javascript_en.js",
-  "keywords": [
-    "blockly"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/google/blockly.git"
-  },
-  "bugs": {
-    "url": "https://github.com/google/blockly/issues"
-  },
-  "homepage": "https://developers.google.com/blockly/",
-  "author": "Neil Fraser",
+  "name": "capstone_blockly",
+  "version": "1.0.0",
+  "description": "The web-based visual programming editor.",
+  "main": "index.js",
   "scripts": {
     "prepare": "gulp blockly_javascript_en",
     "lint": "eslint .",
@@ -46,13 +34,13 @@
     "undef": true,
     "unused": true
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "chai": "^4.2.0",
-    "google-closure-library": "^20190301.0.0",
-    "jsdom": "^13.2.0",
+    "google-closure-compiler": "^20190325.0.0",
+    "google-closure-library": "^20190325.0.0",
+    "jsdom": "^14.0.0",
     "jsdom-global": "^3.0.2",
-    "mocha": "^6.0.2",
-    "string-raw": "^1.0.1",
     "xmldom": "^0.1.27"
   }
 }
