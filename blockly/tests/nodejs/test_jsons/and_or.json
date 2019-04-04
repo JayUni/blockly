@@ -1,0 +1,1 @@
+[{"block_name":"logic_boolean_logicOperation","operator":"or","argument":[{"block_name":"logic_boolean_compare","operator":"==","argument":[{"block_name":"math_number_number","number":"4"},{"block_name":"logic_null_null","value":"NULL"}]},{"block_name":"logic_boolean_boolean","value":"FALSE"}]}]

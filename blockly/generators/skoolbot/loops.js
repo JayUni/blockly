@@ -87,7 +87,7 @@ Blockly.Skoolbot['controls_whileUntil'] = function(block) {
   // Do while/until loop.
   var until = block.getFieldValue('MODE') == 'UNTIL';
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'BOOL',
-       Blockly.Skoolbot.ORDER_ATOMIC) || '\"false\"';
+       Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"logic_boolean_boolean\", \"value\": \"FALSE\"}';
   var branch = Blockly.Skoolbot.statementToCode(block, 'DO');
   branch = Blockly.Skoolbot.addLoopTrap(branch, block.id);
   branch = Blockly.Skoolbot.addContinueLabel(branch);
@@ -124,12 +124,11 @@ Blockly.Skoolbot['controls_forEach'] = function(block) {
   var variable0 = Blockly.Skoolbot.variableDB_.getName(
       block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'LIST',
-      Blockly.Skoolbot.ORDER_ATOMIC) || '{}';
+      Blockly.Skoolbot.ORDER_ATOMIC) || '[]';
   var branch = Blockly.Skoolbot.statementToCode(block, 'DO');
   branch = Blockly.Skoolbot.addContinueLabel(branch);
-  // var code = 'for _, ' + variable0 + ' in ipairs(' + argument0 + ') do \n' +
-  //     branch + 'end\n';
-  var code = '{ \"block_name\": \"controls_statement_forEach\", \"loop_style\": \"controls_forEach\",\"varName\": \"'+ variable0 + '\", \"list\": '+ argument0 + ', \"branch\": ['+ branch + ']}';
+
+  var code = '{ \"block_name\": \"controls_statement_forEach\", \"loop_style\": \"controls_forEach\", \"varName\": \"'+ variable0 + '\", \"list\": '+ argument0 + ', \"branch\": ['+ branch + ']}';
   return code;
 };
 
@@ -137,10 +136,10 @@ Blockly.Skoolbot['controls_flow_statements'] = function(block) {
   // Flow statements: continue, break.
   switch (block.getFieldValue('FLOW')) {
     case 'BREAK':
-      return '{ \"block_name\": \"controls_statement_flowStatements\", \"statements\": \"break\" }';
+      return '{ \"block_name\": \"controls_statement_break\", \"statements\": \"break\" }';
     case 'CONTINUE':
       // return Blockly.Skoolbot.CONTINUE_STATEMENT;
-      return '{ \"block_name\": \"controls_statement_flowStatements\", \"statements\": \"continue\" }';
+      return '{ \"block_name\": \"controls_statement_continue\", \"statements\": \"continue\" }';
   }
   throw Error('Unknown flow statement.');
 };

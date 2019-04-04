@@ -1,0 +1,27 @@
+{
+  "name": "blockly",
+  "version": "1.0.0",
+  "description": "The web-based visual programming editor.",
+  "main": "index.js",
+  "dependencies": {
+    "google-closure-compiler": "^20190325.0.0",
+    "google-closure-library": "^20190325.0.0",
+    "jsdom": "^14.0.0",
+    "jsdom-global": "^3.0.2",
+    "xmldom": "^0.1.27"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JayUni/blockly.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JayUni/blockly/issues"
+  },
+  "homepage": "https://github.com/JayUni/blockly#readme"
+}

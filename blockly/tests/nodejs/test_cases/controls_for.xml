@@ -1,0 +1,23 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="5:J{_L`k-LZUCFfF[]k$">i</variable>
+  </variables>
+  <block type="controls_for" id="n1P%RPk[;e.zT/kmPr@P" x="62" y="88">
+    <field name="VAR" id="5:J{_L`k-LZUCFfF[]k$" variabletype="">i</field>
+    <value name="FROM">
+      <shadow type="math_number" id="a_X0*hNFu2V{eM-[ijqE">
+        <field name="NUM">1</field>
+      </shadow>
+    </value>
+    <value name="TO">
+      <shadow type="math_number" id="^yn.q[La!:Z$V*EHd,}C">
+        <field name="NUM">10</field>
+      </shadow>
+    </value>
+    <value name="BY">
+      <shadow type="math_number" id="#T=]xFT}}[!Cx[wkMqQn">
+        <field name="NUM">1</field>
+      </shadow>
+    </value>
+  </block>
+</xml>

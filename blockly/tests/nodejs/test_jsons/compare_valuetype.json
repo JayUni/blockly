@@ -1,0 +1,1 @@
+[{"block_name":"logic_boolean_compare","operator":"<","argument":[{"block_name":"math_number_number","number":"12"},{"block_name":"math_arithmetic_arithmetic","operator":"+","argument":[{"block_name":"math_number_number","number":"2"},{"block_name":"math_number_number","number":"5"}]}]}]
