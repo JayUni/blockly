@@ -36,7 +36,7 @@ Blockly.Skoolbot['controls_if'] = function(block) {
   do {
     conditionCode = Blockly.Skoolbot.valueToCode(block, 'IF' + n,
             Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"logic_boolean_boolean\", \"value\": \"FALSE\"}';
-    branchCode = Blockly.Skoolbot.statementToCode(block, 'DO' + n);
+    branchCode = Blockly.Skoolbot.statementToCode(block, 'DO' + n) || "";
 
     if (n > 0) {
       code += '}, { \"block_name\": \"controls_statement_elseif\", \"statements\": \"else if\", ' + '\"condition\": ' + conditionCode + ", " + '\"branchCode\":[' + branchCode + ']';
@@ -47,7 +47,7 @@ Blockly.Skoolbot['controls_if'] = function(block) {
   } while (block.getInput('IF' + n));
 
   if (block.getInput('ELSE')) {
-    branchCode = Blockly.Skoolbot.statementToCode(block, 'ELSE') || "[]";
+    branchCode = Blockly.Skoolbot.statementToCode(block, 'ELSE') || "";
     code += '}, { \"block_name\": \"controls_statement_else\", \"statements\": \"else\", ' + '\"branchCode\": [' + branchCode + ']}]';
   }
   else
