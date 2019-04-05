@@ -1,0 +1,31 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="Ygq%Mo=?.x@Q*[lC!n0o">item</variable>
+  </variables>
+  <block type="text_append" id="G]*KxQJdA3vgYf-^pLGU" x="37" y="138">
+    <field name="VAR" id="Ygq%Mo=?.x@Q*[lC!n0o" variabletype="">item</field>
+    <value name="TEXT">
+      <shadow type="text" id=")TBa?VxcT`M,n7i?]N{0">
+        <field name="TEXT"></field>
+      </shadow>
+      <block type="text_length" id="@KM3bL,s.g/EZP1I{2{h">
+        <value name="VALUE">
+          <shadow type="text" id="]sUk}j@ZnH)*)!B;tG*r">
+            <field name="TEXT">abc</field>
+          </shadow>
+          <block type="text_changeCase" id="EnloTY{y~^1f|jU8_K1:">
+            <field name="CASE">UPPERCASE</field>
+            <value name="TEXT">
+              <shadow type="text" id="OhlU!(?a,fPm%2y$yF`t">
+                <field name="TEXT">abc</field>
+              </shadow>
+              <block type="text" id="fBrLj8C*?9ypf]w_odpV">
+                <field name="TEXT">aaa</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>

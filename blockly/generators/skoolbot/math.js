@@ -106,7 +106,7 @@ Blockly.Skoolbot['math_number_property'] = function(block) {
   // Check if a number is even, odd, prime, whole, positive, or negative
   // or if it is divisible by certain number. Returns true or false.
   var number_to_check = Blockly.Skoolbot.valueToCode(block, 'NUMBER_TO_CHECK',
-      Blockly.Skoolbot.ORDER_ATOMIC) || '{ \block_name\": \"math_number_number\", \"number\": \"0\"}';
+      Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
   var dropdown_property = block.getFieldValue('PROPERTY');
   var code;
   if (dropdown_property == 'PRIME') {

@@ -1,0 +1,118 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="Ygq%Mo=?.x@Q*[lC!n0o">item</variable>
+    <variable type="" id="[O7ZvE#l6E$,tbjBXW9y">text</variable>
+  </variables>
+  <block type="text" id="H|e4:Yh?/?)}$HBOxtpr" x="13" y="13">
+    <field name="TEXT"></field>
+  </block>
+  <block type="text_join" id=")A*s,b:}N3kjhIvCwSDh" x="13" y="63">
+    <mutation items="2"></mutation>
+  </block>
+  <block type="text_append" id="(AEa|haZKOp,v)=|g0IT" x="13" y="138">
+    <field name="VAR" id="Ygq%Mo=?.x@Q*[lC!n0o" variabletype="">item</field>
+    <value name="TEXT">
+      <shadow type="text" id="ox%HaeQ$O(j@fj^O^(z$">
+        <field name="TEXT"></field>
+      </shadow>
+    </value>
+  </block>
+  <block type="text_length" id="wy|oLA]eZifbqV`T`5FT" x="13" y="188">
+    <value name="VALUE">
+      <shadow type="text" id=":~czdonmMx^q8-;dyGOj">
+        <field name="TEXT">abc</field>
+      </shadow>
+    </value>
+  </block>
+  <block type="text_isEmpty" id="qHCfyDa=+RB1o7O8DLft" x="13" y="238">
+    <value name="VALUE">
+      <shadow type="text" id="|gaM^4/b-Q@YstliCpWb">
+        <field name="TEXT"></field>
+      </shadow>
+    </value>
+  </block>
+  <block type="text_indexOf" id="+UV`CPG%nDPa:7dE#hv?" x="13" y="288">
+    <field name="END">FIRST</field>
+    <value name="VALUE">
+      <block type="variables_get" id="yS[%ut|iW^u@K1AY;(0@">
+        <field name="VAR" id="[O7ZvE#l6E$,tbjBXW9y" variabletype="">text</field>
+      </block>
+    </value>
+    <value name="FIND">
+      <shadow type="text" id="`|w!h7E^q|S4p56^}!!H">
+        <field name="TEXT">abc</field>
+      </shadow>
+    </value>
+  </block>
+  <block type="text_charAt" id="9]Q(X(],)gpKR6#k5LmQ" x="13" y="363">
+    <mutation at="true"></mutation>
+    <field name="WHERE">FROM_START</field>
+    <value name="VALUE">
+      <block type="variables_get" id="SP/.!bw4C30_.3z|y=h;">
+        <field name="VAR" id="[O7ZvE#l6E$,tbjBXW9y" variabletype="">text</field>
+      </block>
+    </value>
+  </block>
+  <block type="text_getSubstring" id="1bJn`m;8~lWh#l$-pV{j" x="13" y="413">
+    <mutation at1="true" at2="true"></mutation>
+    <field name="WHERE1">FROM_START</field>
+    <field name="WHERE2">FROM_START</field>
+    <value name="STRING">
+      <block type="variables_get" id="xNQfkYka445HkEFmqfhm">
+        <field name="VAR" id="[O7ZvE#l6E$,tbjBXW9y" variabletype="">text</field>
+      </block>
+    </value>
+  </block>
+  <block type="text_changeCase" id="g?MIjS5S+%h]@u]YMxC7" x="13" y="488">
+    <field name="CASE">UPPERCASE</field>
+    <value name="TEXT">
+      <shadow type="text" id="G82lF9ry;wy(l}Tg*8T@">
+        <field name="TEXT">abc</field>
+      </shadow>
+    </value>
+  </block>
+  <block type="text_trim" id="Lgf-vKB%j-cx2A2]7kQ-" x="13" y="538">
+    <field name="MODE">BOTH</field>
+    <value name="TEXT">
+      <shadow type="text" id="C?!c#SbA)/,23c3a^I0(">
+        <field name="TEXT">abc</field>
+      </shadow>
+    </value>
+  </block>
+  <block type="text_count" id="^`5r}7EbDo.+x%w6FeCc" x="13" y="588">
+    <value name="SUB">
+      <shadow type="text" id="zj!3rw+={p/ndF=|`G_Z">
+        <field name="TEXT"></field>
+      </shadow>
+    </value>
+    <value name="TEXT">
+      <shadow type="text" id="T|7L0n6iU43F6]v5+K[u">
+        <field name="TEXT"></field>
+      </shadow>
+    </value>
+  </block>
+  <block type="text_replace" id="9o4CyphWZgXZR19IU+k!" x="13" y="638">
+    <value name="FROM">
+      <shadow type="text" id="D*K-bFQ4BSf4?R3k*~ix">
+        <field name="TEXT"></field>
+      </shadow>
+    </value>
+    <value name="TO">
+      <shadow type="text" id="MUs.UCq*;}74ueXV:=rL">
+        <field name="TEXT"></field>
+      </shadow>
+    </value>
+    <value name="TEXT">
+      <shadow type="text" id="{LqA*V)DR2hq]FSDYoC/">
+        <field name="TEXT"></field>
+      </shadow>
+    </value>
+  </block>
+  <block type="text_reverse" id="?YfMi~qB8a5aS4oiiXru" x="13" y="713">
+    <value name="TEXT">
+      <shadow type="text" id="Jif3qolhIjfV|zmm,LB,">
+        <field name="TEXT"></field>
+      </shadow>
+    </value>
+  </block>
+</xml>

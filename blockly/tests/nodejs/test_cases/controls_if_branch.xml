@@ -1,0 +1,32 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id=",7V5IFT|D4({c+G1rz^K">a</variable>
+  </variables>
+  <block type="controls_if" id="xYf[TBG~kc|_k|egE3@I" x="63" y="188">
+    <mutation elseif="1" else="1"></mutation>
+    <statement name="DO0">
+      <block type="text_print" id="X0_RZ{S+;gO=cyr2q0G-">
+        <value name="TEXT">
+          <shadow type="text" id=";I7+qem-Lzj=I0K(!k6%">
+            <field name="TEXT">abc</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+    <statement name="DO1">
+      <block type="variables_set" id="!5|BENb]sEo-#tKgOeWG">
+        <field name="VAR" id=",7V5IFT|D4({c+G1rz^K" variabletype="">a</field>
+      </block>
+    </statement>
+    <statement name="ELSE">
+      <block type="math_change" id="9D]9tE=pc*j=Fs:azr-k">
+        <field name="VAR" id=",7V5IFT|D4({c+G1rz^K" variabletype="">a</field>
+        <value name="DELTA">
+          <shadow type="math_number" id="6ILc/h:8J10pD!*VP`nv">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>
