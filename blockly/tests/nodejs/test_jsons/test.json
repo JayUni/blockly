@@ -1,4 +1,0 @@
-TypeError: Blockly.Xml.textToDom expected an <xml> document.
-    at Object.Blockly.Xml.textToDom (/Users/lingyuan/Desktop/blockly/blockly/core/xml.js:370:11)
-    at /Users/lingyuan/Desktop/blockly/blockly/tests/nodejs/main.js:61:29
-    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:54:3)
