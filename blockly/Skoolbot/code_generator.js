@@ -1,4 +1,5 @@
 var addTypeField = require('./addTypeField.js');
+const fs = require('fs');
 
 
 // global variable
@@ -109,31 +110,61 @@ function addCommand(jsonList){
 
 
 
+//
+// var str0 = JSON.parse(`[{"block_name":"math_number_operator_modulo","operator":"%","argument":[{"block_name":"math_number_number","number":"64"},{"block_name":"math_arithmetic_operator","operator":"sub","argument":[{"block_name":"math_number_number","number":"5"},{"block_name":"math_number_number","number":"2"}]}]}]
+// `);
+// var str1 = JSON.parse(`[{"block_name":"math_arithmetic_operator","operator":"pow","argument":[{"block_name":"math_arithmetic_operator","operator":"mul","argument":[{"block_name":"math_number_operator_single","operator":"acos","argument":[{"block_name":"math_number_number","number":"60"}]},{"block_name":"math_number_operator_single","operator":"log10","argument":[{"block_name":"math_number_number","number":"9"}]}]},{"block_name":"math_number_number","number":"2"}]}]
+// `);
+// var str2 = JSON.parse(`[{"block_name":"math_arithmetic_operator","operator":"sub","argument":[{"block_name":"math_arithmetic_operator","operator":"mul","argument":[{"block_name":"math_number_number_constant","number":"PI"},{"block_name":"math_number_operator_single","operator":"sqrt","argument":[{"block_name":"math_number_number","number":"9"}]}]},{"block_name":"math_number_operator_single","operator":"round","argument":[{"block_name":"math_number_number","number":"3.1"}]}]}]
+// `);
+// var str3 = JSON.parse(`[{"block_name":"logic_boolean_operator_compare","operator":"cmpg","argument":[{"block_name":"math_number_operator_single","operator":"exp","argument":[{"block_name":"math_number_number","number":"2"}]},{"block_name":"math_number_operator_single","operator":"tan","argument":[{"block_name":"math_number_function_randomInt","functionName":"randomInt","argument":[{"block_name":"math_number_number","number":"1"},{"block_name":"math_number_number","number":"100"}]}]}]}]
+// `);
+// var str4 = JSON.parse(`[{"block_name":"math_number_operator_constrain","operator":"constrain","argument":[{"block_name":"math_number_number","number":"50"},{"block_name":"math_number_number","number":"1"},{"block_name":"math_number_operator_single","operator":"round","argument":[{"block_name":"math_number_operator_single","operator":"sqrt","argument":[{"block_name":"math_number_number","number":"15"}]}]}]}]
+// `);
+//
+//
+//
+//
+//
+//
+// for (var i =0; i<5; i++){
+//     var vars_name = 'str' + i;
+//     commandList = [];
+//     addTypeField.addTypeField(eval(vars_name));
+//     console.log("JSON: \n", JSON.stringify(eval(vars_name), null, 4));
+//     console.log(generator(eval(vars_name)));
+//
+//     console.log("\n\n#######################################\n\n")
+// }
 
-var str0 = JSON.parse(`[{"block_name":"math_number_operator_modulo","operator":"%","argument":[{"block_name":"math_number_number","number":"64"},{"block_name":"math_arithmetic_operator","operator":"sub","argument":[{"block_name":"math_number_number","number":"5"},{"block_name":"math_number_number","number":"2"}]}]}]
-`);
-var str1 = JSON.parse(`[{"block_name":"math_arithmetic_operator","operator":"pow","argument":[{"block_name":"math_arithmetic_operator","operator":"mul","argument":[{"block_name":"math_number_operator_single","operator":"acos","argument":[{"block_name":"math_number_number","number":"60"}]},{"block_name":"math_number_operator_single","operator":"log10","argument":[{"block_name":"math_number_number","number":"9"}]}]},{"block_name":"math_number_number","number":"2"}]}]
-`);
-var str2 = JSON.parse(`[{"block_name":"math_arithmetic_operator","operator":"sub","argument":[{"block_name":"math_arithmetic_operator","operator":"mul","argument":[{"block_name":"math_number_number_constant","value":"PI"},{"block_name":"math_number_operator_single","operator":"sqrt","argument":[{"block_name":"math_number_number","number":"9"}]}]},{"block_name":"math_number_operator_single","operator":"round","argument":[{"block_name":"math_number_number","number":"3.1"}]}]}]
-`);
-var str3 = JSON.parse(`[{"block_name":"logic_boolean_operator_compare","operator":"cmpg","argument":[{"block_name":"math_number_operator_single","operator":"exp","argument":[{"block_name":"math_number_number","number":"2"}]},{"block_name":"math_number_operator_single","operator":"tan","argument":[{"block_name":"math_number_function_randomInt","functionName":"randomInt","argument":[{"block_name":"math_number_number","number":"1"},{"block_name":"math_number_number","number":"100"}]}]}]}]
-`);
-var str4 = JSON.parse(`[{"block_name":"math_number_operator_constrain","operator":"constrain","argument":[{"block_name":"math_number_number","number":"50"},{"block_name":"math_number_number","number":"1"},{"block_name":"math_number_operator_single","operator":"round","argument":[{"block_name":"math_number_operator_single","operator":"sqrt","argument":[{"block_name":"math_number_number","number":"15"}]}]}]}]
-`);
 
+function savetxt(i){
+    var path = '../tests/nodejs/generator_test_jsons/math_test' + (i+1).toString() + '.json';
 
+    fs.readFile(path, "utf8", function(err, jsondata) {
+        if (!err) {
+            jsondata = JSON.parse(jsondata);
+            addTypeField.addTypeField(jsondata);
+            commandList = [];
+            var reslist = generator(jsondata);
+            console.log(reslist);
+            var restxt = "";
+            for (var j in reslist){
+                restxt += reslist[j] + '\n';
+            }
 
-
-
-
-
-for (var i =0; i<5; i++){
-    var vars_name = 'str' + i;
-    commandList = [];
-    addTypeField.addTypeField(eval(vars_name));
-    console.log("JSON: \n", JSON.stringify(eval(vars_name), null, 4));
-
-    console.log(generator(eval(vars_name)));
-    console.log("\n\n#######################################\n\n")
+            fs.writeFile('./output/result' + (i+1).toString() + '.txt', restxt, (err) => {
+                if (err) throw err;
+                console.log('It\'s saved!');
+            });
+        }
+        else{
+            throw err;
+        }
+    });
 }
 
+
+for (var i = 0; i < 5; i++){
+    savetxt(i);
+}

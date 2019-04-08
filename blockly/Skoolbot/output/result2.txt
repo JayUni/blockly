@@ -1,0 +1,7 @@
+number 60
+operator acos
+number 9
+operator log10
+operator mul
+number 2
+operator pow

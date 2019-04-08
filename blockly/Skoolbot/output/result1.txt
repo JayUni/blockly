@@ -1,0 +1,5 @@
+number 64
+number 5
+number 2
+operator sub
+operator %
