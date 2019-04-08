@@ -40,45 +40,72 @@ Blockly.Skoolbot['math_number'] = function(block) {
 Blockly.Skoolbot['math_arithmetic'] = function(block) {
   // Basic arithmetic operators, and power.
   var OPERATORS = {
-    ADD: [' + ', Blockly.Skoolbot.ORDER_ATOMIC],
-    MINUS: [' - ', Blockly.Skoolbot.ORDER_ATOMIC],
-    MULTIPLY: [' * ', Blockly.Skoolbot.ORDER_ATOMIC],
-    DIVIDE: [' / ', Blockly.Skoolbot.ORDER_ATOMIC],
-    POWER: [' ^ ', Blockly.Skoolbot.ORDER_ATOMIC]
+    ADD: [' add ', Blockly.Skoolbot.ORDER_ATOMIC],
+    MINUS: [' sub ', Blockly.Skoolbot.ORDER_ATOMIC],
+    MULTIPLY: [' mul ', Blockly.Skoolbot.ORDER_ATOMIC],
+    DIVIDE: [' div ', Blockly.Skoolbot.ORDER_ATOMIC],
+    POWER: [' pow ', Blockly.Skoolbot.ORDER_ATOMIC]
   };
   var tuple = OPERATORS[block.getFieldValue('OP')];
   var operator = tuple[0];
   var order = tuple[1];
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'A', order) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
   var argument1 = Blockly.Skoolbot.valueToCode(block, 'B', order) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
-  var code = '{ \"block_name\": \"math_arithmetic_arithmetic\", \"operator\": \"'+ operator + '\", \"argument\": ['+ argument0 + ',' + argument1 + ']}';
+  var code = '{ \"block_name\": \"math_arithmetic_operator\", \"operator\": \"'+ operator + '\", \"argument\": ['+ argument0 + ',' + argument1 + ']}';
   return [code, order];
 };
 
+// Blockly.Skoolbot['math_single'] = function(block) {
+//   // Math operators with single operand.
+//   var operator = block.getFieldValue('OP');
+//   var code;
+//   var arg;
+//   if (operator == 'NEG') {
+//     // Negation is a special case given its different operator precedence.
+//     arg = Blockly.Skoolbot.valueToCode(block, 'NUM',
+//         Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
+//     return ['{ \"block_name\": \"math_number_single\", \"operator\": \"' + operator + '\",\"argument\": [' + arg + ']}', Blockly.Skoolbot.ORDER_ATOMIC];
+//   }
+//   if (operator == 'POW10') {
+//     arg = Blockly.Skoolbot.valueToCode(block, 'NUM',
+//         Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
+//     return ['{ \"block_name\": \"math_number_single\", \"operator\": \"' + operator + '\",\"argument\": [' + arg + ']}', Blockly.Skoolbot.ORDER_ATOMIC];
+//   }
+//   if (operator == 'ROUND') {
+//     arg = Blockly.Skoolbot.valueToCode(block, 'NUM',
+//         Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
+//   } else {
+//     arg = Blockly.Skoolbot.valueToCode(block, 'NUM',
+//         Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
+//   }
+//   code = '{ \"block_name\": \"math_number_single\", \"operator\": \"' + operator + '\", \"argument\":[' + arg + ']}';
+//   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
+// };
+
 Blockly.Skoolbot['math_single'] = function(block) {
   // Math operators with single operand.
-  var operator = block.getFieldValue('OP');
+  var OPERATORS = {
+      ABS: 'abs',
+      EXP: 'exp',
+      LN: 'ln',
+      LOG10: 'log10',
+      NEG: 'neg',
+      POW10: 'pow10',
+      ROOT: 'sqrt',
+      ROUND: 'round',
+      SIN: 'sin',
+      COS: 'cos',
+      TAN: 'tan',
+      ASIN: 'asin',
+      ACOS: 'acos',
+      ATAN: 'atan'
+  };
+
+  var operator = OPERATORS[block.getFieldValue('OP')];
   var code;
   var arg;
-  if (operator == 'NEG') {
-    // Negation is a special case given its different operator precedence.
-    arg = Blockly.Skoolbot.valueToCode(block, 'NUM',
-        Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
-    return ['{ \"block_name\": \"math_number_single\", \"operator\": \"' + operator + '\",\"argument\": [' + arg + ']}', Blockly.Skoolbot.ORDER_ATOMIC];
-  }
-  if (operator == 'POW10') {
-    arg = Blockly.Skoolbot.valueToCode(block, 'NUM',
-        Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
-    return ['{ \"block_name\": \"math_number_single\", \"operator\": \"' + operator + '\",\"argument\": [' + arg + ']}', Blockly.Skoolbot.ORDER_ATOMIC];
-  }
-  if (operator == 'ROUND') {
-    arg = Blockly.Skoolbot.valueToCode(block, 'NUM',
-        Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
-  } else {
-    arg = Blockly.Skoolbot.valueToCode(block, 'NUM',
-        Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
-  }
-  code = '{ \"block_name\": \"math_number_single\", \"operator\": \"' + operator + '\", \"argument\":[' + arg + ']}';
+  arg = Blockly.Skoolbot.valueToCode(block, 'NUM', Blockly.Skoolbot.ORDER_ATOMIC);
+  code = '{ \"block_name\": \"math_number_operator_single\", \"operator\": \"' + operator + '\", \"argument\":[' + arg + ']}';
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
@@ -86,17 +113,17 @@ Blockly.Skoolbot['math_constant'] = function(block) {
   // Constants: PI, E, the Golden Ratio, sqrt(2), 1/sqrt(2), INFINITY.
   var CONSTANTS = {
 
-    PI: ['{ \"block_name\": \"math_number_constant\", \"value\": \"PI\"}', Blockly.Skoolbot.ORDER_ATOMIC],
+    PI: ['{ \"block_name\": \"math_number_number_constant\", \"value\": \"PI\"}', Blockly.Skoolbot.ORDER_ATOMIC],
 
-    E: ['{ \"block_name\": \"math_number_constant\", \"value\": \"e\" }', Blockly.Skoolbot.ORDER_ATOMIC],
+    E: ['{ \"block_name\": \"math_number_number_constant\", \"value\": \"e\" }', Blockly.Skoolbot.ORDER_ATOMIC],
 
-    GOLDEN_RATIO: ['{ \"block_name\": \"math_number_constant\", \"value\": [{ \"block_name\": \"math_mathOperation_arithmetic\", \"operator\": \"/\", \"argument\":[{ \"block_name\": \"math_mathOperation_arithmetic\", \"operator\": \"\+\", \"argument\": [{ \"block_name\": \"math_number_number\", \"number\": \"1\"} , { \"block_name\": \"math_operator_sqrt\", \"operator\": \"math.sqrt\", \"argument\":[{ \"block_name\": \"math_number_number\", \"number\": \"5\"}]}]}, { \"block_name\": \"math_number_number\", \"number\": \"2\"}]}]}', Blockly.Skoolbot.ORDER_ATOMIC],
+    GOLDEN_RATIO: ['{ \"block_name\": \"math_arithmetic_operator\", \"operator\": \"div\", \"argument\":[{ \"block_name\": \"math_arithmetic_operator\", \"operator\": \"add\", \"argument\": [{ \"block_name\": \"math_number_number\", \"number\": \"1\"} , { \"block_name\": \"math_number_operator\", \"operator\": \"sqrt\", \"argument\":[{ \"block_name\": \"math_number_number\", \"number\": \"5\"}]}]}, { \"block_name\": \"math_number_number\", \"number\": \"2\"}]}', Blockly.Skoolbot.ORDER_ATOMIC],
 
-    SQRT2: ['{ \"block_name\": \"math_number_constant\", \"value\": [{\"operator\": \"math.sqrt\", \"argument\": { \"block_name\": \"math_number_number\", \"number\": 2}}]}', Blockly.Skoolbot.ORDER_ATOMIC],
+    SQRT2: ['{ \"block_name\": \"math_arithmetic_operator\", \"operator\": \"sqrt\", \"argument\": [{ \"block_name\": \"math_number_number\", \"number\": 2}]}', Blockly.Skoolbot.ORDER_ATOMIC],
 
-    SQRT1_2: ['{ \"block_name\": \"math_number_constant\", \"operator\": \"math.sqrt\", \"argument\": { \"block_name\": \"math_number_number\", \"number\": 0.5}}', Blockly.Skoolbot.ORDER_ATOMIC],
+    SQRT1_2: ['{ \"block_name\": \"math_arithmetic_operator\", \"operator\": \"sqrt\", \"argument\": [{ \"block_name\": \"math_number_number\", \"number\": 0.5}]}', Blockly.Skoolbot.ORDER_ATOMIC],
 
-    INFINITY: ['{ \"block_name\": \"math_number_constant\", \"operator\": \"INFINITY\"}', Blockly.Skoolbot.ORDER_ATOMIC],
+    INFINITY: ['{ \"block_name\": \"math_number_number_constant\", \"value\": \"INFINITY\"}', Blockly.Skoolbot.ORDER_ATOMIC],
 
   };
   return CONSTANTS[block.getFieldValue('CONSTANT')];
@@ -110,30 +137,30 @@ Blockly.Skoolbot['math_number_property'] = function(block) {
   var dropdown_property = block.getFieldValue('PROPERTY');
   var code;
   if (dropdown_property == 'PRIME') {
-    code = '{ \"block_name\": \"math_boolean_numberProperty\", \"functionName\": \"math_isPrime\", \"argument\": [' + number_to_check + ']}';
+    code = '{ \"block_name\": \"math_boolean_numberProperty\", \"functionName\": \"isPrime\", \"argument\": [' + number_to_check + ']}';
     return [code, Blockly.Skoolbot.ORDER_ATOMIC];
   }
   switch (dropdown_property) {
     case 'EVEN':
-      code = '{ \"block_name\": \"math_boolean_numberProperty\", \"functionName\": \"math_isEven\", \"argument\": [' + number_to_check + ']}';
+      code = '{ \"block_name\": \"math_boolean_numberProperty\", \"functionName\": \"isEven\", \"argument\": [' + number_to_check + ']}';
       break;
     case 'ODD':
-      code = '{ \"block_name\": \"math_boolean_numberProperty\", \"functionName\": \"math_isOdd\", \"argument\": [' + number_to_check + ']}';
+      code = '{ \"block_name\": \"math_boolean_numberProperty\", \"functionName\": \"isOdd\", \"argument\": [' + number_to_check + ']}';
       break;
     case 'WHOLE':
-      code = '{ \"block_name\": \"math_boolean_numberProperty\", \"functionName\": \"math_isWhole\", \"argument\": [' + number_to_check + ']}';
+      code = '{ \"block_name\": \"math_boolean_numberProperty\", \"functionName\": \"isWhole\", \"argument\": [' + number_to_check + ']}';
       break;
     case 'POSITIVE':
-      code = '{ \"block_name\": \"math_boolean_numberProperty\", \"functionName\": \"math_isPositive\", \"argument\": [' + number_to_check + ']}';
+      code = '{ \"block_name\": \"math_boolean_numberProperty\", \"functionName\": \"isPositive\", \"argument\": [' + number_to_check + ']}';
       break;
     case 'NEGATIVE':
-      code = '{ \"block_name\": \"math_boolean_umberProperty\", \"functionName\": \"math_isNegative\", \"argument\": [' + number_to_check + ']}';
+      code = '{ \"block_name\": \"math_boolean_umberProperty\", \"functionName\": \"isNegative\", \"argument\": [' + number_to_check + ']}';
       break;
     case 'DIVISIBLE_BY':
       var divisor = Blockly.Skoolbot.valueToCode(block, 'DIVISOR',
           Blockly.Skoolbot.ORDER_ATOMIC);
       // If 'divisor' is some code that evals to 0, Skoolbot will produce a nan.
-      code = '{ \"block_name\": \"math_boolean_numberProperty\", \"functionName\": \"math_isDivisibleBy\", \"argument\":' + '['+ number_to_check + ',' + divisor + ']}';
+      code = '{ \"block_name\": \"math_boolean_numberProperty\", \"functionName\": \"isDivisibleBy\", \"argument\":' + '['+ number_to_check + ',' + divisor + ']}';
       break;
   }
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
@@ -146,7 +173,7 @@ Blockly.Skoolbot['math_change'] = function(block) {
   var varName = Blockly.Skoolbot.variableDB_.getName(
       block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
   // return varName + ' = ' + varName + ' + ' + argument0 + '\n';
-  return '{ \"block_name\": \"math_statement_change\", \"functionName\": \"math_change\", \"varName\": \"' + varName + '\", \"argument\": [' + argument0 + ']}';
+  return '{ \"block_name\": \"math_statement_function_change\", \"functionName\": \"change\", \"varName\": \"' + varName + '\", \"argument\": [' + argument0 + ']}';
 };
 
 // Rounding functions have a single operand.
@@ -159,7 +186,7 @@ Blockly.Skoolbot['math_on_list'] = function(block) {
   var functionName = block.getFieldValue('OP');
   var list = Blockly.Skoolbot.valueToCode(block, 'LIST',
       Blockly.Skoolbot.ORDER_ATOMIC) || '{}';
-  return ['{ \"block_name\": \"math_statement_onList\", \"functionName\": \"'+ functionName + '\", \"argument\": ['  + list + ']}', Blockly.Skoolbot.ORDER_ATOMIC];
+  return ['{ \"block_name\": \"math_statement_function_onList\", \"functionName\": \"'+ functionName + '\", \"argument\": ['  + list + ']}', Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
 Blockly.Skoolbot['math_modulo'] = function(block) {
@@ -168,19 +195,19 @@ Blockly.Skoolbot['math_modulo'] = function(block) {
       Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
   var argument1 = Blockly.Skoolbot.valueToCode(block, 'DIVISOR',
       Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
-  var code = '{ \"block_name\": \"math_number_modulo\", \"operator\": \"%\", \"argument\":' + '['+ argument0 + ',' + argument1 + ']}';
+  var code = '{ \"block_name\": \"math_number_operator_modulo\", \"operator\": \"%\", \"argument\":' + '['+ argument0 + ',' + argument1 + ']}';
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
 Blockly.Skoolbot['math_constrain'] = function(block) {
   // Constrain a number between two limits.
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'VALUE',
-      Blockly.Skoolbot.ORDER_ATOMIC)
+      Blockly.Skoolbot.ORDER_ATOMIC);
   var argument1 = Blockly.Skoolbot.valueToCode(block, 'LOW',
-      Blockly.Skoolbot.ORDER_ATOMIC)
+      Blockly.Skoolbot.ORDER_ATOMIC);
   var argument2 = Blockly.Skoolbot.valueToCode(block, 'HIGH',
-      Blockly.Skoolbot.ORDER_ATOMIC)
-  var code = '{ \"block_name\": \"math_number_constrain\", \"operator\": \"math_constrain\", \"argument\":' + '['+ argument0 + ', ' + argument1 + ', ' + argument2 + ']}';
+      Blockly.Skoolbot.ORDER_ATOMIC);
+  var code = '{ \"block_name\": \"math_number_operator_constrain\", \"operator\": \"constrain\", \"argument\":' + '['+ argument0 + ', ' + argument1 + ', ' + argument2 + ']}';
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
@@ -190,13 +217,13 @@ Blockly.Skoolbot['math_random_int'] = function(block) {
       Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
   var argument1 = Blockly.Skoolbot.valueToCode(block, 'TO',
       Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
-  var code = '{ \"block_name\": \"math_number_randomInt\", \"functionName\": \"math_randomInt\", \"argument\": [' + argument0 + ', ' + argument1 + ']}';
+  var code = '{ \"block_name\": \"math_number_function_randomInt\", \"functionName\": \"randomInt\", \"argument\": [' + argument0 + ', ' + argument1 + ']}';
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
 Blockly.Skoolbot['math_random_float'] = function(block) {
   // Random fraction between 0 and 1.
-  return ['{ \"block_name\": \"math_number_randomFloat\", \"functionName\": \"math_randomFloat\"}', Blockly.Skoolbot.ORDER_ATOMIC];
+  return ['{ \"block_name\": \"math_number_function_randomFloat\", \"number\": \"randomFloat\"}', Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
 Blockly.Skoolbot['math_atan2'] = function(block) {
@@ -205,6 +232,6 @@ Blockly.Skoolbot['math_atan2'] = function(block) {
       Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
   var argument1 = Blockly.Skoolbot.valueToCode(block, 'Y',
       Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
-  return ['{ \"block_name\": \"math_number_atan2\", \"operator\": \"math_atan2\"' + ',\"argument\":[' + argument0 + ',' + argument1 + ']}',
+  return ['{ \"block_name\": \"math_number_operator_atan2\", \"operator\": \"atan2\"' + ',\"argument\":[' + argument0 + ',' + argument1 + ']}',
       Blockly.Skoolbot.ORDER_ATOMIC];
 };

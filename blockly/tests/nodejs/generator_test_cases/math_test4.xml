@@ -1,0 +1,40 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="logic_compare" id="Z9c7:4N25kY9CyXAz^zq" x="87" y="212">
+    <field name="OP">GT</field>
+    <value name="A">
+      <block type="math_single" id="pnrvPO+j]^RN{(albCU0">
+        <field name="OP">EXP</field>
+        <value name="NUM">
+          <shadow type="math_number" id="OoWif}}OY(R/Is?;,%br">
+            <field name="NUM">9</field>
+          </shadow>
+          <block type="math_number" id="s@3vyNgIQ-c@^:1x9ZGa">
+            <field name="NUM">2</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <value name="B">
+      <block type="math_trig" id="ZhgpxPOWGUomo=t0blVc">
+        <field name="OP">TAN</field>
+        <value name="NUM">
+          <shadow type="math_number" id="hWVKu)u{7wqgw9j|(@na">
+            <field name="NUM">45</field>
+          </shadow>
+          <block type="math_random_int" id="Dyi;+X$K]F8+WEpycI[7">
+            <value name="FROM">
+              <shadow type="math_number" id="VH9(Aj5O/n)VsLm#I{my">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+            <value name="TO">
+              <shadow type="math_number" id="rDNY8kXB;G=xdVlj%P%x">
+                <field name="NUM">100</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>
