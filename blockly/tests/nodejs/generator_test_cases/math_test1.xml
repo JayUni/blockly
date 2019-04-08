@@ -1,0 +1,27 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="math_modulo" id="r(f!X{S$K!{C__P}~i?*" x="37" y="112">
+    <value name="DIVIDEND">
+      <shadow type="math_number" id="|sRP|PI+m3+1EY$t|d4S">
+        <field name="NUM">64</field>
+      </shadow>
+    </value>
+    <value name="DIVISOR">
+      <shadow type="math_number" id="2sGIvlpC?Q()IQJx-l8B">
+        <field name="NUM">10</field>
+      </shadow>
+      <block type="math_arithmetic" id="Al3Zv-A%ArluN8N-FlZX">
+        <field name="OP">MINUS</field>
+        <value name="A">
+          <shadow type="math_number" id="ESO(`|hbK=%wKH@[ufjz">
+            <field name="NUM">5</field>
+          </shadow>
+        </value>
+        <value name="B">
+          <shadow type="math_number" id=")IfymMUos?-w$hY==Clj">
+            <field name="NUM">2</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>

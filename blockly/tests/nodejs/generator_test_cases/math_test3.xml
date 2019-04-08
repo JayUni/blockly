@@ -1,0 +1,47 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="math_arithmetic" id="nTi3@E.{)ae[EfYp-@XO" x="62" y="112">
+    <field name="OP">MINUS</field>
+    <value name="A">
+      <shadow type="math_number" id="th`6:0*DLTy)%qC;3NCz">
+        <field name="NUM">1</field>
+      </shadow>
+      <block type="math_arithmetic" id="SKlp8(3zbQcf}tWc{lA8">
+        <field name="OP">MULTIPLY</field>
+        <value name="A">
+          <shadow type="math_number" id="Kg;oun*4pp`Jan[e8@*)">
+            <field name="NUM">1</field>
+          </shadow>
+          <block type="math_constant" id="J@@~3{Ju=?[rqvktUftO">
+            <field name="CONSTANT">PI</field>
+          </block>
+        </value>
+        <value name="B">
+          <shadow type="math_number" id="v0b5_Od)*A,OV?se~{5O">
+            <field name="NUM">1</field>
+          </shadow>
+          <block type="math_single" id="B[r)_k(h4rujk*TK9wa0">
+            <field name="OP">ROOT</field>
+            <value name="NUM">
+              <shadow type="math_number" id="+TSrkloY~?[-hDw/QAso">
+                <field name="NUM">9</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+    <value name="B">
+      <shadow type="math_number" id="gb[MGI,*2_wAfm5J*OF4">
+        <field name="NUM">1</field>
+      </shadow>
+      <block type="math_round" id="q#AajRzxs)XZ~,{53Zc(">
+        <field name="OP">ROUND</field>
+        <value name="NUM">
+          <shadow type="math_number" id="BiFTl.In-2#Q--f}9}6q">
+            <field name="NUM">3.1</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>

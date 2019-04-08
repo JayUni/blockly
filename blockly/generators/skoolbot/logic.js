@@ -63,12 +63,12 @@ Blockly.Skoolbot['controls_ifelse'] = Blockly.Skoolbot['controls_if'];
 Blockly.Skoolbot['logic_compare'] = function(block) {
   // Comparison operator.
   var OPERATORS = {
-    'EQ': '==',
-    'NEQ': '!=',
-    'LT': '<',
-    'LTE': '<=',
-    'GT': '>',
-    'GTE': '>='
+    'EQ': 'cmpe',
+    'NEQ': 'cmpne',
+    'LT': 'cmpl',
+    'LTE': 'cmple',
+    'GT': 'cmpg',
+    'GTE': 'cmpge'
   };
 
   var operator = OPERATORS[block.getFieldValue('OP')];
@@ -76,7 +76,7 @@ Blockly.Skoolbot['logic_compare'] = function(block) {
       Blockly.Skoolbot.ORDER_ATOMIC)|| '{ \"block_name\": \"logic_null_null\", \"value\": \"NULL\"}';
   var argument1 = Blockly.Skoolbot.valueToCode(block, 'B',
       Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"logic_null_null\", \"value\": \"NULL\"}';
-  var code = '{ \"block_name\": \"logic_boolean_compare\", \"operator\": \"'+ operator + '\", \"argument\": ['+ argument0 + ',' + argument1 + ']}';
+  var code = '{ \"block_name\": \"logic_boolean_operator_compare\", \"operator\": \"'+ operator + '\", \"argument\": ['+ argument0 + ',' + argument1 + ']}';
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
@@ -86,7 +86,7 @@ Blockly.Skoolbot['logic_operation'] = function(block) {
   var order = Blockly.Skoolbot.ORDER_ATOMIC;
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'A', order) || '{ \"block_name\": \"logic_boolean_boolean\", \"value\": \"FALSE\"}';
   var argument1 = Blockly.Skoolbot.valueToCode(block, 'B', order) || '{ \"block_name\": \"logic_boolean_boolean\", \"value\": \"FALSE\"}';
-  var code = '{ \"block_name\": \"logic_boolean_logicOperation\", \"operator\": \"'+ operator + '\", \"argument\": ['+ argument0 + ',' + argument1 + ']}';
+  var code = '{ \"block_name\": \"logic_boolean_operator_logicOperation\", \"operator\": \"'+ operator + '\", \"argument\": ['+ argument0 + ',' + argument1 + ']}';
   return [code, order];
 };
 
@@ -95,7 +95,7 @@ Blockly.Skoolbot['logic_negate'] = function(block) {
   var argument0 = Blockly.Skoolbot.valueToCode(block, 'BOOL',
       Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"logic_boolean_boolean\", \"value\": \"TRUE\"}';
 
-  var code = '{ \"block_name\": \"logic_boolean_logicNegate\", \"operator\": \"logic_negate\", \"argument\": ['+ argument0 + ']}';
+  var code = '{ \"block_name\": \"logic_boolean_operator_logicNegate\", \"operator\": \"negate\", \"argument\": ['+ argument0 + ']}';
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 

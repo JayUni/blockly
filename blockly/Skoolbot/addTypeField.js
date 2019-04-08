@@ -13,9 +13,10 @@ module.exports.addTypeField = function addTypeField(jsonList){
                     case 'arithmetic':
                         var type_list = [];
                         for (var j in jsonList.argument){
-                            console.log(jsonList.argument[j]);
+                            // console.log(jsonList.argument[j]);
                             type_list.push(jsonList.argument[j].valueType);
                         }
+                        // console.log(type_list);
                         jsonList.valueType = checkTypeList(type_list);
                         break;
                     default:
