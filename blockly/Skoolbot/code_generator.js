@@ -45,7 +45,7 @@ function addCommand(jsonList){
                 case 'math':
                     switch (command) {
                         case 'operator':
-                            commandList.push(command + ' ' + jsonList.operator);
+                            commandList.push(jsonList.operator);
                             break;
                         case 'number':
                             commandList.push(jsonList.valueType + ' ' + jsonList.number);
@@ -57,7 +57,7 @@ function addCommand(jsonList){
                             commandList.push(command + ' ' + jsonList.value);
                             break;
                         case 'function':
-                            commandList.push(command + ' ' + jsonList.functionName);
+                            commandList.push(jsonList.functionName);
                             break;
                         default:
                             commandList.push("ERROR, UNDEFINED");
@@ -67,7 +67,7 @@ function addCommand(jsonList){
                 case 'logic':
                     switch(command){
                         case 'operator':
-                            commandList.push(command + ' ' + jsonList.operator);
+                            commandList.push(jsonList.operator);
                             break;
                         case 'boolean':
                             commandList.push(jsonList.valueType + ' ' + jsonList.value);
@@ -110,7 +110,8 @@ function addCommand(jsonList){
 
 
 
-//
+
+
 // var str0 = JSON.parse(`[{"block_name":"math_number_operator_modulo","operator":"%","argument":[{"block_name":"math_number_number","number":"64"},{"block_name":"math_arithmetic_operator","operator":"sub","argument":[{"block_name":"math_number_number","number":"5"},{"block_name":"math_number_number","number":"2"}]}]}]
 // `);
 // var str1 = JSON.parse(`[{"block_name":"math_arithmetic_operator","operator":"pow","argument":[{"block_name":"math_arithmetic_operator","operator":"mul","argument":[{"block_name":"math_number_operator_single","operator":"acos","argument":[{"block_name":"math_number_number","number":"60"}]},{"block_name":"math_number_operator_single","operator":"log10","argument":[{"block_name":"math_number_number","number":"9"}]}]},{"block_name":"math_number_number","number":"2"}]}]
@@ -121,12 +122,8 @@ function addCommand(jsonList){
 // `);
 // var str4 = JSON.parse(`[{"block_name":"math_number_operator_constrain","operator":"constrain","argument":[{"block_name":"math_number_number","number":"50"},{"block_name":"math_number_number","number":"1"},{"block_name":"math_number_operator_single","operator":"round","argument":[{"block_name":"math_number_operator_single","operator":"sqrt","argument":[{"block_name":"math_number_number","number":"15"}]}]}]}]
 // `);
-//
-//
-//
-//
-//
-//
+
+
 // for (var i =0; i<5; i++){
 //     var vars_name = 'str' + i;
 //     commandList = [];

@@ -1,7 +1,7 @@
 number 60
-operator acos
+acos
 number 9
-operator log10
-operator mul
+log10
+mul
 number 2
-operator pow
+pow

@@ -195,7 +195,7 @@ Blockly.Skoolbot['math_modulo'] = function(block) {
       Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
   var argument1 = Blockly.Skoolbot.valueToCode(block, 'DIVISOR',
       Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
-  var code = '{ \"block_name\": \"math_number_operator_modulo\", \"operator\": \"%\", \"argument\":' + '['+ argument0 + ',' + argument1 + ']}';
+  var code = '{ \"block_name\": \"math_number_operator_modulo\", \"operator\": \"remainder\", \"argument\":' + '['+ argument0 + ',' + argument1 + ']}';
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
 
