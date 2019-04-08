@@ -2,7 +2,149 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="309abf3b-ba8f-41f5-a11f-08a439e8cd78" name="Default Changelist" comment="Default Changelist">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/Skoolbot/output/result1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/Skoolbot/output/result2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/Skoolbot/output/result3.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/Skoolbot/output/result4.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/Skoolbot/output/result5.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/compare.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generator_test_jsons/math_test1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generator_test_jsons/math_test2.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generator_test_jsons/math_test3.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generator_test_jsons/math_test4.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generator_test_jsons/math_test5.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/Simple_if.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/Simple_if_else.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/Simple_if_elseif.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/Simple_if_elseif_else.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/and_or.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/break_continue.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/compare_valuetype.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/controls_for.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/controls_if_branch.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/controls_if_condition.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/controls_if_empty.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/function_test_1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/function_test_10.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/function_test_2.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/function_test_3.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/function_test_4.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/function_test_5.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/function_test_6.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/function_test_7.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/function_test_8.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/function_test_9.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/if_asin_ln_sqrt_add.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/if_asin_round.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/if_cos_roundDown.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/if_reminder_repeat_sqrt_var.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/if_sin_roundUp.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/if_tan_negate_roundDown.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/logic_ternary.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/logic_ternary_empty.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/repeat_if_even_atan2.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/repeat_if_log10_acos_e.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/repeat_if_log10_pow10_abs.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/repeat_if_math_properties.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/repeat_if_math_properties_colourRatio.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/test_case_1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/test_case_10.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/test_case_2.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/test_case_3.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/test_case_4.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/test_case_7.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/test_case_8.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/test_case_9.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/text_append.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/text_empty.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/text_length_changeCase.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/while_until_condition_branch.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/while_until_empty.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/ab.js" afterPath="$PROJECT_DIR$/blockly/msg/js/ab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/ar.js" afterPath="$PROJECT_DIR$/blockly/msg/js/ar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/az.js" afterPath="$PROJECT_DIR$/blockly/msg/js/az.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/ba.js" afterPath="$PROJECT_DIR$/blockly/msg/js/ba.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/bcc.js" afterPath="$PROJECT_DIR$/blockly/msg/js/bcc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/be-tarask.js" afterPath="$PROJECT_DIR$/blockly/msg/js/be-tarask.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/be.js" afterPath="$PROJECT_DIR$/blockly/msg/js/be.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/bg.js" afterPath="$PROJECT_DIR$/blockly/msg/js/bg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/bn.js" afterPath="$PROJECT_DIR$/blockly/msg/js/bn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/br.js" afterPath="$PROJECT_DIR$/blockly/msg/js/br.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/ca.js" afterPath="$PROJECT_DIR$/blockly/msg/js/ca.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/cs.js" afterPath="$PROJECT_DIR$/blockly/msg/js/cs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/da.js" afterPath="$PROJECT_DIR$/blockly/msg/js/da.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/de.js" afterPath="$PROJECT_DIR$/blockly/msg/js/de.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/diq.js" afterPath="$PROJECT_DIR$/blockly/msg/js/diq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/dty.js" afterPath="$PROJECT_DIR$/blockly/msg/js/dty.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/el.js" afterPath="$PROJECT_DIR$/blockly/msg/js/el.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/en-gb.js" afterPath="$PROJECT_DIR$/blockly/msg/js/en-gb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/en.js" afterPath="$PROJECT_DIR$/blockly/msg/js/en.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/eo.js" afterPath="$PROJECT_DIR$/blockly/msg/js/eo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/es.js" afterPath="$PROJECT_DIR$/blockly/msg/js/es.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/et.js" afterPath="$PROJECT_DIR$/blockly/msg/js/et.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/eu.js" afterPath="$PROJECT_DIR$/blockly/msg/js/eu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/fa.js" afterPath="$PROJECT_DIR$/blockly/msg/js/fa.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/fi.js" afterPath="$PROJECT_DIR$/blockly/msg/js/fi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/fr.js" afterPath="$PROJECT_DIR$/blockly/msg/js/fr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/gl.js" afterPath="$PROJECT_DIR$/blockly/msg/js/gl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/gor.js" afterPath="$PROJECT_DIR$/blockly/msg/js/gor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/ha.js" afterPath="$PROJECT_DIR$/blockly/msg/js/ha.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/he.js" afterPath="$PROJECT_DIR$/blockly/msg/js/he.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/hi.js" afterPath="$PROJECT_DIR$/blockly/msg/js/hi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/hrx.js" afterPath="$PROJECT_DIR$/blockly/msg/js/hrx.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/hu.js" afterPath="$PROJECT_DIR$/blockly/msg/js/hu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/hy.js" afterPath="$PROJECT_DIR$/blockly/msg/js/hy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/ia.js" afterPath="$PROJECT_DIR$/blockly/msg/js/ia.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/id.js" afterPath="$PROJECT_DIR$/blockly/msg/js/id.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/is.js" afterPath="$PROJECT_DIR$/blockly/msg/js/is.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/it.js" afterPath="$PROJECT_DIR$/blockly/msg/js/it.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/ja.js" afterPath="$PROJECT_DIR$/blockly/msg/js/ja.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/kab.js" afterPath="$PROJECT_DIR$/blockly/msg/js/kab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/ko.js" afterPath="$PROJECT_DIR$/blockly/msg/js/ko.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/lb.js" afterPath="$PROJECT_DIR$/blockly/msg/js/lb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/lki.js" afterPath="$PROJECT_DIR$/blockly/msg/js/lki.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/lo.js" afterPath="$PROJECT_DIR$/blockly/msg/js/lo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/lrc.js" afterPath="$PROJECT_DIR$/blockly/msg/js/lrc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/lt.js" afterPath="$PROJECT_DIR$/blockly/msg/js/lt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/lv.js" afterPath="$PROJECT_DIR$/blockly/msg/js/lv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/mk.js" afterPath="$PROJECT_DIR$/blockly/msg/js/mk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/mnw.js" afterPath="$PROJECT_DIR$/blockly/msg/js/mnw.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/ms.js" afterPath="$PROJECT_DIR$/blockly/msg/js/ms.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/nb.js" afterPath="$PROJECT_DIR$/blockly/msg/js/nb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/nl.js" afterPath="$PROJECT_DIR$/blockly/msg/js/nl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/oc.js" afterPath="$PROJECT_DIR$/blockly/msg/js/oc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/pl.js" afterPath="$PROJECT_DIR$/blockly/msg/js/pl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/pms.js" afterPath="$PROJECT_DIR$/blockly/msg/js/pms.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/pt-br.js" afterPath="$PROJECT_DIR$/blockly/msg/js/pt-br.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/pt.js" afterPath="$PROJECT_DIR$/blockly/msg/js/pt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/ro.js" afterPath="$PROJECT_DIR$/blockly/msg/js/ro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/ru.js" afterPath="$PROJECT_DIR$/blockly/msg/js/ru.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/sc.js" afterPath="$PROJECT_DIR$/blockly/msg/js/sc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/sd.js" afterPath="$PROJECT_DIR$/blockly/msg/js/sd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/shn.js" afterPath="$PROJECT_DIR$/blockly/msg/js/shn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/sk.js" afterPath="$PROJECT_DIR$/blockly/msg/js/sk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/skr-arab.js" afterPath="$PROJECT_DIR$/blockly/msg/js/skr-arab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/sl.js" afterPath="$PROJECT_DIR$/blockly/msg/js/sl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/sq.js" afterPath="$PROJECT_DIR$/blockly/msg/js/sq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/sr-latn.js" afterPath="$PROJECT_DIR$/blockly/msg/js/sr-latn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/sr.js" afterPath="$PROJECT_DIR$/blockly/msg/js/sr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/sv.js" afterPath="$PROJECT_DIR$/blockly/msg/js/sv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/ta.js" afterPath="$PROJECT_DIR$/blockly/msg/js/ta.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/tcy.js" afterPath="$PROJECT_DIR$/blockly/msg/js/tcy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/te.js" afterPath="$PROJECT_DIR$/blockly/msg/js/te.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/th.js" afterPath="$PROJECT_DIR$/blockly/msg/js/th.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/tl.js" afterPath="$PROJECT_DIR$/blockly/msg/js/tl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/tlh.js" afterPath="$PROJECT_DIR$/blockly/msg/js/tlh.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/tr.js" afterPath="$PROJECT_DIR$/blockly/msg/js/tr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/ug-arab.js" afterPath="$PROJECT_DIR$/blockly/msg/js/ug-arab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/uk.js" afterPath="$PROJECT_DIR$/blockly/msg/js/uk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/ur.js" afterPath="$PROJECT_DIR$/blockly/msg/js/ur.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/vi.js" afterPath="$PROJECT_DIR$/blockly/msg/js/vi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/xmf.js" afterPath="$PROJECT_DIR$/blockly/msg/js/xmf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/zh-hans.js" afterPath="$PROJECT_DIR$/blockly/msg/js/zh-hans.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/msg/js/zh-hant.js" afterPath="$PROJECT_DIR$/blockly/msg/js/zh-hant.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/skoolbot_compressed.js" afterPath="$PROJECT_DIR$/blockly/skoolbot_compressed.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,51 +166,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="code_generator.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/code_generator.js">
+      <file leaf-file-name="compare_valuetype.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/compare_valuetype.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-150">
-              <caret line="127" column="33" lean-forward="false" selection-start-line="127" selection-start-column="33" selection-end-line="127" selection-end-column="33" />
+            <state relative-caret-position="195">
+              <caret line="13" column="9" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="result5.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/output/result5.txt">
+      <file leaf-file-name="repeat_if_math_properties_colourRatio.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/repeat_if_math_properties_colourRatio.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="math_test5.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/generator_test_cases/math_test5.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="math_test1.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/generator_test_jsons/math_test1.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="66" lean-forward="false" selection-start-line="0" selection-start-column="66" selection-end-line="0" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="math.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blockly/generators/skoolbot/math.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-53">
-              <caret line="197" column="92" lean-forward="false" selection-start-line="197" selection-start-column="92" selection-end-line="197" selection-end-column="92" />
+            <state relative-caret-position="240">
+              <caret line="16" column="24" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="311" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -147,6 +259,7 @@
         <option value="$PROJECT_DIR$/blockly/tests/nodejs/generator_test_jsons/math_test1.json" />
         <option value="$PROJECT_DIR$/blockly/Skoolbot/code_generator.js" />
         <option value="$PROJECT_DIR$/blockly/tests/nodejs/generator_test_cases/math_test5.xml" />
+        <option value="$PROJECT_DIR$/blockly/Skoolbot/output/result5.txt" />
       </list>
     </option>
   </component>
@@ -209,13 +322,6 @@
               <item name="blockly" type="b2602c69:ProjectViewProjectNode" />
               <item name="blockly" type="462c0819:PsiDirectoryNode" />
               <item name="blockly" type="462c0819:PsiDirectoryNode" />
-              <item name="Skoolbot" type="462c0819:PsiDirectoryNode" />
-              <item name="output" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blockly" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blockly" type="462c0819:PsiDirectoryNode" />
-              <item name="blockly" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -239,7 +345,7 @@
               <item name="blockly" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
               <item name="nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="generator_test_jsons" type="462c0819:PsiDirectoryNode" />
+              <item name="test_jsons" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -401,12 +507,12 @@
       <workItem from="1554424691982" duration="3531000" />
       <workItem from="1554609416366" duration="5287000" />
       <workItem from="1554617866706" duration="2524000" />
-      <workItem from="1554621143305" duration="32755000" />
+      <workItem from="1554621143305" duration="33886000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202667000" />
+    <option name="totallyTimeSpent" value="203798000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -419,7 +525,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -430,7 +535,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2549751" sideWeight="0.48569384" order="8" side_tool="false" content_ui="tabs" x="21" y="254" width="1398" height="392" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6828358" sideWeight="0.48569384" order="8" side_tool="false" content_ui="tabs" x="21" y="254" width="1398" height="392" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2746781" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -448,34 +553,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48756218" sideWeight="0.5143061" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29104477" sideWeight="0.48569384" order="8" side_tool="false" content_ui="tabs" x="21" y="254" width="1398" height="392" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2746781" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -494,96 +571,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/blockly/core/workspace.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="37" column="15" lean-forward="true" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/core/generator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1143">
-          <caret line="129" column="44" lean-forward="false" selection-start-line="129" selection-start-column="44" selection-end-line="129" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/tests/tree_walk/Test_tree_walk.html" />
-    <entry file="file://$USER_HOME$/treewalk/Test_tree_walk.html" />
-    <entry file="file://$PROJECT_DIR$/blockly/blocks/logic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="255" column="25" lean-forward="false" selection-start-line="255" selection-start-column="21" selection-end-line="255" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_cases/function_test_1.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="15" lean-forward="true" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/treeWalkJSON.html" />
-    <entry file="file://$PROJECT_DIR$/blockly/generators/skoolbot/variables_dynamic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/generators/skoolbot/procedures.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="88" column="42" lean-forward="false" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_cases/function_test_4.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_cases/function_test_5.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="89" column="122" lean-forward="false" selection-start-line="89" selection-start-column="122" selection-end-line="89" selection-end-column="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/treeWalkJSON.js" />
-    <entry file="file://$PROJECT_DIR$/blockly/generators/skoolbot/colour.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="91" column="55" lean-forward="false" selection-start-line="91" selection-start-column="55" selection-end-line="91" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/demos/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/generators/skoolbot/variables.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="41" column="101" lean-forward="false" selection-start-line="41" selection-start-column="101" selection-end-line="41" selection-end-column="101" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/generators/skoolbot/text.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2595">
-          <caret line="191" column="0" lean-forward="false" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blockly/tests/run_all_tests.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -659,14 +646,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="60" column="47" lean-forward="false" selection-start-line="60" selection-start-column="47" selection-end-line="60" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/and_or.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -799,22 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/generator_test_jsons/math_test1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="66" lean-forward="false" selection-start-line="0" selection-start-column="66" selection-end-line="0" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/output/result1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/output/result2.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -847,18 +810,170 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/code_generator.js">
+    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/output/result5.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-150">
-          <caret line="127" column="33" lean-forward="false" selection-start-line="127" selection-start-column="33" selection-end-line="127" selection-end-column="33" />
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/output/result5.txt">
+    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/generator_test_jsons/math_test1.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/code_generator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="146" column="33" lean-forward="true" selection-start-line="146" selection-start-column="33" selection-end-line="146" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/output/result1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/bytecode.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/break_continue.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-359">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/controls_for.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/controls_if_branch.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/Simple_if.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="23" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/Simple_if_elseif.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="8" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/Simple_if_elseif_else.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="21" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/text_append.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/text_empty.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="13" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="215" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/text_length_changeCase.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="20" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/while_until_condition_branch.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="7" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/while_until_empty.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/Simple_if_else.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="44" column="13" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/Interpretor.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/and_or.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/compare_valuetype.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="9" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_jsons/repeat_if_math_properties_colourRatio.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="24" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="311" selection-end-column="0" />
           <folding />
         </state>
       </provider>

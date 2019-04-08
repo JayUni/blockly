@@ -12,12 +12,12 @@
         "return_value": {
             "block_name": "logic_statement_logicTernary",
             "if": {
-                "block_name": "logic_boolean_logicOperation",
+                "block_name": "logic_boolean_operator_logicOperation",
                 "operator": "or",
                 "argument": [
                     {
-                        "block_name": "logic_boolean_compare",
-                        "operator": "==",
+                        "block_name": "logic_boolean_operator_compare",
+                        "operator": "cmpe",
                         "argument": [
                             {
                                 "block_name": "variables_statement_get",
@@ -31,8 +31,8 @@
                         ]
                     },
                     {
-                        "block_name": "logic_boolean_compare",
-                        "operator": "==",
+                        "block_name": "logic_boolean_operator_compare",
+                        "operator": "cmpe",
                         "argument": [
                             {
                                 "block_name": "variables_statement_get",
@@ -52,16 +52,16 @@
                 "number": "1"
             },
             "ifFalse": {
-                "block_name": "math_arithmetic_arithmetic",
-                "operator": "+",
+                "block_name": "math_arithmetic_operator",
+                "operator": "add",
                 "argument": [
                     {
                         "block_name": "procedures_statement_callreturn",
                         "funcName": "Fibonacci",
                         "argument": [
                             {
-                                "block_name": "math_arithmetic_arithmetic",
-                                "operator": "-",
+                                "block_name": "math_arithmetic_operator",
+                                "operator": "sub",
                                 "argument": [
                                     {
                                         "block_name": "variables_statement_get",
@@ -81,8 +81,8 @@
                         "funcName": "Fibonacci",
                         "argument": [
                             {
-                                "block_name": "math_arithmetic_arithmetic",
-                                "operator": "-",
+                                "block_name": "math_arithmetic_operator",
+                                "operator": "sub",
                                 "argument": [
                                     {
                                         "block_name": "variables_statement_get",
