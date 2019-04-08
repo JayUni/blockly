@@ -37,5 +37,3 @@ function checkTypeList(typeList){
     }
     return type;
 }
-
-

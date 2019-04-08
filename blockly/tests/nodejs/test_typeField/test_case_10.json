@@ -1,0 +1,16 @@
+{ block_name: 'variables_statement_get',
+  functionName: 'variables_get',
+  varName: 'int_a' }
+{ block_name: 'math_number_number', number: '1' }
+{ block_name: 'variables_statement_get',
+  functionName: 'variables_get',
+  varName: 'int_a' }
+{ block_name: 'math_number_number', number: '1' }
+{ block_name: 'variables_statement_get',
+  functionName: 'variables_get',
+  varName: 'int_a',
+  valueType: 'statement' }
+{ block_name: 'math_number_number',
+  number: '1',
+  valueType: 'number' }
+

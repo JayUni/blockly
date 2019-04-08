@@ -1,0 +1,434 @@
+[
+    {
+        "block_name": "variables_statement_set",
+        "functionName": "variables_set",
+        "varName": "int_a",
+        "argument": [
+            {
+                "block_name": "math_number_randomInt",
+                "functionName": "math_randomInt",
+                "argument": [
+                    {
+                        "block_name": "math_number_number",
+                        "number": "1"
+                    },
+                    {
+                        "block_name": "math_number_number",
+                        "number": "100"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "block_name": "controls_statement_ifStructure",
+        "structure": [
+            {
+                "block_name": "controls_statement_if",
+                "statements": "if",
+                "condition": {
+                    "block_name": "logic_boolean_compare",
+                    "operator": ">",
+                    "argument": [
+                        {
+                            "block_name": "variables_statement_get",
+                            "functionName": "variables_get",
+                            "varName": "int_a"
+                        },
+                        {
+                            "block_name": "math_number_constant",
+                            "value": "PI"
+                        }
+                    ]
+                },
+                "branchCode": [
+                    {
+                        "block_name": "controls_statement_ifStructure",
+                        "structure": [
+                            {
+                                "block_name": "controls_statement_if",
+                                "statements": "if",
+                                "condition": {
+                                    "block_name": "logic_boolean_logicOperation",
+                                    "operator": "and",
+                                    "argument": [
+                                        {
+                                            "block_name": "logic_boolean_compare",
+                                            "operator": "<",
+                                            "argument": [
+                                                {
+                                                    "block_name": "variables_statement_get",
+                                                    "functionName": "variables_get",
+                                                    "varName": "int_a"
+                                                },
+                                                {
+                                                    "block_name": "math_number_number",
+                                                    "number": "75"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "block_name": "logic_boolean_compare",
+                                            "operator": ">",
+                                            "argument": [
+                                                {
+                                                    "block_name": "variables_statement_get",
+                                                    "functionName": "variables_get",
+                                                    "varName": "int_a"
+                                                },
+                                                {
+                                                    "block_name": "math_number_number",
+                                                    "number": "20"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "branchCode": [
+                                    {
+                                        "block_name": "controls_statement_ifStructure",
+                                        "structure": [
+                                            {
+                                                "block_name": "controls_statement_if",
+                                                "statements": "if",
+                                                "condition": {
+                                                    "block_name": "logic_boolean_compare",
+                                                    "operator": "==",
+                                                    "argument": [
+                                                        {
+                                                            "block_name": "math_number_modulo",
+                                                            "operator": "%",
+                                                            "argument": [
+                                                                {
+                                                                    "block_name": "variables_statement_get",
+                                                                    "functionName": "variables_get",
+                                                                    "varName": "int_a"
+                                                                },
+                                                                {
+                                                                    "block_name": "math_number_number",
+                                                                    "number": "10"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "block_name": "math_number_number",
+                                                            "number": "5"
+                                                        }
+                                                    ]
+                                                },
+                                                "branchCode": [
+                                                    {
+                                                        "block_name": "variables_statement_set",
+                                                        "functionName": "variables_set",
+                                                        "varName": "int_a",
+                                                        "argument": [
+                                                            {
+                                                                "block_name": "math_number_single",
+                                                                "operator": "ROOT",
+                                                                "argument": [
+                                                                    {
+                                                                        "block_name": "math_number_number",
+                                                                        "number": "9"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "block_name": "controls_statement_else",
+                                                "statements": "else",
+                                                "branchCode": [
+                                                    {
+                                                        "block_name": "controls_statement_repeat",
+                                                        "loop_style": "controls_repeat_ext",
+                                                        "repeat_times": {
+                                                            "block_name": "controls_statement_repeatExt",
+                                                            "operator": "math.floor",
+                                                            "argument": {
+                                                                "block_name": "variables_statement_get",
+                                                                "functionName": "variables_get",
+                                                                "varName": "int_a"
+                                                            }
+                                                        },
+                                                        "branch": [
+                                                            {
+                                                                "block_name": "text_statement_print",
+                                                                "functionName": "text_print",
+                                                                "argument": [
+                                                                    {
+                                                                        "block_name": "math_number_single",
+                                                                        "operator": "ROUNDUP",
+                                                                        "argument": [
+                                                                            {
+                                                                                "block_name": "math_number_single",
+                                                                                "operator": "ROOT",
+                                                                                "argument": [
+                                                                                    {
+                                                                                        "block_name": "variables_statement_get",
+                                                                                        "functionName": "variables_get",
+                                                                                        "varName": "int_a"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "block_name": "variables_statement_set",
+                                                                "functionName": "variables_set",
+                                                                "varName": "int_a",
+                                                                "argument": [
+                                                                    {
+                                                                        "block_name": "math_arithmetic_arithmetic",
+                                                                        "operator": "-",
+                                                                        "argument": [
+                                                                            {
+                                                                                "block_name": "variables_statement_get",
+                                                                                "functionName": "variables_get",
+                                                                                "varName": "int_a"
+                                                                            },
+                                                                            {
+                                                                                "block_name": "math_number_number",
+                                                                                "number": "1"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "block_name": "controls_statement_else",
+                                "statements": "else",
+                                "branchCode": [
+                                    {
+                                        "block_name": "controls_statement_whileUntil",
+                                        "loop_style": "controls_whileUntil",
+                                        "repeat_condition": {
+                                            "block_name": "logic_boolean_compare",
+                                            "operator": "==",
+                                            "argument": [
+                                                {
+                                                    "block_name": "math_boolean_numberProperty",
+                                                    "functionName": "math_isOdd",
+                                                    "argument": [
+                                                        {
+                                                            "block_name": "variables_statement_get",
+                                                            "functionName": "variables_get",
+                                                            "varName": "int_a"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "block_name": "logic_boolean_boolean",
+                                                    "value": "FALSE"
+                                                }
+                                            ]
+                                        },
+                                        "end_type": "while",
+                                        "branch": [
+                                            {
+                                                "block_name": "text_statement_print",
+                                                "functionName": "text_print",
+                                                "argument": [
+                                                    {
+                                                        "block_name": "text_string",
+                                                        "text": "'random'"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "block_name": "controls_statement_else",
+                "statements": "else",
+                "branchCode": [
+                    {
+                        "block_name": "variables_statement_set",
+                        "functionName": "variables_set",
+                        "varName": "str",
+                        "argument": [
+                            {
+                                "block_name": "text_string",
+                                "text": "''"
+                            }
+                        ]
+                    },
+                    {
+                        "block_name": "controls_statement_repeat",
+                        "loop_style": "controls_repeat_ext",
+                        "repeat_times": {
+                            "block_name": "controls_statement_repeatExt",
+                            "operator": "math.floor",
+                            "argument": {
+                                "block_name": "variables_statement_get",
+                                "functionName": "variables_get",
+                                "varName": "int_a"
+                            }
+                        },
+                        "branch": [
+                            {
+                                "block_name": "variables_statement_set",
+                                "functionName": "variables_set",
+                                "varName": "int_a",
+                                "argument": [
+                                    0
+                                ]
+                            },
+                            {
+                                "block_name": "text_string_append",
+                                "functionName": "text_append",
+                                "argument": [
+                                    {
+                                        "varName": "str"
+                                    },
+                                    {
+                                        "text_append": {
+                                            "block_name": "variables_statement_get",
+                                            "functionName": "variables_get",
+                                            "varName": "int_a"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "block_name": "controls_statement_whileUntil",
+                        "loop_style": "controls_whileUntil",
+                        "repeat_condition": {
+                            "block_name": "logic_boolean_compare",
+                            "operator": ">",
+                            "argument": [
+                                {
+                                    "block_name": "text_number_length",
+                                    "functionName": "text_length",
+                                    "argument": [
+                                        {
+                                            "varName": {
+                                                "block_name": "variables_statement_get",
+                                                "functionName": "variables_get",
+                                                "varName": "str"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "block_name": "math_number_number",
+                                    "number": "0"
+                                }
+                            ]
+                        },
+                        "end_type": "while",
+                        "branch": [
+                            {
+                                "block_name": "text_statement_print",
+                                "functionName": "text_print",
+                                "argument": [
+                                    {
+                                        "block_name": "text_string_chatAt",
+                                        "functionName": "text_charAt",
+                                        "argument": [
+                                            {
+                                                "varName": {
+                                                    "block_name": "variables_statement_get",
+                                                    "functionName": "variables_get",
+                                                    "varName": "str"
+                                                }
+                                            },
+                                            {
+                                                "where": "FROM_START"
+                                            },
+                                            {
+                                                "index": {
+                                                    "block_name": "text_number_length",
+                                                    "functionName": "text_length",
+                                                    "argument": [
+                                                        {
+                                                            "varName": {
+                                                                "block_name": "variables_statement_get",
+                                                                "functionName": "variables_get",
+                                                                "varName": "str"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "block_name": "variables_statement_set",
+                                "functionName": "variables_set",
+                                "varName": "str",
+                                "argument": [
+                                    {
+                                        "block_name": "text_string_getSubstring",
+                                        "functionName": "text_getSubstring",
+                                        "argument": [
+                                            {
+                                                "block_name": "variables_variable_variable",
+                                                "varName": {
+                                                    "block_name": "variables_statement_get",
+                                                    "functionName": "variables_get",
+                                                    "varName": "str"
+                                                }
+                                            },
+                                            {
+                                                "block_name": "text_string_startWhere",
+                                                "start_where": "FROM_START"
+                                            },
+                                            {
+                                                "block_name": "text_number_startAt",
+                                                "start_index": {
+                                                    "block_name": "math_number_number",
+                                                    "number": "1"
+                                                }
+                                            },
+                                            {
+                                                "block_name": "text_string_endWhere",
+                                                "end_where": "FROM_START"
+                                            },
+                                            {
+                                                "block_name": "text_number_endAt",
+                                                "end_index": {
+                                                    "block_name": "text_number_length",
+                                                    "functionName": "text_length",
+                                                    "argument": [
+                                                        {
+                                                            "varName": {
+                                                                "block_name": "variables_statement_get",
+                                                                "functionName": "variables_get",
+                                                                "varName": "str"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

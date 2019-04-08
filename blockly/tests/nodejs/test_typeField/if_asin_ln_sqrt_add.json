@@ -1,0 +1,27 @@
+{ block_name: 'math_number_single',
+  operator: 'LN',
+  argument:
+   [ { block_name: 'variables_statement_get',
+       functionName: 'variables_get',
+       varName: 'num' } ] }
+{ block_name: 'math_number_constant', value: 'PI' }
+{ block_name: 'math_number_single',
+  operator: 'LN',
+  argument:
+   [ { block_name: 'variables_statement_get',
+       functionName: 'variables_get',
+       varName: 'num' } ] }
+{ block_name: 'math_number_constant', value: 'PI' }
+{ block_name: 'math_number_single',
+  operator: 'LN',
+  argument:
+   [ { block_name: 'variables_statement_get',
+       functionName: 'variables_get',
+       varName: 'num',
+       valueType: 'statement' },
+     valueType: '' ],
+  valueType: 'number' }
+{ block_name: 'math_number_constant',
+  value: 'PI',
+  valueType: 'number' }
+
