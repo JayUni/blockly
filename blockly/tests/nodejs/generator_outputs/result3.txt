@@ -2,6 +2,5 @@ number PI
 number 9
 sqrt
 mul
-number 3.1
-round
+number 3
 sub
