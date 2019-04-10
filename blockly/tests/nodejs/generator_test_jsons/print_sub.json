@@ -1,16 +1,15 @@
 [
     {
-        "block_name": "variables_statement_set",
-        "functionName": "variables_set",
-        "varName": "a",
+        "block_name": "text_statement_print",
+        "functionName": "text_print",
         "argument": [
             {
                 "block_name": "math_arithmetic_operator",
-                "operator": "add",
+                "operator": "sub",
                 "argument": [
                     {
                         "block_name": "math_number_number",
-                        "number": "1"
+                        "number": "5"
                     },
                     {
                         "block_name": "math_number_number",

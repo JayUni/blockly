@@ -107,6 +107,7 @@ function addCommand(jsonList){
 }
 
 
+// For debugging
 
 // var str0 = JSON.parse(`[{"block_name":"logic_boolean_compare","operator":"cmple","argument":[{"block_name":"math_arithmetic_operator","operator":"sub","argument":[{"block_name":"math_number_number","number":"1"},{"block_name":"math_number_number","number":"2"}]},{"block_name":"math_number_number","number":"5"}]}]
 // `);
@@ -170,10 +171,11 @@ function savetxt(path){
             for (var j in reslist){
                 restxt += reslist[j] + '\n';
             }
-            var savefile = path.split('/');
-            fs.writeFile('./output/result_' + savefile[4] + '.txt', restxt, (err) => {
+            var savefile = path.split('/')[4].split('.')[0];
+            fs.writeFile('./output/' + savefile + '_result' +
+                '.txt', restxt, (err) => {
                 if (err) throw err;
-                console.log('It\'s saved!');
+                console.log('result is saved successfully!');
             });
         }
         else{
