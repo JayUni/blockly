@@ -1,0 +1,8 @@
+number 123
+set a
+string 'abc'
+set b
+get a
+print
+get b
+print

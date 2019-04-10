@@ -79,6 +79,25 @@ function addCommand(jsonList){
                             commandList.push("ERROR, UNDEFINED");
                             break;
                     }
+                case 'variables':
+                    switch(command){
+                        case 'set':
+                            commandList.push('set ' + jsonList.varName);
+                            break;
+                        case 'get':
+                            commandList.push('get ' + jsonList.varName);
+                            break;
+                    }
+                case 'text':
+                    switch(command){
+                        case 'text':
+                            commandList.push(jsonList.valueType + ' ' + jsonList.text);
+                            break;
+                        case 'print':
+                            commandList.push('print');
+                            break;
+
+                    }
 
 
             }
@@ -122,9 +141,11 @@ function addCommand(jsonList){
 // `);
 // var str4 = JSON.parse(`[{"block_name":"math_number_operator_constrain","operator":"constrain","argument":[{"block_name":"math_number_number","number":"50"},{"block_name":"math_number_number","number":"1"},{"block_name":"math_number_operator_single","operator":"round","argument":[{"block_name":"math_number_operator_single","operator":"sqrt","argument":[{"block_name":"math_number_number","number":"15"}]}]}]}]
 // `);
-
-
-// for (var i =0; i<5; i++){
+// var str5 = JSON.parse(`[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"a","argument":[{"block_name":"math_number_number","number":"123"}]},{"block_name":"variables_statement_set","functionName":"variables_set","varName":"b","argument":[{"block_name":"text_string_text","text":"'abc'"}]},{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"a"}]},{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"b"}]}]
+// `);
+//
+//
+// for (var i =0; i<6; i++){
 //     var vars_name = 'str' + i;
 //     commandList = [];
 //     addTypeField.addTypeField(eval(vars_name));
@@ -135,8 +156,8 @@ function addCommand(jsonList){
 // }
 
 
-function savetxt(i){
-    var path = '../tests/nodejs/generator_test_jsons/math_test' + (i+1).toString() + '.json';
+
+function savetxt(path){
 
     fs.readFile(path, "utf8", function(err, jsondata) {
         if (!err) {
@@ -149,8 +170,8 @@ function savetxt(i){
             for (var j in reslist){
                 restxt += reslist[j] + '\n';
             }
-
-            fs.writeFile('./output/result' + (i+1).toString() + '.txt', restxt, (err) => {
+            var savefile = path.split('/');
+            fs.writeFile('./output/result_' + savefile[4] + '.txt', restxt, (err) => {
                 if (err) throw err;
                 console.log('It\'s saved!');
             });
@@ -162,6 +183,17 @@ function savetxt(i){
 }
 
 
-for (var i = 0; i < 5; i++){
-    savetxt(i);
+function travel(dir, callback) {
+    fs.readdirSync(dir).forEach(function (file) {
+        var pathname = require('path').join(dir, file);
+
+        if (fs.statSync(pathname).isDirectory()) {
+            travel(pathname, callback);
+        } else {
+            callback(pathname);
+        }
+    });
 }
+
+var path = '../tests/nodejs/generator_test_jsons/';
+travel(path, savetxt);

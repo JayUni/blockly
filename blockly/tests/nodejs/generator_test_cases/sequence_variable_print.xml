@@ -1,0 +1,48 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+    <variables>
+        <variable type="" id="Wqk^kP.HE%^sH5~vk*F(">a</variable>
+        <variable type="" id="{`4=3m|bbD4+?KF$3ZVB">b</variable>
+    </variables>
+    <block type="variables_set" id="QOLTrKHB;6I3/CI;H9hu" x="137" y="88">
+        <field name="VAR" id="Wqk^kP.HE%^sH5~vk*F(" variabletype="">a</field>
+        <value name="VALUE">
+            <block type="math_number" id="R)GXV,W+n`P}5#/7lc+Z">
+                <field name="NUM">123</field>
+            </block>
+        </value>
+        <next>
+            <block type="variables_set" id="f(WFa,HiIUoUY{*B}|QQ">
+                <field name="VAR" id="{`4=3m|bbD4+?KF$3ZVB" variabletype="">b</field>
+                <value name="VALUE">
+                    <block type="text" id="gr*U)Oh(5Y;ScUS,(Uz*">
+                        <field name="TEXT">abc</field>
+                    </block>
+                </value>
+                <next>
+                    <block type="text_print" id="OXBYs`~;-!5S*gEwN$En">
+                        <value name="TEXT">
+                            <shadow type="text" id="0RHo;4bRuQj7(cr+I7x#">
+                                <field name="TEXT">abc</field>
+                            </shadow>
+                            <block type="variables_get" id="|YUh_#p*=%OB^Q7-P2F!">
+                                <field name="VAR" id="Wqk^kP.HE%^sH5~vk*F(" variabletype="">a</field>
+                            </block>
+                        </value>
+                        <next>
+                            <block type="text_print" id="5I!H)xF?A^OI,+cI@yne">
+                                <value name="TEXT">
+                                    <shadow type="text" id="1^m..4spj|Kb^WN6rthT">
+                                        <field name="TEXT">abc</field>
+                                    </shadow>
+                                    <block type="variables_get" id="go#JO]pnK/q%f:YlR]Sf">
+                                        <field name="VAR" id="{`4=3m|bbD4+?KF$3ZVB" variabletype="">b</field>
+                                    </block>
+                                </value>
+                            </block>
+                        </next>
+                    </block>
+                </next>
+            </block>
+        </next>
+    </block>
+</xml>
