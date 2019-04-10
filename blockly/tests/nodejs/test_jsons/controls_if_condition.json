@@ -1,1 +1,75 @@
-[{"block_name":"controls_statement_ifStructure","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"logic_boolean_compare","operator":"==","argument":[{"block_name":"text_string_text","text":"'a'"},{"block_name":"logic_null_null","value":"NULL"}]},"branchCode":[]},{"block_name":"controls_statement_elseif","statements":"elseif","condition":{"block_name":"logic_boolean_logicNegate","operator":"logic_negate","argument":[{"block_name":"logic_boolean_compare","operator":"!=","argument":[{"block_name":"math_number_number","number":"2"},{"block_name":"logic_null_null","value":"NULL"}]}]},"branchCode":[]},{"block_name":"controls_statement_elseif","statements":"elseif","condition":{"block_name":"logic_boolean_logicOperation","operator":"or","argument":[{"block_name":"logic_boolean_boolean","value":"TRUE"},{"block_name":"logic_boolean_boolean","value":"FALSE"}]},"branchCode":[]},{"block_name":"controls_statement_else","statements":"else","branchCode":[[]]}]}]
+[
+    {
+        "block_name": "controls_statement_ifStructure",
+        "structure": [
+            {
+                "block_name": "controls_statement_if",
+                "statements": "if",
+                "condition": {
+                    "block_name": "logic_boolean_operator_compare",
+                    "operator": "cmpe",
+                    "argument": [
+                        {
+                            "block_name": "text_string_text",
+                            "text": "'a'"
+                        },
+                        {
+                            "block_name": "logic_null_null",
+                            "value": "NULL"
+                        }
+                    ]
+                },
+                "branchCode": []
+            },
+            {
+                "block_name": "controls_statement_elseif",
+                "statements": "elseif",
+                "condition": {
+                    "block_name": "logic_boolean_operator_logicNegate",
+                    "operator": "negate",
+                    "argument": [
+                        {
+                            "block_name": "logic_boolean_operator_compare",
+                            "operator": "cmpne",
+                            "argument": [
+                                {
+                                    "block_name": "math_number_number",
+                                    "number": "2"
+                                },
+                                {
+                                    "block_name": "logic_null_null",
+                                    "value": "NULL"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "branchCode": []
+            },
+            {
+                "block_name": "controls_statement_elseif",
+                "statements": "elseif",
+                "condition": {
+                    "block_name": "logic_boolean_operator_logicOperation",
+                    "operator": "or",
+                    "argument": [
+                        {
+                            "block_name": "logic_boolean_boolean",
+                            "value": "TRUE"
+                        },
+                        {
+                            "block_name": "logic_boolean_boolean",
+                            "value": "FALSE"
+                        }
+                    ]
+                },
+                "branchCode": []
+            },
+            {
+                "block_name": "controls_statement_else",
+                "statements": "else",
+                "branchCode": []
+            }
+        ]
+    }
+]

@@ -1,1 +1,247 @@
-[{"block_name":"procedures_statement_defreturn","funcName":"list_test","description":"--Describethisfunction...","argument":[],"branch":[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"a","argument":[{"block_name":"text_string_text","text":"''"}]},{"block_name":"controls_statement_ifStructure","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"text_boolean_isEmpty","functionName":"text_isEmpty","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"a"}]},"branchCode":[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"a","argument":[{"block_name":"text_string_join","functionName":"text_join","argument":[{"block_name":"text_string_join","functionName":"text_changeCase","argument":[{"block_name":"variables_variable_variable","text":{"block_name":"text_string_join","functionName":"text_join","argument":[{"block_name":"text_string_text","text":"'hello'"},{"block_name":"text_string_text","text":"''"},{"block_name":"text_string_text","text":"'world'"}]}},{"block_name":"text_string_changeCaseType","change_case_type":"UPPERCASE"}]},{"block_name":"text_string_join","functionName":"text_join","argument":[{"block_name":"math_number_constant","value":[{"block_name":"math_mathOperation_arithmetic","operator":"/","argument":[{"block_name":"math_mathOperation_arithmetic","operator":"+","argument":[{"block_name":"math_number_number","number":"1"},{"block_name":"math_operator_sqrt","operator":"math.sqrt","argument":[{"block_name":"math_number_number","number":"5"}]}]},{"block_name":"math_number_number","number":"2"}]}]},{"block_name":"math_number_single","operator":"ROUND","argument":[{"block_name":"math_number_constant","value":"PI"}]},{"block_name":"text_string_text","text":"'random'"},{"block_name":"math_number_constant","operator":"INFINITY"}]},{"block_name":"text_string_text","text":"'random'"}]}]}]}]},{"block_name":"controls_statement_forEach","loop_style":"controls_forEach","varName":"i","list":{"block_name":"variables_statement_get","functionName":"variables_get","varName":"a"},"branch":[{"block_name":"controls_statement_ifStructure","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"logic_boolean_logicOperation","operator":"or","argument":[{"block_name":"logic_boolean_compare","operator":"<","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"5"}]},{"block_name":"logic_boolean_compare","operator":">","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"100"}]}]},"branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"text_statement_promptExt","functionName":"text_prompt","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"text_string_reverse","functionName":"text_reverse","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]}]}]}]}]}],"return_value":{"null":"NULL"}}]
+[
+    {
+        "block_name": "procedures_statement_defreturn",
+        "funcName": "list_test",
+        "description": "--Describethisfunction...",
+        "argument": [],
+        "branch": [
+            {
+                "block_name": "variables_statement_set",
+                "functionName": "variables_set",
+                "varName": "a",
+                "argument": [
+                    {
+                        "block_name": "text_string_text",
+                        "text": "''"
+                    }
+                ]
+            },
+            {
+                "block_name": "controls_statement_ifStructure",
+                "structure": [
+                    {
+                        "block_name": "controls_statement_if",
+                        "statements": "if",
+                        "condition": {
+                            "block_name": "text_boolean_isEmpty",
+                            "functionName": "text_isEmpty",
+                            "argument": [
+                                {
+                                    "block_name": "variables_statement_get",
+                                    "functionName": "variables_get",
+                                    "varName": "a"
+                                }
+                            ]
+                        },
+                        "branchCode": [
+                            {
+                                "block_name": "variables_statement_set",
+                                "functionName": "variables_set",
+                                "varName": "a",
+                                "argument": [
+                                    {
+                                        "block_name": "text_string_join",
+                                        "functionName": "text_join",
+                                        "argument": [
+                                            {
+                                                "block_name": "text_string_join",
+                                                "functionName": "text_changeCase",
+                                                "argument": [
+                                                    {
+                                                        "block_name": "variables_variable_variable",
+                                                        "text": {
+                                                            "block_name": "text_string_join",
+                                                            "functionName": "text_join",
+                                                            "argument": [
+                                                                {
+                                                                    "block_name": "text_string_text",
+                                                                    "text": "'hello'"
+                                                                },
+                                                                {
+                                                                    "block_name": "text_string_text",
+                                                                    "text": "''"
+                                                                },
+                                                                {
+                                                                    "block_name": "text_string_text",
+                                                                    "text": "'world'"
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "block_name": "text_string_changeCaseType",
+                                                        "change_case_type": "UPPERCASE"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "block_name": "text_string_join",
+                                                "functionName": "text_join",
+                                                "argument": [
+                                                    {
+                                                        "block_name": "math_arithmetic_operator",
+                                                        "operator": "div",
+                                                        "argument": [
+                                                            {
+                                                                "block_name": "math_arithmetic_operator",
+                                                                "operator": "add",
+                                                                "argument": [
+                                                                    {
+                                                                        "block_name": "math_number_number",
+                                                                        "number": "1"
+                                                                    },
+                                                                    {
+                                                                        "block_name": "math_number_operator",
+                                                                        "operator": "sqrt",
+                                                                        "argument": [
+                                                                            {
+                                                                                "block_name": "math_number_number",
+                                                                                "number": "5"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "block_name": "math_number_number",
+                                                                "number": "2"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "block_name": "math_number_operator_single",
+                                                        "operator": "round",
+                                                        "argument": [
+                                                            {
+                                                                "block_name": "math_number_number_constant",
+                                                                "number": "PI"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "block_name": "text_string_text",
+                                                        "text": "'random'"
+                                                    },
+                                                    {
+                                                        "block_name": "math_number_number_constant",
+                                                        "number": "INFINITY"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "block_name": "text_string_text",
+                                                "text": "'random'"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "block_name": "controls_statement_forEach",
+                "loop_style": "controls_forEach",
+                "varName": "i",
+                "list": {
+                    "block_name": "variables_statement_get",
+                    "functionName": "variables_get",
+                    "varName": "a"
+                },
+                "branch": [
+                    {
+                        "block_name": "controls_statement_ifStructure",
+                        "structure": [
+                            {
+                                "block_name": "controls_statement_if",
+                                "statements": "if",
+                                "condition": {
+                                    "block_name": "logic_boolean_operator_logicOperation",
+                                    "operator": "or",
+                                    "argument": [
+                                        {
+                                            "block_name": "logic_boolean_operator_compare",
+                                            "operator": "cmpl",
+                                            "argument": [
+                                                {
+                                                    "block_name": "variables_statement_get",
+                                                    "functionName": "variables_get",
+                                                    "varName": "i"
+                                                },
+                                                {
+                                                    "block_name": "math_number_number",
+                                                    "number": "5"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "block_name": "logic_boolean_operator_compare",
+                                            "operator": "cmpg",
+                                            "argument": [
+                                                {
+                                                    "block_name": "variables_statement_get",
+                                                    "functionName": "variables_get",
+                                                    "varName": "i"
+                                                },
+                                                {
+                                                    "block_name": "math_number_number",
+                                                    "number": "100"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "branchCode": [
+                                    {
+                                        "block_name": "text_statement_print",
+                                        "functionName": "text_print",
+                                        "argument": [
+                                            {
+                                                "block_name": "text_statement_promptExt",
+                                                "functionName": "text_prompt",
+                                                "argument": [
+                                                    {
+                                                        "block_name": "variables_statement_get",
+                                                        "functionName": "variables_get",
+                                                        "varName": "i"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "block_name": "controls_statement_else",
+                                "statements": "else",
+                                "branchCode": [
+                                    {
+                                        "block_name": "text_statement_print",
+                                        "functionName": "text_print",
+                                        "argument": [
+                                            {
+                                                "block_name": "text_string_reverse",
+                                                "functionName": "text_reverse",
+                                                "argument": [
+                                                    {
+                                                        "block_name": "variables_statement_get",
+                                                        "functionName": "variables_get",
+                                                        "varName": "i"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "return_value": {
+            "null": "NULL"
+        }
+    }
+]

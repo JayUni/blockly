@@ -6,12 +6,12 @@
                 "block_name": "controls_statement_if",
                 "statements": "if",
                 "condition": {
-                    "block_name": "logic_boolean_compare",
-                    "operator": "==",
+                    "block_name": "logic_boolean_operator_compare",
+                    "operator": "cmpe",
                     "argument": [
                         {
-                            "block_name": "math_arithmetic_arithmetic",
-                            "operator": "+",
+                            "block_name": "math_arithmetic_operator",
+                            "operator": "add",
                             "argument": [
                                 {
                                     "block_name": "math_number_number",
@@ -35,7 +35,7 @@
                         "functionName": "text_print",
                         "argument": [
                             {
-                                "block_name": "text_string",
+                                "block_name": "text_string_text",
                                 "text": "'True'"
                             }
                         ]
@@ -46,16 +46,16 @@
                 "block_name": "controls_statement_elseif",
                 "statements": "elseif",
                 "condition": {
-                    "block_name": "logic_boolean_compare",
-                    "operator": "==",
+                    "block_name": "logic_boolean_operator_compare",
+                    "operator": "cmpe",
                     "argument": [
                         {
                             "block_name": "math_number_number",
                             "number": "2"
                         },
                         {
-                            "block_name": "math_arithmetic_arithmetic",
-                            "operator": "+",
+                            "block_name": "math_arithmetic_operator",
+                            "operator": "add",
                             "argument": [
                                 {
                                     "block_name": "math_number_number",
@@ -69,16 +69,18 @@
                         }
                     ]
                 },
-                "branchCode": {
-                    "block_name": "text_statement_print",
-                    "functionName": "text_print",
-                    "argument": [
-                        {
-                            "block_name": "text_string",
-                            "text": "'AlsoTrue'"
-                        }
-                    ]
-                }
+                "branchCode": [
+                    {
+                        "block_name": "text_statement_print",
+                        "functionName": "text_print",
+                        "argument": [
+                            {
+                                "block_name": "text_string_text",
+                                "text": "'AlsoTrue'"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     }

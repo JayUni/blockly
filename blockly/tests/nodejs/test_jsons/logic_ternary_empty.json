@@ -1,1 +1,17 @@
-[{"block_name":"logic_statement_logicTernary","if":{"block_name":"logic_boolean_boolean","value":"FALSE"},"ifTrue":{"block_name":"logic_null_null","value":"NULL"},"ifFalse":{"block_name":"logic_null_null","value":"NULL"}}]
+[
+    {
+        "block_name": "logic_statement_logicTernary",
+        "if": {
+            "block_name": "logic_boolean_boolean",
+            "value": "FALSE"
+        },
+        "ifTrue": {
+            "block_name": "logic_null_null",
+            "value": "NULL"
+        },
+        "ifFalse": {
+            "block_name": "logic_null_null",
+            "value": "NULL"
+        }
+    }
+]

@@ -1,1 +1,296 @@
-[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"str","argument":[{"block_name":"text_string_text","text":"'abcdefghijklmn'"}]},{"block_name":"controls_statement_for","loop_style":"controls_for","variable":"i","start":{"block_name":"math_number_number","number":"1"},"end":{"block_name":"math_number_number","number":"10"},"step":{"block_name":"math_number_number","number":"1"},"branch":[{"block_name":"controls_statement_ifStructure","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"logic_boolean_compare","operator":"==","argument":[{"block_name":"math_number_modulo","operator":"%","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"3"}]},{"block_name":"math_number_number","number":"1"}]},"branchCode":[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"str","argument":[{"block_name":"text_string_join","functionName":"text_changeCase","argument":[{"block_name":"variables_variable_variable","text":{"block_name":"text_string_chatAt","functionName":"text_charAt","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"str"},{"where":"FROM_START"},{"index":{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}}]}},{"block_name":"text_string_changeCaseType","change_case_type":"UPPERCASE"}]}]}]},{"block_name":"controls_statement_elseif","statements":"elseif","condition":{"block_name":"logic_boolean_compare","operator":"==","argument":[{"block_name":"math_number_modulo","operator":"%","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"3"}]},{"block_name":"math_number_number","number":"2"}]},"branchCode":[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"str","argument":[{"block_name":"text_string_join","functionName":"text_changeCase","argument":[{"block_name":"variables_variable_variable","text":{"block_name":"text_string_chatAt","functionName":"text_charAt","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"str"},{"where":"FROM_START"},{"index":{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}}]}},{"block_name":"text_string_changeCaseType","change_case_type":"LOWERCASE"}]}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"str","argument":[{"block_name":"text_string_replace","functionName":"text_replace","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"str"},{"block_name":"text_string_currentStr","urrentStr":{"block_name":"text_string_chatAt","functionName":"text_charAt","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"str"},{"where":"FROM_START"},{"index":{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}}]}},{"block_name":"text_string_targetStr","targetStr":{"block_name":"text_string_text","text":"''"}}]}]}]}]},{"block_name":"controls_statement_repeat","loop_style":"controls_repeat_ext","repeat_times":{"block_name":"controls_statement_repeatExt","operator":"math.floor","argument":{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}},"branch":[{"block_name":"text_string_append","functionName":"text_append","argument":[{"varName":"str"},{"block_name":"text_string_textAppend","text_append":{"block_name":"text_string_text","text":"'/'"}}]}]}]},{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"text_string_trim","functionName":"text_trim","argument":[{"block_name":"variables_variable_variable","text":{"block_name":"text_string_reverse","functionName":"text_reverse","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"str"}]}},{"which_side":"BOTH"}]}]}]
+[
+    {
+        "block_name": "variables_statement_set",
+        "functionName": "variables_set",
+        "varName": "str",
+        "argument": [
+            {
+                "block_name": "text_string_text",
+                "text": "'abcdefghijklmn'"
+            }
+        ]
+    },
+    {
+        "block_name": "controls_statement_for",
+        "loop_style": "controls_for",
+        "variable": "i",
+        "start": {
+            "block_name": "math_number_number",
+            "number": "1"
+        },
+        "end": {
+            "block_name": "math_number_number",
+            "number": "10"
+        },
+        "step": {
+            "block_name": "math_number_number",
+            "number": "1"
+        },
+        "branch": [
+            {
+                "block_name": "controls_statement_ifStructure",
+                "structure": [
+                    {
+                        "block_name": "controls_statement_if",
+                        "statements": "if",
+                        "condition": {
+                            "block_name": "logic_boolean_operator_compare",
+                            "operator": "cmpe",
+                            "argument": [
+                                {
+                                    "block_name": "math_number_operator_modulo",
+                                    "operator": "remainder",
+                                    "argument": [
+                                        {
+                                            "block_name": "variables_statement_get",
+                                            "functionName": "variables_get",
+                                            "varName": "i"
+                                        },
+                                        {
+                                            "block_name": "math_number_number",
+                                            "number": "3"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "block_name": "math_number_number",
+                                    "number": "1"
+                                }
+                            ]
+                        },
+                        "branchCode": [
+                            {
+                                "block_name": "variables_statement_set",
+                                "functionName": "variables_set",
+                                "varName": "str",
+                                "argument": [
+                                    {
+                                        "block_name": "text_string_join",
+                                        "functionName": "text_changeCase",
+                                        "argument": [
+                                            {
+                                                "block_name": "variables_variable_variable",
+                                                "text": {
+                                                    "block_name": "text_string_chatAt",
+                                                    "functionName": "text_charAt",
+                                                    "argument": [
+                                                        {
+                                                            "block_name": "variables_statement_get",
+                                                            "functionName": "variables_get",
+                                                            "varName": "str"
+                                                        },
+                                                        {
+                                                            "where": "FROM_START"
+                                                        },
+                                                        {
+                                                            "index": {
+                                                                "block_name": "variables_statement_get",
+                                                                "functionName": "variables_get",
+                                                                "varName": "i"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "block_name": "text_string_changeCaseType",
+                                                "change_case_type": "UPPERCASE"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "block_name": "controls_statement_elseif",
+                        "statements": "elseif",
+                        "condition": {
+                            "block_name": "logic_boolean_operator_compare",
+                            "operator": "cmpe",
+                            "argument": [
+                                {
+                                    "block_name": "math_number_operator_modulo",
+                                    "operator": "remainder",
+                                    "argument": [
+                                        {
+                                            "block_name": "variables_statement_get",
+                                            "functionName": "variables_get",
+                                            "varName": "i"
+                                        },
+                                        {
+                                            "block_name": "math_number_number",
+                                            "number": "3"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "block_name": "math_number_number",
+                                    "number": "2"
+                                }
+                            ]
+                        },
+                        "branchCode": [
+                            {
+                                "block_name": "variables_statement_set",
+                                "functionName": "variables_set",
+                                "varName": "str",
+                                "argument": [
+                                    {
+                                        "block_name": "text_string_join",
+                                        "functionName": "text_changeCase",
+                                        "argument": [
+                                            {
+                                                "block_name": "variables_variable_variable",
+                                                "text": {
+                                                    "block_name": "text_string_chatAt",
+                                                    "functionName": "text_charAt",
+                                                    "argument": [
+                                                        {
+                                                            "block_name": "variables_statement_get",
+                                                            "functionName": "variables_get",
+                                                            "varName": "str"
+                                                        },
+                                                        {
+                                                            "where": "FROM_START"
+                                                        },
+                                                        {
+                                                            "index": {
+                                                                "block_name": "variables_statement_get",
+                                                                "functionName": "variables_get",
+                                                                "varName": "i"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "block_name": "text_string_changeCaseType",
+                                                "change_case_type": "LOWERCASE"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "block_name": "controls_statement_else",
+                        "statements": "else",
+                        "branchCode": [
+                            {
+                                "block_name": "variables_statement_set",
+                                "functionName": "variables_set",
+                                "varName": "str",
+                                "argument": [
+                                    {
+                                        "block_name": "text_string_replace",
+                                        "functionName": "text_replace",
+                                        "argument": [
+                                            {
+                                                "block_name": "variables_statement_get",
+                                                "functionName": "variables_get",
+                                                "varName": "str"
+                                            },
+                                            {
+                                                "block_name": "text_string_currentStr",
+                                                "urrentStr": {
+                                                    "block_name": "text_string_chatAt",
+                                                    "functionName": "text_charAt",
+                                                    "argument": [
+                                                        {
+                                                            "block_name": "variables_statement_get",
+                                                            "functionName": "variables_get",
+                                                            "varName": "str"
+                                                        },
+                                                        {
+                                                            "where": "FROM_START"
+                                                        },
+                                                        {
+                                                            "index": {
+                                                                "block_name": "variables_statement_get",
+                                                                "functionName": "variables_get",
+                                                                "varName": "i"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "block_name": "text_string_targetStr",
+                                                "targetStr": {
+                                                    "block_name": "text_string_text",
+                                                    "text": "''"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "block_name": "controls_statement_repeat",
+                "loop_style": "controls_repeat_ext",
+                "repeat_times": {
+                    "block_name": "controls_statement_repeatExt",
+                    "operator": "math.floor",
+                    "argument": {
+                        "block_name": "variables_statement_get",
+                        "functionName": "variables_get",
+                        "varName": "i"
+                    }
+                },
+                "branch": [
+                    {
+                        "block_name": "text_string_append",
+                        "functionName": "text_append",
+                        "argument": [
+                            {
+                                "varName": "str"
+                            },
+                            {
+                                "block_name": "text_string_textAppend",
+                                "text_append": {
+                                    "block_name": "text_string_text",
+                                    "text": "'/'"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "block_name": "text_statement_print",
+        "functionName": "text_print",
+        "argument": [
+            {
+                "block_name": "text_string_trim",
+                "functionName": "text_trim",
+                "argument": [
+                    {
+                        "block_name": "variables_variable_variable",
+                        "text": {
+                            "block_name": "text_string_reverse",
+                            "functionName": "text_reverse",
+                            "argument": [
+                                {
+                                    "block_name": "variables_statement_get",
+                                    "functionName": "variables_get",
+                                    "varName": "str"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "which_side": "BOTH"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -29,8 +29,8 @@
                         "block_name": "controls_statement_if",
                         "statements": "if",
                         "condition": {
-                            "block_name": "logic_boolean_compare",
-                            "operator": ">=",
+                            "block_name": "logic_boolean_operator_compare",
+                            "operator": "cmpge",
                             "argument": [
                                 {
                                     "block_name": "math_number_number",
@@ -49,14 +49,14 @@
                                 "functionName": "text_print",
                                 "argument": [
                                     {
-                                        "block_name": "text_string",
+                                        "block_name": "text_string_text",
                                         "text": "'false'"
                                     }
                                 ]
                             },
                             {
-                                "block_name": "math_statement_change",
-                                "functionName": "math_change",
+                                "block_name": "math_statement_function_change",
+                                "functionName": "change",
                                 "varName": "num",
                                 "argument": [
                                     {
@@ -83,7 +83,7 @@
                                 ]
                             },
                             {
-                                "block_name": "controls_statement_flowStatements",
+                                "block_name": "controls_statement_break",
                                 "statements": "break"
                             }
                         ]
@@ -96,8 +96,8 @@
                 "varName": "num",
                 "argument": [
                     {
-                        "block_name": "math_number_single",
-                        "operator": "LOG10",
+                        "block_name": "math_number_operator_single",
+                        "operator": "log10",
                         "argument": [
                             {
                                 "block_name": "variables_statement_get",
@@ -113,8 +113,8 @@
                 "functionName": "text_print",
                 "argument": [
                     {
-                        "block_name": "math_number_single",
-                        "operator": "ATAN",
+                        "block_name": "math_number_operator_single",
+                        "operator": "atan",
                         "argument": [
                             {
                                 "block_name": "variables_statement_get",
@@ -130,12 +130,12 @@
                 "functionName": "text_print",
                 "argument": [
                     {
-                        "block_name": "math_number_single",
-                        "operator": "POW10",
+                        "block_name": "math_number_operator_single",
+                        "operator": "pow10",
                         "argument": [
                             {
-                                "block_name": "math_number_modulo",
-                                "operator": "%",
+                                "block_name": "math_number_operator_modulo",
+                                "operator": "remainder",
                                 "argument": [
                                     {
                                         "block_name": "variables_statement_get",
@@ -143,8 +143,8 @@
                                         "varName": "num"
                                     },
                                     {
-                                        "block_name": "math_number_single",
-                                        "operator": "ROOT",
+                                        "block_name": "math_number_operator_single",
+                                        "operator": "sqrt",
                                         "argument": [
                                             {
                                                 "block_name": "variables_statement_get",
@@ -165,12 +165,12 @@
                 "varName": "num",
                 "argument": [
                     {
-                        "block_name": "math_arithmetic_arithmetic",
-                        "operator": "+",
+                        "block_name": "math_arithmetic_operator",
+                        "operator": "add",
                         "argument": [
                             {
-                                "block_name": "math_number_single",
-                                "operator": "ABS",
+                                "block_name": "math_number_operator_single",
+                                "operator": "abs",
                                 "argument": [
                                     {
                                         "block_name": "variables_statement_get",
@@ -180,37 +180,32 @@
                                 ]
                             },
                             {
-                                "block_name": "math_number_constant",
-                                "value": [
+                                "block_name": "math_arithmetic_operator",
+                                "operator": "div",
+                                "argument": [
                                     {
-                                        "block_name": "math_mathOperation_arithmetic",
-                                        "operator": "/",
+                                        "block_name": "math_arithmetic_operator",
+                                        "operator": "add",
                                         "argument": [
                                             {
-                                                "block_name": "math_mathOperation_arithmetic",
-                                                "operator": "+",
+                                                "block_name": "math_number_number",
+                                                "number": "1"
+                                            },
+                                            {
+                                                "block_name": "math_number_operator",
+                                                "operator": "sqrt",
                                                 "argument": [
                                                     {
                                                         "block_name": "math_number_number",
-                                                        "number": "1"
-                                                    },
-                                                    {
-                                                        "block_name": "math_operator_sqrt",
-                                                        "operator": "math.sqrt",
-                                                        "argument": [
-                                                            {
-                                                                "block_name": "math_number_number",
-                                                                "number": "5"
-                                                            }
-                                                        ]
+                                                        "number": "5"
                                                     }
                                                 ]
-                                            },
-                                            {
-                                                "block_name": "math_number_number",
-                                                "number": "2"
                                             }
                                         ]
+                                    },
+                                    {
+                                        "block_name": "math_number_number",
+                                        "number": "2"
                                     }
                                 ]
                             }
