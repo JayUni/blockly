@@ -1,7 +1,7 @@
 number 2
 exp
-number 1
-number 100
-randomInt //
+number 30
+number 45
+add
 tan
-cmpg //
+cmpg

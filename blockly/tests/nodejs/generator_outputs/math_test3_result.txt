@@ -1,7 +1,8 @@
-number PI  //
+constant PI
 number 9
 sqrt
 mul
-number 3.1//
-round//
+number 2
+number 3
+atan2
 sub

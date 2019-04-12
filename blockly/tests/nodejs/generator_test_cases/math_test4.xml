@@ -21,15 +21,16 @@
           <shadow type="math_number" id="hWVKu)u{7wqgw9j|(@na">
             <field name="NUM">45</field>
           </shadow>
-          <block type="math_random_int" id="Dyi;+X$K]F8+WEpycI[7">
-            <value name="FROM">
-              <shadow type="math_number" id="VH9(Aj5O/n)VsLm#I{my">
-                <field name="NUM">1</field>
+          <block type="math_arithmetic" id="ckT=@s6bV_.$jQ=ypn2q">
+            <field name="OP">ADD</field>
+            <value name="A">
+              <shadow type="math_number" id="r,N}C`8rnBhYq-O(?5xG">
+                <field name="NUM">30</field>
               </shadow>
             </value>
-            <value name="TO">
-              <shadow type="math_number" id="rDNY8kXB;G=xdVlj%P%x">
-                <field name="NUM">100</field>
+            <value name="B">
+              <shadow type="math_number" id="k)|1ZYWrugsNYW1/+hh3">
+                <field name="NUM">45</field>
               </shadow>
             </value>
           </block>

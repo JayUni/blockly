@@ -113,9 +113,9 @@ Blockly.Skoolbot['math_constant'] = function(block) {
   // Constants: PI, E, the Golden Ratio, sqrt(2), 1/sqrt(2), INFINITY.
   var CONSTANTS = {
 
-    PI: ['{ \"block_name\": \"math_number_number_constant\", \"number\": \"PI\"}', Blockly.Skoolbot.ORDER_ATOMIC],
+    PI: ['{ \"block_name\": \"math_number_constant_constant\", \"number\": \"PI\"}', Blockly.Skoolbot.ORDER_ATOMIC],
 
-    E: ['{ \"block_name\": \"math_number_number_constant\", \"number\": \"e\" }', Blockly.Skoolbot.ORDER_ATOMIC],
+    E: ['{ \"block_name\": \"math_number_constant_constant\", \"number\": \"e\" }', Blockly.Skoolbot.ORDER_ATOMIC],
 
     GOLDEN_RATIO: ['{ \"block_name\": \"math_arithmetic_operator\", \"operator\": \"div\", \"argument\":[{ \"block_name\": \"math_arithmetic_operator\", \"operator\": \"add\", \"argument\": [{ \"block_name\": \"math_number_number\", \"number\": \"1\"} , { \"block_name\": \"math_number_operator\", \"operator\": \"sqrt\", \"argument\":[{ \"block_name\": \"math_number_number\", \"number\": \"5\"}]}]}, { \"block_name\": \"math_number_number\", \"number\": \"2\"}]}', Blockly.Skoolbot.ORDER_ATOMIC],
 
@@ -123,7 +123,7 @@ Blockly.Skoolbot['math_constant'] = function(block) {
 
     SQRT1_2: ['{ \"block_name\": \"math_arithmetic_operator\", \"operator\": \"sqrt\", \"argument\": [{ \"block_name\": \"math_number_number\", \"number\": 0.5}]}', Blockly.Skoolbot.ORDER_ATOMIC],
 
-    INFINITY: ['{ \"block_name\": \"math_number_number_constant\", \"number\": \"INFINITY\"}', Blockly.Skoolbot.ORDER_ATOMIC],
+    INFINITY: ['{ \"block_name\": \"math_number_constant_constant\", \"number\": \"INFINITY\"}', Blockly.Skoolbot.ORDER_ATOMIC],
 
   };
   return CONSTANTS[block.getFieldValue('CONSTANT')];
