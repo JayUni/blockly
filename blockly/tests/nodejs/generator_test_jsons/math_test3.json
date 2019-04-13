@@ -8,7 +8,7 @@
                 "operator": "mul",
                 "argument": [
                     {
-                        "block_name": "math_number_number_constant",
+                        "block_name": "math_number_constant_constant",
                         "number": "PI"
                     },
                     {
@@ -24,12 +24,16 @@
                 ]
             },
             {
-                "block_name": "math_number_operator_single",
-                "operator": "round",
+                "block_name": "math_number_operator_atan2",
+                "operator": "atan2",
                 "argument": [
                     {
                         "block_name": "math_number_number",
-                        "number": "3.1"
+                        "number": "2"
+                    },
+                    {
+                        "block_name": "math_number_number",
+                        "number": "3"
                     }
                 ]
             }

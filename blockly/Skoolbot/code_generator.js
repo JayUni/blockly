@@ -2,8 +2,12 @@ var addTypeField = require('./addTypeField.js');
 const fs = require('fs');
 
 
+
 // global variable
 var commandList = [];
+var L0 = 0;
+var L1 = 0;
+
 
 function generator(jsonList){
     if (!hasChild(jsonList)[0]) {
@@ -18,10 +22,11 @@ function hasChild(jsonList) {
     for (var val of Object.values(jsonList)){
         if (val instanceof Object){
             generator(val);
-            addCommand(jsonList);
+            addCommand(jsonList);// This statement runs more than one time
             hasChild = true;
         }
     }
+
     return [hasChild, keys]
 }
 
@@ -54,7 +59,7 @@ function addCommand(jsonList){
                             commandList.push(jsonList.functionName);
                             break;
                         case 'constant':
-                            commandList.push(command + ' ' + jsonList.value);
+                            commandList.push(command + ' ' + jsonList.number);
                             break;
                         case 'function':
                             commandList.push(jsonList.functionName);
@@ -79,6 +84,7 @@ function addCommand(jsonList){
                             commandList.push("ERROR, UNDEFINED");
                             break;
                     }
+                    break;
                 case 'variables':
                     switch(command){
                         case 'set':
@@ -88,6 +94,7 @@ function addCommand(jsonList){
                             commandList.push('get ' + jsonList.varName);
                             break;
                     }
+                    break;
                 case 'text':
                     switch(command){
                         case 'text':
@@ -98,7 +105,31 @@ function addCommand(jsonList){
                             break;
 
                     }
+                    break;
+                case 'controls':
+                    switch(command){
+                        case 'if':
+                            console.log(jsonList.statements);
+                            if(jsonList.statements === 'if'){
+                                commandList.push('JUMPZ L0_' + L0);
 
+                                jsonList.statements = 'if_checked';
+                            }
+                            if(jsonList.statements ==='if_checked'){
+                                jsonList.statements = 'if_branchCode';
+                                break;
+                            }
+                            if(jsonList.statements ==='if_branchCode')
+                                commandList.push('JUMP L1_' + L1);
+                                commandList.push('L0_' + L0);
+                                L0 += 1;
+                            break;
+                        case 'else':
+                            commandList.push('L1_' + L1);
+                            L1 += 1;
+                            break;
+                    }
+                    break;
 
             }
 
@@ -131,7 +162,7 @@ function addCommand(jsonList){
 
 
 
-
+//
 // var str0 = JSON.parse(`[{"block_name":"math_number_operator_modulo","operator":"%","argument":[{"block_name":"math_number_number","number":"64"},{"block_name":"math_arithmetic_operator","operator":"sub","argument":[{"block_name":"math_number_number","number":"5"},{"block_name":"math_number_number","number":"2"}]}]}]
 // `);
 // var str1 = JSON.parse(`[{"block_name":"math_arithmetic_operator","operator":"pow","argument":[{"block_name":"math_arithmetic_operator","operator":"mul","argument":[{"block_name":"math_number_operator_single","operator":"acos","argument":[{"block_name":"math_number_number","number":"60"}]},{"block_name":"math_number_operator_single","operator":"log10","argument":[{"block_name":"math_number_number","number":"9"}]}]},{"block_name":"math_number_number","number":"2"}]}]
@@ -144,9 +175,11 @@ function addCommand(jsonList){
 // `);
 // var str5 = JSON.parse(`[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"a","argument":[{"block_name":"math_number_number","number":"123"}]},{"block_name":"variables_statement_set","functionName":"variables_set","varName":"b","argument":[{"block_name":"text_string_text","text":"'abc'"}]},{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"a"}]},{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"b"}]}]
 // `);
+// var str6 = JSON.parse(`[{"block_name":"controls_statement_if","statements":"if","condition":[{"block_name":"logic_boolean_operator_compare","operator":"cmpl","argument":[{"block_name":"math_number_number","number":"1"},{"block_name":"math_number_number","number":"2"}]}],"branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"logic_boolean_boolean","value":"TRUE"}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"logic_boolean_boolean","value":"FALSE"}]}]}]
+// `);
 //
 //
-// for (var i =0; i<6; i++){
+// for (var i =0; i<7; i++){
 //     var vars_name = 'str' + i;
 //     commandList = [];
 //     addTypeField.addTypeField(eval(vars_name));
@@ -162,18 +195,19 @@ function savetxt(path){
 
     fs.readFile(path, "utf8", function(err, jsondata) {
         if (!err) {
+            console.log(jsondata);
             jsondata = JSON.parse(jsondata);
             addTypeField.addTypeField(jsondata);
             commandList = [];
             var reslist = generator(jsondata);
+
             console.log(reslist);
             var restxt = "";
             for (var j in reslist){
                 restxt += reslist[j] + '\n';
             }
             var savefile = path.split('/')[4].split('.')[0];
-            fs.writeFile('./output/' + savefile + '_result' +
-                '.txt', restxt, (err) => {
+            fs.writeFile('../tests/nodejs/generator_outputs/' + savefile + '_result' + '.txt', restxt, (err) => {
                 if (err) throw err;
                 console.log('result is saved successfully!');
             });

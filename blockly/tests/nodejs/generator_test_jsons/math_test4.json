@@ -18,16 +18,16 @@
                 "operator": "tan",
                 "argument": [
                     {
-                        "block_name": "math_number_function_randomInt",
-                        "functionName": "randomInt",
+                        "block_name": "math_arithmetic_operator",
+                        "operator": "add",
                         "argument": [
                             {
                                 "block_name": "math_number_number",
-                                "number": "1"
+                                "number": "30"
                             },
                             {
                                 "block_name": "math_number_number",
-                                "number": "100"
+                                "number": "45"
                             }
                         ]
                     }
