@@ -1,10 +1,10 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 #include <time.h>
 
-//switch to c++
 //use vector of instructions
 //make a map for variable
 //assign - pop, map the symbol
