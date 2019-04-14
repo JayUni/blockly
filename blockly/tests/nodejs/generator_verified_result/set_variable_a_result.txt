@@ -1,4 +1,1 @@
-number 1
-number 2
-add
-set a
+a = 3
