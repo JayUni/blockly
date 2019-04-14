@@ -1,8 +1,1 @@
-constant PI
-number 9
-sqrt
-mul
-number 2
-number 3
-atan2
-sub
+-46.89

@@ -1,7 +1,1 @@
-number 60
-acos
-number 9
-log10
-mul
-number 2
-pow
+29502.75
