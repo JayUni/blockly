@@ -5,14 +5,17 @@
 #include <math.h>
 #include <time.h>
 
-//use vector of instructions
+
 //make a map for variable
 //assign - pop, map the symbol
 //print - pop, print on the screen
 //access - get from map and push to stack to do operations
-//testing environment
 
 //if - condition push to stack, cond jumpz, no cond jump, global l0 and l1
+
+//use vector of instructions
+
+//testing environment
 
 int stackSize = 255;
 int top = -1;
