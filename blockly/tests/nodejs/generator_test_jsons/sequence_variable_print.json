@@ -6,7 +6,7 @@
         "argument": [
             {
                 "block_name": "math_number_number",
-                "number": "123"
+                "number": "12"
             }
         ]
     },
@@ -16,8 +16,18 @@
         "varName": "b",
         "argument": [
             {
-                "block_name": "text_string_text",
-                "text": "'abc'"
+                "block_name": "math_arithmetic_operator",
+                "operator": "sub",
+                "argument": [
+                    {
+                        "block_name": "math_number_number",
+                        "number": "5"
+                    },
+                    {
+                        "block_name": "math_number_number",
+                        "number": "6"
+                    }
+                ]
             }
         ]
     },

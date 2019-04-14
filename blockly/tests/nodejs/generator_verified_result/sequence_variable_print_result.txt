@@ -6,3 +6,5 @@ sub
 set b
 get a
 print
+get b
+print

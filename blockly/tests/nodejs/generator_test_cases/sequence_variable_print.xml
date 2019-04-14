@@ -3,19 +3,29 @@
         <variable type="" id="Wqk^kP.HE%^sH5~vk*F(">a</variable>
         <variable type="" id="{`4=3m|bbD4+?KF$3ZVB">b</variable>
     </variables>
-    <block type="variables_set" id="QOLTrKHB;6I3/CI;H9hu" x="137" y="88">
+    <block type="variables_set" id="QOLTrKHB;6I3/CI;H9hu" x="213" y="138">
         <field name="VAR" id="Wqk^kP.HE%^sH5~vk*F(" variabletype="">a</field>
         <value name="VALUE">
             <block type="math_number" id="R)GXV,W+n`P}5#/7lc+Z">
-                <field name="NUM">123</field>
+                <field name="NUM">12</field>
             </block>
         </value>
         <next>
             <block type="variables_set" id="f(WFa,HiIUoUY{*B}|QQ">
                 <field name="VAR" id="{`4=3m|bbD4+?KF$3ZVB" variabletype="">b</field>
                 <value name="VALUE">
-                    <block type="text" id="gr*U)Oh(5Y;ScUS,(Uz*">
-                        <field name="TEXT">abc</field>
+                    <block type="math_arithmetic" id="3lP(g@l@%E)c=,VHcVQc">
+                        <field name="OP">MINUS</field>
+                        <value name="A">
+                            <shadow type="math_number" id=":cKBM`RuT0JYjy1?Ef!J">
+                                <field name="NUM">5</field>
+                            </shadow>
+                        </value>
+                        <value name="B">
+                            <shadow type="math_number" id="Mp[$r{FIjQ)Z?QkX,M6^">
+                                <field name="NUM">6</field>
+                            </shadow>
+                        </value>
                     </block>
                 </value>
                 <next>

@@ -135,7 +135,7 @@ int main (int argc, char *argv[]) {
       }
       int b = s.top();
       s.pop();
-      result = a % b;
+      result = b % a;
       s.push(result);
     } else if (command.compare("acos") == 0) {
       if (s.empty()) {
@@ -255,6 +255,29 @@ int main (int argc, char *argv[]) {
       std::string varName = program[counter];
       result = intVar[varName];
       s.push(result);
+    } else if (command.compare("cmpl") == 0) { //less or less equal???
+      if (s.empty()) {
+        std::cout<<"empty stack, pop is not allowed"<<std::endl;
+        return 0;
+      }
+      int a = s.top();
+      s.pop();
+
+      if (s.empty()) {
+        std::cout<<"empty stack, pop is not allowed"<<std::endl;
+        return 0;
+      }
+      int b = s.top();
+      s.pop();
+      if (b < a) {
+        s.push(0);
+      } else {
+        s.push(1);
+      }
+    } else if (command.compare("JUMPZ") == 0) {
+
+    } else if (command.compare("JUMP") == 0) {
+
     }
 
     else {
@@ -263,7 +286,7 @@ int main (int argc, char *argv[]) {
     }
     ++counter;
   }
-  
+
   if (s.empty()) {
     std::cout<<"empty stack, pop is not allowed"<<std::endl;
     return 0;
