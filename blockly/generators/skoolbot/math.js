@@ -93,6 +93,8 @@ Blockly.Skoolbot['math_single'] = function(block) {
       POW10: 'pow10',
       ROOT: 'sqrt',
       ROUND: 'round',
+      ROUNDUP: 'roundup',
+      ROUNDDOWN: 'rounddown',
       SIN: 'sin',
       COS: 'cos',
       TAN: 'tan',
