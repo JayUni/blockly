@@ -1,0 +1,22 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+    <block type="controls_whileUntil" id="0YzA(:/AE:,p)2dn8e4o" x="87" y="164">
+        <field name="MODE">WHILE</field>
+        <value name="BOOL">
+            <block type="logic_boolean" id="^CA6UC6p/k7[b6Qfs,7}">
+                <field name="BOOL">TRUE</field>
+            </block>
+        </value>
+        <statement name="DO">
+            <block type="text_print" id="9w-K#fvjD6kBh9|.-n?G">
+                <value name="TEXT">
+                    <shadow type="text" id="y4kC:9FD3i[jz^X6it2)">
+                        <field name="TEXT">abc</field>
+                    </shadow>
+                    <block type="math_number" id="GX2JXUu{f`xy$R*p2zcM">
+                        <field name="NUM">1</field>
+                    </block>
+                </value>
+            </block>
+        </statement>
+    </block>
+</xml>

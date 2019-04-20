@@ -32,7 +32,7 @@ goog.require('Blockly.Skoolbot');
 Blockly.Skoolbot['controls_if'] = function(block) {
   // If/elseif/else condition.
   var n = 0;
-  var code = '{ \"block_name\": \"controls_statement_if\", \"statements\": \"', branchCode, conditionCode;
+  var code = '{ \"block_name\": \"controls_statement_ifelse\", \"structure\": [{ \"block_name\": \"controls_statement_if\", \"statements\": \"', branchCode, conditionCode;
   do {
     conditionCode = Blockly.Skoolbot.valueToCode(block, 'IF' + n,
             Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"logic_boolean_boolean\", \"value\": \"FALSE\"}';
@@ -48,12 +48,13 @@ Blockly.Skoolbot['controls_if'] = function(block) {
 
   if (block.getInput('ELSE')) {
     branchCode = Blockly.Skoolbot.statementToCode(block, 'ELSE') || "";
-    code += '}, { \"block_name\": \"controls_statement_else\", \"statements\": \"else\", ' + '\"branchCode\": [' + branchCode + ']}';
+    code += '}, { \"block_name\": \"controls_statement_else\", \"statements\": \"else\", ' + '\"branchCode\": [' + branchCode + ']}]';
   }
   else
   {
-    code += '}';
+    code += '}, { \"block_name\": \"controls_statement_else\", \"statements\": \"else\", ' + '\"branchCode\": []}]';
   }
+  code += '}';
   return code;
 };
 

@@ -1,0 +1,7 @@
+L0_3
+boolean TRUE
+JUMPZ L1_3
+number 1
+print
+JUMP L0_3
+L1_3
