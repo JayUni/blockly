@@ -1,15 +1,16 @@
 number 1
 set i
-L0_6
+L0_5
 get i
 number 10
-cmpl
-JUMPZ L1_6
+cmpg
+not
+JUMPZ L1_5
 get i
 print
 get i
 number 1
 add
 set i
-JUMP L0_6
-L1_6
+JUMP L0_5
+L1_5

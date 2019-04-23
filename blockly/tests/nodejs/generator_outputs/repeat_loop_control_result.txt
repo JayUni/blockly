@@ -1,0 +1,19 @@
+number 1
+set i
+L0_3
+number 10
+set repeat_control_variable
+get i
+print
+get i
+number 1
+add
+set i
+get repeat_control_variable
+number 1
+sub
+number 0
+cmple
+JUMPZ L1_3
+JUMP L0_3
+L1_3

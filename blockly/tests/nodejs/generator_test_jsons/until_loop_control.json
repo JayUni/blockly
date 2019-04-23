@@ -15,7 +15,7 @@
         "loop_style": "controls_whileUntil",
         "repeat_condition": {
             "block_name": "logic_boolean_operator_compare",
-            "operator": "cmpl",
+            "operator": "cmpg",
             "argument": [
                 {
                     "block_name": "variables_statement_get",
@@ -28,7 +28,7 @@
                 }
             ]
         },
-        "end_type": "while",
+        "end_type": "until",
         "branch": [
             {
                 "block_name": "text_statement_print",

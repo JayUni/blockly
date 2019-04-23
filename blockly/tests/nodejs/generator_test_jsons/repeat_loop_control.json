@@ -11,24 +11,16 @@
         ]
     },
     {
-        "block_name": "controls_statement_whileUntil",
-        "loop_style": "controls_whileUntil",
-        "repeat_condition": {
-            "block_name": "logic_boolean_operator_compare",
-            "operator": "cmpl",
-            "argument": [
-                {
-                    "block_name": "variables_statement_get",
-                    "functionName": "variables_get",
-                    "varName": "i"
-                },
-                {
-                    "block_name": "math_number_number",
-                    "number": "10"
-                }
-            ]
+        "block_name": "controls_statement_repeat",
+        "loop_style": "controls_repeat_ext",
+        "repeat_times": {
+            "block_name": "controls_statement_repeatExt",
+            "operator": "math.floor",
+            "argument": {
+                "block_name": "math_number_number",
+                "number": "10"
+            }
         },
-        "end_type": "while",
         "branch": [
             {
                 "block_name": "text_statement_print",

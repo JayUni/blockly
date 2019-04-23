@@ -1,11 +1,11 @@
 number 1
 number 2
 cmpl
-JUMPZ L0_2
+JUMPZ L0_0
 boolean TRUE
 print
-JUMP L1_2
-L0_2
+JUMP L1_0
+L0_0
 boolean FALSE
 print
-L1_2
+L1_0
