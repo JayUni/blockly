@@ -135,15 +135,15 @@ function addCommand(jsonList){
                             console.log(jsonList.statements);
                             if(jsonList.statements === 'elseif'){
                                 commandList.push('JUMPZ L0_' + jsonList.label_0);
-
                                 jsonList.statements = 'if_checked';
                             }
                             if(jsonList.statements ==='if_checked'){
                                 jsonList.statements = 'if_branchCode';
                                 break;
                             }
-                            if(jsonList.statements ==='if_branchCode')
+                            if(jsonList.statements ==='if_branchCode'){
                                 commandList.push('JUMP L1_' + jsonList.label_1);
+                            }
                             commandList.push('L0_' + jsonList.label_0);
 
 
@@ -154,6 +154,9 @@ function addCommand(jsonList){
                             break;
                         case 'whileUntil':
                             if (jsonList.label === 'added'){
+                                if(jsonList.end_type === 'until'){
+                                    commandList.push('not');
+                                }
                                 commandList.push('JUMPZ L1_' + jsonList.label_0);
                                 jsonList.label = 'conditionAdded';
                                 break;
@@ -162,6 +165,20 @@ function addCommand(jsonList){
                                 commandList.push('JUMP L0_' + jsonList.label_0);
                                 commandList.push('L1_' + jsonList.label_1);
                             }
+                            break;
+                        case 'repeat':
+                            if (jsonList.label === 'added'){
+                                commandList.push('set repeat_control_variable');
+                                jsonList.label = 'variableAdded';
+                                break;
+                            }
+                            if (jsonList.label === 'variableAdded'){
+                                commandList.push('get repeat_control_variable', 'number 1', 'sub', 'number 0', 'cmple');
+                                commandList.push('JUMPZ L1_' + jsonList.label_0);
+                                commandList.push('JUMP L0_' + jsonList.label_0);
+                                commandList.push('L1_' + jsonList.label_1);
+                            }
+                            break;
 
                     }
                     break;
@@ -211,9 +228,27 @@ function addLabel(jsonList) {
                                         jsonList.label = "added";
                                         commandList.push('L0_' + jsonList.label_0);
                                     }
-
-
                                     break;
+                                case 'until':
+                                    if (!jsonList.label){
+                                        jsonList.label_0 = L0;
+                                        jsonList.label_1 = L1;
+                                        L0 += 1;
+                                        L1 += 1;
+                                        jsonList.label = "added";
+                                        commandList.push('L0_' + jsonList.label_0);
+                                    }
+                                    break;
+                            }
+                            break;
+                        case 'repeat':
+                            if (!jsonList.label){
+                                jsonList.label_0 = L0;
+                                jsonList.label_1 = L1;
+                                L0 += 1;
+                                L1 += 1;
+                                jsonList.label = "added";
+                                commandList.push('L0_' + jsonList.label_0);
                             }
                             break;
                     }
@@ -228,25 +263,29 @@ function addLabel(jsonList) {
 
 
 // For debugging
-//
-//
-// var str0 = JSON.parse(`[{"block_name":"controls_statement_whileUntil","loop_style":"controls_whileUntil","repeat_condition":{"block_name":"logic_boolean_boolean","value":"TRUE"},"end_type":"while","branch":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"math_number_number","number":"1"}]}]}]
-// `);
-//
-//
-//
-//
-//
-// for (var i =0; i<1; i++){
-//     var vars_name = 'str' + i;
-//     commandList = [];
-//     addTypeField.addTypeField(eval(vars_name));
-//     console.log("JSON: \n", JSON.stringify(eval(vars_name), null, 4));
-//     console.log(generator(eval(vars_name)));
-//     console.log("JSON_result: \n", JSON.stringify(eval(vars_name), null, 4));
-//
-//     console.log("\n\n#######################################\n\n")
-// }
+
+
+var str0 = JSON.parse(`[{"block_name":"controls_statement_whileUntil","loop_style":"controls_whileUntil","repeat_condition":{"block_name":"logic_boolean_boolean","value":"TRUE"},"end_type":"while","branch":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"math_number_number","number":"1"}]}]}]
+`);
+var str1 = JSON.parse(`[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"i","argument":[{"block_name":"math_number_number","number":"1"}]},{"block_name":"controls_statement_whileUntil","loop_style":"controls_whileUntil","repeat_condition":{"block_name":"logic_boolean_operator_compare","operator":"cmpg","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"10"}]},"end_type":"until","branch":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]},{"block_name":"variables_statement_set","functionName":"variables_set","varName":"i","argument":[{"block_name":"math_arithmetic_operator","operator":"add","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"1"}]}]}]}]
+`);
+var str2 = JSON.parse(`[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"i","argument":[{"block_name":"math_number_number","number":"1"}]},{"block_name":"controls_statement_repeat","loop_style":"controls_repeat_ext","repeat_times":{"block_name":"controls_statement_repeatExt","operator":"math.floor","argument":{"block_name":"math_number_number","number":"10"}},"branch":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]},{"block_name":"variables_statement_set","functionName":"variables_set","varName":"i","argument":[{"block_name":"math_arithmetic_operator","operator":"add","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"1"}]}]}]}]
+`);
+
+
+
+
+
+for (var i =0; i<3; i++){
+    var vars_name = 'str' + i;
+    commandList = [];
+    addTypeField.addTypeField(eval(vars_name));
+    console.log("JSON: \n", JSON.stringify(eval(vars_name), null, 4));
+    console.log(generator(eval(vars_name)));
+    console.log("JSON_result: \n", JSON.stringify(eval(vars_name), null, 4));
+
+    console.log("\n\n#######################################\n\n")
+}
 
 
 
@@ -290,5 +329,5 @@ function travel(dir, callback) {
     });
 }
 
-var path = '../tests/nodejs/generator_test_jsons/';
-travel(path, savetxt);
+// var path = '../tests/nodejs/generator_test_jsons/';
+// travel(path, savetxt);
