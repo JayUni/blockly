@@ -25,6 +25,9 @@ function hasChild(jsonList) {
             addCommand(jsonList);// This statement runs more than one time
             hasChild = true;
         }
+        else{
+            addLabel(jsonList);
+        }
     }
 
     return [hasChild, keys]
@@ -109,9 +112,10 @@ function addCommand(jsonList){
                 case 'controls':
                     switch(command){
                         case 'if':
+
                             console.log(jsonList.statements);
                             if(jsonList.statements === 'if'){
-                                commandList.push('JUMPZ L0_' + L0);
+                                commandList.push('JUMPZ L0_' + jsonList.label_0);
 
                                 jsonList.statements = 'if_checked';
                             }
@@ -120,14 +124,62 @@ function addCommand(jsonList){
                                 break;
                             }
                             if(jsonList.statements ==='if_branchCode')
-                                commandList.push('JUMP L1_' + L1);
-                                commandList.push('L0_' + L0);
-                                L0 += 1;
+                                commandList.push('JUMP L1_' + jsonList.label_1);
+                            commandList.push('L0_' + jsonList.label_0);
+
+
+
+                            break;
+                        case 'elseif':
+
+                            console.log(jsonList.statements);
+                            if(jsonList.statements === 'elseif'){
+                                commandList.push('JUMPZ L0_' + jsonList.label_0);
+                                jsonList.statements = 'if_checked';
+                            }
+                            if(jsonList.statements ==='if_checked'){
+                                jsonList.statements = 'if_branchCode';
+                                break;
+                            }
+                            if(jsonList.statements ==='if_branchCode'){
+                                commandList.push('JUMP L1_' + jsonList.label_1);
+                            }
+                            commandList.push('L0_' + jsonList.label_0);
+
+
                             break;
                         case 'else':
-                            commandList.push('L1_' + L1);
-                            L1 += 1;
+                            console.log('else', jsonList.label_1);
+                            commandList.push('L1_' + jsonList.label_1);
                             break;
+                        case 'whileUntil':
+                            if (jsonList.label === 'added'){
+                                if(jsonList.end_type === 'until'){
+                                    commandList.push('not');
+                                }
+                                commandList.push('JUMPZ L1_' + jsonList.label_0);
+                                jsonList.label = 'conditionAdded';
+                                break;
+                            }
+                            if (jsonList.label === 'conditionAdded'){
+                                commandList.push('JUMP L0_' + jsonList.label_0);
+                                commandList.push('L1_' + jsonList.label_1);
+                            }
+                            break;
+                        case 'repeat':
+                            if (jsonList.label === 'added'){
+                                commandList.push('set repeat_control_variable');
+                                jsonList.label = 'variableAdded';
+                                break;
+                            }
+                            if (jsonList.label === 'variableAdded'){
+                                commandList.push('get repeat_control_variable', 'number 1', 'sub', 'number 0', 'cmple');
+                                commandList.push('JUMPZ L1_' + jsonList.label_0);
+                                commandList.push('JUMP L0_' + jsonList.label_0);
+                                commandList.push('L1_' + jsonList.label_1);
+                            }
+                            break;
+
                     }
                     break;
 
@@ -137,54 +189,100 @@ function addCommand(jsonList){
     }
 }
 
+function addLabel(jsonList) {
+    for (var [key, val] of Object.entries(jsonList)) {
+        if (key === 'block_name' && val !== undefined) {
+            var block_type = val.split('_')[0];
+            var command = val.split('_')[2];
+            switch (block_type) {
+                case 'controls':
+                    switch(command){
+                        case 'ifelse':
+                            if (!jsonList.label){
+                                var branch_num = jsonList.structure.length;
+
+                                for (var i = 0; i < branch_num-1; i++) {
+                                    jsonList.structure[i].label_0 = L0;
+                                    jsonList.structure[i].label_1 = L1;
+                                    L0 += 1;
+                                    L1 += 1;
+                                }
+                                if(jsonList.structure[branch_num-1].block_name === 'controls_statement_else'){
+                                    jsonList.structure[branch_num-1].label_0 = L0-1;
+                                    jsonList.structure[branch_num-1].label_1 = L1-1;
+                                }
+                                jsonList.label = "added";
+
+
+
+                            }
+                            break;
+                        case 'whileUntil':
+                            switch(jsonList.end_type){
+                                case 'while':
+                                    if (!jsonList.label){
+                                        jsonList.label_0 = L0;
+                                        jsonList.label_1 = L1;
+                                        L0 += 1;
+                                        L1 += 1;
+                                        jsonList.label = "added";
+                                        commandList.push('L0_' + jsonList.label_0);
+                                    }
+                                    break;
+                                case 'until':
+                                    if (!jsonList.label){
+                                        jsonList.label_0 = L0;
+                                        jsonList.label_1 = L1;
+                                        L0 += 1;
+                                        L1 += 1;
+                                        jsonList.label = "added";
+                                        commandList.push('L0_' + jsonList.label_0);
+                                    }
+                                    break;
+                            }
+                            break;
+                        case 'repeat':
+                            if (!jsonList.label){
+                                jsonList.label_0 = L0;
+                                jsonList.label_1 = L1;
+                                L0 += 1;
+                                L1 += 1;
+                                jsonList.label = "added";
+                                commandList.push('L0_' + jsonList.label_0);
+                            }
+                            break;
+                    }
+                    break;
+
+            }
+        }
+    }
+}
+
+
+
 
 // For debugging
 
-// var str0 = JSON.parse(`[{"block_name":"logic_boolean_compare","operator":"cmple","argument":[{"block_name":"math_arithmetic_operator","operator":"sub","argument":[{"block_name":"math_number_number","number":"1"},{"block_name":"math_number_number","number":"2"}]},{"block_name":"math_number_number","number":"5"}]}]
-// `);
-// var str1 = JSON.parse(`[{"block_name":"math_arithmetic_operator","operator":"add","argument":[{"block_name":"math_arithmetic_operator","operator":"add","argument":[{"block_name":"math_number_number","number":"2"},{"block_name":"math_number_number","number":"1"}]},{"block_name":"math_number_number","number":"5"}]}]
-// `);
-// var str2 = JSON.parse(`[{"block_name":"math_number_operator","operator":"sqrt","argument":[{"block_name":"math_number_number","number":"9"}]},{"block_name":"math_number_operator","operator":"abs","argument":[{"block_name":"math_number_number","number":"9"}]},{"block_name":"math_number_single","operator":"neg","argument":[{"block_name":"math_number_number","number":"9"}]},{"block_name":"math_number_single","operator":"ln","argument":[{"block_name":"math_number_number","number":"9"}]},{"block_name":"math_number_single","operator":"log10","argument":[{"block_name":"math_number_number","number":"9"}]},{"block_name":"math_number_single","operator":"exp","argument":[{"block_name":"math_number_number","number":"9"}]},{"block_name":"math_number_single","operator":"pow10","argument":[{"block_name":"math_number_number","number":"9"}]}]
-// `);
-// var str3 = JSON.parse(`[{"block_name":"math_number_operator","operator":"SIN","argument":[{"block_name":"math_number_number","number":"45"}]}]
-// `);
-// var str4 = JSON.parse(`[{"block_name":"math_arithmetic_operator","operator":"div","argument":[{"block_name":"math_arithmetic_operator","operator":"add","argument":[{"block_name":"math_number_number","number":"1"},{"block_name":"math_number_sqrt","operator":"sqrt","argument":[{"block_name":"math_number_number","number":"5"}]}]},{"block_name":"math_number_number","number":"2"}]}]
-// `);
-// var str5 = JSON.parse(`[{"block_name":"math_number_operator","operator":"ROUND","argument":[{"block_name":"math_number_number","number":"3.1"}]}]
-// `);
-// var str6 = JSON.parse(`[{"block_name":"math_boolean_numberProperty","functionName":"isEven","argument":[{"block_name":"math_number_number","number":"0"}]}]
-// `);
-// var str7 = JSON.parse(`[{"block_name":"logic_boolean_logicOperation","operator":"or","argument":[{"block_name":"logic_boolean_boolean","value":"TRUE"},{"block_name":"logic_boolean_boolean","value":"FALSE"}]}]
-// `);
-// var str8 = JSON.parse(`[{"block_name":"math_number_operator_single","operator":"sin","argument":[{"block_name":"math_number_number","number":"45"}]},{"block_name":"math_number_operator_single","operator":"cos","argument":[{"block_name":"math_number_number","number":"45"}]},{"block_name":"math_number_operator_single","operator":"tan","argument":[{"block_name":"math_number_number","number":"45"}]},{"block_name":"math_number_operator_single","operator":"asin","argument":[{"block_name":"math_number_number","number":"45"}]},{"block_name":"math_number_operator_single","operator":"acos","argument":[{"block_name":"math_number_number","number":"45"}]},{"block_name":"math_number_operator_single","operator":"atan","argument":[{"block_name":"math_number_number","number":"45"}]}]
-// `);
 
-
-
-
-//
-// var str0 = JSON.parse(`[{"block_name":"math_number_operator_modulo","operator":"%","argument":[{"block_name":"math_number_number","number":"64"},{"block_name":"math_arithmetic_operator","operator":"sub","argument":[{"block_name":"math_number_number","number":"5"},{"block_name":"math_number_number","number":"2"}]}]}]
+// var str0 = JSON.parse(`[{"block_name":"controls_statement_whileUntil","loop_style":"controls_whileUntil","repeat_condition":{"block_name":"logic_boolean_boolean","value":"TRUE"},"end_type":"while","branch":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"math_number_number","number":"1"}]}]}]
 // `);
-// var str1 = JSON.parse(`[{"block_name":"math_arithmetic_operator","operator":"pow","argument":[{"block_name":"math_arithmetic_operator","operator":"mul","argument":[{"block_name":"math_number_operator_single","operator":"acos","argument":[{"block_name":"math_number_number","number":"60"}]},{"block_name":"math_number_operator_single","operator":"log10","argument":[{"block_name":"math_number_number","number":"9"}]}]},{"block_name":"math_number_number","number":"2"}]}]
+// var str1 = JSON.parse(`[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"i","argument":[{"block_name":"math_number_number","number":"1"}]},{"block_name":"controls_statement_whileUntil","loop_style":"controls_whileUntil","repeat_condition":{"block_name":"logic_boolean_operator_compare","operator":"cmpg","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"10"}]},"end_type":"until","branch":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]},{"block_name":"variables_statement_set","functionName":"variables_set","varName":"i","argument":[{"block_name":"math_arithmetic_operator","operator":"add","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"1"}]}]}]}]
 // `);
-// var str2 = JSON.parse(`[{"block_name":"math_arithmetic_operator","operator":"sub","argument":[{"block_name":"math_arithmetic_operator","operator":"mul","argument":[{"block_name":"math_number_number_constant","number":"PI"},{"block_name":"math_number_operator_single","operator":"sqrt","argument":[{"block_name":"math_number_number","number":"9"}]}]},{"block_name":"math_number_operator_single","operator":"round","argument":[{"block_name":"math_number_number","number":"3.1"}]}]}]
-// `);
-// var str3 = JSON.parse(`[{"block_name":"logic_boolean_operator_compare","operator":"cmpg","argument":[{"block_name":"math_number_operator_single","operator":"exp","argument":[{"block_name":"math_number_number","number":"2"}]},{"block_name":"math_number_operator_single","operator":"tan","argument":[{"block_name":"math_number_function_randomInt","functionName":"randomInt","argument":[{"block_name":"math_number_number","number":"1"},{"block_name":"math_number_number","number":"100"}]}]}]}]
-// `);
-// var str4 = JSON.parse(`[{"block_name":"math_number_operator_constrain","operator":"constrain","argument":[{"block_name":"math_number_number","number":"50"},{"block_name":"math_number_number","number":"1"},{"block_name":"math_number_operator_single","operator":"round","argument":[{"block_name":"math_number_operator_single","operator":"sqrt","argument":[{"block_name":"math_number_number","number":"15"}]}]}]}]
-// `);
-// var str5 = JSON.parse(`[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"a","argument":[{"block_name":"math_number_number","number":"123"}]},{"block_name":"variables_statement_set","functionName":"variables_set","varName":"b","argument":[{"block_name":"text_string_text","text":"'abc'"}]},{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"a"}]},{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"b"}]}]
-// `);
-// var str6 = JSON.parse(`[{"block_name":"controls_statement_if","statements":"if","condition":[{"block_name":"logic_boolean_operator_compare","operator":"cmpl","argument":[{"block_name":"math_number_number","number":"1"},{"block_name":"math_number_number","number":"2"}]}],"branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"logic_boolean_boolean","value":"TRUE"}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"logic_boolean_boolean","value":"FALSE"}]}]}]
+// var str2 = JSON.parse(`[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"i","argument":[{"block_name":"math_number_number","number":"1"}]},{"block_name":"controls_statement_repeat","loop_style":"controls_repeat_ext","repeat_times":{"block_name":"controls_statement_repeatExt","operator":"math.floor","argument":{"block_name":"math_number_number","number":"10"}},"branch":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]},{"block_name":"variables_statement_set","functionName":"variables_set","varName":"i","argument":[{"block_name":"math_arithmetic_operator","operator":"add","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"1"}]}]}]}]
 // `);
 //
 //
-// for (var i =0; i<7; i++){
+//
+//
+//
+// for (var i =0; i<3; i++){
 //     var vars_name = 'str' + i;
 //     commandList = [];
 //     addTypeField.addTypeField(eval(vars_name));
 //     console.log("JSON: \n", JSON.stringify(eval(vars_name), null, 4));
 //     console.log(generator(eval(vars_name)));
+//     console.log("JSON_result: \n", JSON.stringify(eval(vars_name), null, 4));
 //
 //     console.log("\n\n#######################################\n\n")
 // }
