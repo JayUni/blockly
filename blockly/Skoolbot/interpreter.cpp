@@ -6,9 +6,6 @@
 #include <map>
 #include <cmath>
 
-
-//if - condition push to stack, cond jumpz, no cond jump, global l0 and l1
-
 //testing environment
 
 using namespace std;
@@ -30,11 +27,42 @@ int main (int argc, char *argv[]) {
 
   std::string command;
   std::vector<std::string> program;
+  int condJump = -1;
+  int noCondJump = -1;
+  std::vector<int> jumpz;
+  std::vector<int> jump;
+  unsigned int counter = 0;
   while (file>>command) {
     program.push_back(command);
+    if (command.compare("JUMPZ") == 0) {
+      ++condJump;
+      jumpz.push_back(counter);
+      file>>command;
+      program.push_back("nop");
+      ++counter;
+    } else if (command.compare("JUMP") == 0) {
+      ++noCondJump;
+      jump.push_back(counter);
+      file>>command;
+      program.push_back("nop");
+      ++counter;
+    } else if (command.compare("L0_"+ std::to_string(condJump)) == 0) {
+      program[jumpz[condJump]+1] = std::to_string(counter);
+      --condJump;
+      program[counter] = "nop";
+      ++counter;
+      continue;
+    } else if (command.compare("L1_"+ std::to_string(noCondJump)) == 0) {
+      program[jump[noCondJump]+1] = std::to_string(counter);
+      --noCondJump;
+      program[counter] = "nop";
+      ++counter;
+      continue;
+    }
+    ++counter;
   }
 
-  unsigned int counter = 0;
+  counter = 0;
   std::map<std::string, int> intVar;
   std::map<std::string, std::string> strVar;
   std::stack <int> s;
@@ -48,7 +76,7 @@ int main (int argc, char *argv[]) {
       command = program[counter];
 
       std::string::size_type size;
-      int num = std::stoi (command, &size); //check errno, no decimal
+      int num = std::stoi (command, &size);
       if (size != command.size()) {
         std::cout<<"Invalid number\n"<<std::endl;
         return -1;
@@ -144,8 +172,8 @@ int main (int argc, char *argv[]) {
       }
       int a = s.top();
       s.pop();
-      a = a * pi/180;
-      result = acos(a);
+      // a = a * pi/180; deg to rad
+      result = acos(a)  * 180/pi;// rad to deg
       s.push(result); //acos cannot be bigger than 1
     } else if (command.compare("log10") == 0) {
       if (s.empty()) {
@@ -203,7 +231,7 @@ int main (int argc, char *argv[]) {
       }
       int a = s.top();
       s.pop();
-      a = a * pi/180;
+      a = a * pi/180; //deg to rad
       result = tan(a);//cannot be 90 and would be negative if over
       s.push(result);           //they are radian maybe should do degtorad
     } else if (command.compare("atan2") == 0) {
@@ -223,7 +251,11 @@ int main (int argc, char *argv[]) {
                           //check order
       s.push(result);           //they are radian maybe should do degtorad
     } else if (command.compare("cmpg") == 0) {
-      break;
+      if (b > a) {
+        s.push(0);
+      } else {
+        s.push(1);
+      }
     } else if (command.compare("ln") == 0) {
       if (s.empty()) {
         std::cout<<"empty stack, pop is not allowed"<<std::endl;
@@ -240,7 +272,7 @@ int main (int argc, char *argv[]) {
       }
       int a = s.top();
       std::cout<<a<<"\n";
-    } else if (command.compare("set") == 0) { //does set push to stack
+    } else if (command.compare("set") == 0) { //does set push to stack???
       if (s.empty()) {
         std::cout<<"empty stack, pop is not allowed"<<std::endl;
         return 0;
@@ -275,8 +307,44 @@ int main (int argc, char *argv[]) {
         s.push(1);
       }
     } else if (command.compare("JUMPZ") == 0) {
+      ++counter;
+      command = program[counter];
+      if (s.empty()) {
+        std::cout<<"empty stack, pop is not allowed"<<std::endl;
+        return 0;
+      }
+      int condition = s.top();
+      s.pop();
 
+      if (condition == 0) {
+        std::string::size_type size;
+        counter = std::stoi(command, &size);
+        if (size != command.size()) {
+          std::cout<<"Invalid number\n"<<std::endl;
+          return -1;
+        }
+      }
     } else if (command.compare("JUMP") == 0) {
+      ++counter;
+      command = program[counter];
+      std::string::size_type size;
+      counter = std::stoi(command, &size);
+      if (size != command.size()) {
+        std::cout<<"Invalid number\n"<<std::endl;
+        return -1;
+      }
+    } else if (command.compare("boolean") == 0) {
+      ++counter;
+      command = program[counter];
+      if (command.compare("TRUE")) {
+        s.push(0);
+      } else if (command.compare("FALSE")) {
+        s.push(1);
+      } else {
+        std::cout<<"Invalid command: "<<command<<std::endl;
+        return -1;
+      }
+    } else if (command.compare("nop") == 0) {
 
     }
 
