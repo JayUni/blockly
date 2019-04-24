@@ -2,16 +2,16 @@ number 17
 number 3
 remainder
 isEven
-JUMPZ L0_2
+JUMPZ L0_6
 number 17
 print
-JUMP L1_2
-L0_2
+JUMP L1_6
+L0_6
 boolean TRUE
-JUMPZ L0_3
+JUMPZ L0_7
 boolean TRUE
 print
-JUMP L1_3
-L0_3
-L1_3
-L1_2
+JUMP L1_7
+L0_7
+L1_7
+L1_6
