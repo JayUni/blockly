@@ -1,15 +1,15 @@
 number 1
 set i
-L0_6
+L0_11
 get i
 number 10
 cmpl
-JUMPZ L1_6
+JUMPZ L1_11
 get i
 print
 get i
 number 1
 add
 set i
-JUMP L0_6
-L1_6
+JUMP L0_11
+L1_11

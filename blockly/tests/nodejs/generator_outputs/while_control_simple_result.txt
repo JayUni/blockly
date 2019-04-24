@@ -1,7 +1,7 @@
-L0_4
+L0_10
 boolean TRUE
-JUMPZ L1_4
+JUMPZ L1_10
 number 1
 print
-JUMP L0_4
-L1_4
+JUMP L0_10
+L1_10

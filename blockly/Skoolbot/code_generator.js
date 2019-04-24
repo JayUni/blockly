@@ -271,12 +271,14 @@ function addLabel(jsonList) {
 // `);
 // var str2 = JSON.parse(`[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"i","argument":[{"block_name":"math_number_number","number":"1"}]},{"block_name":"controls_statement_repeat","loop_style":"controls_repeat_ext","repeat_times":{"block_name":"controls_statement_repeatExt","operator":"math.floor","argument":{"block_name":"math_number_number","number":"10"}},"branch":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]},{"block_name":"variables_statement_set","functionName":"variables_set","varName":"i","argument":[{"block_name":"math_arithmetic_operator","operator":"add","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"1"}]}]}]}]
 // `);
-//
-//
-//
-//
-//
-// for (var i =0; i<3; i++){
+// var str3 = JSON.parse(`[{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"math_boolean_numberProperty","functionName":"isEven","argument":[{"block_name":"math_number_operator_modulo","operator":"remainder","argument":[{"block_name":"math_number_number","number":"17"},{"block_name":"math_number_number","number":"3"}]}]},"branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"math_number_number","number":"17"}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"logic_boolean_boolean","value":"TRUE"},"branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"logic_boolean_boolean","value":"TRUE"}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[]}]}]}]}]
+// `);
+
+
+
+
+
+// for (var i =0; i<4; i++){
 //     var vars_name = 'str' + i;
 //     commandList = [];
 //     addTypeField.addTypeField(eval(vars_name));
