@@ -1,0 +1,67 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+    <variables>
+        <variable type="" id="-y+*9?[sd%dvL7ZP1)no">i</variable>
+    </variables>
+    <block type="controls_for" id=":t,lgh$MMkliVPxEB9E`" x="87" y="88">
+        <field name="VAR" id="-y+*9?[sd%dvL7ZP1)no" variabletype="">i</field>
+        <value name="FROM">
+            <shadow type="math_number" id="2h-gBCbUnsG6(Y}+_)C|">
+                <field name="NUM">1</field>
+            </shadow>
+        </value>
+        <value name="TO">
+            <shadow type="math_number" id="L6w8x[W4GI_]FvKdUkip">
+                <field name="NUM">100</field>
+            </shadow>
+        </value>
+        <value name="BY">
+            <shadow type="math_number" id="zK:i7vZibtQVVfmu=vRX">
+                <field name="NUM">3</field>
+            </shadow>
+        </value>
+        <statement name="DO">
+            <block type="controls_if" id="NCKyPHXfTrsL`zKH1F$E">
+                <value name="IF0">
+                    <block type="logic_negate" id="qi%!M5$p0wOzg(1~Hd^*">
+                        <value name="BOOL">
+                            <block type="math_number_property" id="ng)lAw|q!RJSdxHzz+ER">
+                                <mutation divisor_input="true"></mutation>
+                                <field name="PROPERTY">DIVISIBLE_BY</field>
+                                <value name="NUMBER_TO_CHECK">
+                                    <shadow type="math_number" id="xzr%F1($u=W|{+-j1(qV">
+                                        <field name="NUM">0</field>
+                                    </shadow>
+                                    <block type="variables_get" id="mcGxW26_,FQc@yxKIFp#">
+                                        <field name="VAR" id="-y+*9?[sd%dvL7ZP1)no" variabletype="">i</field>
+                                    </block>
+                                </value>
+                                <value name="DIVISOR">
+                                    <block type="math_number" id="u_Q9iC=~JEEau,@w+?y0">
+                                        <field name="NUM">7</field>
+                                    </block>
+                                </value>
+                            </block>
+                        </value>
+                    </block>
+                </value>
+                <statement name="DO0">
+                    <block type="controls_flow_statements" id="GqWnTx{Ns7BPbcV[9aIJ">
+                        <field name="FLOW">CONTINUE</field>
+                    </block>
+                </statement>
+                <next>
+                    <block type="text_print" id="-jv$jMU-WEQj0DNx.E~b">
+                        <value name="TEXT">
+                            <shadow type="text" id="?#!?li^HHZ7wPb!TCdHp">
+                                <field name="TEXT">abc</field>
+                            </shadow>
+                            <block type="variables_get" id="ZF~U`fbr?e0SX_ujmsG$">
+                                <field name="VAR" id="-y+*9?[sd%dvL7ZP1)no" variabletype="">i</field>
+                            </block>
+                        </value>
+                    </block>
+                </next>
+            </block>
+        </statement>
+    </block>
+</xml>

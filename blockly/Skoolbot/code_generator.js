@@ -155,9 +155,9 @@ function addCommand(jsonList){
                         case 'whileUntil':
                             if (jsonList.label === 'added'){
                                 if(jsonList.end_type === 'until'){
-                                    commandList.push('not');
+                                    commandList.push('negate');
                                 }
-                                commandList.push('JUMPZ L1_' + jsonList.label_0);
+                                commandList.push('JUMPZ L1_' + jsonList.label_1);
                                 jsonList.label = 'conditionAdded';
                                 break;
                             }
@@ -173,13 +173,49 @@ function addCommand(jsonList){
                                 break;
                             }
                             if (jsonList.label === 'variableAdded'){
-                                commandList.push('get repeat_control_variable', 'number 1', 'sub', 'number 0', 'cmple');
-                                commandList.push('JUMPZ L1_' + jsonList.label_0);
+                                commandList.push('get repeat_control_variable', 'number 1', 'sub', 'number 0', 'cmpg');
+                                commandList.push('JUMPZ L1_' + jsonList.label_1);
                                 commandList.push('JUMP L0_' + jsonList.label_0);
                                 commandList.push('L1_' + jsonList.label_1);
+                                jsonList.label = 'finished';
                             }
                             break;
+                        case 'for':
+                            if (jsonList.label === 'added'){
+                                commandList.push('set ' + jsonList.variable);
+                                commandList.push('L0_' + jsonList.label_0);
+                                jsonList.label = 'variableInit';
+                                break;
+                            }
+                            if (jsonList.label === 'variableInit'){
+                                commandList.push('get ' + jsonList.variable);
+                                commandList.push('cmpl');
+                                commandList.push('JUMPZ L1_' + jsonList.label_1);
+                                commandList.push('JUMP L0_' + jsonList.label_0);
 
+                                jsonList.label = 'jumpAdded';
+                                break;
+                            }
+                            if (jsonList.label === 'jumpAdded'){
+                                commandList.push('get ' + jsonList.variable);
+                                commandList.push('add');
+                                commandList.push('set ' + jsonList.variable);
+
+                                jsonList.label = 'variableChanged';
+                                break;
+                            }
+                            if (jsonList.label === 'variableChanged'){
+                                commandList.push('L1_' + jsonList.label_1);
+                                jsonList.label = 'finished';
+                            }
+
+                            break;
+                        case 'continue':
+                            commandList.push('JUMP L0_' + jsonList.label_0);
+                            break;
+                        case 'break':
+                            commandList.push('JUMP L1_' + jsonList.label_1);
+                            break;
                     }
                     break;
 
@@ -251,6 +287,18 @@ function addLabel(jsonList) {
                                 commandList.push('L0_' + jsonList.label_0);
                             }
                             break;
+                        case 'for':
+                            if (!jsonList.label){
+                                jsonList.label_0 = L0;
+                                jsonList.label_1 = L1;
+                                continueBreak(jsonList.branch, L0, L1);
+                                L0 += 1;
+                                L1 += 1;
+                                jsonList.label = "added";
+
+                            }
+
+                            break;
                     }
                     break;
 
@@ -259,26 +307,34 @@ function addLabel(jsonList) {
     }
 }
 
+function continueBreak(jsonList, L0, L1) {
+    for(var j in jsonList){
+        if(jsonList[j].block_name === 'controls_statement_continue' || jsonList[j].block_name === 'controls_statement_break'){
+            jsonList[j].label_0 = L0;
+            jsonList[j].label_1 = L1;
+
+        }
+
+        if(jsonList[j].block_name === 'controls_statement_ifelse') {
+            continueBreak(jsonList[j].structure[0].branchCode, L0, L1);
+        }
+
+    }
+}
 
 
 
 // For debugging
 
 
-// var str0 = JSON.parse(`[{"block_name":"controls_statement_whileUntil","loop_style":"controls_whileUntil","repeat_condition":{"block_name":"logic_boolean_boolean","value":"TRUE"},"end_type":"while","branch":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"math_number_number","number":"1"}]}]}]
+// var str0 = JSON.parse(`[{"block_name":"controls_statement_for","loop_style":"controls_for","variable":"i","start":[{"block_name":"math_number_number","number":"1"}],"end":[{"block_name":"math_number_number","number":"10"}],"step":[{"block_name":"math_number_number","number":"1"}],"branch":[{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"math_boolean_numberProperty","functionName":"isDivisibleBy","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"9"}]},"branchCode":[{"block_name":"controls_statement_break","statements":"break"}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[]}]},{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]}]}]
 // `);
-// var str1 = JSON.parse(`[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"i","argument":[{"block_name":"math_number_number","number":"1"}]},{"block_name":"controls_statement_whileUntil","loop_style":"controls_whileUntil","repeat_condition":{"block_name":"logic_boolean_operator_compare","operator":"cmpg","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"10"}]},"end_type":"until","branch":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]},{"block_name":"variables_statement_set","functionName":"variables_set","varName":"i","argument":[{"block_name":"math_arithmetic_operator","operator":"add","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"1"}]}]}]}]
-// `);
-// var str2 = JSON.parse(`[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"i","argument":[{"block_name":"math_number_number","number":"1"}]},{"block_name":"controls_statement_repeat","loop_style":"controls_repeat_ext","repeat_times":{"block_name":"controls_statement_repeatExt","operator":"math.floor","argument":{"block_name":"math_number_number","number":"10"}},"branch":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]},{"block_name":"variables_statement_set","functionName":"variables_set","varName":"i","argument":[{"block_name":"math_arithmetic_operator","operator":"add","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"1"}]}]}]}]
-// `);
-// var str3 = JSON.parse(`[{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"math_boolean_numberProperty","functionName":"isEven","argument":[{"block_name":"math_number_operator_modulo","operator":"remainder","argument":[{"block_name":"math_number_number","number":"17"},{"block_name":"math_number_number","number":"3"}]}]},"branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"math_number_number","number":"17"}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"logic_boolean_boolean","value":"TRUE"},"branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"logic_boolean_boolean","value":"TRUE"}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[]}]}]}]}]
-// `);
-
-
-
-
-
-// for (var i =0; i<4; i++){
+//
+//
+//
+//
+//
+// for (var i = 0; i<1; i++){
 //     var vars_name = 'str' + i;
 //     commandList = [];
 //     addTypeField.addTypeField(eval(vars_name));
@@ -309,7 +365,7 @@ function savetxt(path){
             var savefile = path.split('/')[4].split('.')[0];
             fs.writeFile('../tests/nodejs/generator_outputs/' + savefile + '_result' + '.txt', restxt, (err) => {
                 if (err) throw err;
-                console.log('result is saved successfully!');
+                console.log('output is saved successfully!');
             });
         }
         else{

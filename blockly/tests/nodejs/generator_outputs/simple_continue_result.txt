@@ -1,0 +1,24 @@
+number 1
+set i
+L0_12
+number 100
+get i
+cmpl
+JUMPZ L1_12
+JUMP L0_12
+number 3
+get i
+add
+set i
+get i
+number 7
+isDivisibleBy
+negate
+JUMPZ L0_13
+JUMP L0_12
+JUMP L1_13
+L0_13
+L1_13
+get i
+print
+L1_12

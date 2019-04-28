@@ -1,11 +1,11 @@
 number 0
 set n
-L0_8
+L0_5
 get n
 number 100
 cmpl
-JUMPZ L1_8
-L0_9
+JUMPZ L1_5
+L0_6
 number 10
 set repeat_control_variable
 get n
@@ -18,9 +18,9 @@ get repeat_control_variable
 number 1
 sub
 number 0
-cmple
-JUMPZ L1_9
-JUMP L0_9
-L1_9
-JUMP L0_8
-L1_8
+cmpg
+JUMPZ L1_6
+JUMP L0_6
+L1_6
+JUMP L0_5
+L1_5
