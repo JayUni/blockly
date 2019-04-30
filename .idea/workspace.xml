@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="309abf3b-ba8f-41f5-a11f-08a439e8cd78" name="Default Changelist" comment="Default Changelist">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/blockly/Skoolbot/addTypeField.js" afterPath="$PROJECT_DIR$/blockly/Skoolbot/add_type_field.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/blockly/Skoolbot/code_generator.js" afterPath="$PROJECT_DIR$/blockly/Skoolbot/bytecode_generator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/Skoolbot/Bytecode_command.xlsx" afterPath="$PROJECT_DIR$/blockly/Skoolbot/Bytecode_command.xlsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generator_outputs/loop_control_while_repeat.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/generator_outputs/loop_control_while_repeat.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generator_outputs/simple_logic_ifelse.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/generator_outputs/simple_logic_ifelse.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generator_outputs/simple_loop_break.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/generator_outputs/simple_loop_break.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generator_outputs/simple_loop_continue.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/generator_outputs/simple_loop_continue.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generator_outputs/simple_loop_for.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/generator_outputs/simple_loop_for.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generator_outputs/simple_loop_until.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/generator_outputs/simple_loop_until.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generator_outputs/simple_loop_while.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/generator_outputs/simple_loop_while.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/main.js" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/Skoolbot/add_type_field.js" afterPath="$PROJECT_DIR$/blockly/Skoolbot/add_type_field.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/Skoolbot/bytecode_generator.js" afterPath="$PROJECT_DIR$/blockly/Skoolbot/bytecode_generator.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,8 +29,8 @@
       <file leaf-file-name="bytecode_generator.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/bytecode_generator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="355" column="0" lean-forward="true" selection-start-line="355" selection-start-column="0" selection-end-line="355" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="6" column="66" lean-forward="true" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -48,8 +39,8 @@
       <file leaf-file-name="add_type_field.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/add_type_field.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="29" />
+            <state relative-caret-position="30">
+              <caret line="2" column="59" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -102,7 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/blockly/Skoolbot/output/math_test4_result.txt" />
         <option value="$PROJECT_DIR$/blockly/Skoolbot/output/sequence_variable_print_result.txt" />
         <option value="$PROJECT_DIR$/blockly/Skoolbot/output/math_test2_result.txt" />
         <option value="$PROJECT_DIR$/blockly/tests/nodejs/testscript.sh" />
@@ -152,6 +142,7 @@
         <option value="$PROJECT_DIR$/blockly/tests/nodejs/generator_test_cases/simple_loop_while.xml" />
         <option value="$PROJECT_DIR$/blockly/Skoolbot/code_generator.js" />
         <option value="$PROJECT_DIR$/blockly/Skoolbot/addTypeField.js" />
+        <option value="$PROJECT_DIR$/blockly/Skoolbot/add_type_field.js" />
         <option value="$PROJECT_DIR$/blockly/Skoolbot/bytecode_generator.js" />
       </list>
     </option>
@@ -430,12 +421,12 @@
       <workItem from="1554621143305" duration="35710000" />
       <workItem from="1554786480924" duration="146000" />
       <workItem from="1554787819206" duration="7944000" />
-      <workItem from="1555037736685" duration="60499000" />
+      <workItem from="1555037736685" duration="60922000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="274211000" />
+    <option name="totallyTimeSpent" value="274634000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -917,16 +908,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/add_type_field.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="29" />
+        <state relative-caret-position="30">
+          <caret line="2" column="59" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/bytecode_generator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="355" column="0" lean-forward="true" selection-start-line="355" selection-start-column="0" selection-end-line="355" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="6" column="66" lean-forward="true" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
           <folding />
         </state>
       </provider>

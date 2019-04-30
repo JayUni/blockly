@@ -3,7 +3,9 @@ const fs = require('fs');
 
 
 module.exports.bytecode_generator = function bytecode_generator(jsonList){
-    return generator(jsonList);
+    var result =  generator(jsonList);
+    console.log("command list of bytecode generator: \n", result);
+    return result;
 };
 
 // initialize global variables

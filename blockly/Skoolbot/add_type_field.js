@@ -1,5 +1,7 @@
 module.exports.add_type_field = function add_type_field(jsonList){
-    return addTypeField(jsonList);
+    var result = addTypeField(jsonList)
+    console.log("result of JSON after adding type field: \n", result);
+    return result;
 };
 
 function addTypeField(jsonList){
