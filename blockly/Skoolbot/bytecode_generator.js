@@ -1,9 +1,12 @@
-var addTypeField = require('./addTypeField.js');
+var add_type_field = require('./add_type_field.js');
 const fs = require('fs');
 
 
+module.exports.bytecode_generator = function bytecode_generator(jsonList){
+    return generator(jsonList);
+};
 
-// global variable
+// initialize global variables
 var commandList = [];
 var L0 = 0;
 var L1 = 0;
@@ -26,7 +29,7 @@ function hasChild(jsonList) {
             hasChild = true;
         }
         else{
-            addLabel(jsonList);
+            jsonList = addLabel(jsonList);
         }
     }
 
@@ -305,6 +308,7 @@ function addLabel(jsonList) {
             }
         }
     }
+    return jsonList;
 }
 
 function continueBreak(jsonList, L0, L1) {
@@ -326,7 +330,6 @@ function continueBreak(jsonList, L0, L1) {
 
 // For debugging
 
-
 // var str0 = JSON.parse(`[{"block_name":"controls_statement_for","loop_style":"controls_for","variable":"i","start":[{"block_name":"math_number_number","number":"1"}],"end":[{"block_name":"math_number_number","number":"10"}],"step":[{"block_name":"math_number_number","number":"1"}],"branch":[{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"math_boolean_numberProperty","functionName":"isDivisibleBy","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"9"}]},"branchCode":[{"block_name":"controls_statement_break","statements":"break"}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[]}]},{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]}]}]
 // `);
 //
@@ -347,45 +350,47 @@ function continueBreak(jsonList, L0, L1) {
 
 
 
-function savetxt(path){
-
-    fs.readFile(path, "utf8", function(err, jsondata) {
-        if (!err) {
-            console.log(jsondata);
-            jsondata = JSON.parse(jsondata);
-            addTypeField.addTypeField(jsondata);
-            commandList = [];
-            var reslist = generator(jsondata);
-
-            console.log(reslist);
-            var restxt = "";
-            for (var j in reslist){
-                restxt += reslist[j] + '\n';
-            }
-            var savefile = path.split('/')[4].split('.')[0];
-            fs.writeFile('../tests/nodejs/generator_outputs/' + savefile + '.txt', restxt, (err) => {
-                if (err) throw err;
-                console.log('output is saved successfully!');
-            });
-        }
-        else{
-            throw err;
-        }
-    });
-}
-
-
-function travel(dir, callback) {
-    fs.readdirSync(dir).forEach(function (file) {
-        var pathname = require('path').join(dir, file);
-
-        if (fs.statSync(pathname).isDirectory()) {
-            travel(pathname, callback);
-        } else {
-            callback(pathname);
-        }
-    });
-}
-
-var path = '../tests/nodejs/generator_test_jsons/';
-travel(path, savetxt);
+// save as text file
+//
+// function savetxt(path){
+//
+//     fs.readFile(path, "utf8", function(err, jsondata) {
+//         if (!err) {
+//             // console.log(jsondata);
+//             jsondata = JSON.parse(jsondata);
+//             jsondata = add_type_field.add_type_field(jsondata);
+//             commandList = [];
+//             var reslist = generator(jsondata);
+//
+//             console.log(reslist);
+//             var restxt = "";
+//             for (var j in reslist){
+//                 restxt += reslist[j] + '\n';
+//             }
+//             var savefile = path.split('/')[4].split('.')[0];
+//             fs.writeFile('../tests/nodejs/generator_outputs/' + savefile + '.txt', restxt, (err) => {
+//                 if (err) throw err;
+//                 console.log('output is saved successfully!');
+//             });
+//         }
+//         else{
+//             throw err;
+//         }
+//     });
+// }
+//
+//
+// function travel(dir, callback) {
+//     fs.readdirSync(dir).forEach(function (file) {
+//         var pathname = require('path').join(dir, file);
+//
+//         if (fs.statSync(pathname).isDirectory()) {
+//             travel(pathname, callback);
+//         } else {
+//             callback(pathname);
+//         }
+//     });
+// }
+//
+// var path = '../tests/nodejs/generator_test_jsons/';
+// travel(path, savetxt);

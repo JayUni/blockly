@@ -1,4 +1,8 @@
-module.exports.addTypeField = function addTypeField(jsonList){
+module.exports.add_type_field = function add_type_field(jsonList){
+    return addTypeField(jsonList);
+};
+
+function addTypeField(jsonList){
     for (var element in jsonList) {
         if ((jsonList[element] instanceof Object)){
             jsonList[element].valueType = "";
@@ -26,7 +30,8 @@ module.exports.addTypeField = function addTypeField(jsonList){
             }
         }
     }
-};
+    return jsonList;
+}
 
 function checkTypeList(typeList){
     var type = typeList[0];

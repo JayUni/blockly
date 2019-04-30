@@ -28,7 +28,7 @@ const fs = require('fs');
 const jsdom = require("jsdom");
 const xmldom = require('xmldom');
 
-var addTypeField = require('./../../Skoolbot/addTypeField.js');
+var addTypeField = require('../../Skoolbot/add_type_field.js');
 
 var JSDOM = jsdom.JSDOM;
 global.DOMParser = xmldom.DOMParser;

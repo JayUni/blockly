@@ -1,11 +1,11 @@
 number 1
 set i
-L0_9
+L0_7
 number 10
 get i
 cmpl
-JUMPZ L1_9
-JUMP L0_9
+JUMPZ L1_7
+JUMP L0_7
 number 1
 get i
 add
@@ -13,11 +13,11 @@ set i
 get i
 number 9
 isDivisibleBy
-JUMPZ L0_10
-JUMP L1_9
-JUMP L1_10
-L0_10
-L1_10
+JUMPZ L0_8
+JUMP L1_7
+JUMP L1_8
+L0_8
+L1_8
 get i
 print
-L1_9
+L1_7
