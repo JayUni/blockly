@@ -7,6 +7,7 @@
 #include <cmath>
 
 //testing environment
+//delete blocks
 
 using namespace std;
 
@@ -27,40 +28,37 @@ int main (int argc, char *argv[]) {
 
   std::string command;
   std::vector<std::string> program;
-  int condJump = -1;
-  int noCondJump = -1;
-  std::vector<int> jumpz;
-  std::vector<int> jump;
+  std::map<std::string, int> jumpPos;
   unsigned int counter = 0;
   while (file>>command) {
     program.push_back(command);
-    if (command.compare("JUMPZ") == 0) {
-      ++condJump;
-      jumpz.push_back(counter);
+    if ((program[counter].compare("JUMP") == 0) || (program[counter].compare("JUMPZ") == 0)) {
+      ++counter;
       file>>command;
-      program.push_back("nop");
-      ++counter;
-    } else if (command.compare("JUMP") == 0) {
-      ++noCondJump;
-      jump.push_back(counter);
-      file>>command;
-      program.push_back("nop");
-      ++counter;
-    } else if (command.compare("L0_"+ std::to_string(condJump)) == 0) {
-      program[jumpz[condJump]+1] = std::to_string(counter);
-      --condJump;
+      program.push_back(command);
+    } else if ((command.at(0) == 'L' && command.at(1) == '0' && command.at(2) == '_') ||
+               (command.at(0) == 'L' && command.at(1) == '1' && command.at(2) == '_')) {
+      jumpPos[command] = counter;
       program[counter] = "nop";
-      ++counter;
-      continue;
-    } else if (command.compare("L1_"+ std::to_string(noCondJump)) == 0) {
-      program[jump[noCondJump]+1] = std::to_string(counter);
-      --noCondJump;
-      program[counter] = "nop";
-      ++counter;
-      continue;
     }
     ++counter;
   }
+
+  counter = 0;
+  while(counter != program.size()) {
+    command = program[counter];
+    if ((command.at(0) == 'L' && command.at(1) == '0' && command.at(2) == '_') ||
+        (command.at(0) == 'L' && command.at(1) == '1' && command.at(2) == '_')) {
+      program[counter] = std::to_string(jumpPos[command]);
+    }
+    ++counter;
+  }
+
+  // counter = 0;
+  // while(counter != program.size()) {
+  //   std::cout<<program[counter]<<"  "<<counter<<std::endl;
+  //   ++counter;
+  // }
 
   counter = 0;
   std::map<std::string, int> intVar;
@@ -251,6 +249,18 @@ int main (int argc, char *argv[]) {
                           //check order
       s.push(result);           //they are radian maybe should do degtorad
     } else if (command.compare("cmpg") == 0) {
+      if (s.empty()) {
+        std::cout<<"empty stack, pop is not allowed"<<std::endl;
+        return 0;
+      }
+      int a = s.top();
+      s.pop();
+      if (s.empty()) {
+        std::cout<<"empty stack, pop is not allowed"<<std::endl;
+        return 0;
+      }
+      int b = s.top();
+      s.pop();
       if (b > a) {
         s.push(0);
       } else {
@@ -272,7 +282,7 @@ int main (int argc, char *argv[]) {
       }
       int a = s.top();
       std::cout<<a<<"\n";
-    } else if (command.compare("set") == 0) { //does set push to stack???
+    } else if (command.compare("set") == 0) {
       if (s.empty()) {
         std::cout<<"empty stack, pop is not allowed"<<std::endl;
         return 0;
@@ -287,7 +297,7 @@ int main (int argc, char *argv[]) {
       std::string varName = program[counter];
       result = intVar[varName];
       s.push(result);
-    } else if (command.compare("cmpl") == 0) { //less or less equal???
+    } else if (command.compare("cmpl") == 0) {
       if (s.empty()) {
         std::cout<<"empty stack, pop is not allowed"<<std::endl;
         return 0;
@@ -306,6 +316,25 @@ int main (int argc, char *argv[]) {
       } else {
         s.push(1);
       }
+    } else if (command.compare("cmple") == 0) {
+      if (s.empty()) {
+        std::cout<<"empty stack, pop is not allowed"<<std::endl;
+        return 0;
+      }
+      int a = s.top();
+      s.pop();
+
+      if (s.empty()) {
+        std::cout<<"empty stack, pop is not allowed"<<std::endl;
+        return 0;
+      }
+      int b = s.top();
+      s.pop();
+      if (b <= a) {
+        s.push(0);
+      } else {
+        s.push(1);
+      }
     } else if (command.compare("JUMPZ") == 0) {
       ++counter;
       command = program[counter];
@@ -315,8 +344,8 @@ int main (int argc, char *argv[]) {
       }
       int condition = s.top();
       s.pop();
-
-      if (condition == 0) {
+      //jump when false
+      if (condition == 1) {
         std::string::size_type size;
         counter = std::stoi(command, &size);
         if (size != command.size()) {
@@ -336,15 +365,31 @@ int main (int argc, char *argv[]) {
     } else if (command.compare("boolean") == 0) {
       ++counter;
       command = program[counter];
-      if (command.compare("TRUE")) {
+      if (command.compare("TRUE") == 0) {
         s.push(0);
-      } else if (command.compare("FALSE")) {
+      } else if (command.compare("FALSE") == 0) {
         s.push(1);
       } else {
         std::cout<<"Invalid command: "<<command<<std::endl;
         return -1;
       }
     } else if (command.compare("nop") == 0) {
+
+    } else if (command.compare("not") == 0) {
+      if (s.empty()) {
+        std::cout<<"empty stack, pop is not allowed"<<std::endl;
+        return 0;
+      }
+      int condition = s.top();
+      s.pop();
+      if (condition == 0) {
+        s.push(1);
+      } else if (condition == 1) {
+        s.push(0);
+      } else {
+        std::cout<<"Invalid command: "<<condition<<std::endl;
+        return -1;
+      }
 
     }
 
@@ -361,6 +406,10 @@ int main (int argc, char *argv[]) {
   }
   std::cout<<s.top()<<std::endl;
   s.pop();
+  // while(!s.empty()) {
+  //   std::cout<<s.top()<<std::endl;
+  //   s.pop();
+  // }
   file.close();
   return 0;
 }
