@@ -1,0 +1,12 @@
+[
+    {
+        "block_name": "math_boolean_numberProperty",
+        "functionName": "isPositive",
+        "argument": [
+            {
+                "block_name": "math_number_number",
+                "number": "-5"
+            }
+        ]
+    }
+]

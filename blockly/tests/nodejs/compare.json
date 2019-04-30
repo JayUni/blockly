@@ -1,0 +1,24 @@
+[
+    {
+        "block_name": "variables_statement_set",
+        "functionName": "variables_set",
+        "varName": "a",
+        "argument": [
+            {
+                "block_name": "math_number_number",
+                "number": "8"
+            }
+        ]
+    },
+    {
+        "block_name": "text_statement_print",
+        "functionName": "text_print",
+        "argument": [
+            {
+                "block_name": "variables_statement_get",
+                "functionName": "variables_get",
+                "varName": "a"
+            }
+        ]
+    }
+]

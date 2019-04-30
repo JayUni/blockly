@@ -1,0 +1,14 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+    <block type="math_modulo" id="yr@,^7^iTdd[2-_kQTA/" x="87" y="137">
+        <value name="DIVIDEND">
+            <shadow type="math_number" id="@;O)u/!LxPhIzUpu-z7z">
+                <field name="NUM">15</field>
+            </shadow>
+        </value>
+        <value name="DIVISOR">
+            <shadow type="math_number" id="b3hIvh!u?oeA(ZZ85K{{">
+                <field name="NUM">4</field>
+            </shadow>
+        </value>
+    </block>
+</xml>

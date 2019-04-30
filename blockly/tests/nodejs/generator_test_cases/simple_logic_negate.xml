@@ -1,0 +1,9 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+    <block type="logic_negate" id="hP`XGkhF1E;@b{/m@_hD" x="37" y="188">
+        <value name="BOOL">
+            <block type="logic_boolean" id="GsEWM4XHv,^u/XQx:Y7D">
+                <field name="BOOL">TRUE</field>
+            </block>
+        </value>
+    </block>
+</xml>

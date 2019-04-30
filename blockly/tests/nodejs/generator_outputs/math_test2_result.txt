@@ -1,7 +1,0 @@
-number -1
-acos
-number 9
-log10
-mul
-number 2
-pow

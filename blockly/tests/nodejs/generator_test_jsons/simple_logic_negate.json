@@ -1,0 +1,12 @@
+[
+    {
+        "block_name": "logic_boolean_operator_logicNegate",
+        "operator": "negate",
+        "argument": [
+            {
+                "block_name": "logic_boolean_boolean",
+                "value": "TRUE"
+            }
+        ]
+    }
+]
