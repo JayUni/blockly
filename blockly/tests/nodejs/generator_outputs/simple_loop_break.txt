@@ -1,0 +1,23 @@
+number 1
+set i
+L0_9
+number 10
+get i
+cmpl
+JUMPZ L1_9
+JUMP L0_9
+number 1
+get i
+add
+set i
+get i
+number 9
+isDivisibleBy
+JUMPZ L0_10
+JUMP L1_9
+JUMP L1_10
+L0_10
+L1_10
+get i
+print
+L1_9

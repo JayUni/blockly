@@ -1,0 +1,11 @@
+number 1
+set i
+L0_13
+get i
+number 10
+cmpl
+JUMPZ L1_13
+get i
+print
+JUMP L0_13
+L1_13

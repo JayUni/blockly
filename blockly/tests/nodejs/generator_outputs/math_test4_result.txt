@@ -1,7 +1,0 @@
-number 2
-exp
-number 30
-number 45
-add
-tan
-cmpg

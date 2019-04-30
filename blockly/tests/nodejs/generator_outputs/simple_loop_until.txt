@@ -1,0 +1,16 @@
+number 1
+set i
+L0_12
+get i
+number 10
+cmpg
+negate
+JUMPZ L1_12
+get i
+print
+get i
+number 1
+add
+set i
+JUMP L0_12
+L1_12

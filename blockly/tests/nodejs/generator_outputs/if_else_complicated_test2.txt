@@ -1,0 +1,17 @@
+number 17
+number 3
+remainder
+isEven
+JUMPZ L0_2
+number 17
+print
+JUMP L1_2
+L0_2
+boolean TRUE
+JUMPZ L0_3
+boolean TRUE
+print
+JUMP L1_3
+L0_3
+L1_3
+L1_2

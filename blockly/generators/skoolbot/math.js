@@ -55,32 +55,6 @@ Blockly.Skoolbot['math_arithmetic'] = function(block) {
   return [code, order];
 };
 
-// Blockly.Skoolbot['math_single'] = function(block) {
-//   // Math operators with single operand.
-//   var operator = block.getFieldValue('OP');
-//   var code;
-//   var arg;
-//   if (operator == 'NEG') {
-//     // Negation is a special case given its different operator precedence.
-//     arg = Blockly.Skoolbot.valueToCode(block, 'NUM',
-//         Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
-//     return ['{ \"block_name\": \"math_number_single\", \"operator\": \"' + operator + '\",\"argument\": [' + arg + ']}', Blockly.Skoolbot.ORDER_ATOMIC];
-//   }
-//   if (operator == 'POW10') {
-//     arg = Blockly.Skoolbot.valueToCode(block, 'NUM',
-//         Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
-//     return ['{ \"block_name\": \"math_number_single\", \"operator\": \"' + operator + '\",\"argument\": [' + arg + ']}', Blockly.Skoolbot.ORDER_ATOMIC];
-//   }
-//   if (operator == 'ROUND') {
-//     arg = Blockly.Skoolbot.valueToCode(block, 'NUM',
-//         Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
-//   } else {
-//     arg = Blockly.Skoolbot.valueToCode(block, 'NUM',
-//         Blockly.Skoolbot.ORDER_ATOMIC) || '{ \"block_name\": \"math_number_number\", \"number\": \"0\"}';
-//   }
-//   code = '{ \"block_name\": \"math_number_single\", \"operator\": \"' + operator + '\", \"argument\":[' + arg + ']}';
-//   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
-// };
 
 Blockly.Skoolbot['math_single'] = function(block) {
   // Math operators with single operand.

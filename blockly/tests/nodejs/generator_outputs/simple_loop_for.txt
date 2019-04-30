@@ -1,0 +1,15 @@
+number 1
+set i
+L0_14
+number 10
+get i
+cmpl
+JUMPZ L1_14
+JUMP L0_14
+number 1
+get i
+add
+set i
+get i
+print
+L1_14

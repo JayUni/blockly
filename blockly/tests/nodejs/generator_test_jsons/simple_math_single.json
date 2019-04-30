@@ -1,0 +1,12 @@
+[
+    {
+        "block_name": "math_number_operator_single",
+        "operator": "abs",
+        "argument": [
+            {
+                "block_name": "math_number_number",
+                "number": "-7"
+            }
+        ]
+    }
+]

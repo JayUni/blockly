@@ -363,7 +363,7 @@ function savetxt(path){
                 restxt += reslist[j] + '\n';
             }
             var savefile = path.split('/')[4].split('.')[0];
-            fs.writeFile('../tests/nodejs/generator_outputs/' + savefile + '_result' + '.txt', restxt, (err) => {
+            fs.writeFile('../tests/nodejs/generator_outputs/' + savefile + '.txt', restxt, (err) => {
                 if (err) throw err;
                 console.log('output is saved successfully!');
             });
