@@ -1,0 +1,63 @@
+[
+    {
+        "block_name": "controls_statement_ifelse",
+        "structure": [
+            {
+                "block_name": "controls_statement_if",
+                "statements": "if",
+                "condition": {
+                    "block_name": "logic_boolean_operator_compare",
+                    "operator": "cmpl",
+                    "argument": [
+                        {
+                            "block_name": "math_number_number",
+                            "number": "1",
+                            "valueType": "number"
+                        },
+                        {
+                            "block_name": "math_number_number",
+                            "number": "2",
+                            "valueType": "number"
+                        }
+                    ],
+                    "valueType": "boolean"
+                },
+                "branchCode": [
+                    {
+                        "block_name": "text_statement_print",
+                        "functionName": "text_print",
+                        "argument": [
+                            {
+                                "block_name": "logic_boolean_boolean",
+                                "value": "TRUE",
+                                "valueType": "boolean"
+                            }
+                        ],
+                        "valueType": "statement"
+                    }
+                ],
+                "valueType": "statement"
+            },
+            {
+                "block_name": "controls_statement_else",
+                "statements": "else",
+                "branchCode": [
+                    {
+                        "block_name": "text_statement_print",
+                        "functionName": "text_print",
+                        "argument": [
+                            {
+                                "block_name": "logic_boolean_boolean",
+                                "value": "FALSE",
+                                "valueType": "boolean"
+                            }
+                        ],
+                        "valueType": "statement"
+                    }
+                ],
+                "valueType": "statement"
+            }
+        ],
+        "valueType": "statement"
+    }
+]

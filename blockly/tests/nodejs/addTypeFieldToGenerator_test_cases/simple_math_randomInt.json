@@ -1,0 +1,19 @@
+[
+    {
+        "block_name": "math_number_function_randomInt",
+        "functionName": "randomInt",
+        "argument": [
+            {
+                "block_name": "math_number_number",
+                "number": "1",
+                "valueType": "number"
+            },
+            {
+                "block_name": "math_number_number",
+                "number": "100",
+                "valueType": "number"
+            }
+        ],
+        "valueType": "number"
+    }
+]

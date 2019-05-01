@@ -1,0 +1,24 @@
+[
+    {
+        "block_name": "math_number_operator_constrain",
+        "operator": "constrain",
+        "argument": [
+            {
+                "block_name": "math_number_number",
+                "number": "25",
+                "valueType": "number"
+            },
+            {
+                "block_name": "math_number_number",
+                "number": "1",
+                "valueType": "number"
+            },
+            {
+                "block_name": "math_number_number",
+                "number": "10",
+                "valueType": "number"
+            }
+        ],
+        "valueType": "number"
+    }
+]
