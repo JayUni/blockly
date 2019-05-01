@@ -5,11 +5,11 @@ number 10
 get i
 cmpl
 JUMPZ L1_12
-JUMP L0_12
 number 1
 get i
 add
 set i
 get i
 print
+JUMP L0_12
 L1_12

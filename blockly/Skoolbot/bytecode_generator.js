@@ -196,7 +196,7 @@ function addCommand(jsonList){
                                 commandList.push('get ' + jsonList.variable);
                                 commandList.push('cmpl');
                                 commandList.push('JUMPZ L1_' + jsonList.label_1);
-                                commandList.push('JUMP L0_' + jsonList.label_0);
+
 
                                 jsonList.label = 'jumpAdded';
                                 break;
@@ -210,6 +210,7 @@ function addCommand(jsonList){
                                 break;
                             }
                             if (jsonList.label === 'variableChanged'){
+                                commandList.push('JUMP L0_' + jsonList.label_0);
                                 commandList.push('L1_' + jsonList.label_1);
                                 jsonList.label = 'finished';
                             }
@@ -332,23 +333,24 @@ function continueBreak(jsonList, L0, L1) {
 
 // For debugging
 
-// var str0 = JSON.parse(`[{"block_name":"controls_statement_for","loop_style":"controls_for","variable":"i","start":[{"block_name":"math_number_number","number":"1"}],"end":[{"block_name":"math_number_number","number":"10"}],"step":[{"block_name":"math_number_number","number":"1"}],"branch":[{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"math_boolean_numberProperty","functionName":"isDivisibleBy","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"9"}]},"branchCode":[{"block_name":"controls_statement_break","statements":"break"}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[]}]},{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]}]}]
-// `);
-//
-//
-//
-//
-//
-// for (var i = 0; i<1; i++){
-//     var vars_name = 'str' + i;
-//     commandList = [];
-//     addTypeField.addTypeField(eval(vars_name));
-//     console.log("JSON: \n", JSON.stringify(eval(vars_name), null, 4));
-//     console.log(generator(eval(vars_name)));
-//     console.log("JSON_result: \n", JSON.stringify(eval(vars_name), null, 4));
-//
-//     console.log("\n\n#######################################\n\n")
-// }
+
+var str0 = JSON.parse(`[{"block_name":"controls_statement_for","loop_style":"controls_for","variable":"i","start":[{"block_name":"math_number_number","number":"1"}],"end":[{"block_name":"math_number_number","number":"10"}],"step":[{"block_name":"math_number_number","number":"1"}],"branch":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]}]}]
+`);
+
+
+
+
+
+for (var i = 0; i<1; i++){
+    var vars_name = 'str' + i;
+    commandList = [];
+    add_type_field.add_type_field(eval(vars_name));
+    console.log("JSON: \n", JSON.stringify(eval(vars_name), null, 4));
+    console.log(generator(eval(vars_name)));
+    // console.log("JSON_result: \n", JSON.stringify(eval(vars_name), null, 4));
+
+    console.log("\n\n#######################################\n\n")
+}
 
 
 

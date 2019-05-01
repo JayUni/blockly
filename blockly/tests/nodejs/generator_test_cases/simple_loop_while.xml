@@ -37,6 +37,29 @@
                                 <field name="VAR" id="Cn/GUyaI,XHp`T^,5iTS" variabletype="">i</field>
                             </block>
                         </value>
+                        <next>
+                            <block type="variables_set" id="-6DVO:iLzP+pt,C-6T_c">
+                                <field name="VAR" id="Cn/GUyaI,XHp`T^,5iTS" variabletype="">i</field>
+                                <value name="VALUE">
+                                    <block type="math_arithmetic" id=",s$Sk_F{,_[6klK~Zdge">
+                                        <field name="OP">ADD</field>
+                                        <value name="A">
+                                            <shadow type="math_number" id="V6I]aC$[f*7(DpFZGUcn">
+                                                <field name="NUM">1</field>
+                                            </shadow>
+                                            <block type="variables_get" id="zj{X75NjfOXjZtN=A_1z">
+                                                <field name="VAR" id="Cn/GUyaI,XHp`T^,5iTS" variabletype="">i</field>
+                                            </block>
+                                        </value>
+                                        <value name="B">
+                                            <shadow type="math_number" id="sU[D,dmA#f0bD]Yhm]uI">
+                                                <field name="NUM">1</field>
+                                            </shadow>
+                                        </value>
+                                    </block>
+                                </value>
+                            </block>
+                        </next>
                     </block>
                 </statement>
             </block>
