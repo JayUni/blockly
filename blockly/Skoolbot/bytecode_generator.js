@@ -333,24 +333,24 @@ function continueBreak(jsonList, L0, L1) {
 
 // For debugging
 
-
-var str0 = JSON.parse(`[{"block_name":"controls_statement_for","loop_style":"controls_for","variable":"i","start":[{"block_name":"math_number_number","number":"1"}],"end":[{"block_name":"math_number_number","number":"10"}],"step":[{"block_name":"math_number_number","number":"1"}],"branch":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]}]}]
-`);
-
-
-
-
-
-for (var i = 0; i<1; i++){
-    var vars_name = 'str' + i;
-    commandList = [];
-    add_type_field.add_type_field(eval(vars_name));
-    console.log("JSON: \n", JSON.stringify(eval(vars_name), null, 4));
-    console.log(generator(eval(vars_name)));
-    // console.log("JSON_result: \n", JSON.stringify(eval(vars_name), null, 4));
-
-    console.log("\n\n#######################################\n\n")
-}
+//
+// var str0 = JSON.parse(`[{"block_name":"controls_statement_for","loop_style":"controls_for","variable":"i","start":[{"block_name":"math_number_number","number":"1"}],"end":[{"block_name":"math_number_number","number":"10"}],"step":[{"block_name":"math_number_number","number":"1"}],"branch":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]}]}]
+// `);
+//
+//
+//
+//
+//
+// for (var i = 0; i<1; i++){
+//     var vars_name = 'str' + i;
+//     commandList = [];
+//     add_type_field.add_type_field(eval(vars_name));
+//     console.log("JSON: \n", JSON.stringify(eval(vars_name), null, 4));
+//     console.log(generator(eval(vars_name)));
+//     // console.log("JSON_result: \n", JSON.stringify(eval(vars_name), null, 4));
+//
+//     console.log("\n\n#######################################\n\n")
+// }
 
 
 
