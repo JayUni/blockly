@@ -178,7 +178,7 @@ function addCommand(jsonList){
                                 break;
                             }
                             if (jsonList.label === 'variableAdded'){
-                                commandList.push('get repeat_control_variable', 'number 1', 'sub', 'number 0', 'cmpg');
+                                commandList.push('get repeat_control_variable', 'number 1', 'sub', 'number 0', 'cmpl');
                                 commandList.push('JUMPZ L1_' + jsonList.label_1);
                                 commandList.push('JUMP L0_' + jsonList.label_0);
                                 commandList.push('L1_' + jsonList.label_1);
@@ -356,45 +356,45 @@ function continueBreak(jsonList, L0, L1) {
 
 // save as text file
 //
-// function savetxt(path){
-//
-//     fs.readFile(path, "utf8", function(err, jsondata) {
-//         if (!err) {
-//             // console.log(jsondata);
-//             jsondata = JSON.parse(jsondata);
-//             jsondata = add_type_field.add_type_field(jsondata);
-//             commandList = [];
-//             var reslist = generator(jsondata);
-//
-//             console.log(reslist);
-//             var restxt = "";
-//             for (var j in reslist){
-//                 restxt += reslist[j] + '\n';
-//             }
-//             var savefile = path.split('/')[4].split('.')[0];
-//             fs.writeFile('../tests/nodejs/generator_outputs/' + savefile + '.txt', restxt, (err) => {
-//                 if (err) throw err;
-//                 console.log('output is saved successfully!');
-//             });
-//         }
-//         else{
-//             throw err;
-//         }
-//     });
-// }
-//
-//
-// function travel(dir, callback) {
-//     fs.readdirSync(dir).forEach(function (file) {
-//         var pathname = require('path').join(dir, file);
-//
-//         if (fs.statSync(pathname).isDirectory()) {
-//             travel(pathname, callback);
-//         } else {
-//             callback(pathname);
-//         }
-//     });
-// }
-//
-// var path = '../tests/nodejs/generator_test_jsons/';
-// travel(path, savetxt);
+function savetxt(path){
+
+    fs.readFile(path, "utf8", function(err, jsondata) {
+        if (!err) {
+            // console.log(jsondata);
+            jsondata = JSON.parse(jsondata);
+            jsondata = add_type_field.add_type_field(jsondata);
+            commandList = [];
+            var reslist = generator(jsondata);
+
+            console.log(reslist);
+            var restxt = "";
+            for (var j in reslist){
+                restxt += reslist[j] + '\n';
+            }
+            var savefile = path.split('/')[4].split('.')[0];
+            fs.writeFile('../tests/nodejs/generator_outputs/' + savefile + '.txt', restxt, (err) => {
+                if (err) throw err;
+                console.log('output is saved successfully!');
+            });
+        }
+        else{
+            throw err;
+        }
+    });
+}
+
+
+function travel(dir, callback) {
+    fs.readdirSync(dir).forEach(function (file) {
+        var pathname = require('path').join(dir, file);
+
+        if (fs.statSync(pathname).isDirectory()) {
+            travel(pathname, callback);
+        } else {
+            callback(pathname);
+        }
+    });
+}
+
+var path = '../tests/nodejs/generator_test_jsons/';
+travel(path, savetxt);

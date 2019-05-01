@@ -7,5 +7,9 @@ cmpl
 JUMPZ L1_14
 get i
 print
+get i
+number 1
+add
+set i
 JUMP L0_14
 L1_14

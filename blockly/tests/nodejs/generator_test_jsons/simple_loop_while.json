@@ -40,6 +40,28 @@
                         "varName": "i"
                     }
                 ]
+            },
+            {
+                "block_name": "variables_statement_set",
+                "functionName": "variables_set",
+                "varName": "i",
+                "argument": [
+                    {
+                        "block_name": "math_arithmetic_operator",
+                        "operator": "add",
+                        "argument": [
+                            {
+                                "block_name": "variables_statement_get",
+                                "functionName": "variables_get",
+                                "varName": "i"
+                            },
+                            {
+                                "block_name": "math_number_number",
+                                "number": "1"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     }
