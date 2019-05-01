@@ -4,7 +4,7 @@ const fs = require('fs');
 
 module.exports.bytecode_generator = function bytecode_generator(jsonList){
     var result =  generator(jsonList);
-    console.log("command list of bytecode generator: \n", result);
+    // console.log("command list of bytecode generator: \n", result);
     return result;
 };
 
@@ -118,7 +118,7 @@ function addCommand(jsonList){
                     switch(command){
                         case 'if':
 
-                            console.log(jsonList.statements);
+                            // console.log(jsonList.statements);
                             if(jsonList.statements === 'if'){
                                 commandList.push('JUMPZ L0_' + jsonList.label_0);
 
@@ -137,7 +137,7 @@ function addCommand(jsonList){
                             break;
                         case 'elseif':
 
-                            console.log(jsonList.statements);
+                            // console.log(jsonList.statements);
                             if(jsonList.statements === 'elseif'){
                                 commandList.push('JUMPZ L0_' + jsonList.label_0);
                                 jsonList.statements = 'if_checked';
@@ -154,7 +154,7 @@ function addCommand(jsonList){
 
                             break;
                         case 'else':
-                            console.log('else', jsonList.label_1);
+                            // console.log('else', jsonList.label_1);
                             commandList.push('L1_' + jsonList.label_1);
                             break;
                         case 'whileUntil':
