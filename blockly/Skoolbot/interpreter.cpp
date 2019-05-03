@@ -215,13 +215,6 @@ int main (int argc, char *argv[]) {
       s.pop();
       result = exp(a);
       s.push(result);
-    } else if (command.compare("randomInt") == 0) {
-      // time_t t;
-      // /* Intializes random number generator */
-      // srand((unsigned) time(&t)); //should not have random
-      // result = rand() % 100;
-      // s.push(result);
-      break;
     } else if (command.compare("tan") == 0) {
       if (s.empty()) {
         std::cout<<"empty stack, pop is not allowed"<<std::endl;
@@ -383,21 +376,77 @@ int main (int argc, char *argv[]) {
       int num = s.top();
       s.pop();
       s.push(num%2);
-    } else if (command.compare("negate") == 0) { //same as not fix it
+    } else if (command.compare("negate") == 0) {
       if (s.empty()) {
         std::cout<<"empty stack, pop is not allowed"<<std::endl;
         return 0;
       }
-      int condition = s.top();
+      int p = s.top();
       s.pop();
-      if (condition == 0) {
+      if (p == 0) {
         s.push(1);
-      } else if (condition == 1) {
+      } else if (p == 1) {
         s.push(0);
       } else {
-        std::cout<<"Invalid command: "<<condition<<std::endl;
+        std::cout<<"Invalid stack element for negate: "<<p<<std::endl;
         return -1;
       }
+    } else if (command.compare("constrain") == 0) {
+      if (s.empty()) {
+        std::cout<<"empty stack, pop is not allowed"<<std::endl;
+        return 0;
+      }
+      int num = s.top();
+      s.pop();
+      if (s.empty()) {
+        std::cout<<"empty stack, pop is not allowed"<<std::endl;
+        return 0;
+      }
+      int min = s.top();
+      s.pop();
+      if (s.empty()) {
+        std::cout<<"empty stack, pop is not allowed"<<std::endl;
+        return 0;
+      }
+      int max = s.top();
+      s.pop();
+      if (num < min) {
+        num = min;
+      } else if (num > max) {
+        num = max;
+      }
+      s.push(num);
+    } else if (command.compare("isPositive") == 0) {
+      if (s.empty()) {
+        std::cout<<"empty stack, pop is not allowed"<<std::endl;
+        return 0;
+      }
+      int num = s.top();
+      s.pop();
+      if (num > 0) {
+        s.push(0);
+      } else {
+        s.push(1);
+      }
+    } else if (command.compare("abs") == 0) {
+      if (s.empty()) {
+        std::cout<<"empty stack, pop is not allowed"<<std::endl;
+        return 0;
+      }
+      int num = s.top();
+      s.pop();
+      if (num < 0) {
+        num = num*-1;
+      }
+      s.push(num);
+    } else if (command.compare("randomInt") == 0) {
+      // time_t t;
+     // /* Intializes random number generator */
+     // srand((unsigned) time(&t)); //should not have random
+     // result = rand() % 100;
+     // s.push(result);
+     std::cout<<"cannot test random, default number is 2 "<<command<<std::endl;
+     s.push(2);
     }
 
     else {

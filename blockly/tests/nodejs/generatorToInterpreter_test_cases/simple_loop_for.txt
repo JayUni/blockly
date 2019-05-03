@@ -1,0 +1,29 @@
+number 1
+set i
+<<<<<<< HEAD:blockly/tests/nodejs/generator_outputs/simple_loop_for.txt
+L0_9
+number 10
+get i
+cmpl
+JUMPZ L1_9
+=======
+L0_0
+number 10
+get i
+cmpl
+JUMPZ L1_0
+>>>>>>> json:blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_loop_for.txt
+number 1
+get i
+add
+set i
+get i
+print
+<<<<<<< HEAD:blockly/tests/nodejs/generator_outputs/simple_loop_for.txt
+JUMP L0_9
+L1_9
+=======
+JUMP L0_0
+L1_0
+
+>>>>>>> json:blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_loop_for.txt

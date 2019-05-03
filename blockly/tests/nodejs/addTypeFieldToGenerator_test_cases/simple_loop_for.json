@@ -1,0 +1,44 @@
+[
+    {
+        "block_name": "controls_statement_for",
+        "loop_style": "controls_for",
+        "variable": "i",
+        "start": [
+            {
+                "block_name": "math_number_number",
+                "number": "1",
+                "valueType": "number"
+            }
+        ],
+        "end": [
+            {
+                "block_name": "math_number_number",
+                "number": "10",
+                "valueType": "number"
+            }
+        ],
+        "step": [
+            {
+                "block_name": "math_number_number",
+                "number": "1",
+                "valueType": "number"
+            }
+        ],
+        "branch": [
+            {
+                "block_name": "text_statement_print",
+                "functionName": "text_print",
+                "argument": [
+                    {
+                        "block_name": "variables_statement_get",
+                        "functionName": "variables_get",
+                        "varName": "i",
+                        "valueType": "statement"
+                    }
+                ],
+                "valueType": "statement"
+            }
+        ],
+        "valueType": "statement"
+    }
+]

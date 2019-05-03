@@ -1,8 +1,13 @@
-module.exports.add_type_field = function add_type_field(jsonList){
-    var result = addTypeField(jsonList)
-    console.log("result of JSON after adding type field: \n", result);
-    return result;
-};
+const fs = require('fs');
+
+try {
+  const jsonString = fs.readFileSync('./' + process.argv[2]);
+  const jsonParse = JSON.parse(jsonString)
+  var result =  addTypeField(jsonParse);
+  console.log(JSON.stringify(result, null, 4));
+} catch(err) {
+  console.log(err);
+}
 
 function addTypeField(jsonList){
     for (var element in jsonList) {

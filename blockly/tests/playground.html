@@ -402,7 +402,7 @@ h1 {
   <xml id="toolbox-simple" style="display: none">
     <block type="controls_ifelse"></block>
     <block type="logic_compare"></block>
-    <!-- <block type="control_repeat"></block> -->
+    <block type="control_repeat"></block>
     <block type="logic_operation"></block>
     <block type="controls_repeat_ext">
       <value name="TIMES">
@@ -435,8 +435,8 @@ h1 {
       <block type="logic_operation"></block>
       <block type="logic_negate"></block>
       <block type="logic_boolean"></block>
-      <block type="logic_null" disabled="true"></block>
-      <block type="logic_ternary"></block>
+      <block type="logic_null"></block>
+      <!-- <block type="logic_ternary"></block> -->
     </category>
     <category name="Loops" style="loop_category">
       <block type="controls_repeat_ext">
@@ -446,7 +446,7 @@ h1 {
           </shadow>
         </value>
       </block>
-      <block type="controls_repeat" disabled="true"></block>
+      <!-- <block type="controls_repeat"></block> -->
       <block type="controls_whileUntil"></block>
       <block type="controls_for">
         <value name="FROM">
@@ -491,14 +491,14 @@ h1 {
           </shadow>
         </value>
       </block>
-      <block type="math_trig">
+      <!-- <block type="math_trig">
         <value name="NUM">
           <shadow type="math_number">
             <field name="NUM">45</field>
           </shadow>
         </value>
-      </block>
-      <block type="math_constant"></block>
+      </block> -->
+      <!-- <block type="math_constant"></block> -->
       <block type="math_number_property">
         <value name="NUMBER_TO_CHECK">
           <shadow type="math_number">
@@ -506,14 +506,14 @@ h1 {
           </shadow>
         </value>
       </block>
-      <block type="math_round">
+      <!-- <block type="math_round">
         <value name="NUM">
           <shadow type="math_number">
             <field name="NUM">3.1</field>
           </shadow>
         </value>
-      </block>
-      <block type="math_on_list"></block>
+      </block> -->
+      <!-- <block type="math_on_list"></block> -->
       <block type="math_modulo">
         <value name="DIVIDEND">
           <shadow type="math_number">
@@ -555,7 +555,7 @@ h1 {
           </shadow>
         </value>
       </block>
-      <block type="math_random_float"></block>
+      <!-- <block type="math_random_float"></block>
       <block type="math_atan2">
         <value name="X">
           <shadow type="math_number">
@@ -567,10 +567,10 @@ h1 {
             <field name="NUM">1</field>
           </shadow>
         </value>
-      </block>
+      </block> -->
     </category>
     <category name="Text" style="text_category">
-      <block type="text"></block>
+      <!-- <block type="text"></block>
       <block type="text_join"></block>
       <block type="text_append">
         <value name="TEXT">
@@ -655,7 +655,7 @@ h1 {
           <shadow type="text"></shadow>
         </value>
       </block>
-      <label text="Input/Output:" web-class="ioLabel"></label>
+      <label text="Input/Output:" web-class="ioLabel"></label> -->
       <block type="text_print">
         <value name="TEXT">
           <shadow type="text">
@@ -663,15 +663,15 @@ h1 {
           </shadow>
         </value>
       </block>
-      <block type="text_prompt_ext">
+      <!-- <block type="text_prompt_ext">
         <value name="TEXT">
           <shadow type="text">
             <field name="TEXT">abc</field>
           </shadow>
         </value>
-      </block>
+      </block> -->
     </category>
-    <category name="Lists" style="list_category">
+    <!-- <category name="Lists" style="list_category">
       <block type="lists_create_with">
         <mutation items="0"></mutation>
       </block>
@@ -760,7 +760,7 @@ h1 {
           </shadow>
         </value>
       </block>
-    </category>
+    </category> -->
     <sep></sep>
     <category name="Variables" style="variable_category" custom="VARIABLE"></category>
     <category name="Functions" style="procedure_category" custom="PROCEDURE"></category>

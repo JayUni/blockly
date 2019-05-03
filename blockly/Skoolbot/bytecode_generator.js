@@ -1,18 +1,24 @@
-var add_type_field = require('./add_type_field.js');
 const fs = require('fs');
 
-
-module.exports.bytecode_generator = function bytecode_generator(jsonList){
-    var result =  generator(jsonList);
-    // console.log("command list of bytecode generator: \n", result);
-    return result;
-};
 
 // initialize global variables
 var commandList = [];
 var L0 = 0;
 var L1 = 0;
 
+
+try {
+  const jsonString = fs.readFileSync('./' + process.argv[2]);
+  const jsonParse = JSON.parse(jsonString);
+  var result =  generator(jsonParse);
+  var string = '';
+  for (var i = 0; i < result.length; ++i) {
+    string += result[i] + '\n';
+  }
+  console.log(string);
+} catch(err) {
+  console.log(err);
+}
 
 function generator(jsonList){
     if (!hasChild(jsonList)[0]) {

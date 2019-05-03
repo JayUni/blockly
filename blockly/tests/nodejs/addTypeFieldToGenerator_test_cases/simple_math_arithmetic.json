@@ -1,0 +1,19 @@
+[
+    {
+        "block_name": "math_arithmetic_operator",
+        "operator": "mul",
+        "argument": [
+            {
+                "block_name": "math_number_number",
+                "number": "3",
+                "valueType": "number"
+            },
+            {
+                "block_name": "math_number_number",
+                "number": "5",
+                "valueType": "number"
+            }
+        ],
+        "valueType": "number"
+    }
+]

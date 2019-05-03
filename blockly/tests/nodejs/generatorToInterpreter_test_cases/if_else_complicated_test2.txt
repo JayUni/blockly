@@ -1,0 +1,34 @@
+number 17
+number 3
+remainder
+isEven
+<<<<<<< HEAD:blockly/tests/nodejs/generator_outputs/if_else_complicated_test2.txt
+JUMPZ L0_4
+number 17
+print
+JUMP L1_4
+L0_4
+boolean TRUE
+JUMPZ L0_5
+boolean TRUE
+print
+JUMP L1_5
+L0_5
+L1_5
+L1_4
+=======
+JUMPZ L0_0
+number 17
+print
+JUMP L1_0
+L0_0
+boolean TRUE
+JUMPZ L0_1
+boolean TRUE
+print
+JUMP L1_1
+L0_1
+L1_1
+L1_0
+
+>>>>>>> json:blockly/tests/nodejs/generatorToInterpreter_test_cases/if_else_complicated_test2.txt
