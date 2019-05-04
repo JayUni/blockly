@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 
 # compile the interpreter
 g++ -o ../../SkoolBot/interpreter ../../SkoolBot/interpreter_symbolic.cpp
@@ -46,12 +46,12 @@ do
       echo "created $addTypeField."
    fi
 
-   # bytecode generator
+   # command generator
    generator="generatorToInterpreter_test_cases/`basename $xml .xml`.txt"
    if [ -e $generator ]
      then
        ### execute javascript with $x > $$.out
-       node ../../SkoolBot/bytecode_generator.js $addTypeField > compare.json
+       node ../../SkoolBot/command_generator.js $addTypeField > compare.json
        result=$(wdiff -3 $generator compare.json)
        if [ $? -eq 0 ]
          then
@@ -64,7 +64,7 @@ do
        fi
        rm compare.json
    else
-     node ../../SkoolBot/bytecode_generator.js $addTypeField > $generator
+     node ../../SkoolBot/command_generator.js $addTypeField > $generator
      echo "created $generator."
    fi
 
@@ -94,8 +94,8 @@ do
    echo ""
 done
 
-#! for testing the interpreter
-# compile
+# # for testing the interpreter
+# # compile
 # g++ -o ../../SkoolBot/interpreter ../../SkoolBot/interpreter.cpp
 # for x in generatorToInterpreter_test_cases/*.txt
 # do
@@ -117,3 +117,4 @@ done
 #         echo "created $interpreter."
 #     fi
 # done
+
