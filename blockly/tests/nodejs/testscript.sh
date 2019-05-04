@@ -1,62 +1,121 @@
 #!/bin/bash
-# for x in test_cases/*.xml
-# do
-#     y="test_jsons/`basename $x .xml`.json"
-#     addTypeField="test_typeField/`basename $x .xml`.json"
-#     if [ -e $y ]
-#       then
-#         ### execute javascript with $x > $$.out
-#         node main.js $x > compare.json
-#         result=$(wdiff -3 $y compare.json)
-#         if [ $? -eq 0 ]
-#            then
-#              echo -e "$y Test case pass."
-#            else
-#              echo "$result"
-#              echo -e "$y Test case failed."
-#         fi
-#     else
-#         node main.js $x > $y
-#         echo "created $y."
-#     fi
-#
-#     if [ -e $addTypeField ]
-#     then
-#         node main.js $x true > compare.json
-#         result=$(wdiff -3 $addTypeField compare.json)
-#         if [ $? -eq 0 ]
-#            then
-#              echo -e "$addTypeField Test case pass."
-#            else
-#              echo "$result"
-#              echo -e "$addTypeField Test case failed."
-#         fi
-#    else
-#       node main.js $x true > $addTypeField
-#       echo "created $addTypeField."
-#    fi
-#    rm compare.json
-#    echo -e ""
-# done
 
-#! for testing the interpreter
-for x in generator_outputs/*.txt
+# compile the interpreter
+g++ -o ../../SkoolBot/interpreter ../../SkoolBot/interpreter.cpp
+
+for xml in xmlToJson_test_cases/*.xml
 do
-    interpreter="interpreter_outputs/`basename $x .txt`.txt"
-    if [ -e $interpreter ]
+    # conver xml to json
+    json="jsonToAddTyepField_test_cases/`basename $xml .xml`.json"
+
+    if [ -e $json ]
       then
-        ### execute javascript with $x > $$.out
-        ../../SkoolBot/interpreter $x > compare.txt
-        result=$(wdiff -3 $interpreter compare.txt)
+        node ../../SkoolBot/xmlToJson.js $xml > compare.json
+        result=$(wdiff -3 $json compare.json)
         if [ $? -eq 0 ]
            then
-             echo -e "$interpreter Test case pass."
+             echo "$json Test case pass."
            else
              echo "$result"
-             echo -e "$interpreter Test case failed."
+             echo "$json Test case failed."
+             rm compare.json
+             continue
         fi
     else
-        ../../SkoolBot/interpreter $x > $interpreter
-        echo "created $interpreter."
+        node ../../SkoolBot/xmlToJson.js $xml > $json
+        echo "created $json."
     fi
+
+    # add type field to json
+    addTypeField="addTypeFieldToGenerator_test_cases/`basename $xml .xml`.json"
+    if [ -e $addTypeField ]
+    then
+        node ../../SkoolBot/add_type_field.js $json > compare.json
+        result=$(wdiff -3 $addTypeField compare.json)
+        if [ $? -eq 0 ]
+           then
+             echo "$addTypeField Test case pass."
+           else
+             echo "$result"
+             echo "$addTypeField Test case failed."
+             rm compare.json
+             continue
+        fi
+   else
+      node ../../SkoolBot/add_type_field.js $json > $addTypeField
+      echo "created $addTypeField."
+   fi
+
+   # command generator
+   generator="generatorToInterpreter_test_cases/`basename $xml .xml`.txt"
+   if [ -e $generator ]
+     then
+       ### execute javascript with $x > $$.out
+       node ../../SkoolBot/command_generator.js $addTypeField > compare.json
+       result=$(wdiff -3 $generator compare.json)
+       if [ $? -eq 0 ]
+         then
+            echo "$generator Test case pass."
+          else
+            echo "$result"
+            echo "$generator Test case failed."
+            rm compare.json
+            continue
+       fi
+       rm compare.json
+   else
+     node ../../SkoolBot/command_generator.js $addTypeField > $generator
+     echo "created $generator."
+   fi
+
+
+   # interpreter
+   interpreter="interpreter_final_outputs/`basename $xml .xml`.txt"
+   if [ -e $interpreter ]
+     then
+       ### execute javascript with $x > $$.out
+       ../../SkoolBot/interpreter $generator > compare.txt
+       result=$(wdiff -3 $interpreter compare.txt)
+       if [ $? -eq 0 ]
+          then
+            echo "$interpreter Test case pass."
+          else
+            echo "$result"
+            echo "$interpreter Test case failed."
+            rm compare.txt
+            continue
+       fi
+       rm compare.txt
+   else
+       ../../SkoolBot/interpreter $generator > $interpreter
+       echo "created $interpreter."
+   fi
+   echo ""
+   echo ""
+   echo ""
 done
+
+# # for testing the interpreter
+# # compile
+# g++ -o ../../SkoolBot/interpreter ../../SkoolBot/interpreter.cpp
+# for x in generatorToInterpreter_test_cases/*.txt
+# do
+#     interpreter="interpreter_final_outputs/`basename $x .txt`.txt"
+#     if [ -e $interpreter ]
+#       then
+#         ### execute javascript with $x > $$.out
+#         ../../SkoolBot/interpreter $x > compare.txt
+#         result=$(wdiff -3 $interpreter compare.txt)
+#         if [ $? -eq 0 ]
+#            then
+#              echo -e "$interpreter Test case pass."
+#            else
+#              echo "$result"
+#              echo -e "$interpreter Test case failed."
+#         fi
+#     else
+#         ../../SkoolBot/interpreter $x > $interpreter
+#         echo "created $interpreter."
+#     fi
+# done
+

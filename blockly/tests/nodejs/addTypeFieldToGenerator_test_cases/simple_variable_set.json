@@ -1,0 +1,27 @@
+[
+    {
+        "block_name": "variables_statement_set",
+        "functionName": "variables_set",
+        "varName": "a",
+        "argument": [
+            {
+                "block_name": "math_arithmetic_operator",
+                "operator": "add",
+                "argument": [
+                    {
+                        "block_name": "math_number_number",
+                        "number": "1",
+                        "valueType": "number"
+                    },
+                    {
+                        "block_name": "math_number_number",
+                        "number": "2",
+                        "valueType": "number"
+                    }
+                ],
+                "valueType": "number"
+            }
+        ],
+        "valueType": "statement"
+    }
+]
