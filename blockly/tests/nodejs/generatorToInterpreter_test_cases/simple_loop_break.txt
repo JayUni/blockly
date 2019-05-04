@@ -1,18 +1,10 @@
 number 1
 set i
-<<<<<<< HEAD:blockly/tests/nodejs/generator_outputs/simple_loop_break.txt
-L0_10
-number 10
-get i
-cmpl
-JUMPZ L1_10
-=======
 L0_0
 number 10
 get i
 cmpl
 JUMPZ L1_0
->>>>>>> json:blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_loop_break.txt
 number 1
 get i
 add
@@ -20,17 +12,6 @@ set i
 get i
 number 9
 isDivisibleBy
-<<<<<<< HEAD:blockly/tests/nodejs/generator_outputs/simple_loop_break.txt
-JUMPZ L0_11
-JUMP L1_10
-JUMP L1_11
-L0_11
-L1_11
-get i
-print
-JUMP L0_10
-L1_10
-=======
 JUMPZ L0_1
 JUMP L1_0
 JUMP L1_1
@@ -41,4 +22,3 @@ print
 JUMP L0_0
 L1_0
 
->>>>>>> json:blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_loop_break.txt

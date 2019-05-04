@@ -1,10 +1,6 @@
 number 1
 set i
-<<<<<<< HEAD:blockly/tests/nodejs/generator_outputs/simple_loop_repeat.txt
-L0_13
-=======
 L0_0
->>>>>>> json:blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_loop_repeat.txt
 number 10
 set repeat_control_variable
 get i
@@ -18,13 +14,7 @@ number 1
 sub
 number 0
 cmpl
-<<<<<<< HEAD:blockly/tests/nodejs/generator_outputs/simple_loop_repeat.txt
-JUMPZ L1_13
-JUMP L0_13
-L1_13
-=======
 JUMPZ L1_0
 JUMP L0_0
 L1_0
 
->>>>>>> json:blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_loop_repeat.txt

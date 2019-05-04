@@ -1,18 +1,10 @@
 number 1
 set i
-<<<<<<< HEAD:blockly/tests/nodejs/generator_outputs/simple_loop_continue.txt
-L0_7
-number 100
-get i
-cmpl
-JUMPZ L1_7
-=======
 L0_0
 number 100
 get i
 cmpl
 JUMPZ L1_0
->>>>>>> json:blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_loop_continue.txt
 number 3
 get i
 add
@@ -21,17 +13,6 @@ get i
 number 7
 isDivisibleBy
 negate
-<<<<<<< HEAD:blockly/tests/nodejs/generator_outputs/simple_loop_continue.txt
-JUMPZ L0_8
-JUMP L0_7
-JUMP L1_8
-L0_8
-L1_8
-get i
-print
-JUMP L0_7
-L1_7
-=======
 JUMPZ L0_1
 JUMP L0_0
 JUMP L1_1
@@ -42,4 +23,3 @@ print
 JUMP L0_0
 L1_0
 
->>>>>>> json:blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_loop_continue.txt
