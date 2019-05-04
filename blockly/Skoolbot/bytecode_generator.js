@@ -4,12 +4,85 @@ var add_type_field = require('./type_field_core.js');
 
 
 function bytecode_generator(commandList) {
-    return commandList
+    let resultList = [];
 
+    for (let i in commandList){
+        let command = commandList[i].split(' ')[0];
+        let value = '';
+        console.log(command);
+        switch (command){
+            case 'number':
+                value = commandList[i].split(' ')[1];
+                resultList.push(getCommandByteCode(command) + ' ' + value);
+                break;
+        }
+    }
+
+
+
+
+    return resultList;
 }
 
 
+var commandMap = {
+    'print': '0x01',
+    'add': '0x02',
+    'sub': '0x03',
+    'mul': '0x04',
+    'div': '0x05',
+    'pow': '0x06',
+    'abs': '0x07',
+    'neg': '0x08',
+    'isEven': '0x09',
+    'isOdd': '0x0a',
+    'isPositive': '0x0b',
+    'isNegative': '0x0c',
+    'isDivisibleBy': '0x0d',
+    // remainder
+    // constrain
+    // randomInt
+    // cmpe, cmpne, cmpl, cmple, cmpg, cmpge
+    // TRUE, FALSE
+    // get,set
+    // number,
+    // JUMPZ
+    // JUMP
 
+};
+
+function getCommandByteCode(command){
+    var commandMap = {
+        'print': '0x01',
+        'add': '0x02',
+        'sub': '0x03',
+        'mul': '0x04',
+        'div': '0x05',
+        'pow': '0x06',
+        'abs': '0x07',
+        'neg': '0x08',
+        'isEven': '0x09',
+        'isOdd': '0x0a',
+        'isPositive': '0x0b',
+        'isNegative': '0x0c',
+        'isDivisibleBy': '0x0d',
+        // remainder
+        // constrain
+        // randomInt
+        // cmpe, cmpne, cmpl, cmple, cmpg, cmpge
+        // TRUE, FALSE
+        // get,set
+        // number,
+        // JUMPZ
+        // JUMP
+
+    };
+    for (let [key, val] of Object.entries(commandMap)){
+        if (key === command){
+            return val;
+        }
+    }
+}
 
 // For debugging
 

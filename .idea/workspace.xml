@@ -2,148 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="309abf3b-ba8f-41f5-a11f-08a439e8cd78" name="Default Changelist" comment="Default Changelist">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/if_else_complicated_test1.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/if_else_complicated_test2.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/loop_control_while_repeat.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/simple_logic_boolean.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/simple_logic_compare.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/simple_logic_ifelse.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/simple_logic_negate.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/simple_logic_operation.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/simple_loop_break.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/simple_loop_continue.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/simple_loop_for.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/simple_loop_repeat.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/simple_loop_until.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/simple_loop_while.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/simple_math_arithmetic.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/simple_math_constrain.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/simple_math_number_property.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/simple_math_randomInt.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/simple_math_remainder.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/simple_math_single.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/simple_number.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/simple_sequence_variable_print.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/simple_text_print.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/simple_variable_get.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/simple_variable_set.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/stress_testcases_1.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/while_control_test.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/compare.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/if_else_complicated_test1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/if_else_complicated_test2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/loop_control_while_repeat.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_logic_boolean.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_logic_compare.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_logic_ifelse.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_logic_negate.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_logic_operation.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_loop_break.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_loop_continue.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_loop_for.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_loop_repeat.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_loop_until.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_loop_while.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_math_arithmetic.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_math_constrain.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_math_number_property.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_math_randomInt.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_math_remainder.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_math_single.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_number.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_sequence_variable_print.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_text_print.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_variable_get.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/simple_variable_set.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/stress_testcases_1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generatorToInterpreter_test_cases/while_control_test.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/generator_outputs/simple_loop_while.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/if_else_complicated_test1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/if_else_complicated_test2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/loop_control_while_repeat.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_logic_boolean.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_logic_compare.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_logic_ifelse.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_logic_negate.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_logic_operation.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_loop_break.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_loop_continue.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_loop_for.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_loop_repeat.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_loop_until.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_loop_while.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_math_arithmetic.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_math_constrain.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_math_number_property.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_math_randomInt.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_math_remainder.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_math_single.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_number.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_sequence_variable_print.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_text_print.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_variable_get.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_variable_set.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/stress_testcases_1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/while_control_test.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/if_else_complicated_test1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/simple_logic_compare.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/simple_logic_ifelse.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/simple_logic_negate.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/simple_logic_operation.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/simple_loop_break.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/simple_loop_continue.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/simple_loop_for.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/simple_loop_repeat.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/simple_loop_until.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/simple_loop_while.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/simple_math_arithmetic.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/simple_math_constrain.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/simple_math_number_property.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/simple_math_randomInt.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/simple_math_remainder.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/simple_math_single.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/simple_number.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/simple_sequence_variable_print.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/simple_text_print.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/simple_variable_get.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/simple_variable_set.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/while_control_test.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/if_else_complicated_test1.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/if_else_complicated_test2.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/loop_control_while_repeat.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/simple_logic_boolean.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/simple_logic_compare.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/simple_logic_ifelse.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/simple_logic_negate.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/simple_logic_operation.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/simple_loop_break.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/simple_loop_continue.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/simple_loop_for.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/simple_loop_repeat.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/simple_loop_until.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/simple_loop_while.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/simple_math_arithmetic.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/simple_math_constrain.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/simple_math_number_property.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/simple_math_randomInt.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/simple_math_remainder.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/simple_math_single.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/simple_number.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/simple_sequence_variable_print.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/simple_text_print.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/simple_variable_get.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/simple_variable_set.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/stress_testcases_1.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/while_control_test.json" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/if_else_complicated_test2.txt" afterPath="$PROJECT_DIR$/blockly/Skoolbot/add_type_field_core.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/loop_control_while_repeat.txt" afterPath="$PROJECT_DIR$/blockly/Skoolbot/command_generator.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_outputs/simple_logic_boolean.txt" afterPath="$PROJECT_DIR$/blockly/Skoolbot/generator_core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/Skoolbot/Bytecode_command.xlsx" afterPath="$PROJECT_DIR$/blockly/Skoolbot/Bytecode_command.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/Skoolbot/interpreter" afterPath="$PROJECT_DIR$/blockly/Skoolbot/interpreter" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/compare.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/Skoolbot/add_type_field.js" afterPath="$PROJECT_DIR$/blockly/Skoolbot/add_type_field.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/Skoolbot/bytecode_generator.js" afterPath="$PROJECT_DIR$/blockly/Skoolbot/bytecode_generator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/testscript.sh" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/testscript.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -165,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bytecode_generator.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bytecode_generator.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/bytecode_generator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+            <state relative-caret-position="239">
+              <caret line="75" column="16" lean-forward="true" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -178,38 +39,8 @@
       <file leaf-file-name="generator_core.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/generator_core.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="command_generator.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/command_generator.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="interpreter.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/interpreter.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-944">
-              <caret line="382" column="7" lean-forward="false" selection-start-line="382" selection-start-column="7" selection-end-line="382" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testscript.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/testscript.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+            <state relative-caret-position="267">
+              <caret line="35" column="41" lean-forward="false" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -218,18 +49,18 @@
       <file leaf-file-name="add_type_field.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/add_type_field.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            <state relative-caret-position="195">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_type_field_core.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/add_type_field_core.js">
+      <file leaf-file-name="type_field_core.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/type_field_core.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+            <state relative-caret-position="60">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -330,9 +161,9 @@
         <option value="$PROJECT_DIR$/blockly/tests/nodejs/testscript.sh" />
         <option value="$PROJECT_DIR$/blockly/Skoolbot/generator_core.js" />
         <option value="$PROJECT_DIR$/blockly/Skoolbot/add_type_field_core.js" />
-        <option value="$PROJECT_DIR$/blockly/Skoolbot/bytecode_generator.js" />
-        <option value="$PROJECT_DIR$/blockly/Skoolbot/add_type_field.js" />
         <option value="$PROJECT_DIR$/blockly/Skoolbot/command_generator.js" />
+        <option value="$PROJECT_DIR$/blockly/Skoolbot/add_type_field.js" />
+        <option value="$PROJECT_DIR$/blockly/Skoolbot/bytecode_generator.js" />
       </list>
     </option>
   </component>
@@ -386,19 +217,6 @@
               <item name="blockly" type="b2602c69:ProjectViewProjectNode" />
               <item name="blockly" type="462c0819:PsiDirectoryNode" />
               <item name="blockly" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blockly" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blockly" type="462c0819:PsiDirectoryNode" />
-              <item name="blockly" type="462c0819:PsiDirectoryNode" />
-              <item name="generators" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blockly" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blockly" type="462c0819:PsiDirectoryNode" />
-              <item name="blockly" type="462c0819:PsiDirectoryNode" />
-              <item name="generators" type="462c0819:PsiDirectoryNode" />
-              <item name="skoolbot" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="blockly" type="b2602c69:ProjectViewProjectNode" />
@@ -588,12 +406,12 @@
       <workItem from="1554787819206" duration="7944000" />
       <workItem from="1555037736685" duration="65221000" />
       <workItem from="1556677378003" duration="4596000" />
-      <workItem from="1556864921835" duration="7478000" />
+      <workItem from="1556864921835" duration="10724000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="294586000" />
+    <option name="totallyTimeSpent" value="297832000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -802,9 +620,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/command_generator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/testscript.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
+        <state relative-caret-position="765">
           <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
           <folding />
         </state>
@@ -818,42 +644,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/add_type_field_core.js">
+    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/type_field_core.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/add_type_field.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/bytecode_generator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/generator_core.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="2" />
+        <state relative-caret-position="267">
+          <caret line="35" column="41" lean-forward="false" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/command_generator.js">
+    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/bytecode_generator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="239">
+          <caret line="75" column="16" lean-forward="true" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
           <folding />
         </state>
       </provider>
