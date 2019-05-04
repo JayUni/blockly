@@ -1,15 +1,11 @@
-number 1
-set i
-L0_6
-get i
-number 10
-cmpl
-JUMPZ L1_6
-get i
-print
-get i
-number 1
+number 3
+number 5
 add
-set i
-JUMP L0_6
-L1_6
+number 5
+sub
+number 5
+mul
+number 5
+div
+number 3
+pow
