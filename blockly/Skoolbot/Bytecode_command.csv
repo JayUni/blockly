@@ -1,0 +1,55 @@
+﻿Type,Block,Block Name,Command in Bytecode,Semantic or Structure
+math,math_number,math_number_number,number,number 10
+math,"math_arithmetic (+, -, x, /, ^)",math_arithmetic_operator,"add, sub, mul, div, pow","<arg_1>
+<arg_2>
+add"
+math,"math_single (abs, -)",math_number_operator_single,"abs, neg","<arg_1>
+neg"
+math,math_number_property (Even/Odd/positive/negative/divisible by),math_boolean_numberProperty,"isEven, isOdd, isPositive, isNegative, isDivisibleBy","case1:
+<arg_1>
+isEven / 
+case2:
+<arg_1>
+<arg_2>
+isDivisibleBy"
+math,math_modulo (get remainder of num1/num2),math_number_operator_modulo,remainder,"<arg_1>
+<arg_2>
+remainder"
+math,math_constrain(constrain num1 with range(num2-num3)),math_number_operator_constrain,constrain,"<arg_1>
+<arg_2>
+<arg_3>
+constrain"
+math,math_random_int (range (num1-num2)),math_number_function_randomInt,randomInt,"<arg_1>
+<arg_2>
+randomInt"
+logic,"logic_compare (=, ≠, <, ≤,  >, ≥)",logic_boolean_operator_compare,"cmpe, cmpne, cmpl, cmple, cmpg, cmpge","<arg_1>
+<arg_2>
+cmpe"
+logic,"logic_boolean(true, false)",logic_boolean_boolean,"TRUE, FALSE",boolean TRUE/ boolean FALSE
+logic,logic_negate,logic_boolean_operator_logicNegate,negate,<boolean> negate
+logic,logic_null(null),logic_null_null,NULL,null
+variables,variables_get(variable assignment),variables_statement_get,get,get <variable name>
+variables,variables_set,variables_statement_set,set,set <variable name>
+controls,controls_if,controls_statement_ifelse,"JUMPZ L0_n(n = 0, 1, 2, 3 ...)    /  JUMP L1_n(n = 0, 1, 2, 3 ...)","<condition>
+JUMPZ L0_n
+<true branch>
+JUMP L1_n
+L0_n
+<false branch>
+L1_n"
+controls,controls_while,controls_statement_for,"JUMPZ L0_n(n = 0, 1, 2, 3 ...)    /  JUMP L1_n(n = 0, 1, 2, 3 ...)","<init i>
+L0_n
+<end condition>
+JUMPZ L1_n
+<step increment>
+<statement>
+JUMP L0_n
+L1_n"
+controls,controls_whileUntil,controls_statement_whileUntil,"JUMPZ L0_n(n = 0, 1, 2, 3 ...)    /  JUMP L1_n(n = 0, 1, 2, 3 ...)","L0_n
+<condition>
+negate (if end type is until)
+JUMPZ L1_n
+<statement>
+JUMP L0_n
+L1_n"
+controls,controls_repeat,controls_statement_repeat,"JUMPZ L0_n(n = 0, 1, 2, 3 ...)    /  JUMP L1_n(n = 0, 1, 2, 3 ...)",
