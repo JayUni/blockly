@@ -1,7 +1,7 @@
 # !/bin/bash
 
 # compile the interpreter
-g++ -o ../../SkoolBot/interpreter ../../SkoolBot/interpreter.cpp
+g++ -o ../../SkoolBot/interpreter ../../SkoolBot/interpreter_symbolic.cpp
 
 for xml in xmlToJson_test_cases/*.xml
 do
@@ -67,7 +67,6 @@ do
      node ../../SkoolBot/bytecode_generator.js $addTypeField > $generator
      echo "created $generator."
    fi
-
 
    # interpreter
    interpreter="interpreter_final_outputs/`basename $xml .xml`.txt"
