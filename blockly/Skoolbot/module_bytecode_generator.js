@@ -40,42 +40,42 @@ module.exports = function (jsonList) {
 // initialize global variable
 var commandMap = {
     'command':{
-        'print': '0x001f',
-        'add': '0x0002',
-        'sub': '0x0003',
-        'mul': '0x0004',
-        'div': '0x0005',
-        'pow': '0x0006',
-        'abs': '0x0007',
-        'neg': '0x0008',
-        'isEven': '0x0009',
-        'isOdd': '0x000a',
-        'isPositive': '0x000b',
-        'isNegative': '0x000c',
-        'isDivisibleBy': '0x000d',
-        'remainder': '0x000e',
-        'constrain': '0x000f',
-        'randomInt': '0x0010',
-        'cmpe': '0x0011',
-        'cmpne': '0x0012',
-        'cmpl': '0x0013',
-        'cmple': '0x0014',
-        'cmpg': '0x0015',
-        'cmpge': '0x0016',
-        'negate': '0x0019',
-        'null': '0x001a'
+        'print': '0x1f',
+        'add': '0x02',
+        'sub': '0x03',
+        'mul': '0x04',
+        'div': '0x05',
+        'pow': '0x06',
+        'abs': '0x07',
+        'neg': '0x08',
+        'isEven': '0x09',
+        'isOdd': '0x0a',
+        'isPositive': '0x0b',
+        'isNegative': '0x0c',
+        'isDivisibleBy': '0x0d',
+        'remainder': '0x0e',
+        'constrain': '0x0f',
+        'randomInt': '0x10',
+        'cmpe': '0x11',
+        'cmpne': '0x12',
+        'cmpl': '0x13',
+        'cmple': '0x14',
+        'cmpg': '0x15',
+        'cmpge': '0x16',
+        'negate': '0x19',
+        'null': '0x1a'
     },
     'single_value':{
-        'boolean': '0x0020',
-        'set': '0x001c',
-        'get': '0x001b',
-        'number': '0x0001',
-        'JUMPZ': '0x001d',
-        'JUMP': '0x001e'
+        'boolean': '0x20',
+        'set': '0x1c',
+        'get': '0x1b',
+        'number': '0x01',
+        'JUMPZ': '0x1d',
+        'JUMP': '0x1e'
     },
     'label':{
-        'L0': '0x0000', // destination of jump, nothing to do
-        'L1': '0x0000' // destination of jump, nothing to do
+        'L0': '0x00', // destination of jump, nothing to do
+        'L1': '0x00' // destination of jump, nothing to do
     }
 };
 
@@ -141,21 +141,17 @@ function getCommandByteCode(command, commandMap){
 
 function processValue(value, index){
     if(parseInt(value)){
-        // if (value < 0)
-        // {
-        //     value = 0xFFFFFFFF + value + 1;
-        // }
 
         var numberStr = parseInt(value).toString(16);
 
         var len = numberStr.length;
-        if(len <= 8){
-            for (var i = 0; i < (8 - len); i++){
+        if(len <= 4){
+            for (var i = 0; i < (4 - len); i++){
                 numberStr = '0' + numberStr;
             }
             // return ' 0x' + numberStr;
-            var high_byte = numberStr.substring(0, 4);
-            var low_byte = numberStr.substring(4, 8);
+            var high_byte = numberStr.substring(0, 2);
+            var low_byte = numberStr.substring(2, 4);
 
             return ' 0x' + low_byte + ' 0x' + high_byte;
         }
@@ -165,9 +161,9 @@ function processValue(value, index){
     else if(value === 'TRUE'|| value === 'FALSE'){
         switch (value){
             case 'TRUE':
-                return ' 0x0017';
+                return ' 0x17';
             case 'FALSE':
-                return ' 0x0018';
+                return ' 0x18';
         }
 
 
@@ -179,9 +175,11 @@ function processValue(value, index){
             for (var i = 0; i < (4 - val_len); i++){
                 val = '0' + val;
             }
+            var high_byte = val.substring(0, 2);
+            var low_byte = val.substring(2, 4);
 
+            return ' 0x' + low_byte + ' 0x' + high_byte;
 
-            return ' 0x' + val;
         }
         return ' 0x' + parseInt(index[value]).toString(16);
     }
@@ -216,47 +214,46 @@ function processValue(value, index){
 
 
 
-// // save as text file
-// const fs = require('fs');
-// var generator_core = require('./module_command_generator.js');
-// var add_type_field = require('./module_add_type_field.js');
-//
-// function savetxt(path){
-//
-//     fs.readFile(path, "utf8", function(err, commandList) {
-//         if (!err) {
-//             commandList = commandList.split("\n");
-//             var reslist = bytecode_generator(commandList);
-//
-//             var restxt = '';
-//             for (var j in reslist){
-//                 restxt += reslist[j] + '\n';
-//             }
-//             var savefile = path.split('/')[4].split('.')[0];
-//             fs.writeFile('../tests/nodejs/bytecode_generator_outputs/' + savefile + '.txt', restxt, (err) => {
-//                 if (err) throw err;
-//                 console.log('output is saved successfully!');
-//             });
-//         }
-//         else{
-//             throw err;
-//         }
-//     });
-// }
-//
-//
-// function travel(dir, callback) {
-//     fs.readdirSync(dir).forEach(function (file) {
-//         var pathname = require('path').join(dir, file);
-//
-//         if (fs.statSync(pathname).isDirectory()) {
-//             travel(pathname, callback);
-//         } else {
-//             callback(pathname);
-//         }
-//     });
-// }
-//
-//
-// var path = '../tests/nodejs/generatorToInterpreter_test_cases/';
-// travel(path, savetxt);
+// save as text file
+const fs = require('fs');
+
+
+function savetxt(path){
+
+    fs.readFile(path, "utf8", function(err, commandList) {
+        if (!err) {
+            commandList = commandList.split("\n");
+            var reslist = bytecode_generator(commandList);
+
+            var restxt = '';
+            for (var j in reslist){
+                restxt += reslist[j] + '\n';
+            }
+            var savefile = path.split('/')[4].split('.')[0];
+            fs.writeFile('../tests/nodejs/bytecode_generator_outputs/' + savefile + '.txt', restxt, (err) => {
+                if (err) throw err;
+                console.log('output is saved successfully!');
+            });
+        }
+        else{
+            throw err;
+        }
+    });
+}
+
+
+function travel(dir, callback) {
+    fs.readdirSync(dir).forEach(function (file) {
+        var pathname = require('path').join(dir, file);
+
+        if (fs.statSync(pathname).isDirectory()) {
+            travel(pathname, callback);
+        } else {
+            callback(pathname);
+        }
+    });
+}
+
+
+var path = '../tests/nodejs/generatorToInterpreter_test_cases/';
+travel(path, savetxt);
