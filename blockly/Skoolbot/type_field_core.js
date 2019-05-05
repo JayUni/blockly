@@ -1,13 +1,13 @@
 module.exports = function (jsonList) {
-    return add_type_field(jsonList);
+    return addTypeField(jsonList);
 };
 
 
-function add_type_field(jsonList){
+function addTypeField(jsonList){
     for (var element in jsonList) {
         if ((jsonList[element] instanceof Object)){
             jsonList[element].valueType = "";
-            add_type_field(jsonList[element]);
+            addTypeField(jsonList[element]);
         }
         else{
             var blockName = jsonList.block_name;
