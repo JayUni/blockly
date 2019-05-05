@@ -81,6 +81,8 @@ var commandMap = {
 
 
 function bytecode_generator(commands) {
+    commands = commands.split("\n");
+
     var resultList = [];
     var command = '';
     var value = '';
@@ -214,46 +216,46 @@ function processValue(value, index){
 
 
 
-// save as text file
-const fs = require('fs');
-
-
-function savetxt(path){
-
-    fs.readFile(path, "utf8", function(err, commandList) {
-        if (!err) {
-            commandList = commandList.split("\n");
-            var reslist = bytecode_generator(commandList);
-
-            var restxt = '';
-            for (var j in reslist){
-                restxt += reslist[j] + '\n';
-            }
-            var savefile = path.split('/')[4].split('.')[0];
-            fs.writeFile('../tests/nodejs/bytecode_generator_outputs/' + savefile + '.txt', restxt, (err) => {
-                if (err) throw err;
-                console.log('output is saved successfully!');
-            });
-        }
-        else{
-            throw err;
-        }
-    });
-}
-
-
-function travel(dir, callback) {
-    fs.readdirSync(dir).forEach(function (file) {
-        var pathname = require('path').join(dir, file);
-
-        if (fs.statSync(pathname).isDirectory()) {
-            travel(pathname, callback);
-        } else {
-            callback(pathname);
-        }
-    });
-}
-
-
-var path = '../tests/nodejs/generatorToInterpreter_test_cases/';
-travel(path, savetxt);
+// // save as text file
+// const fs = require('fs');
+//
+//
+// function savetxt(path){
+//
+//     fs.readFile(path, "utf8", function(err, commandList) {
+//         if (!err) {
+//             // commandList = commandList.split("\n");
+//             var reslist = bytecode_generator(commandList);
+//
+//             var restxt = '';
+//             for (var j in reslist){
+//                 restxt += reslist[j] + '\n';
+//             }
+//             var savefile = path.split('/')[4].split('.')[0];
+//             fs.writeFile('../tests/nodejs/bytecode_generator_outputs/' + savefile + '.txt', restxt, (err) => {
+//                 if (err) throw err;
+//                 console.log('output is saved successfully!');
+//             });
+//         }
+//         else{
+//             throw err;
+//         }
+//     });
+// }
+//
+//
+// function travel(dir, callback) {
+//     fs.readdirSync(dir).forEach(function (file) {
+//         var pathname = require('path').join(dir, file);
+//
+//         if (fs.statSync(pathname).isDirectory()) {
+//             travel(pathname, callback);
+//         } else {
+//             callback(pathname);
+//         }
+//     });
+// }
+//
+//
+// var path = '../tests/nodejs/generatorToInterpreter_test_cases/';
+// travel(path, savetxt);
