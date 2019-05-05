@@ -1,8 +1,3 @@
-const fs = require('fs');
-var generator_core = require('./module_command_generator.js');
-var add_type_field = require('./module_add_type_field.js');
-
-
 module.exports = function (jsonList) {
     return bytecode_generator(jsonList);
 };
@@ -36,8 +31,8 @@ var commandMap = {
     },
     'single_value':{
         'boolean': '0x30',
-        'get': '0x31',
-        'set': '0x32',
+        'set': '0x31',
+        'get': '0x32',
         'number': '0x33',
         'JUMPZ': '0x34',
         'JUMP': '0x35'
@@ -70,8 +65,8 @@ function bytecode_generator(commandList) {
             console.log(value);
         }
 
-        // resultList.push(commandList[j] + '            ' + getCommandByteCode(command, commandMap) + processValue(value, index));
-        resultList.push(getCommandByteCode(command, commandMap) + processValue(value, index));
+        resultList.push(commandList[j] + '            ' + getCommandByteCode(command, commandMap) + processValue(value, index));
+        // resultList.push(getCommandByteCode(command, commandMap) + processValue(value, index));
 
     }
 
@@ -109,7 +104,20 @@ function processValue(value, index){
             value = 0xFFFFFFFF + value + 1;
         }
 
-        return ' 0x' + value.toString(16).toUpperCase();
+        var numberStr = value.toString(16);
+
+        var len = numberStr.length;
+        if(len <= 4){
+            for (var i = 0; i < (4 - len); i++){
+                numberStr = '0' + numberStr;
+            }
+            // return ' 0x' + numberStr;
+            var high_byte = numberStr.substring(0, 2);
+            var low_byte = numberStr.substring(2, 4);
+
+            return ' 0x' + low_byte + ' 0x' + high_byte;
+        }
+        return 'out of range';
 
     }
     else if(value === 'TRUE'|| value === 'FALSE'){
@@ -126,7 +134,7 @@ function processValue(value, index){
         return ' 0x' + index[value].toString(16).toUpperCase();
     }
     else{
-        return value;
+        return ' ' + value;
     }
 }
 
@@ -135,6 +143,11 @@ function processValue(value, index){
 
 // var str0 = JSON.parse(`[{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"logic_boolean_operator_compare","operator":"cmpl","argument":[{"block_name":"math_number_number","number":"1"},{"block_name":"math_number_number","number":"2"}]},"branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"logic_boolean_boolean","value":"TRUE"}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"logic_boolean_boolean","value":"FALSE"}]}]}]}]
 // `);
+
+// const fs = require('fs');
+// var generator_core = require('./module_command_generator.js');
+// var add_type_field = require('./module_add_type_field.js');
+
 // var str0 = JSON.parse(`[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"a","argument":[{"block_name":"math_number_number","number":"15"}]},{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"logic_boolean_operator_compare","operator":"cmple","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"a"},{"block_name":"math_number_number","number":"30"}]},"branchCode":[{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"logic_boolean_operator_compare","operator":"cmpg","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"a"},{"block_name":"math_number_number","number":"6"}]},"branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"a"}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[]}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"logic_boolean_boolean","value":"FALSE"}]}]}]}]
 // `);
 //
