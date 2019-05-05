@@ -1,11 +1,17 @@
-number 3
-number 5
-add
-number 5
-sub
-number 5
-mul
-number 5
-div
-number 3
-pow
+01
+03
+01
+05
+02
+01
+05
+03
+01
+05
+04
+01
+05
+05
+01
+03
+06

@@ -87,15 +87,7 @@ int main (int argc, char *argv[]) {
         return 0;
       }
       s.push(num);
-    }
-    // else if (command.compare("constant") == 0) {
-    //   ++counter;
-    //   command = program[counter];
-    //   if (command.compare("PI") == 0) {
-    //     s.push(3);
-    //   }
-    // }
-    else if (command.compare("add") == 0) {
+    } else if (command.compare("add") == 0) {
       int a = getStack(s);
       int b = getStack(s);
       result = a + b;
