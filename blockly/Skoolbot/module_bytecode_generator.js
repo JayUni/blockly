@@ -220,7 +220,7 @@ function processValue(value, index){
 // const fs = require('fs');
 // var generator_core = require('./module_command_generator.js');
 // var add_type_field = require('./module_add_type_field.js');
-
+//
 // function savetxt(path){
 //
 //     fs.readFile(path, "utf8", function(err, commandList) {
@@ -256,7 +256,7 @@ function processValue(value, index){
 //         }
 //     });
 // }
-
-
+//
+//
 // var path = '../tests/nodejs/generatorToInterpreter_test_cases/';
 // travel(path, savetxt);
