@@ -94,6 +94,9 @@ function bytecode_generator(commands) {
 
 
 function generator(commands) {
+    variable_map = {};
+    addr = 0;
+
     commands = commands.split("\n");
 
     var resultList = [];
@@ -117,13 +120,13 @@ function generator(commands) {
                 value = commands[j].split(' ')[1];
             }
 
-            // resultList.push(getCommandByteCode(command, commandMap) + processValue(command, value, index));
+            resultList.push(getCommandByteCode(command, commandMap) + processValue(command, value, index));
 
             console.log(getCommandByteCode(command, commandMap) + processValue(value, index)); //
 
         }
     }
-    // resultList.push('0x21');
+    resultList.push('0x21');
 
     console.log('0x21');
     return resultList;
@@ -233,7 +236,7 @@ function int2Hex(value) {
 
 
 
-
+//
 // // save as text file
 // const fs = require('fs');
 //
