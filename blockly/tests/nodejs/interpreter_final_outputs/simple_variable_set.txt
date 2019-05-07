@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9cb005c9f95453df4a78032c951e397aabbacf5556e90f5de2191903362301a9
-size 32
+empty stack, pop is not allowed

@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0a324b4938bceda4f0203f713bc84e0daeedb115b95b1ffaa0b9963eac57d110
-size 105
+number 1
+set i
+L0_0
+get i
+number 10
+cmpl
+JUMPZ L1_0
+get i
+print
+get i
+number 1
+add
+set i
+JUMP L0_0
+L1_0
+

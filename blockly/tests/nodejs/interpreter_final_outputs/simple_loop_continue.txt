@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0b45d23230de7165b5e50b4ac43335a68c2adcb372551af3c39993b84c6bb780
-size 31
+Invalid command: isDivisibleBy

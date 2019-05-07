@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:249ddcbf10df130717660c6aa312b7e18a1ec1e3abe660cd336cbd487dbbc4f0
-size 69
+number 12
+set a
+number 5
+number 6
+sub
+set b
+get a
+print
+get b
+print
+

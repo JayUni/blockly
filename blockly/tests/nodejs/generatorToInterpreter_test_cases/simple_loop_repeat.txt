@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a03116352f477c622f884806c54986e9f652fd98861e0a1e95dc319313255184
-size 233
+number 1
+set i
+number 10
+set repeat_control_variable
+L0_0
+get i
+print
+get i
+number 1
+add
+set i
+get repeat_control_variable
+number 1
+sub
+set repeat_control_variable
+get repeat_control_variable
+number 0
+cmpg
+JUMPZ L1_0
+JUMP L0_0
+L1_0
+
