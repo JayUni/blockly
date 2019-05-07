@@ -1,18 +1,3 @@
-number 17
-number 3
-remainder
-isEven
-JUMPZ L0_0
-number 17
-print
-JUMP L1_0
-L0_0
-boolean TRUE
-JUMPZ L0_1
-boolean TRUE
-print
-JUMP L1_1
-L0_1
-L1_1
-L1_0
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:428071f0a4f73354923594f1535dcd8f50b6187e038a7e277049d0319cd4fd71
+size 147

@@ -1,2 +1,3 @@
-User-agent: *
-Disallow: /storage
+version https://git-lfs.github.com/spec/v1
+oid sha256:a4df4efb6ac6e9380635da3b0e619d776904832bf3c62158730440b167d2ddf7
+size 33

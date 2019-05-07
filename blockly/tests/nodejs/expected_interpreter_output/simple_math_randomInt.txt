@@ -1,2 +1,3 @@
-cannot test random, default number is 2 randomInt
-2
+version https://git-lfs.github.com/spec/v1
+oid sha256:2235e3c36045ce2ed620d59f22f2a40f1d3b03208c33600768574be0908a5bdb
+size 52

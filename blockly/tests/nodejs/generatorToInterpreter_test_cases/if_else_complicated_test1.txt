@@ -1,21 +1,3 @@
-number 15
-set a
-get a
-number 30
-cmple
-JUMPZ L0_0
-get a
-number 6
-cmpg
-JUMPZ L0_1
-get a
-print
-JUMP L1_1
-L0_1
-L1_1
-JUMP L1_0
-L0_0
-boolean FALSE
-print
-L1_0
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:45f13bf654e21d03cd76956f89123ce2e2269d6e747498977ff7d73caf7aaadc
+size 153
