@@ -3,41 +3,47 @@ module.exports = function (jsonList) {
 };
 
 
-// #define NOP 0x0000
-// #define NUMBER 0x0001
-// #define ADD 0x0002
-// #define SUB 0x0003
-// #define MUL 0x0004
-// #define DIV 0x0005
-// #define POW 0x0006
-// #define ABS 0x0007
-// #define NEG 0x0008
-// #define ISEVEN 0x0009
-// #define ISODD 0x000a
-// #define ISPOSITIVE 0x000b
-// #define ISNEGATIVE 0x000c
-// #define ISDIVISBLEBY 0x000d
-// #define REMAINDER 0x000e
-// #define CONSTRAIN 0x000f
-// #define RANDOMINT 0x0010
-// #define COMPE 0x0011
-// #define COMPNE 0x0012
-// #define COMPL 0x0013
-// #define COMPLE 0x0014
-// #define CMPG 0x0015
-// #define CMPGE 0x0016
-// #define TRUE  0x0017
-// #define FALSE 0x0018
-// #define NEGATE 0x0019
-// #define NULL 0x001a
-// #define GET 0x001b
-// #define SET 0x001c
-// #define JUMPZ 0x001d
-// #define JUMP 0x001e
-// #define PRINT 0x001f
-// #define BOOLEAN 0x0020
+// #define NOP 0x00
+// #define NUMBER 0x01
+// #define ADD 0x02
+// #define SUB 0x03
+// #define MUL 0x04
+// #define DIV 0x05
+// #define POW 0x06
+// #define ABS 0x07
+// #define NEG 0x08
+// #define ISEVEN 0x09
+// #define ISODD 0x0a
+// #define ISPOSITIVE 0x0b
+// #define ISNEGATIVE 0x0c
+// #define ISDIVISBLEBY 0x0d
+// #define REMAINDER 0x0e
+// #define CONSTRAIN 0x0f
+// #define RANDOMINT 0x10
+// #define COMPE 0x11
+// #define COMPNE 0x12
+// #define COMPL 0x13
+// #define COMPLE 0x14
+// #define CMPG 0x15
+// #define CMPGE 0x16
+// #define TRUE  0x17
+// #define FALSE 0x18
+// #define NEGATE 0x19
+// #define NULL 0x1a
+// #define GET 0x1b
+// #define SET 0x1c
+// #define JUMPZ 0x1d
+// #define JUMP 0x1e
+// #define PRINT 0x1f
+// #define BOOLEAN 0x20
+// #define STOP 0x21
 
 // initialize global variable
+
+var variable_map = {};
+
+var addr = 0;
+
 var commandMap = {
     'command':{
         'print': '0x1f',
@@ -63,11 +69,12 @@ var commandMap = {
         'cmpg': '0x15',
         'cmpge': '0x16',
         'negate': '0x19',
-        'null': '0x1a'
+        'null': '0x1a',
+        'stop': '0x21'
     },
     'single_value':{
         'boolean': '0x20',
-        'set': '0x1c',
+        'set': '0x1c',  // need an additional argument of address
         'get': '0x1b',
         'number': '0x01',
         'JUMPZ': '0x1d',
@@ -80,7 +87,13 @@ var commandMap = {
 };
 
 
+
 function bytecode_generator(commands) {
+    return generator(commands);
+}
+
+
+function generator(commands) {
     commands = commands.split("\n");
 
     var resultList = [];
@@ -97,20 +110,22 @@ function bytecode_generator(commands) {
     // console.log('index: ', index);
 
     for (var j in commands){
-        if (commands[j] !='' || commands[j] !== undefined){
+        if (commands[j] !=='' && commands[j] !== undefined){
             command = commands[j].split(' ')[0];
             value = '';
             if (commands[j].split(' ')[1]){
                 value = commands[j].split(' ')[1];
             }
 
-            // resultList.push(getCommandByteCode(command, commandMap) + processValue(value, index));
+            // resultList.push(getCommandByteCode(command, commandMap) + processValue(command, value, index));
 
             console.log(getCommandByteCode(command, commandMap) + processValue(value, index)); //
 
         }
     }
+    // resultList.push('0x21');
 
+    console.log('0x21');
     return resultList;
 }
 
@@ -141,23 +156,10 @@ function getCommandByteCode(command, commandMap){
 
 }
 
-function processValue(value, index){
-    if(parseInt(value)){
+function processValue(command, value, index){
+    if(command === 'number'){
 
-        var numberStr = parseInt(value).toString(16);
-
-        var len = numberStr.length;
-        if(len <= 4){
-            for (var i = 0; i < (4 - len); i++){
-                numberStr = '0' + numberStr;
-            }
-            // return ' 0x' + numberStr;
-            var high_byte = numberStr.substring(0, 2);
-            var low_byte = numberStr.substring(2, 4);
-
-            return ' 0x' + low_byte + ' 0x' + high_byte;
-        }
-        return 'out of range';
+        return int2Hex(parseInt(value));
 
     }
     else if(value === 'TRUE'|| value === 'FALSE'){
@@ -171,26 +173,42 @@ function processValue(value, index){
 
     }
     else if(value.split('_')[0] === 'L0' || value.split('_')[0] === 'L1'){
-        var val = parseInt(index[value]).toString(16);
-        var val_len = val.length;
-        if(val_len <= 4){
-            for (var i = 0; i < (4 - val_len); i++){
-                val = '0' + val;
-            }
-            var high_byte = val.substring(0, 2);
-            var low_byte = val.substring(2, 4);
-
-            return ' 0x' + low_byte + ' 0x' + high_byte;
-
-        }
-        return ' 0x' + parseInt(index[value]).toString(16);
+        return int2Hex(parseInt(index[value]));
     }
     else if(value !== ''){
-        return ' ' + value;
+        if (variable_map[value]){
+            return variable_map[value];
+        }
+        else {
+            variable_map[value] = int2Hex(parseInt(addr));
+            addr += 2;
+            return int2Hex(addr);
+        }
     }
     else {
         return '';
     }
+}
+
+function int2Hex(value) {
+    if(value < 0){
+        return (value >>> 0).toString(2);
+        // console.log(value);
+    }
+    var val = value.toString(16);
+    var val_len = val.length;
+    if(val_len <= 4){
+        for (var i = 0; i < (4 - val_len); i++){
+            val = '0' + val;
+        }
+        var high_byte = val.substring(0, 2);
+        var low_byte = val.substring(2, 4);
+
+        return ' 0x' + low_byte + ' 0x' + high_byte;
+
+    }
+
+
 }
 
 // For debugging
@@ -225,6 +243,7 @@ function processValue(value, index){
 //     fs.readFile(path, "utf8", function(err, commandList) {
 //         if (!err) {
 //             // commandList = commandList.split("\n");
+//
 //             var reslist = bytecode_generator(commandList);
 //
 //             var restxt = '';

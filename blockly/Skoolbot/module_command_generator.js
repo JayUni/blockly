@@ -163,11 +163,12 @@ function addCommand(jsonList){
                         case 'repeat':
                             if (jsonList.label === 'added'){
                                 commandList.push('set repeat_control_variable');
+                                commandList.push('L0_' + jsonList.label_0);
                                 jsonList.label = 'variableAdded';
                                 break;
                             }
                             if (jsonList.label === 'variableAdded'){
-                                commandList.push('get repeat_control_variable', 'number 1', 'sub', 'number 0', 'cmpl');
+                                commandList.push('get repeat_control_variable', 'number 1', 'sub', 'set repeat_control_variable', 'get repeat_control_variable', 'number 0', 'cmpg');
                                 commandList.push('JUMPZ L1_' + jsonList.label_1);
                                 commandList.push('JUMP L0_' + jsonList.label_0);
                                 commandList.push('L1_' + jsonList.label_1);
@@ -183,20 +184,21 @@ function addCommand(jsonList){
                             }
                             if (jsonList.label === 'variableInit'){
                                 commandList.push('get ' + jsonList.variable);
-                                commandList.push('cmpl');
+                                commandList.push('cmpg');
                                 commandList.push('JUMPZ L1_' + jsonList.label_1);
                                 jsonList.label = 'jumpAdded';
                                 break;
                             }
                             if (jsonList.label === 'jumpAdded'){
-                                commandList.push('get ' + jsonList.variable);
-                                commandList.push('add');
-                                commandList.push('set ' + jsonList.variable);
+                                commandList.push('set for_step_control_variable');
 
                                 jsonList.label = 'variableChanged';
                                 break;
                             }
                             if (jsonList.label === 'variableChanged'){
+                                commandList.push('get ' + jsonList.variable);
+                                commandList.push('get for_step_control_variable', 'add');
+                                commandList.push('set ' + jsonList.variable);
                                 commandList.push('JUMP L0_' + jsonList.label_0);
                                 commandList.push('L1_' + jsonList.label_1);
                                 jsonList.label = 'finished';
@@ -277,7 +279,6 @@ function addLabel(jsonList) {
                                 L0 += 1;
                                 L1 += 1;
                                 jsonList.label = "added";
-                                commandList.push('L0_' + jsonList.label_0);
                             }
                             break;
                         case 'for':
@@ -321,15 +322,15 @@ function continueBreak(jsonList, L0, L1) {
 // `);
 //
 //
-//
+// var add_type_field = require('./module_add_type_field.js');
 //
 //
 // for (var i = 0; i<1; i++){
 //     var vars_name = 'str' + i;
 //     commandList = [];
-//     add_type_field.add_type_field(eval(vars_name));
+//     add_type_field(eval(vars_name));
 //     console.log("JSON: \n", JSON.stringify(eval(vars_name), null, 4));
-//     console.log(generator(eval(vars_name)));
+//     console.log(generator_core(eval(vars_name)));
 //     // console.log("JSON_result: \n", JSON.stringify(eval(vars_name), null, 4));
 //
 //     console.log("\n\n#######################################\n\n")
