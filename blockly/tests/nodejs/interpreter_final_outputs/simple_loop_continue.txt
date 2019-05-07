@@ -1,1 +1,1 @@
-empty stack, pop is not allowed
+Invalid command: isDivisibleBy
