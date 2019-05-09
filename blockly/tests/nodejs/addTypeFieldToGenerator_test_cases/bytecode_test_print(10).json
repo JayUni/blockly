@@ -1,0 +1,14 @@
+[
+    {
+        "block_name": "text_statement_print",
+        "functionName": "text_print",
+        "argument": [
+            {
+                "block_name": "math_number_number",
+                "number": "10",
+                "valueType": "number"
+            }
+        ],
+        "valueType": "statement"
+    }
+]

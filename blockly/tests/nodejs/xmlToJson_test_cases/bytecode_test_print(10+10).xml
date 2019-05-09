@@ -1,0 +1,28 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+    <block type="text_print" id="UU-[lHT_b=g6ugj9pMBq" x="-162" y="-138">
+        <value name="TEXT">
+            <shadow type="text" id="9DeI5_GvkS,qi5XH,3eW">
+                <field name="TEXT">abc</field>
+            </shadow>
+            <block type="math_arithmetic" id="D^HqMug%b3BTNIf6U3ZI">
+                <field name="OP">ADD</field>
+                <value name="A">
+                    <shadow type="math_number" id="~s00h^@N_dl4x#18.(@U">
+                        <field name="NUM">1</field>
+                    </shadow>
+                    <block type="math_number" id="yw;@Up(RY+H`lWr]5:Q,">
+                        <field name="NUM">15</field>
+                    </block>
+                </value>
+                <value name="B">
+                    <shadow type="math_number" id="rM3*}*R6@!3)PF`YS+l|">
+                        <field name="NUM">1</field>
+                    </shadow>
+                    <block type="math_number" id="mQ]w(?DL6fMh)C.ywN!q">
+                        <field name="NUM">10</field>
+                    </block>
+                </value>
+            </block>
+        </value>
+    </block>
+</xml>
