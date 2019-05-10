@@ -316,7 +316,7 @@ int main (int argc, char *argv[]) {
 
   if(FILE *file = fopen(argv[1],"rb")) {
      fread(code, CODE_SIZE, 1, file);
-     // run();
+     run();
   } else {
      std::cerr<<"Cannot open file: "<<argv[1]<<std::endl;
   }

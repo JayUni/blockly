@@ -71,6 +71,7 @@
 <script src="../blocks/text.js"></script>
 <script src="../blocks/lists.js"></script>
 <script src="../blocks/colour.js"></script>
+<script src="../blocks/input_output.js"></script>
 <script src="../blocks/variables.js"></script>
 <script src="../blocks/variables_dynamic.js"></script>
 <script src="../blocks/procedures.js"></script>
@@ -761,6 +762,28 @@ h1 {
         </value>
       </block>
     </category> -->
+    <sep></sep>
+    <category name="Input_Output" style="input_output_category">
+      <block type="pinmode">
+        <field name="var" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+        <field name="NAME">OPTIONNAME</field>
+      </block>
+      <block type="digitalread">
+        <field name="NAME" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+      </block>
+      <block type="digitalwrite">
+        <field name="var" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+        <field name="NAME">OPTIONNAME</field>
+      </block>
+      <block type="analogread">
+        <field name="NAME" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+      </block>
+      <block type="analogwrite">
+        <field name="var" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+        <field name="NAME">0</field>
+      </block>
+      <block type="delay"></block>
+    </category>
     <sep></sep>
     <category name="Variables" style="variable_category" custom="VARIABLE"></category>
     <category name="Functions" style="procedure_category" custom="PROCEDURE"></category>

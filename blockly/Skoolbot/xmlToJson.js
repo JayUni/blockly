@@ -19,6 +19,7 @@ require("./../blocks/math.js");
 require("./../blocks/text.js");
 require("./../blocks/lists.js");
 require("./../blocks/colour.js");
+require("./../blocks/input_output.js");
 require("./../blocks/variables.js");
 require("./../blocks/variables_dynamic.js");
 require("./../blocks/procedures.js");

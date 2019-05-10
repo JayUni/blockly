@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # compile the interpreter
-# -std=c++11 -Wall -Werror=format-security 
+# -std=c++11 -Wall -Werror=format-security
 g++ ../../SkoolBot/interpreter_symbolic.cpp -o ../../SkoolBot/interpreter
 for xml in xmlToJson_test_cases/*.xml
 do
