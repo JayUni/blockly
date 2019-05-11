@@ -78,6 +78,7 @@
   <textarea id="content_xml" class="content" wrap="off"></textarea>
 
   <xml id="toolbox" style="display: none">
+
     <category name="%{BKY_CATLOGIC}" colour="%{BKY_LOGIC_HUE}">
       <block type="controls_if"></block>
       <block type="logic_compare"></block>
@@ -384,6 +385,27 @@
       </block>
     </category>
     <sep></sep> -->
+    <category name="%{BKY_CATINPUTOUTPUT}" colour="%{BKY_INPUT_OUTPUT_HUE}">
+      <block type="pinmode">
+        <field name="var" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+        <field name="NAME">OPTIONNAME</field>
+      </block>
+      <block type="digitalread">
+        <field name="NAME" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+      </block>
+      <block type="digitalwrite">
+        <field name="var" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+        <field name="NAME">OPTIONNAME</field>
+      </block>
+      <block type="analogread">
+        <field name="NAME" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+      </block>
+      <block type="analogwrite">
+        <field name="var" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+        <field name="NAME">0</field>
+      </block>
+      <block type="delay"></block>
+    </category>
     <category name="%{BKY_CATVARIABLES}" colour="%{BKY_VARIABLES_HUE}" custom="VARIABLE"></category>
     <category name="%{BKY_CATFUNCTIONS}" colour="%{BKY_PROCEDURES_HUE}" custom="PROCEDURE"></category>
   </xml>

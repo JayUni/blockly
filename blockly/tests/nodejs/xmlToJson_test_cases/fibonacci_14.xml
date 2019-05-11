@@ -1,0 +1,130 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="8:M?W|Hw-5EtvKX}?#8O">n</variable>
+    <variable type="" id="ebCnVnp/:?7ep$QP}{EC">a</variable>
+    <variable type="" id="T#2{uA~Sah%W.sd76i]5">b</variable>
+    <variable type="" id="$vUyEh%hP(E/JG@Id*Z}">temp</variable>
+  </variables>
+  <block type="variables_set" id="^=g6*_TcX?^)XzYH-x}*" x="188" y="88">
+    <field name="VAR" id="8:M?W|Hw-5EtvKX}?#8O" variabletype="">n</field>
+    <value name="VALUE">
+      <block type="math_number" id="4S4!zCjU.ZT1(m=*RLkY">
+        <field name="NUM">14</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="pL)(nPR1d)$Q)%g7bD-7">
+        <field name="VAR" id="ebCnVnp/:?7ep$QP}{EC" variabletype="">a</field>
+        <value name="VALUE">
+          <block type="math_number" id="qPvhf@eAkzDTk]9Ddd+4">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="text_print" id="E+xQn]rFKyC{-3Sb1WsI">
+            <value name="TEXT">
+              <shadow type="text" id="1^um!.C#e(]4`vBSLe,6">
+                <field name="TEXT">abc</field>
+              </shadow>
+              <block type="variables_get" id="SV?;FyfV+ZMu]),V(7,M">
+                <field name="VAR" id="ebCnVnp/:?7ep$QP}{EC" variabletype="">a</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id=")t{q9^~)h_+}?Y+Z7x,d">
+                <field name="VAR" id="T#2{uA~Sah%W.sd76i]5" variabletype="">b</field>
+                <value name="VALUE">
+                  <block type="math_number" id="kbzIMR@)oxv1Z!sIZK%c">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="text_print" id="{.gA|w,h1@:^,Odq_;M@">
+                    <value name="TEXT">
+                      <shadow type="text" id="1^um!.C#e(]4`vBSLe,6">
+                        <field name="TEXT">abc</field>
+                      </shadow>
+                      <block type="variables_get" id="9dHpTb//tF-[f+7-M2;5">
+                        <field name="VAR" id="T#2{uA~Sah%W.sd76i]5" variabletype="">b</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="controls_repeat_ext" id=";*HJVuMYY*trr!xKT6+^">
+                        <value name="TIMES">
+                          <shadow type="math_number" id="=7XP?q:-?Uv*l{y%]X$O">
+                            <field name="NUM">10</field>
+                          </shadow>
+                          <block type="variables_get" id="9db~xiHk+L5p5hnt~~Ge">
+                            <field name="VAR" id="8:M?W|Hw-5EtvKX}?#8O" variabletype="">n</field>
+                          </block>
+                        </value>
+                        <statement name="DO">
+                          <block type="variables_set" id="KFb%3ohQu9h#E$bJG2e|">
+                            <field name="VAR" id="$vUyEh%hP(E/JG@Id*Z}" variabletype="">temp</field>
+                            <value name="VALUE">
+                              <block type="math_arithmetic" id="?F^0_u5TGGsy+RhdB04}">
+                                <field name="OP">ADD</field>
+                                <value name="A">
+                                  <shadow type="math_number" id="DvYXd[N!`}?s-4%}J!1w">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="variables_get" id="AfdZyC^.{8-J1qbTyGt6">
+                                    <field name="VAR" id="ebCnVnp/:?7ep$QP}{EC" variabletype="">a</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id="knMrpPD-?x*xgxs,q/J#">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="variables_get" id="{RuyxB1+2L%aH+*S.GMk">
+                                    <field name="VAR" id="T#2{uA~Sah%W.sd76i]5" variabletype="">b</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="variables_set" id=")}(NauX{XM:lqUXF/kLJ">
+                                <field name="VAR" id="ebCnVnp/:?7ep$QP}{EC" variabletype="">a</field>
+                                <value name="VALUE">
+                                  <block type="variables_get" id="|KBan5;_?yE66A+Wh6z|">
+                                    <field name="VAR" id="T#2{uA~Sah%W.sd76i]5" variabletype="">b</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="variables_set" id="!OmG[S,HS?56NV#=TDh7">
+                                    <field name="VAR" id="T#2{uA~Sah%W.sd76i]5" variabletype="">b</field>
+                                    <value name="VALUE">
+                                      <block type="variables_get" id="]c_B5X,Zj)Ru,yQN!y.t">
+                                        <field name="VAR" id="$vUyEh%hP(E/JG@Id*Z}" variabletype="">temp</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="text_print" id="!cUk}}qBHwG?-l[xgwec">
+                                        <value name="TEXT">
+                                          <shadow type="text" id="1^um!.C#e(]4`vBSLe,6">
+                                            <field name="TEXT">abc</field>
+                                          </shadow>
+                                          <block type="variables_get" id="|5l`Nj-?$m~%H)#M/(nl">
+                                            <field name="VAR" id="$vUyEh%hP(E/JG@Id*Z}" variabletype="">temp</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

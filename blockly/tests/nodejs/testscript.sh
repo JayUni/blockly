@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # compile the interpreter
-g++ -o ../../SkoolBot/interpreter ../../SkoolBot/interpreter.cpp
-
+# -std=c++11 -Wall -Werror=format-security
+g++ ../../SkoolBot/interpreter_symbolic.cpp -o ../../SkoolBot/interpreter
 for xml in xmlToJson_test_cases/*.xml
 do
     # conver xml to json
@@ -68,7 +68,6 @@ do
      echo "created $generator."
    fi
 
-
    # interpreter
    interpreter="interpreter_final_outputs/`basename $xml .xml`.txt"
    if [ -e $interpreter ]
@@ -118,4 +117,3 @@ done
 #         echo "created $interpreter."
 #     fi
 # done
-
