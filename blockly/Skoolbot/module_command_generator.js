@@ -339,6 +339,8 @@ function continueBreak(jsonList, L0, L1) {
 
 
 // save as text file
+
+// const fs = require('fs');
 //
 // function savetxt(path){
 //
@@ -346,9 +348,9 @@ function continueBreak(jsonList, L0, L1) {
 //         if (!err) {
 //             // console.log(jsondata);
 //             jsondata = JSON.parse(jsondata);
-//             jsondata = add_type_field.add_type_field(jsondata);
+//             // jsondata = add_type_field(jsondata);
 //             commandList = [];
-//             var reslist = generator(jsondata);
+//             var reslist = generator_core(jsondata);
 //
 //             console.log(reslist);
 //             var restxt = "";
@@ -380,7 +382,7 @@ function continueBreak(jsonList, L0, L1) {
 //     });
 // }
 //
-// var path = '../tests/nodejs/generator_test_jsons/';
+// var path = '../tests/nodejs/addTypeFieldToGenerator_test_cases/';
 // travel(path, savetxt);
 
 
