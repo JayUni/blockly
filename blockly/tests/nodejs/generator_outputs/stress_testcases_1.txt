@@ -1,0 +1,38 @@
+number 10
+set N
+get N
+number 2
+cmpl
+JUMPZ L0_16
+number 1
+set result
+JUMP L1_16
+L0_16
+get N
+number 3
+cmpl
+JUMPZ L0_17
+number 2
+set result
+JUMP L1_17
+L0_17
+L0_18
+get N
+number 2
+cmpg
+JUMPZ L1_18
+get result
+get N
+add
+set result
+get N
+number 1
+sub
+set N
+get result
+print
+JUMP L0_18
+L1_18
+L1_17
+get result
+print

@@ -48,7 +48,7 @@ function savetxt(path){
 
             var reslist = generator(commandList);
 
-            var bin_content = new Uint8Array(CODE_SIZE);
+            var bin_content = new Int8Array(CODE_SIZE);
             for (var j in reslist){
                 bin_content[j] = reslist[j];
             }

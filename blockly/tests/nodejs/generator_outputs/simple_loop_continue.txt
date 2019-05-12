@@ -1,0 +1,26 @@
+number 1
+set i
+L0_7
+number 100
+get i
+cmpg
+JUMPZ L1_7
+number 3
+set for_step_control_variable
+get i
+number 7
+isDivisibleBy
+negate
+JUMPZ L0_8
+JUMP L0_7
+JUMP L1_8
+L0_8
+L1_8
+get i
+print
+get i
+get for_step_control_variable
+add
+set i
+JUMP L0_7
+L1_7
