@@ -52,35 +52,35 @@
 // using namespace std;
 
 
-uint8_t code[CODE_SIZE];
+int8_t code[CODE_SIZE];
 size_t ip = 0;
 
-uint16_t stack[STACK_SIZE];
+int16_t stack[STACK_SIZE];
 size_t stack_ptr = 0;
 
-uint16_t memory[MEMORY_SIZE];
+int16_t memory[MEMORY_SIZE];
 
-void push(uint16_t data) {
+void push(int16_t data) {
   assert(stack_ptr < STACK_SIZE && "stack overflow");
   stack[stack_ptr++] = data;
 }
 
-uint16_t pop() {
+int16_t pop() {
   assert(stack_ptr >= 0 && "stack underflow");
-  return stack[stack_ptr--];
+  return stack[--stack_ptr];
 }
 
 // 1 = true, 0 = false
 void run() {
-  uint16_t op1;
-  uint16_t op2;
+  int16_t op1;
+  int16_t op2;
   for(;;) {
     switch(code[ip++]) {
       case NOP_:
         break;
       case NUMBER:
         {
-          uint16_t value = code[ip++];
+          int16_t value = code[ip++];
           value |= (code[ip++] << 8);
           push(value);
         }
@@ -254,20 +254,23 @@ void run() {
       case NULL_:
         push(-1); // need to check this ???
       case GET:
-        { uint16_t addr=pop();
+        {
+          int16_t addr=pop();
           push(memory[addr]);
         }
         break;
       case SET:
-        { uint16_t addr = code[ip++];
+        {
+          int16_t addr = code[ip++];
           addr |= (code[ip++]<<8);
-          uint16_t value = pop();
+          int16_t value = pop();
           memory[addr] = value;
         }
         break;
       case JUMPZ:
-        { uint16_t value=pop();
-          uint16_t addr = code[ip++];
+        {
+          int16_t value=pop();
+          int16_t addr = code[ip++];
           addr |= (code[ip++]<<8);
           if (value != 0) {
              ip = addr;
@@ -275,14 +278,15 @@ void run() {
         }
         break;
       case JUMP:
-        { uint16_t addr = code[ip++];
+        {
+          int16_t addr = code[ip++];
           addr |= (code[ip++]<<8);
           ip = addr;
         }
         break;
       case PRINT:
         {
-          uint16_t data = pop();
+          int16_t data = pop();
           std::cout << data << std::endl;
         }
         break;

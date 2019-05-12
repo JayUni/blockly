@@ -430,6 +430,7 @@ Blockly.Msg["LOOPS_HUE"] = "120";
 Blockly.Msg["LISTS_HUE"] = "260";
 Blockly.Msg["LOGIC_HUE"] = "210";
 Blockly.Msg["VARIABLES_HUE"] = "330";
+Blockly.Msg["INPUTOUTPUT_HUE"] = "200";
 Blockly.Msg["TEXTS_HUE"] = "160";
 Blockly.Msg["PROCEDURES_HUE"] = "290";
 Blockly.Msg["COLOUR_HUE"] = "20";

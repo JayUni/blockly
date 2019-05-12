@@ -54,6 +54,7 @@
 <script src="../generators/skoolbot/variables.js"></script>
 <script src="../generators/skoolbot/variables_dynamic.js"></script>
 <script src="../generators/skoolbot/procedures.js"></script>
+<script src="../generators/skoolbot/input_output.js"></script>
 <script src="../generators/dart.js"></script>
 <script src="../generators/dart/logic.js"></script>
 <script src="../generators/dart/loops.js"></script>
@@ -271,6 +272,43 @@ function spaghetti(n) {
   Blockly.Xml.domToWorkspace(dom, workspace);
   console.timeEnd('Spaghetti domToWorkspace');
 }
+
+function addXmlTestcase() {
+  var textarea = document.getElementById('testcaseName');
+  var fileName = textarea.value;
+  var xml = Blockly.Xml.workspaceToDom(workspace);
+  var xmlCode = Blockly.Xml.domToPrettyText(xml);
+
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(xmlCode));
+  element.setAttribute('download', fileName + '.xml');
+  
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+}
+
+function addExpectedOutput() {
+  var textarea = document.getElementById('testcaseName');
+  var fileName = textarea.value;
+  var xml = document.getElementById('expectedOutput');
+  var xmlCode = xml.value;
+
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(xmlCode));
+  element.setAttribute('download', fileName + '.txt');
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+}
+
 var spaghettiXml = [
   '  <block type="controls_if">',
   '    <value name="IF0">',
@@ -381,10 +419,17 @@ h1 {
     &nbsp;
     <input type="button" value="To Dart" onclick="toCode('Dart')">
     <br>
-    <textarea id="importExport" style="width: 26%; height: 12em"
+    <textarea id="importExport" style="width: 26%; height: 10em"
       onchange="taChange();" onkeyup="taChange()"></textarea>
   </p>
+  <p style ="font-size:1em;">
+    file name: &nbsp;
+    <textarea id="testcaseName" style="width: 18%; height: 1em"></textarea>
+    <input type="button" value="download XML testcases" onclick="addXmlTestcase()">
 
+    <textarea id="expectedOutput" style="width: 26%; height: 2em"></textarea>
+    <input type="button" value="download expected output" onclick="addExpectedOutput()">
+  </p>
   <p>
     Stress test: &nbsp;
     <input type="button" value="Airstrike!" onclick="airstrike(100)">
@@ -466,7 +511,7 @@ h1 {
           </shadow>
         </value>
       </block>
-      <block type="controls_forEach"></block>
+      <!-- <block type="controls_forEach"></block> -->
       <block type="controls_flow_statements"></block>
     </category>
     <category name="Math" style="math_category">
