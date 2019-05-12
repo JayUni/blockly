@@ -53,12 +53,15 @@ size_t stack_ptr = 0;
 int16_t memory[MEMORY_SIZE];
 
 void push(int16_t data) {
+
   assert(stack_ptr < STACK_SIZE && "stack overflow");
+  // std::cout<<"push: "<<stack_ptr<<std::endl;
   stack[stack_ptr++] = data;
 }
 
 int16_t pop() {
   assert(stack_ptr >= 0 && "stack underflow");
+  // std::cout<<"pop: "<<stack_ptr<<std::endl;
   return stack[--stack_ptr];
 }
 
@@ -247,7 +250,8 @@ void run() {
         push(-1); // need to check this ???
       case GET:
         {
-          int16_t addr=pop();
+          int16_t addr = code[ip++];
+          addr |= (code[ip++]<<8);
           push(memory[addr]);
         }
         break;
