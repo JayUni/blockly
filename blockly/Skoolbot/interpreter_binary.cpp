@@ -44,14 +44,6 @@
 #define MEMORY_SIZE   (1024)
 #define CODE_SIZE     (1024)
 
-// need a STOP
-// int16_t for memory and stack for negative values
-// no vector;
-// read in bin file
-
-// using namespace std;
-
-
 int8_t code[CODE_SIZE];
 size_t ip = 0;
 
