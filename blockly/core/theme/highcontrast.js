@@ -79,6 +79,11 @@ var defaultBlockStyles = {
     "colourSecondary":"#FF73BE",
     "colourTertiary":"#FFD4EB",
     "hat": "cap"
+  },
+  "input_output_blocks" : {
+    "colourPrimary": "#880e4f",
+    "colourSecondary":"#FF73BE",
+    "colourTertiary":"#FFD4EB"
   }
 };
 
@@ -108,6 +113,9 @@ var categoryStyles = {
     "colour": "#880e4f",
   },
   "variable_dynamic_category":{
+    "colour": "#880e4f",
+  },
+  "input_output_category":{
     "colour": "#880e4f",
   }
 };

@@ -60,6 +60,9 @@ var defaultBlockStyles = {
   "hat_blocks":{
     "colourPrimary":"330",
     "hat":"cap"
+  },
+  "input_output_blocks":{
+    "colourPrimary": "200"
   }
 };
 
@@ -90,6 +93,9 @@ var categoryStyles = {
   },
   "variable_dynamic_category":{
     "colour": "310"
+  },
+  "input_output_category":{
+    "colour": "200"
   }
 };
 

@@ -173,6 +173,7 @@ Blockly.Generator.prototype.blockToCode = function(block, opt_thisOnly) {
   }
 
   var func = this[block.type];
+  console.log(this);
   if (typeof func != 'function') {
     throw Error('Language "' + this.name_ + '" does not know how to generate ' +
         ' code for block type "' + block.type + '".');

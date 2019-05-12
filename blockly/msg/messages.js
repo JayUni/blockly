@@ -66,6 +66,8 @@ Blockly.Msg.VARIABLES_HUE = '330';
 Blockly.Msg.VARIABLES_DYNAMIC_HUE = '310';
 /// {{Notranslate}} Hue value for all procedure blocks.
 Blockly.Msg.PROCEDURES_HUE = '290';
+/// {{Notranslate}} Hue value for all procedure blocks.
+Blockly.Msg.INPUTOUTPUT_HUE = '200';
 
 /// default name - A simple, general default name for a variable, preferably short.
 /// For more context, see
