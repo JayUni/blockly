@@ -39,6 +39,7 @@
 #define PRINT         (0x1F)
 #define BOOLEAN       (0x20)
 #define STOP          (0x21)
+#define JUMPNZ        (0x22)
 
 #define STACK_SIZE    (512)
 #define MEMORY_SIZE   (1024)
@@ -265,14 +266,24 @@ void run() {
         break;
       case JUMPZ:
         {
-          int16_t value=pop();
+          int16_t value = pop();
           int16_t addr = code[ip++];
           addr |= (code[ip++]<<8);
-          if (value != 0) {
+          if (value == 0) {
              ip = addr;
           }
         }
         break;
+        case JUMPNZ:
+          {
+            int16_t value = pop();
+            int16_t addr = code[ip++];
+            addr |= (code[ip++]<<8);
+            if (value != 0) {
+               ip = addr;
+            }
+          }
+          break;
       case JUMP:
         {
           int16_t addr = code[ip++];

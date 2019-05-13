@@ -64,8 +64,11 @@ Blockly.Skoolbot['pinmode'] = function(block) {
   //var variable_var = Blockly.Skoolbot.variableDB_.getName(block.getFieldValue('var'), Blockly.Variables.NAME_TYPE);
   //var dropdown_name = block.getFieldValue('NAME');
   // TODO: Assemble Skoolbot into code variable.
-  var code = 'hello';
+  var code = '{ \"block_name\": \"pin_mode\", \"variable\": \"else if\", ' + '\"condition\": ' + conditionCode + ", " + '\"branchCode\":[' + branchCode + ']';
   return code;
+  // var variable0 = Blockly.Skoolbot.variableDB_.getName(
+  //     block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+  // 
 };
 
 Blockly.Skoolbot['delay'] = function(block) {
