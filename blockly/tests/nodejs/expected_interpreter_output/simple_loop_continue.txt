@@ -1,1 +1,0 @@
-empty stack, pop is not allowed

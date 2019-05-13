@@ -47,7 +47,7 @@ do
    fi
 
    # command generator
-   generator="generatorToInterpreter_test_cases/`basename $xml .xml`.txt"
+   generator="symbolic_generator_outputs/`basename $xml .xml`.txt"
    if [ -e $generator ]
      then
        ### execute javascript with $x > $$.out
