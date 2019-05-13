@@ -43,8 +43,8 @@ Blockly.defineBlocksWithJsonArray([ // BEGIN JSON EXTRACT
           "OPTIONNAME"
         ],
         [
-          "FAlSE",
-          "OPTIONNAME"
+          "FALSE",
+          "OPTIONNAME1"
         ]
       ]
     }
@@ -113,7 +113,7 @@ Blockly.defineBlocksWithJsonArray([ // BEGIN JSON EXTRACT
         ],
         [
           "OUTPUT",
-          "OPTIONNAME"
+          "OPTIONNAME1"
         ]
       ]
     }
