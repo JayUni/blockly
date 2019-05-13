@@ -1,11 +1,18 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-    <block type="math_number_property" id="Uj_h#22){)$xF7Fsmfs1" x="87" y="262">
-        <mutation divisor_input="false"></mutation>
-        <field name="PROPERTY">POSITIVE</field>
-        <value name="NUMBER_TO_CHECK">
-            <shadow type="math_number" id="-kZ`.~FPYuq#6OwH,JwU">
-                <field name="NUM">-5</field>
+    <block type="text_print" id="},QZ;cpvxoqRzr,]DojQ" x="12" y="162">
+        <value name="TEXT">
+            <shadow type="text" id="b1QEQTeoD_,(0$:vNp2+">
+                <field name="TEXT">abc</field>
             </shadow>
+            <block type="math_number_property" id="Uj_h#22){)$xF7Fsmfs1">
+                <mutation divisor_input="false"></mutation>
+                <field name="PROPERTY">POSITIVE</field>
+                <value name="NUMBER_TO_CHECK">
+                    <shadow type="math_number" id="-kZ`.~FPYuq#6OwH,JwU">
+                        <field name="NUM">-5</field>
+                    </shadow>
+                </value>
+            </block>
         </value>
     </block>
 </xml>

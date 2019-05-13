@@ -112,7 +112,7 @@ function addCommand(jsonList){
                     switch(command){
                         case 'if':
                             if(jsonList.statements === 'if'){
-                                commandList.push('JUMPZ L0_' + jsonList.label_0);
+                                commandList.push('JUMPNZ L0_' + jsonList.label_0);
 
                                 jsonList.statements = 'if_checked';
                             }
@@ -128,7 +128,7 @@ function addCommand(jsonList){
 
                             // console.log(jsonList.statements);
                             if(jsonList.statements === 'elseif'){
-                                commandList.push('JUMPZ L0_' + jsonList.label_0);
+                                commandList.push('JUMPNZ L0_' + jsonList.label_0);
                                 jsonList.statements = 'if_checked';
                             }
                             if(jsonList.statements ==='if_checked'){
@@ -151,7 +151,7 @@ function addCommand(jsonList){
                                 if(jsonList.end_type === 'until'){
                                     commandList.push('negate');
                                 }
-                                commandList.push('JUMPZ L1_' + jsonList.label_1);
+                                commandList.push('JUMPNZ L1_' + jsonList.label_1);
                                 jsonList.label = 'conditionAdded';
                                 break;
                             }
@@ -169,7 +169,7 @@ function addCommand(jsonList){
                             }
                             if (jsonList.label === 'variableAdded'){
                                 commandList.push('get repeat_control_variable', 'number 1', 'sub', 'set repeat_control_variable', 'get repeat_control_variable', 'number 0', 'cmpg');
-                                commandList.push('JUMPZ L1_' + jsonList.label_1);
+                                commandList.push('JUMPNZ L1_' + jsonList.label_1);
                                 commandList.push('JUMP L0_' + jsonList.label_0);
                                 commandList.push('L1_' + jsonList.label_1);
                                 jsonList.label = 'finished';
@@ -185,7 +185,7 @@ function addCommand(jsonList){
                             if (jsonList.label === 'variableInit'){
                                 commandList.push('get ' + jsonList.variable);
                                 commandList.push('cmpg');
-                                commandList.push('JUMPZ L1_' + jsonList.label_1);
+                                commandList.push('JUMPNZ L1_' + jsonList.label_1);
                                 jsonList.label = 'jumpAdded';
                                 break;
                             }
@@ -358,7 +358,7 @@ function continueBreak(jsonList, L0, L1) {
 //                 restxt += reslist[j] + '\n';
 //             }
 //             var savefile = path.split('/')[4].split('.')[0];
-//             fs.writeFile('../tests/nodejs/generator_outputs/' + savefile + '.txt', restxt, (err) => {
+//             fs.writeFile('../tests/nodejs/generatorToInterpreter_test_cases/' + savefile + '.txt', restxt, (err) => {
 //                 if (err) throw err;
 //                 console.log('output is saved successfully!');
 //             });

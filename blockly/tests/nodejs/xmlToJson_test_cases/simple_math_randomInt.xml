@@ -1,14 +1,21 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-    <block type="math_random_int" id="fy1N3o@-yTJGn_sKwoNZ" x="112" y="213">
-        <value name="FROM">
-            <shadow type="math_number" id="`Lhp*z]RH`!?}1fna)65">
-                <field name="NUM">1</field>
+    <block type="text_print" id="otC!eEAD}SujMJLdn1PT" x="12" y="187">
+        <value name="TEXT">
+            <shadow type="text" id="0BK?}5;ti|J6fckU%*$u">
+                <field name="TEXT">abc</field>
             </shadow>
-        </value>
-        <value name="TO">
-            <shadow type="math_number" id="jtAwU(mtP~#s,d.Z^(`r">
-                <field name="NUM">100</field>
-            </shadow>
+            <block type="math_random_int" id="fy1N3o@-yTJGn_sKwoNZ">
+                <value name="FROM">
+                    <shadow type="math_number" id="`Lhp*z]RH`!?}1fna)65">
+                        <field name="NUM">1</field>
+                    </shadow>
+                </value>
+                <value name="TO">
+                    <shadow type="math_number" id="jtAwU(mtP~#s,d.Z^(`r">
+                        <field name="NUM">100</field>
+                    </shadow>
+                </value>
+            </block>
         </value>
     </block>
 </xml>

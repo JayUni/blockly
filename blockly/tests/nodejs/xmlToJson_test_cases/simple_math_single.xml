@@ -1,10 +1,17 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-    <block type="math_single" id="$#3L$N]L?siW}(X@Ib_7" x="112" y="113">
-        <field name="OP">ABS</field>
-        <value name="NUM">
-            <shadow type="math_number" id="_Xl./j{3*3eznpC~7at?">
-                <field name="NUM">-7</field>
+    <block type="text_print" id="clQ#:9%OePz,D+Tl4I~U" x="38" y="187">
+        <value name="TEXT">
+            <shadow type="text" id="I}3p0M)%!4l^iKHmQ;z[">
+                <field name="TEXT">abc</field>
             </shadow>
+            <block type="math_single" id="$#3L$N]L?siW}(X@Ib_7">
+                <field name="OP">ABS</field>
+                <value name="NUM">
+                    <shadow type="math_number" id="_Xl./j{3*3eznpC~7at?">
+                        <field name="NUM">-7</field>
+                    </shadow>
+                </value>
+            </block>
         </value>
     </block>
 </xml>

@@ -1,8 +1,15 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-    <block type="logic_negate" id="hP`XGkhF1E;@b{/m@_hD" x="37" y="188">
-        <value name="BOOL">
-            <block type="logic_boolean" id="GsEWM4XHv,^u/XQx:Y7D">
-                <field name="BOOL">TRUE</field>
+    <block type="text_print" id="Y*a,T(@/N#K(7MJPRqC$" x="37" y="138">
+        <value name="TEXT">
+            <shadow type="text" id="?wHbssw4=%hEt)x~.;QC">
+                <field name="TEXT">abc</field>
+            </shadow>
+            <block type="logic_negate" id="hP`XGkhF1E;@b{/m@_hD">
+                <value name="BOOL">
+                    <block type="logic_boolean" id="GsEWM4XHv,^u/XQx:Y7D">
+                        <field name="BOOL">TRUE</field>
+                    </block>
+                </value>
             </block>
         </value>
     </block>

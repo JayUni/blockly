@@ -1,5 +1,12 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-    <block type="math_number" id="SWO2,Pa0G=XekwRkuIV]" x="88" y="37">
-        <field name="NUM">10</field>
+    <block type="text_print" id="CA3zYl[L=USem@/P|8{d" x="63" y="112">
+        <value name="TEXT">
+            <shadow type="text" id="ZV1yG,hs9,XyZQV7p_u0">
+                <field name="TEXT">abc</field>
+            </shadow>
+            <block type="math_number" id="SWO2,Pa0G=XekwRkuIV]">
+                <field name="NUM">-17</field>
+            </block>
+        </value>
     </block>
 </xml>

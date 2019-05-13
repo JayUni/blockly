@@ -3,9 +3,9 @@
 # compile the interpreter
 # -std=c++11 -Wall -Werror=format-security
 g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
-# for gen in bin_generator_outputs/*.bin
-# do
-    gen="bin_generator_outputs/simple_sequence_variable_print.bin"
+ for gen in bin_generator_outputs/*.bin
+ do
+#    gen="bin_generator_outputs/simple_sequence_variable_print.bin"
     interpreter="interp_bin_outputs/`basename $gen .bin`.txt"
 
    if [ -e $interpreter ]
@@ -27,7 +27,7 @@ g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
        echo "created $interpreter."
    fi
    echo ""
-# done
+ done
 
 # # for testing the interpreter
 # # compile

@@ -70,7 +70,8 @@ var commandMap = {
         'cmpge': '0x16',
         'negate': '0x19',
         'null': '0x1a',
-        'stop': '0x21'
+        'stop': '0x21',
+        'JUMPNZ': '0x22'
     },
     'single_value':{
         'boolean': '0x20',
@@ -193,9 +194,14 @@ function processValue(command, value, index){
     }
 }
 
+function getInt8() {
+    return this.getUint8() << 24 >> 24;
+}
+
 function int2Hex(value) {
     var val = value.toString(16);
     var val_len = val.length;
+    val.getInt8();
     if(val_len <= 4){
         for (var i = 0; i < (4 - val_len); i++){
             val = '0' + val;
@@ -233,47 +239,47 @@ function int2Hex(value) {
 
 
 
-// save as text file
-const fs = require('fs');
-
-
-function savetxt(path){
-
-    fs.readFile(path, "utf8", function(err, commandList) {
-        if (!err) {
-            // commandList = commandList.split("\n");
-
-            var reslist = bytecode_generator(commandList);
-
-            var restxt = '';
-            for (var j in reslist){
-                restxt += reslist[j] + '\n';
-            }
-            var savefile = path.split('/')[4].split('.')[0];
-            fs.writeFile('../tests/nodejs/bytecode_generator_outputs/' + savefile + '.txt', restxt, (err) => {
-                if (err) throw err;
-                console.log('output is saved successfully!');
-            });
-        }
-        else{
-            throw err;
-        }
-    });
-}
-
-
-function travel(dir, callback) {
-    fs.readdirSync(dir).forEach(function (file) {
-        var pathname = require('path').join(dir, file);
-
-        if (fs.statSync(pathname).isDirectory()) {
-            travel(pathname, callback);
-        } else {
-            callback(pathname);
-        }
-    });
-}
-
-
-var path = '../tests/nodejs/generatorToInterpreter_test_cases/';
-travel(path, savetxt);
+// // save as text file
+// const fs = require('fs');
+//
+//
+// function savetxt(path){
+//
+//     fs.readFile(path, "utf8", function(err, commandList) {
+//         if (!err) {
+//             // commandList = commandList.split("\n");
+//
+//             var reslist = bytecode_generator(commandList);
+//
+//             var restxt = '';
+//             for (var j in reslist){
+//                 restxt += reslist[j] + '\n';
+//             }
+//             var savefile = path.split('/')[4].split('.')[0];
+//             fs.writeFile('../tests/nodejs/bytecode_generator_outputs/' + savefile + '.txt', restxt, (err) => {
+//                 if (err) throw err;
+//                 console.log('output is saved successfully!');
+//             });
+//         }
+//         else{
+//             throw err;
+//         }
+//     });
+// }
+//
+//
+// function travel(dir, callback) {
+//     fs.readdirSync(dir).forEach(function (file) {
+//         var pathname = require('path').join(dir, file);
+//
+//         if (fs.statSync(pathname).isDirectory()) {
+//             travel(pathname, callback);
+//         } else {
+//             callback(pathname);
+//         }
+//     });
+// }
+//
+//
+// var path = '../tests/nodejs/generatorToInterpreter_test_cases/';
+// travel(path, savetxt);
