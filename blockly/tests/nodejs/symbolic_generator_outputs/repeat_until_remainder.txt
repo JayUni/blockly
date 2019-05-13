@@ -1,0 +1,19 @@
+number 5
+set n
+number 1
+set i
+L0_0
+number 20
+get i
+cmpe
+negate
+JUMPZ L1_0
+number 1
+change
+get n
+get i
+remainder
+print
+JUMP L0_0
+L1_0
+

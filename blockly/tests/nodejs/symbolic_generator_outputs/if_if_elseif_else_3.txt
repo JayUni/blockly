@@ -1,0 +1,87 @@
+number 8
+set a
+number 1
+number 7
+add
+get a
+cmpe
+JUMPZ L0_0
+boolean TRUE
+print
+number 1
+change
+number 1
+get a
+add
+number 9
+cmpe
+JUMPZ L0_2
+boolean FALSE
+print
+JUMP L1_2
+L0_2
+number 9
+get a
+cmpe
+JUMPZ L0_3
+get a
+isEven
+JUMPZ L0_4
+boolean FALSE
+print
+JUMP L1_4
+L0_4
+number 1
+get a
+number 2
+remainder
+cmpe
+JUMPZ L0_5
+number 1
+change
+boolean TRUE
+print
+JUMP L1_5
+L0_5
+boolean FALSE
+print
+L1_5
+boolean TRUE
+print
+JUMP L1_3
+L0_3
+L1_3
+get a
+isOdd
+JUMPZ L0_6
+boolean FALSE
+print
+JUMP L1_6
+L0_6
+number 0
+get a
+number 2
+remainder
+cmpe
+JUMPZ L0_7
+boolean TRUE
+print
+JUMP L1_7
+L0_7
+boolean FALSE
+print
+L1_7
+JUMP L1_0
+L0_0
+number 2
+number 7
+number 1
+add
+cmpe
+JUMPZ L0_1
+boolean FALSE
+print
+JUMP L1_1
+L0_1
+L1_1
+
