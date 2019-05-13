@@ -24,7 +24,7 @@ require("./../blocks/variables.js");
 require("./../blocks/variables_dynamic.js");
 require("./../blocks/procedures.js");
 
-require('jsdom-global')()
+require('jsdom-global')();
 const fs = require('fs');
 const jsdom = require("jsdom");
 const xmldom = require('xmldom');
