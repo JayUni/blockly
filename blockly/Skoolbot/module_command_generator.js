@@ -95,6 +95,9 @@ function addCommand(jsonList){
                         case 'get':
                             commandList.push('get ' + jsonList.varName);
                             break;
+                        case 'change':
+                            commandList.push('change ' + jsonList.varName);
+                            break;
                     }
                     break;
                 case 'text':

@@ -81,7 +81,8 @@ var commandMap = {
         'number': '0x01',
         'JUMPZ': '0x1d',
         'JUMP': '0x1e',
-        'JUMPNZ': '0x22'
+        'JUMPNZ': '0x22',
+        'change': '0x23'
     },
     'label':{
         'L0': '0x00', // destination of jump, nothing to do

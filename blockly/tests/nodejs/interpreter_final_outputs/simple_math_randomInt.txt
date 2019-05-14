@@ -1,2 +1,0 @@
-cannot test random, default number is 2 randomInt
-2

@@ -149,7 +149,7 @@ Blockly.Skoolbot['math_change'] = function(block) {
   var varName = Blockly.Skoolbot.variableDB_.getName(
       block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
   // return varName + ' = ' + varName + ' + ' + argument0 + '\n';
-  return '{ \"block_name\": \"math_statement_function_change\", \"functionName\": \"change\", \"varName\": \"' + varName + '\", \"argument\": [' + argument0 + ']}';
+  return '{ \"block_name\": \"variables_statement_change\", \"functionName\": \"change\", \"varName\": \"' + varName + '\", \"argument\": [' + argument0 + ']}';
 };
 
 // Rounding functions have a single operand.
