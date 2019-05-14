@@ -1,0 +1,22 @@
+[
+    {
+        "block_name": "text_statement_print",
+        "functionName": "text_print",
+        "argument": [
+            {
+                "block_name": "logic_boolean_operator_compare",
+                "operator": "cmpl",
+                "argument": [
+                    {
+                        "block_name": "math_number_number",
+                        "number": "3"
+                    },
+                    {
+                        "block_name": "math_number_number",
+                        "number": "5"
+                    }
+                ]
+            }
+        ]
+    }
+]

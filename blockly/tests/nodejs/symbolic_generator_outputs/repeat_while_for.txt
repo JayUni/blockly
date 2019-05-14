@@ -1,0 +1,52 @@
+number 0
+set n
+number 5
+set repeat_control_variable
+L0_0
+L0_1
+boolean TRUE
+JUMPNZ L1_1
+number 1
+set i
+L0_2
+number 10
+get i
+cmpg
+JUMPNZ L1_2
+number 1
+set for_step_control_variable
+get n
+print
+number 1
+change n
+get i
+get for_step_control_variable
+add
+set i
+JUMP L0_2
+L1_2
+get n
+print
+get n
+number 100
+cmpg
+JUMPNZ L0_3
+JUMP L1_undefined
+JUMP L1_3
+L0_3
+L1_3
+JUMP L0_1
+L1_1
+get n
+print
+get repeat_control_variable
+number 1
+sub
+set repeat_control_variable
+get repeat_control_variable
+number 0
+cmpg
+JUMPNZ L1_0
+JUMP L0_0
+L1_0
+

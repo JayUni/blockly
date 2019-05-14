@@ -1,0 +1,18 @@
+[
+    {
+        "block_name": "text_statement_print",
+        "functionName": "text_print",
+        "argument": [
+            {
+                "block_name": "logic_boolean_operator_logicNegate",
+                "operator": "negate",
+                "argument": [
+                    {
+                        "block_name": "logic_boolean_boolean",
+                        "value": "TRUE"
+                    }
+                ]
+            }
+        ]
+    }
+]
