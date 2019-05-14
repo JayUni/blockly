@@ -316,7 +316,7 @@ void run() {
         int16_t addr = code[ip++];
         addr |= (code[ip++]<<8);
         int16_t value = pop();
-        memory[addr] = value;
+        memory[addr] += value;
       }
         break;
       default:

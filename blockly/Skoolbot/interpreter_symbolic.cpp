@@ -255,7 +255,7 @@ int main (int argc, char *argv[]) {
       int a = getStack(s);
       ++counter;
       std::string varName = program[counter];
-      intVar[varName] = a;
+      intVar[varName] += a;
     } else if (command.compare("JUMPNZ") == 0) {
       ++counter;
       command = program[counter];
