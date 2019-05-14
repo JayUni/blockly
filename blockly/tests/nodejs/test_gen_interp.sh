@@ -5,7 +5,7 @@
 g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
 # for gen in bin_generator_outputs/*.bin
 # do
-    gen="bin_generator_outputs/simple_sequence_variable_print.bin"
+    gen="bin_generator_outputs/simple_loop_continue.bin"
     interpreter="interpreter_final_output/`basename $gen .bin`.txt"
 
    if [ -e $interpreter ]

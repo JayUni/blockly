@@ -40,6 +40,7 @@
 #define BOOLEAN       (0x20)
 #define STOP          (0x21)
 #define JUMPNZ        (0x22)
+#define CHANGE        (0x23)
 
 #define STACK_SIZE    (512)
 #define MEMORY_SIZE   (1024)
@@ -274,7 +275,7 @@ void run() {
           }
         }
         break;
-        case JUMPNZ:
+      case JUMPNZ:
           {
             int16_t value = pop();
             int16_t addr = code[ip++];
@@ -310,6 +311,14 @@ void run() {
         break;
       case STOP:
         return;
+      case CHANGE:
+      {
+        int16_t addr = code[ip++];
+        addr |= (code[ip++]<<8);
+        int16_t value = pop();
+        memory[addr] = value;
+      }
+        break;
       default:
         std::cerr<<"Invalid command: "<<code[ip]<<std::endl;
         return;
