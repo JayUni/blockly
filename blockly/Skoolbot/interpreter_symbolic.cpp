@@ -249,12 +249,25 @@ int main (int argc, char *argv[]) {
       ++counter;
       std::string varName = program[counter];
       intVar[varName] = a;
-    } else if (command.compare("JUMPZ") == 0) {
+    } else if (command.compare("JUMPNZ") == 0) {
       ++counter;
       command = program[counter];
       int condition = getStack(s);
       //jump when false
       if (condition == 1) {
+        std::string::size_type size;
+        counter = std::stoi(command, &size);
+        if (size != command.size()) {
+          std::cout<<"Invalid number\n"<<std::endl;
+          return -1;
+        }
+      }
+    } else if (command.compare("JUMPZ") == 0) {
+      ++counter;
+      command = program[counter];
+      int condition = getStack(s);
+      //jump when false
+      if (condition == 0) {
         std::string::size_type size;
         counter = std::stoi(command, &size);
         if (size != command.size()) {
