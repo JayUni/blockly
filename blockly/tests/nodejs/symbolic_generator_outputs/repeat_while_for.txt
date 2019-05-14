@@ -5,14 +5,14 @@ set repeat_control_variable
 L0_0
 L0_1
 boolean TRUE
-JUMPZ L1_1
+JUMPNZ L1_1
 number 1
 set i
 L0_2
 number 10
 get i
 cmpg
-JUMPZ L1_2
+JUMPNZ L1_2
 number 1
 set for_step_control_variable
 get n
@@ -30,7 +30,7 @@ print
 get n
 number 100
 cmpg
-JUMPZ L0_3
+JUMPNZ L0_3
 JUMP L1_undefined
 JUMP L1_3
 L0_3
@@ -46,7 +46,7 @@ set repeat_control_variable
 get repeat_control_variable
 number 0
 cmpg
-JUMPZ L1_0
+JUMPNZ L1_0
 JUMP L0_0
 L1_0
 

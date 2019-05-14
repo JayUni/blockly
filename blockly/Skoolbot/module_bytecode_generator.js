@@ -37,6 +37,7 @@ module.exports = function (jsonList) {
 // #define PRINT 0x1f
 // #define BOOLEAN 0x20
 // #define STOP 0x21
+// #define JUMPNZ 0x22
 
 // initialize global variable
 
@@ -70,8 +71,8 @@ var commandMap = {
         'cmpge': '0x16',
         'negate': '0x19',
         'null': '0x1a',
-        'stop': '0x21',
-        'JUMPNZ': '0x22'
+        'stop': '0x21'
+
     },
     'single_value':{
         'boolean': '0x20',
@@ -79,7 +80,8 @@ var commandMap = {
         'get': '0x1b',
         'number': '0x01',
         'JUMPZ': '0x1d',
-        'JUMP': '0x1e'
+        'JUMP': '0x1e',
+        'JUMPNZ': '0x22'
     },
     'label':{
         'L0': '0x00', // destination of jump, nothing to do
@@ -194,14 +196,10 @@ function processValue(command, value, index){
     }
 }
 
-function getInt8() {
-    return this.getUint8() << 24 >> 24;
-}
-
 function int2Hex(value) {
     var val = value.toString(16);
     var val_len = val.length;
-    val.getInt8();
+
     if(val_len <= 4){
         for (var i = 0; i < (4 - val_len); i++){
             val = '0' + val;

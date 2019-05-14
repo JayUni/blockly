@@ -5,7 +5,7 @@ number 7
 add
 get a
 cmpe
-JUMPZ L0_0
+JUMPNZ L0_0
 boolean TRUE
 print
 number 1
@@ -15,7 +15,7 @@ get a
 add
 number 9
 cmpe
-JUMPZ L0_2
+JUMPNZ L0_2
 boolean FALSE
 print
 JUMP L1_2
@@ -23,10 +23,10 @@ L0_2
 number 9
 get a
 cmpe
-JUMPZ L0_3
+JUMPNZ L0_3
 get a
 isEven
-JUMPZ L0_4
+JUMPNZ L0_4
 boolean FALSE
 print
 JUMP L1_4
@@ -36,7 +36,7 @@ get a
 number 2
 remainder
 cmpe
-JUMPZ L0_5
+JUMPNZ L0_5
 number 1
 change
 boolean TRUE
@@ -53,7 +53,7 @@ L0_3
 L1_3
 get a
 isOdd
-JUMPZ L0_6
+JUMPNZ L0_6
 boolean FALSE
 print
 JUMP L1_6
@@ -63,7 +63,7 @@ get a
 number 2
 remainder
 cmpe
-JUMPZ L0_7
+JUMPNZ L0_7
 boolean TRUE
 print
 JUMP L1_7
@@ -78,7 +78,7 @@ number 7
 number 1
 add
 cmpe
-JUMPZ L0_1
+JUMPNZ L0_1
 boolean FALSE
 print
 JUMP L1_1

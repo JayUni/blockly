@@ -3,11 +3,11 @@ set a
 get a
 number 30
 cmple
-JUMPZ L0_0
+JUMPNZ L0_0
 get a
 number 6
 cmpg
-JUMPZ L0_1
+JUMPNZ L0_1
 get a
 print
 JUMP L1_1
@@ -18,3 +18,4 @@ L0_0
 boolean FALSE
 print
 L1_0
+

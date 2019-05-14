@@ -1,13 +1,13 @@
 number 0
 set n
-L0_2
+L0_0
 get n
 number 100
 cmpl
-JUMPZ L1_2
+JUMPNZ L1_0
 number 10
 set repeat_control_variable
-L0_3
+L0_1
 get n
 print
 get n
@@ -21,8 +21,9 @@ set repeat_control_variable
 get repeat_control_variable
 number 0
 cmpg
-JUMPZ L1_3
-JUMP L0_3
-L1_3
-JUMP L0_2
-L1_2
+JUMPNZ L1_1
+JUMP L0_1
+L1_1
+JUMP L0_0
+L1_0
+

@@ -1,0 +1,12 @@
+number 1
+number 1
+add
+number 2
+cmpe
+JUMPNZ L0_0
+number 0
+print
+JUMP L1_0
+L0_0
+L1_0
+

@@ -7,7 +7,7 @@ number 20
 get i
 cmpe
 negate
-JUMPZ L1_0
+JUMPNZ L1_0
 number 1
 change
 get n

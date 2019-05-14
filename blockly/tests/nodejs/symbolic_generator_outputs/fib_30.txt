@@ -1,10 +1,34 @@
-SyntaxError: Unexpected token S in JSON at position 0
-    at JSON.parse (<anonymous>)
-    at Object.<anonymous> (/mnt/c/Users/jayzh/Desktop/blockly/blockly/SkoolBot/command_generator.js:7:28)
-    at Module._compile (internal/modules/cjs/loader.js:799:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:810:10)
-    at Module.load (internal/modules/cjs/loader.js:666:32)
-    at tryModuleLoad (internal/modules/cjs/loader.js:606:12)
-    at Function.Module._load (internal/modules/cjs/loader.js:598:3)
-    at Function.Module.runMain (internal/modules/cjs/loader.js:862:12)
-    at internal/main/run_main_module.js:21:11
+number 30
+set n
+number 0
+set a
+get a
+print
+number 1
+set b
+get b
+print
+get n
+set repeat_control_variable
+L0_0
+get a
+get b
+add
+set temp
+get b
+set a
+get temp
+set b
+get temp
+print
+get repeat_control_variable
+number 1
+sub
+set repeat_control_variable
+get repeat_control_variable
+number 0
+cmpg
+JUMPNZ L1_0
+JUMP L0_0
+L1_0
+
