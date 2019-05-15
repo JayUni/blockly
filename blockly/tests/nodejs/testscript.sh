@@ -6,7 +6,7 @@ g++ ../../SkoolBot/interpreter_symbolic.cpp -o ../../SkoolBot/interpreter
 # for xml in xmlToJson_test_cases/*.xml
 # do
     # conver xml to json
-    xml="xmlToJson_test_cases/simple_loop_continue.xml"
+    xml="xmlToJson_test_cases/if_if_elseif.xml"
     json="jsonToAddTyepField_test_cases/`basename $xml .xml`.json"
 
     if [ -e $json ]
@@ -82,8 +82,8 @@ g++ ../../SkoolBot/interpreter_symbolic.cpp -o ../../SkoolBot/interpreter
           else
             echo "$result"
             echo "$interpreter Test case failed."
-            rm compare.txt
-            continue
+            # rm compare.txt
+            # continue
        fi
        rm compare.txt
    else
