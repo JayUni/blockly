@@ -39,7 +39,9 @@ int main (int argc, char *argv[]) {
   unsigned int counter = 0;
   while (file>>command) {
     program.push_back(command);
-    if ((program[counter].compare("JUMP") == 0) || (program[counter].compare("JUMPZ") == 0)) {
+    if ((program[counter].compare("JUMP") == 0) ||
+        (program[counter].compare("JUMPZ") == 0) ||
+        (program[counter].compare("JUMPNZ") == 0)) {
       ++counter;
       file>>command;
       program.push_back(command);
@@ -75,7 +77,7 @@ int main (int argc, char *argv[]) {
 
   while(counter != program.size()) {
     command = program[counter];
-
+    //std::cout<<command<<std::endl;
     if (command.compare("number") == 0) {
       ++counter;
       command = program[counter];
@@ -249,6 +251,11 @@ int main (int argc, char *argv[]) {
       ++counter;
       std::string varName = program[counter];
       intVar[varName] = a;
+    } else if (command.compare("change") == 0) {
+      int a = getStack(s);
+      ++counter;
+      std::string varName = program[counter];
+      intVar[varName] += a;
     } else if (command.compare("JUMPNZ") == 0) {
       ++counter;
       command = program[counter];
