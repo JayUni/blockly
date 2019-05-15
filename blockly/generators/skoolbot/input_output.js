@@ -31,7 +31,7 @@ goog.require('Blockly.Skoolbot');
 Blockly.Skoolbot['digitalread'] = function(block) {
   var variable_name = Blockly.Skoolbot.variableDB_.getName(block.getFieldValue('NAME'), Blockly.Variables.NAME_TYPE);
   // TODO: Assemble Skoolbot into code variable.
-  var code = code = 'hello';
+  var code = '{ \"block_name\": \"io_statement_number\", \"varName\": \"' + variable_name + '\" }';
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.Skoolbot.ORDER_ATOMIC];
 };
