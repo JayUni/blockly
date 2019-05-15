@@ -19,5 +19,17 @@
                 </value>
             </block>
         </value>
+        <next>
+            <block type="text_print" id="Ho(PeS1CH+S37P=N(}46">
+                <value name="TEXT">
+                    <shadow type="text" id="!O((I%W(d3j;rW,A,lgu">
+                        <field name="TEXT">abc</field>
+                    </shadow>
+                    <block type="variables_get" id="R;Wj`r#cNf~Xj;Yo74y-">
+                        <field name="VAR" id="Wqk^kP.HE%^sH5~vk*F(" variabletype="">a</field>
+                    </block>
+                </value>
+            </block>
+        </next>
     </block>
 </xml>

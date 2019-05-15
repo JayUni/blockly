@@ -187,7 +187,7 @@ function addCommand(jsonList){
                             }
                             if (jsonList.label === 'variableInit'){
                                 commandList.push('get ' + jsonList.variable);
-                                commandList.push('cmpg');
+                                commandList.push('cmpge');
                                 commandList.push('JUMPNZ L1_' + jsonList.label_1);
                                 jsonList.label = 'jumpAdded';
                                 break;
