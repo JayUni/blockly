@@ -19,10 +19,12 @@ int getStack(std::stack <int> s) {
 }
 
 int main (int argc, char *argv[]) {
-  if (argc != 2) {
+  if (argc < 2) {
     std::cout<<"No specified file to open ";
-    std::cout<<"or too many arguments"<<std::endl;
     return 0;
+  }
+  if (argc == 3) {
+
   }
   // open a file in read mode.
   std::ifstream file;
@@ -77,7 +79,7 @@ int main (int argc, char *argv[]) {
 
   while(counter != program.size()) {
     command = program[counter];
-    //std::cout<<command<<std::endl;
+    // std::cout<<command<<std::endl;
     if (command.compare("number") == 0) {
       ++counter;
       command = program[counter];
@@ -259,6 +261,7 @@ int main (int argc, char *argv[]) {
     } else if (command.compare("JUMPNZ") == 0) {
       ++counter;
       command = program[counter];
+      // std::cout<<"inside: "<<command<<std::endl;
       int condition = getStack(s);
       //jump when false
       if (condition == 1) {
@@ -273,7 +276,7 @@ int main (int argc, char *argv[]) {
       ++counter;
       command = program[counter];
       int condition = getStack(s);
-      //jump when false
+      //jump when true
       if (condition == 0) {
         std::string::size_type size;
         counter = std::stoi(command, &size);
@@ -391,12 +394,12 @@ int main (int argc, char *argv[]) {
     ++counter;
   }
 
-  if (s.empty()) {
-    std::cout<<"empty stack, pop is not allowed"<<std::endl;
-    return 0;
-  }
-  std::cout<<s.top()<<std::endl;
-  s.pop();
+  // if (s.empty()) {
+  //   std::cout<<"empty stack, pop is not allowed"<<std::endl;
+  //   return 0;
+  // }
+  // std::cout<<s.top()<<std::endl;
+  // s.pop();
   // while(!s.empty()) {
   //   std::cout<<s.top()<<std::endl;
   //   s.pop();
