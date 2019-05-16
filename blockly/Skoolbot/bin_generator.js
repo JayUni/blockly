@@ -13,7 +13,7 @@ function bin_generator(text_file) {
 }
 
 function hexToBytes(hex) {
-    return parseInt(hex.substr(2, 2), 16);
+    return parseInt(hex.substr(2, 10), 16);
 }
 
 function generator(commands) {
@@ -77,7 +77,7 @@ function travel(dir, callback) {
 }
 
 
-var path = '../tests/nodejs/bytecode_generator_outputs/';
+var path = '../tests/nodejs/hex_generator_outputs/';
 travel(path, savetxt);
 
 

@@ -114,7 +114,6 @@ function generator(commands) {
             index[command] = i;
         }
     }
-    // console.log('index: ', index);
 
     for (var j in commands){
         if (commands[j] !=='' && commands[j] !== undefined){
@@ -124,15 +123,15 @@ function generator(commands) {
                 value = commands[j].split(' ')[1];
             }
 
-            resultList.push(getCommandByteCode(command, commandMap) + processValue(command, value, index));
+            // resultList.push(getCommandByteCode(command, commandMap) + processValue(command, value, index));
 
-            // console.log(getCommandByteCode(command, commandMap) + processValue(value, index)); //
+            console.log(getCommandByteCode(command, commandMap) + processValue(value, index)); //
 
         }
     }
-    resultList.push('0x21');
+    // resultList.push('0x21');
 
-    // console.log('0x21');
+    console.log('0x21');
     return resultList;
 }
 
@@ -198,21 +197,27 @@ function processValue(command, value, index){
 }
 
 function int2Hex(value) {
-    var val = value.toString(16);
-    var val_len = val.length;
-
-    if(val_len <= 4){
-        for (var i = 0; i < (4 - val_len); i++){
-            val = '0' + val;
+    if(value < 0){
+        value = Math.pow(2, 16) - value;
+        var high_byte = parseInt(value / 256).toString(16).substring(0,2);
+        for (var i = 0; i < (2 - high_byte.length); i++){
+            high_byte = '0' + high_byte;
         }
-        var high_byte = val.substring(0, 2);
-        var low_byte = val.substring(2, 4);
+        var low_byte = (value % 256).toString(16);
+        for (var i = 0; i < (2 - low_byte.length); i++){
+            low_byte = '0' + low_byte;
+        }
+    }else{
+        value = value.toString(16);
 
-        return ' 0x' + low_byte + ' 0x' + high_byte;
+        for (var i = 0; i < (4 - value.length); i++){
+            value = '0' + value;
+        }
+        var high_byte = value.substring(0, 2);
+        var low_byte = value.substring(2, 4);
 
     }
-
-
+    return ' 0x' + low_byte + ' 0x' + high_byte;
 }
 
 // For debugging
@@ -255,7 +260,7 @@ function int2Hex(value) {
 //                 restxt += reslist[j] + '\n';
 //             }
 //             var savefile = path.split('/')[4].split('.')[0];
-//             fs.writeFile('../tests/nodejs/bytecode_generator_outputs/' + savefile + '.txt', restxt, (err) => {
+//             fs.writeFile('../tests/nodejs/hex_generator_outputs/' + savefile + '.txt', restxt, (err) => {
 //                 if (err) throw err;
 //                 console.log('output is saved successfully!');
 //             });
@@ -280,5 +285,5 @@ function int2Hex(value) {
 // }
 //
 //
-// var path = '../tests/nodejs/generatorToInterpreter_test_cases/';
+// var path = '../tests/nodejs/symbolic_generator_outputs/';
 // travel(path, savetxt);
