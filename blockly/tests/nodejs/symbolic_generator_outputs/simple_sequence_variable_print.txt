@@ -1,0 +1,11 @@
+number 12
+set a
+number 5
+number 6
+sub
+set b
+get a
+print
+get b
+print
+

@@ -208,13 +208,18 @@ function int2Hex(value) {
             low_byte = '0' + low_byte;
         }
     }else{
-        value = value.toString(16);
+        var val = value.toString(16);
+        var val_len = val.length;
+        if(val_len <= 4){
+            for (var i = 0; i < (4 - val_len); i++){
+                val = '0' + val;
+            }
+            var high_byte = val.substring(0, 2);
+            var low_byte = val.substring(2, 4);
 
-        for (var i = 0; i < (4 - value.length); i++){
-            value = '0' + value;
+            return ' 0x' + low_byte + ' 0x' + high_byte;
+
         }
-        var high_byte = value.substring(0, 2);
-        var low_byte = value.substring(2, 4);
 
     }
     return ' 0x' + low_byte + ' 0x' + high_byte;

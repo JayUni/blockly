@@ -11,7 +11,7 @@ set i
 L0_2
 number 10
 get i
-cmpg
+cmpge
 JUMPNZ L1_2
 number 1
 set for_step_control_variable

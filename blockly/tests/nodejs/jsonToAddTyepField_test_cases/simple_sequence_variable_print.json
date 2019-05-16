@@ -1,0 +1,56 @@
+[
+    {
+        "block_name": "variables_statement_set",
+        "functionName": "variables_set",
+        "varName": "a",
+        "argument": [
+            {
+                "block_name": "math_number_number",
+                "number": "12"
+            }
+        ]
+    },
+    {
+        "block_name": "variables_statement_set",
+        "functionName": "variables_set",
+        "varName": "b",
+        "argument": [
+            {
+                "block_name": "math_arithmetic_operator",
+                "operator": "sub",
+                "argument": [
+                    {
+                        "block_name": "math_number_number",
+                        "number": "5"
+                    },
+                    {
+                        "block_name": "math_number_number",
+                        "number": "6"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "block_name": "text_statement_print",
+        "functionName": "text_print",
+        "argument": [
+            {
+                "block_name": "variables_statement_get",
+                "functionName": "variables_get",
+                "varName": "a"
+            }
+        ]
+    },
+    {
+        "block_name": "text_statement_print",
+        "functionName": "text_print",
+        "argument": [
+            {
+                "block_name": "variables_statement_get",
+                "functionName": "variables_get",
+                "varName": "b"
+            }
+        ]
+    }
+]

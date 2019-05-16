@@ -342,7 +342,7 @@ function continueBreak(jsonList, L0, L1) {
 
 
 // save as text file
-
+//
 // const fs = require('fs');
 //
 // function savetxt(path){
@@ -361,7 +361,7 @@ function continueBreak(jsonList, L0, L1) {
 //                 restxt += reslist[j] + '\n';
 //             }
 //             var savefile = path.split('/')[4].split('.')[0];
-//             fs.writeFile('../tests/nodejs/generatorToInterpreter_test_cases/' + savefile + '.txt', restxt, (err) => {
+//             fs.writeFile('../tests/nodejs/symbolic_generator_outputs/' + savefile + '.txt', restxt, (err) => {
 //                 if (err) throw err;
 //                 console.log('output is saved successfully!');
 //             });

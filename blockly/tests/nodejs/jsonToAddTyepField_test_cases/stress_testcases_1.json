@@ -1,0 +1,177 @@
+[
+    {
+        "block_name": "variables_statement_set",
+        "functionName": "variables_set",
+        "varName": "N",
+        "argument": [
+            {
+                "block_name": "math_number_number",
+                "number": "10"
+            }
+        ]
+    },
+    {
+        "block_name": "controls_statement_ifelse",
+        "structure": [
+            {
+                "block_name": "controls_statement_if",
+                "statements": "if",
+                "condition": {
+                    "block_name": "logic_boolean_operator_compare",
+                    "operator": "cmpl",
+                    "argument": [
+                        {
+                            "block_name": "variables_statement_get",
+                            "functionName": "variables_get",
+                            "varName": "N"
+                        },
+                        {
+                            "block_name": "math_number_number",
+                            "number": "2"
+                        }
+                    ]
+                },
+                "branchCode": [
+                    {
+                        "block_name": "variables_statement_set",
+                        "functionName": "variables_set",
+                        "varName": "result",
+                        "argument": [
+                            {
+                                "block_name": "math_number_number",
+                                "number": "1"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "block_name": "controls_statement_elseif",
+                "statements": "elseif",
+                "condition": {
+                    "block_name": "logic_boolean_operator_compare",
+                    "operator": "cmpl",
+                    "argument": [
+                        {
+                            "block_name": "variables_statement_get",
+                            "functionName": "variables_get",
+                            "varName": "N"
+                        },
+                        {
+                            "block_name": "math_number_number",
+                            "number": "3"
+                        }
+                    ]
+                },
+                "branchCode": [
+                    {
+                        "block_name": "variables_statement_set",
+                        "functionName": "variables_set",
+                        "varName": "result",
+                        "argument": [
+                            {
+                                "block_name": "math_number_number",
+                                "number": "2"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "block_name": "controls_statement_else",
+                "statements": "else",
+                "branchCode": [
+                    {
+                        "block_name": "controls_statement_whileUntil",
+                        "loop_style": "controls_whileUntil",
+                        "repeat_condition": {
+                            "block_name": "logic_boolean_operator_compare",
+                            "operator": "cmpg",
+                            "argument": [
+                                {
+                                    "block_name": "variables_statement_get",
+                                    "functionName": "variables_get",
+                                    "varName": "N"
+                                },
+                                {
+                                    "block_name": "math_number_number",
+                                    "number": "2"
+                                }
+                            ]
+                        },
+                        "end_type": "while",
+                        "branch": [
+                            {
+                                "block_name": "variables_statement_set",
+                                "functionName": "variables_set",
+                                "varName": "result",
+                                "argument": [
+                                    {
+                                        "block_name": "math_arithmetic_operator",
+                                        "operator": "add",
+                                        "argument": [
+                                            {
+                                                "block_name": "variables_statement_get",
+                                                "functionName": "variables_get",
+                                                "varName": "result"
+                                            },
+                                            {
+                                                "block_name": "variables_statement_get",
+                                                "functionName": "variables_get",
+                                                "varName": "N"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "block_name": "variables_statement_set",
+                                "functionName": "variables_set",
+                                "varName": "N",
+                                "argument": [
+                                    {
+                                        "block_name": "math_arithmetic_operator",
+                                        "operator": "sub",
+                                        "argument": [
+                                            {
+                                                "block_name": "variables_statement_get",
+                                                "functionName": "variables_get",
+                                                "varName": "N"
+                                            },
+                                            {
+                                                "block_name": "math_number_number",
+                                                "number": "1"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "block_name": "text_statement_print",
+                                "functionName": "text_print",
+                                "argument": [
+                                    {
+                                        "block_name": "variables_statement_get",
+                                        "functionName": "variables_get",
+                                        "varName": "result"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "block_name": "text_statement_print",
+        "functionName": "text_print",
+        "argument": [
+            {
+                "block_name": "variables_statement_get",
+                "functionName": "variables_get",
+                "varName": "result"
+            }
+        ]
+    }
+]

@@ -3,7 +3,7 @@ set i
 L0_0
 number 10
 get i
-cmpg
+cmpge
 JUMPNZ L1_0
 number 1
 set for_step_control_variable
