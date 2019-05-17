@@ -111,7 +111,8 @@ function generator(commands) {
         command = commands[i].split(' ')[0];
 
         if(command.split('_')[0] === 'L0' || command.split('_')[0] === 'L1'){
-            index[command] = i + 1;
+            index[command] = i;
+            console.log(index);
         }
     }
 
@@ -125,13 +126,14 @@ function generator(commands) {
 
             // resultList.push(getCommandByteCode(command, commandMap) + processValue(command, value, index));
 
-            console.log(getCommandByteCode(command, commandMap) + processValue(value, index)); //
+            console.log(getCommandByteCode(command, commandMap) + processValue(command, value, index)); //
 
         }
     }
     // resultList.push('0x21');
-
+    //
     console.log('0x21');
+
     return resultList;
 }
 
@@ -179,7 +181,7 @@ function processValue(command, value, index){
 
     }
     else if(value.split('_')[0] === 'L0' || value.split('_')[0] === 'L1'){
-        return int2Hex(parseInt(index[value]));
+        return int2Hex(parseInt(index[value])+1);
     }
     else if(value !== ''){
         if (variable_map[value]){

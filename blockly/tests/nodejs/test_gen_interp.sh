@@ -10,7 +10,7 @@ g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
 
    if [ -e $interpreter ]
      then
-       ../../SkoolBot/interpreter $gen \-d > compare.txt
+       ../../SkoolBot/interpreter $gen > compare.txt
        result=$(wdiff -3 $interpreter compare.txt)
        if [ $? -eq 0 ]
           then
@@ -23,7 +23,7 @@ g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
        fi
        # rm compare.txt
    else
-       ../../SkoolBot/interpreter $gen \-d > $interpreter
+       ../../SkoolBot/interpreter $gen > $interpreter
        echo "created $interpreter."
    fi
    echo ""
