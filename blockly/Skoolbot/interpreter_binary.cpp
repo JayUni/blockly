@@ -272,7 +272,7 @@ void run() {
           int16_t addr = code[ip++];
           addr |= (code[ip++]<<8);
           if (value == 0) {
-             ip = addr+1;
+             ip = addr;
              std::cout<<"jumpz ip: "<<ip<<std::endl;
           }
         }
@@ -283,7 +283,7 @@ void run() {
             int16_t addr = code[ip++];
             addr |= (code[ip++]<<8);
             if (value != 0) {
-               ip = addr+1;
+               ip = addr;
                std::cout<<"jumpnz ip: "<<ip<<std::endl;
             }
           }
@@ -292,7 +292,7 @@ void run() {
         {
           int16_t addr = code[ip++];
           addr |= (code[ip++]<<8);
-          ip = addr+1;
+          ip = addr;
           std::cout<<"jump ip: "<<ip<<std::endl;
         }
         break;
@@ -439,7 +439,7 @@ void run_symbol() {
           // addr |= (code[ip+2]<<8);
 
           std::cout << "JUMPZ ";
-          std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8))+1 << std::endl;
+          std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
           ip+=2;
 
         }
@@ -450,7 +450,7 @@ void run_symbol() {
             // addr |= (code[ip++]<<8);
 
             std::cout << "JUMPNZ ";
-            std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8))+1 << std::endl;
+            std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
             ip+=2;
 
           }
@@ -460,7 +460,7 @@ void run_symbol() {
           // int16_t addr = code[ip++];
           // addr |= (code[ip++]<<8);
           std::cout << "JUMP ";
-          std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8))+1 << std::endl;
+          std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
           ip+=2;
         }
         break;
@@ -725,7 +725,7 @@ void run_both() {
           int16_t addr = code[ip++];
           addr |= (code[ip++]<<8);
           if (value == 0) {
-             ip = addr+1;
+             ip = addr;
              std::cout<<"JUMPZ "<<ip<<std::endl;
           }
         }
@@ -736,7 +736,7 @@ void run_both() {
             int16_t addr = code[ip++];
             addr |= (code[ip++]<<8);
             if (value != 0) {
-               ip = addr+1;
+               ip = addr;
                std::cout<<"JUMPNZ "<<ip<<std::endl;
             }
           }
@@ -745,7 +745,7 @@ void run_both() {
         {
           int16_t addr = code[ip++];
           addr |= (code[ip++]<<8);
-          ip = addr+1;
+          ip = addr;
           std::cout<<"JUMP "<<ip<<std::endl;
         }
         break;
