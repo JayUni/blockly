@@ -23,9 +23,7 @@ int main (int argc, char *argv[]) {
     std::cout<<"No specified file to open ";
     return 0;
   }
-  if (argc == 3) {
 
-  }
   // open a file in read mode.
   std::ifstream file;
   file.open(argv[1]);

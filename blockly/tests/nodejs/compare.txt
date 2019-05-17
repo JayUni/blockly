@@ -1,0 +1,22 @@
+Number 1
+SET 0
+Number 10
+SET 2
+NOP
+GET 0
+PRINT
+GET 0
+Number 1
+ADD
+SET 0
+GET 2
+Number 1
+SUB
+SET 2
+GET 2
+Number 0
+CMPG
+JUMPZ 21
+JUMP 5
+NOP
+STOP

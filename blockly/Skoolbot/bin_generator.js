@@ -77,12 +77,5 @@ function travel(dir, callback) {
 }
 
 
-var path = '../tests/nodejs/bytecode_generator_outputs/';
+var path = '../tests/nodejs/bin_generator_outputs/';
 travel(path, savetxt);
-
-
-
-
-
-
-
