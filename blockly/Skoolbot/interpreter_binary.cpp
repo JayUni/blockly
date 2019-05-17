@@ -273,7 +273,7 @@ void run() {
           addr |= (code[ip++]<<8);
           if (value == 0) {
              ip = addr;
-             std::cout<<"jumpz ip: "<<ip<<std::endl;
+             //std::cout<<"jumpz ip: "<<ip<<std::endl;
           }
         }
         break;
@@ -284,7 +284,7 @@ void run() {
             addr |= (code[ip++]<<8);
             if (value != 0) {
                ip = addr;
-               std::cout<<"jumpnz ip: "<<ip<<std::endl;
+               //std::cout<<"jumpnz ip: "<<ip<<std::endl;
             }
           }
           break;
@@ -293,7 +293,7 @@ void run() {
           int16_t addr = code[ip++];
           addr |= (code[ip++]<<8);
           ip = addr;
-          std::cout<<"jump ip: "<<ip<<std::endl;
+          //std::cout<<"jump ip: "<<ip<<std::endl;
         }
         break;
       case PRINT:
@@ -807,8 +807,8 @@ int main (int argc, char *argv[]) {
   if(FILE *file = fopen(argv[1],"rb")) {
      fread(code, CODE_SIZE, 1, file);
      if (debug == 1) {
-       run_symbol();
-       // run_both();
+        //run_symbol();
+        run_both();
      } else {
        run();
      }
