@@ -111,7 +111,7 @@ function generator(commands) {
         command = commands[i].split(' ')[0];
 
         if(command.split('_')[0] === 'L0' || command.split('_')[0] === 'L1'){
-            index[command] = i;
+            index[command] = i + 1;
         }
     }
 
