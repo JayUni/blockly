@@ -273,7 +273,7 @@ void run() {
           addr |= (code[ip++]<<8);
           if (value == 0) {
              ip = addr;
-             std::cout<<"jumpz ip: "<<ip<<std::endl;
+             // std::cout<<"jumpz ip: "<<ip<<std::endl;
           }
         }
         break;
@@ -284,7 +284,7 @@ void run() {
             addr |= (code[ip++]<<8);
             if (value != 0) {
                ip = addr;
-               std::cout<<"jumpnz ip: "<<ip<<std::endl;
+               // std::cout<<"jumpnz ip: "<<ip<<std::endl;
             }
           }
           break;
@@ -293,7 +293,7 @@ void run() {
           int16_t addr = code[ip++];
           addr |= (code[ip++]<<8);
           ip = addr;
-          std::cout<<"jump ip: "<<ip<<std::endl;
+          // std::cout<<"jump ip: "<<ip<<std::endl;
         }
         break;
       case PRINT:
