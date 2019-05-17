@@ -143,12 +143,14 @@ function generator(commands) {
         }
 
         if(command.split('_')[0] === 'L0' || command.split('_')[0] === 'L1'){
+
             index[command] = jumpaddr - 1;
+
         }
     }
 
     for (var j in commands){
-        if (commands[j] !=='' && commands[j] !== undefined){
+        if (commands[j] !== '' && commands[j] !== undefined){
             command = commands[j].split(' ')[0];
             value = '';
             if (commands[j].split(' ')[1]){
