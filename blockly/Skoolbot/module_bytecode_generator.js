@@ -111,12 +111,12 @@ function generator(commands) {
         command = commands[i].split(' ')[0];
 
         if(command.split('_')[0] === 'L0' || command.split('_')[0] === 'L1'){
-            index[command] = i + 1;
+            index[command] = i+1;
         }
     }
 
     for (var j in commands){
-        if (commands[j] !=='' && commands[j] !== undefined){
+        if (commands[j] !== '' && commands[j] !== undefined){
             command = commands[j].split(' ')[0];
             value = '';
             if (commands[j].split(' ')[1]){
@@ -125,13 +125,13 @@ function generator(commands) {
 
             // resultList.push(getCommandByteCode(command, commandMap) + processValue(command, value, index));
 
-            console.log(getCommandByteCode(command, commandMap) + processValue(value, index)); //
+            console.log(getCommandByteCode(command, commandMap) + processValue(command, value, index)); //
 
         }
     }
     // resultList.push('0x21');
 
-    console.log('0x21');
+    // console.log('0x21');
     return resultList;
 }
 
