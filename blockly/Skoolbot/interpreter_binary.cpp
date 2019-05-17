@@ -292,7 +292,7 @@ void run() {
         {
           int16_t addr = code[ip++];
           addr |= (code[ip++]<<8);
-          ip = addr;
+          ip = addr+2;
           // std::cout<<"jump ip: "<<ip<<std::endl;
         }
         break;
@@ -496,28 +496,30 @@ void run_symbol() {
 void run_both() {
   int16_t op1;
   int16_t op2;
+  int16_t value;
+  int16_t addr;
   for(;;) {
     switch(code[ip++]) {
       case NOP_:
-      std::cout << "NOP" << std::endl;
+        std::cout << "NOP " << ip<<std::endl;
         break;
       case NUMBER:
-        {
+
           std::cout << "NUMBER "; //<< (int16_t)value << std::endl;
           // std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
-          int16_t value = code[ip++];
+          value = code[ip++];
           value |= (code[ip++] << 8);
           std::cout<< value << std::endl;
           push(value);
-        }
+
         break;
       case ADD:
-        {
+
           op1 = pop();
           op2 = pop();
           push(op1 + op2);
           std::cout << "ADD" << std::endl;
-        }
+
         break;
       case SUB:
         op1 = pop();
@@ -703,58 +705,60 @@ void run_both() {
         push(-1); // need to check this ???
         std::cout << "NULL_" << std::endl;
       case GET:
-        {
-          int16_t addr = code[ip++];
+
+          addr = code[ip++];
           addr |= (code[ip++]<<8);
           push(memory[addr]);
           std::cout << "GET " << addr<<std::endl;
-        }
+
         break;
       case SET:
-        {
-          int16_t addr = code[ip++];
+
+          addr = code[ip++];
           addr |= (code[ip++]<<8);
-          int16_t value = pop();
+          value = pop();
           memory[addr] = value;
           std::cout << "SET " << addr<<std::endl;
-        }
+
         break;
       case JUMPZ:
-        {
-          int16_t value = pop();
-          int16_t addr = code[ip++];
+
+          value = pop();
+          addr = code[ip++];
           addr |= (code[ip++]<<8);
           if (value == 0) {
              ip = addr;
              std::cout<<"JUMPZ "<<ip<<std::endl;
           }
-        }
+
         break;
       case JUMPNZ:
-          {
-            int16_t value = pop();
-            int16_t addr = code[ip++];
+
+            value = pop();
+            addr = code[ip++];
             addr |= (code[ip++]<<8);
             if (value != 0) {
                ip = addr;
                std::cout<<"JUMPNZ "<<ip<<std::endl;
             }
-          }
+
           break;
       case JUMP:
-        {
-          int16_t addr = code[ip++];
+          std::cout<<"JUMP "; //addr<<std::endl;
+          std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
+
+          addr = code[ip++];
           addr |= (code[ip++]<<8);
-          ip = addr;
-          std::cout<<"JUMP "<<ip<<std::endl;
-        }
+          ip = 12;
+          // std::cout<<"JUMP to command at:"<<(int16_t)code[12] << " " << ip <<std::endl;
+          // std::cout<<std::endl;
         break;
       case PRINT:
-        {
+
           std::cout << "PRINT" << std::endl;
-          int16_t data = pop();
-          std::cout << data << std::endl;
-        }
+          // int16_t data = pop();
+          std::cout << pop() << std::endl;
+
         break;
       case BOOLEAN:
         ++ip;
@@ -772,13 +776,13 @@ void run_both() {
         std::cout << "STOP" << std::endl;
         return;
       case CHANGE:
-      {
-        int16_t addr = code[ip++];
+
+        addr = code[ip++];
         addr |= (code[ip++]<<8);
-        int16_t value = pop();
+        value = pop();
         memory[addr] += value;
         std::cout << "CHANGE " << addr <<std::endl;
-      }
+
         break;
       default:
         std::cerr<<"Invalid command: "<<code[ip]<<std::endl;
@@ -807,8 +811,8 @@ int main (int argc, char *argv[]) {
   if(FILE *file = fopen(argv[1],"rb")) {
      fread(code, CODE_SIZE, 1, file);
      if (debug == 1) {
-       run_symbol();
-       // run_both();
+       // run_symbol();
+       run_both();
      } else {
        run();
      }
