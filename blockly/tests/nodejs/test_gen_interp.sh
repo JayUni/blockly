@@ -5,12 +5,12 @@
 g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
 # for gen in bin_generator_outputs/*.bin
 # do
-    gen="bin_generator_outputs/if_if_elseif.bin"
+    gen="bin_generator_outputs/simple_loop_repeat.bin"
     interpreter="interpreter_final_outputs/`basename $gen .bin`.txt"
 
    if [ -e $interpreter ]
      then
-       ../../SkoolBot/interpreter $gen > compare.txt
+       ../../SkoolBot/interpreter $gen \-d > compare.txt
        result=$(wdiff -3 $interpreter compare.txt)
        if [ $? -eq 0 ]
           then
@@ -23,7 +23,7 @@ g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
        fi
        # rm compare.txt
    else
-       ../../SkoolBot/interpreter $gen > $interpreter
+       ../../SkoolBot/interpreter $gen \-d > $interpreter
        echo "created $interpreter."
    fi
    echo ""

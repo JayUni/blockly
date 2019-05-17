@@ -2,11 +2,11 @@
 
 # compile the interpreter
 # -std=c++11 -Wall -Werror=format-security
-g++ ../../SkoolBot/interpreter_symbolic.cpp -o ../../SkoolBot/interpreter
+g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
 # for xml in xmlToJson_test_cases/*.xml
 # do
     # conver xml to json
-    xml="xmlToJson_test_cases/if_if_elseif.xml"
+    xml="xmlToJson_test_cases/simple_loop_repeat.xml"
     json="jsonToAddTyepField_test_cases/`basename $xml .xml`.json"
 
     if [ -e $json ]
@@ -48,11 +48,11 @@ g++ ../../SkoolBot/interpreter_symbolic.cpp -o ../../SkoolBot/interpreter
    fi
 
    # command generator
-   generator="symbolic_generator_outputs/`basename $xml .xml`.txt"
+   generator="bin_generator_outputs/`basename $xml .xml`.txt"
    if [ -e $generator ]
      then
        ### execute javascript with $x > $$.out
-       node ../../SkoolBot/command_generator.js $addTypeField > compare.json
+       node ../../SkoolBot/bin_generator.js $addTypeField > compare.json
        result=$(wdiff -3 $generator compare.json)
        if [ $? -eq 0 ]
          then
@@ -65,7 +65,7 @@ g++ ../../SkoolBot/interpreter_symbolic.cpp -o ../../SkoolBot/interpreter
        fi
        rm compare.json
    else
-     node ../../SkoolBot/command_generator.js $addTypeField > $generator
+     node ../../SkoolBot/bin_generator.js $addTypeField > $generator
      echo "created $generator."
    fi
 

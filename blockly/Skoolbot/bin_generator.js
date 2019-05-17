@@ -79,10 +79,3 @@ function travel(dir, callback) {
 
 var path = '../tests/nodejs/hex_generator_outputs/';
 travel(path, savetxt);
-
-
-
-
-
-
-
