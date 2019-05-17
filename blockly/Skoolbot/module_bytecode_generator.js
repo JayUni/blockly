@@ -45,6 +45,8 @@ var variable_map = {};
 
 var addr = 0;
 
+var jumpaddr = 0;
+
 var commandMap = {
     'command':{
         'print': '0x1f',
@@ -100,6 +102,7 @@ function bytecode_generator(commands) {
 function generator(commands) {
     variable_map = {};
     addr = 0;
+    jumpaddr = 0;
 
     commands = commands.split("\n");
 
@@ -109,10 +112,40 @@ function generator(commands) {
     var index = {};
     for (var i in commands){
         command = commands[i].split(' ')[0];
+        switch (command){
+            case 'number':
+                jumpaddr += 3;
+                break;
+            case 'set':
+                jumpaddr += 3;
+                break;
+            case 'get':
+                jumpaddr += 3;
+                break;
+            case 'change':
+                jumpaddr += 3;
+                break;
+            case 'boolean':
+                jumpaddr += 2;
+                break;
+            case 'JUMP':
+                jumpaddr += 2;
+                break;
+            case 'JUMPZ':
+                jumpaddr += 2;
+                break;
+            case 'JUMPNZ':
+                jumpaddr += 2;
+                break;
+            default:
+                jumpaddr += 1;
+
+        }
 
         if(command.split('_')[0] === 'L0' || command.split('_')[0] === 'L1'){
-            index[command] = i;
-            // console.log(index);
+
+            index[command] = jumpaddr - 1;
+
         }
     }
 
@@ -125,13 +158,11 @@ function generator(commands) {
             }
 
             // resultList.push(getCommandByteCode(command, commandMap) + processValue(command, value, index));
-
             console.log(getCommandByteCode(command, commandMap) + processValue(command, value, index)); //
 
         }
     }
     // resultList.push('0x21');
-    //
     console.log('0x21');
 
     return resultList;
@@ -250,47 +281,47 @@ function int2Hex(value) {
 
 
 
-// // save as text file
-// const fs = require('fs');
-//
-//
-// function savetxt(path){
-//
-//     fs.readFile(path, "utf8", function(err, commandList) {
-//         if (!err) {
-//             // commandList = commandList.split("\n");
-//
-//             var reslist = bytecode_generator(commandList);
-//
-//             var restxt = '';
-//             for (var j in reslist){
-//                 restxt += reslist[j] + '\n';
-//             }
-//             var savefile = path.split('/')[4].split('.')[0];
-//             fs.writeFile('../tests/nodejs/hex_generator_outputs/' + savefile + '.txt', restxt, (err) => {
-//                 if (err) throw err;
-//                 console.log('output is saved successfully!');
-//             });
-//         }
-//         else{
-//             throw err;
-//         }
-//     });
-// }
-//
-//
-// function travel(dir, callback) {
-//     fs.readdirSync(dir).forEach(function (file) {
-//         var pathname = require('path').join(dir, file);
-//
-//         if (fs.statSync(pathname).isDirectory()) {
-//             travel(pathname, callback);
-//         } else {
-//             callback(pathname);
-//         }
-//     });
-// }
-//
-//
-// var path = '../tests/nodejs/symbolic_generator_outputs/';
-// travel(path, savetxt);
+// save as text file
+const fs = require('fs');
+
+
+function savetxt(path){
+
+    fs.readFile(path, "utf8", function(err, commandList) {
+        if (!err) {
+            // commandList = commandList.split("\n");
+
+            var reslist = bytecode_generator(commandList);
+
+            var restxt = '';
+            for (var j in reslist){
+                restxt += reslist[j] + '\n';
+            }
+            var savefile = path.split('/')[4].split('.')[0];
+            fs.writeFile('../tests/nodejs/hex_generator_outputs/' + savefile + '.txt', restxt, (err) => {
+                if (err) throw err;
+                console.log('output is saved successfully!');
+            });
+        }
+        else{
+            throw err;
+        }
+    });
+}
+
+
+function travel(dir, callback) {
+    fs.readdirSync(dir).forEach(function (file) {
+        var pathname = require('path').join(dir, file);
+
+        if (fs.statSync(pathname).isDirectory()) {
+            travel(pathname, callback);
+        } else {
+            callback(pathname);
+        }
+    });
+}
+
+
+var path = '../tests/nodejs/symbolic_generator_outputs/';
+travel(path, savetxt);

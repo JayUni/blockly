@@ -811,8 +811,8 @@ int main (int argc, char *argv[]) {
   if(FILE *file = fopen(argv[1],"rb")) {
      fread(code, CODE_SIZE, 1, file);
      if (debug == 1) {
-       // run_symbol();
-       run_both();
+        //run_symbol();
+        run_both();
      } else {
        run();
      }
