@@ -273,11 +273,7 @@ void run() {
           addr |= (code[ip++]<<8);
           if (value == 0) {
              ip = addr;
-<<<<<<< HEAD
-             //std::cout<<"jumpz ip: "<<ip<<std::endl;
-=======
              // std::cout<<"jumpz ip: "<<ip<<std::endl;
->>>>>>> c40cd6c99416ace04fd65662cbc29e7df9c17ff2
           }
         }
         break;
