@@ -46,32 +46,51 @@ g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
    fi
 
    # command generator
-   generator="bin_generator_outputs/`basename $xml .xml`.bin"
-   if [ -e $generator ]
+   command_generator="symbolic_generator_outputs/`basename $xml .xml`.txt"
+   if [ -e $command_generator ]
      then
        ### execute javascript with $x > $$.out
-       node ../../SkoolBot/bin_generator.js `basename $xml .xml`_test
-       result=$(diff -3 $generator "`basename $xml .xml`_test.bin")
+       node ../../SkoolBot/command_generator.js $addTypeField > compare.txt
+       result=$(wdiff -3 $command_generator compare.txt)
        if [ $? -eq 0 ]
          then
-            echo "$generator Test case pass."
+            echo "$command_generator Test case pass."
           else
             echo "$result"
-            echo "$generator Test case failed."
+            echo "$command_generator Test case failed."
        fi
-       rm "`basename $xml .xml`_test.bin"
        continue
    else
-     node ../../SkoolBot/bin_generator.js `basename $xml .xml`
-     echo "created $generator."
+     node ../../SkoolBot/bin_generator.js $addTypeField > $command_generator
+     echo "created $command_generator."
    fi
+
+   # # bin generator
+   bin_generator="bin_generator_outputs/`basename $xml .xml`.bin"
+   # if [ -e $bin_generator ]
+   #   then
+   #     ### execute javascript with $x > $$.out
+   #     node ../../SkoolBot/bin_generator.js `basename $xml .xml` > compare.bin
+   #     result=$(wdiff -3 $bin_generator compare.bin)
+   #     if [ $? -eq 0 ]
+   #       then
+   #          echo "$bin_generator Test case pass."
+   #        else
+   #          echo "$result"
+   #          echo "$bin_generator Test case failed."
+   #     fi
+   #     continue
+   # else
+   #   node ../../SkoolBot/bin_generator.js `basename $xml .xml` > $bin_generator
+   #   echo "created $bin_generator."
+   # fi
 
    # interpreter
    interpreter="interpreter_final_outputs/`basename $xml .xml`.txt"
    if [ -e $interpreter ]
      then
        ### execute javascript with $x > $$.out
-       ../../SkoolBot/interpreter $generator > compare.txt
+       ../../SkoolBot/interpreter $bin_generator $1 > compare.txt
        result=$(wdiff -3 $interpreter compare.txt)
        if [ $? -eq 0 ]
           then
@@ -82,12 +101,13 @@ g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
             continue
        fi
    else
-       ../../SkoolBot/interpreter $generator > $interpreter
+       ../../SkoolBot/interpreter $bin_generator > $interpreter
        echo "created $interpreter."
    fi
    echo ""
    echo ""
    echo ""
 # done
-rm compare.txt
-rm compare.json
+# rm compare.txt
+# rm compare.bin
+# rm compare.json
