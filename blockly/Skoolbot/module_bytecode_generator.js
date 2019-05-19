@@ -231,15 +231,17 @@ function processValue(command, value, index){
 
 function int2Hex(value) {
     if(value < 0){
-        value = Math.pow(2, 16) - value;
-        var high_byte = parseInt(value / 256).toString(16).substring(0,2);
-        for (var i = 0; i < (2 - high_byte.length); i++){
-            high_byte = '0' + high_byte;
-        }
-        var low_byte = (value % 256).toString(16);
-        for (var i = 0; i < (2 - low_byte.length); i++){
+        value = (Math.pow(2, 16) + value).toString(16);
+
+        for (var i = 0; i < (4 - value.length); i++){
             low_byte = '0' + low_byte;
         }
+
+        var high_byte = value.substring(0,2);
+
+        var low_byte = value.substring(2,4);
+
+
     }else{
         var val = value.toString(16);
         var val_len = val.length;

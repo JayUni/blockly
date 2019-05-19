@@ -21,9 +21,6 @@ var output_path_bin = "../tests/nodejs/bin_generator_outputs/" + file_name + '.b
 
 // console.log('input_path: ', input_path, '\n', 'output_path_hex: ', output_path_hex, '\n', 'output_path_bin: ', output_path_bin);
 
-function hexToBytes(hex) {
-    return parseInt(hex.substr(2, 10), 16);
-}
 
 
 try{
@@ -36,12 +33,19 @@ try{
     for (var j in reslist){
         restxt += reslist[j] + '\n';
     }
-    fs.writeFileSync(output_path_hex, restxt);
+
+    var hextext = fs.writeFileSync(output_path_hex, restxt);
+
+    var runcode = hextext;
 
 }
 catch(err) {
     console.log(err);
 }
+
+
+
+
 
 
 try{
@@ -54,7 +58,7 @@ try{
         var row = commands[i].split(' ');
         for (var j in row){
             if(row[j] !== '' && row[j] !== undefined){
-                resultList.push(hexToBytes(row[j]));
+                resultList.push(parseInt(row[j].substr(2, 2), 16));
             }
         }
 
@@ -63,8 +67,9 @@ try{
     for (var j in resultList){
         bin_content[j] = resultList[j];
     }
-    fs.writeFileSync(output_path_bin, Buffer.from(bin_content));
+    var bintext = fs.writeFileSync(output_path_bin, Buffer.from(bin_content));
 
+    var runcode2 = bintext;
 }
 catch(err) {
     console.log(err);
