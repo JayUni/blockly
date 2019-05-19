@@ -1,0 +1,14 @@
+ip: 0 NUMBER 1
+ip: 3 NUMBER 1
+ip: 6 ADD
+ip: 7 NUMBER 2
+ip: 10 CMPE
+ip: 11 ip: 14 NUMBER 0
+ip: 17 PRINT
+0
+ip: 18 JUMP 0
+
+ip: 25 PRINT
+0
+ip: 26 NOP 27
+ip: 27 STOP
