@@ -25,9 +25,7 @@ function generator(commands) {
             if(row[j] !== '' && row[j] !== undefined){
                 resultList.push(hexToBytes(row[j]));
             }
-
         }
-
     }
     return resultList;
 
