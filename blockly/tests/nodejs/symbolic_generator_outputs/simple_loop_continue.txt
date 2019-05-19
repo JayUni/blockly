@@ -11,11 +11,9 @@ get i
 number 7
 isDivisibleBy
 negate
-JUMPNZ L0_1
+JUMPNZ L0_0
 JUMP L0_0
-JUMP L1_1
-L0_1
-L1_1
+L0_0
 get i
 print
 get i
@@ -24,4 +22,3 @@ add
 set i
 JUMP L0_0
 L1_0
-

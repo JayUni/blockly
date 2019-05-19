@@ -9,33 +9,29 @@ number 1
 set for_step_control_variable
 get i
 isEven
-JUMPNZ L0_1
+JUMPNZ L0_0
 get i
 neg
 set i
-JUMP L1_1
-L0_1
+L0_0
 get i
 number 0
 cmpg
 negate
-JUMPNZ L0_2
+JUMPNZ L0_1
 get i
 abs
 set i
-JUMP L1_2
-L0_2
+L0_1
 get i
 number 0
 cmpg
-JUMPNZ L0_3
+JUMPNZ L0_2
 number 5
 change i
-JUMP L1_3
-L0_3
+L0_2
 number -1
 change i
-L1_3
 get i
 number 1
 number 100
@@ -49,4 +45,3 @@ add
 set i
 JUMP L0_0
 L1_0
-

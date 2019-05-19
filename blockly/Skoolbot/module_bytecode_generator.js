@@ -129,13 +129,13 @@ function generator(commands) {
                 jumpaddr += 2;
                 break;
             case 'JUMP':
-                jumpaddr += 2;
+                jumpaddr += 3;
                 break;
             case 'JUMPZ':
-                jumpaddr += 2;
+                jumpaddr += 3;
                 break;
             case 'JUMPNZ':
-                jumpaddr += 2;
+                jumpaddr += 3;
                 break;
             default:
                 jumpaddr += 1;
@@ -212,6 +212,8 @@ function processValue(command, value, index){
 
     }
     else if(value.split('_')[0] === 'L0' || value.split('_')[0] === 'L1'){
+        console.log(value);
+        console.log(index[value]);
         return int2Hex(parseInt(index[value])+1);
     }
     else if(value !== ''){

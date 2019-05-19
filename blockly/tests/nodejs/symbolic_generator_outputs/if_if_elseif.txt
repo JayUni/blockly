@@ -15,21 +15,17 @@ get a
 add
 number 9
 cmpe
-JUMPNZ L0_2
+JUMPNZ L0_0
 boolean FALSE
 print
-JUMP L1_2
-L0_2
+L0_0
 number 9
 get a
 cmpe
-JUMPNZ L0_3
+JUMPNZ L0_1
 boolean TRUE
 print
-JUMP L1_3
-L0_3
-L1_3
-JUMP L1_0
+L0_1
 L0_0
 number 2
 number 7
@@ -39,7 +35,4 @@ cmpe
 JUMPNZ L0_1
 boolean FALSE
 print
-JUMP L1_1
 L0_1
-L1_1
-

@@ -4,4 +4,3 @@ add
 set a
 get a
 print
-

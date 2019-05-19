@@ -45,9 +45,6 @@ catch(err) {
 
 
 
-
-
-
 try{
     var hex = fs.readFileSync(output_path_hex, "utf8");
 

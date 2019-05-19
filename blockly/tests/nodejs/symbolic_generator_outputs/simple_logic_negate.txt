@@ -1,4 +1,3 @@
 boolean TRUE
 negate
 print
-
