@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="309abf3b-ba8f-41f5-a11f-08a439e8cd78" name="Default Changelist" comment="Default Changelist">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/bin_generator_outputs/test_bin_generator.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/test_bin_generator.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/Skoolbot/interpreter" afterPath="$PROJECT_DIR$/blockly/Skoolbot/interpreter" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/Skoolbot/bin_generator.js" afterPath="$PROJECT_DIR$/blockly/Skoolbot/bin_generator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/Skoolbot/module_bytecode_generator.js" afterPath="$PROJECT_DIR$/blockly/Skoolbot/module_bytecode_generator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/bin_generator_outputs/simple_math_single.bin" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/bin_generator_outputs/simple_math_single.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/bin_generator_outputs/simple_number.bin" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/bin_generator_outputs/simple_number.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/simple_math_single.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/simple_math_single.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/simple_number.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/simple_number.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/test_bin_generator.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/test_bin_generator.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/Skoolbot/interpreter_binary.cpp" afterPath="$PROJECT_DIR$/blockly/Skoolbot/interpreter_binary.cpp" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,58 +25,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="module_bytecode_generator.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/module_bytecode_generator.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="280" column="14" lean-forward="false" selection-start-line="280" selection-start-column="7" selection-end-line="280" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bin_generator.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/bin_generator.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="simple_number.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/simple_number.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="simple_math_single.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/simple_math_single.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bytecode_generator.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/bytecode_generator.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -178,7 +120,6 @@
         <option value="$PROJECT_DIR$/blockly/tests/nodejs/testscript.sh" />
         <option value="$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/simple_loop_repeat.txt" />
         <option value="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/simple_loop_repeat.txt" />
-        <option value="$PROJECT_DIR$/blockly/Skoolbot/interpreter_binary.cpp" />
         <option value="$PROJECT_DIR$/blockly/tests/nodejs/compare.txt" />
         <option value="$PROJECT_DIR$/blockly/Skoolbot/module_binary_generator.js" />
         <option value="$PROJECT_DIR$/blockly/Skoolbot/binary_generator.js" />
@@ -191,6 +132,7 @@
         <option value="$PROJECT_DIR$/blockly/Skoolbot/module_bytecode_generator.js" />
         <option value="$PROJECT_DIR$/blockly/Skoolbot/test_int2hex.js" />
         <option value="$PROJECT_DIR$/blockly/Skoolbot/bin_generator.js" />
+        <option value="$PROJECT_DIR$/blockly/Skoolbot/interpreter_binary.cpp" />
       </list>
     </option>
   </component>
@@ -285,6 +227,14 @@
               <item name="tests" type="462c0819:PsiDirectoryNode" />
               <item name="nodejs" type="462c0819:PsiDirectoryNode" />
               <item name="hex_generator_outputs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blockly" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blockly" type="462c0819:PsiDirectoryNode" />
+              <item name="blockly" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="nodejs" type="462c0819:PsiDirectoryNode" />
+              <item name="symbolic_generator_outputs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -466,12 +416,12 @@
       <workItem from="1557291931435" duration="25999000" />
       <workItem from="1557733927210" duration="23346000" />
       <workItem from="1558056335811" duration="2109000" />
-      <workItem from="1558059812877" duration="17963000" />
+      <workItem from="1558059812877" duration="18256000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="409873000" />
+    <option name="totallyTimeSpent" value="410166000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -484,7 +434,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -495,7 +444,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35945272" sideWeight="0.47424892" order="9" side_tool="false" content_ui="tabs" x="21" y="254" width="1398" height="392" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35945272" sideWeight="0.47424892" order="9" side_tool="false" content_ui="tabs" x="21" y="254" width="1398" height="392" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30472103" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -729,14 +678,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/interpreter_binary.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4110">
-          <caret line="274" column="23" lean-forward="false" selection-start-line="274" selection-start-column="23" selection-end-line="274" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/add_type_field.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -883,14 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/simple_number.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/test_bin_generator.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -915,26 +848,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/bytecode_generator.js">
+    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/simple_number.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/module_bytecode_generator.js">
+    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/simple_number.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="280" column="14" lean-forward="false" selection-start-line="280" selection-start-column="7" selection-end-line="280" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/bin_generator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        <state relative-caret-position="0">
+          <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -947,10 +872,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/simple_number.txt">
+    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/bin_generator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="14" />
+        <state relative-caret-position="150">
+          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/module_bytecode_generator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="280" column="14" lean-forward="false" selection-start-line="280" selection-start-column="7" selection-end-line="280" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/bytecode_generator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/interpreter_binary.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12210">
+          <caret line="814" column="19" lean-forward="false" selection-start-line="814" selection-start-column="19" selection-end-line="814" selection-end-column="19" />
           <folding />
         </state>
       </provider>
