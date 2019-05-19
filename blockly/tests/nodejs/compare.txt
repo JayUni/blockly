@@ -1,13 +1,2 @@
-Number 1
-Number 1
-ADD
-Number 2
-CMPE
-JUMPNZ 20
-
-Number 0
-PRINT
-NOP 18
-Number 1
-PRINT
-STOP
+0
+1

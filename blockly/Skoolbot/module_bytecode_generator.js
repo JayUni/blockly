@@ -108,7 +108,7 @@ function generator(commands) {
 
         if(command.split('_')[0] === 'L0' || command.split('_')[0] === 'L1'){
 
-            index[command] = jumpaddr + 1;
+            index[command] = jumpaddr - 1;
             // console.log(index);
         }
     }
