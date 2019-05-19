@@ -1,79 +1,49 @@
-module.exports = function (jsonList) {
-    return bin_generator(jsonList);
-};
-
-
 const fs = require('fs');
 
-const CODE_SIZE = 1024;
+const BIN_SIZE = 1024;
 
 
-function bin_generator(text_file) {
-    generator(text_file);
-}
+// Get arguments
+var arguments = process.argv.splice(2);
+var input_path = arguments[0];
+var file_name = arguments[1];
+
+
+// Generate file_path and output_path
+var file_path = input_path + file_name + '.txt';
+var output_path = "../tests/nodejs/bin_generator_outputs/" + file_name + '.bin';
+
+
+console.log('input_path: ', file_path, '\n', 'output_path: ', output_path);
 
 function hexToBytes(hex) {
     return parseInt(hex.substr(2, 10), 16);
 }
 
-function generator(commands) {
-    var resultList = [];
-    commands = commands.split("\n");
-    for (var i in commands){
-        var row = commands[i].split(' ');
-        for (var j in row){
-            if(row[j] !== '' && row[j] !== undefined){
-                resultList.push(hexToBytes(row[j]));
+fs.readFile(file_path, "utf8", function (err, data) {
+    if (!err) {
+
+        var resultList = [];
+        var commands = data.split("\n");
+        for (var i in commands){
+            var row = commands[i].split(' ');
+            for (var j in row){
+                if(row[j] !== '' && row[j] !== undefined){
+                    resultList.push(hexToBytes(row[j]));
+                }
+
             }
+
         }
+        var bin_content = new Int8Array(BIN_SIZE);
+        for (var j in resultList){
+            bin_content[j] = resultList[j];
+        }
+
+        fs.writeFileSync(output_path, Buffer.from(bin_content));
     }
-    return resultList;
+    else{
+        throw err;
+    }
 
-    // console.log(commands);
-    // var reader = new window.FileReader();
-    // reader.readAsArrayBuffer(commands);
-    // reader.onload = function () {
-    //     console.log(this.result);
-    //     console.log(new Blob([this.result]))
-    // }
-}
-
-
-function savetxt(path){
-
-    fs.readFile(path, "utf8", function(err, commandList) {
-        if (!err) {
-
-            var reslist = generator(commandList);
-
-            var bin_content = new Int8Array(CODE_SIZE);
-            for (var j in reslist){
-                bin_content[j] = reslist[j];
-            }
-
-            var savefile = path.split('/')[4].split('.')[0];
-            fs.writeFileSync('../tests/nodejs/bin_generator_outputs/' + savefile + '.bin', Buffer.from(bin_content));
-
-        }
-        else{
-            throw err;
-        }
-    });
-}
-
-
-function travel(dir, callback) {
-    fs.readdirSync(dir).forEach(function (file) {
-        var pathname = require('path').join(dir, file);
-
-        if (fs.statSync(pathname).isDirectory()) {
-            travel(pathname, callback);
-        } else {
-            callback(pathname);
-        }
-    });
-}
-
-
-var path = '../tests/nodejs/hex_generator_outputs/';
-travel(path, savetxt);
+});
