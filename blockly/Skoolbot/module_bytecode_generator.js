@@ -3,42 +3,6 @@ module.exports = function (jsonList) {
 };
 
 
-// #define NOP 0x00
-// #define NUMBER 0x01
-// #define ADD 0x02
-// #define SUB 0x03
-// #define MUL 0x04
-// #define DIV 0x05
-// #define POW 0x06
-// #define ABS 0x07
-// #define NEG 0x08
-// #define ISEVEN 0x09
-// #define ISODD 0x0a
-// #define ISPOSITIVE 0x0b
-// #define ISNEGATIVE 0x0c
-// #define ISDIVISBLEBY 0x0d
-// #define REMAINDER 0x0e
-// #define CONSTRAIN 0x0f
-// #define RANDOMINT 0x10
-// #define COMPE 0x11
-// #define COMPNE 0x12
-// #define COMPL 0x13
-// #define COMPLE 0x14
-// #define CMPG 0x15
-// #define CMPGE 0x16
-// #define TRUE  0x17
-// #define FALSE 0x18
-// #define NEGATE 0x19
-// #define NULL 0x1a
-// #define GET 0x1b
-// #define SET 0x1c
-// #define JUMPZ 0x1d
-// #define JUMP 0x1e
-// #define PRINT 0x1f
-// #define BOOLEAN 0x20
-// #define STOP 0x21
-// #define JUMPNZ 0x22
-
 // initialize global variable
 
 var variable_map = {};
@@ -144,7 +108,7 @@ function generator(commands) {
 
         if(command.split('_')[0] === 'L0' || command.split('_')[0] === 'L1'){
 
-            index[command] = jumpaddr - 1;
+            index[command] = jumpaddr + 1;
             // console.log(index);
         }
     }
@@ -212,9 +176,7 @@ function processValue(command, value, index){
 
     }
     else if(value.split('_')[0] === 'L0' || value.split('_')[0] === 'L1'){
-        console.log(value);
-        console.log(index[value]);
-        return int2Hex(parseInt(index[value])+1);
+        return int2Hex(parseInt(index[value]));
     }
     else if(value !== ''){
         if (variable_map[value]){
@@ -283,8 +245,8 @@ function int2Hex(value) {
 // }
 
 
-
-
+//
+//
 // // save as text file
 // const fs = require('fs');
 //
@@ -303,10 +265,10 @@ function int2Hex(value) {
 //             }
 //             var savefile = path.split('/')[4].split('.')[0];
 //             //
-//             // fs.writeFile('../tests/nodejs/hex_generator_outputs/' + savefile + '.txt', restxt, (err) => {
-//             //     if (err) throw err;
-//             //     console.log('output is saved successfully!');
-//             // });
+//             fs.writeFile('../tests/nodejs/hex_generator_outputs/' + savefile + '.txt', restxt, (err) => {
+//                 if (err) throw err;
+//                 console.log('output is saved successfully!');
+//             });
 //
 //             // console.log(savefile, ':\n', restxt)
 //         }

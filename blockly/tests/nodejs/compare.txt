@@ -7,10 +7,7 @@ JUMPNZ 20
 
 Number 0
 PRINT
-JUMP 25
-
-NOP 21
+NOP 18
 Number 1
 PRINT
-NOP 26
 STOP

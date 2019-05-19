@@ -744,8 +744,8 @@ void run_both() {
           break;
       case JUMP:
           std::cout<<"JUMP "; //addr<<std::endl;
-          std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
-          // std::cout << std::endl;
+          // std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
+          // // std::cout << std::endl;
           addr = code[ip++];
           addr |= (code[ip++]<<8);
           ip = addr;
