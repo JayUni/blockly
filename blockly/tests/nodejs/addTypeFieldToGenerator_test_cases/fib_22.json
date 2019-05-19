@@ -6,9 +6,11 @@
         "argument": [
             {
                 "block_name": "math_number_number",
-                "number": "30"
+                "number": "22",
+                "valueType": "number"
             }
-        ]
+        ],
+        "valueType": "statement"
     },
     {
         "block_name": "variables_statement_set",
@@ -17,9 +19,11 @@
         "argument": [
             {
                 "block_name": "math_number_number",
-                "number": "0"
+                "number": "0",
+                "valueType": "number"
             }
-        ]
+        ],
+        "valueType": "statement"
     },
     {
         "block_name": "text_statement_print",
@@ -28,9 +32,11 @@
             {
                 "block_name": "variables_statement_get",
                 "functionName": "variables_get",
-                "varName": "a"
+                "varName": "a",
+                "valueType": "statement"
             }
-        ]
+        ],
+        "valueType": "statement"
     },
     {
         "block_name": "variables_statement_set",
@@ -39,9 +45,11 @@
         "argument": [
             {
                 "block_name": "math_number_number",
-                "number": "1"
+                "number": "1",
+                "valueType": "number"
             }
-        ]
+        ],
+        "valueType": "statement"
     },
     {
         "block_name": "text_statement_print",
@@ -50,9 +58,11 @@
             {
                 "block_name": "variables_statement_get",
                 "functionName": "variables_get",
-                "varName": "b"
+                "varName": "b",
+                "valueType": "statement"
             }
-        ]
+        ],
+        "valueType": "statement"
     },
     {
         "block_name": "controls_statement_repeat",
@@ -63,8 +73,10 @@
             "argument": {
                 "block_name": "variables_statement_get",
                 "functionName": "variables_get",
-                "varName": "n"
-            }
+                "varName": "n",
+                "valueType": "statement"
+            },
+            "valueType": "statement"
         },
         "branch": [
             {
@@ -79,16 +91,20 @@
                             {
                                 "block_name": "variables_statement_get",
                                 "functionName": "variables_get",
-                                "varName": "a"
+                                "varName": "a",
+                                "valueType": "statement"
                             },
                             {
                                 "block_name": "variables_statement_get",
                                 "functionName": "variables_get",
-                                "varName": "b"
+                                "varName": "b",
+                                "valueType": "statement"
                             }
-                        ]
+                        ],
+                        "valueType": "statement"
                     }
-                ]
+                ],
+                "valueType": "statement"
             },
             {
                 "block_name": "variables_statement_set",
@@ -98,9 +114,11 @@
                     {
                         "block_name": "variables_statement_get",
                         "functionName": "variables_get",
-                        "varName": "b"
+                        "varName": "b",
+                        "valueType": "statement"
                     }
-                ]
+                ],
+                "valueType": "statement"
             },
             {
                 "block_name": "variables_statement_set",
@@ -110,9 +128,11 @@
                     {
                         "block_name": "variables_statement_get",
                         "functionName": "variables_get",
-                        "varName": "temp"
+                        "varName": "temp",
+                        "valueType": "statement"
                     }
-                ]
+                ],
+                "valueType": "statement"
             },
             {
                 "block_name": "text_statement_print",
@@ -121,10 +141,13 @@
                     {
                         "block_name": "variables_statement_get",
                         "functionName": "variables_get",
-                        "varName": "temp"
+                        "varName": "temp",
+                        "valueType": "statement"
                     }
-                ]
+                ],
+                "valueType": "statement"
             }
-        ]
+        ],
+        "valueType": "statement"
     }
 ]

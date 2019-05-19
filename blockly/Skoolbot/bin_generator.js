@@ -5,7 +5,6 @@ var bytecode_generator = require('./module_bytecode_generator.js');
 
 const BIN_SIZE = 1024;
 
-
 // Get arguments
 var arguments = process.argv.splice(2);
 // var input_path = arguments[0];
@@ -61,7 +60,6 @@ try{
             if(row[j] !== '' && row[j] !== undefined){
                 resultList.push(parseInt(row[j].substr(2, 2), 16));
             }
-
         }
 
     }
@@ -76,6 +74,3 @@ try{
 catch(err) {
     console.log(err);
 }
-
-
-

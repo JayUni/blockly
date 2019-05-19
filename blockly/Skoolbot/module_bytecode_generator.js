@@ -255,7 +255,6 @@ function int2Hex(value) {
             return ' 0x' + low_byte + ' 0x' + high_byte;
 
         }
-
     }
     return ' 0x' + low_byte + ' 0x' + high_byte;
 }

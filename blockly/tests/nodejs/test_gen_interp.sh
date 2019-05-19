@@ -5,12 +5,12 @@
 g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
 # for gen in bin_generator_outputs/*.bin
 # do
-    gen="bin_generator_outputs/if_if_elseif.bin"
+    gen="bin_generator_outputs/for_if_constraint_abs_even_neg.bin"
     interpreter="interpreter_final_outputs/`basename $gen .bin`.txt"
 
    if [ -e $interpreter ]
      then
-       ../../SkoolBot/interpreter $gen \-d > compare.txt
+       ../../SkoolBot/interpreter $gen $1 > compare.txt
        result=$(wdiff -3 $interpreter compare.txt)
        if [ $? -eq 0 ]
           then

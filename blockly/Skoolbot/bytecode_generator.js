@@ -10,7 +10,7 @@ try {
     for (var i = 0; i < result.length; ++i) {
         string += result[i] + '\n';
     }
-    console.log(string);
+    // console.log(string);
 }
 catch(err) {
     console.log(err);

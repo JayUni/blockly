@@ -273,7 +273,6 @@ void run() {
           addr |= (code[ip++]<<8);
           if (value == 0) {
              ip = addr;
-             // std::cout<<"jumpz ip: "<<ip<<std::endl;
           }
         }
         break;
@@ -284,7 +283,6 @@ void run() {
             addr |= (code[ip++]<<8);
             if (value != 0) {
                ip = addr;
-               // std::cout<<"jumpnz ip: "<<ip<<std::endl;
             }
           }
           break;
@@ -292,8 +290,7 @@ void run() {
         {
           int16_t addr = code[ip++];
           addr |= (code[ip++]<<8);
-          ip = addr+2;
-          // std::cout<<"jump ip: "<<ip<<std::endl;
+          ip = addr;
         }
         break;
       case PRINT:
@@ -303,13 +300,12 @@ void run() {
         }
         break;
       case BOOLEAN:
-        ++ip;
-        if (code[ip] == TRUE) {
+        if ((int16_t)code[ip] == TRUE) {
           push(0);
-        } else if (code[ip] == FALSE) {
+        } else if ((int16_t)code[ip] == FALSE) {
           push(1);
         } else {
-          std::cerr<<"Invalid command: "<<code[ip]<<std::endl;
+          std::cerr<<"Invalid BOOLEAN command: "<<std::hex<<(int16_t)code[ip]<<std::endl;
           return;
         }
         break;
@@ -324,7 +320,7 @@ void run() {
       }
         break;
       default:
-        std::cerr<<"Invalid command: "<<code[ip]<<std::endl;
+        std::cerr<<"Invalid command: "<<std::hex<<(int16_t)code[ip]<<std::endl;
         return;
     }
   }
@@ -333,9 +329,10 @@ void run() {
 // 1 = true, 0 = false
 void run_symbol() {
   for(ip=0;ip<CODE_SIZE;ip++) {
+    std::cout << "ip: " << ip  << " ";
     switch(code[ip]) {
       case NOP_:
-        std::cout << "NOP" << std::endl;
+        std::cout << "NOP " << ip<<std::endl;
         break;
       case NUMBER:
         {
@@ -441,7 +438,7 @@ void run_symbol() {
           std::cout << "JUMPZ ";
           std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
           ip+=2;
-
+          std::cout<< std::endl;
         }
         break;
       case JUMPNZ:
@@ -452,7 +449,7 @@ void run_symbol() {
             std::cout << "JUMPNZ ";
             std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
             ip+=2;
-
+            std::cout<< std::endl;
           }
           break;
       case JUMP:
@@ -462,6 +459,7 @@ void run_symbol() {
           std::cout << "JUMP ";
           std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
           ip+=2;
+          std::cout<< std::endl;
         }
         break;
       case PRINT:
@@ -471,7 +469,7 @@ void run_symbol() {
         break;
       case BOOLEAN:
         ++ip;
-        std::cout << "BOOLEAN " << code[ip] << std::endl;
+        std::cout << "BOOLEAN " << std::hex<<(int16_t)code[ip] << std::endl;
         break;
       case STOP:
         std::cout << "STOP" << std::endl;
@@ -486,7 +484,7 @@ void run_symbol() {
         }
         break;
       default:
-        std::cerr<<"Invalid command: "<<code[ip]<<std::endl;
+        std::cerr<<"Invalid command: "<<std::hex<<(int16_t)code[ip]<<std::endl;
         return;
     }
   }
@@ -499,6 +497,7 @@ void run_both() {
   int16_t value;
   int16_t addr;
   for(;;) {
+    std::cout << "ip: " << ip  << " ";
     switch(code[ip++]) {
       case NOP_:
         std::cout << "NOP " << ip<<std::endl;
@@ -729,6 +728,7 @@ void run_both() {
           if (value == 0) {
              ip = addr;
              std::cout<<"JUMPZ "<<ip<<std::endl;
+             std::cout << std::endl;
           }
 
         break;
@@ -740,16 +740,17 @@ void run_both() {
             if (value != 0) {
                ip = addr;
                std::cout<<"JUMPNZ "<<ip<<std::endl;
+               std::cout << std::endl;
             }
 
           break;
       case JUMP:
           std::cout<<"JUMP "; //addr<<std::endl;
           std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
-
+          std::cout << std::endl;
           addr = code[ip++];
           addr |= (code[ip++]<<8);
-          ip = 12;
+          ip = addr;
           // std::cout<<"JUMP to command at:"<<(int16_t)code[12] << " " << ip <<std::endl;
           // std::cout<<std::endl;
         break;
@@ -767,7 +768,7 @@ void run_both() {
         } else if (code[ip] == FALSE) {
           push(1);
         } else {
-          std::cerr<<"Invalid command: "<<code[ip]<<std::endl;
+          std::cerr<<"Invalid command: "<<std::hex<<(int16_t)code[ip]<<std::endl;
           return;
         }
         std::cout << "BOOLEAN" << std::endl;
@@ -781,11 +782,11 @@ void run_both() {
         addr |= (code[ip++]<<8);
         value = pop();
         memory[addr] += value;
-        std::cout << "CHANGE " << addr <<std::endl;
+        std::cout << "CHANGE " << std::hex<<(int16_t)addr <<std::endl;
 
         break;
       default:
-        std::cerr<<"Invalid command: "<<code[ip]<<std::endl;
+        std::cerr<<"Invalid command: "<<std::hex<<(int16_t)code[ip]<<std::endl;
         return;
     }
   }
@@ -805,14 +806,17 @@ int main (int argc, char *argv[]) {
   if (argc == 3) {
     if (strcmp(argv[2],"-d") == 0) {
       debug = 1;
+    } else if (strcmp(argv[2], "-db") == 0) {
+      debug = 2;
     }
   }
 
   if(FILE *file = fopen(argv[1],"rb")) {
      fread(code, CODE_SIZE, 1, file);
      if (debug == 1) {
-        //run_symbol();
-        run_both();
+       run_symbol();
+     } else if (debug == 2) {
+       run_both();
      } else {
        run();
      }

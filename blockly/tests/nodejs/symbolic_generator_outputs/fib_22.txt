@@ -1,4 +1,4 @@
-number 30
+number 22
 set n
 number 0
 set a
@@ -31,4 +31,3 @@ cmpg
 JUMPNZ L1_0
 JUMP L0_0
 L1_0
-
