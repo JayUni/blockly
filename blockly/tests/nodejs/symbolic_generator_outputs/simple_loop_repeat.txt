@@ -19,4 +19,3 @@ cmpg
 JUMPNZ L1_0
 JUMP L0_0
 L1_0
-

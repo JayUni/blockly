@@ -2,19 +2,25 @@ const fs = require('fs');
 
 const BIN_SIZE = 1024;
 
+
+// Get arguments
 var arguments = process.argv.splice(2);
-
 var input_path = arguments[0];
-var output_path = arguments[1];
+var file_name = arguments[1];
 
 
-console.log('input_path: ', input_path, '\n', 'output_path: ', output_path);
+// Generate file_path and output_path
+var file_path = input_path + file_name + '.txt';
+var output_path = "../tests/nodejs/bin_generator_outputs/" + file_name + '.bin';
+
+
+console.log('input_path: ', file_path, '\n', 'output_path: ', output_path);
 
 function hexToBytes(hex) {
     return parseInt(hex.substr(2, 10), 16);
 }
 
-fs.readFile(input_path, "utf8", function (err, data) {
+fs.readFile(file_path, "utf8", function (err, data) {
     if (!err) {
 
         var resultList = [];
