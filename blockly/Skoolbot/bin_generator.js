@@ -20,7 +20,7 @@ var output_path_hex = "../tests/nodejs/hex_generator_outputs/" + file_name + '.t
 var output_path_bin = "../tests/nodejs/bin_generator_outputs/" + file_name + '.bin';
 
 
-console.log('input_path: ', input_path, '\n', 'output_path_hex: ', output_path_hex, '\n', 'output_path_bin: ', output_path_bin);
+// console.log('input_path: ', input_path, '\n', 'output_path_hex: ', output_path_hex, '\n', 'output_path_bin: ', output_path_bin);
 
 function hexToBytes(hex) {
     return parseInt(hex.substr(2, 10), 16);
