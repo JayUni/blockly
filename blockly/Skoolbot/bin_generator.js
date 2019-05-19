@@ -29,23 +29,15 @@ function hexToBytes(hex) {
 
 try{
 
-    fs.readFileSync(input_path, "utf8", function (err, data) {
-        if (!err) {
-            console.log(data);
-            var reslist = bytecode_generator(data);
+    var data = fs.readFileSync(input_path, "utf8");
 
-            var restxt = '';
-            for (var j in reslist){
-                restxt += reslist[j] + '\n';
-            }
-            fs.writeFileSync(output_path_hex, restxt);
+    var reslist = bytecode_generator(data);
 
-        }
-        else{
-            throw err;
-        }
-
-    });
+    var restxt = '';
+    for (var j in reslist){
+        restxt += reslist[j] + '\n';
+    }
+    fs.writeFileSync(output_path_hex, restxt);
 
 }
 catch(err) {
@@ -53,35 +45,28 @@ catch(err) {
 }
 
 
-
-
 try{
-    fs.readFileSync(output_path_hex, "utf8", function (err, data) {
-        if (!err) {
+    var hex = fs.readFileSync(output_path_hex, "utf8");
 
-            var resultList = [];
-            var commands = data.split("\n");
-            for (var i in commands){
-                var row = commands[i].split(' ');
-                for (var j in row){
-                    if(row[j] !== '' && row[j] !== undefined){
-                        resultList.push(hexToBytes(row[j]));
-                    }
 
-                }
-
+    var resultList = [];
+    var commands = hex.split("\n");
+    for (var i in commands){
+        var row = commands[i].split(' ');
+        for (var j in row){
+            if(row[j] !== '' && row[j] !== undefined){
+                resultList.push(hexToBytes(row[j]));
             }
-            var bin_content = new Int8Array(BIN_SIZE);
-            for (var j in resultList){
-                bin_content[j] = resultList[j];
-            }
-            fs.writeFileSync(output_path_bin, Buffer.from(bin_content));
-        }
-        else{
-            throw err;
+
         }
 
-    });
+    }
+    var bin_content = new Int8Array(BIN_SIZE);
+    for (var j in resultList){
+        bin_content[j] = resultList[j];
+    }
+    fs.writeFileSync(output_path_bin, Buffer.from(bin_content));
+
 }
 catch(err) {
     console.log(err);
