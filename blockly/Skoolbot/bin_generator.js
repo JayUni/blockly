@@ -64,7 +64,7 @@ try{
     for (var j in resultList){
         bin_content[j] = resultList[j];
     }
-    console.log(Buffer.from(bin_content));
+    // console.log(bin_content);
     var bintext = fs.writeFileSync(output_path_bin, Buffer.from(bin_content));
 
     var runcode2 = bintext;
