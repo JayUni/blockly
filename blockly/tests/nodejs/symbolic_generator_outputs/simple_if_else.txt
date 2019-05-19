@@ -6,6 +6,8 @@ cmpe
 JUMPNZ L0_0
 number 0
 print
+JUMP L1_0
 L0_0
 number 1
 print
+L1_0
