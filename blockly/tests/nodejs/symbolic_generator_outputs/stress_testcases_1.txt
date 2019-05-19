@@ -6,7 +6,6 @@ cmpl
 JUMPNZ L0_0
 number 1
 set result
-JUMP L1_0
 L0_0
 get N
 number 3
@@ -14,13 +13,12 @@ cmpl
 JUMPNZ L0_1
 number 2
 set result
-JUMP L1_1
 L0_1
-L0_2
+L0_0
 get N
 number 2
 cmpg
-JUMPNZ L1_2
+JUMPNZ L1_0
 get result
 get N
 add
@@ -31,9 +29,7 @@ sub
 set N
 get result
 print
-JUMP L0_2
-L1_2
-L1_1
+JUMP L0_0
+L1_0
 get result
 print
-

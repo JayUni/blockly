@@ -2,4 +2,3 @@ number 8
 set a
 get a
 print
-

@@ -329,7 +329,6 @@ void run() {
 // 1 = true, 0 = false
 void run_symbol() {
   for(ip=0;ip<CODE_SIZE;ip++) {
-    std::cout << "ip: " << ip  << " ";
     switch(code[ip]) {
       case NOP_:
         std::cout << "NOP " << ip<<std::endl;
@@ -497,7 +496,6 @@ void run_both() {
   int16_t value;
   int16_t addr;
   for(;;) {
-    std::cout << "ip: " << ip  << " ";
     switch(code[ip++]) {
       case NOP_:
         std::cout << "NOP " << ip<<std::endl;
@@ -747,12 +745,12 @@ void run_both() {
       case JUMP:
           std::cout<<"JUMP "; //addr<<std::endl;
           std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
-          std::cout << std::endl;
+          // std::cout << std::endl;
           addr = code[ip++];
           addr |= (code[ip++]<<8);
           ip = addr;
-          // std::cout<<"JUMP to command at:"<<(int16_t)code[12] << " " << ip <<std::endl;
-          // std::cout<<std::endl;
+          std::cout<<"JUMP to command at:"<<(int16_t)code[ip] << " " << ip <<std::endl;
+          std::cout<<std::endl;
         break;
       case PRINT:
 

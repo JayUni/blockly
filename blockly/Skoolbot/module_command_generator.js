@@ -9,6 +9,8 @@ var L1 = 0;
 
 
 function generator_core(jsonList){
+    L0 = 0;
+    L1 = 0;
     if (!hasChild(jsonList)[0]) {
         addCommand(jsonList);
     }
@@ -124,7 +126,7 @@ function addCommand(jsonList){
                                 break;
                             }
                             if(jsonList.statements ==='if_branchCode')
-                                commandList.push('JUMP L1_' + jsonList.label_1);
+                                // commandList.push('JUMP L1_' + jsonList.label_1);
                             commandList.push('L0_' + jsonList.label_0);
                             break;
                         case 'elseif':
@@ -139,7 +141,7 @@ function addCommand(jsonList){
                                 break;
                             }
                             if(jsonList.statements ==='if_branchCode'){
-                                commandList.push('JUMP L1_' + jsonList.label_1);
+                                // commandList.push('JUMP L1_' + jsonList.label_1);
                             }
                             commandList.push('L0_' + jsonList.label_0);
 
@@ -147,7 +149,7 @@ function addCommand(jsonList){
                             break;
                         case 'else':
                             // console.log('else', jsonList.label_1);
-                            commandList.push('L1_' + jsonList.label_1);
+                            // commandList.push('L1_' + jsonList.label_1);
                             break;
                         case 'whileUntil':
                             if (jsonList.label === 'added'){
@@ -341,7 +343,7 @@ function continueBreak(jsonList, L0, L1) {
 
 
 
-// save as text file
+// // save as text file
 //
 // const fs = require('fs');
 //
@@ -355,7 +357,7 @@ function continueBreak(jsonList, L0, L1) {
 //             commandList = [];
 //             var reslist = generator_core(jsondata);
 //
-//             console.log(reslist);
+//             // console.log(reslist);
 //             var restxt = "";
 //             for (var j in reslist){
 //                 restxt += reslist[j] + '\n';
@@ -387,5 +389,5 @@ function continueBreak(jsonList, L0, L1) {
 //
 // var path = '../tests/nodejs/addTypeFieldToGenerator_test_cases/';
 // travel(path, savetxt);
-
+//
 

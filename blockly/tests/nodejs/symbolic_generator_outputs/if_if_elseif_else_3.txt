@@ -15,63 +15,53 @@ get a
 add
 number 9
 cmpe
-JUMPNZ L0_2
+JUMPNZ L0_0
 boolean FALSE
 print
-JUMP L1_2
-L0_2
+L0_0
 number 9
 get a
 cmpe
-JUMPNZ L0_3
+JUMPNZ L0_1
 get a
 isEven
-JUMPNZ L0_4
+JUMPNZ L0_0
 boolean FALSE
 print
-JUMP L1_4
-L0_4
+L0_0
 number 1
 get a
 number 2
 remainder
 cmpe
-JUMPNZ L0_5
+JUMPNZ L0_1
 number 1
 change a
 boolean TRUE
 print
-JUMP L1_5
-L0_5
+L0_1
 boolean FALSE
 print
-L1_5
 boolean TRUE
 print
-JUMP L1_3
-L0_3
-L1_3
+L0_1
 get a
 isOdd
-JUMPNZ L0_6
+JUMPNZ L0_0
 boolean FALSE
 print
-JUMP L1_6
-L0_6
+L0_0
 number 0
 get a
 number 2
 remainder
 cmpe
-JUMPNZ L0_7
+JUMPNZ L0_1
 boolean TRUE
 print
-JUMP L1_7
-L0_7
+L0_1
 boolean FALSE
 print
-L1_7
-JUMP L1_0
 L0_0
 number 2
 number 7
@@ -81,7 +71,4 @@ cmpe
 JUMPNZ L0_1
 boolean FALSE
 print
-JUMP L1_1
 L0_1
-L1_1
-
