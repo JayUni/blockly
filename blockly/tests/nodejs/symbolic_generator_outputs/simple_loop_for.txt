@@ -1,17 +1,21 @@
 number 1
 set i
-L0_0
-number 10
-get i
-cmpge
-JUMPNZ L1_0
 number 1
 set for_step_control_variable
 get i
-print
+get for_step_control_variable
+sub
+set i
+L0_0
 get i
 get for_step_control_variable
 add
 set i
+get i
+number 10
+cmple
+JUMPNZ L1_0
+get i
+print
 JUMP L0_0
 L1_0

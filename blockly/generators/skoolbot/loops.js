@@ -115,7 +115,7 @@ Blockly.Skoolbot['controls_for'] = function(block) {
   var branch = Blockly.Skoolbot.statementToCode(block, 'DO');
   branch = Blockly.Skoolbot.addLoopTrap(branch, block.id);
   branch = Blockly.Skoolbot.addContinueLabel(branch) || "";
-  var code = '{ \"block_name\": \"controls_statement_for\", \"loop_style\": \"controls_for\"'+', \"variable\": \"' + variable0 + '\", \"start\": ['+ startVar +'], \"end\": [' + endVar + '], \"step\": [' + increment + '], \"branch\": [' + branch + ']}';
+  var code = '{ \"block_name\": \"controls_statement_for\", \"loop_style\": \"controls_for\"'+', \"variable\": \"' + variable0 + '\", \"start\": ['+ startVar +'], \"step\": [' + increment + '], \"end\": [' + endVar + '], \"step\": [' + increment + '], \"branch\": [' + branch + ']}';
   return code;
 };
 

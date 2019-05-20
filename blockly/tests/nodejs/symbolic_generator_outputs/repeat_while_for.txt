@@ -8,21 +8,25 @@ boolean TRUE
 JUMPNZ L1_1
 number 1
 set i
-L0_2
 number 10
-get i
-cmpge
-JUMPNZ L1_2
-number 1
 set for_step_control_variable
-get n
-print
-number 1
-change n
+get i
+get for_step_control_variable
+sub
+set i
+L0_2
 get i
 get for_step_control_variable
 add
 set i
+get i
+number 1
+cmple
+JUMPNZ L1_2
+get n
+print
+number 1
+change n
 JUMP L0_2
 L1_2
 get n
@@ -32,9 +36,9 @@ number 100
 cmpg
 JUMPNZ L0_3
 JUMP L1_1
-JUMP L1_3
+JUMP L1_4
 L0_3
-L1_3
+L1_4
 JUMP L0_1
 L1_1
 get n

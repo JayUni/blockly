@@ -4,8 +4,8 @@ cmpl
 JUMPNZ L0_0
 boolean TRUE
 print
-JUMP L1_0
+JUMP L1_1
 L0_0
 boolean FALSE
 print
-L1_0
+L1_1

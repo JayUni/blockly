@@ -27,6 +27,8 @@ function hasChild(jsonList) {
         }
         else{
             jsonList = addLabel(jsonList);
+
+
         }
     }
 
@@ -125,12 +127,13 @@ function addCommand(jsonList){
                                 break;
                             }
                             if(jsonList.statements ==='if_branchCode'){
-                                commandList.push('JUMP L1_' + jsonList.label_1);
+                                commandList.push('JUMP L1_' + (parseInt(jsonList.label_num)+(parseInt(jsonList.label_0)-1)));
+                                jsonList.label_num = parseInt(jsonList.label_num);
                             }
                             commandList.push('L0_' + jsonList.label_0);
                             break;
                         case 'elseif':
-
+                            // commandList.push('L1_' + jsonList.label_0);
                             // console.log(jsonList.statements);
                             if(jsonList.statements === 'elseif'){
                                 commandList.push('JUMPNZ L0_' + jsonList.label_0);
@@ -141,11 +144,9 @@ function addCommand(jsonList){
                                 break;
                             }
                             if(jsonList.statements ==='if_branchCode'){
-                                commandList.push('JUMP L1_' + jsonList.label_1);
+                                commandList.push('JUMP L1_' + (parseInt(jsonList.label_num)+(parseInt(jsonList.label_0)-1)));
                             }
                             commandList.push('L0_' + jsonList.label_0);
-
-
                             break;
                         case 'else':
                             // console.log('else', jsonList.label_1);
@@ -183,27 +184,33 @@ function addCommand(jsonList){
                         case 'for':
                             if (jsonList.label === 'added'){
                                 commandList.push('set ' + jsonList.variable);
-                                commandList.push('L0_' + jsonList.label_0);
+
                                 jsonList.label = 'variableInit';
                                 break;
                             }
                             if (jsonList.label === 'variableInit'){
+                                commandList.push('set for_step_control_variable');
                                 commandList.push('get ' + jsonList.variable);
-                                commandList.push('cmpge');
-                                commandList.push('JUMPNZ L1_' + jsonList.label_1);
+                                commandList.push('get for_step_control_variable', 'sub');
+                                commandList.push('set ' + jsonList.variable);
+                                commandList.push('L0_' + jsonList.label_0);
+                                commandList.push('get ' + jsonList.variable);
+                                commandList.push('get for_step_control_variable', 'add');
+                                commandList.push('set ' + jsonList.variable);
+                                commandList.push('get ' + jsonList.variable);
+
                                 jsonList.label = 'jumpAdded';
                                 break;
                             }
                             if (jsonList.label === 'jumpAdded'){
-                                commandList.push('set for_step_control_variable');
-
+                                commandList.push('cmple');
+                                commandList.push('JUMPNZ L1_' + jsonList.label_1);
                                 jsonList.label = 'variableChanged';
                                 break;
                             }
                             if (jsonList.label === 'variableChanged'){
-                                commandList.push('get ' + jsonList.variable);
-                                commandList.push('get for_step_control_variable', 'add');
-                                commandList.push('set ' + jsonList.variable);
+
+
                                 commandList.push('JUMP L0_' + jsonList.label_0);
                                 commandList.push('L1_' + jsonList.label_1);
                                 jsonList.label = 'finished';
@@ -241,17 +248,18 @@ function addLabel(jsonList) {
                                 for (var i = 0; i < branch_num-1; i++) {
                                     jsonList.structure[i].label_0 = L0;
                                     jsonList.structure[i].label_1 = L1;
+                                    jsonList.structure[i].label_num = branch_num - i;
                                     L0 += 1;
                                     L1 += 1;
                                 }
                                 if(jsonList.structure[branch_num-1].block_name === 'controls_statement_else'){
-                                    jsonList.structure[branch_num-1].label_0 = L0-1;
-                                    jsonList.structure[branch_num-1].label_1 = L1-1;
+                                    jsonList.structure[branch_num-1].label_0 = L0;
+                                    jsonList.structure[branch_num-1].label_1 = L1;
+                                    jsonList.structure[branch_num-2].has_else = true;
+                                    jsonList.structure[0].has_else = true;
+
                                 }
                                 jsonList.label = "added";
-
-
-
                             }
                             break;
                         case 'whileUntil':
@@ -323,77 +331,82 @@ function continueBreak(jsonList, L0, L1) {
 }
 
 
+//
+// // For debugging
+//
+//
+// var str0 = JSON.parse(`[{"block_name":"controls_statement_for","loop_style":"controls_for","variable":"i","start":[{"block_name":"math_number_number","number":"1"}],"step":[{"block_name":"math_number_number","number":"1"}],"end":[{"block_name":"math_number_number","number":"20"}],"step":[{"block_name":"math_number_number","number":"1"}],"branch":[{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"math_boolean_numberProperty","functionName":"isEven","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]},"branchCode":[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"i","argument":[{"block_name":"math_number_operator_single","operator":"neg","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]}]}]},{"block_name":"controls_statement_elseif","statements":"elseif","condition":{"block_name":"logic_boolean_operator_logicNegate","operator":"negate","argument":[{"block_name":"logic_boolean_operator_compare","operator":"cmpg","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"0"}]}]},"branchCode":[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"i","argument":[{"block_name":"math_number_operator_single","operator":"abs","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]}]}]},{"block_name":"controls_statement_elseif","statements":"elseif","condition":{"block_name":"logic_boolean_operator_compare","operator":"cmpg","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"0"}]},"branchCode":[{"block_name":"variables_statement_change","functionName":"change","varName":"i","argument":[{"block_name":"math_number_number","number":"5"}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[{"block_name":"variables_statement_change","functionName":"change","varName":"i","argument":[{"block_name":"math_number_number","number":"-1"}]}]}]},{"block_name":"variables_statement_set","functionName":"variables_set","varName":"i","argument":[{"block_name":"math_number_operator_constrain","operator":"constrain","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"1"},{"block_name":"math_number_number","number":"100"}]}]},{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]}]}]
+// `);
+// var str1 = JSON.parse(`[{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"logic_boolean_operator_compare","operator":"cmpe","argument":[{"block_name":"math_number_number","number":"2"},{"block_name":"math_number_number","number":"1"}]},"branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"text_string_text","text":"'-1'"}]}]},{"block_name":"controls_statement_elseif","statements":"elseif","condition":{"block_name":"logic_boolean_operator_compare","operator":"cmpe","argument":[{"block_name":"math_number_number","number":"2"},{"block_name":"math_number_number","number":"1"}]},"branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"text_string_text","text":"'-1'"}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"text_string_text","text":"'0'"}]}]}]}]
+// `);
+// var str2 = JSON.parse(`[{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"logic_boolean_operator_compare","operator":"cmpe","argument":[{"block_name":"math_number_number","number":"2"},{"block_name":"math_number_number","number":"1"}]},"branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"text_string_text","text":"'-1'"}]}]},{"block_name":"controls_statement_elseif","statements":"elseif","condition":{"block_name":"logic_boolean_operator_compare","operator":"cmpe","argument":[{"block_name":"math_number_number","number":"1"},{"block_name":"math_number_number","number":"1"}]},"branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"text_string_text","text":"'0'"}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"text_string_text","text":"'-1'"}]}]}]}]
+// `);
+//
+// var add_type_field = require('./module_add_type_field.js');
+//
+//
+// for (var i = 0; i<1; i++){
+//     L0 = 0;
+//     L1 = 0;
+//     var vars_name = 'str' + i;
+//     commandList = [];
+//     add_type_field(eval(vars_name));
+//     // console.log("JSON: \n", JSON.stringify(eval(vars_name), null, 4));
+//     console.log(generator_core(eval(vars_name)));
+//     // console.log("JSON_result: \n", JSON.stringify(eval(vars_name), null, 4));
+//
+//     console.log("\n\n#######################################\n\n")
+// }
 
-// For debugging
 
 
-var str0 = JSON.parse(`[{"block_name":"controls_statement_for","loop_style":"controls_for","variable":"i","start":[{"block_name":"math_number_number","number":"1"}],"end":[{"block_name":"math_number_number","number":"10"}],"step":[{"block_name":"math_number_number","number":"1"}],"branch":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]}]}]
-`);
+// save as text file
 
+const fs = require('fs');
 
-var add_type_field = require('./module_add_type_field.js');
+function savetxt(path){
 
+    fs.readFile(path, "utf8", function(err, jsondata) {
+        if (!err) {
+            // console.log(jsondata);
+            jsondata = JSON.parse(jsondata);
+            // jsondata = add_type_field(jsondata);
+            commandList = [];
+            L0 = 0;
+            L1 = 0;
+            var reslist = generator_core(jsondata);
 
-for (var i = 0; i<1; i++){
-    var vars_name = 'str' + i;
-    commandList = [];
-    add_type_field(eval(vars_name));
-    console.log("JSON: \n", JSON.stringify(eval(vars_name), null, 4));
-    console.log(generator_core(eval(vars_name)));
-    // console.log("JSON_result: \n", JSON.stringify(eval(vars_name), null, 4));
-
-    console.log("\n\n#######################################\n\n")
+            // console.log(reslist);
+            var restxt = "";
+            for (var j in reslist){
+                restxt += reslist[j] + '\n';
+            }
+            var savefile = path.split('/')[4].split('.')[0];
+            fs.writeFile('../tests/nodejs/symbolic_generator_outputs/' + savefile + '.txt', restxt, (err) => {
+                if (err) throw err;
+                console.log('output is saved successfully!');
+            });
+        }
+        else{
+            throw err;
+        }
+    });
 }
 
 
+function travel(dir, callback) {
+    fs.readdirSync(dir).forEach(function (file) {
+        var pathname = require('path').join(dir, file);
 
-// // save as text file
-//
-// const fs = require('fs');
-//
-// function savetxt(path){
-//
-//     fs.readFile(path, "utf8", function(err, jsondata) {
-//         if (!err) {
-//             // console.log(jsondata);
-//             jsondata = JSON.parse(jsondata);
-//             // jsondata = add_type_field(jsondata);
-//             commandList = [];
-//             L0 = 0;
-//             L1 = 0;
-//             var reslist = generator_core(jsondata);
-//
-//             // console.log(reslist);
-//             var restxt = "";
-//             for (var j in reslist){
-//                 restxt += reslist[j] + '\n';
-//             }
-//             var savefile = path.split('/')[4].split('.')[0];
-//             fs.writeFile('../tests/nodejs/symbolic_generator_outputs/' + savefile + '.txt', restxt, (err) => {
-//                 if (err) throw err;
-//                 console.log('output is saved successfully!');
-//             });
-//         }
-//         else{
-//             throw err;
-//         }
-//     });
-// }
-//
-//
-// function travel(dir, callback) {
-//     fs.readdirSync(dir).forEach(function (file) {
-//         var pathname = require('path').join(dir, file);
-//
-//         if (fs.statSync(pathname).isDirectory()) {
-//             travel(pathname, callback);
-//         } else {
-//             callback(pathname);
-//         }
-//     });
-// }
-//
-// var path = '../tests/nodejs/addTypeFieldToGenerator_test_cases/';
-// travel(path, savetxt);
+        if (fs.statSync(pathname).isDirectory()) {
+            travel(pathname, callback);
+        } else {
+            callback(pathname);
+        }
+    });
+}
+
+var path = '../tests/nodejs/addTypeFieldToGenerator_test_cases/';
+travel(path, savetxt);
 
 

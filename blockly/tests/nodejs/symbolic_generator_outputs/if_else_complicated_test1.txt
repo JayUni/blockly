@@ -10,11 +10,11 @@ cmpg
 JUMPNZ L0_1
 get a
 print
-JUMP L1_1
+JUMP L1_2
 L0_1
-L1_1
-JUMP L1_0
+L1_2
+JUMP L1_1
 L0_0
 boolean FALSE
 print
-L1_0
+L1_1

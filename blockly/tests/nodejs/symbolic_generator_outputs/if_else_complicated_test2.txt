@@ -5,13 +5,13 @@ isEven
 JUMPNZ L0_0
 number 17
 print
-JUMP L1_0
+JUMP L1_1
 L0_0
 boolean TRUE
 JUMPNZ L0_1
 boolean TRUE
 print
-JUMP L1_1
+JUMP L1_2
 L0_1
+L1_2
 L1_1
-L1_0
