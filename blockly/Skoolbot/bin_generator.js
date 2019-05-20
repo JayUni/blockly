@@ -12,11 +12,11 @@ var file_name = arguments[0];
 
 
 // Generate file_path and output_path
-var input_path = "../tests/nodejs/symbolic_generator_outputs/" + file_name + '.txt';
+var input_path = "./symbolic_generator_outputs/" + file_name + '.txt';
 
-var output_path_hex = "../tests/nodejs/hex_generator_outputs/" + file_name + '.txt';
+var output_path_hex = "./hex_generator_outputs/" + file_name + '.txt';
 
-var output_path_bin = "../tests/nodejs/bin_generator_outputs/" + file_name + '.bin';
+var output_path_bin = "./bin_generator_outputs/" + file_name + '.bin';
 
 
 // console.log('input_path: ', input_path, '\n', 'output_path_hex: ', output_path_hex, '\n', 'output_path_bin: ', output_path_bin);
@@ -64,7 +64,7 @@ try{
     for (var j in resultList){
         bin_content[j] = resultList[j];
     }
-    // console.log(bin_content);
+    // console.log(Buffer.from(bin_content));
     var bintext = fs.writeFileSync(output_path_bin, Buffer.from(bin_content));
 
     var runcode2 = bintext;

@@ -10,9 +10,9 @@ set for_step_control_variable
 get i
 number 9
 isDivisibleBy
-JUMPNZ L0_0
+JUMPNZ L0_1
 JUMP L1_0
-L0_0
+L0_1
 get i
 print
 get i

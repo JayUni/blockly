@@ -1,13 +1,1 @@
-ip: 0 Number 1
-ip: 3 Number 1
-ip: 6 ADD
-ip: 7 Number 2
-ip: 10 CMPE
-ip: 11 JUMPNZ 18
-
-ip: 14 Number 0
-ip: 17 PRINT
-ip: 18 NOP 18
-ip: 19 Number 1
-ip: 22 PRINT
-ip: 23 STOP
+15

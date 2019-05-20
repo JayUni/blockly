@@ -329,6 +329,7 @@ void run() {
 // 1 = true, 0 = false
 void run_symbol() {
   for(ip=0;ip<CODE_SIZE;ip++) {
+    std::cout<<"ip: "<<ip<<" ";
     switch(code[ip]) {
       case NOP_:
         std::cout << "NOP " << ip<<std::endl;
