@@ -13,7 +13,9 @@ isDivisibleBy
 negate
 JUMPNZ L0_1
 JUMP L0_0
+JUMP L1_1
 L0_1
+L1_1
 get i
 print
 get i

@@ -124,8 +124,9 @@ function addCommand(jsonList){
                                 jsonList.statements = 'if_branchCode';
                                 break;
                             }
-                            if(jsonList.statements ==='if_branchCode')
-                                // commandList.push('JUMP L1_' + jsonList.label_1);
+                            if(jsonList.statements ==='if_branchCode'){
+                                commandList.push('JUMP L1_' + jsonList.label_1);
+                            }
                             commandList.push('L0_' + jsonList.label_0);
                             break;
                         case 'elseif':
@@ -140,7 +141,7 @@ function addCommand(jsonList){
                                 break;
                             }
                             if(jsonList.statements ==='if_branchCode'){
-                                // commandList.push('JUMP L1_' + jsonList.label_1);
+                                commandList.push('JUMP L1_' + jsonList.label_1);
                             }
                             commandList.push('L0_' + jsonList.label_0);
 
@@ -148,7 +149,7 @@ function addCommand(jsonList){
                             break;
                         case 'else':
                             // console.log('else', jsonList.label_1);
-                            // commandList.push('L1_' + jsonList.label_1);
+                            commandList.push('L1_' + jsonList.label_1);
                             break;
                         case 'whileUntil':
                             if (jsonList.label === 'added'){
@@ -325,24 +326,24 @@ function continueBreak(jsonList, L0, L1) {
 
 // For debugging
 
-//
-// var str0 = JSON.parse(`[{"block_name":"controls_statement_for","loop_style":"controls_for","variable":"i","start":[{"block_name":"math_number_number","number":"1"}],"end":[{"block_name":"math_number_number","number":"10"}],"step":[{"block_name":"math_number_number","number":"1"}],"branch":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]}]}]
-// `);
-//
-//
-// var add_type_field = require('./module_add_type_field.js');
-//
-//
-// for (var i = 0; i<1; i++){
-//     var vars_name = 'str' + i;
-//     commandList = [];
-//     add_type_field(eval(vars_name));
-//     console.log("JSON: \n", JSON.stringify(eval(vars_name), null, 4));
-//     console.log(generator_core(eval(vars_name)));
-//     // console.log("JSON_result: \n", JSON.stringify(eval(vars_name), null, 4));
-//
-//     console.log("\n\n#######################################\n\n")
-// }
+
+var str0 = JSON.parse(`[{"block_name":"controls_statement_for","loop_style":"controls_for","variable":"i","start":[{"block_name":"math_number_number","number":"1"}],"end":[{"block_name":"math_number_number","number":"10"}],"step":[{"block_name":"math_number_number","number":"1"}],"branch":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]}]}]
+`);
+
+
+var add_type_field = require('./module_add_type_field.js');
+
+
+for (var i = 0; i<1; i++){
+    var vars_name = 'str' + i;
+    commandList = [];
+    add_type_field(eval(vars_name));
+    console.log("JSON: \n", JSON.stringify(eval(vars_name), null, 4));
+    console.log(generator_core(eval(vars_name)));
+    // console.log("JSON_result: \n", JSON.stringify(eval(vars_name), null, 4));
+
+    console.log("\n\n#######################################\n\n")
+}
 
 
 

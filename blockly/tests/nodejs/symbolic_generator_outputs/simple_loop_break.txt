@@ -12,7 +12,9 @@ number 9
 isDivisibleBy
 JUMPNZ L0_1
 JUMP L1_0
+JUMP L1_1
 L0_1
+L1_1
 get i
 print
 get i

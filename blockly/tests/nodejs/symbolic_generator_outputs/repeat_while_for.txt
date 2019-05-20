@@ -32,7 +32,9 @@ number 100
 cmpg
 JUMPNZ L0_3
 JUMP L1_1
+JUMP L1_3
 L0_3
+L1_3
 JUMP L0_1
 L1_1
 get n

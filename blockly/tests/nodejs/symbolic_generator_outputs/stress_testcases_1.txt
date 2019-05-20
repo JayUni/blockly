@@ -6,6 +6,7 @@ cmpl
 JUMPNZ L0_0
 number 1
 set result
+JUMP L1_0
 L0_0
 get N
 number 3
@@ -13,6 +14,7 @@ cmpl
 JUMPNZ L0_1
 number 2
 set result
+JUMP L1_1
 L0_1
 L0_2
 get N
@@ -31,5 +33,6 @@ get result
 print
 JUMP L0_2
 L1_2
+L1_1
 get result
 print
