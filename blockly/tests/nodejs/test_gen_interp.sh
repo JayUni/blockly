@@ -5,9 +5,9 @@
 g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
 # for gen in bin_generator_outputs/*.bin
 # do
-    gen="bin_generator_outputs/simple_if_else.bin"
+    gen="bin_generator_outputs/if_else_complicated_test1.bin"
     interpreter="interpreter_final_outputs/`basename $gen .bin`.txt"
-
+    node ../../SkoolBot/bin_generator.js `basename $gen .bin`
    if [ -e $interpreter ]
      then
        ../../SkoolBot/interpreter $gen $1 > compare.txt

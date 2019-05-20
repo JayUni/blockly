@@ -67,23 +67,23 @@ g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
 
    # # bin generator
    bin_generator="bin_generator_outputs/`basename $xml .xml`.bin"
-   # if [ -e $bin_generator ]
-   #   then
-   #     ### execute javascript with $x > $$.out
-   #     node ../../SkoolBot/bin_generator.js `basename $xml .xml` > compare.bin
-   #     result=$(wdiff -3 $bin_generator compare.bin)
-   #     if [ $? -eq 0 ]
-   #       then
-   #          echo "$bin_generator Test case pass."
-   #        else
-   #          echo "$result"
-   #          echo "$bin_generator Test case failed."
-   #     fi
-   #     continue
-   # else
-   #   node ../../SkoolBot/bin_generator.js `basename $xml .xml` > $bin_generator
-   #   echo "created $bin_generator."
-   # fi
+   if [ -e $bin_generator ]
+     then
+       ### execute javascript with $x > $$.out
+       node ../../SkoolBot/bin_generator.js `basename $xml .xml` > compare.bin
+       result=$(diff -3 $bin_generator compare.bin)
+       if [ $? -eq 0 ]
+         then
+            echo "$bin_generator Test case pass."
+          else
+            echo "$result"
+            echo "$bin_generator Test case failed."
+       fi
+       continue
+   else
+     node ../../SkoolBot/bin_generator.js `basename $xml .xml` > $bin_generator
+     echo "created $bin_generator."
+   fi
 
    # interpreter
    interpreter="interpreter_final_outputs/`basename $xml .xml`.txt"
