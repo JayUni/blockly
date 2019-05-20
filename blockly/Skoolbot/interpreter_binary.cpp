@@ -308,6 +308,7 @@ void run() {
           std::cerr<<"Invalid BOOLEAN command: "<<std::hex<<(int16_t)code[ip]<<std::endl;
           return;
         }
+        ++ip;
         break;
       case STOP:
         return;
@@ -329,7 +330,7 @@ void run() {
 // 1 = true, 0 = false
 void run_symbol() {
   for(ip=0;ip<CODE_SIZE;ip++) {
-    std::cout<<"ip: "<<ip<<" ";
+    std::cout<<"ip: "<< ip <<" ";
     switch(code[ip]) {
       case NOP_:
         std::cout << "NOP " << ip<<std::endl;
@@ -497,6 +498,7 @@ void run_both() {
   int16_t value;
   int16_t addr;
   for(;;) {
+    std::cout<<"ip: "<< ip <<" ";
     switch(code[ip++]) {
       case NOP_:
         std::cout << "NOP " << ip<<std::endl;
@@ -755,22 +757,22 @@ void run_both() {
         break;
       case PRINT:
 
-          std::cout << "PRINT" << std::endl;
-          // int16_t data = pop();
-          std::cout << pop() << std::endl;
+        std::cout << "PRINT ";
+        // int16_t data = pop();
+        std::cout << pop() << std::endl;
 
         break;
       case BOOLEAN:
-        ++ip;
         if (code[ip] == TRUE) {
           push(0);
         } else if (code[ip] == FALSE) {
           push(1);
         } else {
-          std::cerr<<"Invalid command: "<<std::hex<<(int16_t)code[ip]<<std::endl;
+          std::cerr<<"Invalid BOOLEAN command: "<<std::hex<<(int16_t)code[ip]<<std::endl;
           return;
         }
-        std::cout << "BOOLEAN" << std::endl;
+        std::cout << "BOOLEAN "<<std::hex<<(int16_t)code[ip] << std::endl;
+        ++ip;
         break;
       case STOP:
         std::cout << "STOP" << std::endl;
@@ -785,7 +787,7 @@ void run_both() {
 
         break;
       default:
-        std::cerr<<"Invalid command: "<<std::hex<<(int16_t)code[ip]<<std::endl;
+        std::cerr<<"Invalid reading command: "<<std::hex<<(int16_t)code[ip]<<std::endl;
         return;
     }
   }
