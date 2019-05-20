@@ -11,7 +11,7 @@
                     "argument": [
                         {
                             "block_name": "math_number_number",
-                            "number": "1",
+                            "number": "2",
                             "valueType": "number"
                         },
                         {
@@ -29,7 +29,7 @@
                         "argument": [
                             {
                                 "block_name": "text_string_text",
-                                "text": "'0'",
+                                "text": "'-1'",
                                 "valueType": "string"
                             }
                         ],
@@ -47,7 +47,7 @@
                     "argument": [
                         {
                             "block_name": "math_number_number",
-                            "number": "1",
+                            "number": "2",
                             "valueType": "number"
                         },
                         {
@@ -84,7 +84,7 @@
                         "argument": [
                             {
                                 "block_name": "text_string_text",
-                                "text": "'-1'",
+                                "text": "'0'",
                                 "valueType": "string"
                             }
                         ],

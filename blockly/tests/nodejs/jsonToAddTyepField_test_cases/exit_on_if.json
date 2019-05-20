@@ -11,16 +11,13 @@
                     "argument": [
                         {
                             "block_name": "math_number_number",
-                            "number": "1",
-                            "valueType": "number"
+                            "number": "1"
                         },
                         {
                             "block_name": "math_number_number",
-                            "number": "1",
-                            "valueType": "number"
+                            "number": "1"
                         }
-                    ],
-                    "valueType": "boolean"
+                    ]
                 },
                 "branchCode": [
                     {
@@ -29,14 +26,11 @@
                         "argument": [
                             {
                                 "block_name": "text_string_text",
-                                "text": "'0'",
-                                "valueType": "string"
+                                "text": "'0'"
                             }
-                        ],
-                        "valueType": "statement"
+                        ]
                     }
-                ],
-                "valueType": "statement"
+                ]
             },
             {
                 "block_name": "controls_statement_elseif",
@@ -47,16 +41,13 @@
                     "argument": [
                         {
                             "block_name": "math_number_number",
-                            "number": "1",
-                            "valueType": "number"
+                            "number": "1"
                         },
                         {
                             "block_name": "math_number_number",
-                            "number": "1",
-                            "valueType": "number"
+                            "number": "1"
                         }
-                    ],
-                    "valueType": "boolean"
+                    ]
                 },
                 "branchCode": [
                     {
@@ -65,14 +56,11 @@
                         "argument": [
                             {
                                 "block_name": "text_string_text",
-                                "text": "'-1'",
-                                "valueType": "string"
+                                "text": "'-1'"
                             }
-                        ],
-                        "valueType": "statement"
+                        ]
                     }
-                ],
-                "valueType": "statement"
+                ]
             },
             {
                 "block_name": "controls_statement_else",
@@ -84,16 +72,12 @@
                         "argument": [
                             {
                                 "block_name": "text_string_text",
-                                "text": "'-1'",
-                                "valueType": "string"
+                                "text": "'-1'"
                             }
-                        ],
-                        "valueType": "statement"
+                        ]
                     }
-                ],
-                "valueType": "statement"
+                ]
             }
-        ],
-        "valueType": "statement"
+        ]
     }
 ]
