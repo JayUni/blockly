@@ -2,23 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="309abf3b-ba8f-41f5-a11f-08a439e8cd78" name="Default Changelist" comment="Default Changelist">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/bin_generator_outputs/if_if_elseif.bin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/if_if_elseif.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/exit_on_else.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/exit_on_elseif.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/exit_on_if.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/xmlToJson_test_cases/exit_on_else.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/xmlToJson_test_cases/exit_on_elseif.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/xmlToJson_test_cases/exit_on_if.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/Skoolbot/module_command_generator.js" afterPath="$PROJECT_DIR$/blockly/Skoolbot/module_command_generator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/bin_generator_outputs/if_else_complicated_test1.bin" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/bin_generator_outputs/if_else_complicated_test1.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/bin_generator_outputs/if_if_elseif_else_3.bin" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/bin_generator_outputs/if_if_elseif_else_3.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/bin_generator_outputs/loop_control_while_repeat.bin" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/bin_generator_outputs/loop_control_while_repeat.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/bin_generator_outputs/repeat_while_for.bin" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/bin_generator_outputs/repeat_while_for.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/bin_generator_outputs/simple_if_else.bin" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/bin_generator_outputs/simple_if_else.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/bin_generator_outputs/simple_loop_break.bin" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/bin_generator_outputs/simple_loop_break.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/compare.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/compare.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/if_else_complicated_test1.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/if_else_complicated_test1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/for_if_constraint_abs_even_neg.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/for_if_constraint_abs_even_neg.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/if_else_complicated_test1.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/if_else_complicated_test1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/if_else_complicated_test2.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/if_else_complicated_test2.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/if_if_elseif.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/if_if_elseif.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/if_if_elseif_else_3.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/if_if_elseif_else_3.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/repeat_while_for.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/repeat_while_for.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/simple_if.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/simple_if.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/simple_if_else.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/simple_if_else.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/simple_logic_ifelse.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/simple_logic_ifelse.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/simple_loop_break.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/simple_loop_break.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/simple_loop_continue.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/simple_loop_continue.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/stress_testcases_1.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/stress_testcases_1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/if_if_elseif_else_3.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/if_if_elseif_else_3.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/loop_control_while_repeat.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/loop_control_while_repeat.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/simple_if_else.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/simple_if_else.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_gen_interp.sh" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/test_gen_interp.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,11 +52,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="module_command_generator.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="module_command_generator.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/module_command_generator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="344" column="34" lean-forward="false" selection-start-line="344" selection-start-column="34" selection-end-line="344" selection-end-column="34" />
+            <state relative-caret-position="182">
+              <caret line="336" column="26" lean-forward="false" selection-start-line="336" selection-start-column="26" selection-end-line="336" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="if_if_elseif.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/if_if_elseif.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -75,7 +87,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
               <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-              <folding />
+              <folding>
+                <marker date="1558332615587" expanded="true" signature="419:898" ph="then...fi" />
+                <marker date="1558332615587" expanded="true" signature="564:770" ph="then...fi" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -293,14 +308,6 @@
               <item name="tests" type="462c0819:PsiDirectoryNode" />
               <item name="nodejs" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="blockly" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blockly" type="462c0819:PsiDirectoryNode" />
-              <item name="blockly" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="xmlToJson_test_cases" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -492,7 +499,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="424633000" />
+    <option name="totallyTimeSpent" value="424825000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -886,7 +893,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/if_if_elseif.txt" />
     <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/simple_if.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -935,14 +941,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-          <folding />
+          <folding>
+            <marker date="1558332615587" expanded="true" signature="419:898" ph="then...fi" />
+            <marker date="1558332615587" expanded="true" signature="564:770" ph="then...fi" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/module_command_generator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="344" column="34" lean-forward="false" selection-start-line="344" selection-start-column="34" selection-end-line="344" selection-end-column="34" />
+        <state relative-caret-position="182">
+          <caret line="336" column="26" lean-forward="false" selection-start-line="336" selection-start-column="26" selection-end-line="336" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/hex_generator_outputs/if_if_elseif.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
