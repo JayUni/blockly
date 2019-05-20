@@ -7,7 +7,7 @@ number 17
 print
 L0_0
 boolean TRUE
-JUMPNZ L0_0
+JUMPNZ L0_1
 boolean TRUE
 print
-L0_0
+L0_1

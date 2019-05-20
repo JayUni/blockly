@@ -7,7 +7,7 @@ cmpl
 JUMPNZ L1_0
 number 10
 set repeat_control_variable
-L0_0
+L0_1
 get n
 print
 get n
@@ -21,8 +21,8 @@ set repeat_control_variable
 get repeat_control_variable
 number 0
 cmpg
-JUMPNZ L1_0
-JUMP L0_0
-L1_0
+JUMPNZ L1_1
+JUMP L0_1
+L1_1
 JUMP L0_0
 L1_0

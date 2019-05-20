@@ -1,15 +1,2 @@
-ip: 0 NUMBER 15
-ip: 3 SET 0
-ip: 6 GET 0
-ip: 9 NUMBER 30
-ip: 12 CMPLE
-ip: 13 ip: 16 GET 0
-ip: 19 NUMBER 6
-ip: 22 CMPG
-ip: 23 ip: 26 GET 0
-ip: 29 PRINT 15
-ip: 30 NOP 31
-ip: 31 NOP 32
-ip: 32 BOOLEAN 18
-ip: 22 PRINT 1
-ip: 23 STOP
+15
+1

@@ -9,27 +9,27 @@ number 1
 set for_step_control_variable
 get i
 isEven
-JUMPNZ L0_0
-get i
-neg
-set i
-L0_0
-get i
-number 0
-cmpg
-negate
 JUMPNZ L0_1
 get i
-abs
+neg
 set i
 L0_1
 get i
 number 0
 cmpg
+negate
 JUMPNZ L0_2
+get i
+abs
+set i
+L0_2
+get i
+number 0
+cmpg
+JUMPNZ L0_3
 number 5
 change i
-L0_2
+L0_3
 number -1
 change i
 get i

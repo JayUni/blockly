@@ -9,8 +9,7 @@ var L1 = 0;
 
 
 function generator_core(jsonList){
-    L0 = 0;
-    L1 = 0;
+
     if (!hasChild(jsonList)[0]) {
         addCommand(jsonList);
     }
@@ -207,6 +206,7 @@ function addCommand(jsonList){
                                 commandList.push('JUMP L0_' + jsonList.label_0);
                                 commandList.push('L1_' + jsonList.label_1);
                                 jsonList.label = 'finished';
+                                break;
                             }
 
                             break;
@@ -259,6 +259,7 @@ function addLabel(jsonList) {
                                     if (!jsonList.label){
                                         jsonList.label_0 = L0;
                                         jsonList.label_1 = L1;
+                                        continueBreak(jsonList.branch, L0, L1);
                                         L0 += 1;
                                         L1 += 1;
                                         jsonList.label = "added";
@@ -269,6 +270,7 @@ function addLabel(jsonList) {
                                     if (!jsonList.label){
                                         jsonList.label_0 = L0;
                                         jsonList.label_1 = L1;
+                                        continueBreak(jsonList.branch, L0, L1);
                                         L0 += 1;
                                         L1 += 1;
                                         jsonList.label = "added";
@@ -281,6 +283,7 @@ function addLabel(jsonList) {
                             if (!jsonList.label){
                                 jsonList.label_0 = L0;
                                 jsonList.label_1 = L1;
+                                continueBreak(jsonList.branch, L0, L1);
                                 L0 += 1;
                                 L1 += 1;
                                 jsonList.label = "added";
@@ -355,6 +358,8 @@ function continueBreak(jsonList, L0, L1) {
 //             jsondata = JSON.parse(jsondata);
 //             // jsondata = add_type_field(jsondata);
 //             commandList = [];
+//             L0 = 0;
+//             L1 = 0;
 //             var reslist = generator_core(jsondata);
 //
 //             // console.log(reslist);
@@ -389,5 +394,5 @@ function continueBreak(jsonList, L0, L1) {
 //
 // var path = '../tests/nodejs/addTypeFieldToGenerator_test_cases/';
 // travel(path, savetxt);
-//
+
 
