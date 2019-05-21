@@ -65,7 +65,15 @@ g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
      echo "created $command_generator."
    fi
 
-   # # bin generator
+   ### generator binary bin file
+   ### then using interpreter_binary debug mode for comparing
+
+
+
+
+
+
+   # bin generator
    bin_generator="bin_generator_outputs/`basename $xml .xml`.bin"
    if [ -e $bin_generator ]
      then
