@@ -5,7 +5,7 @@
 g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
 # for gen in bin_generator_outputs/*.bin
 # do
-    gen="bin_generator_outputs/if_if_elseif_else_3.bin"
+    gen="bin_generator_outputs/for_if_constraint_abs_even_neg.bin"
     interpreter="interpreter_final_outputs/`basename $gen .bin`.txt"
     node ../../SkoolBot/bin_generator.js `basename $gen .bin`
    if [ -e $interpreter ]
