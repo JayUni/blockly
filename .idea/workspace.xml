@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="309abf3b-ba8f-41f5-a11f-08a439e8cd78" name="Default Changelist" comment="Default Changelist">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/Skoolbot/module_command_generator.js" afterPath="$PROJECT_DIR$/blockly/Skoolbot/module_command_generator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/compare.bin" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/compare.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/compare.json" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/compare.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/compare.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/compare.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/test_gen_interp.sh" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/test_gen_interp.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,11 +27,31 @@
       <file leaf-file-name="module_bytecode_generator.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/module_bytecode_generator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-65">
-              <caret line="229" column="2" lean-forward="false" selection-start-line="229" selection-start-column="2" selection-end-line="229" selection-end-column="2" />
+            <state relative-caret-position="-2785">
+              <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
               <folding>
-                <marker date="1558337341398" expanded="true" signature="7809:9132" ph="..." />
+                <marker date="1558395645344" expanded="true" signature="7809:9132" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_type_field.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/add_type_field.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generator_core.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/generator_core.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1029">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -45,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/command_generator.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+              <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -55,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_gen_interp.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+              <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -174,11 +189,11 @@
         <option value="$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/simple_loop_continue.txt" />
         <option value="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/for_if_constraint_abs_even_neg.txt" />
         <option value="$PROJECT_DIR$/blockly/tests/nodejs/interpreter_final_outputs/if_if_elseif_else.txt" />
-        <option value="$PROJECT_DIR$/blockly/Skoolbot/module_bytecode_generator.js" />
         <option value="$PROJECT_DIR$/blockly/tests/nodejs/compare.txt" />
         <option value="$PROJECT_DIR$/blockly/Skoolbot/module_command_generator.js" />
         <option value="$PROJECT_DIR$/blockly/tests/nodejs/testscript.sh" />
         <option value="$PROJECT_DIR$/blockly/tests/nodejs/test_gen_interp.sh" />
+        <option value="$PROJECT_DIR$/blockly/Skoolbot/module_bytecode_generator.js" />
       </list>
     </option>
   </component>
@@ -439,7 +454,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="437097000" />
+    <option name="totallyTimeSpent" value="438727000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -452,6 +467,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -462,7 +478,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38059703" sideWeight="0.47424892" order="9" side_tool="false" content_ui="tabs" x="21" y="254" width="1398" height="392" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38059703" sideWeight="0.47424892" order="9" side_tool="false" content_ui="tabs" x="21" y="254" width="1398" height="392" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30472103" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -548,34 +564,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/simple_loop_repeat.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/simple_logic_operation.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/repeat_while_for.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/simple_logic_boolean.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/symbolic_generator_outputs/simple_if_else.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -908,7 +896,7 @@
     <entry file="file://$PROJECT_DIR$/blockly/tests/nodejs/test_gen_interp.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+          <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -916,7 +904,7 @@
     <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/command_generator.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -929,12 +917,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/type_field_core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/xmlToJson.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/add_type_field.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/generator_core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1029">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/module_bytecode_generator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-65">
-          <caret line="229" column="2" lean-forward="false" selection-start-line="229" selection-start-column="2" selection-end-line="229" selection-end-column="2" />
+        <state relative-caret-position="-2785">
+          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
           <folding>
-            <marker date="1558337341398" expanded="true" signature="7809:9132" ph="..." />
+            <marker date="1558395645344" expanded="true" signature="7809:9132" ph="..." />
           </folding>
         </state>
       </provider>
