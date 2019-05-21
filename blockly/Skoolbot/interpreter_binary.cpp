@@ -441,7 +441,6 @@ void run_symbol() {
           std::cout << "JUMPZ ";
           std::cout << (size_t)GETARG << std::endl;
           ip+=2;
-          std::cout<< std::endl;
 
         }
         break;
@@ -455,7 +454,6 @@ void run_symbol() {
             std::cout << "JUMPNZ ";
             std::cout << (size_t)GETARG << std::endl;
             ip+=2;
-            std::cout<< std::endl;
           }
           break;
       case JUMP:
@@ -465,7 +463,6 @@ void run_symbol() {
           std::cout << "JUMP ";
           std::cout << (size_t)GETARG << std::endl;
           ip+=2;
-          std::cout<< std::endl;
         }
         break;
       case PRINT:
@@ -748,8 +745,7 @@ void run_both() {
           // //
           addr = GETARG;
           ip = addr;
-          std::cout<<"JUMP to command at:"<<(int16_t)code[ip] << " " << ip <<std::endl;
-          std::cout<<std::endl;
+          std::cout<<"JUMP "<< ip <<std::endl;
         break;
       case PRINT:
 
