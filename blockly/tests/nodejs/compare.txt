@@ -1,4 +1,4881 @@
-0
-0
-0
-0
+ip: 0 NUMBER 0
+ip: 3 SET 0
+ip: 6 NUMBER 5
+ip: 9 SET 2
+ip: 12 NOP
+ip: 13 NOP
+ip: 14 BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 0
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 1
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 1
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 2
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 2
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 3
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 3
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 4
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 4
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 5
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 5
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 6
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 6
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 7
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 7
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 8
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 8
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 9
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 9
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT a
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT a
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT b
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT b
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT c
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT c
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT d
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT d
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT e
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT e
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT f
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT f
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 10
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 10
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 11
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 11
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 12
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 12
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 13
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 13
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 14
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 14
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 15
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 15
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 16
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 16
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 17
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 17
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 18
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 18
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 19
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 19
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 1a
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 1a
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 1b
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 1b
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 1c
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 1c
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 1d
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 1d
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 1e
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 1e
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 1f
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 1f
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 20
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 20
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 21
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 21
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 22
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 22
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 23
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 23
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 24
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 24
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 25
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 25
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 26
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 26
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 27
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 27
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 28
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 28
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 29
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 29
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 2a
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 2a
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 2b
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 2b
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 2c
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 2c
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 2d
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 2d
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 2e
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 2e
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 2f
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 2f
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 30
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 30
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 31
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 31
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 32
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 32
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 33
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 33
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 34
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 34
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 35
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 35
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 36
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 36
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 37
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 37
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 38
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 38
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 39
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 39
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 3a
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 3a
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 3b
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 3b
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 3c
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 3c
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 3d
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 3d
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 3e
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 3e
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 3f
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 3f
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 40
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 40
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 41
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 41
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 42
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 42
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 43
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 43
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 44
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 44
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 45
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 45
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 46
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 46
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 47
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 47
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 48
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 48
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 49
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 49
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 4a
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 4a
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 4b
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 4b
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 4c
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 4c
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 4d
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 4d
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 4e
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 4e
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 4f
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 4f
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 50
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 50
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 51
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 51
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 52
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 52
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 53
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 53
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 54
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 54
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 55
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 55
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 56
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 56
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 57
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 57
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 58
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 58
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 59
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 59
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 5a
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 5a
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 5b
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 5b
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 5c
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 5c
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 5d
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 5d
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 5e
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 5e
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 5f
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 5f
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 60
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 60
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 61
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 61
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 62
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 62
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 63
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 63
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 64
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 JUMPNZ 60
+
+ip: 60 NOP
+ip: 61 NOP
+ip: 62 JUMP JUMP to command at:0 d
+
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 64
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 65
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 ip: 5a JUMP JUMP to command at:0 65
+
+ip: 65 NOP
+ip: 66 GET 0
+ip: 69 PRINT 65
+ip: 6a GET 2
+ip: 6d NUMBER 1
+ip: 70 SUB
+ip: 71 SET 2
+ip: 74 GET 2
+ip: 77 NUMBER 0
+ip: 7a CMPG
+ip: 7b ip: 7e JUMP JUMP to command at:0 c
+
+ip: c NOP
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 65
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 66
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 ip: 5a JUMP JUMP to command at:0 65
+
+ip: 65 NOP
+ip: 66 GET 0
+ip: 69 PRINT 66
+ip: 6a GET 2
+ip: 6d NUMBER 1
+ip: 70 SUB
+ip: 71 SET 2
+ip: 74 GET 2
+ip: 77 NUMBER 0
+ip: 7a CMPG
+ip: 7b ip: 7e JUMP JUMP to command at:0 c
+
+ip: c NOP
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 66
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 67
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 ip: 5a JUMP JUMP to command at:0 65
+
+ip: 65 NOP
+ip: 66 GET 0
+ip: 69 PRINT 67
+ip: 6a GET 2
+ip: 6d NUMBER 1
+ip: 70 SUB
+ip: 71 SET 2
+ip: 74 GET 2
+ip: 77 NUMBER 0
+ip: 7a CMPG
+ip: 7b ip: 7e JUMP JUMP to command at:0 c
+
+ip: c NOP
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 67
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 68
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 ip: 5a JUMP JUMP to command at:0 65
+
+ip: 65 NOP
+ip: 66 GET 0
+ip: 69 PRINT 68
+ip: 6a GET 2
+ip: 6d NUMBER 1
+ip: 70 SUB
+ip: 71 SET 2
+ip: 74 GET 2
+ip: 77 NUMBER 0
+ip: 7a CMPG
+ip: 7b ip: 7e JUMP JUMP to command at:0 c
+
+ip: c NOP
+ip: d NOP
+ip: e BOOLEAN 17
+ip: 10 ip: 13 NUMBER 1
+ip: 16 SET 4
+ip: 19 NUMBER a
+ip: 1c SET 6
+ip: 1f GET 4
+ip: 22 GET 6
+ip: 25 SUB
+ip: 26 SET 4
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b ip: 3e GET 0
+ip: 41 PRINT 68
+ip: 42 NUMBER 1
+ip: 45 CHANGE 0
+ip: 48 JUMP JUMP to command at:0 29
+
+ip: 29 NOP
+ip: 2a GET 4
+ip: 2d GET 6
+ip: 30 ADD
+ip: 31 SET 4
+ip: 34 GET 4
+ip: 37 NUMBER 1
+ip: 3a CMPLE
+ip: 3b JUMPNZ 4b
+
+ip: 4b NOP
+ip: 4c GET 0
+ip: 4f PRINT 69
+ip: 50 GET 0
+ip: 53 NUMBER 64
+ip: 56 CMPG
+ip: 57 ip: 5a JUMP JUMP to command at:0 65
+
+ip: 65 NOP
+ip: 66 GET 0
+ip: 69 PRINT 69
+ip: 6a GET 2
+ip: 6d NUMBER 1
+ip: 70 SUB
+ip: 71 SET 2
+ip: 74 GET 2
+ip: 77 NUMBER 0
+ip: 7a CMPG
+ip: 7b JUMPNZ 81
+
+ip: 81 NOP
+ip: 82 STOP
