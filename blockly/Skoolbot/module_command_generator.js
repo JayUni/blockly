@@ -360,10 +360,17 @@ function continueBreak(jsonList, L0, L1) {
 
 
 
+<<<<<<< HEAD
 // // save as text file
 //
 // const fs = require('fs');
 //
+=======
+// save as text file
+
+const fs = require('fs');
+
+>>>>>>> json
 // function savetxt(path){
 //
 //     fs.readFile(path, "utf8", function(err, jsondata) {
@@ -392,6 +399,7 @@ function continueBreak(jsonList, L0, L1) {
 //         }
 //     });
 // }
+<<<<<<< HEAD
 //
 //
 // function travel(dir, callback) {
@@ -410,3 +418,21 @@ function continueBreak(jsonList, L0, L1) {
 // travel(path, savetxt);
 //
 
+=======
+
+
+function travel(dir, callback) {
+    fs.readdirSync(dir).forEach(function (file) {
+        var pathname = require('path').join(dir, file);
+
+        if (fs.statSync(pathname).isDirectory()) {
+            travel(pathname, callback);
+        } else {
+            callback(pathname);
+        }
+    });
+}
+
+var path = '../tests/nodejs/addTypeFieldToGenerator_test_cases/';
+// travel(path, savetxt);
+>>>>>>> json

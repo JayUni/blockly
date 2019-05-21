@@ -47,7 +47,7 @@
 #define MEMORY_SIZE   (1024)
 #define CODE_SIZE     (1024)
 
-int8_t code[CODE_SIZE];
+uint8_t code[CODE_SIZE];
 size_t ip = 0;
 
 int16_t stack[STACK_SIZE];
@@ -253,14 +253,14 @@ void run() {
         push(-1); // need to check this ???
       case GET:
         {
-          int16_t addr = code[ip++];
+          size_t addr = code[ip++];
           addr |= (code[ip++]<<8);
           push(memory[addr]);
         }
         break;
       case SET:
         {
-          int16_t addr = code[ip++];
+          size_t addr = code[ip++];
           addr |= (code[ip++]<<8);
           int16_t value = pop();
           memory[addr] = value;
@@ -269,7 +269,7 @@ void run() {
       case JUMPZ:
         {
           int16_t value = pop();
-          int16_t addr = code[ip++];
+          size_t addr = code[ip++];
           addr |= (code[ip++]<<8);
           if (value == 0) {
              ip = addr;
@@ -279,7 +279,7 @@ void run() {
       case JUMPNZ:
           {
             int16_t value = pop();
-            int16_t addr = code[ip++];
+            size_t addr = code[ip++];
             addr |= (code[ip++]<<8);
             if (value != 0) {
                ip = addr;
@@ -288,7 +288,7 @@ void run() {
           break;
       case JUMP:
         {
-          int16_t addr = code[ip++];
+          size_t addr = code[ip++];
           addr |= (code[ip++]<<8);
           ip = addr;
         }
@@ -314,7 +314,7 @@ void run() {
         return;
       case CHANGE:
       {
-        int16_t addr = code[ip++];
+        size_t addr = code[ip++];
         addr |= (code[ip++]<<8);
         int16_t value = pop();
         memory[addr] += value;
@@ -333,7 +333,7 @@ void run_symbol() {
     std::cout<<"ip: "<< ip <<" ";
     switch(code[ip]) {
       case NOP_:
-        std::cout << "NOP " << ip<<std::endl;
+        std::cout << "NOP"<<std::endl;
         break;
       case NUMBER:
         {
@@ -417,7 +417,7 @@ void run_symbol() {
           // int16_t addr = code[ip++];
           // addr |= (code[ip++]<<8);
           std::cout << "GET ";
-          std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
+          std::cout << (size_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
           ip+=2;
         }
 
@@ -427,7 +427,7 @@ void run_symbol() {
           // int16_t addr = code[ip++];
           // addr |= (code[ip++]<<8);
           std::cout << "SET ";
-          std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
+          std::cout << (size_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
           ip+=2;
         }
         break;
@@ -437,9 +437,10 @@ void run_symbol() {
           // addr |= (code[ip+2]<<8);
 
           std::cout << "JUMPZ ";
-          std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
+          std::cout << (size_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
           ip+=2;
           std::cout<< std::endl;
+
         }
         break;
       case JUMPNZ:
@@ -448,7 +449,7 @@ void run_symbol() {
             // addr |= (code[ip++]<<8);
 
             std::cout << "JUMPNZ ";
-            std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
+            std::cout << (size_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
             ip+=2;
             std::cout<< std::endl;
           }
@@ -458,7 +459,7 @@ void run_symbol() {
           // int16_t addr = code[ip++];
           // addr |= (code[ip++]<<8);
           std::cout << "JUMP ";
-          std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
+          std::cout << (size_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
           ip+=2;
           std::cout<< std::endl;
         }
@@ -476,13 +477,9 @@ void run_symbol() {
         std::cout << "STOP" << std::endl;
         return;
       case CHANGE:
-        {
-          int16_t addr = code[ip++];
-          addr |= (code[ip++]<<8);
           std::cout << "CHANGE ";
-          std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
+          std::cout << (uint16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
           ip+=2;
-        }
         break;
       default:
         std::cerr<<"Invalid command: "<<std::hex<<(int16_t)code[ip]<<std::endl;
@@ -496,12 +493,12 @@ void run_both() {
   int16_t op1;
   int16_t op2;
   int16_t value;
-  int16_t addr;
+  size_t addr;
   for(;;) {
     std::cout<<"ip: "<< ip <<" ";
     switch(code[ip++]) {
       case NOP_:
-        std::cout << "NOP " << ip<<std::endl;
+        std::cout << "NOP"<<std::endl;
         break;
       case NUMBER:
 
@@ -783,7 +780,7 @@ void run_both() {
         addr |= (code[ip++]<<8);
         value = pop();
         memory[addr] += value;
-        std::cout << "CHANGE " << std::hex<<(int16_t)addr <<std::endl;
+        std::cout << "CHANGE " << std::hex<<(size_t)addr <<std::endl;
 
         break;
       default:

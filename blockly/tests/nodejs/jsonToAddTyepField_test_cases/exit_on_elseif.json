@@ -25,8 +25,13 @@
                         "functionName": "text_print",
                         "argument": [
                             {
+<<<<<<< HEAD
                                 "block_name": "text_string_text",
                                 "text": "'-1'"
+=======
+                                "block_name": "math_number_number",
+                                "number": "-1"
+>>>>>>> json
                             }
                         ]
                     }
@@ -55,8 +60,13 @@
                         "functionName": "text_print",
                         "argument": [
                             {
+<<<<<<< HEAD
                                 "block_name": "text_string_text",
                                 "text": "'0'"
+=======
+                                "block_name": "math_number_number",
+                                "number": "0"
+>>>>>>> json
                             }
                         ]
                     }
@@ -71,8 +81,13 @@
                         "functionName": "text_print",
                         "argument": [
                             {
+<<<<<<< HEAD
                                 "block_name": "text_string_text",
                                 "text": "'-1'"
+=======
+                                "block_name": "math_number_number",
+                                "number": "-1"
+>>>>>>> json
                             }
                         ]
                     }
