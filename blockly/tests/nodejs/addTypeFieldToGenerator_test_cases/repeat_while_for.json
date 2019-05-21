@@ -47,17 +47,17 @@
                                 "valueType": "number"
                             }
                         ],
-                        "end": [
-                            {
-                                "block_name": "math_number_number",
-                                "number": "10",
-                                "valueType": "number"
-                            }
-                        ],
                         "step": [
                             {
                                 "block_name": "math_number_number",
                                 "number": "1",
+                                "valueType": "number"
+                            }
+                        ],
+                        "end": [
+                            {
+                                "block_name": "math_number_number",
+                                "number": "10",
                                 "valueType": "number"
                             }
                         ],

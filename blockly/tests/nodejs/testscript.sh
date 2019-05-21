@@ -6,7 +6,7 @@ g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
 # for xml in xmlToJson_test_cases/*.xml
 # do
     # conver xml to json
-    xml="xmlToJson_test_cases/if_if_elseif_else_3.xml"
+    xml="xmlToJson_test_cases/simple_logic_compare.xml"
     json="jsonToAddTyepField_test_cases/`basename $xml .xml`.json"
 
     if [ -e $json ]
@@ -65,7 +65,15 @@ g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
      echo "created $command_generator."
    fi
 
-   # # bin generator
+   ### generator binary bin file
+   ### then using interpreter_binary debug mode for comparing
+
+
+
+
+
+
+   # bin generator
    bin_generator="bin_generator_outputs/`basename $xml .xml`.bin"
    if [ -e $bin_generator ]
      then
