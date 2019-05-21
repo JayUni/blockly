@@ -6,7 +6,7 @@ g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
 # for xml in xmlToJson_test_cases/*.xml
 # do
     # conver xml to json
-    xml="xmlToJson_test_cases/fib_22.xml"
+    xml="xmlToJson_test_cases/if_if_elseif_else_3.xml"
     json="jsonToAddTyepField_test_cases/`basename $xml .xml`.json"
 
     if [ -e $json ]
@@ -58,10 +58,10 @@ g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
           else
             echo "$result"
             echo "$command_generator Test case failed."
+            continue
        fi
-       continue
    else
-     node ../../SkoolBot/bin_generator.js $addTypeField > $command_generator
+     node ../../SkoolBot/command_generator.js $addTypeField > $command_generator
      echo "created $command_generator."
    fi
 
@@ -70,18 +70,19 @@ g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
    if [ -e $bin_generator ]
      then
        ### execute javascript with $x > $$.out
-       node ../../SkoolBot/bin_generator.js `basename $xml .xml` > compare.bin
-       result=$(diff -3 $bin_generator compare.bin)
-       if [ $? -eq 0 ]
-         then
-            echo "$bin_generator Test case pass."
-          else
-            echo "$result"
-            echo "$bin_generator Test case failed."
-       fi
-       continue
+       node ../../SkoolBot/bin_generator.js `basename $xml .xml`
+       # result=$(diff -3 $bin_generator compare.bin)
+       # if [ $? -eq 0 ]
+       #   then
+       #      echo "$bin_generator Test case pass."
+       #    else
+       #      echo "$result"
+       #      echo "$bin_generator Test case failed."
+       # fi
+       # continue
+        echo "overwrite $bin_generator."
    else
-     node ../../SkoolBot/bin_generator.js `basename $xml .xml` > $bin_generator
+     node ../../SkoolBot/bin_generator.js `basename $xml .xml`
      echo "created $bin_generator."
    fi
 
@@ -89,7 +90,7 @@ g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
    interpreter="interpreter_final_outputs/`basename $xml .xml`.txt"
    if [ -e $interpreter ]
      then
-       ### execute javascript with $x > $$.out
+       ## execute javascript with $x > $$.out
        ../../SkoolBot/interpreter $bin_generator $1 > compare.txt
        result=$(wdiff -3 $interpreter compare.txt)
        if [ $? -eq 0 ]

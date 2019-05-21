@@ -364,34 +364,34 @@ function continueBreak(jsonList, L0, L1) {
 
 const fs = require('fs');
 
-function savetxt(path){
-
-    fs.readFile(path, "utf8", function(err, jsondata) {
-        if (!err) {
-            // console.log(jsondata);
-            jsondata = JSON.parse(jsondata);
-            // jsondata = add_type_field(jsondata);
-            commandList = [];
-            L0 = 0;
-            L1 = 0;
-            var reslist = generator_core(jsondata);
-
-            // console.log(reslist);
-            var restxt = "";
-            for (var j in reslist){
-                restxt += reslist[j] + '\n';
-            }
-            var savefile = path.split('/')[4].split('.')[0];
-            fs.writeFile('../tests/nodejs/symbolic_generator_outputs/' + savefile + '.txt', restxt, (err) => {
-                if (err) throw err;
-                console.log('output is saved successfully!');
-            });
-        }
-        else{
-            throw err;
-        }
-    });
-}
+// function savetxt(path){
+//
+//     fs.readFile(path, "utf8", function(err, jsondata) {
+//         if (!err) {
+//             // console.log(jsondata);
+//             jsondata = JSON.parse(jsondata);
+//             // jsondata = add_type_field(jsondata);
+//             commandList = [];
+//             L0 = 0;
+//             L1 = 0;
+//             var reslist = generator_core(jsondata);
+//
+//             // console.log(reslist);
+//             var restxt = "";
+//             for (var j in reslist){
+//                 restxt += reslist[j] + '\n';
+//             }
+//             var savefile = path.split('/')[4].split('.')[0];
+//             fs.writeFile('../tests/nodejs/symbolic_generator_outputs/' + savefile + '.txt', restxt, (err) => {
+//                 if (err) throw err;
+//                 console.log('output is saved successfully!');
+//             });
+//         }
+//         else{
+//             throw err;
+//         }
+//     });
+// }
 
 
 function travel(dir, callback) {
@@ -407,6 +407,4 @@ function travel(dir, callback) {
 }
 
 var path = '../tests/nodejs/addTypeFieldToGenerator_test_cases/';
-travel(path, savetxt);
-
-
+// travel(path, savetxt);

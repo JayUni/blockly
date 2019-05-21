@@ -282,7 +282,7 @@ function addXmlTestcase() {
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(xmlCode));
   element.setAttribute('download', fileName + '.xml');
-  
+
   element.style.display = 'none';
   document.body.appendChild(element);
 
@@ -704,9 +704,6 @@ h1 {
       <label text="Input/Output:" web-class="ioLabel"></label> -->
       <block type="text_print">
         <value name="TEXT">
-          <shadow type="text">
-            <field name="TEXT">abc</field>
-          </shadow>
         </value>
       </block>
       <!-- <block type="text_prompt_ext">
