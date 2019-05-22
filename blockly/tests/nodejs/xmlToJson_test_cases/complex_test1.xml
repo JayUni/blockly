@@ -362,19 +362,19 @@
                                 <field name="NUM">0</field>
                               </shadow>
                               <block type="variables_get" id="+ltsyTLx*Cj^#exaTR_h">
-                                <field name="VAR" id="g8!vg0]fAZ=5o6~%j.m;" variabletype="">num</field>
+                                <field name="VAR" id="@[7K{WJ5DeQHy6Z;Ur1A" variabletype="">i</field>
                               </block>
                             </value>
                             <value name="DIVISOR">
-                              <block type="variables_get" id="RTo,tM@U/c@aR75x5)^r">
-                                <field name="VAR" id="@[7K{WJ5DeQHy6Z;Ur1A" variabletype="">i</field>
+                              <block type="math_number" id="!iGvfyH-D$$txhIuJE)s">
+                                <field name="NUM">2</field>
                               </block>
                             </value>
                           </block>
                         </value>
                         <statement name="DO">
                           <block type="math_change" id="NW55@mBUtKKP!U7u/|gF">
-                            <field name="VAR" id="g8!vg0]fAZ=5o6~%j.m;" variabletype="">num</field>
+                            <field name="VAR" id="@[7K{WJ5DeQHy6Z;Ur1A" variabletype="">i</field>
                             <value name="DELTA">
                               <shadow type="math_number" id="h?)^hIY=|]PC[?RJ{^9j">
                                 <field name="NUM">1</field>
