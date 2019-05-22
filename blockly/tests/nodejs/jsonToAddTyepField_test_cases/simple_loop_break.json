@@ -9,16 +9,16 @@
                 "number": "1"
             }
         ],
-        "end": [
-            {
-                "block_name": "math_number_number",
-                "number": "10"
-            }
-        ],
         "step": [
             {
                 "block_name": "math_number_number",
                 "number": "1"
+            }
+        ],
+        "end": [
+            {
+                "block_name": "math_number_number",
+                "number": "10"
             }
         ],
         "branch": [

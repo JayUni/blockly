@@ -19,7 +19,7 @@
         "argument": [
             {
                 "block_name": "math_number_number",
-                "number": "0",
+                "number": "1",
                 "valueType": "number"
             }
         ],
@@ -112,9 +112,23 @@
                 "varName": "a",
                 "argument": [
                     {
-                        "block_name": "variables_statement_get",
-                        "functionName": "variables_get",
-                        "varName": "b",
+                        "block_name": "controls_statement_else",
+                        "statements": "else",
+                        "branchCode": [
+                            {
+                                "block_name": "variables_statement_change",
+                                "functionName": "change",
+                                "varName": "i",
+                                "argument": [
+                                    {
+                                        "block_name": "math_number_number",
+                                        "number": "-1",
+                                        "valueType": "number"
+                                    }
+                                ],
+                                "valueType": "statement"
+                            }
+                        ],
                         "valueType": "statement"
                     }
                 ],
@@ -123,13 +137,30 @@
             {
                 "block_name": "variables_statement_set",
                 "functionName": "variables_set",
-                "varName": "b",
+                "varName": "i",
                 "argument": [
                     {
-                        "block_name": "variables_statement_get",
-                        "functionName": "variables_get",
-                        "varName": "temp",
-                        "valueType": "statement"
+                        "block_name": "math_number_operator_constrain",
+                        "operator": "constrain",
+                        "argument": [
+                            {
+                                "block_name": "variables_statement_get",
+                                "functionName": "variables_get",
+                                "varName": "i",
+                                "valueType": "statement"
+                            },
+                            {
+                                "block_name": "math_number_number",
+                                "number": "1",
+                                "valueType": "number"
+                            },
+                            {
+                                "block_name": "math_number_number",
+                                "number": "100",
+                                "valueType": "number"
+                            }
+                        ],
+                        "valueType": "number"
                     }
                 ],
                 "valueType": "statement"
