@@ -1,6 +1,6 @@
-ip: 0 Number 1
+ip: 0 NUMBER 1
 ip: 3 SET 0
-ip: 6 Number 1
+ip: 6 NUMBER 1
 ip: 9 SET 2
 ip: 12 GET 0
 ip: 15 GET 2
@@ -12,45 +12,140 @@ ip: 26 GET 2
 ip: 29 ADD
 ip: 30 SET 0
 ip: 33 GET 0
-ip: 36 Number 20
+ip: 36 NUMBER 20
 ip: 39 CMPLE
-ip: 40 JUMPNZ 130
-ip: 43 GET 0
-ip: 46 ISEVEN
-ip: 47 JUMPNZ 60
-ip: 50 GET 0
-ip: 53 NEG
-ip: 54 SET 0
-ip: 57 JUMP 109
+ip: 40 ip: 43 GET 0
+ip: 46 ISEVEN 1
+ip: 47 JUMPNZ 59
 ip: 60 NOP
 ip: 61 GET 0
-ip: 64 Number 0
+ip: 64 NUMBER 0
 ip: 67 CMPG
 ip: 68 NEGATE
-ip: 69 JUMPNZ 82
-ip: 72 GET 0
-ip: 75 ABS
-ip: 76 SET 0
-ip: 79 JUMP 109
+ip: 69 JUMPNZ 81
 ip: 82 NOP
 ip: 83 GET 0
-ip: 86 Number 0
+ip: 86 NUMBER 0
 ip: 89 CMPG
-ip: 90 JUMPNZ 102
-ip: 93 Number 5
+ip: 90 ip: 93 NUMBER 5
 ip: 96 CHANGE 0
-ip: 99 JUMP 109
-ip: 102 NOP
-ip: 103 Number -1
-ip: 106 CHANGE 0
+ip: 99 JUMP 108
 ip: 109 NOP
 ip: 110 GET 0
-ip: 113 Number 1
-ip: 116 Number 100
-ip: 119 CONSTRAIN
+ip: 113 NUMBER 1
+ip: 116 NUMBER 100
+ip: 119 CONSTRAIN100 1 to num: 6
 ip: 120 SET 0
 ip: 123 GET 0
-ip: 126 PRINT
-ip: 127 JUMP 22
+ip: 126 PRINT 6
+ip: 127 JUMP 21
+ip: 22 NOP
+ip: 23 GET 0
+ip: 26 GET 2
+ip: 29 ADD
+ip: 30 SET 0
+ip: 33 GET 0
+ip: 36 NUMBER 20
+ip: 39 CMPLE
+ip: 40 ip: 43 GET 0
+ip: 46 ISEVEN 7              ///should be 6 but 7, i variable should be return to 2 from the start
+ip: 47 JUMPNZ 59
+ip: 60 NOP
+ip: 61 GET 0
+ip: 64 NUMBER 0
+ip: 67 CMPG
+ip: 68 NEGATE
+ip: 69 JUMPNZ 81
+ip: 82 NOP
+ip: 83 GET 0
+ip: 86 NUMBER 0
+ip: 89 CMPG
+ip: 90 ip: 93 NUMBER 5
+ip: 96 CHANGE 0
+ip: 99 JUMP 108
+ip: 109 NOP
+ip: 110 GET 0
+ip: 113 NUMBER 1
+ip: 116 NUMBER 100
+ip: 119 CONSTRAIN100 1 to num: 12
+ip: 120 SET 0
+ip: 123 GET 0
+ip: 126 PRINT 12
+ip: 127 JUMP 21
+ip: 22 NOP
+ip: 23 GET 0
+ip: 26 GET 2
+ip: 29 ADD
+ip: 30 SET 0
+ip: 33 GET 0
+ip: 36 NUMBER 20
+ip: 39 CMPLE
+ip: 40 ip: 43 GET 0
+ip: 46 ISEVEN 13
+ip: 47 JUMPNZ 59
+ip: 60 NOP
+ip: 61 GET 0
+ip: 64 NUMBER 0
+ip: 67 CMPG
+ip: 68 NEGATE
+ip: 69 JUMPNZ 81
+ip: 82 NOP
+ip: 83 GET 0
+ip: 86 NUMBER 0
+ip: 89 CMPG
+ip: 90 ip: 93 NUMBER 5
+ip: 96 CHANGE 0
+ip: 99 JUMP 108
+ip: 109 NOP
+ip: 110 GET 0
+ip: 113 NUMBER 1
+ip: 116 NUMBER 100
+ip: 119 CONSTRAIN100 1 to num: 18
+ip: 120 SET 0
+ip: 123 GET 0
+ip: 126 PRINT 18
+ip: 127 JUMP 21
+ip: 22 NOP
+ip: 23 GET 0
+ip: 26 GET 2
+ip: 29 ADD
+ip: 30 SET 0
+ip: 33 GET 0
+ip: 36 NUMBER 20
+ip: 39 CMPLE
+ip: 40 ip: 43 GET 0
+ip: 46 ISEVEN 19
+ip: 47 JUMPNZ 59
+ip: 60 NOP
+ip: 61 GET 0
+ip: 64 NUMBER 0
+ip: 67 CMPG
+ip: 68 NEGATE
+ip: 69 JUMPNZ 81
+ip: 82 NOP
+ip: 83 GET 0
+ip: 86 NUMBER 0
+ip: 89 CMPG
+ip: 90 ip: 93 NUMBER 5
+ip: 96 CHANGE 0
+ip: 99 JUMP 108
+ip: 109 NOP
+ip: 110 GET 0
+ip: 113 NUMBER 1
+ip: 116 NUMBER 100
+ip: 119 CONSTRAIN100 1 to num: 24
+ip: 120 SET 0
+ip: 123 GET 0
+ip: 126 PRINT 24
+ip: 127 JUMP 21
+ip: 22 NOP
+ip: 23 GET 0
+ip: 26 GET 2
+ip: 29 ADD
+ip: 30 SET 0
+ip: 33 GET 0
+ip: 36 NUMBER 20
+ip: 39 CMPLE
+ip: 40 JUMPNZ 129
 ip: 130 NOP
 ip: 131 STOP
