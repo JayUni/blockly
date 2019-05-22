@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="309abf3b-ba8f-41f5-a11f-08a439e8cd78" name="Default Changelist" comment="Default Changelist">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/Skoolbot/interpreter" afterPath="$PROJECT_DIR$/blockly/Skoolbot/interpreter" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/Skoolbot/module_bytecode_generator.js" afterPath="$PROJECT_DIR$/blockly/Skoolbot/module_bytecode_generator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/exit_on_else.json" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/exit_on_else.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/exit_on_elseif.json" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/exit_on_elseif.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/exit_on_if.json" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/addTypeFieldToGenerator_test_cases/exit_on_if.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/compare.json" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/compare.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/compare.txt" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/compare.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/exit_on_else.json" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/exit_on_else.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/exit_on_elseif.json" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/exit_on_elseif.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/exit_on_if.json" afterPath="$PROJECT_DIR$/blockly/tests/nodejs/jsonToAddTyepField_test_cases/exit_on_if.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,8 +36,8 @@
       <file leaf-file-name="module_bytecode_generator.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/module_bytecode_generator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="286" column="2" lean-forward="true" selection-start-line="286" selection-start-column="2" selection-end-line="286" selection-end-column="2" />
+            <state relative-caret-position="289">
+              <caret line="332" column="2" lean-forward="true" selection-start-line="332" selection-start-column="2" selection-end-line="332" selection-end-column="2" />
               <folding>
                 <marker date="1558531432961" expanded="true" signature="8954:10277" ph="..." />
               </folding>
@@ -481,7 +488,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="445928000" />
+    <option name="totallyTimeSpent" value="446064000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -494,7 +501,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -505,7 +511,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38059703" sideWeight="0.47424892" order="9" side_tool="false" content_ui="tabs" x="21" y="254" width="1398" height="392" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38059703" sideWeight="0.47424892" order="9" side_tool="false" content_ui="tabs" x="21" y="254" width="1398" height="392" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30472103" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -986,8 +992,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/module_bytecode_generator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="286" column="2" lean-forward="true" selection-start-line="286" selection-start-column="2" selection-end-line="286" selection-end-column="2" />
+        <state relative-caret-position="289">
+          <caret line="332" column="2" lean-forward="true" selection-start-line="332" selection-start-column="2" selection-end-line="332" selection-end-column="2" />
           <folding>
             <marker date="1558531432961" expanded="true" signature="8954:10277" ph="..." />
           </folding>
