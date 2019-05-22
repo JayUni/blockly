@@ -1,15 +1,19 @@
 number 1
+set for_increment_variable
+get for_increment_variable
 set i
 number 1
 set for_step_control_variable
-get i
+get for_increment_variable
 get for_step_control_variable
 sub
-set i
+set for_increment_variable
 L0_0
-get i
+get for_increment_variable
 get for_step_control_variable
 add
+set for_increment_variable
+get for_increment_variable
 set i
 get i
 number 10

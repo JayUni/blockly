@@ -1,0 +1,46 @@
+number 0
+set i
+number 0
+set j
+number 0
+set k
+L0_0
+boolean TRUE
+JUMPNZ L1_0
+get i
+isEven
+JUMPNZ L0_1
+number 1
+change j
+JUMP L1_2
+L0_1
+L1_2
+get j
+isOdd
+JUMPNZ L0_2
+number 1
+change i
+JUMP L1_3
+L0_2
+number 17
+change k
+L1_3
+get i
+print
+get j
+print
+get k
+print
+get k
+get i
+remainder
+number 9
+cmpg
+JUMPNZ L0_3
+JUMP L1_0
+JUMP L1_4
+L0_3
+L1_4
+JUMP L0_0
+L1_0
+
