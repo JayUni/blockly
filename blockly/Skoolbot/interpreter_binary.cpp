@@ -171,17 +171,17 @@ void run() {
         push(op2 % op1);
         break;
       case CONSTRAIN:
+      {
         op1 = pop();
         op2 = pop();
-        if (op1 < op2) {
-          op1 = op2;
+        int16_t num = pop();
+        if (num > op1) {
+          num = op1;
+        } else if (num < op2) {
+          num = op2;
         }
-
-        op2 = pop();
-        if (op1 > op2) {
-          op1 = op2;
-        }
-        push(op1);
+        push(num);
+      }
         break;
       case RANDOMINT:
        std::cout<<"cannot test random integer, default number is 2"<<"\n";
@@ -371,7 +371,7 @@ void run_symbol() {
         std::cout << "ISEVEN" << std::endl;
         break;
       case ISODD:
-        std::cout << "ISEVEN" << std::endl;
+        std::cout << "ISODD" << std::endl;
         break;
       case ISPOSITIVE:
         std::cout << "ISPOSITIVE" << std::endl;
@@ -564,7 +564,7 @@ void run_both() {
         } else {
           push(1);
         }
-        std::cout << "ISEVEN" << std::endl;
+        std::cout << "ISEVEN " <<op1<< std::endl;
         break;
       case ISODD:
         op1 = pop();
@@ -610,18 +610,18 @@ void run_both() {
         std::cout << "REMAINDER" << std::endl;
         break;
       case CONSTRAIN:
+      {
         op1 = pop();
         op2 = pop();
-        if (op1 < op2) {
-          op1 = op2;
+        int16_t num = pop();
+        std::cout<<"CONSTRAIN" <<op1 << " " << op2 << " to num: " <<num<<std::endl;
+        if (num > op1) {
+          num = op1;
+        } else if (num < op2) {
+          num = op2;
         }
-
-        op2 = pop();
-        if (op1 > op2) {
-          op1 = op2;
-        }
-        push(op1);
-        std::cout << "CONSTRAIN" << std::endl;
+        push(num);
+      }
         break;
       case RANDOMINT:
        std::cout<<"cannot test random integer, default number is 2"<<"\n";
@@ -704,16 +704,16 @@ void run_both() {
         std::cout << "NULL_" << std::endl;
       case GET:
 
-          addr = code[ip++];
-          addr |= (code[ip++]<<8);
+          addr = GETARG;
+          ip += 2;
           push(memory[addr]);
           std::cout << "GET " << addr<<std::endl;
 
         break;
       case SET:
 
-          addr = code[ip++];
-          addr |= (code[ip++]<<8);
+          addr = GETARG;
+          ip += 2;
           value = pop();
           memory[addr] = value;
           std::cout << "SET " << addr<<std::endl;
@@ -725,7 +725,7 @@ void run_both() {
           addr = GETARG;
           ip += 2;
           if (value == 0) {
-             ip = addr;
+             ip = addr - 1;
              std::cout<<"JUMPZ "<<ip<<std::endl;
           }
         break;
@@ -735,16 +735,16 @@ void run_both() {
             // std::cout<<"JUMPNZ "<<addr<<std::endl;
             ip += 2;
             if (value != 0) {
-               ip = addr;
+               ip = addr - 1;
                std::cout<<"JUMPNZ "<<ip<<std::endl;
             }
           break;
       case JUMP:
-          std::cout<<"JUMP "; //addr<<std::endl;
+          //addr<<std::endl;
           // std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
           // //
           addr = GETARG;
-          ip = addr;
+          ip = addr - 1;
           std::cout<<"JUMP "<< ip <<std::endl;
         break;
       case PRINT:
@@ -775,7 +775,7 @@ void run_both() {
         ip += 2;
         value = pop();
         memory[addr] += value;
-        std::cout << "CHANGE " << std::hex<< addr <<std::endl;
+        std::cout << "CHANGE " << addr <<std::endl;
 
         break;
       default:
