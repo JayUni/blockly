@@ -183,6 +183,8 @@ function addCommand(jsonList){
                             break;
                         case 'for':
                             if (jsonList.label === 'added'){
+                                commandList.push('set for_increment_variable');
+                                commandList.push('get for_increment_variable');
                                 commandList.push('set ' + jsonList.variable);
 
                                 jsonList.label = 'variableInit';
@@ -190,12 +192,14 @@ function addCommand(jsonList){
                             }
                             if (jsonList.label === 'variableInit'){
                                 commandList.push('set for_step_control_variable');
-                                commandList.push('get ' + jsonList.variable);
+                                commandList.push('get for_increment_variable');
                                 commandList.push('get for_step_control_variable', 'sub');
-                                commandList.push('set ' + jsonList.variable);
+                                commandList.push('set for_increment_variable');
                                 commandList.push('L0_' + jsonList.label_0);
-                                commandList.push('get ' + jsonList.variable);
+                                commandList.push('get for_increment_variable');
                                 commandList.push('get for_step_control_variable', 'add');
+                                commandList.push('set for_increment_variable');
+                                commandList.push('get for_increment_variable');
                                 commandList.push('set ' + jsonList.variable);
                                 commandList.push('get ' + jsonList.variable);
 
@@ -331,7 +335,7 @@ function continueBreak(jsonList, L0, L1) {
 }
 
 
-//
+
 // // For debugging
 //
 //
@@ -352,7 +356,11 @@ function continueBreak(jsonList, L0, L1) {
 //     commandList = [];
 //     add_type_field(eval(vars_name));
 //     // console.log("JSON: \n", JSON.stringify(eval(vars_name), null, 4));
-//     console.log(generator_core(eval(vars_name)));
+//     var res = generator_core(eval(vars_name));
+//     for(var i in res){
+//         console.log(res[i]);
+//     }
+//
 //     // console.log("JSON_result: \n", JSON.stringify(eval(vars_name), null, 4));
 //
 //     console.log("\n\n#######################################\n\n")
@@ -360,10 +368,11 @@ function continueBreak(jsonList, L0, L1) {
 
 
 
-// save as text file
 
-const fs = require('fs');
-
+// // save as text file
+//
+// const fs = require('fs');
+//
 // function savetxt(path){
 //
 //     fs.readFile(path, "utf8", function(err, jsondata) {
@@ -392,19 +401,22 @@ const fs = require('fs');
 //         }
 //     });
 // }
-
-
-function travel(dir, callback) {
-    fs.readdirSync(dir).forEach(function (file) {
-        var pathname = require('path').join(dir, file);
-
-        if (fs.statSync(pathname).isDirectory()) {
-            travel(pathname, callback);
-        } else {
-            callback(pathname);
-        }
-    });
-}
-
-var path = '../tests/nodejs/addTypeFieldToGenerator_test_cases/';
+//
+//
+// function travel(dir, callback) {
+//     fs.readdirSync(dir).forEach(function (file) {
+//         var pathname = require('path').join(dir, file);
+//
+//         if (fs.statSync(pathname).isDirectory()) {
+//             travel(pathname, callback);
+//         } else {
+//             callback(pathname);
+//         }
+//     });
+// }
+//
+// var path = '../tests/nodejs/addTypeFieldToGenerator_test_cases/';
 // travel(path, savetxt);
+//
+
+
