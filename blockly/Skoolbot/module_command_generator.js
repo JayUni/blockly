@@ -6,6 +6,7 @@ module.exports = function (jsonList) {
 var commandList = [];
 var L0 = 0;
 var L1 = 0;
+var loop_val = 0;
 
 
 function generator_core(jsonList){
@@ -168,13 +169,13 @@ function addCommand(jsonList){
                             break;
                         case 'repeat':
                             if (jsonList.label === 'added'){
-                                commandList.push('set repeat_control_variable');
+                                commandList.push('set repeat_control_variable_'+ jsonList.loop_val);
                                 commandList.push('L0_' + jsonList.label_0);
                                 jsonList.label = 'variableAdded';
                                 break;
                             }
                             if (jsonList.label === 'variableAdded'){
-                                commandList.push('get repeat_control_variable', 'number 1', 'sub', 'set repeat_control_variable', 'get repeat_control_variable', 'number 0', 'cmpg');
+                                commandList.push('get repeat_control_variable_'+ jsonList.loop_val, 'number 1', 'sub', 'set repeat_control_variable_' + jsonList.loop_val, 'get repeat_control_variable_' + jsonList.loop_val, 'number 0', 'cmpg');
                                 commandList.push('JUMPNZ L1_' + jsonList.label_1);
                                 commandList.push('JUMP L0_' + jsonList.label_0);
                                 commandList.push('L1_' + jsonList.label_1);
@@ -183,23 +184,22 @@ function addCommand(jsonList){
                             break;
                         case 'for':
                             if (jsonList.label === 'added'){
-                                commandList.push('set for_increment_variable');
-                                commandList.push('get for_increment_variable');
+                                commandList.push('set for_increment_variable_' + jsonList.loop_val);
+                                commandList.push('get for_increment_variable_' + jsonList.loop_val);
                                 commandList.push('set ' + jsonList.variable);
-
                                 jsonList.label = 'variableInit';
                                 break;
                             }
                             if (jsonList.label === 'variableInit'){
-                                commandList.push('set for_step_control_variable');
-                                commandList.push('get for_increment_variable');
-                                commandList.push('get for_step_control_variable', 'sub');
-                                commandList.push('set for_increment_variable');
+                                commandList.push('set for_step_control_variable_' + jsonList.loop_val);
+                                commandList.push('get for_increment_variable_' + jsonList.loop_val);
+                                commandList.push('get for_step_control_variable_' + jsonList.loop_val, 'sub');
+                                commandList.push('set for_increment_variable_' + jsonList.loop_val);
                                 commandList.push('L0_' + jsonList.label_0);
-                                commandList.push('get for_increment_variable');
-                                commandList.push('get for_step_control_variable', 'add');
-                                commandList.push('set for_increment_variable');
-                                commandList.push('get for_increment_variable');
+                                commandList.push('get for_increment_variable_' + jsonList.loop_val);
+                                commandList.push('get for_step_control_variable_' + jsonList.loop_val, 'add');
+                                commandList.push('set for_increment_variable_' + jsonList.loop_val);
+                                commandList.push('get for_increment_variable_' + jsonList.loop_val);
                                 commandList.push('set ' + jsonList.variable);
                                 commandList.push('get ' + jsonList.variable);
 
@@ -300,6 +300,8 @@ function addLabel(jsonList) {
                                 L0 += 1;
                                 L1 += 1;
                                 jsonList.label = "added";
+                                jsonList.loop_val = loop_val;
+                                loop_val += 1;
                             }
                             break;
                         case 'for':
@@ -310,6 +312,8 @@ function addLabel(jsonList) {
                                 L0 += 1;
                                 L1 += 1;
                                 jsonList.label = "added";
+                                jsonList.loop_val = loop_val;
+                                loop_val += 1;
                             }
                             break;
                     }
@@ -334,8 +338,8 @@ function continueBreak(jsonList, L0, L1) {
     }
 }
 
-
-
+//
+//
 // // For debugging
 //
 //
@@ -352,6 +356,7 @@ function continueBreak(jsonList, L0, L1) {
 // for (var i = 0; i<1; i++){
 //     L0 = 0;
 //     L1 = 0;
+//     loop_val = 0
 //     var vars_name = 'str' + i;
 //     commandList = [];
 //     add_type_field(eval(vars_name));
@@ -367,8 +372,8 @@ function continueBreak(jsonList, L0, L1) {
 // }
 
 
-
-
+//
+//
 // // save as text file
 //
 // const fs = require('fs');
@@ -383,6 +388,7 @@ function continueBreak(jsonList, L0, L1) {
 //             commandList = [];
 //             L0 = 0;
 //             L1 = 0;
+//             loop_val = 0
 //             var reslist = generator_core(jsondata);
 //
 //             // console.log(reslist);
@@ -418,5 +424,5 @@ function continueBreak(jsonList, L0, L1) {
 // var path = '../tests/nodejs/addTypeFieldToGenerator_test_cases/';
 // travel(path, savetxt);
 //
-
-
+//
+//

@@ -9,7 +9,7 @@ set b
 get b
 print
 get n
-set repeat_control_variable
+set repeat_control_variable_0
 L0_0
 get a
 get b
@@ -21,11 +21,11 @@ get temp
 set b
 get temp
 print
-get repeat_control_variable
+get repeat_control_variable_0
 number 1
 sub
-set repeat_control_variable
-get repeat_control_variable
+set repeat_control_variable_0
+get repeat_control_variable_0
 number 0
 cmpg
 JUMPNZ L1_0
