@@ -2,6 +2,45 @@ module.exports = function (jsonList) {
     return bytecode_generator(jsonList);
 };
 
+// #define NOP_          (0x00)
+// #define NUMBER        (0x01)
+// #define ADD           (0x02)
+// #define SUB           (0x03)
+// #define MUL           (0x04)
+// #define DIV           (0x05)
+// #define POW           (0x06)
+// #define ABS           (0x07)
+// #define NEG           (0x08)
+// #define ISEVEN        (0x09)
+// #define ISODD         (0x0A)
+// #define ISPOSITIVE    (0x0B)
+// #define ISNEGATIVE    (0x0C)
+// #define ISDIVISBLEBY  (0x0D)
+// #define REMAINDER     (0x0E)
+// #define CONSTRAIN     (0x0F)
+// #define RANDOMINT     (0x10)
+// #define CMPE          (0x11)
+// #define CMPNE         (0x12)
+// #define CMPL          (0x13)
+// #define CMPLE         (0x14)
+// #define CMPG          (0x15)
+// #define CMPGE         (0x16)
+// #define TRUE          (0x17)
+// #define FALSE         (0x18)
+// #define NEGATE        (0x19)
+// #define NULL_         (0x1A)
+// #define GET           (0x1B)
+// #define SET           (0x1C)
+// #define JUMPZ         (0x1D)
+// #define JUMP          (0x1E)
+// #define PRINT         (0x1F)
+// #define BOOLEAN       (0x20)
+// #define STOP          (0x21)
+// #define JUMPNZ        (0x22)
+// #define CHANGE        (0x23)
+// #define AND           (0x24)
+// #define OR            (0x25)
+
 
 // initialize global variable
 
@@ -37,7 +76,9 @@ var commandMap = {
         'cmpge': '0x16',
         'negate': '0x19',
         'null': '0x1a',
-        'stop': '0x21'
+        'stop': '0x21',
+        'and': '0x24',
+        'or': '0x25'
 
     },
     'single_value':{
@@ -224,20 +265,18 @@ function int2Hex(value) {
 }
 
 
-// For debugging
+// // For debugging
 
 
-//
-//
 // var generator_core = require('./module_command_generator.js');
 // var add_type_field = require('./module_add_type_field.js');
-
-// var str0 = JSON.parse(`[{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"logic_boolean_operator_compare","operator":"cmpl","argument":[{"block_name":"math_number_number","number":"1"},{"block_name":"math_number_number","number":"2"}]},"branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"logic_boolean_boolean","value":"TRUE"}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"logic_boolean_boolean","value":"FALSE"}]}]}]}]
+//
+// var str0 = JSON.parse(`[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"logic_boolean_operator_logicOperation","operator":"and","argument":[{"block_name":"logic_boolean_boolean","value":"TRUE"},{"block_name":"logic_boolean_boolean","value":"FALSE"}]}]},{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"logic_boolean_operator_logicOperation","operator":"or","argument":[{"block_name":"logic_boolean_boolean","value":"TRUE"},{"block_name":"logic_boolean_boolean","value":"FALSE"}]}]}]
 // `);
 // var str1 = JSON.parse(`[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"a","argument":[{"block_name":"math_number_number","number":"15"}]},{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"logic_boolean_operator_compare","operator":"cmple","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"a"},{"block_name":"math_number_number","number":"30"}]},"branchCode":[{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"logic_boolean_operator_compare","operator":"cmpg","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"a"},{"block_name":"math_number_number","number":"6"}]},"branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"a"}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[]}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"logic_boolean_boolean","value":"FALSE"}]}]}]}]
 // `);
 //
-// for (var i = 0; i<2; i++){
+// for (var i = 0; i<1; i++){
 //     var vars_name = 'str' + i;
 //     console.log(bytecode_generator(generator_core(add_type_field(eval(vars_name)))));
 //     // console.log("JSON_result: \n", JSON.stringify(eval(vars_name), null, 4));
