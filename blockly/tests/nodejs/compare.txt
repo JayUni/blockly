@@ -1,87 +1,170 @@
-ip: 0 Number 8
-ip: 3 SET 0
-ip: 6 Number 1
-ip: 9 Number 7
-ip: 12 ADD
-ip: 13 GET 0
-ip: 16 CMPE
-ip: 17 JUMPNZ 155
-ip: 20 BOOLEAN 17
-ip: 16 PRINT
-ip: 17 Number 1
-ip: 1a CHANGE 0
-ip: 1d Number 1
-ip: 20 GET 0
-ip: 23 ADD
-ip: 24 Number 9
-ip: 27 CMPE
-ip: 28 JUMPNZ 31
-ip: 2b BOOLEAN 18
-ip: 2d PRINT
-ip: 2e JUMP 70
-ip: 31 NOP
-ip: 32 Number 9
-ip: 35 GET 0
-ip: 38 CMPE
-ip: 39 JUMPNZ 6f
-ip: 3c GET 0
-ip: 3f ISEVEN
-ip: 40 JUMPNZ 49
-ip: 43 BOOLEAN 18
-ip: 45 PRINT
-ip: 46 JUMP 68
-ip: 49 NOP
-ip: 4a Number 1
-ip: 4d GET 0
-ip: 50 Number 2
-ip: 53 REMAINDER
-ip: 54 CMPE
-ip: 55 JUMPNZ 64
-ip: 58 Number 1
-ip: 5b CHANGE 0
-ip: 5e BOOLEAN 17
-ip: 60 PRINT
-ip: 61 JUMP 68
-ip: 64 NOP
-ip: 65 BOOLEAN 18
-ip: 67 PRINT
-ip: 68 NOP
-ip: 69 BOOLEAN 17
-ip: 6b PRINT
-ip: 6c JUMP 70
-ip: 6f NOP
-ip: 70 NOP
-ip: 71 GET 0
-ip: 74 ISEVEN
-ip: 75 JUMPNZ 7e
-ip: 78 BOOLEAN 18
-ip: 7a PRINT
-ip: 7b JUMP 97
-ip: 7e NOP
-ip: 7f Number 0
-ip: 82 GET 0
-ip: 85 Number 2
-ip: 88 REMAINDER
-ip: 89 CMPE
-ip: 8a JUMPNZ 93
-ip: 8d BOOLEAN 17
-ip: 8f PRINT
-ip: 90 JUMP 97
-ip: 93 NOP
-ip: 94 BOOLEAN 18
-ip: 96 PRINT
-ip: 97 NOP
-ip: 98 JUMP b1
-ip: 9b NOP
-ip: 9c Number 2
-ip: 9f Number 7
-ip: a2 Number 1
-ip: a5 ADD
-ip: a6 CMPE
-ip: a7 JUMPNZ b0
-ip: aa BOOLEAN 18
-ip: ac PRINT
-ip: ad JUMP b1
-ip: b0 NOP
-ip: b1 NOP
-ip: b2 STOP
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+110
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+120
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+130
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+140
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+150
