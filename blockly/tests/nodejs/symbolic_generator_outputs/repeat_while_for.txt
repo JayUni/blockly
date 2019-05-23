@@ -1,27 +1,27 @@
 number 0
 set n
 number 5
-set repeat_control_variable
+set repeat_control_variable_0
 L0_0
 L0_1
 boolean TRUE
 JUMPNZ L1_1
 number 1
-set for_increment_variable
-get for_increment_variable
+set for_increment_variable_1
+get for_increment_variable_1
 set i
 number 1
-set for_step_control_variable
-get for_increment_variable
-get for_step_control_variable
+set for_step_control_variable_1
+get for_increment_variable_1
+get for_step_control_variable_1
 sub
-set for_increment_variable
+set for_increment_variable_1
 L0_2
-get for_increment_variable
-get for_step_control_variable
+get for_increment_variable_1
+get for_step_control_variable_1
 add
-set for_increment_variable
-get for_increment_variable
+set for_increment_variable_1
+get for_increment_variable_1
 set i
 get i
 number 10
@@ -47,14 +47,13 @@ JUMP L0_1
 L1_1
 get n
 print
-get repeat_control_variable
+get repeat_control_variable_0
 number 1
 sub
-set repeat_control_variable
-get repeat_control_variable
+set repeat_control_variable_0
+get repeat_control_variable_0
 number 0
 cmpg
 JUMPNZ L1_0
 JUMP L0_0
 L1_0
-

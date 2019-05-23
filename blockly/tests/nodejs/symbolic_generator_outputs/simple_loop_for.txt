@@ -1,19 +1,19 @@
 number 1
-set for_increment_variable
-get for_increment_variable
+set for_increment_variable_0
+get for_increment_variable_0
 set i
 number 1
-set for_step_control_variable
-get for_increment_variable
-get for_step_control_variable
+set for_step_control_variable_0
+get for_increment_variable_0
+get for_step_control_variable_0
 sub
-set for_increment_variable
+set for_increment_variable_0
 L0_0
-get for_increment_variable
-get for_step_control_variable
+get for_increment_variable_0
+get for_step_control_variable_0
 add
-set for_increment_variable
-get for_increment_variable
+set for_increment_variable_0
+get for_increment_variable_0
 set i
 get i
 number 10
@@ -23,4 +23,3 @@ get i
 print
 JUMP L0_0
 L1_0
-

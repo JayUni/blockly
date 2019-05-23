@@ -17,4 +17,3 @@ L0_1
 number 0
 print
 L1_2
-

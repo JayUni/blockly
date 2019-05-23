@@ -1,7 +1,7 @@
 number 1
 set i
 number 10
-set repeat_control_variable
+set repeat_control_variable_0
 L0_0
 get i
 print
@@ -9,11 +9,11 @@ get i
 number 1
 add
 set i
-get repeat_control_variable
+get repeat_control_variable_0
 number 1
 sub
-set repeat_control_variable
-get repeat_control_variable
+set repeat_control_variable_0
+get repeat_control_variable_0
 number 0
 cmpg
 JUMPNZ L1_0
