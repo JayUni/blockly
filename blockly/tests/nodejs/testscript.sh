@@ -6,7 +6,7 @@ g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
 # for xml in xmlToJson_test_cases/*.xml
 # do
     # conver xml to json
-    xml="xmlToJson_test_cases/complex_test1.xml"
+    xml="xmlToJson_test_cases/for_if_constraint_abs_even_neg.xml"
     json="jsonToAddTyepField_test_cases/`basename $xml .xml`.json"
 
     if [ -e $json ]

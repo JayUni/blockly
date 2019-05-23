@@ -7,24 +7,33 @@ L0_1
 boolean TRUE
 JUMPNZ L1_1
 number 1
-set for_increment_variable_1
-get for_increment_variable_1
-set i
+set for_start_variable_1
+boolean TRUE
+set for_control_variable_1
 number 1
-set for_step_control_variable_1
-get for_increment_variable_1
-get for_step_control_variable_1
-sub
-set for_increment_variable_1
+set for_step_variable_1
 L0_2
-get for_increment_variable_1
-get for_step_control_variable_1
-add
-set for_increment_variable_1
-get for_increment_variable_1
-set i
-get i
+get for_control_variable_1
+JUMPNZ L1_3
 number 10
+set for_end_variable_1
+get for_start_variable_1
+set for_i_variable_1
+get for_start_variable_1
+set i
+boolean FALSE
+set for_control_variable_1
+JUMP L0_3
+L1_3
+get for_i_variable_1
+get for_step_variable_1
+add
+set for_i_variable_1
+get for_i_variable_1
+set i
+L0_3
+get for_i_variable_1
+get for_end_variable_1
 cmple
 JUMPNZ L1_2
 get n
@@ -38,11 +47,11 @@ print
 get n
 number 100
 cmpg
-JUMPNZ L0_3
+JUMPNZ L0_4
 JUMP L1_1
-JUMP L1_4
-L0_3
-L1_4
+JUMP L1_5
+L0_4
+L1_5
 JUMP L0_1
 L1_1
 get n

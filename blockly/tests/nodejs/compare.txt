@@ -1,74 +1,20 @@
-ip: 0 Number 200
-ip: 3 SET 0
-ip: 6 Number 1
-ip: 9 SET 2
-ip: 12 BOOLEAN 17
-ip: e SET 4
-ip: 11 Number 2
-ip: 14 SET 6
-ip: 17 NOP
-ip: 18 GET 4
-ip: 1b JUMPNZ 38
-ip: 1e GET 0
-ip: 21 SET 8
-ip: 24 GET 2
-ip: 27 SET a
-ip: 2a GET 2
-ip: 2d SET c
-ip: 30 BOOLEAN 18
-ip: 32 SET 4
-ip: 35 JUMP 49
-ip: 38 NOP
-ip: 39 GET a
-ip: 3c GET 6
-ip: 3f ADD
-ip: 40 SET a
-ip: 43 GET a
-ip: 46 SET c
-ip: 49 NOP
-ip: 4a GET a
-ip: 4d GET 8
-ip: 50 CMPLE
-ip: 51 JUMPNZ 148
-ip: 54 GET c
-ip: 57 GET 0
-ip: 5a Number 3
-ip: 5d REMAINDER
-ip: 5e CMPE
-ip: 5f JUMPNZ 69
-ip: 62 GET c
-ip: 65 PRINT
-ip: 66 JUMP a2
-ip: 69 NOP
-ip: 6a GET c
-ip: 6d ISEVEN
-ip: 6e JUMPNZ 7e
-ip: 71 GET 0
-ip: 74 PRINT
-ip: 75 Number 1
-ip: 78 CHANGE c
-ip: 7b JUMP a1
-ip: 7e NOP
-ip: 7f GET c
-ip: 82 Number 9
-ip: 85 ISDIVISBLEBY
-ip: 86 JUMPNZ 90
-ip: 89 GET 0
-ip: 8c PRINT
-ip: 8d JUMP a0
-ip: 90 NOP
-ip: 91 GET c
-ip: 94 ISODD
-ip: 95 JUMPNZ 9f
-ip: 98 Number 3039
-ip: 9b PRINT
-ip: 9c JUMP a0
-ip: 9f NOP
-ip: a0 NOP
-ip: a1 NOP
-ip: a2 NOP
-ip: a3 GET 0
-ip: a6 ISEVEN
-ip: a7 GET c
-ip: aa ISEVEN
-ip: ab 
+6
+1
+8
+1
+10
+1
+12
+1
+14
+1
+16
+1
+18
+1
+20
+1
+22
+1
+24
+1
