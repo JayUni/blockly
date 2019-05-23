@@ -1,51 +1,8 @@
-ip: 0 NUMBER 200
-ip: 3 SET 0
-ip: 6 NUMBER 1
-ip: 9 SET 2
-ip: 12 GET 2
-ip: 15 SET 4
-ip: 18 NUMBER 2
-ip: 21 SET 6
-ip: 24 GET 2
-ip: 27 GET 6
-ip: 30 SUB
-ip: 31 SET 2
-ip: 34 NOP
-ip: 35 GET 2
-ip: 38 GET 6
-ip: 41 ADD
-ip: 42 SET 2
-ip: 45 GET 2
-ip: 48 SET 4
-ip: 51 GET 4
-ip: 54 GET 0
-ip: 57 CMPLE
-ip: 58 ip: 61 GET 4
-ip: 64 GET 0
-ip: 67 NUMBER 3
-ip: 70 REMAINDER
-ip: 71 CMPE
-ip: 72 JUMPNZ 81
-ip: 82 NOP
-ip: 83 GET 4
-ip: 86 ISEVEN 1
-ip: 87 JUMPNZ 102
-ip: 103 NOP
-ip: 104 GET 4
-ip: 107 NUMBER 9
-ip: 110 ISDIVISBLEBY
-ip: 111 JUMPNZ 120
-ip: 121 NOP
-ip: 122 GET 4
-ip: 125 ISODD
-ip: 126 ip: 129 NUMBER 12345
-ip: 132 PRINT 12345
-ip: 133 JUMP 136
-ip: 137 NOP
-ip: 138 NOP
-ip: 139 NOP
-ip: 140 GET 0
-ip: 143 ISEVEN 200
-ip: 144 GET 4
-ip: 147 ISEVEN 1
-ip: 148
+12345
+201
+1
+12345
+3
+12345
+4
+5
