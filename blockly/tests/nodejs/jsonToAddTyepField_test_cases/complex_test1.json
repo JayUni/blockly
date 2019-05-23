@@ -6,11 +6,9 @@
         "argument": [
             {
                 "block_name": "math_number_number",
-                "number": "200",
-                "valueType": "number"
+                "number": "200"
             }
-        ],
-        "valueType": "statement"
+        ]
     },
     {
         "block_name": "controls_statement_for",
@@ -19,23 +17,20 @@
         "start": [
             {
                 "block_name": "math_number_number",
-                "number": "1",
-                "valueType": "number"
+                "number": "1"
             }
         ],
         "step": [
             {
                 "block_name": "math_number_number",
-                "number": "2",
-                "valueType": "number"
+                "number": "2"
             }
         ],
         "end": [
             {
                 "block_name": "variables_statement_get",
                 "functionName": "variables_get",
-                "varName": "num",
-                "valueType": "statement"
+                "varName": "num"
             }
         ],
         "branch": [
@@ -52,8 +47,7 @@
                                 {
                                     "block_name": "variables_statement_get",
                                     "functionName": "variables_get",
-                                    "varName": "i",
-                                    "valueType": "statement"
+                                    "varName": "i"
                                 },
                                 {
                                     "block_name": "math_number_operator_modulo",
@@ -62,19 +56,15 @@
                                         {
                                             "block_name": "variables_statement_get",
                                             "functionName": "variables_get",
-                                            "varName": "num",
-                                            "valueType": "statement"
+                                            "varName": "num"
                                         },
                                         {
                                             "block_name": "math_number_number",
-                                            "number": "3",
-                                            "valueType": "number"
+                                            "number": "3"
                                         }
-                                    ],
-                                    "valueType": "number"
+                                    ]
                                 }
-                            ],
-                            "valueType": "boolean"
+                            ]
                         },
                         "branchCode": [
                             {
@@ -84,14 +74,11 @@
                                     {
                                         "block_name": "variables_statement_get",
                                         "functionName": "variables_get",
-                                        "varName": "i",
-                                        "valueType": "statement"
+                                        "varName": "i"
                                     }
-                                ],
-                                "valueType": "statement"
+                                ]
                             }
-                        ],
-                        "valueType": "statement"
+                        ]
                     },
                     {
                         "block_name": "controls_statement_else",
@@ -110,11 +97,9 @@
                                                 {
                                                     "block_name": "variables_statement_get",
                                                     "functionName": "variables_get",
-                                                    "varName": "i",
-                                                    "valueType": "statement"
+                                                    "varName": "i"
                                                 }
-                                            ],
-                                            "valueType": "boolean"
+                                            ]
                                         },
                                         "branchCode": [
                                             {
@@ -124,11 +109,9 @@
                                                     {
                                                         "block_name": "variables_statement_get",
                                                         "functionName": "variables_get",
-                                                        "varName": "num",
-                                                        "valueType": "statement"
+                                                        "varName": "num"
                                                     }
-                                                ],
-                                                "valueType": "statement"
+                                                ]
                                             },
                                             {
                                                 "block_name": "variables_statement_change",
@@ -137,14 +120,11 @@
                                                 "argument": [
                                                     {
                                                         "block_name": "math_number_number",
-                                                        "number": "1",
-                                                        "valueType": "number"
+                                                        "number": "1"
                                                     }
-                                                ],
-                                                "valueType": "statement"
+                                                ]
                                             }
-                                        ],
-                                        "valueType": "statement"
+                                        ]
                                     },
                                     {
                                         "block_name": "controls_statement_else",
@@ -163,16 +143,13 @@
                                                                 {
                                                                     "block_name": "variables_statement_get",
                                                                     "functionName": "variables_get",
-                                                                    "varName": "i",
-                                                                    "valueType": "statement"
+                                                                    "varName": "i"
                                                                 },
                                                                 {
                                                                     "block_name": "math_number_number",
-                                                                    "number": "9",
-                                                                    "valueType": "number"
+                                                                    "number": "9"
                                                                 }
-                                                            ],
-                                                            "valueType": "boolean"
+                                                            ]
                                                         },
                                                         "branchCode": [
                                                             {
@@ -182,14 +159,11 @@
                                                                     {
                                                                         "block_name": "variables_statement_get",
                                                                         "functionName": "variables_get",
-                                                                        "varName": "num",
-                                                                        "valueType": "statement"
+                                                                        "varName": "num"
                                                                     }
-                                                                ],
-                                                                "valueType": "statement"
+                                                                ]
                                                             }
-                                                        ],
-                                                        "valueType": "statement"
+                                                        ]
                                                     },
                                                     {
                                                         "block_name": "controls_statement_elseif",
@@ -201,11 +175,9 @@
                                                                 {
                                                                     "block_name": "variables_statement_get",
                                                                     "functionName": "variables_get",
-                                                                    "varName": "i",
-                                                                    "valueType": "statement"
+                                                                    "varName": "i"
                                                                 }
-                                                            ],
-                                                            "valueType": "boolean"
+                                                            ]
                                                         },
                                                         "branchCode": [
                                                             {
@@ -214,35 +186,26 @@
                                                                 "argument": [
                                                                     {
                                                                         "block_name": "math_number_number",
-                                                                        "number": "12345",
-                                                                        "valueType": "number"
+                                                                        "number": "12345"
                                                                     }
-                                                                ],
-                                                                "valueType": "statement"
+                                                                ]
                                                             }
-                                                        ],
-                                                        "valueType": "statement"
+                                                        ]
                                                     },
                                                     {
                                                         "block_name": "controls_statement_else",
                                                         "statements": "else",
-                                                        "branchCode": [],
-                                                        "valueType": "statement"
+                                                        "branchCode": []
                                                     }
-                                                ],
-                                                "valueType": "statement"
+                                                ]
                                             }
-                                        ],
-                                        "valueType": "statement"
+                                        ]
                                     }
-                                ],
-                                "valueType": "statement"
+                                ]
                             }
-                        ],
-                        "valueType": "statement"
+                        ]
                     }
-                ],
-                "valueType": "statement"
+                ]
             },
             {
                 "block_name": "controls_statement_ifelse",
@@ -261,11 +224,9 @@
                                         {
                                             "block_name": "variables_statement_get",
                                             "functionName": "variables_get",
-                                            "varName": "num",
-                                            "valueType": "statement"
+                                            "varName": "num"
                                         }
-                                    ],
-                                    "valueType": "boolean"
+                                    ]
                                 },
                                 {
                                     "block_name": "math_boolean_numberProperty",
@@ -274,14 +235,11 @@
                                         {
                                             "block_name": "variables_statement_get",
                                             "functionName": "variables_get",
-                                            "varName": "i",
-                                            "valueType": "statement"
+                                            "varName": "i"
                                         }
-                                    ],
-                                    "valueType": "boolean"
+                                    ]
                                 }
-                            ],
-                            "valueType": "boolean"
+                            ]
                         },
                         "branchCode": [
                             {
@@ -291,11 +249,9 @@
                                 "argument": [
                                     {
                                         "block_name": "math_number_number",
-                                        "number": "1",
-                                        "valueType": "number"
+                                        "number": "1"
                                     }
-                                ],
-                                "valueType": "statement"
+                                ]
                             },
                             {
                                 "block_name": "text_statement_print",
@@ -304,14 +260,11 @@
                                     {
                                         "block_name": "variables_statement_get",
                                         "functionName": "variables_get",
-                                        "varName": "i",
-                                        "valueType": "statement"
+                                        "varName": "i"
                                     }
-                                ],
-                                "valueType": "statement"
+                                ]
                             }
-                        ],
-                        "valueType": "statement"
+                        ]
                     },
                     {
                         "block_name": "controls_statement_elseif",
@@ -327,11 +280,9 @@
                                         {
                                             "block_name": "variables_statement_get",
                                             "functionName": "variables_get",
-                                            "varName": "i",
-                                            "valueType": "statement"
+                                            "varName": "i"
                                         }
-                                    ],
-                                    "valueType": "boolean"
+                                    ]
                                 },
                                 {
                                     "block_name": "math_boolean_numberProperty",
@@ -340,14 +291,11 @@
                                         {
                                             "block_name": "variables_statement_get",
                                             "functionName": "variables_get",
-                                            "varName": "num",
-                                            "valueType": "statement"
+                                            "varName": "num"
                                         }
-                                    ],
-                                    "valueType": "boolean"
+                                    ]
                                 }
-                            ],
-                            "valueType": "boolean"
+                            ]
                         },
                         "branchCode": [
                             {
@@ -357,11 +305,9 @@
                                 "argument": [
                                     {
                                         "block_name": "math_number_number",
-                                        "number": "1",
-                                        "valueType": "number"
+                                        "number": "1"
                                     }
-                                ],
-                                "valueType": "statement"
+                                ]
                             },
                             {
                                 "block_name": "text_statement_print",
@@ -370,14 +316,11 @@
                                     {
                                         "block_name": "variables_statement_get",
                                         "functionName": "variables_get",
-                                        "varName": "num",
-                                        "valueType": "statement"
+                                        "varName": "num"
                                     }
-                                ],
-                                "valueType": "statement"
+                                ]
                             }
-                        ],
-                        "valueType": "statement"
+                        ]
                     },
                     {
                         "block_name": "controls_statement_else",
@@ -391,10 +334,8 @@
                                     "operator": "math.floor",
                                     "argument": {
                                         "block_name": "math_number_number",
-                                        "number": "10",
-                                        "valueType": "number"
-                                    },
-                                    "valueType": "statement"
+                                        "number": "10"
+                                    }
                                 },
                                 "branch": [
                                     {
@@ -404,20 +345,15 @@
                                         "argument": [
                                             {
                                                 "block_name": "math_number_number",
-                                                "number": "-1",
-                                                "valueType": "number"
+                                                "number": "-1"
                                             }
-                                        ],
-                                        "valueType": "statement"
+                                        ]
                                     }
-                                ],
-                                "valueType": "statement"
+                                ]
                             }
-                        ],
-                        "valueType": "statement"
+                        ]
                     }
-                ],
-                "valueType": "statement"
+                ]
             },
             {
                 "block_name": "controls_statement_ifelse",
@@ -432,16 +368,13 @@
                                 {
                                     "block_name": "variables_statement_get",
                                     "functionName": "variables_get",
-                                    "varName": "i",
-                                    "valueType": "statement"
+                                    "varName": "i"
                                 },
                                 {
                                     "block_name": "math_number_number",
-                                    "number": "5",
-                                    "valueType": "number"
+                                    "number": "5"
                                 }
-                            ],
-                            "valueType": "boolean"
+                            ]
                         },
                         "branchCode": [
                             {
@@ -455,19 +388,15 @@
                                         "argument": [
                                             {
                                                 "block_name": "math_number_number",
-                                                "number": "2",
-                                                "valueType": "number"
+                                                "number": "2"
                                             },
                                             {
                                                 "block_name": "math_number_number",
-                                                "number": "2",
-                                                "valueType": "number"
+                                                "number": "2"
                                             }
-                                        ],
-                                        "valueType": "number"
+                                        ]
                                     }
-                                ],
-                                "valueType": "statement"
+                                ]
                             },
                             {
                                 "block_name": "text_statement_print",
@@ -476,14 +405,11 @@
                                     {
                                         "block_name": "variables_statement_get",
                                         "functionName": "variables_get",
-                                        "varName": "num",
-                                        "valueType": "statement"
+                                        "varName": "num"
                                     }
-                                ],
-                                "valueType": "statement"
+                                ]
                             }
-                        ],
-                        "valueType": "statement"
+                        ]
                     },
                     {
                         "block_name": "controls_statement_else",
@@ -499,16 +425,13 @@
                                         {
                                             "block_name": "variables_statement_get",
                                             "functionName": "variables_get",
-                                            "varName": "i",
-                                            "valueType": "statement"
+                                            "varName": "i"
                                         },
                                         {
                                             "block_name": "math_number_number",
-                                            "number": "2",
-                                            "valueType": "number"
+                                            "number": "2"
                                         }
-                                    ],
-                                    "valueType": "boolean"
+                                    ]
                                 },
                                 "end_type": "while",
                                 "branch": [
@@ -519,20 +442,15 @@
                                         "argument": [
                                             {
                                                 "block_name": "math_number_number",
-                                                "number": "1",
-                                                "valueType": "number"
+                                                "number": "1"
                                             }
-                                        ],
-                                        "valueType": "statement"
+                                        ]
                                     }
-                                ],
-                                "valueType": "statement"
+                                ]
                             }
-                        ],
-                        "valueType": "statement"
+                        ]
                     }
-                ],
-                "valueType": "statement"
+                ]
             },
             {
                 "block_name": "text_statement_print",
@@ -541,11 +459,9 @@
                     {
                         "block_name": "variables_statement_get",
                         "functionName": "variables_get",
-                        "varName": "i",
-                        "valueType": "statement"
+                        "varName": "i"
                     }
-                ],
-                "valueType": "statement"
+                ]
             },
             {
                 "block_name": "controls_statement_ifelse",
@@ -560,36 +476,28 @@
                                 {
                                     "block_name": "variables_statement_get",
                                     "functionName": "variables_get",
-                                    "varName": "i",
-                                    "valueType": "statement"
+                                    "varName": "i"
                                 },
                                 {
                                     "block_name": "math_number_number",
-                                    "number": "123",
-                                    "valueType": "number"
+                                    "number": "123"
                                 }
-                            ],
-                            "valueType": "boolean"
+                            ]
                         },
                         "branchCode": [
                             {
                                 "block_name": "controls_statement_break",
-                                "statements": "break",
-                                "valueType": "statement"
+                                "statements": "break"
                             }
-                        ],
-                        "valueType": "statement"
+                        ]
                     },
                     {
                         "block_name": "controls_statement_else",
                         "statements": "else",
-                        "branchCode": [],
-                        "valueType": "statement"
+                        "branchCode": []
                     }
-                ],
-                "valueType": "statement"
+                ]
             }
-        ],
-        "valueType": "statement"
+        ]
     }
 ]
