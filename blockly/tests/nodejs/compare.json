@@ -62,6 +62,22 @@
                                             }
                                         ],
                                         "valueType": "number"
+                                    },
+                                    "valueType": "statement"
+                                },
+                                "branch": [
+                                    {
+                                        "block_name": "variables_statement_change",
+                                        "functionName": "change",
+                                        "varName": "num",
+                                        "argument": [
+                                            {
+                                                "block_name": "math_number_number",
+                                                "number": "-1",
+                                                "valueType": "number"
+                                            }
+                                        ],
+                                        "valueType": "statement"
                                     }
                                 ],
                                 "valueType": "statement"
@@ -222,6 +238,48 @@
                         "block_name": "variables_statement_get",
                         "functionName": "variables_get",
                         "varName": "i",
+                        "valueType": "statement"
+                    }
+                ],
+                "valueType": "statement"
+            },
+            {
+                "block_name": "controls_statement_ifelse",
+                "structure": [
+                    {
+                        "block_name": "controls_statement_if",
+                        "statements": "if",
+                        "condition": {
+                            "block_name": "logic_boolean_operator_compare",
+                            "operator": "cmpge",
+                            "argument": [
+                                {
+                                    "block_name": "variables_statement_get",
+                                    "functionName": "variables_get",
+                                    "varName": "i",
+                                    "valueType": "statement"
+                                },
+                                {
+                                    "block_name": "math_number_number",
+                                    "number": "123",
+                                    "valueType": "number"
+                                }
+                            ],
+                            "valueType": "boolean"
+                        },
+                        "branchCode": [
+                            {
+                                "block_name": "controls_statement_break",
+                                "statements": "break",
+                                "valueType": "statement"
+                            }
+                        ],
+                        "valueType": "statement"
+                    },
+                    {
+                        "block_name": "controls_statement_else",
+                        "statements": "else",
+                        "branchCode": [],
                         "valueType": "statement"
                     }
                 ],

@@ -42,6 +42,8 @@
 #define STOP          (0x21)
 #define JUMPNZ        (0x22)
 #define CHANGE        (0x23)
+#define AND           (0x24)
+#define OR            (0x25)
 
 #define STACK_SIZE    (512)
 #define MEMORY_SIZE   (1024)
@@ -315,12 +317,34 @@ void run() {
       case STOP:
         return;
       case CHANGE:
-      {
-        size_t addr = GETARG;
-        ip += 2;
-        int16_t value = pop();
-        memory[addr] += value;
-      }
+        {
+          size_t addr = GETARG;
+          ip += 2;
+          int16_t value = pop();
+          memory[addr] += value;
+        }
+        break;
+      case AND:
+        {
+          int16_t val1 = pop();
+          int16_t val2 = pop();
+          if (val1 == 0 && val2 == 0) {
+            push(0);
+          } else {
+            push(1);
+          }
+        }
+        break;
+      case OR:
+        {
+          int16_t val1 = pop();
+          int16_t val2 = pop();
+          if (val1 == 0 || val2 == 0) {
+            push(0);
+          } else {
+            push(1);
+          }
+        }
         break;
       default:
         std::cerr<<"Invalid command: "<<std::hex<<(int16_t)code[ip]<<std::endl;
@@ -482,6 +506,16 @@ void run_symbol() {
           std::cout << (size_t)GETARG << std::endl;
           ip+=2;
         break;
+      case AND:
+        {
+          std::cout << "AND" << std::endl;
+        }
+        break;
+      case OR:
+        {
+          std::cout << "OR" << std::endl;
+        }
+        break;
       default:
         std::cerr<<"Invalid command: "<<std::hex<<(int16_t)code[ip]<<std::endl;
         return;
@@ -564,7 +598,7 @@ void run_both() {
         } else {
           push(1);
         }
-        std::cout << "ISEVEN " <<op1<< std::endl;
+        std::cout << "ISEVEN " <<op1%2<< std::endl;
         break;
       case ISODD:
         op1 = pop();
@@ -573,7 +607,7 @@ void run_both() {
         } else {
           push(1);
         }
-        std::cout << "ISODD" << std::endl;
+        std::cout << "ISODD " <<op1%2<< std::endl;
         break;
       case ISPOSITIVE:
         op1 = pop();
@@ -725,7 +759,7 @@ void run_both() {
           addr = GETARG;
           ip += 2;
           if (value == 0) {
-             ip = addr - 1;
+             ip = addr;
              std::cout<<"JUMPZ "<<ip<<std::endl;
           }
         break;
@@ -735,7 +769,7 @@ void run_both() {
             // std::cout<<"JUMPNZ "<<addr<<std::endl;
             ip += 2;
             if (value != 0) {
-               ip = addr - 1;
+               ip = addr;
                std::cout<<"JUMPNZ "<<ip<<std::endl;
             }
           break;
@@ -744,7 +778,7 @@ void run_both() {
           // std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
           // //
           addr = GETARG;
-          ip = addr - 1;
+          ip = addr;
           std::cout<<"JUMP "<< ip <<std::endl;
         break;
       case PRINT:
@@ -777,6 +811,30 @@ void run_both() {
         memory[addr] += value;
         std::cout << "CHANGE " << addr <<std::endl;
 
+        break;
+      case AND:
+        {
+          int16_t val1 = pop();
+          int16_t val2 = pop();
+          if (val1 == 0 && val2 == 0) {
+            push(0);
+          } else {
+            push(1);
+          }
+          std::cout << "AND " << (val1 == 0 && val2 == 0) <<std::endl;
+        }
+        break;
+      case OR:
+        {
+          int16_t val1 = pop();
+          int16_t val2 = pop();
+          if (val1 == 0 || val2 == 0) {
+            push(0);
+          } else {
+            push(1);
+          }
+          std::cout << "OR " << (val1 == 0 || val2 == 0) <<std::endl;
+        }
         break;
       default:
         std::cerr<<"Invalid reading command: "<<std::hex<<(int16_t)code[ip]<<std::endl;
