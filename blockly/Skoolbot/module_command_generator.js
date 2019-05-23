@@ -184,37 +184,46 @@ function addCommand(jsonList){
                             break;
                         case 'for':
                             if (jsonList.label === 'added'){
-                                commandList.push('set for_increment_variable_' + jsonList.loop_val);
-                                commandList.push('get for_increment_variable_' + jsonList.loop_val);
-                                commandList.push('set ' + jsonList.variable);
+                                commandList.push('set for_start_variable_' + jsonList.loop_val);
+                                commandList.push('boolean TRUE');
+                                commandList.push('set for_control_variable_' + jsonList.loop_val);
                                 jsonList.label = 'variableInit';
                                 break;
                             }
                             if (jsonList.label === 'variableInit'){
-                                commandList.push('set for_step_control_variable_' + jsonList.loop_val);
-                                commandList.push('get for_increment_variable_' + jsonList.loop_val);
-                                commandList.push('get for_step_control_variable_' + jsonList.loop_val, 'sub');
-                                commandList.push('set for_increment_variable_' + jsonList.loop_val);
+                                commandList.push('set for_step_variable_' + jsonList.loop_val);
                                 commandList.push('L0_' + jsonList.label_0);
-                                commandList.push('get for_increment_variable_' + jsonList.loop_val);
-                                commandList.push('get for_step_control_variable_' + jsonList.loop_val, 'add');
-                                commandList.push('set for_increment_variable_' + jsonList.loop_val);
-                                commandList.push('get for_increment_variable_' + jsonList.loop_val);
-                                commandList.push('set ' + jsonList.variable);
-                                commandList.push('get ' + jsonList.variable);
-
+                                commandList.push('get for_control_variable_' + jsonList.loop_val);
+                                commandList.push('JUMPNZ L1_' + jsonList.loop_L1);
                                 jsonList.label = 'jumpAdded';
                                 break;
                             }
                             if (jsonList.label === 'jumpAdded'){
+
+                                commandList.push('set for_end_variable_' + jsonList.loop_val);
+                                commandList.push('get for_start_variable_' + jsonList.loop_val);
+                                commandList.push('set for_i_variable_' + jsonList.loop_val);
+                                commandList.push('get for_start_variable_' + jsonList.loop_val);
+                                commandList.push('set ' + jsonList.variable);
+                                commandList.push('boolean FALSE');
+                                commandList.push('set for_control_variable_' + jsonList.loop_val);
+                                commandList.push('JUMP L0_' + jsonList.loop_L0);
+                                commandList.push('L1_' + jsonList.loop_L1);
+                                commandList.push('get for_i_variable_' + jsonList.loop_val);
+                                commandList.push('get for_step_variable_' + jsonList.loop_val);
+                                commandList.push('add');
+                                commandList.push('set for_i_variable_' + jsonList.loop_val);
+                                commandList.push('get for_i_variable_' + jsonList.loop_val);
+                                commandList.push('set ' + jsonList.variable);
+                                commandList.push('L0_' + jsonList.loop_L0);
+                                commandList.push('get for_i_variable_' + jsonList.loop_val);
+                                commandList.push('get for_end_variable_' + jsonList.loop_val);
                                 commandList.push('cmple');
                                 commandList.push('JUMPNZ L1_' + jsonList.label_1);
                                 jsonList.label = 'variableChanged';
                                 break;
                             }
                             if (jsonList.label === 'variableChanged'){
-
-
                                 commandList.push('JUMP L0_' + jsonList.label_0);
                                 commandList.push('L1_' + jsonList.label_1);
                                 jsonList.label = 'finished';
@@ -313,7 +322,12 @@ function addLabel(jsonList) {
                                 L1 += 1;
                                 jsonList.label = "added";
                                 jsonList.loop_val = loop_val;
+                                jsonList.loop_L0 = L0;
+                                jsonList.loop_L1 =L1;
+                                L0 += 1;
+                                L1 += 1;
                                 loop_val += 1;
+
                             }
                             break;
                     }
@@ -343,7 +357,7 @@ function continueBreak(jsonList, L0, L1) {
 // // For debugging
 //
 //
-// var str0 = JSON.parse(`[{"block_name":"controls_statement_for","loop_style":"controls_for","variable":"i","start":[{"block_name":"math_number_number","number":"1"}],"step":[{"block_name":"math_number_number","number":"1"}],"end":[{"block_name":"math_number_number","number":"20"}],"step":[{"block_name":"math_number_number","number":"1"}],"branch":[{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"math_boolean_numberProperty","functionName":"isEven","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]},"branchCode":[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"i","argument":[{"block_name":"math_number_operator_single","operator":"neg","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]}]}]},{"block_name":"controls_statement_elseif","statements":"elseif","condition":{"block_name":"logic_boolean_operator_logicNegate","operator":"negate","argument":[{"block_name":"logic_boolean_operator_compare","operator":"cmpg","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"0"}]}]},"branchCode":[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"i","argument":[{"block_name":"math_number_operator_single","operator":"abs","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]}]}]},{"block_name":"controls_statement_elseif","statements":"elseif","condition":{"block_name":"logic_boolean_operator_compare","operator":"cmpg","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"0"}]},"branchCode":[{"block_name":"variables_statement_change","functionName":"change","varName":"i","argument":[{"block_name":"math_number_number","number":"5"}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[{"block_name":"variables_statement_change","functionName":"change","varName":"i","argument":[{"block_name":"math_number_number","number":"-1"}]}]}]},{"block_name":"variables_statement_set","functionName":"variables_set","varName":"i","argument":[{"block_name":"math_number_operator_constrain","operator":"constrain","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"1"},{"block_name":"math_number_number","number":"100"}]}]},{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]}]}]
+// var str0 = JSON.parse(`[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"num","argument":[{"block_name":"math_number_number","number":"200"}]},{"block_name":"controls_statement_for","loop_style":"controls_for","variable":"i","start":[{"block_name":"math_number_number","number":"1"}],"step":[{"block_name":"math_number_number","number":"2"}],"end":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"num"}],"step":[{"block_name":"math_number_number","number":"2"}],"branch":[{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"logic_boolean_operator_compare","operator":"cmpe","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_operator_modulo","operator":"remainder","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"num"},{"block_name":"math_number_number","number":"3"}]}]},"branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"math_boolean_numberProperty","functionName":"isEven","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]},"branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"num"}]},{"block_name":"variables_statement_change","functionName":"change","varName":"i","argument":[{"block_name":"math_number_number","number":"1"}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"math_boolean_numberProperty","functionName":"isDivisibleBy","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"9"}]},"branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"num"}]}]},{"block_name":"controls_statement_elseif","statements":"elseif","condition":{"block_name":"math_boolean_numberProperty","functionName":"isOdd","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]},"branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"math_number_number","number":"12345"}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[]}]}]}]}]}]},{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"logic_boolean_operator_logicOperation","operator":"and","argument":[{"block_name":"math_boolean_numberProperty","functionName":"isEven","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"num"}]},{"block_name":"math_boolean_numberProperty","functionName":"isEven","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]}]},"branchCode":[{"block_name":"variables_statement_change","functionName":"change","varName":"i","argument":[{"block_name":"math_number_number","number":"1"}]},{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]}]},{"block_name":"controls_statement_elseif","statements":"elseif","condition":{"block_name":"logic_boolean_operator_logicOperation","operator":"or","argument":[{"block_name":"math_boolean_numberProperty","functionName":"isEven","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]},{"block_name":"math_boolean_numberProperty","functionName":"isEven","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"num"}]}]},"branchCode":[{"block_name":"variables_statement_change","functionName":"change","varName":"num","argument":[{"block_name":"math_number_number","number":"1"}]},{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"num"}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[{"block_name":"controls_statement_repeat","loop_style":"controls_repeat_ext","repeat_times":{"block_name":"controls_statement_repeatExt","operator":"math.floor","argument":{"block_name":"math_number_number","number":"10"}},"branch":[{"block_name":"variables_statement_change","functionName":"change","varName":"num","argument":[{"block_name":"math_number_number","number":"-1"}]}]}]}]},{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"math_boolean_numberProperty","functionName":"isDivisibleBy","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"5"}]},"branchCode":[{"block_name":"variables_statement_set","functionName":"variables_set","varName":"num","argument":[{"block_name":"math_arithmetic_operator","operator":"pow","argument":[{"block_name":"math_number_number","number":"2"},{"block_name":"math_number_number","number":"2"}]}]},{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"num"}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[{"block_name":"controls_statement_whileUntil","loop_style":"controls_whileUntil","repeat_condition":{"block_name":"math_boolean_numberProperty","functionName":"isDivisibleBy","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"2"}]},"end_type":"while","branch":[{"block_name":"variables_statement_change","functionName":"change","varName":"i","argument":[{"block_name":"math_number_number","number":"1"}]}]}]}]},{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]},{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"logic_boolean_operator_compare","operator":"cmpge","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"},{"block_name":"math_number_number","number":"123"}]},"branchCode":[{"block_name":"controls_statement_break","statements":"break"}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[]}]}]}]
 // `);
 // var str1 = JSON.parse(`[{"block_name":"controls_statement_ifelse","structure":[{"block_name":"controls_statement_if","statements":"if","condition":{"block_name":"logic_boolean_operator_compare","operator":"cmpe","argument":[{"block_name":"math_number_number","number":"2"},{"block_name":"math_number_number","number":"1"}]},"branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"text_string_text","text":"'-1'"}]}]},{"block_name":"controls_statement_elseif","statements":"elseif","condition":{"block_name":"logic_boolean_operator_compare","operator":"cmpe","argument":[{"block_name":"math_number_number","number":"2"},{"block_name":"math_number_number","number":"1"}]},"branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"text_string_text","text":"'-1'"}]}]},{"block_name":"controls_statement_else","statements":"else","branchCode":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"text_string_text","text":"'0'"}]}]}]}]
 // `);
