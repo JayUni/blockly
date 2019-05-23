@@ -1,24 +1,33 @@
 number 200
 set num
 number 1
-set for_increment_variable_0
-get for_increment_variable_0
-set i
+set for_start_variable_0
+boolean TRUE
+set for_control_variable_0
 number 2
-set for_step_control_variable_0
-get for_increment_variable_0
-get for_step_control_variable_0
-sub
-set for_increment_variable_0
+set for_step_variable_0
 L0_0
-get for_increment_variable_0
-get for_step_control_variable_0
-add
-set for_increment_variable_0
-get for_increment_variable_0
-set i
-get i
+get for_control_variable_0
+JUMPNZ L1_1
 get num
+set for_end_variable_0
+get for_start_variable_0
+set for_i_variable_0
+get for_start_variable_0
+set i
+boolean FALSE
+set for_control_variable_0
+JUMP L0_1
+L1_1
+get for_i_variable_0
+get for_step_variable_0
+add
+set for_i_variable_0
+get for_i_variable_0
+set i
+L0_1
+get for_i_variable_0
+get for_end_variable_0
 cmple
 JUMPNZ L1_0
 get i
@@ -26,65 +35,65 @@ get num
 number 3
 remainder
 cmpe
-JUMPNZ L0_1
+JUMPNZ L0_2
 get i
 print
-JUMP L1_2
-L0_1
+JUMP L1_3
+L0_2
 get i
 isEven
-JUMPNZ L0_2
+JUMPNZ L0_3
 get num
 print
 number 1
 change i
-JUMP L1_3
-L0_2
+JUMP L1_4
+L0_3
 get i
 number 9
 isDivisibleBy
-JUMPNZ L0_3
+JUMPNZ L0_4
 get num
 print
-JUMP L1_5
-L0_3
+JUMP L1_6
+L0_4
 get i
 isOdd
-JUMPNZ L0_4
+JUMPNZ L0_5
 number 12345
 print
-JUMP L1_5
-L0_4
-L1_5
+JUMP L1_6
+L0_5
+L1_6
+L1_4
 L1_3
-L1_2
 get num
 isEven
 get i
 isEven
 and
-JUMPNZ L0_5
+JUMPNZ L0_6
 number 1
 change i
 get i
 print
-JUMP L1_7
-L0_5
+JUMP L1_8
+L0_6
 get i
 isEven
 get num
 isEven
 or
-JUMPNZ L0_6
+JUMPNZ L0_7
 number 1
 change num
 get num
 print
-JUMP L1_7
-L0_6
+JUMP L1_8
+L0_7
 number 10
 set repeat_control_variable_1
-L0_7
+L0_8
 number -1
 change num
 get repeat_control_variable_1
@@ -94,41 +103,41 @@ set repeat_control_variable_1
 get repeat_control_variable_1
 number 0
 cmpg
-JUMPNZ L1_7
-JUMP L0_7
-L1_7
-L1_7
+JUMPNZ L1_8
+JUMP L0_8
+L1_8
+L1_8
 get i
 number 5
 isDivisibleBy
-JUMPNZ L0_8
+JUMPNZ L0_9
 number 2
 number 2
 pow
 set num
 get num
 print
-JUMP L1_9
-L0_8
+JUMP L1_10
 L0_9
+L0_10
 get i
 number 2
 isDivisibleBy
-JUMPNZ L1_9
+JUMPNZ L1_10
 number 1
 change i
-JUMP L0_9
-L1_9
-L1_9
+JUMP L0_10
+L1_10
+L1_10
 get i
 print
 get i
 number 123
 cmpge
-JUMPNZ L0_10
+JUMPNZ L0_11
 JUMP L1_0
-JUMP L1_11
-L0_10
-L1_11
+JUMP L1_12
+L0_11
+L1_12
 JUMP L0_0
 L1_0

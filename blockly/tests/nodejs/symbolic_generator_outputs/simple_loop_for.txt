@@ -1,22 +1,31 @@
 number 1
-set for_increment_variable_0
-get for_increment_variable_0
-set i
+set for_start_variable_0
+boolean TRUE
+set for_control_variable_0
 number 1
-set for_step_control_variable_0
-get for_increment_variable_0
-get for_step_control_variable_0
-sub
-set for_increment_variable_0
+set for_step_variable_0
 L0_0
-get for_increment_variable_0
-get for_step_control_variable_0
-add
-set for_increment_variable_0
-get for_increment_variable_0
-set i
-get i
+get for_control_variable_0
+JUMPNZ L1_1
 number 10
+set for_end_variable_0
+get for_start_variable_0
+set for_i_variable_0
+get for_start_variable_0
+set i
+boolean FALSE
+set for_control_variable_0
+JUMP L0_1
+L1_1
+get for_i_variable_0
+get for_step_variable_0
+add
+set for_i_variable_0
+get for_i_variable_0
+set i
+L0_1
+get for_i_variable_0
+get for_end_variable_0
 cmple
 JUMPNZ L1_0
 get i
