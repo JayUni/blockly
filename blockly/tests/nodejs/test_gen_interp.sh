@@ -5,7 +5,7 @@
 g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
 # for gen in bin_generator_outputs/*.bin
 # do
-    gen="bin_generator_outputs/complex_test1.bin"
+    gen="bin_generator_outputs/simple_loop_for_2.bin"
     interpreter="interpreter_final_outputs/`basename $gen .bin`.txt"
     node ../../SkoolBot/bin_generator.js `basename $gen .bin`
 

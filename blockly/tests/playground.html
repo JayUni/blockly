@@ -77,6 +77,10 @@
 <script src="../blocks/variables_dynamic.js"></script>
 <script src="../blocks/procedures.js"></script>
 <script src="blocks/test_blocks.js"></script>
+<script src="../Skoolbot/module_json_generator.js"></script>
+<script src="../Skoolbot/module_add_type_field.js"></script>
+<script src="../Skoolbot/module_command_generator.js"></script>
+<script src="../Skoolbot/module_bytecode_generator.js"></script>
 
 <script>
 'use strict';
@@ -294,11 +298,11 @@ function addXmlTestcase() {
 function addExpectedOutput() {
   var textarea = document.getElementById('testcaseName');
   var fileName = textarea.value;
-  var xml = document.getElementById('expectedOutput');
-  var xmlCode = xml.value;
+  var output = document.getElementById('expectedOutput');
+  var outputText = output.value;
 
   var element = document.createElement('a');
-  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(xmlCode));
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(outputText));
   element.setAttribute('download', fileName + '.txt');
 
   element.style.display = 'none';
@@ -307,6 +311,21 @@ function addExpectedOutput() {
   element.click();
 
   document.body.removeChild(element);
+}
+
+function downloadBinFile() {
+  var textarea = document.getElementById('testcaseName');
+  var fileName = textarea.value;
+  var xml = Blockly.Xml.workspaceToDom(workspace);
+  var xmlCode = Blockly.Xml.domToPrettyText(xml);
+  var json = Blockly['Skoolbot'].workspaceToCode(workspace);
+  var add_typefield_json = add_type_field(json);
+  var symbolic_command = command_generator(add_typefield_json);
+  var hex_command = bytecode_generator(symbolic_command);
+  console.log(fileName);
+  console.log(symbolic_command);
+  console.log(hex_command);
+
 }
 
 var spaghettiXml = [
@@ -429,6 +448,9 @@ h1 {
 
     <textarea id="expectedOutput" style="width: 26%; height: 2em"></textarea>
     <input type="button" value="download expected output" onclick="addExpectedOutput()">
+  </p>
+  <p>
+    <input type="button" value="download binary file" onclick="downloadBinFile()">
   </p>
   <p>
     Stress test: &nbsp;

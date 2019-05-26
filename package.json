@@ -12,59 +12,6 @@
   "private": true,
   "devDependencies": {
     "eslint": "^5.13.0",
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-insert": "^0.5.0",
-    "gulp-series": "^1.0.2",
-    "gulp-shell": "^0.6.5",
-    "jshint": "^2.10.1",
-    "webdriverio": "^4.14.1"
-  },
-  "jshintConfig": {
-    "globalstrict": true,
-    "predef": [
-      "Blockly",
-      "goog",
-      "window",
-      "document",
-      "soy",
-      "XMLHttpRequest"
-    ],
-    "sub": true,
-    "undef": true,
-    "unused": true
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "google-closure-compiler": "^20190325.0.0",
-    "google-closure-library": "^20190325.0.0",
-    "jsdom": "^14.0.0",
-    "jsdom-global": "^3.0.2",
-    "xmldom": "^0.1.27"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/google/blockly.git"
-  },
-  "bugs": {
-    "url": "https://github.com/google/blockly/issues"
-  },
-  "homepage": "https://developers.google.com/blockly/",
-  "author": "Neil Fraser",
-  "scripts": {
-    "prepare": "gulp blockly_javascript_en",
-    "lint": "eslint .",
-    "test": "tests/nodejs/testsript.sh"
-  },
-  "license": "Apache-2.0",
-  "private": true,
-  "devDependencies": {
-    "eslint": "^5.13.0",
     "google-closure-compiler": "^20190121.0.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
@@ -88,7 +35,10 @@
     "undef": true,
     "unused": true
   },
+  "author": "Neil Fraser",
   "dependencies": {
+    "aws-sign2": "^0.7.0",
+    "browserify-fs": "^1.0.0",
     "chai": "^4.2.0",
     "google-closure-library": "^20190301.0.0",
     "jsdom": "^13.2.0",
@@ -97,6 +47,14 @@
     "string-raw": "^1.0.1",
     "xmldom": "^0.1.27"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/google/blockly.git"
+  },
+  "bugs": {
+    "url": "https://github.com/google/blockly/issues"
+  },
+  "homepage": "https://developers.google.com/blockly/",
   "directories": {
     "test": "tests"
   }

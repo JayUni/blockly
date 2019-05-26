@@ -40,7 +40,7 @@ Blockly.Skoolbot['digitalwrite'] = function(block) {
   var variable_var = Blockly.Skoolbot.variableDB_.getName(block.getFieldValue('var'), Blockly.Variables.NAME_TYPE);
   var dropdown_name = block.getFieldValue('NAME');
   // TODO: Assemble Skoolbot into code variable.
-  var code = '{ \"block_name\": \"io_statement_digitalwrite\", \"varName\": \"' + variable_var + '\", \"number_name\": ' +number_name +  ' }';
+  var code = '{ \"block_name\": \"io_statement_digitalwrite\", \"varName\": \"' + variable_var + '\", \"value\": ' +dropdown_name +  ' }';
   return code;
 };
 
@@ -61,8 +61,8 @@ Blockly.Skoolbot['analogwrite'] = function(block) {
 };
 
 Blockly.Skoolbot['pinmode'] = function(block) {
-  //var variable_var = Blockly.Skoolbot.variableDB_.getName(block.getFieldValue('var'), Blockly.Variables.NAME_TYPE);
-  //var dropdown_name = block.getFieldValue('NAME');
+  var variable_var = Blockly.Skoolbot.variableDB_.getName(block.getFieldValue('var'), Blockly.Variables.NAME_TYPE);
+  var dropdown_name = block.getFieldValue('NAME');
   // TODO: Assemble Skoolbot into code variable.
   var code = '{ \"block_name\": \"io_statement_pinmode\"}';
   return code;

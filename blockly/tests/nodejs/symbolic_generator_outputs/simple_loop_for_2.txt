@@ -1,0 +1,89 @@
+number 1
+set start
+number 100
+set end2
+number 1
+set step
+get start
+set for_start_variable_0
+boolean TRUE
+set for_control_variable_0
+get step
+set for_step_variable_0
+L0_0
+get for_control_variable_0
+JUMPNZ L1_1
+get end2
+set for_end_variable_0
+get for_start_variable_0
+set for_i_variable_0
+get for_start_variable_0
+set i
+boolean FALSE
+set for_control_variable_0
+JUMP L0_1
+L1_1
+get for_i_variable_0
+get for_step_variable_0
+add
+set for_i_variable_0
+get for_i_variable_0
+set i
+L0_1
+get for_i_variable_0
+get for_end_variable_0
+cmple
+JUMPNZ L1_0
+number 1
+change end2
+number 2
+change step
+number 10
+set start
+get end2
+print
+get step
+print
+JUMP L0_0
+L1_0
+get start
+set for_start_variable_1
+boolean TRUE
+set for_control_variable_1
+get step
+set for_step_variable_1
+L0_2
+get for_control_variable_1
+JUMPNZ L1_3
+get end2
+set for_end_variable_1
+get for_start_variable_1
+set for_i_variable_1
+get for_start_variable_1
+set j
+boolean FALSE
+set for_control_variable_1
+JUMP L0_3
+L1_3
+get for_i_variable_1
+get for_step_variable_1
+add
+set for_i_variable_1
+get for_i_variable_1
+set j
+L0_3
+get for_i_variable_1
+get for_end_variable_1
+cmple
+JUMPNZ L1_2
+number 2
+change step
+number 1
+change end2
+get end2
+print
+get step
+print
+JUMP L0_2
+L1_2
+

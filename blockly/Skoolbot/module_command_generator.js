@@ -1,5 +1,5 @@
 module.exports = function (jsonList) {
-    return generator_core(jsonList);
+    return command_generator(jsonList);
 };
 
 // initialize global variables
@@ -9,7 +9,7 @@ var L1 = 0;
 var loop_val = 0;
 
 
-function generator_core(jsonList){
+function command_generator(jsonList){
 
     if (!hasChild(jsonList)[0]) {
         addCommand(jsonList);
@@ -22,7 +22,7 @@ function hasChild(jsonList) {
     var hasChild = false;
     for (var val of Object.values(jsonList)){
         if (val instanceof Object){
-            generator_core(val);
+            command_generator(val);
             addCommand(jsonList);// This statement runs more than one time
             hasChild = true;
         }
@@ -375,7 +375,7 @@ function continueBreak(jsonList, L0, L1) {
 //     commandList = [];
 //     add_type_field(eval(vars_name));
 //     // console.log("JSON: \n", JSON.stringify(eval(vars_name), null, 4));
-//     var res = generator_core(eval(vars_name));
+//     var res = command_generator(eval(vars_name));
 //     for(var i in res){
 //         console.log(res[i]);
 //     }
@@ -403,7 +403,7 @@ function continueBreak(jsonList, L0, L1) {
 //             L0 = 0;
 //             L1 = 0;
 //             loop_val = 0
-//             var reslist = generator_core(jsondata);
+//             var reslist = command_generator(jsondata);
 //
 //             // console.log(reslist);
 //             var restxt = "";
