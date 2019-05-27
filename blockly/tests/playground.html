@@ -77,10 +77,12 @@
 <script src="../blocks/variables_dynamic.js"></script>
 <script src="../blocks/procedures.js"></script>
 <script src="blocks/test_blocks.js"></script>
-<script src="../Skoolbot/module_json_generator.js"></script>
 <script src="../Skoolbot/module_add_type_field.js"></script>
 <script src="../Skoolbot/module_command_generator.js"></script>
-<script src="../Skoolbot/module_bytecode_generator.js"></script>
+<script src="../Skoolbot/module_bytecode_generator_browser.js"></script>
+<script src="../Skoolbot/save_as_binary.js"></script>
+
+
 
 <script>
 'use strict';
@@ -313,18 +315,48 @@ function addExpectedOutput() {
   document.body.removeChild(element);
 }
 
+function saveByteArray(reportName, byte) {
+    var blob = new Blob([byte], {type: "text/bin"});
+    var link = document.createElement("a");
+    link.href = window.URL.createObjectURL(blob);
+    link.download = reportName + ".bin";
+    link.click();
+};
+
 function downloadBinFile() {
   var textarea = document.getElementById('testcaseName');
   var fileName = textarea.value;
   var xml = Blockly.Xml.workspaceToDom(workspace);
   var xmlCode = Blockly.Xml.domToPrettyText(xml);
   var json = Blockly['Skoolbot'].workspaceToCode(workspace);
-  var add_typefield_json = add_type_field(json);
-  var symbolic_command = command_generator(add_typefield_json);
-  var hex_command = bytecode_generator(symbolic_command);
+  var add_type_field_json = add_type_field(JSON.parse(json));
+  commandList = [];
+  L0 = 0;
+  L1 = 0;
+  loop_val = 0;
+  var symbolic_command = command_generator(add_type_field_json);
+  var hex_commands = bytecode_generator(symbolic_command);
+  var bin = save_as_binary(hex_commands);
+  saveByteArray(fileName, bin);
   console.log(fileName);
+  console.log(json);
+  console.log(add_type_field_json);
   console.log(symbolic_command);
-  console.log(hex_command);
+  console.log(hex_commands);
+  console.log(bin);
+
+//
+//  var element = document.createElement('a');
+//  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(hex_command));
+//  element.setAttribute('download', fileName + '.txt');
+//
+//  element.style.display = 'none';
+//  document.body.appendChild(element);
+//
+//  element.click();
+//
+//  document.body.removeChild(element);
+
 
 }
 

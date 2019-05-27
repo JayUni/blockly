@@ -402,7 +402,7 @@ function continueBreak(jsonList, L0, L1) {
 //             commandList = [];
 //             L0 = 0;
 //             L1 = 0;
-//             loop_val = 0
+//             loop_val = 0;
 //             var reslist = command_generator(jsondata);
 //
 //             // console.log(reslist);

@@ -11,7 +11,7 @@
   "license": "Apache-2.0",
   "private": true,
   "devDependencies": {
-    "eslint": "^5.13.0",
+    "eslint": "^5.16.0",
     "google-closure-compiler": "^20190121.0.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
@@ -37,9 +37,11 @@
   },
   "author": "Neil Fraser",
   "dependencies": {
+    "Buffer": "0.0.0",
     "aws-sign2": "^0.7.0",
     "browserify-fs": "^1.0.0",
     "chai": "^4.2.0",
+    "express": "^4.17.1",
     "google-closure-library": "^20190301.0.0",
     "jsdom": "^13.2.0",
     "jsdom-global": "^3.0.2",
