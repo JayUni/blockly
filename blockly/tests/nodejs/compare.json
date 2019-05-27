@@ -1,10 +1,82 @@
-SyntaxError: Unexpected token [ in JSON at position 2
-    at JSON.parse (<anonymous>)
-    at Object.<anonymous> (/Users/lingyuan/Desktop/blockly/blockly/SkoolBot/add_type_field.js:7:26)
-    at Module._compile (internal/modules/cjs/loader.js:805:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:816:10)
-    at Module.load (internal/modules/cjs/loader.js:672:32)
-    at tryModuleLoad (internal/modules/cjs/loader.js:612:12)
-    at Function.Module._load (internal/modules/cjs/loader.js:604:3)
-    at Function.Module.runMain (internal/modules/cjs/loader.js:868:12)
-    at internal/main/run_main_module.js:21:11
+
+[
+    {
+        "block_name": "variables_statement_set",
+        "functionName": "variables_set",
+        "varName": "i",
+        "argument": [
+            {
+                "block_name": "math_number_number",
+                "number": "1",
+                "valueType": "number"
+            }
+        ],
+        "valueType": "statement"
+    },
+    {
+        "block_name": "controls_statement_whileUntil",
+        "loop_style": "controls_whileUntil",
+        "repeat_condition": {
+            "block_name": "logic_boolean_operator_compare",
+            "operator": "cmpl",
+            "argument": [
+                {
+                    "block_name": "variables_statement_get",
+                    "functionName": "variables_get",
+                    "varName": "i",
+                    "valueType": "statement"
+                },
+                {
+                    "block_name": "math_number_number",
+                    "number": "10",
+                    "valueType": "number"
+                }
+            ],
+            "valueType": "boolean"
+        },
+        "end_type": "while",
+        "branch": [
+            {
+                "block_name": "text_statement_print",
+                "functionName": "text_print",
+                "argument": [
+                    {
+                        "block_name": "variables_statement_get",
+                        "functionName": "variables_get",
+                        "varName": "i",
+                        "valueType": "statement"
+                    }
+                ],
+                "valueType": "statement"
+            },
+            {
+                "block_name": "variables_statement_set",
+                "functionName": "variables_set",
+                "varName": "i",
+                "argument": [
+                    {
+                        "block_name": "math_arithmetic_operator",
+                        "operator": "add",
+                        "argument": [
+                            {
+                                "block_name": "variables_statement_get",
+                                "functionName": "variables_get",
+                                "varName": "i",
+                                "valueType": "statement"
+                            },
+                            {
+                                "block_name": "math_number_number",
+                                "number": "1",
+                                "valueType": "number"
+                            }
+                        ],
+                        "valueType": ""
+                    }
+                ],
+                "valueType": "statement"
+            }
+        ],
+        "valueType": "statement"
+    }
+]
+
