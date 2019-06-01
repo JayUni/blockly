@@ -1,7 +1,3 @@
-module.exports = function (jsonList) {
-    return bytecode_generator(jsonList);
-};
-
 // #define NOP_          (0x00)
 // #define NUMBER        (0x01)
 // #define ADD           (0x02)
