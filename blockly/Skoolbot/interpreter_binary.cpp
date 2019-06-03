@@ -44,6 +44,12 @@
 #define CHANGE        (0x23)
 #define AND           (0x24)
 #define OR            (0x25)
+#define PINMODE       (0x26)
+#define DREAD         (0x27)
+#define DWRITE        (0x28)
+#define AREAD         (0x29)
+#define AWRITE        (0x2A)
+#define DELAY         (0x2B)
 
 #define STACK_SIZE    (512)
 #define MEMORY_SIZE   (1024)
@@ -346,6 +352,17 @@ void run() {
           }
         }
         break;
+      // case PINMODE:
+      //   {
+      //
+      //
+      //   }
+      //   break;
+      // case DREAD:
+      //   {
+      //
+      //   }
+      //   break;
       default:
         std::cerr<<"Invalid command: "<<std::hex<<(int16_t)code[ip]<<std::endl;
         return;
