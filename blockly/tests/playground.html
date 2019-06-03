@@ -77,6 +77,12 @@
 <script src="../blocks/variables_dynamic.js"></script>
 <script src="../blocks/procedures.js"></script>
 <script src="blocks/test_blocks.js"></script>
+<script src="../Skoolbot/browser_add_type_field.js"></script>
+<script src="../Skoolbot/browser_command_generator.js"></script>
+<script src="../Skoolbot/browser_bytecode_generator.js"></script>
+<script src="../Skoolbot/save_as_binary.js"></script>
+
+
 
 <script>
 'use strict';
@@ -294,11 +300,11 @@ function addXmlTestcase() {
 function addExpectedOutput() {
   var textarea = document.getElementById('testcaseName');
   var fileName = textarea.value;
-  var xml = document.getElementById('expectedOutput');
-  var xmlCode = xml.value;
+  var output = document.getElementById('expectedOutput');
+  var outputText = output.value;
 
   var element = document.createElement('a');
-  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(xmlCode));
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(outputText));
   element.setAttribute('download', fileName + '.txt');
 
   element.style.display = 'none';
@@ -307,6 +313,68 @@ function addExpectedOutput() {
   element.click();
 
   document.body.removeChild(element);
+}
+
+function saveByteArray(reportName, byte) {
+    var blob = new Blob([byte], {type: "text/bin"});
+    var link = document.createElement("a");
+    link.href = window.URL.createObjectURL(blob);
+    link.download = reportName + ".bin";
+    link.click();
+};
+
+function downloadBinFile() {
+  var textarea = document.getElementById('testcaseName');
+  var fileName = textarea.value;
+  var xml = Blockly.Xml.workspaceToDom(workspace);
+  var xmlCode = Blockly.Xml.domToPrettyText(xml);
+  var json = Blockly['Skoolbot'].workspaceToCode(workspace);
+  var add_type_field_json = add_type_field(JSON.parse(json));
+  commandList = [];
+  L0 = 0;
+  L1 = 0;
+  loop_val = 0;
+  var symbolic_command = command_generator(add_type_field_json);
+  var hex_commands = bytecode_generator(symbolic_command);
+  var bin = save_as_binary(hex_commands);
+  saveByteArray(fileName, bin);
+  console.log(fileName);
+  console.log(json);
+  console.log(add_type_field_json);
+  console.log(symbolic_command);
+  console.log(hex_commands);
+  console.log(bin);
+
+}
+
+function generateHexString(){
+  var textarea = document.getElementById('testcaseName');
+  var fileName = textarea.value;
+  var xml = Blockly.Xml.workspaceToDom(workspace);
+  var xmlCode = Blockly.Xml.domToPrettyText(xml);
+  var json = Blockly['Skoolbot'].workspaceToCode(workspace);
+  var add_type_field_json = add_type_field(JSON.parse(json));
+  commandList = [];
+  L0 = 0;
+  L1 = 0;
+  loop_val = 0;
+  var symbolic_command = command_generator(add_type_field_json);
+  var hex_commands = bytecode_generator(symbolic_command);
+  var hexString = "";
+  var string_count = 0;
+
+  for (var i in hex_commands){
+    var row = hex_commands[i].split(' ');
+    for (var j in row){
+      if(row[j] !== '' && row[j] !== undefined){
+          hexString += row[j] + ' ';
+          string_count += 1;
+      }
+    }
+
+  }
+  string_count = ('00' + string_count.toString()).slice(-3);
+  document.getElementById('importExport').value = 'BLOCKLY ' + string_count + ' '+ hexString;
 }
 
 var spaghettiXml = [
@@ -429,6 +497,12 @@ h1 {
 
     <textarea id="expectedOutput" style="width: 26%; height: 2em"></textarea>
     <input type="button" value="download expected output" onclick="addExpectedOutput()">
+  </p>
+  <p>
+    <input type="button" value="generate arduino string" onclick="generateHexString()">
+  </p>
+  <p>
+    <input type="button" value="download binary file" onclick="downloadBinFile()">
   </p>
   <p>
     Stress test: &nbsp;

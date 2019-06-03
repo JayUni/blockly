@@ -1,7 +1,3 @@
-module.exports = function (jsonList) {
-    return command_generator(jsonList);
-};
-
 // initialize global variables
 var commandList = [];
 var L0 = 0;
