@@ -102,12 +102,12 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
         "type": "field_dropdown",
         "name": "OP",
         "options": [
-          ["%{BKY_MATH_SINGLE_OP_ROOT}", 'ROOT'],
+          // ["%{BKY_MATH_SINGLE_OP_ROOT}", 'ROOT'],
           ["%{BKY_MATH_SINGLE_OP_ABSOLUTE}", 'ABS'],
           ['-', 'NEG'],
-          ['ln', 'LN'],
-          ['log10', 'LOG10'],
-          ['e^', 'EXP'],
+          // ['ln', 'LN'],
+          // ['log10', 'LOG10'],
+          // ['e^', 'EXP'],
           ['10^', 'POW10']
         ]
       },
@@ -193,8 +193,8 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
         "options": [
           ["%{BKY_MATH_IS_EVEN}", "EVEN"],
           ["%{BKY_MATH_IS_ODD}", "ODD"],
-          ["%{BKY_MATH_IS_PRIME}", "PRIME"],
-          ["%{BKY_MATH_IS_WHOLE}", "WHOLE"],
+          // ["%{BKY_MATH_IS_PRIME}", "PRIME"],
+          // ["%{BKY_MATH_IS_WHOLE}", "WHOLE"],
           ["%{BKY_MATH_IS_POSITIVE}", "POSITIVE"],
           ["%{BKY_MATH_IS_NEGATIVE}", "NEGATIVE"],
           ["%{BKY_MATH_IS_DIVISIBLE_BY}", "DIVISIBLE_BY"]

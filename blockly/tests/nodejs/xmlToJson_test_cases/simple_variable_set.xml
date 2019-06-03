@@ -1,0 +1,35 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+    <variables>
+        <variable type="" id="Wqk^kP.HE%^sH5~vk*F(">a</variable>
+    </variables>
+    <block type="variables_set" id="QOLTrKHB;6I3/CI;H9hu" x="137" y="88">
+        <field name="VAR" id="Wqk^kP.HE%^sH5~vk*F(" variabletype="">a</field>
+        <value name="VALUE">
+            <block type="math_arithmetic" id="#(Av9F|]{p$zrXOPh#L!">
+                <field name="OP">ADD</field>
+                <value name="A">
+                    <shadow type="math_number" id="lb5x{?,9qIcR^l2L`n:0">
+                        <field name="NUM">1</field>
+                    </shadow>
+                </value>
+                <value name="B">
+                    <shadow type="math_number" id="K.mS]!)8^k65DFiZc$N3">
+                        <field name="NUM">2</field>
+                    </shadow>
+                </value>
+            </block>
+        </value>
+        <next>
+            <block type="text_print" id="Ho(PeS1CH+S37P=N(}46">
+                <value name="TEXT">
+                    <shadow type="text" id="!O((I%W(d3j;rW,A,lgu">
+                        <field name="TEXT">abc</field>
+                    </shadow>
+                    <block type="variables_get" id="R;Wj`r#cNf~Xj;Yo74y-">
+                        <field name="VAR" id="Wqk^kP.HE%^sH5~vk*F(" variabletype="">a</field>
+                    </block>
+                </value>
+            </block>
+        </next>
+    </block>
+</xml>

@@ -1,0 +1,12 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+    <block type="text_print" id="G~eL6M)TEu_Y{iFS@;/e" x="37" y="62">
+        <value name="TEXT">
+            <shadow type="text" id="dj!caJ2%g`7n/[n_XVM-">
+                <field name="TEXT">abc</field>
+            </shadow>
+            <block type="logic_boolean" id="$.GG3%#+;8|mvE,AIOz`">
+                <field name="BOOL">TRUE</field>
+            </block>
+        </value>
+    </block>
+</xml>

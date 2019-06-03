@@ -1,0 +1,2 @@
+cannot test random integer, default number is 2
+2

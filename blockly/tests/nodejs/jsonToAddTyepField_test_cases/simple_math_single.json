@@ -1,0 +1,18 @@
+[
+    {
+        "block_name": "text_statement_print",
+        "functionName": "text_print",
+        "argument": [
+            {
+                "block_name": "math_number_operator_single",
+                "operator": "abs",
+                "argument": [
+                    {
+                        "block_name": "math_number_number",
+                        "number": "-7"
+                    }
+                ]
+            }
+        ]
+    }
+]

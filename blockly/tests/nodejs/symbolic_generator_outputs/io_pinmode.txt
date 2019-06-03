@@ -1,0 +1,7 @@
+number 1
+set item
+get item
+pinmode undefined
+get item
+print
+

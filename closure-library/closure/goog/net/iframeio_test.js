@@ -202,7 +202,7 @@ function localUrl1() {
 function localUrl2() {
   var io = getTestIframeIo();
   goog.events.listen(io, 'success', onLocalSuccess);
-  io.send('//test.txt', 'GET');
+  io.send('//testbin.bin', 'GET');
 }
 
 function onLocalSuccess(e) {

@@ -1,0 +1,60 @@
+[
+    {
+        "block_name": "variables_statement_set",
+        "functionName": "variables_set",
+        "varName": "i",
+        "argument": [
+            {
+                "block_name": "math_number_number",
+                "number": "1"
+            }
+        ]
+    },
+    {
+        "block_name": "controls_statement_repeat",
+        "loop_style": "controls_repeat_ext",
+        "repeat_times": {
+            "block_name": "controls_statement_repeatExt",
+            "operator": "math.floor",
+            "argument": {
+                "block_name": "math_number_number",
+                "number": "10"
+            }
+        },
+        "branch": [
+            {
+                "block_name": "text_statement_print",
+                "functionName": "text_print",
+                "argument": [
+                    {
+                        "block_name": "variables_statement_get",
+                        "functionName": "variables_get",
+                        "varName": "i"
+                    }
+                ]
+            },
+            {
+                "block_name": "variables_statement_set",
+                "functionName": "variables_set",
+                "varName": "i",
+                "argument": [
+                    {
+                        "block_name": "math_arithmetic_operator",
+                        "operator": "add",
+                        "argument": [
+                            {
+                                "block_name": "variables_statement_get",
+                                "functionName": "variables_get",
+                                "varName": "i"
+                            },
+                            {
+                                "block_name": "math_number_number",
+                                "number": "1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

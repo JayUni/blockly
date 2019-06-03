@@ -1,0 +1,22 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="ZiMSii1=7JYXtcZBfE15">item</variable>
+  </variables>
+  <block type="variables_set" id=")B=Z!lDEk{hYdjC75+`v" x="62" y="87">
+    <field name="VAR" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+    <value name="VALUE">
+      <block type="math_number" id="ZL[BGAtv0w($kY,M2WLv">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+    <next>
+      <block type="text_print" id="g@Uwt[c#9Uka!P|Pp2{Z">
+        <value name="TEXT">
+          <block type="analogread" id="=L{AC=+9c1_G@c+c%e!c">
+            <field name="var" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+</xml>

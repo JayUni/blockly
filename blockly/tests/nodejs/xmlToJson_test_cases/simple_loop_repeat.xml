@@ -1,0 +1,57 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+    <variables>
+        <variable type="" id=":M:Zaqk,~0lsTRYOT`q|">i</variable>
+    </variables>
+    <block type="variables_set" id="8-7^bmJ%42m?CGdaQK,i" x="87" y="138">
+        <field name="VAR" id=":M:Zaqk,~0lsTRYOT`q|" variabletype="">i</field>
+        <value name="VALUE">
+            <block type="math_number" id="R4$kYaFNWzt_ey*.2lQ9">
+                <field name="NUM">1</field>
+            </block>
+        </value>
+        <next>
+            <block type="controls_repeat_ext" id="s:zDeJuwuvo_f(p~S}2U">
+                <value name="TIMES">
+                    <shadow type="math_number" id="${0z:I8K3m*WL,$%f@Re">
+                        <field name="NUM">10</field>
+                    </shadow>
+                </value>
+                <statement name="DO">
+                    <block type="text_print" id="9w-K#fvjD6kBh9|.-n?G">
+                        <value name="TEXT">
+                            <shadow type="text" id="y4kC:9FD3i[jz^X6it2)">
+                                <field name="TEXT">abc</field>
+                            </shadow>
+                            <block type="variables_get" id="mVJQE4t[Dgyx[-uF`r@P">
+                                <field name="VAR" id=":M:Zaqk,~0lsTRYOT`q|" variabletype="">i</field>
+                            </block>
+                        </value>
+                        <next>
+                            <block type="variables_set" id="H|`[F:O.s*WwMGnJhXVv">
+                                <field name="VAR" id=":M:Zaqk,~0lsTRYOT`q|" variabletype="">i</field>
+                                <value name="VALUE">
+                                    <block type="math_arithmetic" id="xa?;_pdo.h1go4FvYD9:">
+                                        <field name="OP">ADD</field>
+                                        <value name="A">
+                                            <shadow type="math_number" id="H%Uo$)vDKLw7ET,YML%}">
+                                                <field name="NUM">1</field>
+                                            </shadow>
+                                            <block type="variables_get" id="hL5_y~[jbwn)$u@Ov8Qg">
+                                                <field name="VAR" id=":M:Zaqk,~0lsTRYOT`q|" variabletype="">i</field>
+                                            </block>
+                                        </value>
+                                        <value name="B">
+                                            <shadow type="math_number" id="=0b.I.eHr7|,G~@jJQ8u">
+                                                <field name="NUM">1</field>
+                                            </shadow>
+                                        </value>
+                                    </block>
+                                </value>
+                            </block>
+                        </next>
+                    </block>
+                </statement>
+            </block>
+        </next>
+    </block>
+</xml>

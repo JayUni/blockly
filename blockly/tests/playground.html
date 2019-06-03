@@ -54,6 +54,7 @@
 <script src="../generators/skoolbot/variables.js"></script>
 <script src="../generators/skoolbot/variables_dynamic.js"></script>
 <script src="../generators/skoolbot/procedures.js"></script>
+<script src="../generators/skoolbot/input_output.js"></script>
 <script src="../generators/dart.js"></script>
 <script src="../generators/dart/logic.js"></script>
 <script src="../generators/dart/loops.js"></script>
@@ -71,10 +72,17 @@
 <script src="../blocks/text.js"></script>
 <script src="../blocks/lists.js"></script>
 <script src="../blocks/colour.js"></script>
+<script src="../blocks/input_output.js"></script>
 <script src="../blocks/variables.js"></script>
 <script src="../blocks/variables_dynamic.js"></script>
 <script src="../blocks/procedures.js"></script>
 <script src="blocks/test_blocks.js"></script>
+<script src="../Skoolbot/browser_add_type_field.js"></script>
+<script src="../Skoolbot/browser_command_generator.js"></script>
+<script src="../Skoolbot/browser_bytecode_generator.js"></script>
+<script src="../Skoolbot/save_as_binary.js"></script>
+
+
 
 <script>
 'use strict';
@@ -270,6 +278,105 @@ function spaghetti(n) {
   Blockly.Xml.domToWorkspace(dom, workspace);
   console.timeEnd('Spaghetti domToWorkspace');
 }
+
+function addXmlTestcase() {
+  var textarea = document.getElementById('testcaseName');
+  var fileName = textarea.value;
+  var xml = Blockly.Xml.workspaceToDom(workspace);
+  var xmlCode = Blockly.Xml.domToPrettyText(xml);
+
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(xmlCode));
+  element.setAttribute('download', fileName + '.xml');
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+}
+
+function addExpectedOutput() {
+  var textarea = document.getElementById('testcaseName');
+  var fileName = textarea.value;
+  var output = document.getElementById('expectedOutput');
+  var outputText = output.value;
+
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(outputText));
+  element.setAttribute('download', fileName + '.txt');
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+}
+
+function saveByteArray(reportName, byte) {
+    var blob = new Blob([byte], {type: "text/bin"});
+    var link = document.createElement("a");
+    link.href = window.URL.createObjectURL(blob);
+    link.download = reportName + ".bin";
+    link.click();
+};
+
+function downloadBinFile() {
+  var textarea = document.getElementById('testcaseName');
+  var fileName = textarea.value;
+  var xml = Blockly.Xml.workspaceToDom(workspace);
+  var xmlCode = Blockly.Xml.domToPrettyText(xml);
+  var json = Blockly['Skoolbot'].workspaceToCode(workspace);
+  var add_type_field_json = add_type_field(JSON.parse(json));
+  commandList = [];
+  L0 = 0;
+  L1 = 0;
+  loop_val = 0;
+  var symbolic_command = command_generator(add_type_field_json);
+  var hex_commands = bytecode_generator(symbolic_command);
+  var bin = save_as_binary(hex_commands);
+  saveByteArray(fileName, bin);
+  console.log(fileName);
+  console.log(json);
+  console.log(add_type_field_json);
+  console.log(symbolic_command);
+  console.log(hex_commands);
+  console.log(bin);
+
+}
+
+function generateHexString(){
+  var textarea = document.getElementById('testcaseName');
+  var fileName = textarea.value;
+  var xml = Blockly.Xml.workspaceToDom(workspace);
+  var xmlCode = Blockly.Xml.domToPrettyText(xml);
+  var json = Blockly['Skoolbot'].workspaceToCode(workspace);
+  var add_type_field_json = add_type_field(JSON.parse(json));
+  commandList = [];
+  L0 = 0;
+  L1 = 0;
+  loop_val = 0;
+  var symbolic_command = command_generator(add_type_field_json);
+  var hex_commands = bytecode_generator(symbolic_command);
+  var hexString = "";
+  var string_count = 0;
+
+  for (var i in hex_commands){
+    var row = hex_commands[i].split(' ');
+    for (var j in row){
+      if(row[j] !== '' && row[j] !== undefined){
+          hexString += row[j] + ' ';
+          string_count += 1;
+      }
+    }
+
+  }
+  string_count = ('00' + string_count.toString()).slice(-3);
+  document.getElementById('importExport').value = 'BLOCKLY ' + string_count + ' '+ hexString;
+}
+
 var spaghettiXml = [
   '  <block type="controls_if">',
   '    <value name="IF0">',
@@ -380,10 +487,23 @@ h1 {
     &nbsp;
     <input type="button" value="To Dart" onclick="toCode('Dart')">
     <br>
-    <textarea id="importExport" style="width: 26%; height: 12em"
+    <textarea id="importExport" style="width: 26%; height: 10em"
       onchange="taChange();" onkeyup="taChange()"></textarea>
   </p>
+  <p style ="font-size:1em;">
+    file name: &nbsp;
+    <textarea id="testcaseName" style="width: 18%; height: 1em"></textarea>
+    <input type="button" value="download XML testcases" onclick="addXmlTestcase()">
 
+    <textarea id="expectedOutput" style="width: 26%; height: 2em"></textarea>
+    <input type="button" value="download expected output" onclick="addExpectedOutput()">
+  </p>
+  <p>
+    <input type="button" value="generate arduino string" onclick="generateHexString()">
+  </p>
+  <p>
+    <input type="button" value="download binary file" onclick="downloadBinFile()">
+  </p>
   <p>
     Stress test: &nbsp;
     <input type="button" value="Airstrike!" onclick="airstrike(100)">
@@ -402,7 +522,7 @@ h1 {
   <xml id="toolbox-simple" style="display: none">
     <block type="controls_ifelse"></block>
     <block type="logic_compare"></block>
-    <!-- <block type="control_repeat"></block> -->
+    <block type="control_repeat"></block>
     <block type="logic_operation"></block>
     <block type="controls_repeat_ext">
       <value name="TIMES">
@@ -435,8 +555,8 @@ h1 {
       <block type="logic_operation"></block>
       <block type="logic_negate"></block>
       <block type="logic_boolean"></block>
-      <block type="logic_null" disabled="true"></block>
-      <block type="logic_ternary"></block>
+      <block type="logic_null"></block>
+      <!-- <block type="logic_ternary"></block> -->
     </category>
     <category name="Loops" style="loop_category">
       <block type="controls_repeat_ext">
@@ -446,7 +566,7 @@ h1 {
           </shadow>
         </value>
       </block>
-      <block type="controls_repeat" disabled="true"></block>
+      <!-- <block type="controls_repeat"></block> -->
       <block type="controls_whileUntil"></block>
       <block type="controls_for">
         <value name="FROM">
@@ -465,7 +585,7 @@ h1 {
           </shadow>
         </value>
       </block>
-      <block type="controls_forEach"></block>
+      <!-- <block type="controls_forEach"></block> -->
       <block type="controls_flow_statements"></block>
     </category>
     <category name="Math" style="math_category">
@@ -491,14 +611,14 @@ h1 {
           </shadow>
         </value>
       </block>
-      <block type="math_trig">
+      <!-- <block type="math_trig">
         <value name="NUM">
           <shadow type="math_number">
             <field name="NUM">45</field>
           </shadow>
         </value>
-      </block>
-      <block type="math_constant"></block>
+      </block> -->
+      <!-- <block type="math_constant"></block> -->
       <block type="math_number_property">
         <value name="NUMBER_TO_CHECK">
           <shadow type="math_number">
@@ -506,14 +626,14 @@ h1 {
           </shadow>
         </value>
       </block>
-      <block type="math_round">
+      <!-- <block type="math_round">
         <value name="NUM">
           <shadow type="math_number">
             <field name="NUM">3.1</field>
           </shadow>
         </value>
-      </block>
-      <block type="math_on_list"></block>
+      </block> -->
+      <!-- <block type="math_on_list"></block> -->
       <block type="math_modulo">
         <value name="DIVIDEND">
           <shadow type="math_number">
@@ -555,7 +675,7 @@ h1 {
           </shadow>
         </value>
       </block>
-      <block type="math_random_float"></block>
+      <!-- <block type="math_random_float"></block>
       <block type="math_atan2">
         <value name="X">
           <shadow type="math_number">
@@ -567,10 +687,10 @@ h1 {
             <field name="NUM">1</field>
           </shadow>
         </value>
-      </block>
+      </block> -->
     </category>
     <category name="Text" style="text_category">
-      <block type="text"></block>
+      <!-- <block type="text"></block>
       <block type="text_join"></block>
       <block type="text_append">
         <value name="TEXT">
@@ -655,23 +775,20 @@ h1 {
           <shadow type="text"></shadow>
         </value>
       </block>
-      <label text="Input/Output:" web-class="ioLabel"></label>
+      <label text="Input/Output:" web-class="ioLabel"></label> -->
       <block type="text_print">
         <value name="TEXT">
-          <shadow type="text">
-            <field name="TEXT">abc</field>
-          </shadow>
         </value>
       </block>
-      <block type="text_prompt_ext">
+      <!-- <block type="text_prompt_ext">
         <value name="TEXT">
           <shadow type="text">
             <field name="TEXT">abc</field>
           </shadow>
         </value>
-      </block>
+      </block> -->
     </category>
-    <category name="Lists" style="list_category">
+    <!-- <category name="Lists" style="list_category">
       <block type="lists_create_with">
         <mutation items="0"></mutation>
       </block>
@@ -757,6 +874,34 @@ h1 {
         <value name="RATIO">
           <shadow type="math_number">
             <field name="NUM">0.5</field>
+          </shadow>
+        </value>
+      </block>
+    </category> -->
+    <sep></sep>
+    <category name="Input_Output" style="input_output_category">
+      <block type="pinmode">
+        <field name="var" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+        <field name="IO">INPUT</field>
+      </block>
+      <block type="digitalread">
+        <field name="var" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+      </block>
+      <block type="digitalwrite">
+        <field name="var" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+        <field name="value">HIGH</field>
+      </block>
+      <block type="analogread">
+        <field name="var" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+      </block>
+      <block type="analogwrite">
+        <field name="var" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+        <field name="value">0</field>
+      </block>
+      <block type="delay">
+        <value name="value">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
           </shadow>
         </value>
       </block>

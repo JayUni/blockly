@@ -1,0 +1,7 @@
+tree 537bdc889c6526e5ba6d1f4b585c1c652104f27c
+parent fed0f2f19f14794994e1ec221d543d04d1e13172
+author Markus Bordihn <mbordihn@google.com> 1466626225 +0200
+committer Neil Fraser <neil.fraser@gmail.com> 1466626225 -0700
+
+Fixed Parse error. Non-JSDoc comment has annotations. (#451)
+

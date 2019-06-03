@@ -1,0 +1,63 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+    <variables>
+        <variable type="" id="Cn/GUyaI,XHp`T^,5iTS">i</variable>
+    </variables>
+    <block type="controls_for" id="NmvwAzf~2y33OlTSE~Xm" x="137" y="88">
+        <field name="VAR" id="Cn/GUyaI,XHp`T^,5iTS" variabletype="">i</field>
+        <value name="FROM">
+            <shadow type="math_number" id="+/V6W()hG7_GB[JaPDpX">
+                <field name="NUM">1</field>
+            </shadow>
+        </value>
+        <value name="TO">
+            <shadow type="math_number" id="ms$-KX*YW?,MDFklwRcS">
+                <field name="NUM">10</field>
+            </shadow>
+        </value>
+        <value name="BY">
+            <shadow type="math_number" id="!8DF$7pIa2$LB32g#p[t">
+                <field name="NUM">1</field>
+            </shadow>
+        </value>
+        <statement name="DO">
+            <block type="controls_if" id="|Bqk:C7@[AC*nWF@lG2D">
+                <value name="IF0">
+                    <block type="math_number_property" id="H[)%jb]5iJUnO!/j,b7W">
+                        <mutation divisor_input="true"></mutation>
+                        <field name="PROPERTY">DIVISIBLE_BY</field>
+                        <value name="NUMBER_TO_CHECK">
+                            <shadow type="math_number" id="ci27F)$4){(Q;gSw;@C;">
+                                <field name="NUM">0</field>
+                            </shadow>
+                            <block type="variables_get" id="1F3%x*J{f]~$kMLvpP`=">
+                                <field name="VAR" id="Cn/GUyaI,XHp`T^,5iTS" variabletype="">i</field>
+                            </block>
+                        </value>
+                        <value name="DIVISOR">
+                            <block type="math_number" id="Dd;iHFfd4lYDM,fGT};q">
+                                <field name="NUM">9</field>
+                            </block>
+                        </value>
+                    </block>
+                </value>
+                <statement name="DO0">
+                    <block type="controls_flow_statements" id="Z_BAwP#8ca)]jmA9FpBB">
+                        <field name="FLOW">BREAK</field>
+                    </block>
+                </statement>
+                <next>
+                    <block type="text_print" id="H#I%1U6(IgP(?m]`-MSj">
+                        <value name="TEXT">
+                            <shadow type="text" id="xL_c:luW!%bv.4c!nDf+">
+                                <field name="TEXT">abc</field>
+                            </shadow>
+                            <block type="variables_get" id=".dCvYMQ]*DWG-A7`!aUa">
+                                <field name="VAR" id="Cn/GUyaI,XHp`T^,5iTS" variabletype="">i</field>
+                            </block>
+                        </value>
+                    </block>
+                </next>
+            </block>
+        </statement>
+    </block>
+</xml>

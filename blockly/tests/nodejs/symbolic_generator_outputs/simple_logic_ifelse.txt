@@ -1,0 +1,11 @@
+number 1
+number 2
+cmpl
+JUMPNZ L0_0
+boolean TRUE
+print
+JUMP L1_1
+L0_0
+boolean FALSE
+print
+L1_1

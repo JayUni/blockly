@@ -1,0 +1,47 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="Zk}6ft0jAjpT~Ck7{jfU">n</variable>
+  </variables>
+  <block type="variables_set" id="d`^+k%vyvHs$^ADk|-)@" x="112" y="63">
+    <field name="VAR" id="Zk}6ft0jAjpT~Ck7{jfU" variabletype="">n</field>
+    <value name="VALUE">
+      <block type="math_number" id="t*pJ#$oe$i%8jP*16`;V">
+        <field name="NUM">100</field>
+      </block>
+    </value>
+    <next>
+      <block type="controls_repeat_ext" id="3ynOqY8N~gTVN76n;3RT">
+        <value name="TIMES">
+          <shadow type="math_number" id="fjH:YB`atp*GlhsFjeca">
+            <field name="NUM">10</field>
+          </shadow>
+          <block type="variables_get" id="k5Hl8K_)3d32+#|t1wdq">
+            <field name="VAR" id="Zk}6ft0jAjpT~Ck7{jfU" variabletype="">n</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="math_change" id="@iv?wD282/M|~pY@]ZrH">
+            <field name="VAR" id="Zk}6ft0jAjpT~Ck7{jfU" variabletype="">n</field>
+            <value name="DELTA">
+              <shadow type="math_number" id="P*$uD4,SKr5M4r%_Zw[;">
+                <field name="NUM">1</field>
+              </shadow>
+              <block type="math_number" id="F0Bv7Wdafw#0I6%-j=Rk">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <next>
+              <block type="text_print" id="J|wXSUOMY|e(k8Tz;]/6">
+                <value name="TEXT">
+                  <block type="variables_get" id="BZ$eTx!JQ9ZIer^=}x`V">
+                    <field name="VAR" id="Zk}6ft0jAjpT~Ck7{jfU" variabletype="">n</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

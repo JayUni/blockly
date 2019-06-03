@@ -1,0 +1,6 @@
+number 1
+set item
+get item
+aread
+print
+

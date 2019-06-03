@@ -1,22 +1,124 @@
 #!/bin/bash
-for x in test_cases/*.xml
-do
-    y="test_jsons/`basename $x .xml`.json"
 
-    if [ -e $y ]
+# compile the interpreter
+# -std=c++11 -Wall -Werror=format-security
+g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
+for xml in xmlToJson_test_cases/*.xml
+do
+    # conver xml to json
+
+#     xml="xmlToJson_test_cases/io_pinmode.xml"
+
+    json="jsonToAddTyepField_test_cases/`basename $xml .xml`.json"
+
+    if [ -e $json ]
       then
-        ### execute javascript with $x > $$.out
-        node main.js $x > compare.json
-        result=$(wdiff -3 $y compare.json)
+        node ../../SkoolBot/xmlToJson.js $xml > compare.json
+        result=$(wdiff -3 $json compare.json)
         if [ $? -eq 0 ]
-          then
-             echo -e "$y Test case pass.\n"
+           then
+             echo "$json Test case pass."
            else
              echo "$result"
-             echo -e "$y Test case failed.\n"
+             echo "$json Test case failed."
+             continue
         fi
     else
-      node main.js $x > $y
-      echo "created $y"
+        node ../../SkoolBot/xmlToJson.js $xml > $json
+        echo "created $json."
     fi
+
+    # add type field to json
+    addTypeField="addTypeFieldToGenerator_test_cases/`basename $xml .xml`.json"
+    if [ -e $addTypeField ]
+    then
+        node ../../SkoolBot/add_type_field.js $json > compare.json
+        result=$(wdiff -3 $addTypeField compare.json)
+        if [ $? -eq 0 ]
+           then
+             echo "$addTypeField Test case pass."
+           else
+             echo "$result"
+             echo "$addTypeField Test case failed."
+             continue
+        fi
+   else
+      node ../../SkoolBot/add_type_field.js $json > $addTypeField
+      echo "created $addTypeField."
+   fi
+
+   # command generator
+   command_generator="symbolic_generator_outputs/`basename $xml .xml`.txt"
+   if [ -e $command_generator ]
+     then
+       ### execute javascript with $x > $$.out
+       node ../../SkoolBot/command_generator.js $addTypeField > compare.txt
+       result=$(wdiff -3 $command_generator compare.txt)
+       if [ $? -eq 0 ]
+         then
+            echo "$command_generator Test case pass."
+          else
+            echo "$result"
+            echo "$command_generator Test case failed."
+            continue
+       fi
+   else
+     node ../../SkoolBot/command_generator.js $addTypeField > $command_generator
+     echo "created $command_generator."
+   fi
+
+   ### generator binary bin file
+   ### then using interpreter_binary debug mode for comparing
+
+
+
+
+
+
+   # bin generator
+   bin_generator="bin_generator_outputs/`basename $xml .xml`.bin"
+   if [ -e $bin_generator ]
+     then
+       ### execute javascript with $x > $$.out
+       node ../../SkoolBot/bin_generator.js `basename $xml .xml`
+       # result=$(diff -3 $bin_generator compare.bin)
+       # if [ $? -eq 0 ]
+       #   then
+       #      echo "$bin_generator Test case pass."
+       #    else
+       #      echo "$result"
+       #      echo "$bin_generator Test case failed."
+       # fi
+       # continue
+        echo "overwrite $bin_generator."
+   else
+     node ../../SkoolBot/bin_generator.js `basename $xml .xml`
+     echo "created $bin_generator."
+   fi
+
+   # interpreter
+   interpreter="interpreter_final_outputs/`basename $xml .xml`.txt"
+   if [ -e $interpreter ]
+     then
+       ## execute javascript with $x > $$.out
+       ../../SkoolBot/interpreter $bin_generator $1 > compare.txt
+       result=$(wdiff -3 $interpreter compare.txt)
+       if [ $? -eq 0 ]
+          then
+            echo "$interpreter Test case pass."
+          else
+            echo "$result"
+            echo "$interpreter Test case failed."
+            continue
+       fi
+   else
+       ../../SkoolBot/interpreter $bin_generator > $interpreter
+       echo "created $interpreter."
+   fi
+   echo ""
+   echo ""
+   echo ""
 done
+# rm compare.txt
+# rm compare.bin
+# rm compare.json
