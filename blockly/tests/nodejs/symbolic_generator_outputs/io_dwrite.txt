@@ -1,7 +1,5 @@
 number 1
 set item
-get item
-dwrite undefined
+dwrite item 0
 get item
 print
-

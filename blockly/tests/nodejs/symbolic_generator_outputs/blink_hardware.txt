@@ -1,16 +1,16 @@
 number 13
 set led
 get led
-pinmode undefined
+pinmode OUTPUT
 L0_0
 boolean TRUE
 JUMPNZ L1_0
 get led
-dwrite undefined
+dwrite HIGH
 number 100
 delay
 get led
-dwrite undefined
+dwrite LOW
 number 100
 delay
 JUMP L0_0

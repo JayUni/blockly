@@ -1,6 +1,4 @@
 number 1
 set item
-get item
-dread
+dread item
 print
-

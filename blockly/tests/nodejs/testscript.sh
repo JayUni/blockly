@@ -3,11 +3,11 @@
 # compile the interpreter
 # -std=c++11 -Wall -Werror=format-security
 g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
-for xml in xmlToJson_test_cases/*.xml
-do
+# for xml in xmlToJson_test_cases/*.xml
+# do
     # conver xml to json
 
-#     xml="xmlToJson_test_cases/io_pinmode.xml"
+    xml="xmlToJson_test_cases/blink_hardware.xml"
 
     json="jsonToAddTyepField_test_cases/`basename $xml .xml`.json"
 
