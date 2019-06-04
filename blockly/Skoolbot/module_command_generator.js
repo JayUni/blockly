@@ -244,7 +244,7 @@ function addCommand(jsonList){
                                 commandList.push('dread');
                                 break;
                             case 'dwrite':
-                                commandList.push('dwrite ' + jsonList.value);
+                                commandList.push('dwrite ' + jsonList.arguments[1].value);
                                 break;
                             case 'aread':
                                 commandList.push('aread');
@@ -253,7 +253,7 @@ function addCommand(jsonList){
                                 commandList.push('awrite');
                                 break;
                             case 'pinmode':
-                                commandList.push('pinmode ' + jsonList.pinmode);
+                                commandList.push('pinmode ' + jsonList.arguments[1].pinmode);
                                 break;
                             case 'delay':
                                 commandList.push('delay');
