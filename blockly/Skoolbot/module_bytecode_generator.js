@@ -218,20 +218,12 @@ function processValue(command, value, index){
         return int2Hex(parseInt(value));
 
     }
-    else if(value === 'TRUE'|| value === 'FALSE'||value === 'INPUT'|| value === 'OUTPUT'||value === 'HIGH'|| value === 'LOW'){
+    else if(value === 'TRUE'|| value === 'FALSE'){
         switch (value){
             case 'TRUE':
                 return ' 0x17';
             case 'FALSE':
                 return ' 0x18';
-            case 'INPUT':
-                return ' 0x00 0x00';
-            case 'OUTPUT':
-                return ' 0x01 0x00';
-            case 'HIGH':
-                return ' 0x00 0x00';
-            case 'LOW':
-                return ' 0x01 0x00';
         }
     }
     else if(value.split('_')[0] === 'L0' || value.split('_')[0] === 'L1'){

@@ -237,27 +237,36 @@ function addCommand(jsonList){
                 case 'io':
                     switch (command) {
                         case 'dread':
-                            commandList.push('dread');
+                            commandList.push('dread ' + jsonList.arguments[0].varName);
                             break;
                         case 'dwrite':
-                            commandList.push('dwrite ' + jsonList.arguments[1].value);
+                            if(jsonList.arguments[1].value === 'HIGH'){
+                                commandList.push('number 0');
+                            }else{
+                                commandList.push('number 1');
+                            }
+                            commandList.push('dwrite ' + jsonList.arguments[0].varName);
                             break;
                         case 'aread':
-                            commandList.push('aread');
+                            commandList.push('aread ' + jsonList.arguments[0].varName);
                             break;
                         case 'awrite':
-                            commandList.push('awrite');
+                            commandList.push('awrite ' + jsonList.arguments[0].varName);
                             break;
                         case 'pinmode':
-                            commandList.push('pinmode ' + jsonList.arguments[1].pinmode);
+                            if(jsonList.arguments[1].pinmode === 'INPUT'){
+                                commandList.push('number 0');
+                            }else{
+                                commandList.push('number 1');
+                            }
+                            commandList.push('pinmode ' + jsonList.arguments[0].varName);
                             break;
                         case 'delay':
                             commandList.push('delay');
                             break;
-                            break;
                     }
                     break;
-                    break;
+                break;
             }
         }
     }
