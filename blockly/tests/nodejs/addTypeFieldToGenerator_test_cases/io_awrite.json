@@ -22,9 +22,8 @@
                 "valueType": "statement"
             },
             {
-                "block_name": "math_number_number",
-                "number": 0,
-                "valueType": "number"
+                "number_name": 0,
+                "valueType": ""
             }
         ],
         "valueType": "statement"
