@@ -62,9 +62,9 @@ Blockly.Skoolbot['analogwrite'] = function(block) {
 
 Blockly.Skoolbot['pinmode'] = function(block) {
   var variable_var = Blockly.Skoolbot.variableDB_.getName(block.getFieldValue('var'), Blockly.Variables.NAME_TYPE);
-  var dropdown_name = block.getFieldValue('IO');
+  var value_value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble Skoolbot into code variable.
-  var code = '{ \"block_name\": \"io_statement_pinmode\", \"arguments\": [ { \"varName\": \"'  + variable_var + '\"}, {\"pinmode\": \"' + dropdown_name + '\"}]}';
+  var code = '{ \"block_name\": \"io_statement_pinmode\", \"arguments\": [ { \"varName\": \"'  + variable_var + '\"}, {\"pinmode\": \"' + value_value + '\"}]}';
   return code;
   // var variable0 = Blockly.Skoolbot.variableDB_.getName(
   //     block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
