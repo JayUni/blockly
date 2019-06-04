@@ -238,10 +238,31 @@ function addCommand(jsonList){
                             commandList.push('JUMP L1_' + jsonList.label_1);
                             break;
                     }
+                    case 'io':
+                        switch (command) {
+                            case 'dread':
+                                commandList.push('dread');
+                                break;
+                            case 'dwrite':
+                                commandList.push('dwrite ' + jsonList.value);
+                                break;
+                            case 'aread':
+                                commandList.push('aread');
+                                break;
+                            case 'awrite':
+                                commandList.push('awrite');
+                                break;
+                            case 'pinmode':
+                                commandList.push('pinmode ' + jsonList.pinmode);
+                                break;
+                            case 'delay':
+                                commandList.push('delay');
+                                break;
+                        break;
+                    }
                     break;
-
+                break;
             }
-
         }
     }
 }

@@ -81,7 +81,13 @@ function generator(commands) {
             'null': '0x1a',
             'stop': '0x21',
             'and': '0x24',
-            'or': '0x25'
+            'or': '0x25',
+            'pinmode': '0x26',
+            'dread': '0x27',
+            'dwrite': '0x28',
+            'aread': '0x29',
+            'awrite': '0x2a',
+            'delay': '0x2b'
 
         },
         'single_value':{

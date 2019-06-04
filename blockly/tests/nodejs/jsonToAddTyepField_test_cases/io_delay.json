@@ -1,0 +1,11 @@
+[
+    {
+        "block_name": "io_statement_delay",
+        "arguments": [
+            {
+                "block_name": "math_number_number",
+                "number": "1000"
+            }
+        ]
+    }
+]

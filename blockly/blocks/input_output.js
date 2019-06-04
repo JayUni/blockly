@@ -15,7 +15,7 @@ Blockly.defineBlocksWithJsonArray([ // BEGIN JSON EXTRACT
   "args0": [
     {
       "type": "field_variable",
-      "name": "NAME",
+      "name": "var",
       "variable": "item"
     }
   ],
@@ -36,15 +36,15 @@ Blockly.defineBlocksWithJsonArray([ // BEGIN JSON EXTRACT
     },
     {
       "type": "field_dropdown",
-      "name": "NAME",
+      "name": "value",
       "options": [
         [
-          "TRUE",
-          "OPTIONNAME"
+          "HIGH",
+          "HIGH"
         ],
         [
-          "FALSE",
-          "OPTIONNAME1"
+          "LOW",
+          "LOW"
         ]
       ]
     }
@@ -62,7 +62,7 @@ Blockly.defineBlocksWithJsonArray([ // BEGIN JSON EXTRACT
   "args0": [
     {
       "type": "field_variable",
-      "name": "NAME",
+      "name": "var",
       "variable": "item"
     }
   ],
@@ -83,7 +83,7 @@ Blockly.defineBlocksWithJsonArray([ // BEGIN JSON EXTRACT
     },
     {
       "type": "field_number",
-      "name": "NAME",
+      "name": "value",
       "value": 0
     }
   ],
@@ -105,15 +105,15 @@ Blockly.defineBlocksWithJsonArray([ // BEGIN JSON EXTRACT
     },
     {
       "type": "field_dropdown",
-      "name": "NAME",
+      "name": "IO",
       "options": [
         [
           "INPUT",
-          "OPTIONNAME"
+          "INPUT"
         ],
         [
           "OUTPUT",
-          "OPTIONNAME1"
+          "OUTPUT"
         ]
       ]
     }
@@ -131,7 +131,7 @@ Blockly.defineBlocksWithJsonArray([ // BEGIN JSON EXTRACT
   "args0": [
     {
       "type": "input_value",
-      "name": "NAME",
+      "name": "value",
       "check": "Number"
     }
   ],

@@ -40,6 +40,12 @@ module.exports = function (jsonList) {
 // #define CHANGE        (0x23)
 // #define AND           (0x24)
 // #define OR            (0x25)
+// #define PINMODE       (0x26)
+// #define DREAD         (0x27)
+// #define DWRITE        (0x28)
+// #define AREAD         (0x29)
+// #define AWRITE        (0x2A)
+// #define DELAY         (0x2B)
 
 
 // initialize global variable
@@ -78,7 +84,13 @@ var commandMap = {
         'null': '0x1a',
         'stop': '0x21',
         'and': '0x24',
-        'or': '0x25'
+        'or': '0x25',
+        'pinmode': '0x26',
+        'dread': '0x27',
+        'dwrite': '0x28',
+        'aread': '0x29',
+        'awrite': '0x2a',
+        'delay': '0x2b'
 
     },
     'single_value':{

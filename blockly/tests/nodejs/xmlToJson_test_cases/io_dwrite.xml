@@ -1,0 +1,28 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="ZiMSii1=7JYXtcZBfE15">item</variable>
+  </variables>
+  <block type="variables_set" id="oUfIO$s|15j:+brF6u6G" x="87" y="87">
+    <field name="VAR" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+    <value name="VALUE">
+      <block type="math_number" id="cU|:kM!W(!PtYPn*pK2y">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+    <next>
+      <block type="digitalwrite" id="~!yu)AbWixHUrH79Oq!u">
+        <field name="var" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+        <field name="value">HIGH</field>
+        <next>
+          <block type="text_print" id="g@Uwt[c#9Uka!P|Pp2{Z">
+            <value name="TEXT">
+              <block type="variables_get" id="ZJwu*~!Rs)2!jZ|?E/Z]">
+                <field name="VAR" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

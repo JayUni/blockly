@@ -1,0 +1,28 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="ZiMSii1=7JYXtcZBfE15">item</variable>
+  </variables>
+  <block type="variables_set" id="bHyTgWA#AFMLb2or61nW" x="112" y="137">
+    <field name="VAR" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+    <value name="VALUE">
+      <block type="math_number" id="qH]CkKgk@c[ypjXp(]hV">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+    <next>
+      <block type="pinmode" id="6fL!QKqsLE5-u#aEdjBB">
+        <field name="var" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+        <field name="IO">INPUT</field>
+        <next>
+          <block type="text_print" id="1Pr9=MV$nb,l0D=I1)6W">
+            <value name="TEXT">
+              <block type="variables_get" id="2OjNicZX4_|*AfJ}%eF$">
+                <field name="VAR" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

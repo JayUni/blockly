@@ -6,26 +6,8 @@ g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
 for xml in xmlToJson_test_cases/*.xml
 do
     # conver xml to json
-    # xml="xmlToJson_test_cases/complex_test1.xml"
-    json="jsonToAddTyepField_test_cases/`basename $xml .xml`.json"
 
-    if [ -e $json ]
-      then
-        node ../../SkoolBot/xmlToJson.js $xml > compare.json
-        result=$(wdiff -3 $json compare.json)
-        if [ $? -eq 0 ]
-           then
-             echo "$json Test case pass."
-           else
-             echo "$result"
-             echo "$json Test case failed."
-             continue
-        fi
-    else
-        node ../../SkoolBot/xmlToJson.js $xml > $json
-        echo "created $json."
-    fi
-
+#     xml="xmlToJson_test_cases/io_pinmode.xml"
 
     json="jsonToAddTyepField_test_cases/`basename $xml .xml`.json"
 

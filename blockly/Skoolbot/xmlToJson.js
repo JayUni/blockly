@@ -3,7 +3,7 @@ require('./../msg/messages.js');
 
 require("./../generators/skoolbot.js");
 require("./../generators/skoolbot/math.js");
-require("./../generators/skoolbot.js");
+require("./../generators/skoolbot/input_output.js");
 require("./../generators/skoolbot/logic.js");
 require("./../generators/skoolbot/loops.js");
 require("./../generators/skoolbot/text.js");

@@ -1,0 +1,9 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="delay" id="po3G`r)NUT}TVTV@:Yku" x="12" y="163">
+    <value name="value">
+      <shadow type="math_number" id="eT.98t3CDO_4Nskz^wvF">
+        <field name="NUM">1000</field>
+      </shadow>
+    </value>
+  </block>
+</xml>
