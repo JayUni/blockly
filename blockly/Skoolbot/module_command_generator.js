@@ -238,27 +238,36 @@ function addCommand(jsonList){
                             commandList.push('JUMP L1_' + jsonList.label_1);
                             break;
                     }
-                    case 'io':
-                        switch (command) {
-                            case 'dread':
-                                commandList.push('dread');
-                                break;
-                            case 'dwrite':
-                                commandList.push('dwrite ' + jsonList.arguments[1].value);
-                                break;
-                            case 'aread':
-                                commandList.push('aread');
-                                break;
-                            case 'awrite':
-                                commandList.push('awrite');
-                                break;
-                            case 'pinmode':
-                                commandList.push('pinmode ' + jsonList.arguments[1].pinmode);
-                                break;
-                            case 'delay':
-                                commandList.push('delay');
-                                break;
-                        break;
+                case 'io':
+                    switch (command) {
+                        case 'dread':
+                            commandList.push('dread ' + jsonList.arguments[0].varName);
+                            break;
+                        case 'dwrite':
+                            if(jsonList.arguments[1].value === 'HIGH'){
+                                commandList.push('number 0');
+                            }else{
+                                commandList.push('number 1');
+                            }
+                            commandList.push('dwrite ' + jsonList.arguments[0].varName);
+                            break;
+                        case 'aread':
+                            commandList.push('aread ' + jsonList.arguments[0].varName);
+                            break;
+                        case 'awrite':
+                            commandList.push('awrite ' + jsonList.arguments[0].varName);
+                            break;
+                        case 'pinmode':
+                            if(jsonList.arguments[1].pinmode === 'INPUT'){
+                                commandList.push('number 0');
+                            }else{
+                                commandList.push('number 1');
+                            }
+                            commandList.push('pinmode ' + jsonList.arguments[0].varName);
+                            break;
+                        case 'delay':
+                            commandList.push('delay');
+                            break;
                     }
                     break;
                 break;
