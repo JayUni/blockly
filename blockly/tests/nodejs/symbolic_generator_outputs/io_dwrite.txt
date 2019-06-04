@@ -1,5 +1,7 @@
 number 1
 set item
-dwrite item 0
+number 0
+dwrite item
 get item
 print
+

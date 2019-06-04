@@ -1,0 +1,7 @@
+ip: 0 NUMBER 1
+ip: 3 NUMBER 2
+ip: 6 CMPL
+ip: 7 ip: 10 BOOLEAN 17
+ip: c PRINT 0
+ip: d JUMP 14
+ip: 15 STOP

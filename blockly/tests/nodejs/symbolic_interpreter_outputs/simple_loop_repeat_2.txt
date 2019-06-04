@@ -1,0 +1,1206 @@
+ip: 0 NUMBER 100
+ip: 3 SET 0
+ip: 6 GET 0
+ip: 9 SET 2
+ip: 12 NOP
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 101
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 102
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 103
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 104
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 105
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 106
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 107
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 108
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 109
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 110
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 111
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 112
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 113
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 114
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 115
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 116
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 117
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 118
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 119
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 120
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 121
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 122
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 123
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 124
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 125
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 126
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 127
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 128
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 129
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 130
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 131
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 132
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 133
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 134
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 135
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 136
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 137
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 138
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 139
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 140
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 141
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 142
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 143
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 144
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 145
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 146
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 147
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 148
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 149
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 150
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 151
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 152
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 153
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 154
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 155
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 156
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 157
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 158
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 159
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 160
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 161
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 162
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 163
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 164
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 165
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 166
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 167
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 168
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 169
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 170
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 171
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 172
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 173
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 174
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 175
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 176
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 177
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 178
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 179
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 180
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 181
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 182
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 183
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 184
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 185
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 186
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 187
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 188
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 189
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 190
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 191
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 192
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 193
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 194
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 195
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 196
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 197
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 198
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 199
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 ip: 43 JUMP 12
+ip: 13 NUMBER 1
+ip: 16 CHANGE 0
+ip: 19 GET 0
+ip: 22 PRINT 200
+ip: 23 GET 2
+ip: 26 NUMBER 1
+ip: 29 SUB
+ip: 30 SET 2
+ip: 33 GET 2
+ip: 36 NUMBER 0
+ip: 39 CMPG
+ip: 40 JUMPNZ 46
+ip: 47 STOP

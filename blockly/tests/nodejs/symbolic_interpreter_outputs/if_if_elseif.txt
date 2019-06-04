@@ -1,0 +1,25 @@
+ip: 0 NUMBER 8
+ip: 3 SET 0
+ip: 6 NUMBER 1
+ip: 9 NUMBER 7
+ip: 12 ADD
+ip: 13 GET 0
+ip: 16 CMPE
+ip: 17 ip: 20 BOOLEAN 17
+ip: 16 PRINT 0
+ip: 17 NUMBER 1
+ip: 1a CHANGE 0
+ip: 1d NUMBER 1
+ip: 20 GET 0
+ip: 23 ADD
+ip: 24 NUMBER 9
+ip: 27 CMPE
+ip: 28 JUMPNZ 31
+ip: 32 NUMBER 9
+ip: 35 GET 0
+ip: 38 CMPE
+ip: 39 ip: 3c BOOLEAN 17
+ip: 3e PRINT 0
+ip: 3f JUMP 43
+ip: 44 JUMP 5d
+ip: 5e STOP

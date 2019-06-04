@@ -1,0 +1,6 @@
+ip: 0 NUMBER 1
+ip: 3 NUMBER 100
+ip: 6 cannot test random integer, default number is 2
+RANDOMINT
+ip: 7 PRINT 2
+ip: 8 STOP

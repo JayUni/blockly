@@ -16,10 +16,8 @@
         "block_name": "io_statement_awrite",
         "arguments": [
             {
-                "block_name": "variables_statement_get",
-                "functionName": "variables_get",
                 "varName": "item",
-                "valueType": "statement"
+                "valueType": ""
             },
             {
                 "block_name": "math_number_number",

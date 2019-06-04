@@ -1,0 +1,4 @@
+ip: 0 NUMBER -7
+ip: 3 ABS
+ip: 4 PRINT 7
+ip: 5 STOP

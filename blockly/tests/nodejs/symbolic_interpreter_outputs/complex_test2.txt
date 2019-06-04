@@ -1,0 +1,481 @@
+ip: 0 NUMBER 0
+ip: 3 SET 0
+ip: 6 NUMBER 0
+ip: 9 SET 2
+ip: 12 NUMBER 0
+ip: 15 SET 4
+ip: 18 NOP
+ip: 19 BOOLEAN 17
+ip: 15 ip: 18 GET 0
+ip: 1b ISEVEN 0
+ip: 1c ip: 1f NUMBER 1
+ip: 22 CHANGE 2
+ip: 25 JUMP 29
+ip: 2a GET 2
+ip: 2d ISODD 1
+ip: 2e ip: 31 NUMBER 1
+ip: 34 CHANGE 0
+ip: 37 JUMP 41
+ip: 42 GET 0
+ip: 45 PRINT 1
+ip: 46 GET 2
+ip: 49 PRINT 1
+ip: 4a GET 4
+ip: 4d PRINT 0
+ip: 4e GET 4
+ip: 51 GET 0
+ip: 54 REMAINDER
+ip: 55 NUMBER 9
+ip: 58 CMPG
+ip: 59 JUMPNZ 62
+ip: 63 NOP
+ip: 64 JUMP 12
+ip: 13 BOOLEAN 17
+ip: 15 ip: 18 GET 0
+ip: 1b ISEVEN 1
+ip: 1c JUMPNZ 28
+ip: 29 NOP
+ip: 2a GET 2
+ip: 2d ISODD 1
+ip: 2e ip: 31 NUMBER 1
+ip: 34 CHANGE 0
+ip: 37 JUMP 41
+ip: 42 GET 0
+ip: 45 PRINT 2
+ip: 46 GET 2
+ip: 49 PRINT 1
+ip: 4a GET 4
+ip: 4d PRINT 0
+ip: 4e GET 4
+ip: 51 GET 0
+ip: 54 REMAINDER
+ip: 55 NUMBER 9
+ip: 58 CMPG
+ip: 59 JUMPNZ 62
+ip: 63 NOP
+ip: 64 JUMP 12
+ip: 13 BOOLEAN 17
+ip: 15 ip: 18 GET 0
+ip: 1b ISEVEN 0
+ip: 1c ip: 1f NUMBER 1
+ip: 22 CHANGE 2
+ip: 25 JUMP 29
+ip: 2a GET 2
+ip: 2d ISODD 0
+ip: 2e JUMPNZ 3a
+ip: 3b NUMBER 11
+ip: 3e CHANGE 4
+ip: 41 NOP
+ip: 42 GET 0
+ip: 45 PRINT 2
+ip: 46 GET 2
+ip: 49 PRINT 2
+ip: 4a GET 4
+ip: 4d PRINT 11
+ip: 4e GET 4
+ip: 51 GET 0
+ip: 54 REMAINDER
+ip: 55 NUMBER 9
+ip: 58 CMPG
+ip: 59 JUMPNZ 62
+ip: 63 NOP
+ip: 64 JUMP 12
+ip: 13 BOOLEAN 17
+ip: 15 ip: 18 GET 0
+ip: 1b ISEVEN 0
+ip: 1c ip: 1f NUMBER 1
+ip: 22 CHANGE 2
+ip: 25 JUMP 29
+ip: 2a GET 2
+ip: 2d ISODD 1
+ip: 2e ip: 31 NUMBER 1
+ip: 34 CHANGE 0
+ip: 37 JUMP 41
+ip: 42 GET 0
+ip: 45 PRINT 3
+ip: 46 GET 2
+ip: 49 PRINT 3
+ip: 4a GET 4
+ip: 4d PRINT 11
+ip: 4e GET 4
+ip: 51 GET 0
+ip: 54 REMAINDER
+ip: 55 NUMBER 9
+ip: 58 CMPG
+ip: 59 JUMPNZ 62
+ip: 63 NOP
+ip: 64 JUMP 12
+ip: 13 BOOLEAN 17
+ip: 15 ip: 18 GET 0
+ip: 1b ISEVEN 1
+ip: 1c JUMPNZ 28
+ip: 29 NOP
+ip: 2a GET 2
+ip: 2d ISODD 1
+ip: 2e ip: 31 NUMBER 1
+ip: 34 CHANGE 0
+ip: 37 JUMP 41
+ip: 42 GET 0
+ip: 45 PRINT 4
+ip: 46 GET 2
+ip: 49 PRINT 3
+ip: 4a GET 4
+ip: 4d PRINT 11
+ip: 4e GET 4
+ip: 51 GET 0
+ip: 54 REMAINDER
+ip: 55 NUMBER 9
+ip: 58 CMPG
+ip: 59 JUMPNZ 62
+ip: 63 NOP
+ip: 64 JUMP 12
+ip: 13 BOOLEAN 17
+ip: 15 ip: 18 GET 0
+ip: 1b ISEVEN 0
+ip: 1c ip: 1f NUMBER 1
+ip: 22 CHANGE 2
+ip: 25 JUMP 29
+ip: 2a GET 2
+ip: 2d ISODD 0
+ip: 2e JUMPNZ 3a
+ip: 3b NUMBER 11
+ip: 3e CHANGE 4
+ip: 41 NOP
+ip: 42 GET 0
+ip: 45 PRINT 4
+ip: 46 GET 2
+ip: 49 PRINT 4
+ip: 4a GET 4
+ip: 4d PRINT 22
+ip: 4e GET 4
+ip: 51 GET 0
+ip: 54 REMAINDER
+ip: 55 NUMBER 9
+ip: 58 CMPG
+ip: 59 JUMPNZ 62
+ip: 63 NOP
+ip: 64 JUMP 12
+ip: 13 BOOLEAN 17
+ip: 15 ip: 18 GET 0
+ip: 1b ISEVEN 0
+ip: 1c ip: 1f NUMBER 1
+ip: 22 CHANGE 2
+ip: 25 JUMP 29
+ip: 2a GET 2
+ip: 2d ISODD 1
+ip: 2e ip: 31 NUMBER 1
+ip: 34 CHANGE 0
+ip: 37 JUMP 41
+ip: 42 GET 0
+ip: 45 PRINT 5
+ip: 46 GET 2
+ip: 49 PRINT 5
+ip: 4a GET 4
+ip: 4d PRINT 22
+ip: 4e GET 4
+ip: 51 GET 0
+ip: 54 REMAINDER
+ip: 55 NUMBER 9
+ip: 58 CMPG
+ip: 59 JUMPNZ 62
+ip: 63 NOP
+ip: 64 JUMP 12
+ip: 13 BOOLEAN 17
+ip: 15 ip: 18 GET 0
+ip: 1b ISEVEN 1
+ip: 1c JUMPNZ 28
+ip: 29 NOP
+ip: 2a GET 2
+ip: 2d ISODD 1
+ip: 2e ip: 31 NUMBER 1
+ip: 34 CHANGE 0
+ip: 37 JUMP 41
+ip: 42 GET 0
+ip: 45 PRINT 6
+ip: 46 GET 2
+ip: 49 PRINT 5
+ip: 4a GET 4
+ip: 4d PRINT 22
+ip: 4e GET 4
+ip: 51 GET 0
+ip: 54 REMAINDER
+ip: 55 NUMBER 9
+ip: 58 CMPG
+ip: 59 JUMPNZ 62
+ip: 63 NOP
+ip: 64 JUMP 12
+ip: 13 BOOLEAN 17
+ip: 15 ip: 18 GET 0
+ip: 1b ISEVEN 0
+ip: 1c ip: 1f NUMBER 1
+ip: 22 CHANGE 2
+ip: 25 JUMP 29
+ip: 2a GET 2
+ip: 2d ISODD 0
+ip: 2e JUMPNZ 3a
+ip: 3b NUMBER 11
+ip: 3e CHANGE 4
+ip: 41 NOP
+ip: 42 GET 0
+ip: 45 PRINT 6
+ip: 46 GET 2
+ip: 49 PRINT 6
+ip: 4a GET 4
+ip: 4d PRINT 33
+ip: 4e GET 4
+ip: 51 GET 0
+ip: 54 REMAINDER
+ip: 55 NUMBER 9
+ip: 58 CMPG
+ip: 59 JUMPNZ 62
+ip: 63 NOP
+ip: 64 JUMP 12
+ip: 13 BOOLEAN 17
+ip: 15 ip: 18 GET 0
+ip: 1b ISEVEN 0
+ip: 1c ip: 1f NUMBER 1
+ip: 22 CHANGE 2
+ip: 25 JUMP 29
+ip: 2a GET 2
+ip: 2d ISODD 1
+ip: 2e ip: 31 NUMBER 1
+ip: 34 CHANGE 0
+ip: 37 JUMP 41
+ip: 42 GET 0
+ip: 45 PRINT 7
+ip: 46 GET 2
+ip: 49 PRINT 7
+ip: 4a GET 4
+ip: 4d PRINT 33
+ip: 4e GET 4
+ip: 51 GET 0
+ip: 54 REMAINDER
+ip: 55 NUMBER 9
+ip: 58 CMPG
+ip: 59 JUMPNZ 62
+ip: 63 NOP
+ip: 64 JUMP 12
+ip: 13 BOOLEAN 17
+ip: 15 ip: 18 GET 0
+ip: 1b ISEVEN 1
+ip: 1c JUMPNZ 28
+ip: 29 NOP
+ip: 2a GET 2
+ip: 2d ISODD 1
+ip: 2e ip: 31 NUMBER 1
+ip: 34 CHANGE 0
+ip: 37 JUMP 41
+ip: 42 GET 0
+ip: 45 PRINT 8
+ip: 46 GET 2
+ip: 49 PRINT 7
+ip: 4a GET 4
+ip: 4d PRINT 33
+ip: 4e GET 4
+ip: 51 GET 0
+ip: 54 REMAINDER
+ip: 55 NUMBER 9
+ip: 58 CMPG
+ip: 59 JUMPNZ 62
+ip: 63 NOP
+ip: 64 JUMP 12
+ip: 13 BOOLEAN 17
+ip: 15 ip: 18 GET 0
+ip: 1b ISEVEN 0
+ip: 1c ip: 1f NUMBER 1
+ip: 22 CHANGE 2
+ip: 25 JUMP 29
+ip: 2a GET 2
+ip: 2d ISODD 0
+ip: 2e JUMPNZ 3a
+ip: 3b NUMBER 11
+ip: 3e CHANGE 4
+ip: 41 NOP
+ip: 42 GET 0
+ip: 45 PRINT 8
+ip: 46 GET 2
+ip: 49 PRINT 8
+ip: 4a GET 4
+ip: 4d PRINT 44
+ip: 4e GET 4
+ip: 51 GET 0
+ip: 54 REMAINDER
+ip: 55 NUMBER 9
+ip: 58 CMPG
+ip: 59 JUMPNZ 62
+ip: 63 NOP
+ip: 64 JUMP 12
+ip: 13 BOOLEAN 17
+ip: 15 ip: 18 GET 0
+ip: 1b ISEVEN 0
+ip: 1c ip: 1f NUMBER 1
+ip: 22 CHANGE 2
+ip: 25 JUMP 29
+ip: 2a GET 2
+ip: 2d ISODD 1
+ip: 2e ip: 31 NUMBER 1
+ip: 34 CHANGE 0
+ip: 37 JUMP 41
+ip: 42 GET 0
+ip: 45 PRINT 9
+ip: 46 GET 2
+ip: 49 PRINT 9
+ip: 4a GET 4
+ip: 4d PRINT 44
+ip: 4e GET 4
+ip: 51 GET 0
+ip: 54 REMAINDER
+ip: 55 NUMBER 9
+ip: 58 CMPG
+ip: 59 JUMPNZ 62
+ip: 63 NOP
+ip: 64 JUMP 12
+ip: 13 BOOLEAN 17
+ip: 15 ip: 18 GET 0
+ip: 1b ISEVEN 1
+ip: 1c JUMPNZ 28
+ip: 29 NOP
+ip: 2a GET 2
+ip: 2d ISODD 1
+ip: 2e ip: 31 NUMBER 1
+ip: 34 CHANGE 0
+ip: 37 JUMP 41
+ip: 42 GET 0
+ip: 45 PRINT a
+ip: 46 GET 2
+ip: 49 PRINT 9
+ip: 4a GET 4
+ip: 4d PRINT 44
+ip: 4e GET 4
+ip: 51 GET 0
+ip: 54 REMAINDER
+ip: 55 NUMBER 9
+ip: 58 CMPG
+ip: 59 JUMPNZ 62
+ip: 63 NOP
+ip: 64 JUMP 12
+ip: 13 BOOLEAN 17
+ip: 15 ip: 18 GET 0
+ip: 1b ISEVEN 0
+ip: 1c ip: 1f NUMBER 1
+ip: 22 CHANGE 2
+ip: 25 JUMP 29
+ip: 2a GET 2
+ip: 2d ISODD 0
+ip: 2e JUMPNZ 3a
+ip: 3b NUMBER 11
+ip: 3e CHANGE 4
+ip: 41 NOP
+ip: 42 GET 0
+ip: 45 PRINT a
+ip: 46 GET 2
+ip: 49 PRINT a
+ip: 4a GET 4
+ip: 4d PRINT 55
+ip: 4e GET 4
+ip: 51 GET 0
+ip: 54 REMAINDER
+ip: 55 NUMBER 9
+ip: 58 CMPG
+ip: 59 JUMPNZ 62
+ip: 63 NOP
+ip: 64 JUMP 12
+ip: 13 BOOLEAN 17
+ip: 15 ip: 18 GET 0
+ip: 1b ISEVEN 0
+ip: 1c ip: 1f NUMBER 1
+ip: 22 CHANGE 2
+ip: 25 JUMP 29
+ip: 2a GET 2
+ip: 2d ISODD 1
+ip: 2e ip: 31 NUMBER 1
+ip: 34 CHANGE 0
+ip: 37 JUMP 41
+ip: 42 GET 0
+ip: 45 PRINT b
+ip: 46 GET 2
+ip: 49 PRINT b
+ip: 4a GET 4
+ip: 4d PRINT 55
+ip: 4e GET 4
+ip: 51 GET 0
+ip: 54 REMAINDER
+ip: 55 NUMBER 9
+ip: 58 CMPG
+ip: 59 JUMPNZ 62
+ip: 63 NOP
+ip: 64 JUMP 12
+ip: 13 BOOLEAN 17
+ip: 15 ip: 18 GET 0
+ip: 1b ISEVEN 1
+ip: 1c JUMPNZ 28
+ip: 29 NOP
+ip: 2a GET 2
+ip: 2d ISODD 1
+ip: 2e ip: 31 NUMBER 1
+ip: 34 CHANGE 0
+ip: 37 JUMP 41
+ip: 42 GET 0
+ip: 45 PRINT c
+ip: 46 GET 2
+ip: 49 PRINT b
+ip: 4a GET 4
+ip: 4d PRINT 55
+ip: 4e GET 4
+ip: 51 GET 0
+ip: 54 REMAINDER
+ip: 55 NUMBER 9
+ip: 58 CMPG
+ip: 59 JUMPNZ 62
+ip: 63 NOP
+ip: 64 JUMP 12
+ip: 13 BOOLEAN 17
+ip: 15 ip: 18 GET 0
+ip: 1b ISEVEN 0
+ip: 1c ip: 1f NUMBER 1
+ip: 22 CHANGE 2
+ip: 25 JUMP 29
+ip: 2a GET 2
+ip: 2d ISODD 0
+ip: 2e JUMPNZ 3a
+ip: 3b NUMBER 11
+ip: 3e CHANGE 4
+ip: 41 NOP
+ip: 42 GET 0
+ip: 45 PRINT c
+ip: 46 GET 2
+ip: 49 PRINT c
+ip: 4a GET 4
+ip: 4d PRINT 66
+ip: 4e GET 4
+ip: 51 GET 0
+ip: 54 REMAINDER
+ip: 55 NUMBER 9
+ip: 58 CMPG
+ip: 59 JUMPNZ 62
+ip: 63 NOP
+ip: 64 JUMP 12
+ip: 13 BOOLEAN 17
+ip: 15 ip: 18 GET 0
+ip: 1b ISEVEN 0
+ip: 1c ip: 1f NUMBER 1
+ip: 22 CHANGE 2
+ip: 25 JUMP 29
+ip: 2a GET 2
+ip: 2d ISODD 1
+ip: 2e ip: 31 NUMBER 1
+ip: 34 CHANGE 0
+ip: 37 JUMP 41
+ip: 42 GET 0
+ip: 45 PRINT d
+ip: 46 GET 2
+ip: 49 PRINT d
+ip: 4a GET 4
+ip: 4d PRINT 66
+ip: 4e GET 4
+ip: 51 GET 0
+ip: 54 REMAINDER
+ip: 55 NUMBER 9
+ip: 58 CMPG
+ip: 59 ip: 5c JUMP 67
+ip: 68 STOP

@@ -1,0 +1,3 @@
+ip: 0 NUMBER -17
+ip: 3 PRINT -17
+ip: 4 STOP

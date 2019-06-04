@@ -20,10 +20,8 @@
                 "block_name": "io_statement_aread",
                 "arguments": [
                     {
-                        "block_name": "variables_statement_get",
-                        "functionName": "variables_get",
                         "varName": "item",
-                        "valueType": "statement"
+                        "valueType": ""
                     }
                 ],
                 "valueType": "statement"

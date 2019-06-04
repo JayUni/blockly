@@ -3,11 +3,11 @@
 # compile the interpreter
 # -std=c++11 -Wall -Werror=format-security
 g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
-# for xml in xmlToJson_test_cases/*.xml
-# do
+for xml in xmlToJson_test_cases/*.xml
+do
     # conver xml to json
 
-    xml="xmlToJson_test_cases/blink_hardware.xml"
+    # xml="xmlToJson_test_cases/io_aread.xml"
 
     json="jsonToAddTyepField_test_cases/`basename $xml .xml`.json"
 
@@ -67,33 +67,14 @@ g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
      echo "created $command_generator."
    fi
 
-   ### generator binary bin file
-   ### then using interpreter_binary debug mode for comparing
-
-
-
-
-
-
    # bin generator
    bin_generator="bin_generator_outputs/`basename $xml .xml`.bin"
-   if [ -e $bin_generator ]
-     then
-       ### execute javascript with $x > $$.out
-       node ../../SkoolBot/bin_generator.js `basename $xml .xml`
-       # result=$(diff -3 $bin_generator compare.bin)
-       # if [ $? -eq 0 ]
-       #   then
-       #      echo "$bin_generator Test case pass."
-       #    else
-       #      echo "$result"
-       #      echo "$bin_generator Test case failed."
-       # fi
-       # continue
-        echo "overwrite $bin_generator."
+   if [ -e $interpreter ]
+    then
+      echo "existed $bin_generator."
    else
      node ../../SkoolBot/bin_generator.js `basename $xml .xml`
-     echo "created $bin_generator."
+     echo "overwrite $bin_generator."
    fi
 
    # interpreter
@@ -115,11 +96,30 @@ g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
        ../../SkoolBot/interpreter $bin_generator > $interpreter
        echo "created $interpreter."
    fi
+
+   # interpreter symbolic
+   interpreter="symbolic_interpreter_outputs/`basename $xml .xml`.txt"
+   if [ -e $interpreter ]
+     then
+       ## execute javascript with $x > $$.out
+       ../../SkoolBot/interpreter $bin_generator -db > compare.txt
+       result=$(wdiff -3 $interpreter compare.txt)
+       if [ $? -eq 0 ]
+          then
+            echo "$interpreter Test case pass."
+          else
+            echo "$result"
+            echo "$interpreter Test case failed."
+            continue
+       fi
+   else
+       ../../SkoolBot/interpreter $bin_generator -db > $interpreter
+       echo "created $interpreter."
+   fi
+
    echo ""
    echo ""
    echo ""
 done
->>>>>>> json2
-# rm compare.txt
-# rm compare.bin
-# rm compare.json
+rm compare.txt
+rm compare.json

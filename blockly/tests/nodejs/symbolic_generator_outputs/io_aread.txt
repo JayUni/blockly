@@ -1,6 +1,5 @@
 number 1
 set item
-get item
-aread
+aread item
 print
 

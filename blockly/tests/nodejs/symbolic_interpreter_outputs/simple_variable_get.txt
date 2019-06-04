@@ -1,0 +1,5 @@
+ip: 0 NUMBER 8
+ip: 3 SET 0
+ip: 6 GET 0
+ip: 9 PRINT 8
+ip: 10 STOP

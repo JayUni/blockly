@@ -1,0 +1,622 @@
+ip: 0 NUMBER 1
+ip: 3 SET 0
+ip: 6 BOOLEAN 17
+ip: 8 SET 2
+ip: b NUMBER 1
+ip: e SET 4
+ip: 11 NOP
+ip: 12 GET 2
+ip: 15 ip: 18 NUMBER 14
+ip: 1b SET 6
+ip: 1e GET 0
+ip: 21 SET 8
+ip: 24 GET 0
+ip: 27 SET a
+ip: 2a BOOLEAN 18
+ip: 2c SET 2
+ip: 2f JUMP 43
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 ISEVEN 1
+ip: 52 JUMPNZ 5f
+ip: 60 GET a
+ip: 63 NUMBER 0
+ip: 66 CMPG
+ip: 67 NEGATE
+ip: 68 JUMPNZ 75
+ip: 76 GET a
+ip: 79 NUMBER 0
+ip: 7c CMPG
+ip: 7d ip: 80 NUMBER 5
+ip: 83 CHANGE a
+ip: 86 JUMP 90
+ip: 91 GET a
+ip: 94 NUMBER 1
+ip: 97 NUMBER 64
+ip: 9a CONSTRAIN64 1 to num: 6
+ip: 9b SET a
+ip: 9e GET a
+ip: a1 PRINT 6
+ip: a2 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 ISEVEN 0
+ip: 52 ip: 55 GET a
+ip: 58 NEG
+ip: 59 SET a
+ip: 5c JUMP 90
+ip: 91 GET a
+ip: 94 NUMBER 1
+ip: 97 NUMBER 64
+ip: 9a CONSTRAIN64 1 to num: fffe
+ip: 9b SET a
+ip: 9e GET a
+ip: a1 PRINT 1
+ip: a2 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 ISEVEN 1
+ip: 52 JUMPNZ 5f
+ip: 60 GET a
+ip: 63 NUMBER 0
+ip: 66 CMPG
+ip: 67 NEGATE
+ip: 68 JUMPNZ 75
+ip: 76 GET a
+ip: 79 NUMBER 0
+ip: 7c CMPG
+ip: 7d ip: 80 NUMBER 5
+ip: 83 CHANGE a
+ip: 86 JUMP 90
+ip: 91 GET a
+ip: 94 NUMBER 1
+ip: 97 NUMBER 64
+ip: 9a CONSTRAIN64 1 to num: 8
+ip: 9b SET a
+ip: 9e GET a
+ip: a1 PRINT 8
+ip: a2 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 ISEVEN 0
+ip: 52 ip: 55 GET a
+ip: 58 NEG
+ip: 59 SET a
+ip: 5c JUMP 90
+ip: 91 GET a
+ip: 94 NUMBER 1
+ip: 97 NUMBER 64
+ip: 9a CONSTRAIN64 1 to num: fffc
+ip: 9b SET a
+ip: 9e GET a
+ip: a1 PRINT 1
+ip: a2 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 ISEVEN 1
+ip: 52 JUMPNZ 5f
+ip: 60 GET a
+ip: 63 NUMBER 0
+ip: 66 CMPG
+ip: 67 NEGATE
+ip: 68 JUMPNZ 75
+ip: 76 GET a
+ip: 79 NUMBER 0
+ip: 7c CMPG
+ip: 7d ip: 80 NUMBER 5
+ip: 83 CHANGE a
+ip: 86 JUMP 90
+ip: 91 GET a
+ip: 94 NUMBER 1
+ip: 97 NUMBER 64
+ip: 9a CONSTRAIN64 1 to num: a
+ip: 9b SET a
+ip: 9e GET a
+ip: a1 PRINT a
+ip: a2 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 ISEVEN 0
+ip: 52 ip: 55 GET a
+ip: 58 NEG
+ip: 59 SET a
+ip: 5c JUMP 90
+ip: 91 GET a
+ip: 94 NUMBER 1
+ip: 97 NUMBER 64
+ip: 9a CONSTRAIN64 1 to num: fffa
+ip: 9b SET a
+ip: 9e GET a
+ip: a1 PRINT 1
+ip: a2 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 ISEVEN 1
+ip: 52 JUMPNZ 5f
+ip: 60 GET a
+ip: 63 NUMBER 0
+ip: 66 CMPG
+ip: 67 NEGATE
+ip: 68 JUMPNZ 75
+ip: 76 GET a
+ip: 79 NUMBER 0
+ip: 7c CMPG
+ip: 7d ip: 80 NUMBER 5
+ip: 83 CHANGE a
+ip: 86 JUMP 90
+ip: 91 GET a
+ip: 94 NUMBER 1
+ip: 97 NUMBER 64
+ip: 9a CONSTRAIN64 1 to num: c
+ip: 9b SET a
+ip: 9e GET a
+ip: a1 PRINT c
+ip: a2 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 ISEVEN 0
+ip: 52 ip: 55 GET a
+ip: 58 NEG
+ip: 59 SET a
+ip: 5c JUMP 90
+ip: 91 GET a
+ip: 94 NUMBER 1
+ip: 97 NUMBER 64
+ip: 9a CONSTRAIN64 1 to num: fff8
+ip: 9b SET a
+ip: 9e GET a
+ip: a1 PRINT 1
+ip: a2 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 ISEVEN 1
+ip: 52 JUMPNZ 5f
+ip: 60 GET a
+ip: 63 NUMBER 0
+ip: 66 CMPG
+ip: 67 NEGATE
+ip: 68 JUMPNZ 75
+ip: 76 GET a
+ip: 79 NUMBER 0
+ip: 7c CMPG
+ip: 7d ip: 80 NUMBER 5
+ip: 83 CHANGE a
+ip: 86 JUMP 90
+ip: 91 GET a
+ip: 94 NUMBER 1
+ip: 97 NUMBER 64
+ip: 9a CONSTRAIN64 1 to num: e
+ip: 9b SET a
+ip: 9e GET a
+ip: a1 PRINT e
+ip: a2 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 ISEVEN 0
+ip: 52 ip: 55 GET a
+ip: 58 NEG
+ip: 59 SET a
+ip: 5c JUMP 90
+ip: 91 GET a
+ip: 94 NUMBER 1
+ip: 97 NUMBER 64
+ip: 9a CONSTRAIN64 1 to num: fff6
+ip: 9b SET a
+ip: 9e GET a
+ip: a1 PRINT 1
+ip: a2 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 ISEVEN 1
+ip: 52 JUMPNZ 5f
+ip: 60 GET a
+ip: 63 NUMBER 0
+ip: 66 CMPG
+ip: 67 NEGATE
+ip: 68 JUMPNZ 75
+ip: 76 GET a
+ip: 79 NUMBER 0
+ip: 7c CMPG
+ip: 7d ip: 80 NUMBER 5
+ip: 83 CHANGE a
+ip: 86 JUMP 90
+ip: 91 GET a
+ip: 94 NUMBER 1
+ip: 97 NUMBER 64
+ip: 9a CONSTRAIN64 1 to num: 10
+ip: 9b SET a
+ip: 9e GET a
+ip: a1 PRINT 10
+ip: a2 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 ISEVEN 0
+ip: 52 ip: 55 GET a
+ip: 58 NEG
+ip: 59 SET a
+ip: 5c JUMP 90
+ip: 91 GET a
+ip: 94 NUMBER 1
+ip: 97 NUMBER 64
+ip: 9a CONSTRAIN64 1 to num: fff4
+ip: 9b SET a
+ip: 9e GET a
+ip: a1 PRINT 1
+ip: a2 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 ISEVEN 1
+ip: 52 JUMPNZ 5f
+ip: 60 GET a
+ip: 63 NUMBER 0
+ip: 66 CMPG
+ip: 67 NEGATE
+ip: 68 JUMPNZ 75
+ip: 76 GET a
+ip: 79 NUMBER 0
+ip: 7c CMPG
+ip: 7d ip: 80 NUMBER 5
+ip: 83 CHANGE a
+ip: 86 JUMP 90
+ip: 91 GET a
+ip: 94 NUMBER 1
+ip: 97 NUMBER 64
+ip: 9a CONSTRAIN64 1 to num: 12
+ip: 9b SET a
+ip: 9e GET a
+ip: a1 PRINT 12
+ip: a2 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 ISEVEN 0
+ip: 52 ip: 55 GET a
+ip: 58 NEG
+ip: 59 SET a
+ip: 5c JUMP 90
+ip: 91 GET a
+ip: 94 NUMBER 1
+ip: 97 NUMBER 64
+ip: 9a CONSTRAIN64 1 to num: fff2
+ip: 9b SET a
+ip: 9e GET a
+ip: a1 PRINT 1
+ip: a2 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 ISEVEN 1
+ip: 52 JUMPNZ 5f
+ip: 60 GET a
+ip: 63 NUMBER 0
+ip: 66 CMPG
+ip: 67 NEGATE
+ip: 68 JUMPNZ 75
+ip: 76 GET a
+ip: 79 NUMBER 0
+ip: 7c CMPG
+ip: 7d ip: 80 NUMBER 5
+ip: 83 CHANGE a
+ip: 86 JUMP 90
+ip: 91 GET a
+ip: 94 NUMBER 1
+ip: 97 NUMBER 64
+ip: 9a CONSTRAIN64 1 to num: 14
+ip: 9b SET a
+ip: 9e GET a
+ip: a1 PRINT 14
+ip: a2 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 ISEVEN 0
+ip: 52 ip: 55 GET a
+ip: 58 NEG
+ip: 59 SET a
+ip: 5c JUMP 90
+ip: 91 GET a
+ip: 94 NUMBER 1
+ip: 97 NUMBER 64
+ip: 9a CONSTRAIN64 1 to num: fff0
+ip: 9b SET a
+ip: 9e GET a
+ip: a1 PRINT 1
+ip: a2 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 ISEVEN 1
+ip: 52 JUMPNZ 5f
+ip: 60 GET a
+ip: 63 NUMBER 0
+ip: 66 CMPG
+ip: 67 NEGATE
+ip: 68 JUMPNZ 75
+ip: 76 GET a
+ip: 79 NUMBER 0
+ip: 7c CMPG
+ip: 7d ip: 80 NUMBER 5
+ip: 83 CHANGE a
+ip: 86 JUMP 90
+ip: 91 GET a
+ip: 94 NUMBER 1
+ip: 97 NUMBER 64
+ip: 9a CONSTRAIN64 1 to num: 16
+ip: 9b SET a
+ip: 9e GET a
+ip: a1 PRINT 16
+ip: a2 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 ISEVEN 0
+ip: 52 ip: 55 GET a
+ip: 58 NEG
+ip: 59 SET a
+ip: 5c JUMP 90
+ip: 91 GET a
+ip: 94 NUMBER 1
+ip: 97 NUMBER 64
+ip: 9a CONSTRAIN64 1 to num: ffee
+ip: 9b SET a
+ip: 9e GET a
+ip: a1 PRINT 1
+ip: a2 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 ISEVEN 1
+ip: 52 JUMPNZ 5f
+ip: 60 GET a
+ip: 63 NUMBER 0
+ip: 66 CMPG
+ip: 67 NEGATE
+ip: 68 JUMPNZ 75
+ip: 76 GET a
+ip: 79 NUMBER 0
+ip: 7c CMPG
+ip: 7d ip: 80 NUMBER 5
+ip: 83 CHANGE a
+ip: 86 JUMP 90
+ip: 91 GET a
+ip: 94 NUMBER 1
+ip: 97 NUMBER 64
+ip: 9a CONSTRAIN64 1 to num: 18
+ip: 9b SET a
+ip: 9e GET a
+ip: a1 PRINT 18
+ip: a2 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 ISEVEN 0
+ip: 52 ip: 55 GET a
+ip: 58 NEG
+ip: 59 SET a
+ip: 5c JUMP 90
+ip: 91 GET a
+ip: 94 NUMBER 1
+ip: 97 NUMBER 64
+ip: 9a CONSTRAIN64 1 to num: ffec
+ip: 9b SET a
+ip: 9e GET a
+ip: a1 PRINT 1
+ip: a2 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b JUMPNZ a5
+ip: a6 STOP

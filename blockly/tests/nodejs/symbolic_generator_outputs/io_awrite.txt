@@ -1,8 +1,7 @@
 number 1
 set item
-get item
 number 0
-awrite
+awrite item
 get item
 print
 
