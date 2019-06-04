@@ -1,0 +1,49 @@
+ip: 0 NUMBER 8
+ip: 3 SET 0
+ip: 6 NUMBER 1
+ip: 9 NUMBER 7
+ip: 12 ADD
+ip: 13 GET 0
+ip: 16 CMPE
+ip: 17 ip: 20 BOOLEAN 17
+ip: 16 PRINT 0
+ip: 17 NUMBER 1
+ip: 1a CHANGE 0
+ip: 1d NUMBER 1
+ip: 20 GET 0
+ip: 23 ADD
+ip: 24 NUMBER 9
+ip: 27 CMPE
+ip: 28 JUMPNZ 31
+ip: 32 NUMBER 9
+ip: 35 GET 0
+ip: 38 CMPE
+ip: 39 ip: 3c GET 0
+ip: 3f ISEVEN 1
+ip: 40 JUMPNZ 49
+ip: 4a NUMBER 1
+ip: 4d GET 0
+ip: 50 NUMBER 2
+ip: 53 REMAINDER
+ip: 54 CMPE
+ip: 55 ip: 58 NUMBER 1
+ip: 5b CHANGE 0
+ip: 5e BOOLEAN 17
+ip: 60 PRINT 0
+ip: 61 JUMP 68
+ip: 69 BOOLEAN 17
+ip: 6b PRINT 0
+ip: 6c JUMP 70
+ip: 71 GET 0
+ip: 74 ISODD 0
+ip: 75 JUMPNZ 7e
+ip: 7f NUMBER 0
+ip: 82 GET 0
+ip: 85 NUMBER 2
+ip: 88 REMAINDER
+ip: 89 CMPE
+ip: 8a ip: 8d BOOLEAN 17
+ip: 8f PRINT 0
+ip: 90 JUMP 97
+ip: 98 JUMP b1
+ip: b2 STOP

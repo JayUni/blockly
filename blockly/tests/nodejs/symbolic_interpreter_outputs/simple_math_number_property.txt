@@ -1,0 +1,4 @@
+ip: 0 NUMBER -5
+ip: 3 ISPOSITIVE
+ip: 4 PRINT 1
+ip: 5 STOP

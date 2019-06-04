@@ -1,0 +1,130 @@
+ip: 0 NUMBER 10
+ip: 3 SET 0
+ip: 6 GET 0
+ip: 9 NUMBER 2
+ip: 12 CMPL
+ip: 13 JUMPNZ 25
+ip: 26 GET 0
+ip: 29 NUMBER 3
+ip: 32 CMPL
+ip: 33 JUMPNZ 45
+ip: 46 NOP
+ip: 47 GET 0
+ip: 50 NUMBER 2
+ip: 53 CMPG
+ip: 54 ip: 57 GET 2
+ip: 60 GET 0
+ip: 63 ADD
+ip: 64 SET 2
+ip: 67 GET 0
+ip: 70 NUMBER 1
+ip: 73 SUB
+ip: 74 SET 0
+ip: 77 GET 2
+ip: 80 PRINT 10
+ip: 81 JUMP 46
+ip: 47 GET 0
+ip: 50 NUMBER 2
+ip: 53 CMPG
+ip: 54 ip: 57 GET 2
+ip: 60 GET 0
+ip: 63 ADD
+ip: 64 SET 2
+ip: 67 GET 0
+ip: 70 NUMBER 1
+ip: 73 SUB
+ip: 74 SET 0
+ip: 77 GET 2
+ip: 80 PRINT 19
+ip: 81 JUMP 46
+ip: 47 GET 0
+ip: 50 NUMBER 2
+ip: 53 CMPG
+ip: 54 ip: 57 GET 2
+ip: 60 GET 0
+ip: 63 ADD
+ip: 64 SET 2
+ip: 67 GET 0
+ip: 70 NUMBER 1
+ip: 73 SUB
+ip: 74 SET 0
+ip: 77 GET 2
+ip: 80 PRINT 27
+ip: 81 JUMP 46
+ip: 47 GET 0
+ip: 50 NUMBER 2
+ip: 53 CMPG
+ip: 54 ip: 57 GET 2
+ip: 60 GET 0
+ip: 63 ADD
+ip: 64 SET 2
+ip: 67 GET 0
+ip: 70 NUMBER 1
+ip: 73 SUB
+ip: 74 SET 0
+ip: 77 GET 2
+ip: 80 PRINT 34
+ip: 81 JUMP 46
+ip: 47 GET 0
+ip: 50 NUMBER 2
+ip: 53 CMPG
+ip: 54 ip: 57 GET 2
+ip: 60 GET 0
+ip: 63 ADD
+ip: 64 SET 2
+ip: 67 GET 0
+ip: 70 NUMBER 1
+ip: 73 SUB
+ip: 74 SET 0
+ip: 77 GET 2
+ip: 80 PRINT 40
+ip: 81 JUMP 46
+ip: 47 GET 0
+ip: 50 NUMBER 2
+ip: 53 CMPG
+ip: 54 ip: 57 GET 2
+ip: 60 GET 0
+ip: 63 ADD
+ip: 64 SET 2
+ip: 67 GET 0
+ip: 70 NUMBER 1
+ip: 73 SUB
+ip: 74 SET 0
+ip: 77 GET 2
+ip: 80 PRINT 45
+ip: 81 JUMP 46
+ip: 47 GET 0
+ip: 50 NUMBER 2
+ip: 53 CMPG
+ip: 54 ip: 57 GET 2
+ip: 60 GET 0
+ip: 63 ADD
+ip: 64 SET 2
+ip: 67 GET 0
+ip: 70 NUMBER 1
+ip: 73 SUB
+ip: 74 SET 0
+ip: 77 GET 2
+ip: 80 PRINT 49
+ip: 81 JUMP 46
+ip: 47 GET 0
+ip: 50 NUMBER 2
+ip: 53 CMPG
+ip: 54 ip: 57 GET 2
+ip: 60 GET 0
+ip: 63 ADD
+ip: 64 SET 2
+ip: 67 GET 0
+ip: 70 NUMBER 1
+ip: 73 SUB
+ip: 74 SET 0
+ip: 77 GET 2
+ip: 80 PRINT 52
+ip: 81 JUMP 46
+ip: 47 GET 0
+ip: 50 NUMBER 2
+ip: 53 CMPG
+ip: 54 JUMPNZ 85
+ip: 86 GET 2
+ip: 89 PRINT 52
+ip: 90 STOP

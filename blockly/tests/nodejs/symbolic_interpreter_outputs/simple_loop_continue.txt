@@ -1,0 +1,620 @@
+ip: 0 NUMBER 1
+ip: 3 SET 0
+ip: 6 BOOLEAN 17
+ip: 8 SET 2
+ip: b NUMBER 3
+ip: e SET 4
+ip: 11 NOP
+ip: 12 GET 2
+ip: 15 ip: 18 NUMBER 64
+ip: 1b SET 6
+ip: 1e GET 0
+ip: 21 SET 8
+ip: 24 GET 0
+ip: 27 SET a
+ip: 2a BOOLEAN 18
+ip: 2c SET 2
+ip: 2f JUMP 43
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 JUMPNZ 5f
+ip: 60 NOP
+ip: 61 GET a
+ip: 64 PRINT 7
+ip: 65 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 JUMPNZ 5f
+ip: 60 NOP
+ip: 61 GET a
+ip: 64 PRINT 1c
+ip: 65 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 JUMPNZ 5f
+ip: 60 NOP
+ip: 61 GET a
+ip: 64 PRINT 31
+ip: 65 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 JUMPNZ 5f
+ip: 60 NOP
+ip: 61 GET a
+ip: 64 PRINT 46
+ip: 65 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 JUMPNZ 5f
+ip: 60 NOP
+ip: 61 GET a
+ip: 64 PRINT 5b
+ip: 65 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b ip: 4e GET a
+ip: 51 NUMBER 7
+ip: 54 ISDIVISBLEBY
+ip: 55 NEGATE
+ip: 56 ip: 59 JUMP 11
+ip: 12 GET 2
+ip: 15 JUMPNZ 32
+ip: 33 GET 8
+ip: 36 GET 4
+ip: 39 ADD
+ip: 3a SET 8
+ip: 3d GET 8
+ip: 40 SET a
+ip: 43 NOP
+ip: 44 GET 8
+ip: 47 GET 6
+ip: 4a CMPLE
+ip: 4b JUMPNZ 68
+ip: 69 STOP

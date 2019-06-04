@@ -1,0 +1,11 @@
+ip: 0 NUMBER 2
+ip: 3 NUMBER 1
+ip: 6 CMPE
+ip: 7 JUMPNZ 17
+ip: 18 NUMBER 1
+ip: 21 NUMBER 1
+ip: 24 CMPE
+ip: 25 ip: 28 NUMBER 0
+ip: 31 PRINT 0
+ip: 32 JUMP 40
+ip: 41 STOP

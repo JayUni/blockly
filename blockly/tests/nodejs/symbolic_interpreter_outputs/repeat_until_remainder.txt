@@ -1,0 +1,220 @@
+ip: 0 NUMBER 5
+ip: 3 SET 0
+ip: 6 NUMBER 1
+ip: 9 SET 2
+ip: 12 NOP
+ip: 13 NUMBER 20
+ip: 16 GET 2
+ip: 19 CMPE
+ip: 20 NEGATE
+ip: 21 ip: 24 NUMBER 1
+ip: 27 CHANGE 2
+ip: 30 GET 0
+ip: 33 GET 2
+ip: 36 REMAINDER
+ip: 37 PRINT 1
+ip: 38 JUMP 12
+ip: 13 NUMBER 20
+ip: 16 GET 2
+ip: 19 CMPE
+ip: 20 NEGATE
+ip: 21 ip: 24 NUMBER 1
+ip: 27 CHANGE 2
+ip: 30 GET 0
+ip: 33 GET 2
+ip: 36 REMAINDER
+ip: 37 PRINT 2
+ip: 38 JUMP 12
+ip: 13 NUMBER 20
+ip: 16 GET 2
+ip: 19 CMPE
+ip: 20 NEGATE
+ip: 21 ip: 24 NUMBER 1
+ip: 27 CHANGE 2
+ip: 30 GET 0
+ip: 33 GET 2
+ip: 36 REMAINDER
+ip: 37 PRINT 1
+ip: 38 JUMP 12
+ip: 13 NUMBER 20
+ip: 16 GET 2
+ip: 19 CMPE
+ip: 20 NEGATE
+ip: 21 ip: 24 NUMBER 1
+ip: 27 CHANGE 2
+ip: 30 GET 0
+ip: 33 GET 2
+ip: 36 REMAINDER
+ip: 37 PRINT 0
+ip: 38 JUMP 12
+ip: 13 NUMBER 20
+ip: 16 GET 2
+ip: 19 CMPE
+ip: 20 NEGATE
+ip: 21 ip: 24 NUMBER 1
+ip: 27 CHANGE 2
+ip: 30 GET 0
+ip: 33 GET 2
+ip: 36 REMAINDER
+ip: 37 PRINT 5
+ip: 38 JUMP 12
+ip: 13 NUMBER 20
+ip: 16 GET 2
+ip: 19 CMPE
+ip: 20 NEGATE
+ip: 21 ip: 24 NUMBER 1
+ip: 27 CHANGE 2
+ip: 30 GET 0
+ip: 33 GET 2
+ip: 36 REMAINDER
+ip: 37 PRINT 5
+ip: 38 JUMP 12
+ip: 13 NUMBER 20
+ip: 16 GET 2
+ip: 19 CMPE
+ip: 20 NEGATE
+ip: 21 ip: 24 NUMBER 1
+ip: 27 CHANGE 2
+ip: 30 GET 0
+ip: 33 GET 2
+ip: 36 REMAINDER
+ip: 37 PRINT 5
+ip: 38 JUMP 12
+ip: 13 NUMBER 20
+ip: 16 GET 2
+ip: 19 CMPE
+ip: 20 NEGATE
+ip: 21 ip: 24 NUMBER 1
+ip: 27 CHANGE 2
+ip: 30 GET 0
+ip: 33 GET 2
+ip: 36 REMAINDER
+ip: 37 PRINT 5
+ip: 38 JUMP 12
+ip: 13 NUMBER 20
+ip: 16 GET 2
+ip: 19 CMPE
+ip: 20 NEGATE
+ip: 21 ip: 24 NUMBER 1
+ip: 27 CHANGE 2
+ip: 30 GET 0
+ip: 33 GET 2
+ip: 36 REMAINDER
+ip: 37 PRINT 5
+ip: 38 JUMP 12
+ip: 13 NUMBER 20
+ip: 16 GET 2
+ip: 19 CMPE
+ip: 20 NEGATE
+ip: 21 ip: 24 NUMBER 1
+ip: 27 CHANGE 2
+ip: 30 GET 0
+ip: 33 GET 2
+ip: 36 REMAINDER
+ip: 37 PRINT 5
+ip: 38 JUMP 12
+ip: 13 NUMBER 20
+ip: 16 GET 2
+ip: 19 CMPE
+ip: 20 NEGATE
+ip: 21 ip: 24 NUMBER 1
+ip: 27 CHANGE 2
+ip: 30 GET 0
+ip: 33 GET 2
+ip: 36 REMAINDER
+ip: 37 PRINT 5
+ip: 38 JUMP 12
+ip: 13 NUMBER 20
+ip: 16 GET 2
+ip: 19 CMPE
+ip: 20 NEGATE
+ip: 21 ip: 24 NUMBER 1
+ip: 27 CHANGE 2
+ip: 30 GET 0
+ip: 33 GET 2
+ip: 36 REMAINDER
+ip: 37 PRINT 5
+ip: 38 JUMP 12
+ip: 13 NUMBER 20
+ip: 16 GET 2
+ip: 19 CMPE
+ip: 20 NEGATE
+ip: 21 ip: 24 NUMBER 1
+ip: 27 CHANGE 2
+ip: 30 GET 0
+ip: 33 GET 2
+ip: 36 REMAINDER
+ip: 37 PRINT 5
+ip: 38 JUMP 12
+ip: 13 NUMBER 20
+ip: 16 GET 2
+ip: 19 CMPE
+ip: 20 NEGATE
+ip: 21 ip: 24 NUMBER 1
+ip: 27 CHANGE 2
+ip: 30 GET 0
+ip: 33 GET 2
+ip: 36 REMAINDER
+ip: 37 PRINT 5
+ip: 38 JUMP 12
+ip: 13 NUMBER 20
+ip: 16 GET 2
+ip: 19 CMPE
+ip: 20 NEGATE
+ip: 21 ip: 24 NUMBER 1
+ip: 27 CHANGE 2
+ip: 30 GET 0
+ip: 33 GET 2
+ip: 36 REMAINDER
+ip: 37 PRINT 5
+ip: 38 JUMP 12
+ip: 13 NUMBER 20
+ip: 16 GET 2
+ip: 19 CMPE
+ip: 20 NEGATE
+ip: 21 ip: 24 NUMBER 1
+ip: 27 CHANGE 2
+ip: 30 GET 0
+ip: 33 GET 2
+ip: 36 REMAINDER
+ip: 37 PRINT 5
+ip: 38 JUMP 12
+ip: 13 NUMBER 20
+ip: 16 GET 2
+ip: 19 CMPE
+ip: 20 NEGATE
+ip: 21 ip: 24 NUMBER 1
+ip: 27 CHANGE 2
+ip: 30 GET 0
+ip: 33 GET 2
+ip: 36 REMAINDER
+ip: 37 PRINT 5
+ip: 38 JUMP 12
+ip: 13 NUMBER 20
+ip: 16 GET 2
+ip: 19 CMPE
+ip: 20 NEGATE
+ip: 21 ip: 24 NUMBER 1
+ip: 27 CHANGE 2
+ip: 30 GET 0
+ip: 33 GET 2
+ip: 36 REMAINDER
+ip: 37 PRINT 5
+ip: 38 JUMP 12
+ip: 13 NUMBER 20
+ip: 16 GET 2
+ip: 19 CMPE
+ip: 20 NEGATE
+ip: 21 ip: 24 NUMBER 1
+ip: 27 CHANGE 2
+ip: 30 GET 0
+ip: 33 GET 2
+ip: 36 REMAINDER
+ip: 37 PRINT 5
+ip: 38 JUMP 12
+ip: 13 NUMBER 20
+ip: 16 GET 2
+ip: 19 CMPE
+ip: 20 NEGATE
+ip: 21 JUMPNZ 41
+ip: 42 STOP

@@ -1,0 +1,8881 @@
+ip: 0 NUMBER 200
+ip: 3 SET 0
+ip: 6 NUMBER 1
+ip: 9 SET 2
+ip: 12 BOOLEAN 17
+ip: e SET 4
+ip: 11 NUMBER 2
+ip: 14 SET 6
+ip: 17 NOP
+ip: 18 GET 4
+ip: 1b ip: 1e GET 0
+ip: 21 SET 8
+ip: 24 GET 2
+ip: 27 SET a
+ip: 2a GET 2
+ip: 2d SET c
+ip: 30 BOOLEAN 18
+ip: 32 SET 4
+ip: 35 JUMP 49
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 0
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 0
+ip: c5 OR 1
+ip: c6 ip: c9 NUMBER 1
+ip: cc CHANGE 0
+ip: cf GET 0
+ip: d2 PRINT c9
+ip: d3 JUMP fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 1
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 1
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 1
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 3
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 1
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 1
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 ip: 107 NUMBER 2
+ip: 10a NUMBER 2
+ip: 10d POW
+ip: 10e SET 0
+ip: 111 GET 0
+ip: 114 PRINT 4
+ip: 115 JUMP 12e
+ip: 12f GET c
+ip: 132 PRINT 5
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 0
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 0
+ip: c5 OR 1
+ip: c6 ip: c9 NUMBER 1
+ip: cc CHANGE 0
+ip: cf GET 0
+ip: d2 PRINT 5
+ip: d3 JUMP fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 7
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 ip: 89 GET 0
+ip: 8c PRINT 5
+ip: 8d JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 1
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 1
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 9
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT b
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT d
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 ip: 107 NUMBER 2
+ip: 10a NUMBER 2
+ip: 10d POW
+ip: 10e SET 0
+ip: 111 GET 0
+ip: 114 PRINT 4
+ip: 115 JUMP 12e
+ip: 12f GET c
+ip: 132 PRINT f
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 0
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 0
+ip: c5 OR 1
+ip: c6 ip: c9 NUMBER 1
+ip: cc CHANGE 0
+ip: cf GET 0
+ip: d2 PRINT 5
+ip: d3 JUMP fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 11
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 1
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 1
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 13
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 15
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 17
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 ip: 107 NUMBER 2
+ip: 10a NUMBER 2
+ip: 10d POW
+ip: 10e SET 0
+ip: 111 GET 0
+ip: 114 PRINT 4
+ip: 115 JUMP 12e
+ip: 12f GET c
+ip: 132 PRINT 19
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 ip: 89 GET 0
+ip: 8c PRINT 4
+ip: 8d JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 0
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 0
+ip: c5 OR 1
+ip: c6 ip: c9 NUMBER 1
+ip: cc CHANGE 0
+ip: cf GET 0
+ip: d2 PRINT 5
+ip: d3 JUMP fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 1b
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 1
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 1
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 1d
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 1f
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 21
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 ip: 107 NUMBER 2
+ip: 10a NUMBER 2
+ip: 10d POW
+ip: 10e SET 0
+ip: 111 GET 0
+ip: 114 PRINT 4
+ip: 115 JUMP 12e
+ip: 12f GET c
+ip: 132 PRINT 23
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 0
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 0
+ip: c5 OR 1
+ip: c6 ip: c9 NUMBER 1
+ip: cc CHANGE 0
+ip: cf GET 0
+ip: d2 PRINT 5
+ip: d3 JUMP fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 25
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 1
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 1
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 27
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 29
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 2b
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 ip: 89 GET 0
+ip: 8c PRINT ffe7
+ip: 8d JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 ip: 107 NUMBER 2
+ip: 10a NUMBER 2
+ip: 10d POW
+ip: 10e SET 0
+ip: 111 GET 0
+ip: 114 PRINT 4
+ip: 115 JUMP 12e
+ip: 12f GET c
+ip: 132 PRINT 2d
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 0
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 0
+ip: c5 OR 1
+ip: c6 ip: c9 NUMBER 1
+ip: cc CHANGE 0
+ip: cf GET 0
+ip: d2 PRINT 5
+ip: d3 JUMP fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 2f
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 1
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 1
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 31
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 33
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 35
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 ip: 107 NUMBER 2
+ip: 10a NUMBER 2
+ip: 10d POW
+ip: 10e SET 0
+ip: 111 GET 0
+ip: 114 PRINT 4
+ip: 115 JUMP 12e
+ip: 12f GET c
+ip: 132 PRINT 37
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 0
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 0
+ip: c5 OR 1
+ip: c6 ip: c9 NUMBER 1
+ip: cc CHANGE 0
+ip: cf GET 0
+ip: d2 PRINT 5
+ip: d3 JUMP fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 39
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 1
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 1
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 3b
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 3d
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 ip: 89 GET 0
+ip: 8c PRINT fff1
+ip: 8d JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 3f
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 ip: 107 NUMBER 2
+ip: 10a NUMBER 2
+ip: 10d POW
+ip: 10e SET 0
+ip: 111 GET 0
+ip: 114 PRINT 4
+ip: 115 JUMP 12e
+ip: 12f GET c
+ip: 132 PRINT 41
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 0
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 0
+ip: c5 OR 1
+ip: c6 ip: c9 NUMBER 1
+ip: cc CHANGE 0
+ip: cf GET 0
+ip: d2 PRINT 5
+ip: d3 JUMP fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 43
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 1
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 1
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 45
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 47
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 49
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 ip: 107 NUMBER 2
+ip: 10a NUMBER 2
+ip: 10d POW
+ip: 10e SET 0
+ip: 111 GET 0
+ip: 114 PRINT 4
+ip: 115 JUMP 12e
+ip: 12f GET c
+ip: 132 PRINT 4b
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 0
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 0
+ip: c5 OR 1
+ip: c6 ip: c9 NUMBER 1
+ip: cc CHANGE 0
+ip: cf GET 0
+ip: d2 PRINT 5
+ip: d3 JUMP fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 4d
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 1
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 1
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 4f
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 ip: 89 GET 0
+ip: 8c PRINT fffb
+ip: 8d JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 51
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 53
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 ip: 107 NUMBER 2
+ip: 10a NUMBER 2
+ip: 10d POW
+ip: 10e SET 0
+ip: 111 GET 0
+ip: 114 PRINT 4
+ip: 115 JUMP 12e
+ip: 12f GET c
+ip: 132 PRINT 55
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 0
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 0
+ip: c5 OR 1
+ip: c6 ip: c9 NUMBER 1
+ip: cc CHANGE 0
+ip: cf GET 0
+ip: d2 PRINT 5
+ip: d3 JUMP fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 57
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 1
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 1
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 59
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 5b
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 5d
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 ip: 107 NUMBER 2
+ip: 10a NUMBER 2
+ip: 10d POW
+ip: 10e SET 0
+ip: 111 GET 0
+ip: 114 PRINT 4
+ip: 115 JUMP 12e
+ip: 12f GET c
+ip: 132 PRINT 5f
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 0
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 0
+ip: c5 OR 1
+ip: c6 ip: c9 NUMBER 1
+ip: cc CHANGE 0
+ip: cf GET 0
+ip: d2 PRINT 5
+ip: d3 JUMP fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 61
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 ip: 89 GET 0
+ip: 8c PRINT 5
+ip: 8d JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 1
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 1
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 63
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 65
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 67
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 ip: 107 NUMBER 2
+ip: 10a NUMBER 2
+ip: 10d POW
+ip: 10e SET 0
+ip: 111 GET 0
+ip: 114 PRINT 4
+ip: 115 JUMP 12e
+ip: 12f GET c
+ip: 132 PRINT 69
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 0
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 0
+ip: c5 OR 1
+ip: c6 ip: c9 NUMBER 1
+ip: cc CHANGE 0
+ip: cf GET 0
+ip: d2 PRINT 5
+ip: d3 JUMP fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 6b
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 1
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 1
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 6d
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 6f
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 71
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 ip: 107 NUMBER 2
+ip: 10a NUMBER 2
+ip: 10d POW
+ip: 10e SET 0
+ip: 111 GET 0
+ip: 114 PRINT 4
+ip: 115 JUMP 12e
+ip: 12f GET c
+ip: 132 PRINT 73
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 ip: 89 GET 0
+ip: 8c PRINT 4
+ip: 8d JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 0
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 0
+ip: c5 OR 1
+ip: c6 ip: c9 NUMBER 1
+ip: cc CHANGE 0
+ip: cf GET 0
+ip: d2 PRINT 5
+ip: d3 JUMP fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 75
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN 1
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN 1
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 77
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 79
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a JUMPNZ 143
+ip: 144 NOP
+ip: 145 JUMP 17
+ip: 18 GET 4
+ip: 1b JUMPNZ 38
+ip: 39 GET a
+ip: 3c GET 6
+ip: 3f ADD
+ip: 40 SET a
+ip: 43 GET a
+ip: 46 SET c
+ip: 49 NOP
+ip: 4a GET a
+ip: 4d GET 8
+ip: 50 CMPLE
+ip: 51 ip: 54 GET c
+ip: 57 GET 0
+ip: 5a NUMBER 3
+ip: 5d REMAINDER
+ip: 5e CMPE
+ip: 5f JUMPNZ 69
+ip: 6a GET c
+ip: 6d ISEVEN 1
+ip: 6e JUMPNZ 7e
+ip: 7f GET c
+ip: 82 NUMBER 9
+ip: 85 ISDIVISBLEBY
+ip: 86 JUMPNZ 90
+ip: 91 GET c
+ip: 94 ISODD 1
+ip: 95 ip: 98 NUMBER 3039
+ip: 9b PRINT 3039
+ip: 9c JUMP a0
+ip: a1 NOP
+ip: a2 NOP
+ip: a3 GET 0
+ip: a6 ISEVEN ffffffff
+ip: a7 GET c
+ip: aa ISEVEN 1
+ip: ab AND 0
+ip: ac JUMPNZ bc
+ip: bd GET c
+ip: c0 ISEVEN 1
+ip: c1 GET 0
+ip: c4 ISEVEN ffffffff
+ip: c5 OR 0
+ip: c6 JUMPNZ d6
+ip: d7 NUMBER a
+ip: da SET e
+ip: dd NOP
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 ip: f8 JUMP dd
+ip: de NUMBER ffff
+ip: e1 CHANGE 0
+ip: e4 GET e
+ip: e7 NUMBER 1
+ip: ea SUB
+ip: eb SET e
+ip: ee GET e
+ip: f1 NUMBER 0
+ip: f4 CMPG
+ip: f5 JUMPNZ fc
+ip: fd GET c
+ip: 100 NUMBER 5
+ip: 103 ISDIVISBLEBY
+ip: 104 JUMPNZ 118
+ip: 119 NOP
+ip: 11a GET c
+ip: 11d NUMBER 2
+ip: 120 ISDIVISBLEBY
+ip: 121 JUMPNZ 12e
+ip: 12f GET c
+ip: 132 PRINT 7b
+ip: 133 GET c
+ip: 136 NUMBER 7b
+ip: 139 CMPGE
+ip: 13a ip: 13d JUMP 148
+ip: 149 STOP

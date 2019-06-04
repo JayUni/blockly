@@ -1,0 +1,4 @@
+ip: 0 BOOLEAN 17
+ip: 2 NEGATE
+ip: 3 PRINT 1
+ip: 4 STOP

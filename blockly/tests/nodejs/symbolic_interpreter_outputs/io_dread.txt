@@ -1,0 +1,6 @@
+ip: 0 NUMBER 1
+ip: 3 SET 0
+ip: 6 ip: 7 NOP
+ip: 8 NOP
+ip: 9 PRINT 0
+ip: 10 STOP

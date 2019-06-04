@@ -54,9 +54,9 @@ Blockly.Skoolbot['analogread'] = function(block) {
 
 Blockly.Skoolbot['analogwrite'] = function(block) {
   var variable_var = Blockly.Skoolbot.variableDB_.getName(block.getFieldValue('var'), Blockly.Variables.NAME_TYPE);
-  var number_name = block.getFieldValue('value');
+  var value_value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble Skoolbot into code variable.
-  var code = '{ \"block_name\": \"io_statement_awrite\", \"arguments\": [ { \"varName\": \"'  + variable_var + '\"}, { "block_name": "math_number_number", "number": ' +number_name + ' }]}';
+  var code = '{ \"block_name\": \"io_statement_awrite\", \"arguments\": [ { \"varName\": \"'  + variable_var + '\"}, { "block_name": "math_number_number", "number": ' +value_value + ' }]}';
   return code;
 };
 

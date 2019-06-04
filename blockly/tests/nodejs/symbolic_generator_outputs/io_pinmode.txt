@@ -1,7 +1,7 @@
 number 1
 set item
-get item
-pinmode undefined
+number 0
+pinmode item
 get item
 print
 

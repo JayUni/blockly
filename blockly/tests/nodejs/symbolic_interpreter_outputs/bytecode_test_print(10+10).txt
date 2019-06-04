@@ -1,0 +1,5 @@
+ip: 0 NUMBER 10
+ip: 3 NUMBER 10
+ip: 6 ADD
+ip: 7 PRINT 20
+ip: 8 STOP
