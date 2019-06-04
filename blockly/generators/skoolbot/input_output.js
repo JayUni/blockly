@@ -54,17 +54,17 @@ Blockly.Skoolbot['analogread'] = function(block) {
 
 Blockly.Skoolbot['analogwrite'] = function(block) {
   var variable_var = Blockly.Skoolbot.variableDB_.getName(block.getFieldValue('var'), Blockly.Variables.NAME_TYPE);
-  var number_name = block.getFieldValue('value');
+  var value_value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble Skoolbot into code variable.
-  var code = '{ \"block_name\": \"io_statement_awrite\", \"arguments\": [ { \"varName\": \"'  + variable_var + '\"}, { "block_name": "math_number_number", "number": ' +number_name + ' }]}';
+  var code = '{ \"block_name\": \"io_statement_awrite\", \"arguments\": [ { \"varName\": \"'  + variable_var + '\"}, { "block_name": "math_number_number", "number": ' +value_value + ' }]}';
   return code;
 };
 
 Blockly.Skoolbot['pinmode'] = function(block) {
   var variable_var = Blockly.Skoolbot.variableDB_.getName(block.getFieldValue('var'), Blockly.Variables.NAME_TYPE);
-  var value_value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ATOMIC);
+  var dropdown_name = block.getFieldValue('IO');
   // TODO: Assemble Skoolbot into code variable.
-  var code = '{ \"block_name\": \"io_statement_pinmode\", \"arguments\": [ { \"varName\": \"'  + variable_var + '\"}, {\"pinmode\": \"' + value_value + '\"}]}';
+  var code = '{ \"block_name\": \"io_statement_pinmode\", \"arguments\": [ { \"varName\": \"'  + variable_var + '\"}, {\"pinmode\": \"' + dropdown_name + '\"}]}';
   return code;
   // var variable0 = Blockly.Skoolbot.variableDB_.getName(
   //     block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);

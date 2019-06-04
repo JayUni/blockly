@@ -74,7 +74,7 @@ Blockly.defineBlocksWithJsonArray([ // BEGIN JSON EXTRACT
 },
 {
   "type": "analogwrite",
-  "message0": "analog read - pin: %1 , value:  %2 %3",
+  "message0": "analog write - pin: %1 , value:  %2 %3",
   "args0": [
     {
       "type": "field_variable",
