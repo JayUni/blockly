@@ -78,7 +78,6 @@ int16_t pop() {
   return stack[--stack_ptr];
 }
 
-// 1 = true, 0 = false
 void run() {
   int16_t op1;
   int16_t op2;
@@ -353,120 +352,58 @@ void run() {
         }
         break;
         case PINMODE:
-  //       {
-  //         size_t addr = GETARG;
-  //         ip += 2;
-  //         size_t value = pop();
-  //
-  // //        Serial.print("pinMode: ");
-  // //        Serial.print(value);
-  // //        Serial.print(" ");
-  // //        Serial.println(memory[addr]);
-  //
-  //         if (value == 0) {
-  //           pinMode(memory[addr], INPUT);
-  //         } else if (value == 1) {
-  //           pinMode(memory[addr], OUTPUT);
-  //         } else {
-  //           Serial.print("Invalid pinMode: ");
-  //           Serial.println(value);
-  //           Serial.println(memory[addr]);
-  //           return;
-  //         }
-  //
-  //       }
+        {
+          size_t addr = GETARG;
+          ip += 2;
+          size_t value = pop();
+
+         std::cout<<"pinMode: "<<value<<" "<<memory[addr]<<std::endl;
+
+        }
         break;
        case DREAD:
-  //       {
-  //         size_t addr = GETARG;
-  //         ip += 2;
-  //
-  //         int val = digitalRead(memory[addr]);
-  //
-  // //        Serial.print("DREAD: ");
-  // //        Serial.print(val);
-  // //        Serial.print(" ");
-  // //        Serial.println(memory[addr]);
-  //
-  //         if (val == HIGH) {
-  //           push(0);
-  //         } else if (val == LOW) {
-  //           push(1);
-  //         } else {
-  //           Serial.print("Invalid digitalRead: ");
-  //           Serial.println(val);
-  //           return;
-  //         }
-  //       }
+        {
+          size_t addr = GETARG;
+          ip += 2;
+
+          std::cout<<"DREAD: "<<memory[addr]<<std::endl;
+
+        }
         break;
        case DWRITE:
-  //       {
-  //         size_t addr = GETARG;
-  //         ip += 2;
-  //
-  //         int16_t value = pop();
-  //
-  // //        Serial.print("DWRITE: ");
-  // //        Serial.print(value);
-  // //        Serial.print(" ");
-  // //        Serial.println(memory[addr]);
-  //
-  //         if (value == 0) {
-  //           digitalWrite(memory[addr], HIGH);
-  //         } else if (value == 1) {
-  //           digitalWrite(memory[addr], LOW);
-  //         } else {
-  //           Serial.print("Invalid digitalWrite: ");
-  //           Serial.println(value);
-  //           return;
-  //         }
-  //       }
+        {
+          size_t addr = GETARG;
+          ip += 2;
+
+          int16_t value = pop();
+          std::cout<<"DWRITE: "<<value<<" "<<memory[addr]<<std::endl;
+
+        }
         break;
        case AREAD:
-  //       {
-  //         size_t addr = GETARG;
-  //         ip += 2;
-  //
-  //         int val = analogRead(memory[addr]);
-  //
-  // //        Serial.print("AREAD: ");
-  // //        Serial.print(val);
-  // //        Serial.print(" ");
-  // //        Serial.println(memory[addr]);
-  //
-  //         if (val > -1 && val < 1024) {
-  //           push(val);
-  //         } else {
-  //           Serial.print("Invalid analogRead: ");
-  //           Serial.println(val);
-  //           return;
-  //         }
-  //       }
+        {
+          size_t addr = GETARG;
+          ip += 2;
+
+          // int val = analogRead(memory[addr]);
+          std::cout<<"AREAD: "<<memory[addr]<<std::endl;
+
+        }
         break;
        case AWRITE:
-  //       {
-  //         size_t addr = GETARG;
-  //         ip += 2;
-  //         int16_t value = pop();
-  //         value = map(value, 0, 1023, 0, 255);
-  //
-  // //        Serial.print("AWRITE: ");
-  // //        Serial.print(value);
-  // //        Serial.print(" ");
-  // //        Serial.println(memory[addr]);
-  //
-  //         analogWrite(memory[addr], value);
-  //       }
-        break;
+        {
+          size_t addr = GETARG;
+          ip += 2;
+          int16_t value = pop();
+          std::cout<<"DWRITE: "<<value<<" "<<memory[addr]<<std::endl;
 
+        }
+        break;
        case DELAY:
-  //       {
-  //         int16_t val = pop();
-  // //        Serial.print("delay: ");
-  // //        Serial.println(val);
-  //
-  //         delay(val);
-  //       }
+        {
+          int16_t val = pop();
+          std::cout<<"Delay: "<<val<<std::endl;
+        }
         break;
       default:
         std::cerr<<"Invalid command: "<<std::hex<<(int16_t)code[ip]<<std::endl;
@@ -639,120 +576,58 @@ void run_symbol() {
         }
         break;
         case PINMODE:
-  //       {
-  //         size_t addr = GETARG;
-  //         ip += 2;
-  //         size_t value = pop();
-  //
-  // //        Serial.print("pinMode: ");
-  // //        Serial.print(value);
-  // //        Serial.print(" ");
-  // //        Serial.println(memory[addr]);
-  //
-  //         if (value == 0) {
-  //           pinMode(memory[addr], INPUT);
-  //         } else if (value == 1) {
-  //           pinMode(memory[addr], OUTPUT);
-  //         } else {
-  //           Serial.print("Invalid pinMode: ");
-  //           Serial.println(value);
-  //           Serial.println(memory[addr]);
-  //           return;
-  //         }
-  //
-  //       }
+        {
+          size_t addr = GETARG;
+          ip += 2;
+          size_t value = pop();
+
+         std::cout<<"pinMode: "<<value<<" "<<memory[addr]<<std::endl;
+
+        }
         break;
        case DREAD:
-  //       {
-  //         size_t addr = GETARG;
-  //         ip += 2;
-  //
-  //         int val = digitalRead(memory[addr]);
-  //
-  // //        Serial.print("DREAD: ");
-  // //        Serial.print(val);
-  // //        Serial.print(" ");
-  // //        Serial.println(memory[addr]);
-  //
-  //         if (val == HIGH) {
-  //           push(0);
-  //         } else if (val == LOW) {
-  //           push(1);
-  //         } else {
-  //           Serial.print("Invalid digitalRead: ");
-  //           Serial.println(val);
-  //           return;
-  //         }
-  //       }
+        {
+          size_t addr = GETARG;
+          ip += 2;
+
+          std::cout<<"DREAD: "<<memory[addr]<<std::endl;
+
+        }
         break;
        case DWRITE:
-  //       {
-  //         size_t addr = GETARG;
-  //         ip += 2;
-  //
-  //         int16_t value = pop();
-  //
-  // //        Serial.print("DWRITE: ");
-  // //        Serial.print(value);
-  // //        Serial.print(" ");
-  // //        Serial.println(memory[addr]);
-  //
-  //         if (value == 0) {
-  //           digitalWrite(memory[addr], HIGH);
-  //         } else if (value == 1) {
-  //           digitalWrite(memory[addr], LOW);
-  //         } else {
-  //           Serial.print("Invalid digitalWrite: ");
-  //           Serial.println(value);
-  //           return;
-  //         }
-  //       }
+        {
+          size_t addr = GETARG;
+          ip += 2;
+
+          int16_t value = pop();
+          std::cout<<"DWRITE: "<<value<<" "<<memory[addr]<<std::endl;
+
+        }
         break;
        case AREAD:
-  //       {
-  //         size_t addr = GETARG;
-  //         ip += 2;
-  //
-  //         int val = analogRead(memory[addr]);
-  //
-  // //        Serial.print("AREAD: ");
-  // //        Serial.print(val);
-  // //        Serial.print(" ");
-  // //        Serial.println(memory[addr]);
-  //
-  //         if (val > -1 && val < 1024) {
-  //           push(val);
-  //         } else {
-  //           Serial.print("Invalid analogRead: ");
-  //           Serial.println(val);
-  //           return;
-  //         }
-  //       }
+        {
+          size_t addr = GETARG;
+          ip += 2;
+
+          // int val = analogRead(memory[addr]);
+          std::cout<<"AREAD: "<<memory[addr]<<std::endl;
+
+        }
         break;
        case AWRITE:
-  //       {
-  //         size_t addr = GETARG;
-  //         ip += 2;
-  //         int16_t value = pop();
-  //         value = map(value, 0, 1023, 0, 255);
-  //
-  // //        Serial.print("AWRITE: ");
-  // //        Serial.print(value);
-  // //        Serial.print(" ");
-  // //        Serial.println(memory[addr]);
-  //
-  //         analogWrite(memory[addr], value);
-  //       }
-        break;
+        {
+          size_t addr = GETARG;
+          ip += 2;
+          int16_t value = pop();
+          std::cout<<"DWRITE: "<<value<<" "<<memory[addr]<<std::endl;
 
+        }
+        break;
        case DELAY:
-  //       {
-  //         int16_t val = pop();
-  // //        Serial.print("delay: ");
-  // //        Serial.println(val);
-  //
-  //         delay(val);
-  //       }
+        {
+          int16_t val = pop();
+          std::cout<<"Delay: "<<val<<std::endl;
+        }
         break;
       default:
         std::cerr<<"Invalid command: "<<std::hex<<(int16_t)code[ip]<<std::endl;
@@ -1075,120 +950,58 @@ void run_both() {
         }
         break;
         case PINMODE:
-  //       {
-  //         size_t addr = GETARG;
-  //         ip += 2;
-  //         size_t value = pop();
-  //
-  // //        Serial.print("pinMode: ");
-  // //        Serial.print(value);
-  // //        Serial.print(" ");
-  // //        Serial.println(memory[addr]);
-  //
-  //         if (value == 0) {
-  //           pinMode(memory[addr], INPUT);
-  //         } else if (value == 1) {
-  //           pinMode(memory[addr], OUTPUT);
-  //         } else {
-  //           Serial.print("Invalid pinMode: ");
-  //           Serial.println(value);
-  //           Serial.println(memory[addr]);
-  //           return;
-  //         }
-  //
-  //       }
+        {
+          size_t addr = GETARG;
+          ip += 2;
+          size_t value = pop();
+
+         std::cout<<"pinMode: "<<value<<" "<<memory[addr]<<std::endl;
+
+        }
         break;
        case DREAD:
-  //       {
-  //         size_t addr = GETARG;
-  //         ip += 2;
-  //
-  //         int val = digitalRead(memory[addr]);
-  //
-  // //        Serial.print("DREAD: ");
-  // //        Serial.print(val);
-  // //        Serial.print(" ");
-  // //        Serial.println(memory[addr]);
-  //
-  //         if (val == HIGH) {
-  //           push(0);
-  //         } else if (val == LOW) {
-  //           push(1);
-  //         } else {
-  //           Serial.print("Invalid digitalRead: ");
-  //           Serial.println(val);
-  //           return;
-  //         }
-  //       }
+        {
+          size_t addr = GETARG;
+          ip += 2;
+
+          std::cout<<"DREAD: "<<memory[addr]<<std::endl;
+
+        }
         break;
        case DWRITE:
-  //       {
-  //         size_t addr = GETARG;
-  //         ip += 2;
-  //
-  //         int16_t value = pop();
-  //
-  // //        Serial.print("DWRITE: ");
-  // //        Serial.print(value);
-  // //        Serial.print(" ");
-  // //        Serial.println(memory[addr]);
-  //
-  //         if (value == 0) {
-  //           digitalWrite(memory[addr], HIGH);
-  //         } else if (value == 1) {
-  //           digitalWrite(memory[addr], LOW);
-  //         } else {
-  //           Serial.print("Invalid digitalWrite: ");
-  //           Serial.println(value);
-  //           return;
-  //         }
-  //       }
+        {
+          size_t addr = GETARG;
+          ip += 2;
+
+          int16_t value = pop();
+          std::cout<<"DWRITE: "<<value<<" "<<memory[addr]<<std::endl;
+
+        }
         break;
        case AREAD:
-  //       {
-  //         size_t addr = GETARG;
-  //         ip += 2;
-  //
-  //         int val = analogRead(memory[addr]);
-  //
-  // //        Serial.print("AREAD: ");
-  // //        Serial.print(val);
-  // //        Serial.print(" ");
-  // //        Serial.println(memory[addr]);
-  //
-  //         if (val > -1 && val < 1024) {
-  //           push(val);
-  //         } else {
-  //           Serial.print("Invalid analogRead: ");
-  //           Serial.println(val);
-  //           return;
-  //         }
-  //       }
+        {
+          size_t addr = GETARG;
+          ip += 2;
+
+          // int val = analogRead(memory[addr]);
+          std::cout<<"AREAD: "<<memory[addr]<<std::endl;
+
+        }
         break;
        case AWRITE:
-  //       {
-  //         size_t addr = GETARG;
-  //         ip += 2;
-  //         int16_t value = pop();
-  //         value = map(value, 0, 1023, 0, 255);
-  //
-  // //        Serial.print("AWRITE: ");
-  // //        Serial.print(value);
-  // //        Serial.print(" ");
-  // //        Serial.println(memory[addr]);
-  //
-  //         analogWrite(memory[addr], value);
-  //       }
-        break;
+        {
+          size_t addr = GETARG;
+          ip += 2;
+          int16_t value = pop();
+          std::cout<<"DWRITE: "<<value<<" "<<memory[addr]<<std::endl;
 
+        }
+        break;
        case DELAY:
-  //       {
-  //         int16_t val = pop();
-  // //        Serial.print("delay: ");
-  // //        Serial.println(val);
-  //
-  //         delay(val);
-  //       }
+        {
+          int16_t val = pop();
+          std::cout<<"Delay: "<<val<<std::endl;
+        }
         break;
       default:
         std::cerr<<"Invalid reading command: "<<std::hex<<(int16_t)code[ip]<<std::endl;

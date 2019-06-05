@@ -11,11 +11,33 @@
         ]
     },
     {
+        "block_name": "variables_statement_set",
+        "functionName": "variables_set",
+        "varName": "count",
+        "argument": [
+            {
+                "block_name": "math_number_number",
+                "number": "0"
+            }
+        ]
+    },
+    {
         "block_name": "controls_statement_whileUntil",
         "loop_style": "controls_whileUntil",
         "repeat_condition": {
-            "block_name": "logic_boolean_boolean",
-            "value": "TRUE"
+            "block_name": "logic_boolean_operator_compare",
+            "operator": "cmpe",
+            "argument": [
+                {
+                    "block_name": "variables_statement_get",
+                    "functionName": "variables_get",
+                    "varName": "count"
+                },
+                {
+                    "block_name": "math_number_number",
+                    "number": "3"
+                }
+            ]
         },
         "end_type": "while",
         "branch": [
@@ -43,17 +65,6 @@
                 ],
                 "branch": [
                     {
-                        "block_name": "text_statement_print",
-                        "functionName": "text_print",
-                        "argument": [
-                            {
-                                "block_name": "variables_statement_get",
-                                "functionName": "variables_get",
-                                "varName": "i"
-                            }
-                        ]
-                    },
-                    {
                         "block_name": "io_statement_awrite",
                         "arguments": [
                             {
@@ -74,6 +85,17 @@
                             {
                                 "block_name": "math_number_number",
                                 "number": "30"
+                            }
+                        ]
+                    },
+                    {
+                        "block_name": "text_statement_print",
+                        "functionName": "text_print",
+                        "argument": [
+                            {
+                                "block_name": "variables_statement_get",
+                                "functionName": "variables_get",
+                                "varName": "i"
                             }
                         ]
                     }
@@ -125,6 +147,28 @@
                                 "number": "30"
                             }
                         ]
+                    },
+                    {
+                        "block_name": "text_statement_print",
+                        "functionName": "text_print",
+                        "argument": [
+                            {
+                                "block_name": "variables_statement_get",
+                                "functionName": "variables_get",
+                                "varName": "i"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "block_name": "variables_statement_change",
+                "functionName": "change",
+                "varName": "count",
+                "argument": [
+                    {
+                        "block_name": "math_number_number",
+                        "number": "1"
                     }
                 ]
             }

@@ -1,36 +1,4 @@
-[
-    {
-        "block_name": "variables_statement_set",
-        "functionName": "variables_set",
-        "varName": "item",
-        "argument": [
-            {
-                "block_name": "math_number_number",
-                "number": "1"
-            }
-        ]
-    },
-    {
-        "block_name": "io_statement_awrite",
-        "arguments": [
-            {
-                "varName": "item"
-            },
-            {
-                "block_name": "math_number_number",
-                "number": 0
-            }
-        ]
-    },
-    {
-        "block_name": "text_statement_print",
-        "functionName": "text_print",
-        "argument": [
-            {
-                "block_name": "variables_statement_get",
-                "functionName": "variables_get",
-                "varName": "item"
-            }
-        ]
-    }
-]
+SyntaxError: Unexpected token } in JSON at position 231
+    at JSON.parse (<anonymous>)
+    at /mnt/c/Users/jayzh/Desktop/blockly/blockly/SkoolBot/xmlToJson.js:47:27
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:54:3)

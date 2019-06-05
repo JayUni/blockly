@@ -388,23 +388,32 @@
     <category name="%{BKY_CATINPUTOUTPUT}" colour="%{BKY_INPUTOUTPUT_HUE}">
       <block type="pinmode">
         <field name="var" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
-        <field name="NAME">OPTIONNAME</field>
+        <field name="IO">INPUT</field>
       </block>
       <block type="digitalread">
-        <field name="NAME" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+        <field name="var" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
       </block>
       <block type="digitalwrite">
         <field name="var" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
-        <field name="NAME">OPTIONNAME</field>
+        <field name="value">HIGH</field>
       </block>
       <block type="analogread">
-        <field name="NAME" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
+        <field name="var" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
       </block>
       <block type="analogwrite">
         <field name="var" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
-        <field name="NAME">0</field>
+        <value name="value">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
       </block>
-      <block type="delay"></block>
+      <block type="delay">
+        <value name="value">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+      </block>
     </category>
     <category name="%{BKY_CATVARIABLES}" colour="%{BKY_VARIABLES_HUE}" custom="VARIABLE"></category>
     <category name="%{BKY_CATFUNCTIONS}" colour="%{BKY_PROCEDURES_HUE}" custom="PROCEDURE"></category>

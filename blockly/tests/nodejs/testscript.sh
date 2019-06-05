@@ -3,11 +3,18 @@
 # compile the interpreter
 # -std=c++11 -Wall -Werror=format-security
 g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
+<<<<<<< HEAD
 #for xml in xmlToJson_test_cases/*.xml
 #do
     # conver xml to json
 
     xml="xmlToJson_test_cases/complex_test1.xml"
+=======
+for xml in xmlToJson_test_cases/*.xml
+do
+    # convert xml to json
+    # xml="xmlToJson_test_cases/fading_analogWrite.xml"
+>>>>>>> a827265b521e8c2c6472241c43d2485b49abb399
 
     json="jsonToAddTyepField_test_cases/`basename $xml .xml`.json"
 
@@ -82,7 +89,7 @@ g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
    if [ -e $interpreter ]
      then
        ## execute javascript with $x > $$.out
-       ../../SkoolBot/interpreter $bin_generator $1 > compare.txt
+       ../../SkoolBot/interpreter $bin_generator > compare.txt
        result=$(wdiff -3 $interpreter compare.txt)
        if [ $? -eq 0 ]
           then
@@ -120,6 +127,6 @@ g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
    echo ""
    echo ""
    echo ""
-#done
+dne
 rm compare.txt
 rm compare.json

@@ -1,0 +1,10 @@
+ip: 0 NUMBER 9
+ip: 3 SET 0
+ip: 6 NUMBER 0
+ip: 9 SET 2
+ip: 12 NOP
+ip: 13 GET 2
+ip: 16 NUMBER 3
+ip: 19 CMPE
+ip: 20 JUMPNZ 224
+ip: 225 STOP

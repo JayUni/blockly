@@ -1,42 +1,9 @@
-[
-    {
-        "block_name": "variables_statement_set",
-        "functionName": "variables_set",
-        "varName": "item",
-        "argument": [
-            {
-                "block_name": "math_number_number",
-                "number": "1",
-                "valueType": "number"
-            }
-        ],
-        "valueType": "statement"
-    },
-    {
-        "block_name": "io_statement_awrite",
-        "arguments": [
-            {
-                "varName": "item",
-                "valueType": ""
-            },
-            {
-                "number_name": 0,
-                "valueType": ""
-            }
-        ],
-        "valueType": "statement"
-    },
-    {
-        "block_name": "text_statement_print",
-        "functionName": "text_print",
-        "argument": [
-            {
-                "block_name": "variables_statement_get",
-                "functionName": "variables_get",
-                "varName": "item",
-                "valueType": "statement"
-            }
-        ],
-        "valueType": "statement"
-    }
-]
+SyntaxError: Unexpected token S in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Object.<anonymous> (/mnt/c/Users/jayzh/Desktop/blockly/blockly/SkoolBot/add_type_field.js:7:26)
+    at Module._compile (internal/modules/cjs/loader.js:816:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:827:10)
+    at Module.load (internal/modules/cjs/loader.js:685:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:620:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:877:12)
+    at internal/main/run_main_module.js:21:11

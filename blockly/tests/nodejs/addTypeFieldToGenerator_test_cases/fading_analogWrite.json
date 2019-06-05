@@ -13,11 +13,37 @@
         "valueType": "statement"
     },
     {
+        "block_name": "variables_statement_set",
+        "functionName": "variables_set",
+        "varName": "count",
+        "argument": [
+            {
+                "block_name": "math_number_number",
+                "number": "0",
+                "valueType": "number"
+            }
+        ],
+        "valueType": "statement"
+    },
+    {
         "block_name": "controls_statement_whileUntil",
         "loop_style": "controls_whileUntil",
         "repeat_condition": {
-            "block_name": "logic_boolean_boolean",
-            "value": "TRUE",
+            "block_name": "logic_boolean_operator_compare",
+            "operator": "cmpe",
+            "argument": [
+                {
+                    "block_name": "variables_statement_get",
+                    "functionName": "variables_get",
+                    "varName": "count",
+                    "valueType": "statement"
+                },
+                {
+                    "block_name": "math_number_number",
+                    "number": "3",
+                    "valueType": "number"
+                }
+            ],
             "valueType": "boolean"
         },
         "end_type": "while",
@@ -49,19 +75,6 @@
                 ],
                 "branch": [
                     {
-                        "block_name": "text_statement_print",
-                        "functionName": "text_print",
-                        "argument": [
-                            {
-                                "block_name": "variables_statement_get",
-                                "functionName": "variables_get",
-                                "varName": "i",
-                                "valueType": "statement"
-                            }
-                        ],
-                        "valueType": "statement"
-                    },
-                    {
                         "block_name": "io_statement_awrite",
                         "arguments": [
                             {
@@ -87,6 +100,19 @@
                                 "block_name": "math_number_number",
                                 "number": "30",
                                 "valueType": "number"
+                            }
+                        ],
+                        "valueType": "statement"
+                    },
+                    {
+                        "block_name": "text_statement_print",
+                        "functionName": "text_print",
+                        "argument": [
+                            {
+                                "block_name": "variables_statement_get",
+                                "functionName": "variables_get",
+                                "varName": "i",
+                                "valueType": "statement"
                             }
                         ],
                         "valueType": "statement"
@@ -149,6 +175,32 @@
                             }
                         ],
                         "valueType": "statement"
+                    },
+                    {
+                        "block_name": "text_statement_print",
+                        "functionName": "text_print",
+                        "argument": [
+                            {
+                                "block_name": "variables_statement_get",
+                                "functionName": "variables_get",
+                                "varName": "i",
+                                "valueType": "statement"
+                            }
+                        ],
+                        "valueType": "statement"
+                    }
+                ],
+                "valueType": "statement"
+            },
+            {
+                "block_name": "variables_statement_change",
+                "functionName": "change",
+                "varName": "count",
+                "argument": [
+                    {
+                        "block_name": "math_number_number",
+                        "number": "1",
+                        "valueType": "number"
                     }
                 ],
                 "valueType": "statement"
