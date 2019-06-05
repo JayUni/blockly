@@ -69,7 +69,7 @@ set i
 L0_4
 get for_i_variable_1
 get for_end_variable_1
-cmple
+cmpg
 JUMPNZ L1_3
 get i
 awrite led

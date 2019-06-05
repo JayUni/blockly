@@ -26,7 +26,9 @@
   <script src="./msg/en.js"></script>
   <script src="./msg_icon/msg/js/en.js"></script>
 
-  <script src="./build/demo.js"></script>
+  <!-- <script src="./build/demo.js"></script> -->
+  <script src="./serialport.js"></script>
+
   <script src="./custom-dialog.js"></script>
 
 
@@ -117,9 +119,6 @@
               <div class="col-xs-2">
                 <button id="connect" class="btn btn-primary">Connect</button>
               </div>
-              <!--<div class="col-xs-2">-->
-                <!--<button id="reconnect" class="btn btn-primary">re-connect</button>-->
-              <!--</div>-->
             </div>
             <div class="row">
               <div class="col-xs-12">
@@ -127,7 +126,7 @@
                   <label for="input">Input:</label>
                   <input id="input" type="text" class="form-control" />
                   <span class="input-group-btn">
-                    <button id="send" class="btn btn-primary">Send</button>
+                    <button id="send" class="btn btn-danger">Send</button>
                   </span>
                 </div>
               </div>
@@ -135,14 +134,14 @@
           </div>
           <div class="col-xs-6">
 
-            <div class="row">
+  					<div class="row">
               <div class="col-xs-12">
-                <label for="output">Output:</label>
-                <textarea id="output" class="form-control" rows="6"></textarea>
-              </div>
-            </div>
+    						<label for="output">Output:</label>
+    						<textarea id="output" class="form-control" rows="6"></textarea>
+  					  </div>
+  					</div>
 
-          </div>
+  				</div>
         </div>
       </td>
     </tr>
@@ -481,7 +480,11 @@
       </block>
       <block type="analogwrite">
         <field name="var" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
-        <field name="value">0</field>
+        <value name="value">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
       </block>
       <block type="delay">
         <value name="value">
