@@ -85,6 +85,8 @@ void run(void) {
   int16_t op1;
   int16_t op2;
   for(ip=0;ip<CODE_SIZE;ip++) {
+//    Serial.print("command: ");
+//    Serial.println(code[ip]);
     switch(code[ip]) {
       case NOP_:
         break;
@@ -374,10 +376,10 @@ void run(void) {
         ip += 2;
         size_t value = pop();
         
-        Serial.print("pinMode: ");
-        Serial.print(value);
-        Serial.print(" ");
-        Serial.println(memory[addr]);
+//        Serial.print("pinMode: ");
+//        Serial.print(value);
+//        Serial.print(" ");
+//        Serial.println(memory[addr]);
         
         if (value == 0) {
           pinMode(memory[addr], INPUT); 
@@ -466,10 +468,10 @@ void run(void) {
         int16_t value = pop();
         value = map(value, 0, 1023, 0, 255);
 
-        Serial.print("AWRITE: ");
-        Serial.print(value);
-        Serial.print(" ");
-        Serial.println(memory[addr]);
+//        Serial.print("AWRITE: ");
+//        Serial.print(value);
+//        Serial.print(" ");
+//        Serial.println(memory[addr]);
         
         analogWrite(memory[addr], value); 
       }
