@@ -7,7 +7,7 @@ g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
 #do
     # conver xml to json
 
-     xml="xmlToJson_test_cases/simple_loop_for_3.xml"
+    xml="xmlToJson_test_cases/simple_loop_for_3.xml"
 
     json="jsonToAddTyepField_test_cases/`basename $xml .xml`.json"
 
