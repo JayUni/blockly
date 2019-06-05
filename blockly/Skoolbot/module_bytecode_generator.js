@@ -154,6 +154,24 @@ function generator(commands) {
             case 'JUMPNZ':
                 jumpaddr += 3;
                 break;
+            case 'pinmode':
+                jumpaddr += 3;
+                break;
+            case 'dread':
+                jumpaddr += 3;
+                break;
+            case 'dwrite':
+                jumpaddr += 3;
+                break;
+            case 'aread':
+                jumpaddr += 3;
+                break;
+            case 'awrite':
+                jumpaddr += 3;
+                break;
+            case 'delay':
+                jumpaddr += 1;
+                break;
             default:
                 jumpaddr += 1;
 
