@@ -69,7 +69,7 @@ g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
 
    # bin generator
    bin_generator="bin_generator_outputs/`basename $xml .xml`.bin"
-   if [ -e $interpreter ]
+   if [ -e $bin_generator ]
     then
       echo "existed $bin_generator."
    else
