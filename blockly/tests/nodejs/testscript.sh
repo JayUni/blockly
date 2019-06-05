@@ -119,6 +119,6 @@ do
    echo ""
    echo ""
    echo ""
-dne
+done
 rm compare.txt
 rm compare.json

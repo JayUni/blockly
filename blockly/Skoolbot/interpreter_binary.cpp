@@ -271,6 +271,10 @@ void run() {
         {
           size_t addr = GETARG;
           int16_t value = pop();
+          if (addr >= MEMORY_SIZE) {
+            std::cout<<"Memery Overflow"<<std::endl;
+            return;
+          }
           memory[addr] = value;
           ip += 2;
         }
@@ -511,8 +515,14 @@ void run_symbol() {
         {
           // int16_t addr = code[ip++];
           // addr |= (code[ip++]<<8);
+          size_t addr = GETARG;
+          if (addr >= MEMORY_SIZE) {
+            std::cout<<"Memery Overflow"<<std::endl;
+            return;
+          }
           std::cout << "SET ";
           std::cout << (size_t)GETARG << std::endl;
+
           ip+=2;
         }
         break;
@@ -858,6 +868,11 @@ void run_both() {
 
         break;
       case SET:
+
+          if (addr >= MEMORY_SIZE) {
+            std::cout<<"Memery Overflow"<<std::endl;
+            return;
+          }
 
           addr = GETARG;
           ip += 2;

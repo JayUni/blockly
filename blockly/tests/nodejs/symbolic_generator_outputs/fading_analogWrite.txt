@@ -22,8 +22,13 @@ get for_start_variable_0
 set for_i_variable_0
 get for_start_variable_0
 set i
+get for_start_variable_0
+get for_end_variable_0
+cmple
+set start_cmple_end_0
 boolean FALSE
 set for_control_variable_0
+get for_control_variable_0
 JUMP L0_2
 L1_2
 get for_i_variable_0
@@ -35,7 +40,13 @@ set i
 L0_2
 get for_i_variable_0
 get for_end_variable_0
+get start_cmple_end_0
+JUMPNZ L1_3
 cmple
+JUMP L0_3
+L1_3
+cmpge
+L0_3
 JUMPNZ L1_1
 get i
 awrite led
@@ -51,38 +62,49 @@ boolean TRUE
 set for_control_variable_1
 number -5
 set for_step_variable_1
-L0_3
+L0_4
 get for_control_variable_1
-JUMPNZ L1_4
+JUMPNZ L1_5
 number 0
 set for_end_variable_1
 get for_start_variable_1
 set for_i_variable_1
 get for_start_variable_1
 set i
+get for_start_variable_1
+get for_end_variable_1
+cmple
+set start_cmple_end_1
 boolean FALSE
 set for_control_variable_1
-JUMP L0_4
-L1_4
+get for_control_variable_1
+JUMP L0_5
+L1_5
 get for_i_variable_1
 get for_step_variable_1
 add
 set for_i_variable_1
 get for_i_variable_1
 set i
-L0_4
+L0_5
 get for_i_variable_1
 get for_end_variable_1
+get start_cmple_end_1
+JUMPNZ L1_6
+cmple
+JUMP L0_6
+L1_6
 cmpge
-JUMPNZ L1_3
+L0_6
+JUMPNZ L1_4
 get i
 awrite led
 number 30
 delay
 get i
 print
-JUMP L0_3
-L1_3
+JUMP L0_4
+L1_4
 number 1
 change count
 JUMP L0_0

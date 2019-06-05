@@ -12,161 +12,199 @@ ip: 1e GET 0
 ip: 21 SET 8
 ip: 24 GET 0
 ip: 27 SET a
-ip: 2a BOOLEAN 18
-ip: 2c SET 2
-ip: 2f JUMP 43
-ip: 44 GET 8
-ip: 47 GET 6
-ip: 4a CMPGE
-ip: 4b ip: 4e GET a
-ip: 51 PRINT a
-ip: 52 JUMP 11
+ip: 2a GET 0
+ip: 2d GET 6
+ip: 30 CMPLE
+ip: 31 SET c
+ip: 34 BOOLEAN 18
+ip: 36 SET 2
+ip: 39 GET 2
+ip: 3c JUMP 50
+ip: 51 GET 8
+ip: 54 GET 6
+ip: 57 GET c
+ip: 5a JUMPNZ 61
+ip: 62 CMPGE
+ip: 63 NOP
+ip: 64 ip: 67 GET a
+ip: 6a PRINT a
+ip: 6b JUMP 11
 ip: 12 GET 2
-ip: 15 JUMPNZ 32
-ip: 33 GET 8
-ip: 36 GET 4
-ip: 39 ADD
-ip: 3a SET 8
-ip: 3d GET 8
-ip: 40 SET a
-ip: 43 NOP
-ip: 44 GET 8
-ip: 47 GET 6
-ip: 4a CMPGE
-ip: 4b ip: 4e GET a
-ip: 51 PRINT 9
-ip: 52 JUMP 11
+ip: 15 JUMPNZ 3f
+ip: 40 GET 8
+ip: 43 GET 4
+ip: 46 ADD
+ip: 47 SET 8
+ip: 4a GET 8
+ip: 4d SET a
+ip: 50 NOP
+ip: 51 GET 8
+ip: 54 GET 6
+ip: 57 GET c
+ip: 5a JUMPNZ 61
+ip: 62 CMPGE
+ip: 63 NOP
+ip: 64 ip: 67 GET a
+ip: 6a PRINT 9
+ip: 6b JUMP 11
 ip: 12 GET 2
-ip: 15 JUMPNZ 32
-ip: 33 GET 8
-ip: 36 GET 4
-ip: 39 ADD
-ip: 3a SET 8
-ip: 3d GET 8
-ip: 40 SET a
-ip: 43 NOP
-ip: 44 GET 8
-ip: 47 GET 6
-ip: 4a CMPGE
-ip: 4b ip: 4e GET a
-ip: 51 PRINT 8
-ip: 52 JUMP 11
+ip: 15 JUMPNZ 3f
+ip: 40 GET 8
+ip: 43 GET 4
+ip: 46 ADD
+ip: 47 SET 8
+ip: 4a GET 8
+ip: 4d SET a
+ip: 50 NOP
+ip: 51 GET 8
+ip: 54 GET 6
+ip: 57 GET c
+ip: 5a JUMPNZ 61
+ip: 62 CMPGE
+ip: 63 NOP
+ip: 64 ip: 67 GET a
+ip: 6a PRINT 8
+ip: 6b JUMP 11
 ip: 12 GET 2
-ip: 15 JUMPNZ 32
-ip: 33 GET 8
-ip: 36 GET 4
-ip: 39 ADD
-ip: 3a SET 8
-ip: 3d GET 8
-ip: 40 SET a
-ip: 43 NOP
-ip: 44 GET 8
-ip: 47 GET 6
-ip: 4a CMPGE
-ip: 4b ip: 4e GET a
-ip: 51 PRINT 7
-ip: 52 JUMP 11
+ip: 15 JUMPNZ 3f
+ip: 40 GET 8
+ip: 43 GET 4
+ip: 46 ADD
+ip: 47 SET 8
+ip: 4a GET 8
+ip: 4d SET a
+ip: 50 NOP
+ip: 51 GET 8
+ip: 54 GET 6
+ip: 57 GET c
+ip: 5a JUMPNZ 61
+ip: 62 CMPGE
+ip: 63 NOP
+ip: 64 ip: 67 GET a
+ip: 6a PRINT 7
+ip: 6b JUMP 11
 ip: 12 GET 2
-ip: 15 JUMPNZ 32
-ip: 33 GET 8
-ip: 36 GET 4
-ip: 39 ADD
-ip: 3a SET 8
-ip: 3d GET 8
-ip: 40 SET a
-ip: 43 NOP
-ip: 44 GET 8
-ip: 47 GET 6
-ip: 4a CMPGE
-ip: 4b ip: 4e GET a
-ip: 51 PRINT 6
-ip: 52 JUMP 11
+ip: 15 JUMPNZ 3f
+ip: 40 GET 8
+ip: 43 GET 4
+ip: 46 ADD
+ip: 47 SET 8
+ip: 4a GET 8
+ip: 4d SET a
+ip: 50 NOP
+ip: 51 GET 8
+ip: 54 GET 6
+ip: 57 GET c
+ip: 5a JUMPNZ 61
+ip: 62 CMPGE
+ip: 63 NOP
+ip: 64 ip: 67 GET a
+ip: 6a PRINT 6
+ip: 6b JUMP 11
 ip: 12 GET 2
-ip: 15 JUMPNZ 32
-ip: 33 GET 8
-ip: 36 GET 4
-ip: 39 ADD
-ip: 3a SET 8
-ip: 3d GET 8
-ip: 40 SET a
-ip: 43 NOP
-ip: 44 GET 8
-ip: 47 GET 6
-ip: 4a CMPGE
-ip: 4b ip: 4e GET a
-ip: 51 PRINT 5
-ip: 52 JUMP 11
+ip: 15 JUMPNZ 3f
+ip: 40 GET 8
+ip: 43 GET 4
+ip: 46 ADD
+ip: 47 SET 8
+ip: 4a GET 8
+ip: 4d SET a
+ip: 50 NOP
+ip: 51 GET 8
+ip: 54 GET 6
+ip: 57 GET c
+ip: 5a JUMPNZ 61
+ip: 62 CMPGE
+ip: 63 NOP
+ip: 64 ip: 67 GET a
+ip: 6a PRINT 5
+ip: 6b JUMP 11
 ip: 12 GET 2
-ip: 15 JUMPNZ 32
-ip: 33 GET 8
-ip: 36 GET 4
-ip: 39 ADD
-ip: 3a SET 8
-ip: 3d GET 8
-ip: 40 SET a
-ip: 43 NOP
-ip: 44 GET 8
-ip: 47 GET 6
-ip: 4a CMPGE
-ip: 4b ip: 4e GET a
-ip: 51 PRINT 4
-ip: 52 JUMP 11
+ip: 15 JUMPNZ 3f
+ip: 40 GET 8
+ip: 43 GET 4
+ip: 46 ADD
+ip: 47 SET 8
+ip: 4a GET 8
+ip: 4d SET a
+ip: 50 NOP
+ip: 51 GET 8
+ip: 54 GET 6
+ip: 57 GET c
+ip: 5a JUMPNZ 61
+ip: 62 CMPGE
+ip: 63 NOP
+ip: 64 ip: 67 GET a
+ip: 6a PRINT 4
+ip: 6b JUMP 11
 ip: 12 GET 2
-ip: 15 JUMPNZ 32
-ip: 33 GET 8
-ip: 36 GET 4
-ip: 39 ADD
-ip: 3a SET 8
-ip: 3d GET 8
-ip: 40 SET a
-ip: 43 NOP
-ip: 44 GET 8
-ip: 47 GET 6
-ip: 4a CMPGE
-ip: 4b ip: 4e GET a
-ip: 51 PRINT 3
-ip: 52 JUMP 11
+ip: 15 JUMPNZ 3f
+ip: 40 GET 8
+ip: 43 GET 4
+ip: 46 ADD
+ip: 47 SET 8
+ip: 4a GET 8
+ip: 4d SET a
+ip: 50 NOP
+ip: 51 GET 8
+ip: 54 GET 6
+ip: 57 GET c
+ip: 5a JUMPNZ 61
+ip: 62 CMPGE
+ip: 63 NOP
+ip: 64 ip: 67 GET a
+ip: 6a PRINT 3
+ip: 6b JUMP 11
 ip: 12 GET 2
-ip: 15 JUMPNZ 32
-ip: 33 GET 8
-ip: 36 GET 4
-ip: 39 ADD
-ip: 3a SET 8
-ip: 3d GET 8
-ip: 40 SET a
-ip: 43 NOP
-ip: 44 GET 8
-ip: 47 GET 6
-ip: 4a CMPGE
-ip: 4b ip: 4e GET a
-ip: 51 PRINT 2
-ip: 52 JUMP 11
+ip: 15 JUMPNZ 3f
+ip: 40 GET 8
+ip: 43 GET 4
+ip: 46 ADD
+ip: 47 SET 8
+ip: 4a GET 8
+ip: 4d SET a
+ip: 50 NOP
+ip: 51 GET 8
+ip: 54 GET 6
+ip: 57 GET c
+ip: 5a JUMPNZ 61
+ip: 62 CMPGE
+ip: 63 NOP
+ip: 64 ip: 67 GET a
+ip: 6a PRINT 2
+ip: 6b JUMP 11
 ip: 12 GET 2
-ip: 15 JUMPNZ 32
-ip: 33 GET 8
-ip: 36 GET 4
-ip: 39 ADD
-ip: 3a SET 8
-ip: 3d GET 8
-ip: 40 SET a
-ip: 43 NOP
-ip: 44 GET 8
-ip: 47 GET 6
-ip: 4a CMPGE
-ip: 4b ip: 4e GET a
-ip: 51 PRINT 1
-ip: 52 JUMP 11
+ip: 15 JUMPNZ 3f
+ip: 40 GET 8
+ip: 43 GET 4
+ip: 46 ADD
+ip: 47 SET 8
+ip: 4a GET 8
+ip: 4d SET a
+ip: 50 NOP
+ip: 51 GET 8
+ip: 54 GET 6
+ip: 57 GET c
+ip: 5a JUMPNZ 61
+ip: 62 CMPGE
+ip: 63 NOP
+ip: 64 ip: 67 GET a
+ip: 6a PRINT 1
+ip: 6b JUMP 11
 ip: 12 GET 2
-ip: 15 JUMPNZ 32
-ip: 33 GET 8
-ip: 36 GET 4
-ip: 39 ADD
-ip: 3a SET 8
-ip: 3d GET 8
-ip: 40 SET a
-ip: 43 NOP
-ip: 44 GET 8
-ip: 47 GET 6
-ip: 4a CMPGE
-ip: 4b JUMPNZ 55
-ip: 56 STOP
+ip: 15 JUMPNZ 3f
+ip: 40 GET 8
+ip: 43 GET 4
+ip: 46 ADD
+ip: 47 SET 8
+ip: 4a GET 8
+ip: 4d SET a
+ip: 50 NOP
+ip: 51 GET 8
+ip: 54 GET 6
+ip: 57 GET c
+ip: 5a JUMPNZ 61
+ip: 62 CMPGE
+ip: 63 NOP
+ip: 64 JUMPNZ 6e
+ip: 6f STOP

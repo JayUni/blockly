@@ -43,11 +43,13 @@
 #define AWRITE        (0x2A)
 #define DELAY         (0x2B)
 
-#define STACK_SIZE    (256)
-#define MEMORY_SIZE   (256)
-#define CODE_SIZE     (128)
+#define STACK_SIZE    (214)
+#define MEMORY_SIZE   (128)
+#define CODE_SIZE     (512)
 
 #define GETARG uint16_t(uint16_t(code[ip+1]) | uint16_t(code[ip+2])<<8)
+#define stack_underflow if(stack_ptr < 0) {Serial.println("stack underflow");return;}
+#define stack_overflow if(stack_ptr >= STACK_SIZE) {Serial.println("stack overflow");return;}
 
 uint8_t code[CODE_SIZE];
 size_t ip = 0;
@@ -67,15 +69,10 @@ void reset_state()
 }
 
 void push(int16_t data) {
-
-  //assert(stack_ptr < STACK_SIZE && "stack overflow");
-  // std::cout<<"push: "<<stack_ptr<<std::endl;
   stack[stack_ptr++] = data;
 }
 
 int16_t pop() {
-  //assert(stack_ptr >= 0 && "stack underflow");
-  // std::cout<<"pop: "<<stack_ptr<<std::endl;
   return stack[--stack_ptr];
 }
 
@@ -87,6 +84,8 @@ void run(void) {
   for(ip=0;ip<CODE_SIZE;ip++) {
 //    Serial.print("command: ");
 //    Serial.println(code[ip]);
+    stack_underflow;
+    stack_overflow;
     switch(code[ip]) {
       case NOP_:
         break;
@@ -99,6 +98,7 @@ void run(void) {
         break;
       case ADD:
         {
+          
           op1 = pop();
           op2 = pop();
           push(op1 + op2);
@@ -286,6 +286,10 @@ void run(void) {
         {
           size_t addr = GETARG;
           int16_t value = pop();
+          if (addr >= MEMORY_SIZE) {
+            Serial.println("Memery Overflow");
+            return;
+          }
           memory[addr] = value;
           ip += 2;
         }
@@ -532,8 +536,8 @@ void loop() {
               !block_pass.charAt(0) == 'x' ||
               !isHexadecimalDigit(block_pass.charAt(2)) ||
               !isHexadecimalDigit(block_pass.charAt(3))) {
-//           Serial.print("not a hex digit: ");
-//           Serial.println(incomingByte);
+           Serial.print("not a hex digit: ");
+           Serial.println(incomingByte);
            break;
           }
 
@@ -577,17 +581,17 @@ void loop() {
       //compare the size
       if(readyToLength && !readyToRead) {
         if (!isDigit(incomingByte)) {
-//           Serial.print("not a digit: ");
-//           Serial.println(incomingByte);
+           Serial.print("not a digit: ");
+           Serial.println(incomingByte);
            break;
         }
         block_pass += incomingByte;
         if (block_pass.length() == 3) {
-//          Serial.print("got length: ");
-//          Serial.println(block_pass.toInt());
+          Serial.print("got length: ");
+          Serial.println(block_pass.toInt());
           code_length = block_pass.toInt();
           if (code_length > CODE_SIZE) {
-//            Serial.println("Code size too big");
+            Serial.println("Code size too big");
             break;
           }
           readyToRead = true;
@@ -598,8 +602,8 @@ void loop() {
       if (!readyToLength) {
         block_pass += incomingByte;
         if (block_pass.equals("BLOCKLY")) {
-//          Serial.print("got BLOCKLY: ");
-//          Serial.println(block_pass);
+          Serial.print("got BLOCKLY: ");
+          Serial.println(block_pass);
           readyToLength = true;
           block_pass = "";
         }
@@ -608,9 +612,11 @@ void loop() {
   }
            
   if (readyToCode) {
+    Serial.println("program start");
     ip = 0;
     run();
     reset_state();
+    Serial.println("end");
   }
   //reset
   readyToCode = false;
