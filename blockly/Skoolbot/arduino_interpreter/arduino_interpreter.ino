@@ -493,34 +493,12 @@ void run(void) {
   }
 }
 
-uint8_t crc_check( uint8_t input_data)
-{
-   uint8_t crc = 208; //1101 0000
-   uint8_t i;
-   uint8_t len = 5;
-   
-    
-    for(i = 0; i < len; i++) {
-      Serial.print(" crc: ");
-      Serial.print(crc, BIN);
-      input_data = input_data ^ crc;
-      crc = crc >> 1;
-    } 
-    Serial.print(" crc_remainder: ");
-    Serial.print(input_data, DEC);
-    return crc;
-}
-
 void setup() {
   Serial.begin(9600);
 
   //load code in here
   
 }
-
-//BLOCKLY 051 0x01 0x0d 0x00 0x1c 0x00 0x00 0x01 0x01 0x00 0x26 0x00 0x00 0x00 0x20 0x17 0x22 0x27 0x00 0x01 0x00 0x00 0x28 0x00 0x00 0x27 0x00 0x00 0x1f 0x01 0xe8 0x03 0x2b 0x01 0x01 0x00 0x28 0x00 0x00 0x27 0x00 0x00 0x1f 0x01 0xe8 0x03 0x2b 0x1e 0x0a 0x00 0x00 0x21 
-
-//
 
 void loop() {
   
@@ -532,23 +510,6 @@ void loop() {
   uint8_t block_code = 0;
   int code_length = 0;
 
-//  while (true) {
-//    
-//    if (Serial.available() > 0) {
-//      // read the incoming byte:
-//      incomingByte = Serial.read();
-//
-//      if (isSpace(incomingByte)) {
-//        continue;
-//      }
-//      Serial.print("Data: ");
-//      Serial.print(incomingByte); 
-//      Serial.print(" ");
-//      Serial.print(incomingByte, BIN); 
-//      crc_check(incomingByte);
-//      Serial.println(); 
-//    }
-//  }
   while (true) {
     
     if (Serial.available() > 0) {
