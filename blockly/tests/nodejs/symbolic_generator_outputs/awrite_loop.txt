@@ -1,0 +1,82 @@
+number 9
+set led
+L0_0
+boolean TRUE
+JUMPNZ L1_0
+number 0
+set for_start_variable_0
+boolean TRUE
+set for_control_variable_0
+number 5
+set for_step_variable_0
+L0_1
+get for_control_variable_0
+JUMPNZ L1_2
+number 255
+set for_end_variable_0
+get for_start_variable_0
+set for_i_variable_0
+get for_start_variable_0
+set i
+boolean FALSE
+set for_control_variable_0
+JUMP L0_2
+L1_2
+get for_i_variable_0
+get for_step_variable_0
+add
+set for_i_variable_0
+get for_i_variable_0
+set i
+L0_2
+get for_i_variable_0
+get for_end_variable_0
+cmple
+JUMPNZ L1_1
+get i
+print
+get i
+awrite led
+number 30
+delay
+JUMP L0_1
+L1_1
+number 255
+set for_start_variable_1
+boolean TRUE
+set for_control_variable_1
+number -5
+set for_step_variable_1
+L0_3
+get for_control_variable_1
+JUMPNZ L1_4
+number 0
+set for_end_variable_1
+get for_start_variable_1
+set for_i_variable_1
+get for_start_variable_1
+set i
+boolean FALSE
+set for_control_variable_1
+JUMP L0_4
+L1_4
+get for_i_variable_1
+get for_step_variable_1
+add
+set for_i_variable_1
+get for_i_variable_1
+set i
+L0_4
+get for_i_variable_1
+get for_end_variable_1
+cmple
+JUMPNZ L1_3
+get i
+awrite led
+number 30
+delay
+JUMP L0_3
+L1_3
+JUMP L0_0
+L1_0
+
