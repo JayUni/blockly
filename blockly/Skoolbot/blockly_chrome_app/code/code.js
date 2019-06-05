@@ -890,7 +890,15 @@ function addCommand(jsonList){
                                 commandList.push('L0_' + jsonList.loop_L0);
                                 commandList.push('get for_i_variable_' + jsonList.loop_val);
                                 commandList.push('get for_end_variable_' + jsonList.loop_val);
-                                commandList.push('cmple');
+                                var loop_start = jsonList.start[0].number;
+                                var loop_end = jsonList.end[0].number;
+                                if(loop_start <= loop_end){
+                                    commandList.push('cmple');
+                                }
+                                else{
+                                    commandList.push('cmpge');
+                                }
+                                // commandList.push('cmple');
                                 commandList.push('JUMPNZ L1_' + jsonList.label_1);
                                 jsonList.label = 'variableChanged';
                                 break;
@@ -1150,6 +1158,24 @@ function generator(commands) {
                 break;
             case 'JUMPNZ':
                 jumpaddr += 3;
+                break;
+            case 'pinmode':
+                jumpaddr += 3;
+                break;
+            case 'dread':
+                jumpaddr += 3;
+                break;
+            case 'dwrite':
+                jumpaddr += 3;
+                break;
+            case 'aread':
+                jumpaddr += 3;
+                break;
+            case 'awrite':
+                jumpaddr += 3;
+                break;
+            case 'delay':
+                jumpaddr += 1;
                 break;
             default:
                 jumpaddr += 1;

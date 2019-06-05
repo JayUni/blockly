@@ -9,7 +9,8 @@ SerialPortLib.list(function(err, ports) {
 		portsPath.options[0] = new Option(err, "ERROR:" + err);
 		portsPath.options[0].selected = true;
 		return;
-	} else {
+	}
+  else {
 		for (var i = 0; i < ports.length; i++) {
 			portsPath.options[i] = new Option(ports[i].comName, ports[i].comName);
 
