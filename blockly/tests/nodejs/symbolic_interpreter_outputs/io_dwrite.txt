@@ -1,8 +1,7 @@
 ip: 0 NUMBER 1
 ip: 3 SET 0
 ip: 6 NUMBER 0
-ip: 9 ip: 10 NOP
-ip: 11 NOP
+ip: 9 DWRITE: 0 1
 ip: 12 GET 0
 ip: 15 PRINT 1
 ip: 16 STOP

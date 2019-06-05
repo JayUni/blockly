@@ -1,7 +1,11 @@
 number 9
 set led
+number 0
+set count
 L0_0
-boolean TRUE
+get count
+number 3
+cmpe
 JUMPNZ L1_0
 number 0
 set for_start_variable_0
@@ -34,11 +38,11 @@ get for_end_variable_0
 cmple
 JUMPNZ L1_1
 get i
-print
-get i
 awrite led
 number 30
 delay
+get i
+print
 JUMP L0_1
 L1_1
 number 255
@@ -69,14 +73,18 @@ set i
 L0_4
 get for_i_variable_1
 get for_end_variable_1
-cmpg
+cmpge
 JUMPNZ L1_3
 get i
 awrite led
 number 30
 delay
+get i
+print
 JUMP L0_3
 L1_3
+number 1
+change count
 JUMP L0_0
 L1_0
 

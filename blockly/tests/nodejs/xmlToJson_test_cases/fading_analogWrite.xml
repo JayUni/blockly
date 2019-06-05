@@ -1,0 +1,157 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="%PC+$pl~lm^szL_6[}~F">led</variable>
+    <variable type="" id="(=cZ]*b=(LEz?e6n~!(1">count</variable>
+    <variable type="" id="GHn.1j)K3OYg;KiTosPH">i</variable>
+  </variables>
+  <block type="variables_set" id="]mGdZ;@HB))bMj)Cufp]" x="163" y="113">
+    <field name="VAR" id="%PC+$pl~lm^szL_6[}~F" variabletype="">led</field>
+    <value name="VALUE">
+      <block type="math_number" id="$inx-w8t9.0VsI}4RY^j">
+        <field name="NUM">9</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="*htM+hI@clavhLvFdnt7">
+        <field name="VAR" id="(=cZ]*b=(LEz?e6n~!(1" variabletype="">count</field>
+        <value name="VALUE">
+          <block type="math_number" id="QSKIgFRzGnyEZe{9M1[b">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_whileUntil" id="~e45;wlQ:G8uu*M;CXz_">
+            <field name="MODE">WHILE</field>
+            <value name="BOOL">
+              <block type="logic_compare" id="8BMT;1%F@{=W.#E0jhFX">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="^-]%vX:?R#Odyan3tL95">
+                    <field name="VAR" id="(=cZ]*b=(LEz?e6n~!(1" variabletype="">count</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="QN@Qnui]89mq4b-|plen">
+                    <field name="NUM">3</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="controls_for" id="$m*UI]|Zhv{s6yiH;rpz">
+                <field name="VAR" id="GHn.1j)K3OYg;KiTosPH" variabletype="">i</field>
+                <value name="FROM">
+                  <shadow type="math_number" id="Aji?xgy.SNk*;cOxXW.v">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+                <value name="TO">
+                  <shadow type="math_number" id="quf$0%;oEsR6d!Lp78@`">
+                    <field name="NUM">255</field>
+                  </shadow>
+                </value>
+                <value name="BY">
+                  <shadow type="math_number" id="3peaeCJb6Qv/_$Ki`0SV">
+                    <field name="NUM">5</field>
+                  </shadow>
+                </value>
+                <statement name="DO">
+                  <block type="analogwrite" id="YVcR3OsEJO)+PT/1/G@z">
+                    <field name="var" id="%PC+$pl~lm^szL_6[}~F" variabletype="">led</field>
+                    <value name="value">
+                      <shadow type="math_number" id="Yxaz8Qlm9fiG,(m:tJDp">
+                        <field name="NUM">0</field>
+                      </shadow>
+                      <block type="variables_get" id=",]$__EJB4@vUUNqeE5T]">
+                        <field name="VAR" id="GHn.1j)K3OYg;KiTosPH" variabletype="">i</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="delay" id="g)XXJ#3RJgkwNZ}!ViCq">
+                        <value name="value">
+                          <shadow type="math_number" id="tr)S^!bL_Oj=AoP7KkFx">
+                            <field name="NUM">30</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="text_print" id="r:o%#~4;O|=arU,`%[hm">
+                            <value name="TEXT">
+                              <block type="variables_get" id="[(:|B.3tSyCz}NM_U`+=">
+                                <field name="VAR" id="GHn.1j)K3OYg;KiTosPH" variabletype="">i</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_for" id="EfmVaq9I_*XB[lH/k_+l">
+                    <field name="VAR" id="GHn.1j)K3OYg;KiTosPH" variabletype="">i</field>
+                    <value name="FROM">
+                      <shadow type="math_number" id="WTHIYuYD+j:Ky-Bj~jiB">
+                        <field name="NUM">255</field>
+                      </shadow>
+                    </value>
+                    <value name="TO">
+                      <shadow type="math_number" id="z.+Fnq370)q@/ub9yZ/K">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                    <value name="BY">
+                      <shadow type="math_number" id="pE*-*RIY[~Ed+.(RkO2B">
+                        <field name="NUM">-5</field>
+                      </shadow>
+                    </value>
+                    <statement name="DO">
+                      <block type="analogwrite" id="@7|Q)ijIp9ly9);9Un.*">
+                        <field name="var" id="%PC+$pl~lm^szL_6[}~F" variabletype="">led</field>
+                        <value name="value">
+                          <shadow type="math_number" id="Yxaz8Qlm9fiG,(m:tJDp">
+                            <field name="NUM">0</field>
+                          </shadow>
+                          <block type="variables_get" id="@8tuWM9Pwhc=w8k@tKas">
+                            <field name="VAR" id="GHn.1j)K3OYg;KiTosPH" variabletype="">i</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="delay" id="|/7ZH#+|J!Ih.LDsKrhO">
+                            <value name="value">
+                              <shadow type="math_number" id="}~j?SfX6XK_}3V^?VOR]">
+                                <field name="NUM">30</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="text_print" id="y6treqE3)-0h2Y%(kD7n">
+                                <value name="TEXT">
+                                  <block type="variables_get" id="@]X)L*I_5)7%X,V1Cplu">
+                                    <field name="VAR" id="GHn.1j)K3OYg;KiTosPH" variabletype="">i</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="math_change" id="I(W@Mxbdt6C+thj(^7-F">
+                        <field name="VAR" id="(=cZ]*b=(LEz?e6n~!(1" variabletype="">count</field>
+                        <value name="DELTA">
+                          <shadow type="math_number" id="gTY?M;8x:1R#sM:m^M#c">
+                            <field name="NUM">1</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
