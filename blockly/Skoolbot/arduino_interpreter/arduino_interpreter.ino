@@ -564,15 +564,15 @@ void loop() {
 
           if (block_code == STOP) {
             readyToCode = true;
-//            Serial.print("end of code, size is ");
-//            Serial.println(ip == code_length);
+            Serial.print("end of code, size is ");
+            Serial.println(ip == code_length);
             break;
           }
           
           block_code = 0;
           block_pass = "";
-//          Serial.print("got code: ");
-//          Serial.println(code[ip]);
+          Serial.print("got code: ");
+          Serial.println(code[ip]);
           
           ip++;
         }

@@ -8,7 +8,7 @@ $(document).ready(function() {
     for (var i = 0; i < ports.length; i++) {
       $('select#portPath').append('<option value="' + ports[i].path + '">' + ports[i].path + '</option>');
     }
-  }
+  };
 
   chrome.serial.getDevices(onGetDevices);
 
@@ -29,6 +29,7 @@ $(document).ready(function() {
     } else {
       chrome.serial.disconnect(connectionId, function(result) {
         $("button#connect").html("connect");
+        $("button#send").removeClass("btn-success").addClass("danger");
         console.log('Connection with id: ' + connectionId + ' closed');
       });
     }
@@ -41,7 +42,7 @@ $(document).ready(function() {
   convertArrayBufferToString = function(buf) {
     var bufView = new Uint8Array(buf);
     var encodedString = String.fromCharCode.apply(null, bufView);
-    return decodeURIComponent(escape(encodedString))
+    return decodeURIComponent(escape(encodedString));
   };
 
   var onLineReceived = function(stringReceived){
@@ -67,6 +68,7 @@ $(document).ready(function() {
   $('button#send').click(function() {
     $('textarea#output').html('');
     var str = $('input#input').val();
+    console.log(str);
 
     // Sending data to a serial port
     var writeSerial = function(str) {
@@ -74,7 +76,8 @@ $(document).ready(function() {
         console.log(str);
         $('input#input').html('');
       });
-    }
+    };
+
     // Convert string to ArrayBuffer
     var convertStringToArrayBuffer = function(str) {
       var buf=new ArrayBuffer(str.length);
@@ -83,7 +86,7 @@ $(document).ready(function() {
         bufView[i]=str.charCodeAt(i);
       }
       return buf;
-    }
+    };
     writeSerial(str);
   });
 });
