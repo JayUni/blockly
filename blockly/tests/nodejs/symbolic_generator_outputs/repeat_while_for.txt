@@ -21,8 +21,13 @@ get for_start_variable_1
 set for_i_variable_1
 get for_start_variable_1
 set i
+get for_start_variable_1
+get for_end_variable_1
+cmple
+set start_cmple_end_1
 boolean FALSE
 set for_control_variable_1
+get for_control_variable_1
 JUMP L0_3
 L1_3
 get for_i_variable_1
@@ -34,7 +39,13 @@ set i
 L0_3
 get for_i_variable_1
 get for_end_variable_1
+get start_cmple_end_1
+JUMPNZ L1_4
 cmple
+JUMP L0_4
+L1_4
+cmpge
+L0_4
 JUMPNZ L1_2
 get n
 print
@@ -47,11 +58,11 @@ print
 get n
 number 100
 cmpg
-JUMPNZ L0_4
+JUMPNZ L0_5
 JUMP L1_1
-JUMP L1_5
-L0_4
-L1_5
+JUMP L1_6
+L0_5
+L1_6
 JUMP L0_1
 L1_1
 get n
@@ -66,3 +77,4 @@ cmpg
 JUMPNZ L1_0
 JUMP L0_0
 L1_0
+

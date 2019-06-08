@@ -5,9 +5,8 @@
 g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
 for xml in xmlToJson_test_cases/*.xml
 do
-    # conver xml to json
-#    xml="xmlToJson_test_cases/fading_analogWrite.xml"
-
+    # convert xml to json
+    # xml="xmlToJson_test_cases/fading_analogWrite.xml"
 
     json="jsonToAddTyepField_test_cases/`basename $xml .xml`.json"
 
