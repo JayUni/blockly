@@ -871,37 +871,39 @@ function addCommand(jsonList){
                                 break;
                             }
                             if (jsonList.label === 'jumpAdded'){
-
-                                commandList.push('set for_end_variable_' + jsonList.loop_val);
-                                commandList.push('get for_start_variable_' + jsonList.loop_val);
-                                commandList.push('set for_i_variable_' + jsonList.loop_val);
-                                commandList.push('get for_start_variable_' + jsonList.loop_val);
-                                commandList.push('set ' + jsonList.variable);
-                                commandList.push('boolean FALSE');
-                                commandList.push('set for_control_variable_' + jsonList.loop_val);
-                                commandList.push('JUMP L0_' + jsonList.loop_L0);
-                                commandList.push('L1_' + jsonList.loop_L1);
-                                commandList.push('get for_i_variable_' + jsonList.loop_val);
-                                commandList.push('get for_step_variable_' + jsonList.loop_val);
-                                commandList.push('add');
-                                commandList.push('set for_i_variable_' + jsonList.loop_val);
-                                commandList.push('get for_i_variable_' + jsonList.loop_val);
-                                commandList.push('set ' + jsonList.variable);
-                                commandList.push('L0_' + jsonList.loop_L0);
-                                commandList.push('get for_i_variable_' + jsonList.loop_val);
-                                commandList.push('get for_end_variable_' + jsonList.loop_val);
-                                var loop_start = jsonList.start[0].number;
-                                var loop_end = jsonList.end[0].number;
-                                if(loop_start <= loop_end){
-                                    commandList.push('cmple');
-                                }
-                                else{
-                                    commandList.push('cmpge');
-                                }
-                                // commandList.push('cmple');
-                                commandList.push('JUMPNZ L1_' + jsonList.label_1);
-                                jsonList.label = 'variableChanged';
-                                break;
+                              commandList.push('set for_end_variable_' + jsonList.loop_val);
+                              commandList.push('get for_start_variable_' + jsonList.loop_val);
+                              commandList.push('set for_i_variable_' + jsonList.loop_val);
+                              commandList.push('get for_start_variable_' + jsonList.loop_val);
+                              commandList.push('set ' + jsonList.variable);
+                              commandList.push('get for_start_variable_' + jsonList.loop_val);
+                              commandList.push('get for_end_variable_' + jsonList.loop_val);
+                              commandList.push('cmple');
+                              commandList.push('set start_cmple_end_' + jsonList.loop_val);
+                              commandList.push('boolean FALSE');
+                              commandList.push('set for_control_variable_' + jsonList.loop_val);
+                              commandList.push('get for_control_variable_' + jsonList.loop_val);
+                              commandList.push('JUMP L0_' + jsonList.loop_L0);
+                              commandList.push('L1_' + jsonList.loop_L1);
+                              commandList.push('get for_i_variable_' + jsonList.loop_val);
+                              commandList.push('get for_step_variable_' + jsonList.loop_val);
+                              commandList.push('add');
+                              commandList.push('set for_i_variable_' + jsonList.loop_val);
+                              commandList.push('get for_i_variable_' + jsonList.loop_val);
+                              commandList.push('set ' + jsonList.variable);
+                              commandList.push('L0_' + jsonList.loop_L0);
+                              commandList.push('get for_i_variable_' + jsonList.loop_val);
+                              commandList.push('get for_end_variable_' + jsonList.loop_val);
+                              commandList.push('get start_cmple_end_' + jsonList.loop_val);
+                              commandList.push('JUMPNZ L1_' + jsonList.loop_cmp_L1);
+                              commandList.push('cmple');
+                              commandList.push('JUMP L0_' + jsonList.loop_cmp_L0);
+                              commandList.push('L1_' + jsonList.loop_cmp_L1);
+                              commandList.push('cmpge');
+                              commandList.push('L0_' + jsonList.loop_cmp_L0);
+                              commandList.push('JUMPNZ L1_' + jsonList.label_1);
+                              jsonList.label = 'variableChanged';
+                              break;
                             }
                             if (jsonList.label === 'variableChanged'){
                                 commandList.push('JUMP L0_' + jsonList.label_0);
@@ -1034,6 +1036,10 @@ function addLabel(jsonList) {
                                 jsonList.loop_val = loop_val;
                                 jsonList.loop_L0 = L0;
                                 jsonList.loop_L1 =L1;
+                                L0 += 1;
+                                L1 += 1;
+                                jsonList.loop_cmp_L0 = L0;
+                                jsonList.loop_cmp_L1 =L1;
                                 L0 += 1;
                                 L1 += 1;
                                 loop_val += 1;

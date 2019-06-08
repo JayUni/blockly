@@ -29,6 +29,7 @@ $(document).ready(function() {
     } else {
       chrome.serial.disconnect(connectionId, function(result) {
         $("button#connect").html("connect");
+        $("button#send").removeClass("btn-success").addClass("danger");
         console.log('Connection with id: ' + connectionId + ' closed');
       });
     }
@@ -46,7 +47,7 @@ $(document).ready(function() {
 
   var onLineReceived = function(stringReceived){
     $('textarea#output').html($('textarea#output').val() + stringReceived);
-  };
+  }
 
   var onReceiveCallback = function(info) {
     if (info.connectionId == expectedConnectionId && info.data) {
@@ -67,6 +68,7 @@ $(document).ready(function() {
   $('button#send').click(function() {
     $('textarea#output').html('');
     var str = $('input#input').val();
+    console.log(str);
 
     // Sending data to a serial port
     var writeSerial = function(str) {
@@ -75,6 +77,7 @@ $(document).ready(function() {
         $('input#input').html('');
       });
     };
+
     // Convert string to ArrayBuffer
     var convertStringToArrayBuffer = function(str) {
       var buf=new ArrayBuffer(str.length);
