@@ -3,18 +3,10 @@
 # compile the interpreter
 # -std=c++11 -Wall -Werror=format-security
 g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
-<<<<<<< HEAD
-#for xml in xmlToJson_test_cases/*.xml
-#do
-    # conver xml to json
-
-    xml="xmlToJson_test_cases/complex_test1.xml"
-=======
 for xml in xmlToJson_test_cases/*.xml
 do
     # convert xml to json
     # xml="xmlToJson_test_cases/fading_analogWrite.xml"
->>>>>>> a827265b521e8c2c6472241c43d2485b49abb399
 
     json="jsonToAddTyepField_test_cases/`basename $xml .xml`.json"
 
@@ -127,6 +119,6 @@ do
    echo ""
    echo ""
    echo ""
-dne
+done
 rm compare.txt
 rm compare.json
