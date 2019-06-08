@@ -6,5 +6,5 @@ ip: 12 NOP
 ip: 13 GET 2
 ip: 16 NUMBER 3
 ip: 19 CMPE
-ip: 20 JUMPNZ 224
-ip: 225 STOP
+ip: 20 JUMPNZ 274
+ip: 275 STOP

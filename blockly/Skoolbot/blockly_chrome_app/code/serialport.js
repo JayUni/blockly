@@ -8,7 +8,7 @@ $(document).ready(function() {
     for (var i = 0; i < ports.length; i++) {
       $('select#portPath').append('<option value="' + ports[i].path + '">' + ports[i].path + '</option>');
     }
-  }
+  };
 
   chrome.serial.getDevices(onGetDevices);
 
@@ -41,12 +41,12 @@ $(document).ready(function() {
   convertArrayBufferToString = function(buf) {
     var bufView = new Uint8Array(buf);
     var encodedString = String.fromCharCode.apply(null, bufView);
-    return decodeURIComponent(escape(encodedString))
+    return decodeURIComponent(escape(encodedString));
   };
 
   var onLineReceived = function(stringReceived){
     $('textarea#output').html($('textarea#output').val() + stringReceived);
-  }
+  };
 
   var onReceiveCallback = function(info) {
     if (info.connectionId == expectedConnectionId && info.data) {
@@ -74,7 +74,7 @@ $(document).ready(function() {
         console.log(str);
         $('input#input').html('');
       });
-    }
+    };
     // Convert string to ArrayBuffer
     var convertStringToArrayBuffer = function(str) {
       var buf=new ArrayBuffer(str.length);
@@ -83,7 +83,7 @@ $(document).ready(function() {
         bufView[i]=str.charCodeAt(i);
       }
       return buf;
-    }
+    };
     writeSerial(str);
   });
 });
