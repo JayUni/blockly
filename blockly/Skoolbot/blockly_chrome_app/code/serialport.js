@@ -68,14 +68,37 @@ $(document).ready(function() {
   $('button#send').click(function() {
     $('textarea#output').html('');
     var str = $('input#input').val();
-    console.log(str);
+
+    var string_chuck = [];
+    var input_str = str;
+    console.log(input_str);
+    var i = 0;
+    while (input_str.length != 0){
+      if (i == 0){
+        string_chuck[i] = input_str.substring(0, 12);
+        input_str = input_str.substring(12, input_str.length);
+      }
+      else{
+        if(input_str.length > 20){
+          string_chuck[i] = input_str.substring(0, 20);
+          input_str = input_str.substring(20, input_str.length);
+        }
+        else{
+          string_chuck[i] = input_str;
+          input_str = '';
+        }
+      }
+      i += 1;
+    }
 
     // Sending data to a serial port
-    var writeSerial = function(str) {
-      chrome.serial.send(connectionId, convertStringToArrayBuffer(str), function(str){
-        console.log(str);
-        $('input#input').html('');
-      });
+    var writeSerial = function(string_chuck) {
+      for (var j in string_chuck){
+        var chunk = string_chuck[j];
+        chrome.serial.send(connectionId, convertStringToArrayBuffer(chunk), function(chunk){
+          console.log(chunk);
+        });
+      }
     };
 
     // Convert string to ArrayBuffer
