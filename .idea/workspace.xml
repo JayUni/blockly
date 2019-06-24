@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdf21039-9d8b-466e-a53c-525fb61cbf3e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blockly/Skoolbot/test_chunks.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/Skoolbot/blockly_chrome_app/code/serialport.js" afterPath="$PROJECT_DIR$/blockly/Skoolbot/blockly_chrome_app/code/serialport.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -88,8 +86,8 @@
       <file leaf-file-name="serialport.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/blockly_chrome_app/code/serialport.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="123" column="20" lean-forward="false" selection-start-line="123" selection-start-column="20" selection-end-line="123" selection-end-column="20" />
+            <state relative-caret-position="220">
+              <caret line="122" column="36" lean-forward="false" selection-start-line="122" selection-start-column="36" selection-end-line="122" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -340,12 +338,12 @@
       <workItem from="1559965716158" duration="927000" />
       <workItem from="1559968171956" duration="1239000" />
       <workItem from="1559970589217" duration="11673000" />
-      <workItem from="1561350299209" duration="6583000" />
+      <workItem from="1561350299209" duration="6992000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26424000" />
+    <option name="totallyTimeSpent" value="26833000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -790,8 +788,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blockly/Skoolbot/blockly_chrome_app/code/serialport.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="123" column="20" lean-forward="false" selection-start-line="123" selection-start-column="20" selection-end-line="123" selection-end-column="20" />
+        <state relative-caret-position="220">
+          <caret line="122" column="36" lean-forward="false" selection-start-line="122" selection-start-column="36" selection-end-line="122" selection-end-column="36" />
           <folding />
         </state>
       </provider>

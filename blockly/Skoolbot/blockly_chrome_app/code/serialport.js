@@ -2,6 +2,7 @@ $(document).ready(function() {
 
     var connectionId;
     var expectedConnectionId;
+    // implement the sleep function in javascript
     function sleep(milliseconds) {
         var start = new Date().getTime();
         for (var i = 0; i < 1e7; i++) {
@@ -78,6 +79,7 @@ $(document).ready(function() {
         $('textarea#output').html('');
         var str = $('input#input').val();
 
+        // init the chunk array to save the chunks
         var string_chunk = [];
         var input_str = str;
         console.log(input_str);
@@ -118,6 +120,7 @@ $(document).ready(function() {
             return buf;
         };
 
+        // send the chunk one by one
         for (var j in string_chunk){
             var chunk = string_chunk[j];
             writeSerial(chunk);
