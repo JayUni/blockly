@@ -2,6 +2,9 @@ $(document).ready(function() {
 
   var connectionId;
   var expectedConnectionId;
+  const sleep = (milliseconds) => {
+    return new Promise(resolve => setTimeout(resolve, milliseconds))
+  };
 
   // Listing available serial ports
   var onGetDevices = function(ports) {
