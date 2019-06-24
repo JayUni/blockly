@@ -1,0 +1,180 @@
+ip: 0 NUMBER 1
+ip: 3 SET 0
+ip: 6 NUMBER 10
+ip: 9 SET 2
+ip: 12 NOP
+ip: 13 GET 0
+ip: 16 NUMBER 5
+ip: 19 CMPL
+ip: 20 ip: 23 GET 0
+ip: 26 NUMBER 2
+ip: 29 MUL
+ip: 30 PRINT 2
+ip: 31 JUMP 39
+ip: 40 NUMBER 1
+ip: 43 CHANGE 0
+ip: 46 GET 2
+ip: 49 NUMBER 1
+ip: 52 SUB
+ip: 53 SET 2
+ip: 56 GET 2
+ip: 59 NUMBER 0
+ip: 62 CMPG
+ip: 63 ip: 66 JUMP 12
+ip: 13 GET 0
+ip: 16 NUMBER 5
+ip: 19 CMPL
+ip: 20 ip: 23 GET 0
+ip: 26 NUMBER 2
+ip: 29 MUL
+ip: 30 PRINT 4
+ip: 31 JUMP 39
+ip: 40 NUMBER 1
+ip: 43 CHANGE 0
+ip: 46 GET 2
+ip: 49 NUMBER 1
+ip: 52 SUB
+ip: 53 SET 2
+ip: 56 GET 2
+ip: 59 NUMBER 0
+ip: 62 CMPG
+ip: 63 ip: 66 JUMP 12
+ip: 13 GET 0
+ip: 16 NUMBER 5
+ip: 19 CMPL
+ip: 20 ip: 23 GET 0
+ip: 26 NUMBER 2
+ip: 29 MUL
+ip: 30 PRINT 6
+ip: 31 JUMP 39
+ip: 40 NUMBER 1
+ip: 43 CHANGE 0
+ip: 46 GET 2
+ip: 49 NUMBER 1
+ip: 52 SUB
+ip: 53 SET 2
+ip: 56 GET 2
+ip: 59 NUMBER 0
+ip: 62 CMPG
+ip: 63 ip: 66 JUMP 12
+ip: 13 GET 0
+ip: 16 NUMBER 5
+ip: 19 CMPL
+ip: 20 ip: 23 GET 0
+ip: 26 NUMBER 2
+ip: 29 MUL
+ip: 30 PRINT 8
+ip: 31 JUMP 39
+ip: 40 NUMBER 1
+ip: 43 CHANGE 0
+ip: 46 GET 2
+ip: 49 NUMBER 1
+ip: 52 SUB
+ip: 53 SET 2
+ip: 56 GET 2
+ip: 59 NUMBER 0
+ip: 62 CMPG
+ip: 63 ip: 66 JUMP 12
+ip: 13 GET 0
+ip: 16 NUMBER 5
+ip: 19 CMPL
+ip: 20 JUMPNZ 34
+ip: 35 GET 0
+ip: 38 PRINT 5
+ip: 39 NOP
+ip: 40 NUMBER 1
+ip: 43 CHANGE 0
+ip: 46 GET 2
+ip: 49 NUMBER 1
+ip: 52 SUB
+ip: 53 SET 2
+ip: 56 GET 2
+ip: 59 NUMBER 0
+ip: 62 CMPG
+ip: 63 ip: 66 JUMP 12
+ip: 13 GET 0
+ip: 16 NUMBER 5
+ip: 19 CMPL
+ip: 20 JUMPNZ 34
+ip: 35 GET 0
+ip: 38 PRINT 6
+ip: 39 NOP
+ip: 40 NUMBER 1
+ip: 43 CHANGE 0
+ip: 46 GET 2
+ip: 49 NUMBER 1
+ip: 52 SUB
+ip: 53 SET 2
+ip: 56 GET 2
+ip: 59 NUMBER 0
+ip: 62 CMPG
+ip: 63 ip: 66 JUMP 12
+ip: 13 GET 0
+ip: 16 NUMBER 5
+ip: 19 CMPL
+ip: 20 JUMPNZ 34
+ip: 35 GET 0
+ip: 38 PRINT 7
+ip: 39 NOP
+ip: 40 NUMBER 1
+ip: 43 CHANGE 0
+ip: 46 GET 2
+ip: 49 NUMBER 1
+ip: 52 SUB
+ip: 53 SET 2
+ip: 56 GET 2
+ip: 59 NUMBER 0
+ip: 62 CMPG
+ip: 63 ip: 66 JUMP 12
+ip: 13 GET 0
+ip: 16 NUMBER 5
+ip: 19 CMPL
+ip: 20 JUMPNZ 34
+ip: 35 GET 0
+ip: 38 PRINT 8
+ip: 39 NOP
+ip: 40 NUMBER 1
+ip: 43 CHANGE 0
+ip: 46 GET 2
+ip: 49 NUMBER 1
+ip: 52 SUB
+ip: 53 SET 2
+ip: 56 GET 2
+ip: 59 NUMBER 0
+ip: 62 CMPG
+ip: 63 ip: 66 JUMP 12
+ip: 13 GET 0
+ip: 16 NUMBER 5
+ip: 19 CMPL
+ip: 20 JUMPNZ 34
+ip: 35 GET 0
+ip: 38 PRINT 9
+ip: 39 NOP
+ip: 40 NUMBER 1
+ip: 43 CHANGE 0
+ip: 46 GET 2
+ip: 49 NUMBER 1
+ip: 52 SUB
+ip: 53 SET 2
+ip: 56 GET 2
+ip: 59 NUMBER 0
+ip: 62 CMPG
+ip: 63 ip: 66 JUMP 12
+ip: 13 GET 0
+ip: 16 NUMBER 5
+ip: 19 CMPL
+ip: 20 JUMPNZ 34
+ip: 35 GET 0
+ip: 38 PRINT 10
+ip: 39 NOP
+ip: 40 NUMBER 1
+ip: 43 CHANGE 0
+ip: 46 GET 2
+ip: 49 NUMBER 1
+ip: 52 SUB
+ip: 53 SET 2
+ip: 56 GET 2
+ip: 59 NUMBER 0
+ip: 62 CMPG
+ip: 63 JUMPNZ 69
+ip: 70 STOP
