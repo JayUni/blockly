@@ -51,12 +51,15 @@
 #define AWRITE        (0x2A)
 #define DELAY         (0x2B)
 
+// TODO: memory size SHOULD BE changed for different board
 #define STACK_SIZE    (512)
 #define MEMORY_SIZE   (1024)
 #define CODE_SIZE     (1024)
 
+// get the next 16 bits and combine them together
 #define GETARG uint32_t(uint32_t(code[ip+1]) | uint32_t(code[ip+2])<<8)
 
+// memory and pointer initialisations
 uint8_t code[CODE_SIZE];
 size_t ip = 0;
 
@@ -65,19 +68,18 @@ size_t stack_ptr = 0;
 
 int16_t memory[MEMORY_SIZE];
 
+// push and pop for stack memory
 void push(int16_t data) {
-
   assert(stack_ptr < STACK_SIZE && "stack overflow");
-  // std::cout<<"push: "<<stack_ptr<<std::endl;
   stack[stack_ptr++] = data;
 }
 
 int16_t pop() {
   assert(stack_ptr >= 0 && "stack underflow");
-  // std::cout<<"pop: "<<stack_ptr<<std::endl;
   return stack[--stack_ptr];
 }
 
+// CORE: run function
 void run() {
   int16_t op1;
   int16_t op2;
@@ -191,6 +193,7 @@ void run() {
       }
         break;
       case RANDOMINT:
+       // TODO: --------------- this command need to change for real application ---------------
        std::cout<<"cannot test random integer, default number is 2"<<"\n";
        push(2);
        break;
@@ -258,12 +261,12 @@ void run() {
           assert((op1 == 0 || op1 == 1) && "Invalid stack element for negate");
         }
         break;
-      case NULL_:
-        push(-1); // need to check this ???
       case GET:
         {
+          // get the address of the variable
           size_t addr = GETARG;
           ip += 2;
+          // push the address to the stack
           push(memory[addr]);
         }
         break;
@@ -275,12 +278,15 @@ void run() {
             std::cout<<"Memery Overflow"<<std::endl;
             return;
           }
+          // change the variable value
           memory[addr] = value;
           ip += 2;
         }
         break;
       case JUMPZ:
+      // jump when == 0 (true)
         {
+          // jump by change ip pointer of program
           int16_t value = pop();
           size_t addr = GETARG;
           ip += 2;
@@ -290,6 +296,7 @@ void run() {
         }
         break;
       case JUMPNZ:
+      // jump when != 0 (not true)
           {
             int16_t value = pop();
             size_t addr = GETARG;
@@ -326,6 +333,7 @@ void run() {
       case STOP:
         return;
       case CHANGE:
+      // change command is curent variable += another value
         {
           size_t addr = GETARG;
           ip += 2;
@@ -361,7 +369,8 @@ void run() {
           ip += 2;
           size_t value = pop();
 
-         std::cout<<"pinMode: "<<value<<" "<<memory[addr]<<std::endl;
+          // TODO: --------------- need to change hardware command ---------------
+          std::cout<<"pinMode: "<<value<<" "<<memory[addr]<<std::endl;
 
         }
         break;
@@ -370,6 +379,7 @@ void run() {
           size_t addr = GETARG;
           ip += 2;
 
+          // TODO: --------------- need to change hardware command ---------------
           std::cout<<"DREAD: "<<memory[addr]<<std::endl;
 
         }
@@ -380,6 +390,7 @@ void run() {
           ip += 2;
 
           int16_t value = pop();
+          // TODO: --------------- need to change hardware command ---------------
           std::cout<<"DWRITE: "<<value<<" "<<memory[addr]<<std::endl;
 
         }
@@ -389,7 +400,7 @@ void run() {
           size_t addr = GETARG;
           ip += 2;
 
-          // int val = analogRead(memory[addr]);
+          // TODO: --------------- need to change hardware command ---------------
           std::cout<<"AREAD: "<<memory[addr]<<std::endl;
 
         }
@@ -399,6 +410,8 @@ void run() {
           size_t addr = GETARG;
           ip += 2;
           int16_t value = pop();
+
+          // TODO: --------------- need to change hardware command ---------------
           std::cout<<"DWRITE: "<<value<<" "<<memory[addr]<<std::endl;
 
         }
@@ -406,6 +419,8 @@ void run() {
        case DELAY:
         {
           int16_t val = pop();
+
+          // TODO: --------------- need to change hardware command ---------------
           std::cout<<"Delay: "<<val<<std::endl;
         }
         break;
@@ -416,7 +431,8 @@ void run() {
   }
 }
 
-// 1 = true, 0 = false
+// run function for print the symbolic commands of the program
+// for debugging purpose
 void run_symbol() {
   for(ip=0;ip<CODE_SIZE;ip++) {
     std::cout<<"ip: "<< ip <<" ";
@@ -426,9 +442,7 @@ void run_symbol() {
         break;
       case NUMBER:
         {
-          // int16_t value = code[ip++];
-          // value |= (code[ip++] << 8);
-          std::cout << "Number "; //<< (int16_t)value << std::endl;
+          std::cout << "Number ";
           std::cout << (int16_t)GETARG << std::endl;
           ip+=2;
         }
@@ -499,12 +513,8 @@ void run_symbol() {
       case NEGATE:
         std::cout << "NEGATE" << std::endl;
         break;
-      case NULL_:
-        std::cout << "NULL_" << std::endl;
       case GET:
         {
-          // int16_t addr = code[ip++];
-          // addr |= (code[ip++]<<8);
           std::cout << "GET ";
           std::cout << (size_t)GETARG << std::endl;
           ip+=2;
@@ -513,8 +523,6 @@ void run_symbol() {
         break;
       case SET:
         {
-          // int16_t addr = code[ip++];
-          // addr |= (code[ip++]<<8);
           size_t addr = GETARG;
           if (addr >= MEMORY_SIZE) {
             std::cout<<"Memery Overflow"<<std::endl;
@@ -528,9 +536,6 @@ void run_symbol() {
         break;
       case JUMPZ:
         {
-          // int16_t addr = code[ip+1];
-          // addr |= (code[ip+2]<<8);
-
           std::cout << "JUMPZ ";
           std::cout << (size_t)GETARG << std::endl;
           ip+=2;
@@ -539,11 +544,6 @@ void run_symbol() {
         break;
       case JUMPNZ:
           {
-            // int16_t addr = code[ip++];
-            // addr |= (code[ip++]<<8);
-            // std::cout<<(uint16_t)code[ip+1]<<std::endl;
-            // std::cout<<(uint16_t)code[ip+2]<<std::endl;
-            // std::cout<<uint16_t(uint16_t(code[ip+1]) | uint16_t(code[ip+2]<<8))<<std::endl;
             std::cout << "JUMPNZ ";
             std::cout << (size_t)GETARG << std::endl;
             ip+=2;
@@ -551,8 +551,6 @@ void run_symbol() {
           break;
       case JUMP:
         {
-          // int16_t addr = code[ip++];
-          // addr |= (code[ip++]<<8);
           std::cout << "JUMP ";
           std::cout << (size_t)GETARG << std::endl;
           ip+=2;
@@ -619,7 +617,6 @@ void run_symbol() {
           size_t addr = GETARG;
           ip += 2;
 
-          // int val = analogRead(memory[addr]);
           std::cout<<"AREAD: "<<memory[addr]<<std::endl;
 
         }
@@ -646,7 +643,8 @@ void run_symbol() {
   }
 }
 
-// 1 = true, 0 = false
+// run function for printing the symbolic commands of the program steps
+// for debugging purpose
 void run_both() {
   int16_t op1;
   int16_t op2;
@@ -659,22 +657,17 @@ void run_both() {
         std::cout << "NOP"<<std::endl;
         break;
       case NUMBER:
-
-          std::cout << "NUMBER "; //<< (int16_t)value << std::endl;
-          // std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
-          value = (int16_t)GETARG;
-          std::cout<< (int16_t)GETARG << std::endl;
-          push(value);
-          ip += 2;
-
+        std::cout << "NUMBER ";
+        value = (int16_t)GETARG;
+        std::cout<< (int16_t)GETARG << std::endl;
+        push(value);
+        ip += 2;
         break;
       case ADD:
-
-          op1 = pop();
-          op2 = pop();
-          push(op1 + op2);
-          std::cout << "ADD" << std::endl;
-
+        op1 = pop();
+        op2 = pop();
+        push(op1 + op2);
+        std::cout << "ADD" << std::endl;
         break;
       case SUB:
         op1 = pop();
@@ -856,9 +849,6 @@ void run_both() {
         }
         std::cout << "NEGATE" << std::endl;
         break;
-      case NULL_:
-        push(-1); // need to check this ???
-        std::cout << "NULL_" << std::endl;
       case GET:
 
           addr = GETARG;
@@ -894,7 +884,6 @@ void run_both() {
       case JUMPNZ:
             value = pop();
             addr = GETARG;
-            // std::cout<<"JUMPNZ "<<addr<<std::endl;
             ip += 2;
             if (value != 0) {
                ip = addr;
@@ -902,9 +891,6 @@ void run_both() {
             }
           break;
       case JUMP:
-          //addr<<std::endl;
-          // std::cout << (int16_t)(code[ip+1] + (code[ip+2]  << 8)) << std::endl;
-          // //
           addr = GETARG;
           ip = addr;
           std::cout<<"JUMP "<< ip <<std::endl;
@@ -912,7 +898,6 @@ void run_both() {
       case PRINT:
 
         std::cout << "PRINT ";
-        // int16_t data = pop();
         std::cout << pop() << std::endl;
 
         break;
@@ -998,7 +983,6 @@ void run_both() {
           size_t addr = GETARG;
           ip += 2;
 
-          // int val = analogRead(memory[addr]);
           std::cout<<"AREAD: "<<memory[addr]<<std::endl;
 
         }
@@ -1033,7 +1017,6 @@ int main (int argc, char *argv[]) {
     return 1;
   }
 
-//1 if true and 0 if false
 //debug mode
 
   if (argc == 3) {
@@ -1047,8 +1030,10 @@ int main (int argc, char *argv[]) {
   if(FILE *file = fopen(argv[1],"rb")) {
      fread(code, CODE_SIZE, 1, file);
      if (debug == 1) {
+       // debug with only symbolic translation
        run_symbol();
      } else if (debug == 2) {
+       // debug with symbolic translation and steps of the program execution
        run_both();
      } else {
        run();

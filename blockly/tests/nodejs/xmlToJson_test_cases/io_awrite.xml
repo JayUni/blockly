@@ -10,9 +10,13 @@
       </block>
     </value>
     <next>
-      <block type="analogwrite" id="JwqLC(^SW1PBckT3vSBI">
+      <block type="analogwrite" id="==`3L+$Ml1Q6hBG0,Gz]">
         <field name="var" id="ZiMSii1=7JYXtcZBfE15" variabletype="">item</field>
-        <field name="value">0</field>
+        <value name="value">
+          <shadow type="math_number" id="~Kb(]_;#P|[|7bb;%ol9">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
         <next>
           <block type="text_print" id="g@Uwt[c#9Uka!P|Pp2{Z">
             <value name="TEXT">

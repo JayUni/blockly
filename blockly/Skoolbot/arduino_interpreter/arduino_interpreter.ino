@@ -43,7 +43,8 @@
 #define AWRITE        (0x2A)
 #define DELAY         (0x2B)
 
-#define STACK_SIZE    (214)
+// TODO: change the memory size to meet the suitable needs
+#define STACK_SIZE    (255)
 #define MEMORY_SIZE   (128)
 #define CODE_SIZE     (512)
 
@@ -82,8 +83,6 @@ void run(void) {
   int16_t op1;
   int16_t op2;
   for(ip=0;ip<CODE_SIZE;ip++) {
-//    Serial.print("command: ");
-//    Serial.println(code[ip]);
     stack_underflow;
     stack_overflow;
     switch(code[ip]) {
@@ -98,7 +97,6 @@ void run(void) {
         break;
       case ADD:
         {
-          
           op1 = pop();
           op2 = pop();
           push(op1 + op2);
@@ -116,6 +114,7 @@ void run(void) {
         break;
       case DIV:
         op1 = pop();
+        // check whether the denominator is 0 or not
         if (op1 == 0) {
           Serial.println("Invalid zero denominator");
           return;
@@ -268,14 +267,12 @@ void run(void) {
         } else if (op1 == 1) {
           push(0);
         } else {
-          Serial.print("Invalid stack element for negate ");
-          Serial.println(code[ip]);
+          Serial.println("Invalid stack element for negate");
           return;
         }
         break;
-      case NULL_:
-        push(-1); // need to check this ???
       case GET:
+      // get the variable adress to stack
         {
           size_t addr = GETARG;
           ip += 2;
@@ -283,6 +280,7 @@ void run(void) {
         }
         break;
       case SET:
+      // set the variable to a new value
         {
           size_t addr = GETARG;
           int16_t value = pop();
@@ -295,6 +293,7 @@ void run(void) {
         }
         break;
       case JUMPZ:
+      // jump when == 0 (true)
         {
           int16_t value = pop();
           size_t addr = GETARG;
@@ -305,6 +304,7 @@ void run(void) {
         }
         break;
       case JUMPNZ:
+      // jump when != 0 (not true)
           {
             int16_t value = pop();
             size_t addr = GETARG;
@@ -334,17 +334,16 @@ void run(void) {
         } else if ((int16_t)code[ip] == FALSE) {
           push(1);
         } else {
-          Serial.print("Invalid boolean command: ");
-          Serial.println(code[ip]);
+          Serial.println("Invalid boolean command");
           return;
         }
         break;
       case STOP:
-
         // stop the program and ready for next piece of code
         readyToRun = false;
         return;
       case CHANGE_:
+      // change command is add the value to the existing variable
         {
           size_t addr = GETARG;
           ip += 2;
@@ -380,22 +379,14 @@ void run(void) {
         ip += 2;
         size_t value = pop();
         
-//        Serial.print("pinMode: ");
-//        Serial.print(value);
-//        Serial.print(" ");
-//        Serial.println(memory[addr]);
-        
         if (value == 0) {
           pinMode(memory[addr], INPUT); 
         } else if (value == 1) {
           pinMode(memory[addr], OUTPUT); 
         } else {
-          Serial.print("Invalid pinMode: ");
-          Serial.println(value);
-          Serial.println(memory[addr]);
+          Serial.print("Invalid pinMode");
           return;
         }
-        
       }
       break;
      case DREAD:
@@ -405,18 +396,12 @@ void run(void) {
         
         int val = digitalRead(memory[addr]);
 
-//        Serial.print("DREAD: ");
-//        Serial.print(val);
-//        Serial.print(" ");
-//        Serial.println(memory[addr]);
-        
         if (val == HIGH) {
           push(0);
         } else if (val == LOW) {
           push(1);
         } else {
-          Serial.print("Invalid digitalRead: ");
-          Serial.println(val);
+          Serial.println("Invalid digitalRead");
           return;
         }
       }
@@ -428,18 +413,12 @@ void run(void) {
         
         int16_t value = pop();
 
-//        Serial.print("DWRITE: ");
-//        Serial.print(value);
-//        Serial.print(" ");
-//        Serial.println(memory[addr]);
-        
         if (value == 0) {
           digitalWrite(memory[addr], HIGH); 
         } else if (value == 1) {
           digitalWrite(memory[addr], LOW); 
         } else {
-          Serial.print("Invalid digitalWrite: ");
-          Serial.println(value);
+          Serial.println("Invalid digitalWrite");
           return;
         }
       }
@@ -451,16 +430,10 @@ void run(void) {
         
         int val = analogRead(memory[addr]);
 
-//        Serial.print("AREAD: ");
-//        Serial.print(val);
-//        Serial.print(" ");
-//        Serial.println(memory[addr]);
-        
         if (val > -1 && val < 1024) {
           push(val);
         } else {
-          Serial.print("Invalid analogRead: ");
-          Serial.println(val);
+          Serial.println("Invalid analogRead");
           return;
         }
       }
@@ -470,12 +443,9 @@ void run(void) {
         size_t addr = GETARG;
         ip += 2;
         int16_t value = pop();
+        // should be check whether value if from the analog read ( read range is 0-1023)
+        // mapping for analog write only accept range between 0-255
         value = map(value, 0, 1023, 0, 255);
-
-//        Serial.print("AWRITE: ");
-//        Serial.print(value);
-//        Serial.print(" ");
-//        Serial.println(memory[addr]);
         
         analogWrite(memory[addr], value); 
       }
@@ -484,15 +454,12 @@ void run(void) {
      case DELAY:
       {
         int16_t val = pop();
-//        Serial.print("delay: ");
-//        Serial.println(val);
-        
         delay(val);
       }
       break; 
                
       default:
-        Serial.println("Invalid command: ");
+        Serial.print("Invalid command: ");
         Serial.println(code[ip]);
         return;
     }
@@ -501,9 +468,6 @@ void run(void) {
 
 void setup() {
   Serial.begin(9600);
-
-  //load code in here
-  
 }
 
 void loop() {
@@ -522,25 +486,26 @@ void loop() {
       // read the incoming byte:
       incomingByte = Serial.read();
 
+      // skip reading all the empty space
       if (isSpace(incomingByte)) {
         continue;
       }
-//      Serial.print("block_pass: ");
-//      Serial.println(block_pass); 
 
+      // check read to read the hexadecimal bytecode
       if (readyToRead) {
-
         block_pass += incomingByte;
+        
+        // check whether is a hex or not
         if (block_pass.length() == 4) {
           if (!block_pass.charAt(0) == '0' ||
               !block_pass.charAt(0) == 'x' ||
               !isHexadecimalDigit(block_pass.charAt(2)) ||
               !isHexadecimalDigit(block_pass.charAt(3))) {
-           Serial.print("not a hex digit: ");
-           Serial.println(incomingByte);
+           Serial.println("not a hex digit");
            break;
           }
 
+          // hex to decimal
           char command = block_pass.charAt(2);
           if (command > 'Z') {
             block_code += (command) - ('a') + 10;
@@ -562,34 +527,29 @@ void loop() {
          
           code[ip] = block_code;
 
+          // only stop reading when STOP command is received
           if (block_code == STOP) {
             readyToCode = true;
-//            Serial.print("end of code, size is ");
-//            Serial.println(ip == code_length);
             break;
           }
           
           block_code = 0;
           block_pass = "";
-//          Serial.print("got code: ");
-//          Serial.println(code[ip]);
-          
           ip++;
         }
       }
-      //max block size is 128, so only take three numbers
-      //compare the size
+
+      // start reading the code after recieving the length of the code
       if(readyToLength && !readyToRead) {
         if (!isDigit(incomingByte)) {
-           Serial.print("not a digit: ");
-           Serial.println(incomingByte);
+           Serial.println("not a digit");
            break;
         }
         block_pass += incomingByte;
         if (block_pass.length() == 3) {
-//          Serial.print("got length: ");
-//          Serial.println(block_pass.toInt());
           code_length = block_pass.toInt();
+
+          //compare the size whether fit into arrange program memory size
           if (code_length > CODE_SIZE) {
             Serial.println("Code size too big");
             break;
@@ -598,27 +558,29 @@ void loop() {
           block_pass = "";
         }
       }
-      
+
+      // only received the secret code BLOCKLY
+      // then start reading the length of the incoming code
       if (!readyToLength) {
         block_pass += incomingByte;
         if (block_pass.equals("BLOCKLY")) {
-//          Serial.print("got BLOCKLY: ");
-//          Serial.println(block_pass);
           readyToLength = true;
           block_pass = "";
         }
       }
     }   
   }
-           
+
+  // run the program when reading is finished
   if (readyToCode) {
     Serial.println("program start");
-    ip = 0;
     run();
-    reset_state();
     Serial.println("end");
   }
-  //reset
+
+  // reset memories and pointer
+  reset_state();
+  //reset all the parameters
   readyToCode = false;
   readyToRead = false;
   readyToLength = false;

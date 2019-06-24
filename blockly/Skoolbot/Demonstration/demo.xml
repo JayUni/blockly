@@ -1,0 +1,287 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="3)yg}%*{Q~b@J4O^,jPK">motorPin</variable>
+    <variable type="" id="1zzlA*p@apFGFX~])qIH">red_led</variable>
+    <variable type="" id="q8Y=tyMkNC/25vEW,$M@">yellow_led</variable>
+    <variable type="" id="_W/_DuAnMVh$]/WviGVu">LDR_pin</variable>
+    <variable type="" id="w9lyPbw7J=9p`Y1(r4gp">pot</variable>
+    <variable type="" id="x]c.p%,fF)wZtB|H%9qS">ambientLight</variable>
+    <variable type="" id="pP}dgiHV/PwU#(!hYOW7">LDR_value</variable>
+    <variable type="" id="ij(;$rgy9a4sL`fnrF|c">pot_value</variable>
+  </variables>
+  <block type="variables_set" id="Jq=6I*RN0$2I}%RW).Lt" x="88" y="37">
+    <field name="VAR" id="3)yg}%*{Q~b@J4O^,jPK" variabletype="">motorPin</field>
+    <value name="VALUE">
+      <block type="math_number" id="Fe1SAWUF5LVaR.sTCbFj">
+        <field name="NUM">9</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="rSRALmB]77V6%;|v_$.!">
+        <field name="VAR" id="1zzlA*p@apFGFX~])qIH" variabletype="">red_led</field>
+        <value name="VALUE">
+          <block type="math_number" id="I*2{m#PmC!UU#Zf1?0ZF">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="SRPVCzvTE}Ez$!@dRUrp">
+            <field name="VAR" id="q8Y=tyMkNC/25vEW,$M@" variabletype="">yellow_led</field>
+            <value name="VALUE">
+              <block type="math_number" id="So#R1N_AIw{Ed*,sNaX%">
+                <field name="NUM">11</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="OB#bnT~9knjaD]6*0SEb">
+                <field name="VAR" id="_W/_DuAnMVh$]/WviGVu" variabletype="">LDR_pin</field>
+                <value name="VALUE">
+                  <block type="math_number" id="Rs_Tw^ZTO*$4EiNqg,ra">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="I.SC83+jkgnuBwh?^Mdm">
+                    <field name="VAR" id="w9lyPbw7J=9p`Y1(r4gp" variabletype="">pot</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="89CgJhBk`PS-3LQrQ^ep">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="pinmode" id="*U|2.rP8.,xs|Z9t*XV$">
+                        <field name="var" id="3)yg}%*{Q~b@J4O^,jPK" variabletype="">motorPin</field>
+                        <field name="IO">OUTPUT</field>
+                        <next>
+                          <block type="pinmode" id=",#jIzN.Jxs3LQY$jY37L">
+                            <field name="var" id="1zzlA*p@apFGFX~])qIH" variabletype="">red_led</field>
+                            <field name="IO">OUTPUT</field>
+                            <next>
+                              <block type="pinmode" id="%(Kt=!#mHGogq0sOV96Q">
+                                <field name="var" id="q8Y=tyMkNC/25vEW,$M@" variabletype="">yellow_led</field>
+                                <field name="IO">OUTPUT</field>
+                                <next>
+                                  <block type="delay" id="y2df#g~eG/k=%}*j;xJ1">
+                                    <value name="value">
+                                      <shadow type="math_number" id="DCfFs?*R1`%ie*O|}D_G">
+                                        <field name="NUM">10</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="variables_set" id="$Fv).o6o%YBxky[Ov%?b">
+                                        <field name="VAR" id="x]c.p%,fF)wZtB|H%9qS" variabletype="">ambientLight</field>
+                                        <value name="VALUE">
+                                          <block type="analogread" id="m(!]u$#D?I!4wNpmbxG|">
+                                            <field name="var" id="_W/_DuAnMVh$]/WviGVu" variabletype="">LDR_pin</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="controls_whileUntil" id="@Q3[[JZa`*fMzYv4)8XE">
+                                            <field name="MODE">WHILE</field>
+                                            <value name="BOOL">
+                                              <block type="logic_boolean" id="}%KVfb!uSw!H|FY_k@Qx">
+                                                <field name="BOOL">TRUE</field>
+                                              </block>
+                                            </value>
+                                            <statement name="DO">
+                                              <block type="variables_set" id="DQv8k~IDZyF$~~dQ#Zbj">
+                                                <field name="VAR" id="pP}dgiHV/PwU#(!hYOW7" variabletype="">LDR_value</field>
+                                                <value name="VALUE">
+                                                  <block type="analogread" id="={w4D)R!R8h[e=.eICE)">
+                                                    <field name="var" id="_W/_DuAnMVh$]/WviGVu" variabletype="">LDR_pin</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="variables_set" id="p[tv:0vrb%YZXb:@$eoi">
+                                                    <field name="VAR" id="ij(;$rgy9a4sL`fnrF|c" variabletype="">pot_value</field>
+                                                    <value name="VALUE">
+                                                      <block type="analogread" id="R%~unf=U$_dNdzA3{*C-">
+                                                        <field name="var" id="w9lyPbw7J=9p`Y1(r4gp" variabletype="">pot</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="controls_if" id="Qd2VGV`m`Xz/U[O1_I~+">
+                                                        <mutation else="1"></mutation>
+                                                        <value name="IF0">
+                                                          <block type="logic_compare" id="(8D)#q-uKk+B`VUwX;y@">
+                                                            <field name="OP">GT</field>
+                                                            <value name="A">
+                                                              <block type="math_single" id="_DE$rIA3|C;8-)Wh]4a7">
+                                                                <field name="OP">ABS</field>
+                                                                <value name="NUM">
+                                                                  <shadow type="math_number" id="00s,4Wg|jyLkdmzpPA`_">
+                                                                    <field name="NUM">9</field>
+                                                                  </shadow>
+                                                                  <block type="math_arithmetic" id="w1?gv%)l`;/}k?FtD!OS">
+                                                                    <field name="OP">MINUS</field>
+                                                                    <value name="A">
+                                                                      <shadow type="math_number" id="XI685Gowz{C{X!7^x8Tj">
+                                                                        <field name="NUM">1</field>
+                                                                      </shadow>
+                                                                      <block type="variables_get" id="W7s6a|Yv~yY(fE5H!JP5">
+                                                                        <field name="VAR" id="x]c.p%,fF)wZtB|H%9qS" variabletype="">ambientLight</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="B">
+                                                                      <shadow type="math_number" id="@$faq1qPzuCi=.q=Itqq">
+                                                                        <field name="NUM">1</field>
+                                                                      </shadow>
+                                                                      <block type="variables_get" id="|2jQH:k;~81jj;gEf+t(">
+                                                                        <field name="VAR" id="pP}dgiHV/PwU#(!hYOW7" variabletype="">LDR_value</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <value name="B">
+                                                              <block type="math_number" id=";LKo=onIxmmfl9Q{aZ7~">
+                                                                <field name="NUM">50</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <statement name="DO0">
+                                                          <block type="analogwrite" id="N(d(sdWOW/#gyo95Rxo#">
+                                                            <field name="var" id="3)yg}%*{Q~b@J4O^,jPK" variabletype="">motorPin</field>
+                                                            <value name="value">
+                                                              <shadow type="math_number" id="6)[r^,{lY{AhzxEja{-U">
+                                                                <field name="NUM">0</field>
+                                                              </shadow>
+                                                              <block type="math_arithmetic" id="MCdvcsvd4?u-B!}H:|$.">
+                                                                <field name="OP">DIVIDE</field>
+                                                                <value name="A">
+                                                                  <shadow type="math_number" id="VhS{QVDgZ/,tE.Rwf`!h">
+                                                                    <field name="NUM">1</field>
+                                                                  </shadow>
+                                                                  <block type="variables_get" id="KBZ`vP@)/aM){KN?vi.^">
+                                                                    <field name="VAR" id="pP}dgiHV/PwU#(!hYOW7" variabletype="">LDR_value</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="B">
+                                                                  <shadow type="math_number" id="*F-Ue+wZ60xU,^^T$.^D">
+                                                                    <field name="NUM">2</field>
+                                                                  </shadow>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="analogwrite" id="$A1M4^o{o%,hxSI5gzX$">
+                                                                <field name="var" id="q8Y=tyMkNC/25vEW,$M@" variabletype="">yellow_led</field>
+                                                                <value name="value">
+                                                                  <shadow type="math_number" id="naKU:-21Pa#ilr#8iu+s">
+                                                                    <field name="NUM">0</field>
+                                                                  </shadow>
+                                                                  <block type="variables_get" id="Y~;MiP[R3bqg%mOn);W`">
+                                                                    <field name="VAR" id="ij(;$rgy9a4sL`fnrF|c" variabletype="">pot_value</field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="analogwrite" id="6c(XR8^Qps$!##sFpmm4">
+                                                                    <field name="var" id="1zzlA*p@apFGFX~])qIH" variabletype="">red_led</field>
+                                                                    <value name="value">
+                                                                      <shadow type="math_number" id="MC*Iej:PW:PX3R$v6m*r">
+                                                                        <field name="NUM">0</field>
+                                                                      </shadow>
+                                                                    </value>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </statement>
+                                                        <statement name="ELSE">
+                                                          <block type="analogwrite" id=",0*]-}D@+.c)_*!rNYeQ">
+                                                            <field name="var" id="3)yg}%*{Q~b@J4O^,jPK" variabletype="">motorPin</field>
+                                                            <value name="value">
+                                                              <shadow type="math_number" id="351z~zms1~,EI$Z0G0lD">
+                                                                <field name="NUM">0</field>
+                                                              </shadow>
+                                                            </value>
+                                                            <next>
+                                                              <block type="analogwrite" id=")sQlG_/m*7l4`]NJgffq">
+                                                                <field name="var" id="q8Y=tyMkNC/25vEW,$M@" variabletype="">yellow_led</field>
+                                                                <value name="value">
+                                                                  <shadow type="math_number" id=",p1YxJV~#ete@!u)SdTW">
+                                                                    <field name="NUM">0</field>
+                                                                  </shadow>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="analogwrite" id="?Qr{;I8X*$I#RAMv,MY(">
+                                                                    <field name="var" id="1zzlA*p@apFGFX~])qIH" variabletype="">red_led</field>
+                                                                    <value name="value">
+                                                                      <shadow type="math_number" id="Q.t[9shwy%-Fh=G20p`A">
+                                                                        <field name="NUM">0</field>
+                                                                      </shadow>
+                                                                      <block type="variables_get" id="Uh4kl3vWoSe$U?ZVE(az">
+                                                                        <field name="VAR" id="ij(;$rgy9a4sL`fnrF|c" variabletype="">pot_value</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </statement>
+                                                        <next>
+                                                          <block type="text_print" id="4LA,-]SRn5j_#=*Fv#19">
+                                                            <value name="TEXT">
+                                                              <shadow type="math_number" id="awN3K*Nm*=(^.$yl?W,V">
+                                                                <field name="NUM">0</field>
+                                                              </shadow>
+                                                              <block type="math_arithmetic" id="e7D(bDvDD[tNEY,1FV[u">
+                                                                <field name="OP">DIVIDE</field>
+                                                                <value name="A">
+                                                                  <shadow type="math_number" id="VhS{QVDgZ/,tE.Rwf`!h">
+                                                                    <field name="NUM">1</field>
+                                                                  </shadow>
+                                                                  <block type="variables_get" id="zY5f[:wf)ETf|ipFGs2O">
+                                                                    <field name="VAR" id="pP}dgiHV/PwU#(!hYOW7" variabletype="">LDR_value</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="B">
+                                                                  <shadow type="math_number" id="WMWZFJQT]HrXQLYDN[6v">
+                                                                    <field name="NUM">2</field>
+                                                                  </shadow>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="delay" id="tnWv0uEr*jYxy~^LbU~M">
+                                                                <value name="value">
+                                                                  <shadow type="math_number" id="YKEKy1,!CeTF.-haN}jt">
+                                                                    <field name="NUM">5</field>
+                                                                  </shadow>
+                                                                </value>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </statement>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

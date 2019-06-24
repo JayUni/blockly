@@ -46,8 +46,10 @@ $(document).ready(function() {
   };
 
   var onLineReceived = function(stringReceived){
-    $('textarea#output').html($('textarea#output').val() + stringReceived);
-  }
+   $("#output").html($("#output").val() + stringReceived);
+   var textarea = $("#output");
+   textarea.scrollTop(textarea[0].scrollHeight);
+ }
 
   var onReceiveCallback = function(info) {
     if (info.connectionId == expectedConnectionId && info.data) {

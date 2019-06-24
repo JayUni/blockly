@@ -34,6 +34,7 @@ global.DOMParser = xmldom.DOMParser;
 global.document = new JSDOM('../core/xml_utils.js:').window.document;
 global.document = new JSDOM('../core/xml.js:').window.document;
 
+//read file
 fs.readFile("./" + process.argv[2], "utf8", function(errFile, data) {
   if (!errFile) {
     try {
@@ -42,15 +43,13 @@ fs.readFile("./" + process.argv[2], "utf8", function(errFile, data) {
       var xml = Blockly.Xml.textToDom(xmlString);
       var workspace = new Blockly.Workspace();
 
+      //blocks on the main workspace to JSON
       Blockly.Xml.domToWorkspace(xml, workspace);
       var code = Blockly.Skoolbot.workspaceToCode(workspace);
       var codeJson = JSON.parse(code);
 
-      if(process.argv.length == 3) {
-        console.log(JSON.stringify(codeJson, null, 4));
-      } else {
-        console.log("wrong argument");
-      }
+      //output the JSON
+      console.log(JSON.stringify(codeJson, null, 4));
 
     } catch (e) {
       console.log(e);

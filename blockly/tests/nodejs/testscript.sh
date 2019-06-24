@@ -1,28 +1,30 @@
 #!/bin/bash
 
 # compile the interpreter
-# -std=c++11 -Wall -Werror=format-security
 g++ ../../SkoolBot/interpreter_binary.cpp -o ../../SkoolBot/interpreter
 for xml in xmlToJson_test_cases/*.xml
 do
     # convert xml to json
-    # xml="xmlToJson_test_cases/fading_analogWrite.xml"
-
     json="jsonToAddTyepField_test_cases/`basename $xml .xml`.json"
 
     if [ -e $json ]
       then
+        # save the temperary new execute file
         node ../../SkoolBot/xmlToJson.js $xml > compare.json
+        # compare the existed file with the new executed one
         result=$(wdiff -3 $json compare.json)
         if [ $? -eq 0 ]
            then
-             echo "$json Test case pass."
+             # \e[42m is green background
+             echo -e "$json Test case \e[42mpass\e[0m."
            else
              echo "$result"
-             echo "$json Test case failed."
+             # \e[41m is red background
+             echo -e "$json Test case \e[41mfailed\e[0m."
              continue
         fi
     else
+       # create a new file to store the results
         node ../../SkoolBot/xmlToJson.js $xml > $json
         echo "created $json."
     fi
@@ -35,10 +37,10 @@ do
         result=$(wdiff -3 $addTypeField compare.json)
         if [ $? -eq 0 ]
            then
-             echo "$addTypeField Test case pass."
+             echo -e "$addTypeField Test case \e[42mpass\e[0m."
            else
              echo "$result"
-             echo "$addTypeField Test case failed."
+             echo -e "$addTypeField Test case \e[41mfailed\e[0m."
              continue
         fi
    else
@@ -46,19 +48,18 @@ do
       echo "created $addTypeField."
    fi
 
-   # command generator
+   # json to symbolic bytecode generator
    command_generator="symbolic_generator_outputs/`basename $xml .xml`.txt"
    if [ -e $command_generator ]
      then
-       ### execute javascript with $x > $$.out
        node ../../SkoolBot/command_generator.js $addTypeField > compare.txt
        result=$(wdiff -3 $command_generator compare.txt)
        if [ $? -eq 0 ]
          then
-            echo "$command_generator Test case pass."
+            echo -e "$command_generator Test case \e[42mpass\e[0m."
           else
             echo "$result"
-            echo "$command_generator Test case failed."
+            echo -e "$command_generator Test case \e[41mfailed\e[0m."
             continue
        fi
    else
@@ -66,29 +67,28 @@ do
      echo "created $command_generator."
    fi
 
-   # bin generator
+   # json to binary bytecode generator
    bin_generator="bin_generator_outputs/`basename $xml .xml`.bin"
    if [ -e $bin_generator ]
     then
-      echo "existed $bin_generator."
+      echo -e "\e[42mexisted\e[0m $bin_generator."
    else
      node ../../SkoolBot/bin_generator.js `basename $xml .xml`
-     echo "overwrite $bin_generator."
+     echo -e "\e[5moverwrite\e[0m $bin_generator."
    fi
 
-   # interpreter
+   # binary bytecode to interpreter
    interpreter="interpreter_final_outputs/`basename $xml .xml`.txt"
    if [ -e $interpreter ]
      then
-       ## execute javascript with $x > $$.out
        ../../SkoolBot/interpreter $bin_generator > compare.txt
        result=$(wdiff -3 $interpreter compare.txt)
        if [ $? -eq 0 ]
           then
-            echo "$interpreter Test case pass."
+            echo -e "$interpreter Test case \e[42mpass\e[0m."
           else
             echo "$result"
-            echo "$interpreter Test case failed."
+            echo -e "$interpreter Test case \e[41mfailed\e[0m."
             continue
        fi
    else
@@ -96,19 +96,18 @@ do
        echo "created $interpreter."
    fi
 
-   # interpreter symbolic
+   # binary bytecode to symbolic interpreter with execution steps
    interpreter="symbolic_interpreter_outputs/`basename $xml .xml`.txt"
    if [ -e $interpreter ]
      then
-       ## execute javascript with $x > $$.out
        ../../SkoolBot/interpreter $bin_generator -db > compare.txt
        result=$(wdiff -3 $interpreter compare.txt)
        if [ $? -eq 0 ]
           then
-            echo "$interpreter Test case pass."
+            echo -e "$interpreter Test case \e[42mpass\e[0m."
           else
             echo "$result"
-            echo "$interpreter Test case failed."
+            echo -e "$interpreter Test case \e[41mfailed\e[0m."
             continue
        fi
    else
