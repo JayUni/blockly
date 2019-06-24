@@ -23,31 +23,18 @@ function hasChild(jsonList) {
     for (var val of Object.values(jsonList)){
         if (val instanceof Object){
             command_generator(val);
-            addCommand(jsonList);// This statement runs more than one time
+            addCommand(jsonList);
             hasChild = true;
         }
         else{
             jsonList = addLabel(jsonList);
-
-
         }
     }
-
     return [hasChild, keys]
 }
 
 function addCommand(jsonList){
     for (var [key, val] of Object.entries(jsonList)) {
-
-        // console.log(i, key, val);
-
-        // for (var property in jsonList) {
-        //     if (jsonList.hasOwnProperty(property)) {
-        //         console.log(jsonList[property])
-        //     }
-        // }
-
-        // console.log(JSON.stringify(jsonList[key])+ '\n');
 
         if (key === 'block_name' && val !== undefined) {
             var block_type = val.split('_')[0];
@@ -286,6 +273,7 @@ function addCommand(jsonList){
     }
 }
 
+// add increment label for the jump command and loop control variable
 function addLabel(jsonList) {
     for (var [key, val] of Object.entries(jsonList)) {
         if (key === 'block_name' && val !== undefined) {
@@ -398,7 +386,7 @@ function continueBreak(jsonList, L0, L1) {
 
 
 
-// // For debugging
+// // *********** For debugging **************
 //
 //
 // var str0 = JSON.parse(`[{"block_name":"controls_statement_for","loop_style":"controls_for","variable":"i","start":[{"block_name":"math_number_number","number":"1"}],"step":[{"block_name":"math_number_number","number":"1"}],"end":[{"block_name":"math_number_number","number":"10"}],"step":[{"block_name":"math_number_number","number":"1"}],"branch":[{"block_name":"text_statement_print","functionName":"text_print","argument":[{"block_name":"variables_statement_get","functionName":"variables_get","varName":"i"}]}]}]

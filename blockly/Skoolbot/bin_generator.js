@@ -18,7 +18,6 @@ var output_path_hex = "./hex_generator_outputs/" + file_name + '.txt';
 
 var output_path_bin = "./bin_generator_outputs/" + file_name + '.bin';
 
-
 // console.log('input_path: ', input_path, '\n', 'output_path_hex: ', output_path_hex, '\n', 'output_path_bin: ', output_path_bin);
 
 

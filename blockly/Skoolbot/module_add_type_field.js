@@ -18,10 +18,8 @@ function add_type_field(jsonList){
                     case 'arithmetic':
                         var type_list = [];
                         for (var j in jsonList.argument){
-                            // console.log(jsonList.argument[j]);
                             type_list.push(jsonList.argument[j].valueType);
                         }
-                        // console.log(type_list);
                         jsonList.valueType = checkTypeList(type_list);
                         break;
                     default:
@@ -34,6 +32,7 @@ function add_type_field(jsonList){
     return jsonList;
 }
 
+// type inference, not finished cause currently only have integer type
 function checkTypeList(typeList){
     var type = typeList[0];
     for (var i in typeList){

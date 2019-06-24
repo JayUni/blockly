@@ -1,3 +1,4 @@
+// save as binary button in playground.html
 function save_as_binary(hex_commands) {
     const BIN_SIZE = 1024;
     var resultList = [];

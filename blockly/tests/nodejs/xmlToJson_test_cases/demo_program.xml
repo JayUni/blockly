@@ -1,0 +1,95 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="PlzXEo8=KWI#w#}{yXe(">a</variable>
+  </variables>
+  <block type="variables_set" id="kmghWK2OUYceI.gn7wC#" x="213" y="162">
+    <field name="VAR" id="PlzXEo8=KWI#w#}{yXe(" variabletype="">a</field>
+    <value name="VALUE">
+      <block type="math_number" id="SfX@(Oh^B-C10aR!F=Q4">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+    <next>
+      <block type="controls_repeat_ext" id="`wtcS}Yu=K`Drr/SE9XI">
+        <value name="TIMES">
+          <shadow type="math_number" id="o6So{D|z_jp:22c[|:W#">
+            <field name="NUM">10</field>
+          </shadow>
+        </value>
+        <statement name="DO">
+          <block type="controls_if" id="#]ZmTq,qV=R#IgJ@aI/B">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="$Jvl_*o3/s[{_vo[RXJn">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <block type="variables_get" id="ah^)0l7A}^.f^6XEwZY@">
+                    <field name="VAR" id="PlzXEo8=KWI#w#}{yXe(" variabletype="">a</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="7}.;GthTheBzpHZ)-Ziu">
+                    <field name="NUM">5</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="text_print" id="BK!=t:vxxG4q0S|BvSKH">
+                <value name="TEXT">
+                  <shadow type="text" id="E*UiY043uAS%0y}3[d0V">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="math_arithmetic" id="`r!LI?5~].Ej;)HL*3U3">
+                    <field name="OP">MULTIPLY</field>
+                    <value name="A">
+                      <shadow type="math_number" id="=F/y/%*5Uie^=PFQYyJ,">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="variables_get" id="h8s3~}Zg]3@*a`(lt!.J">
+                        <field name="VAR" id="PlzXEo8=KWI#w#}{yXe(" variabletype="">a</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="_)rN$qa(Hw2`?.0NS?|{">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="math_number" id="?/W940H|tpbX1sy`o2_(">
+                        <field name="NUM">2</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="text_print" id="EA/can-yle$.QK,I6/CZ">
+                <value name="TEXT">
+                  <shadow type="text" id="=Zh{o8d:8UKR%aFYug^[">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="variables_get" id="_|XDv|KvOM=j-kyl:rrS">
+                    <field name="VAR" id="PlzXEo8=KWI#w#}{yXe(" variabletype="">a</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="math_change" id="|qa._)*C|U3i{Rn]XG?z">
+                <field name="VAR" id="PlzXEo8=KWI#w#}{yXe(" variabletype="">a</field>
+                <value name="DELTA">
+                  <shadow type="math_number" id="7eh5^eHp!.)!rwqYu?*m">
+                    <field name="NUM">1</field>
+                  </shadow>
+                  <block type="math_number" id="6w6,,-c6N]BCLNbrd}wD">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

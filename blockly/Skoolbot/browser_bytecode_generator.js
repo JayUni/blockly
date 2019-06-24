@@ -1,3 +1,5 @@
+// symbolic command and bytecode
+
 // #define NOP_          (0x00)
 // #define NUMBER        (0x01)
 // #define ADD           (0x02)

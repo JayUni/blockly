@@ -56,7 +56,9 @@ var addr = 0;
 
 var jumpaddr = 0;
 
+
 var commandMap = {
+    // single command
     'command':{
         'print': '0x1f',
         'add': '0x02',
@@ -93,6 +95,7 @@ var commandMap = {
         'delay': '0x2b'
 
     },
+    // command with only one argument
     'single_value':{
         'boolean': '0x20',
         'set': '0x1c',  // need an additional argument of address
@@ -103,6 +106,7 @@ var commandMap = {
         'JUMPNZ': '0x22',
         'change': '0x23'
     },
+    // label (NOP)
     'label':{
         'L0': '0x00', // destination of jump, nothing to do
         'L1': '0x00' // destination of jump, nothing to do
@@ -127,6 +131,7 @@ function generator(commands) {
     var command = '';
     var value = '';
     var index = {};
+    // calculate the actual JUMP address in the first loop based on the commands
     for (var i in commands){
         command = commands[i].split(' ')[0];
         switch (command){
@@ -174,13 +179,10 @@ function generator(commands) {
                 break;
             default:
                 jumpaddr += 1;
-
         }
-
         if(command.split('_')[0] === 'L0' || command.split('_')[0] === 'L1'){
-
+            // -1 to get the actual address of code array in interpreter
             index[command] = jumpaddr - 1;
-            // console.log(index);
         }
     }
 
@@ -191,14 +193,13 @@ function generator(commands) {
             if (commands[j].split(' ')[1]){
                 value = commands[j].split(' ')[1];
             }
-
             resultList.push(getCommandByteCode(command, commandMap) + processValue(command, value, index));
-            // console.log(getCommandByteCode(command, commandMap) + processValue(command, value, index)); //
+            // console.log(getCommandByteCode(command, commandMap) + processValue(command, value, index)); // for debug, comment this line first then run testscript
 
         }
     }
     resultList.push('0x21');
-    // console.log('0x21');
+    // console.log('0x21'); // for debug, comment this line first then run testscript
 
     return resultList;
 }
@@ -269,12 +270,8 @@ function int2Hex(value) {
         for (var i = 0; i < (4 - value.length); i++){
             low_byte = '0' + low_byte;
         }
-
         var high_byte = value.substring(0,2);
-
         var low_byte = value.substring(2,4);
-
-
     }else{
         var val = value.toString(16);
         var val_len = val.length;
@@ -284,9 +281,7 @@ function int2Hex(value) {
             }
             var high_byte = val.substring(0, 2);
             var low_byte = val.substring(2, 4);
-
             return ' 0x' + low_byte + ' 0x' + high_byte;
-
         }
     }
     return ' 0x' + low_byte + ' 0x' + high_byte;
@@ -312,8 +307,7 @@ function int2Hex(value) {
 // }
 
 
-//
-//
+
 // // save as text file
 // const fs = require('fs');
 //
